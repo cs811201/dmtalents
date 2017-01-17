@@ -1,0 +1,42 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+Add Post
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/><br/>
+
+<div class="container">
+    <form method="post" action="/add_post">
+
+        <label>Title:</label>
+        <input id="title" name="title" size="90" type="text"/>
+        <br/><br/>
+
+        <label>Keywords(Optional, to be searched):</label><br/>
+        <textarea name="abs" rows="3" cols="30">
+
+        </textarea>
+        <br/>
+        <br/>
+        <label>Category:</label>
+
+        <select name="category">
+            <option value="mbp">MBP</option>
+            <option value="mqa">MQA</option>
+        </select>
+        <br/><br/>
+        <label>Content:</label><br/>
+        <textarea name="content" rows="30" cols="150">
+
+        </textarea>
+        <br/><br/>
+        <input type="submit">
+
+    </form>
+</div>
+
+<br/><br/><br/><br/>
+
+{% endblock %}
