@@ -1,0 +1,27 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+FAQ
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+        <div style="float:left; width: 20%; height:1200px; margin-right:5px; overflow:auto">
+            {% include 'faq/toc.html' %}
+        </div>
+        <div style="float:center; height:1200px; overflow: auto">
+            <br/>
+            {% block faqmain %}
+            {% endblock %}
+            <br/><br/>
+        </div>
+
+
+
+</div>
+
+
+{% endblock %}

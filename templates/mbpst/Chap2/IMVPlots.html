@@ -1,0 +1,136 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>IMV Plots</h2>
+	<hr>
+	Recall that we have created an IMV target and could View Data Table, as follows, if a Table has no
+	content, which means the Target definition's condition is not satisfied or has problem and needs
+	correction.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/1.png">
+	<br> Now, we could pick any column from the table to put on X or Y or Z axis to form a plot or
+	graph. For instance, let's create the length scaling plot Idlin vs L, as shown below.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/0.png">
+	<br>
+	<br> Here are the steps:
+	<br> Firstly, right click on the target Idlin, and choose New -> Graph, as shown below.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/2.png">
+	<br> Give it a name Idlin_L.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/3.png">
+	<br> The new Graph creation panel now shows up, and by default a Simple Graph is selected,
+	which is good for X-Y-Z Cartesian coordinates.
+	<br> The Title "Idlin_L" is given the same name as the graph, now it's up to user to pick
+	variables to put on Axis[X], Axis[Y] or Axis[P] axis, P axis just means Z axis in MBP. And, we
+	could use the
+	<img src="/static/mbpst/images/buttons/dropdown.png"> button to select a valid variable name from the
+	dropdown list which gives all available variable names, namely column names of the Data Table.
+	<br>Be default, the X and Y axes will be in Linear scale, if we want to make it Log scale,
+	please check the
+	<b>Log</b> check-box to the right.
+	<img src="/static/mbpst/Chap2/images/2.2/4.png">
+	<br> Now we have updated Axis[X] to be
+	<b>L</b>, and Axis[y] to be
+	<b>Idlin</b>, and we don't need a Axis[p] in this case. As shown below.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/5.png">
+	<br> By clicking the
+	<img src="/static/mbpst/images/buttons/view.png"> button, we could preview the plots, as shown below.
+	<br> Variables in the table that are not assigned to X/Y/P axes will be shown in the table on
+	the left, serving as a index table, and clicking on any row of the index table, a corresponding
+	plot will be displayed on the right.
+	<br> On the plot, the dot/symbols are measurement, and the solid lines are simulation.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/6.png">
+	<br> Now, let's save the work in MBP Script window by clicking the second icon on the toolbar.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/7.png">
+	<br> And, go back to MBP main window, open
+	<b>IMV Pages</b> tab, as shown below. We shall see the newly defined Idlin as well as the Idlin_L
+	plot under it.
+	<br> Now, the Idlin_L plot can immediately be used for model parameter extraction or
+	optimization.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/8.png">
+	<br> When we create the IMV Graph, note that there is a
+	<b>Hierarchy</b> field, which defines the display name in the IMV tree. If leave blank, it will
+	inherit the Target name. However, when user specified, for instance "Length Scaling".
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/9.png">
+
+	<br> After
+	<b>Save</b> in MBP Script window and
+	<b>Refresh</b> in MBP main window for IMV Pages panel, we shall see the Idlin_L plot is organized
+	under a tree node now called "Length Scaling"!
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/10.png">
+	<br> If we want to have multi-level tree hierarchy, please use dot sign to create the levels
+	in the
+	<b>Hierarchy</b> field, such as "Vth.bcd.def", as shown below:
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/hierarchy.png">
+	<br> Beside
+	<b>Simple Graph</b>, there are many other Graph types we could use, from the dropdown list, we see:
+	<br>
+	<table>
+		<tr>
+			<td>
+				<ul>
+					<li>Simple Graph</li>
+					<li>XY Graph</li>
+					<li>Polar Chart</li>
+					<li>Smith Chart</li>
+					<li>Histogram</li>
+					<li>Scatter</li>
+					<li>Mismatch</li>
+					<li>ErrorDataGrid</li>
+					<li>NP Corner Correlation</li>
+					<li>Customize</li>
+				</ul>
+			</td>
+			<td style="padding-left: 10px"><img src="/static/mbpst/Chap2/images/2.2/11.png"></td>
+		</tr>
+	</table>
+	<br> Another very useful and most commonly used Graph type is
+	<b>XY Graph</b>, as shown below, which is still the Cartesian coordinates but has more attributes
+	to use.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.2/12.png">
+	<ul>
+		<table>
+			<tr>
+				<td>Axis[y2]</td>
+				<td>Display a second Y on the right, see example <a href="/mbpst/chap3.1.8">Chap
+						3.1.8</a>.
+				</td>
+			</tr>
+			<tr>
+				<td>Label[X/Y/P/Y2]</td>
+				<td>Customize Axis Label for display; if leave blank, the assigned variable name is used.</td>
+			</tr>
+			<tr>
+				<td>Sweep 1</td>
+				<td>Synchronize multi-variable for X axis, see example <a
+					href="/mbpst/chap3.1.7">Chap 3.1.7</a>.
+				</td>
+			</tr>
+			<tr>
+				<td>Sweep 2</td>
+				<td>Synchronize multi-variable for P axis.</td>
+			</tr>
+			<tr>
+				<td>Attached Data</td>
+				<td>Attach other existing IMV data, see example <a href="/mbpst/chap3.1.1">Chap
+						3.1.1</a> and <a href="/mbpst/chap3.1.3">Chap 3.1.3</a>.
+				</td>
+			</tr>
+		</table>
+
+	</ul>
+	<br>
+	<br>
+	<br>
+
+{% endblock %}

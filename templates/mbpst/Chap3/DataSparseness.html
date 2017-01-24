@@ -1,0 +1,76 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Data Sparseness</h2>
+	<hr>
+	One technique to speed up optimization and extraction flow, is to use Data Sparseness, by
+	effectively selecting less points for optimization, with perhaps a little bit trade-off on
+	accuracy. In many cases we could easily get 2X speed up by less than 1% RMS loss or no loss, and
+	it's perfect for first-pass model extraction and optimization.
+	<ul>
+		<li>Select less points on a plot, while keeping the entire meaningful range.</li>
+		<li>Select just one curve from a curve family.</li>
+		<li>Select a subset of a curve or curve family.</li>
+	</ul>
+
+	<br> This example Script .zip file can be found at
+	<b><i>ScriptZipFiles/19_DataSparseness.zip</i></b>
+	<br> And, open a new BSIM4 project, use the example IV data file from
+	<b>Chap3/ExampleFiles/3.20/nmos_ids_vgs_vbs(W=1.0E-5_L=1.0E-5_T=25.0).mdm</b>.
+	<br>
+	<br> We will see Ids_Vgs_Vbs plot after loading in the data in MBP, this plot has Vgs
+	step=0.02V.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.20/2.png">
+	<br>
+	<br>Let's go to MBP Script Window, and create a Data
+	<b>imv</b> called "SparseIV", where we apply the following code.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.20/1.png">
+	<br>
+	<br>We get the Vgs step from the data, and create a
+	<b>newStep</b> on line 5, which is 2X or 4X of the original step(or even 1.5X), then apply this
+	<b>newStep</b> by code line 6. We also need to create a Graph called "Ids_Vgs_Vbs" under
+	"SparseIV", so that we can view this newly create plot, as follows, noted that the data is now 2x
+	sparse.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.20/3.png">
+	<br> Below the screenshot shows 4X data sparseness on the right, while the original is on the
+	left.
+	<br> The idea is to use the sparse plot for optimization instead of the original one.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.20/4.png">
+	<br> Here is the code for copy-paste:
+	<pre class="code">
+DATA load(sfunc select){
+DATA m = select("Ids_Vgs_Vbs");
+double[] vgs=m->"Vgs";
+double step=Math.abs(vgs[1]-vgs[0]);
+//Data Sparseness
+double newStep=step*2;
+m=m.build("splitBy(int(vgs/"+newStep+")).selectBy(Vgs==max(Vgs))");
+	
+//m=m.build("select(vbs==0)");//select just one curve
+	
+//m=m.build("select(Vgs>0.4)");//select a range
+//m=m.build("select(Vgs<1)");
+	
+return m;
+}
+	</pre>
+	When applying code line 8, we select just Vbs=0 curve out of this multi-Vbs curve family.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.20/5.png">
+	<br> By applying code line 10 and 11, we can just select a subset of the Vgs, all under user
+	control.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.20/6.png">
+	<br>
+	<br>
+	<br>
+
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}

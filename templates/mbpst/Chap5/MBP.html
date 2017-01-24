@@ -1,0 +1,45 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>MBP APIs</h2>
+	<hr>
+	<b>MBP</b> provides built-in methods to access models and model parameters in MBP. There could be
+	multiple models loaded in MBP at the same time; however, there is only one model called the "Main
+	Model" at a given time, the model that's selected in the model panel currently.
+
+	<ul>
+		<li>getModels().getMainModel()</li>
+		<li>getModels().getModelCount()</li>
+		<li>getModels().getModel(int index)</li>
+		<li>toBinningMode()</li>
+		<li>toBinningPointMode()</li>
+		<li>getLocalModelManager().createTable(String outputNames)</li>
+		<li>getDataNames(String type)</li>
+		<li>getParam(String name)</li>
+		<li>getParams(String names)</li>
+		<li>getOptParam(String name)</li>
+		<li>getOptParams(String names)</li>
+		<li>getGUI</li>
+		<li>getSimulator</li>
+	</ul>
+	<div style="width: 75%">
+		<h4>getModels().getMainModel()</h4>
+	</div>
+	To obtain the Main Model in MBP, then model parameters can be obtained from a Model object.
+	<table class="api">
+		<tr>
+			<td>Model getModels().getMainModel()</td>
+		</tr>
+	</table>
+
+	<div style="width: 75%">
+		<h4>getModels().getModelCount()</h4>
+	</div>
+
+	<table class="api">
+		<tr>
+			<td>Model getModels().getMainModel()</td>
+		</tr>
+	</table>
+
+{% endblock %}

@@ -1414,6 +1414,7 @@ a.bg-danger:focus {
 }
 ul,
 ol {
+  margin-left: 10px;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -1424,11 +1425,11 @@ ol ol {
   margin-bottom: 0;
 }
 .list-unstyled {
-  padding-left: 0;
+  padding-left: 5px;
   list-style: none;
 }
 .list-inline {
-  padding-left: 0;
+  padding-left: 5px;
   margin-left: -5px;
   list-style: none;
 }
@@ -6755,3 +6756,8 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+ul{
+    list-style: disc inside none
+}

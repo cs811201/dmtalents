@@ -1,0 +1,135 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>How Flow Works</h2>
+	<hr>
+
+	Note: Besides Script Flow, MBP has another function called TaskTree, which was the flow feature
+	before Script Flow was introduced and is now deprecated. Now, we should always go for the Script
+	Flow which is more powerful and easier to use, plus it goes along with all other Script components
+	that are described in the tutorial.
+	<br>
+	<ul>
+		<li><a href="#Overview">Script Flow Overview</a></li>
+		<li><a href="#Run">How to run a Flow</a></li>
+	</ul>
+	<div style="width: 75%">
+		<h3>
+			<a name="Overview">Script Flow Overview</a>
+		</h3>
+		<hr>
+	</div>
+	MBP is a great platform to create extraction flows, which run extraction or optimization work(which
+	we call
+	<b>Tasks</b>) in a fully-auto or semi-auto way, or even in
+	<b>Button Mode</b> which will be explained later that allows user to click and run just that Task.
+	<br>
+	<br>
+	<button type="button" onclick="document.getElementById('flow').style.display = 'none'">Hide
+		Flow Animation</button> (JavaScript is required for Hide/Show buttons)
+	<div id="flow">
+		<img src="/static/mbpst/Chap2/images/2.3.1/flow.gif">
+	</div>
+	<button type="button" onclick="document.getElementById('flow').style.display = 'block'">Show
+		Flow Animation</button>
+	<br>
+
+	<br>Flow is defined under MBP Script Window.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/5.png">
+	<br> Below is a screenshot of one default BSIM4 extraction flow, the
+	<img src="/static/mbpst/images/buttons/flow_group.png"> icon stands for a Flow, or called a Task Group,
+	where we group Tasks and connect them up by arrows, these arrows determine how the Flow flows. And,
+	the
+	<img src="/static/mbpst/images/buttons/flow_task.png"> icon stands for a Task.
+	<br> As we can see, the Flow is a flexible user defined flow with many sequential Tasks as
+	well as if/else branches and loops.
+	<br>
+
+	<img src="/static/mbpst/Chap2/images/2.3.1/1.png">
+	<br>
+	<br> When right-click on a Flow, we have options to create a Task, or even another Task Group,
+	which would enable us to create hierarchical flows(sub-flows), so that we could better organize
+	Tasks in a user-meaningful way, jump into and hop out of sub-flows, etc.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/3.png">
+	<br>
+	<br>And, we can drag and drop the Tasks to the flow panel, where they will appear as these
+	light blue boxes, and then by holding Control key we can draw arrow lines between these Task boxes
+	to form a flow, as shown below.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/2.png">
+	<br>
+	<br> Just like IMVs who can be created (1) using GUI mode, and (2) code-from-scratch model; we
+	can also create a Task by similar two modes, details will be described in the next chapter.
+	<ul>
+		<li>GUI mode Task, called <b>OptTask</b> from the pop-up menu.
+		</li>
+		<li>Code-from-scratch mode, simply called <b>Task</b> from the pop-up menu.
+		</li>
+	</ul>
+	<div style="width: 75%">
+		<h3>
+			<a name="Run">How to run a Flow</a>
+		</h3>
+		<hr>
+	</div>
+	To run the default BSIM4 extraction flow, please switch to a DC BSIM4-hspice project, and load the
+	example IV data into MBP firstly, which are $MBPHOME/demo/DC/mosfet/nmos/mdm/*.mdm files.
+	<h4>Run Flow from the Script window</h4>
+	As shown above, by far we have been looking at the flow in MBP Script window where we have it
+	created, we can simply highlight the first Task of the flow and hit the
+	<img src="/static/mbpst/images/buttons/play.png"> button on the toolbar to run it while creation or
+	edit, as shown below.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/4.png">
+	<br>
+	<h4>Run Flow from MBP main window</h4>
+	When the Flow is considered done, there is a way for us to bring the Flows into MBP main window,
+	where Flows will be blended in as a separate tab, which brings some additional benefit:
+	<br>(1) all in one window, even though these tabs can be floated if you will,
+	<br>(2) we could turn the Tasks into
+	<b>Button Mode</b> where we can click on any one Task and have it executed.
+
+	<br> Please refer to
+	<a href="/mbpst/chap3.11">Chap 3.11. Auto-run Script When Loading</a>, where shows
+	how MBP loads 2 default flows for BSIM4 model, the same can be applied to other model type or any
+	user defined flows. As shown below:
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/6.png">
+	<br>
+	<br>Then, use these control button to run the flow.
+	<br>From left to right, they are "Save", "Run", "Stop", "Continue" and "Step".
+	<img src="/static/mbpst/Chap2/images/2.3.1/7.png">
+	<br>"Continue" and "Step" are used in Step mode, where we firstly click on the "Step" button
+	to be in Step mode, then hit "Run", and only one Task runs and pauses, waiting user to hit the
+	"Continue" button to run the next one, and so on.
+	<br>
+	<br> To turn a Task or Tasks into
+	<b>Button Mode</b>, please select them firstly, then right-click, and choose "Button Mode",
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/8.png">
+	<br> we will see these Tasks are now shadowed like buttons. As shown below.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3.1/9.png">
+	<br> And, we can click on these buttoned Tasks to execute them in any order, to be specific:
+	<ul>
+		<li>If a Task is created by GUI mode, namely it is a <b>OptTask</b>, then turning it into the
+			Button Mode and click on it would run all the setups except the final Optimization step. which
+			means, we will be able to see what device/plot/region/parameters are selected, but won't run the
+			optimization automatically.<br> The steps are shown below, which allows user to select
+			device/plots/regions/parameters and optimizers easily on GUI, with no coding.<br> <img
+			src="/static/mbpst/Chap2/images/2.3.1/10.png">
+		</li>
+		<li>Or, when a Task is created by code, namely a <b>Task</b>, then the Button Model would run
+			through all the code in it despite whether there are codes to run optimization or not.<br>
+			Please refer to <a href="/mbpst/chap3.12">Chap3.12 Run Opt in Script</a>.
+		</li>
+	</ul>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Time Tasks in Flow</h2>
+	<hr>
+	In
+	<a href="/mbpst/chap2.3.2">Chap 2.3.2 Define a New Flow</a>, we put together Tasks and
+	build a flow to execute them. It would be useful if we can time our Tasks, and see how much time
+	each Task or the entire Flow takes from beginning to finish.
+	<br>This chapter shows how to do so, for example, we recorded the time when a particular Task
+	got executed, as highlighted below.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/1.png">
+	<br>
+	<br> This chapter uses the
+	<b><i>ScriptZipFiles/21_Timer.zip</i></b> as an example, it is an extension of
+	<b><i>ScriptZipFiles/20_Flow.zip</i></b>,
+	<br> Let's use the same demo mosfet data files from $MBPHOME/demo/DC/mosfet/nmos/mdm/*.mdm.
+	<br>
+	<br> To efficiently do so, let's create a file under
+	<b>flow</b>, New -> File, as shown below, name it "util".
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/2.png">
+	<br> And, put these code into this "util", it is to define a "printNow()" method to print out
+	the current system Data and Time, which can then be called in our Tasks.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/3.png">
+	<br> Here is the code for copy-paste:
+	<pre class="code">
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+void printNow(){
+	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	Date date = new Date();
+	System.out.println(dateFormat.format(date));
+}
+	
+	</pre>
+	Now, we insert the following code to existing Tasks.
+	<pre class="code">
+flow.util::printNow();
+
+	</pre>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/4.png">
+	<br>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/6.png">
+	<br>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/5.png">
+	<br>
+	<br> Save the files, and re-run the flow from the beginning "OptTask1", we shall see Date and
+	Time printed out in the log/message window.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.22/1.png">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+{% endblock %}

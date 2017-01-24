@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Post Added
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/><br/>
+
+<div class="container">
+
+    <h3>{{newpost.title}}</h3> added.
+
+    <br>
+    <br>
+    View the<a href="{{newpost.route}}"> New Post...</a>
+
+
+    <br>
+    <br>
+    <h4><a href="/add_post">Another New Post...</a></h4>
+
+    <br>
+    <br><br>
+    <br>
+
+
+</div>
+
+<br/><br/><br/><br/>
+
+{% endblock %}

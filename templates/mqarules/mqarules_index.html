@@ -1,0 +1,28 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+MQA Rules
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+        <div style="float:left; width: 18%; margin-right:5px;">
+            {% include 'mqarules/toc.html' %}
+        </div>
+        <div style="float:center; height:1400px; overflow: auto">
+            <br/>
+            {% block mqarulesmain %}
+            <h3>Please pick a Rule Example from the left, or Search.</h3>
+            {% endblock %}
+            <br/><br/>
+        </div>
+
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>1/f Noise - Sid/Id^2</h2>
+	<hr>
+	This note demonstrates how to get the Sid/Id^2 and Svg plots, when our 1/f noise measurement data
+	only contains Sid.
+	<br>
+	<br> This example Script .zip file can be found at
+	<b><i>ScriptZipFiles/18_SidOverId2.zip</i></b>
+	<br> And, open a new BSIM4 project, use the example 1/f noise data file from
+	<b>Chap3/ExampleFiles/3.19/NMOS.anf</b>.
+	<br>
+	<br> We will see Sid_Freq plots, and OP plots where we have Gm, Gds, Ids, etc. as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/1.png">
+	<br>
+	<br> So, we got all necessary information to do the Math:
+	<ul>
+		<li>Get Sid and Ids, we can get Sid/(Ids*Ids) with one finger snap.</li>
+		<li>Get Sid and gm, we can get Svg = Sid/(gm*gm) with another snap.</li>
+	</ul>
+
+	Of course, we will resort to MBP Script again, here we go.
+	<br> In MBP Script window, let's create 2 IMV -> Data targets, where we access the data and do
+	the math. name them "SidOverId2", and "Svg" respectively.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/2.png" border="1">
+	<br> Write down these codes in "SidOverId2":
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/3.png" border="1">
+	<br> Here is the code for copy-paste.
+	<pre class="code">
+DATA load(sfunc select){
+	//1. get Sid from [noise] type of data.
+	DATA Sid = select("[noise]Sid");
+	
+	//2. get Ids from [noise] op data.
+	DATA Ids = select("[noise]Ids_Vgs_Vds");
+	
+	//3. attached Ids to Sid table.
+	DATA m=Sid.attachData(new DATA[]{Ids},null);
+	
+	//4. do the math row by row, so use trans() function
+	m=m.trans(doMath,"Sid_id2");
+	return m;
+}
+
+void doMath(POINT to, POINT from){
+	double Sid=from->"Sid";
+	double Ids=from->"Ids";
+	to->"Sid_id2" = Sid/(Ids*Ids);
+}	
+	
+	</pre>
+	Then, under "SidOverId2", let's create a "SidOverId2_Freq" Graph and set "freq" as X and "Sid_id2"
+	as Y, make sure to check the "Log" checkbox for both X and Y Axes.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/4.png" border="1">
+	<br>
+	<br> Now, do the same for Svg.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/5.png" border="1">
+	<br> Here is the code for copy-paste:
+	<pre class="code">
+DATA load(sfunc select){
+	//1. get Sid from [noise] type of data.
+	DATA Sid = select("[noise]Sid");
+	
+	//2. get gm from [noise] op data.
+	DATA gm = select("[noise]Gm_Vgs_Vds");
+	
+	//3. attached gm to Sid table.
+	DATA m=Sid.attachData(new DATA[]{gm},null);
+	
+	//4. do the math row by row, so use trans() function
+	m=m.trans(doMath,"Svg");
+	return m;
+}
+
+void doMath(POINT to, POINT from){
+	double Sid=from->"Sid";
+	double gm=from->"Gm";
+	to->"Svg" = Sid/(gm*gm);
+}	
+	
+	</pre>
+
+	And create the Svg_Freq plot.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/6.png" border="1">
+	<br>
+	<br> Then, save the Script window and go back to MBP Main window, open
+	<b>IMV Pages</b> tab, we shall see these plots, as follows:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.19/7.png" border="1">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+{% endblock %}

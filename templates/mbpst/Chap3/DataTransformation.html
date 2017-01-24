@@ -1,0 +1,233 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>DATA Transformation</h2>
+	<hr>
+	In MBP Script, a DATA can be considered as a multi-row, multi-column table, as shown below; and a
+	POINT is a row. MBP provides trans functions to do Math Transform in an efficient way, so as to get
+	customized output from the input data table.
+	<pre class="code">
+DATA m = select("ids_vgs_vds");
+</pre>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/1.png">
+
+	<br> There are 3 trans functions we can use on DATA; when used properly, they are slick and
+	powerful. They have different usage, please choose accordingly, as follows:
+
+	<ul>
+		<li><a href="#trans">trans</a></li>
+		<li><a href="#transSubToPoint">transSubToPoint</a></li>
+		<li><a href="#transSubToPointArray">transSubToPointArray</a></li>
+	</ul>
+
+	<div style="width: 75%">
+		<h3>
+			<a name="trans">trans</a>
+		</h3>
+		<hr>
+	</div>
+
+	<b>trans</b> is POINT to POINT, namely Row-by-Row or 1:1 operation. The transformation runs on each
+	row, and no cross row visibility.
+	<br>
+	<br>As shown below,
+	<b>trans</b> function has two arguments. The first argument
+	<b>transFunc</b> is a function that needs to be defined, the name can be arbitrary; and, the second
+	argument that is put in double quotes "new_output" is the new output column name, again user
+	arbitrary; also we can have more than one output columns, such as "new_output1,new_output2,..."
+	joined by comma all in the double quotes.
+
+	<pre class="code">
+DATA newData = m.trans(<b>transFunc</b>, "new_output"); 
+
+void <b>transFunc</b>(POINT to, POINT from){
+
+	//user logic goes here... 
+
+}
+		</pre>
+	The following example shows how to transform the original Ids_Vgs to Power_Vgs, where
+	Power=Ids*Vds. The code is shown below, this comes from a New->Data type of
+	<b>imv</b> code template.
+<br>
+
+	<img src="/static/mbpst/Chap3/images/3.6/2.png">
+	<ul>
+		<li>On line 2, we firstly use the built-in <b>select</b> function to get the original
+			"Ids_vgs_vbs" data. The string we use in the double quotes is from the plot name, the text before
+			the @ sign, as shown below.
+		</li>
+		<img src="/static/mbpst/Chap3/images/3.6/5.png">
+		<li>Then, line 3, we do the <b>trans</b> method on the data, which further calls the user
+			defined <b>transFunc</b>, at the same time, specify the new output column to be called
+			"ids_mul_vds".
+		</li>
+		<li>Line 6 - 8 goes the <b>transFunc</b>, the name can be arbitrary; however, the arguments
+			of this function must be <b>POINT to, POINT from</b>, <b>to</b> and <b>from</b> stands for the
+			output row and input row, respectively.
+		</li>
+		<li>On line 7, we implement the logic that the new output is equal to the multiplication of
+			ids and vds.</li>
+	</ul>
+	<ul>
+		<li>We use the arrow operator -> to access data from POINT object, for example, <b>from->"ids"</b>
+			returns the Ids column of that row:
+		</li>
+		<pre class="code">
+double ids = from -> "ids";
+			</pre>
+		<li>And, we can get all columns by feeding the column name in the double quotes after the ->,
+			for example:</li>
+		<pre class="code">
+// to get W or L
+double W = from -> "w";
+double L = from -> "l";
+			</pre>
+
+	</ul>
+	Note: no loops are needed in code for all rows, MBP knows to apply this logic to the entire data
+	table automatically, this is the beauty of using MBP trans functions.
+	<br>
+	<br> We can see the change by viewing the "Show Data Table" before and after the trans
+	function.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/3.png">
+	<br>
+	<br> The next screenshot shows how to create more than one outputs in
+	<b>trans</b> function.
+	<br>For example, we want to keep both the new "ids_mul_vds" and the original "ids", because by
+	default
+	<b>trans</b> function won't keep the old output, we simply join them using comma in the double
+	quotes, on line 3. Once the transformed data got returned with all the columns we need, we could
+	put them on IMV plots flexibly.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/4.png">
+
+
+	<div style="width: 75%">
+		<h3>
+			<a name="transSubToPoint">transSubToPoint</a>
+		</h3>
+		<hr>
+	</div>
+	<b>transSubToPoint</b> is to split the input table into sub-tables first, and convert sub-tables
+	into POINTs. This is M:1 operation, using multi-row(a sub-table) to calculate a single target, such
+	as to get Vth(single point) from a IdVg curve(multi-Vgs, hence multi-rows). The Vth example can be
+	found at
+	<a href="/mbpst/chap3.10">Chap 3.10</a>.
+	<br>Here let's see a simple case, to get the max Ids on each Ids_Vgs curve.
+	<pre class="code">
+DATA newTable = m.transSubToPOINT(transFunc,"maxIds");
+
+void transFunc(POINT TO, DATA from){   
+
+	//user logic goes here  
+
+}
+	</pre>
+	Note: the arguments of
+	<b>transFunc</b> for
+	<b>transSubToPoint</b> are
+	<b>POINT to, DATA form</b>,
+	<b>to</b> stands for just one row of output,
+	<b>from</b> stands for a sub-table of input.
+	<br>
+	<br> Let's take a look at the example:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/6.png">
+	<ul>
+		<li>At beginning, on line 1, we have a big Ids_Vgs_Vbs DATA table, which contains 2 Ids_Vgs
+			curves in total with different Vbs bias.</li>
+		<li>Line 3 groups all the rows by Vgs, now we have 2 sub-tables, each sub-table contains just
+			one Ids_Vgs curve. If we do a "return m" on line 4, we could see the grouped sub-tables.</li>
+		<li>Then, on line 5, we apply the <b>transSubToPoint</b> function, which calls <b>transFunc</b>
+			where the logic, namely picking the max Ids from each Ids_Vgs curve, is done; and also specify
+			the new output to be called "maxIds".
+		</li>
+		<li>Line 12-16, we get ids using "from->Ids" which is a double array, and use the <b>max()</b>
+			function to get it's max value and assign to "to->maxIds". And the final returned output table
+			only has 2 rows, or so-called POINTs.
+		</li>
+		<li>Again, in the trans function the logic is just done once, MBP handles the internal loops,
+			user doesn't need to worry about how big the table is or how many groups there are, which greatly
+			simplifies the coding process.</li>
+	</ul>
+	<div style="width: 75%">
+		<h3>
+			<a name="transSubToPointArray">transSubToPointArray</a>
+		</h3>
+		<hr>
+	</div>
+	<b>transSubToPointArray</b> is M:M operation, which turns a sub-table into POINTs, or so-called
+	POINT Array.
+	<br>It is used in the following scenario, for example, to calculate Gds or Gm from IV curves,
+	from the Ids_Vds_Vgs plot, when there are multiple Vgs, we will need to split the input table into
+	a few sub-tables to get separate Ids_Vds curves, then calculate derivative on each Ids_Vds curve to
+	get Gds, the derivative calculation needs a whole curve, namely a sub-table, instead of just one
+	point; however, the dimension of the final Gds output will still be the same as the original input
+	table, hence M:M operation.
+	<pre class="code">
+DATA newTable = m.transSubToPointArray(transFunc,"gds");
+
+void transFunc(POINT[] TO, DATA from){   
+
+	//user logic goes here  
+
+}
+		</pre>
+	Note: the arguments of
+	<b>transFunc</b> for
+	<b>transSubToPointArray</b> are
+	<b>POINT[] to, DATA form</b>,
+	<b>to</b> stands for POINT Array of output,
+	<b>from</b> stands for a sub-table of input.
+	<br>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/7.png">
+	<ul>
+		<li>Line 1 is to get the input Ids_Vds_Vgs data source.</li>
+		<li>Line 2 groups it by Vds, so that we get grouped Ids_Vds curves.</li>
+		<li>Line 3 is to apply the <b>transSubToPointArray</b> function, and name the new output
+			"gds".
+		</li>
+		<li>Line 7 - 13 is the <b>transFunc</b> function, where we get each Ids_Vds curve as <b>from</b>
+			so as to calculate the derivative, and assign the derivative to <b>to[i]->"gds"</b>.
+		</li>
+		<li>Line 4 is to build or organize the output in certain way.</li>
+		<li>Again, MBP handles the internal loops, the logic is only done once, no matter how many
+			sub-tables there are.
+	</ul>
+
+	More illustrations below, after line 1 we got the input data.
+	<br> Firstly, there are 2 Vbs; secondly, there are 5 Vgs on each Ids_Vds_Vgs plot.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/8.png">
+	<br> And, 34 Vds points on each Ids_Vds curve, which make in total 2*5*35 points(rows) in the
+	original big table, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/9.png">
+
+	<br> After line 2, we got 2*5 Ids_Vds curves, as shown below:
+	<br>
+
+
+	<img src="/static/mbpst/Chap3/images/3.6/10.png">
+	<br> After line 3, we got gds! The final output of the trans function will be a big table.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/12.png">
+	<br>
+	<br> Line 4 is optional for the sake of getting gds, however, it shows how we can further
+	organize and put the data in order!
+	<br>
+	<pre class="code">
+int polarity=target.getPolarity();
+target=target.build("group(vds).orderby("+polarity+"*vds)");
+
+	</pre>
+	<img src="/static/mbpst/Chap3/images/3.6/13.png">
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}

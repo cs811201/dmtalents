@@ -1,0 +1,42 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Display Target on Y2 Axis</h2>
+	<hr>
+	On IMV Plots, Axis[Y2] is the Y axis on the right, for example, we have Ids_Vgs plot, and overlay
+	Gm_Vgs and put Gm on the Y2 Axis to the right, as shown below:
+	<br>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.8/1.png" border="1px">
+	<br>
+	<br> Recall that we have this Axis[Y2] option on
+	<b>XY Graph</b> when creating an IMV Graph, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.8/2.png">
+	<br> Where we put Ids on Axis[y], and Gm on Axis[y2]. It is this simple except that we
+	have to include both Gm and Ids in the same IMV Target Data , otherwise in the Axis[y2] field,
+	we cannot point to a second target.
+	<br>
+	<br> Let's assume we begin with the existing Gm IMV target, and this example can be found as
+	<b><i>ScriptZipFiles/08_IMV_Y2.zip</i></b>
+	<br>
+	<br> Because Ids is not one of the default IMV targets, we have to create one firstly. As
+	shown below.
+	<br> let's do a New -> Data, and just need to
+	<b>select("Ids_Vgs_Vbs")</b> and
+	<b>return</b> it.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.8/3.png">
+	<br>
+	<br> Now switch back to Gm, right click on it and New -> Graph to create an XY Graph, name it
+	"Ids_Gm_Vgs". And
+	<b>Attached Data: Ids</b> brings Ids Data to current Gm Data, so that we can view both of them on
+	one plot. As shown below.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.8/4.png">
+	<br>
+	<br>
+	<br>
+
+
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>MBP Script Get Started</h2>
+<hr>
+Here, let's go through the following basic items to prepare us for more advanced topics.
+<br/>
+And let's assume a BSIM4-HSPICE type of project is in use throughout this tutorial, unless otherwise
+indicated.
+<ul>
+    <li>1. <a href="#Start MBP Script Window">Start MBP Script Window</a></li>
+    <li>2. <a href="#IMV Examples">IMV Examples</a></li>
+    <li>3. <a href="#Script Editor">Script Editor</a></li>
+    <li>4. <a href="#Save">Save and Re-load</a></li>
+
+</ul>
+
+<div style="width: 75%">
+    <h3>
+        <a name="Start MBP Script Window">Start MBP Script Window</a>
+    </h3>
+    <hr>
+</div>
+Go for MBP menu
+<b>Script -> Script Project</b>, will pop up the Script Window; since it is a separate window, we
+now call the original MBP GUI the "MBP main window" to differentiate from the "Script Window".
+<br>
+<br> A default Script window contains pre-defined contents for selected model type, as shown
+below:
+<br>
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/1.png">
+<br>
+
+<div style="width: 75%">
+    <h3>
+        <a name="IMV Examples">IMV Examples</a>
+    </h3>
+    <hr>
+</div>
+IMV is the most commonly used workforce in MBP, Device Targets such as Vth, Idlin, etc are so
+called IMV in MBP, and they are calculated from IV/CV data. For example, it defines scaling
+plots(Vth vs. Vbs, Idsat/W vs W, etc), and provides a lot help for model parameter extraction,
+re-targeting(re-centering) and optimization.
+<br>
+<br>More examples will be demonstrated in Chap 3.
+<br>
+
+<br>The default BSIM4 IMV settings is shown below, we could see that plenty Device Targets as
+well as their scaling plots have been created.
+<br>
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/2.png">
+<br>
+<br> They correspond to the IMV panel in MBP main window, where all the IMV plots are
+displayed as long as required IV or CV curves are loaded, as shown below.
+<br>
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/3.png">
+<br>
+<br> Many IMV targets can be created without any coding, MBP Script provides a lot built-in
+algorithm and methods to create a IMV target.
+<br> For example, Idlin. Double-click on Idlin opens the definition panel, as shown below:
+<br> Here, Idlin is defined as the
+<b>Java Algorithm</b> IMV Type, for all loaded devices, find Idlin as Current(Ids) from their
+Ids_Vgs_Vbs plots, where:
+<br>
+<ul>
+    <li>Vds=absmin(vds), meaning the absolute min Vds value from measurement data.</li>
+    <li>Vgs=absmin(vgs), meaning the absolute max Vgs value from measurement data.</li>
+    <li>Vbs=absmin(vbs), meaning the absolute min Vbs value from measurement data.</li>
+</ul>
+
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/4.png">
+<br> To specify the Restrictions, we could also directly assign a number, say Vgs=0; or, we
+could use a variable for flexibility, for example, Vgs=Vgg, where Vgg is a variable that must be
+defined in
+<b>imv_const</b> table, as shown below:
+<br>
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/5.png">
+
+<br>
+<div style="width: 75%">
+    <h3>
+        <a name="Script Editor">Script Editor</a>
+    </h3>
+    <hr>
+</div>
+Many IMV targets can be defined like Idlin; however, if the logic is more than simply picking out a
+value from IV/CV plot by certain condition, we now resort to the Script programming.
+<br>
+<br> For example, Gm, where derivative is used, as shown below:
+<br>
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/6.png">
+<br>
+<br>MBP Script editor has Contents Assistance, Code Auto Completion and
+<font color="red">C</font>
+<font color="orange">o</font>
+<font color="green">l</font>
+<font color="blue">o</font>
+<font color="purple">r</font> Coding functions, etc to ease and expedite user's coding experience.
+<br> For example, the available function list to that object will drop down when typing the
+.(dot) sign. as shown below:
+<br>
+<img src="/static/mbpst/Chap1/images/1.1Scriptbasics/2.png">
+<br>
+<br> Another peek at the built-in Math functions:
+<br>
+<img src="/static/mbpst/Chap1/images/1.1Scriptbasics/3.png">
+<br>
+<br> More, MBP Script has advanced step-in debugging function, which will be introduced as a
+separate chapter later-on; however, for now we could use the old school Print() function to print
+out variables to the Message window.
+<br>To execute a Script file, simply click on the play button
+<img src="/static/mbpst/images/buttons/play.png">, as shown below:
+<br>
+<img src="/static/mbpst/Chap1/images/1.1Scriptbasics/4.png">
+<br>
+<br>
+<div style="width: 75%">
+    <h3>
+        <a name="Save">Save and Re-load</a>
+    </h3>
+    <hr>
+</div>
+All the work we've done in MBP Script window can be saved as a single .zip file to a user picked
+folder, and that .zip file can later-on be loaded back into MBP Script window directly, no un-zip
+is required, which greatly facilitates our work for re-use, sharing and version control, etc.
+<br>
+<br> Please use the first 3 buttons on the toolbar for
+<b>Save</b> and
+<b>Load</b>, as shown below.
+<br>
+<img src="/static/mbpst/Chap1/images/1.2GetStarted/7.png">
+<br> When
+<b>Save</b> to current project, all the changes will reflect in the MBP main window(refresh
+required), for example, newly created IMV plots can be viewed and used for simulation and
+optimization right away.
+<br>And, besides
+<b>Save</b> it's recommended to also always
+<img src="/static/mbpst/images/buttons/dump.png"> dump to a .zip file, it will be easy for re-use and
+sharing, for example, that .zip file can be loaded into other MBP projects by all team members.
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

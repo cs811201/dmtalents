@@ -1,0 +1,93 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Idsat normalized to max SA SB</h2>
+	<hr>
+	In applications like LOD or Stress effect is in presence, we have SA and SB varying on layout for
+	the same W/L. People usually want to see the relative change of device's performance on different
+	SA and SB value, such as Idsat, the bigger SA and SB become, the smaller impact they have on Idsat.
+	It's reasonable to see all Idsat normalized by the Idsat_maxSASB who has the longest SA and SB. As
+	follows, say we define:
+	<br>
+	<ul>Idsat_normalized = ( Idsat - Idsat_maxSAB ) / Idsat
+	</ul>
+	<img src="/static/mbpst/Chap3/images/3.9/1.png" border="1px">
+	<br> In MBP, we could define Idsat_normalized any way we want by crafting any expressions or
+	equations, the key of this demo is to show you how to get Idsat_maxSAB and create an IMV target
+	where we can use these variables for creating expressions freely.
+
+	<br> Example MBP Script .zip file can be found at
+	<b><i>ScriptZipFiles/10_IMV_Idsat_MaxSASB.zip</i></b>
+	<br>
+	<br> Let's begin with the default IMV target Idsat, and create another New -> IMV and name it
+	<b>idsat_maxSAB</b>, as shown below:
+	<ul>
+		<table>
+			<tr>
+				<td>Page Name:</td>
+				<td>imv.imv.Idsat</td>
+			</tr>
+			<tr>
+				<td>Restrictions:</td>
+				<td>device, vbs,vds,vgs,<b>SA=max(SA)</b></td>
+			</tr>
+			<tr>
+				<td>Algorithm Class:</td>
+				<td>acc/Current</td>
+			</tr>
+			<tr>
+				<td>Algorithm Parameters:</td>
+				<td>idsat</td>
+			</tr>
+		</table>
+	</ul>
+	<img src="/static/mbpst/Chap3/images/3.9/7.png">
+	<br> Now, do a "Show Data Table" on Idsat_maxSAB, we shall see the following table which only
+	contains SA=SB=10u rows.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.9/6.png">
+	<br>
+	<br> One more step, let's do New->IMV to create the
+	<b>Idsat_normMaxSAB</b> for Idsat normalized by the max SA_SB, and choose
+	<b>Expression</b> IMV Type where we could write down our expression, as shown below:
+	<br>
+	<ul>
+		<table>
+			<tr>
+				<td>Expression:</td>
+				<td>(Idsat-idsat_maxSAB)/Idsat</td>
+				<td>User could customize the expression</td>
+			</tr>
+			<tr>
+				<td>Restriction:</td>
+				<td>w,l,t,vbs,vds,vgs</td>
+				<td>we don't put SA and SB here, just match other conditions</td>
+			</tr>
+			<tr>
+				<td>Attached Targets:</td>
+				<td>Idsat;Idsat_maxSAB</td>
+				<td>The order matters, we want to attached idsat_maxSAB onto Idsat according to the matched
+					Restrictions; however, we shouldn't put Idsat_maxSAB in front of Idsat.</td>
+			</tr>
+
+		</table>
+	</ul>
+	<img src="/static/mbpst/Chap3/images/3.9/10.png">
+	<br> Now, "Show Data Table" on idsat_normMaxSAB we have the following table.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.9/9.png">
+	<br>
+	<br> At last, we create a XY Graph, and specify SA as Axis[x], Idsat_normMaxSAB as Axis[y],
+	give some more readable Labels for display, and keep SA and SB synchronized by setting them in
+	Sweep1 field. Done!
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.9/8.png">
+	<br>
+
+	<br>
+
+	<br>
+	<br>
+
+
+{% endblock %}

@@ -2,7 +2,385 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.1ScriptBasics/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.1ScriptBasics/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.1ScriptBasics/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.1ScriptBasics/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap1/images/1.2GetStarted/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.1/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.2/hierarchy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.1/flow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/f8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/hi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/if9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/loop1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/loop2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/loop3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/loop4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/opt9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/t1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/t2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3.2/t3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/2.3/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/22.1/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/22.1/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/22.1/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/22.1/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap2/images/22.1/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.1/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.1/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.1/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.1/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.1/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.1/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.10/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.11/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.11/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.12/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.13/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.14/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.14/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.14/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.15/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.15/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.15/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.15/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.15/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.15/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.16/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.16/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.16/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.16/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.17/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.18/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.18/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.18/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.18/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.18/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.19/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.2/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.20/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.20/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.20/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.20/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.20/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.20/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.21/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.21/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.21/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.22/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.22/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.22/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.22/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.22/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.22/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/get.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.23/set.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.3/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.4/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.4/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.5/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.6/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.7/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.8/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.8/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.8/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.8/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.9/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.9/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.9/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.9/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.9/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap3/images/3.9/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.1/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.2/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.2/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap4/images/4.2/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/10.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/10.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/2.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/2.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/3.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/3.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/4.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/4.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/5.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/6.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/7.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/8.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/8.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/8.3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/9.1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/Chap5/images/5.1/9.2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/add_plot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/dropdown.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/dump.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/flow_group.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/flow_task.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/graph_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/preview_a_device.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/removeAllScreens.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/select_a_selector.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mbpst/images/buttons/view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rename_files.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/blog_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/faq_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/mbpfaqlist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/setGminDC.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/mqafaqlist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/toc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap1/GetStarted.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap1/WhatIsMBPScript.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap2/DP.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap2/DefineANewFlow.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap2/HowFlowWorks.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap2/IMVConst.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap2/IMVPlots.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap2/IMVTargets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/AccessSim.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/ArrangePlots.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/AutorunWhenLoading.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/CallFuncFromAnotherFile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/CopyIMVtoAnotherPrj.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DataSparseness.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DataTransformation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DefineGmNearVth.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DefineIdeff.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DefineTargetWithT25.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DefineVth.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/DisplayTargetOnY2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/FinFETVthcon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/GlobalVar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/HideExtraCol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/IdsatNormalizedToMaxSASB.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/ReadWriteFile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/RegionSelection.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/RunOpt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/SelectData.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/SidOverId2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/SynchronizeSAAndSB.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/Timer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap4/AdvancedDebugging.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap4/SimpleDebugging.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap4/SlowMBP.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap5/APIs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap5/BuiltInJavaAlgorithm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/Chap5/MBP.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/mbpst_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mbpst/toc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/mqarules_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/fmax.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/ft.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/toc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/post_added.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/search_result.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dmtalents.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/banner-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/dog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/phones.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/Post/MAIN_WRITELOCK" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/Post/MAIN_mljxf9oxuouwx7mr.seg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/whoosh_index/Post/_MAIN_1.toc" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/intro-bg.jpg" afterPath="$PROJECT_DIR$/static/img/intro-bg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/landing-page.css" afterPath="$PROJECT_DIR$/static/css/landing-page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/static/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/about.html" afterPath="$PROJECT_DIR$/templates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/add_post.html" afterPath="$PROJECT_DIR$/templates/add_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/add_user.html" afterPath="$PROJECT_DIR$/templates/add_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/contact.html" afterPath="$PROJECT_DIR$/templates/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq.html" afterPath="$PROJECT_DIR$/templates/faq.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/mf.html" afterPath="$PROJECT_DIR$/templates/layouts/mf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules.html" afterPath="$PROJECT_DIR$/templates/mqarules.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/change_password.html" afterPath="$PROJECT_DIR$/templates/security/change_password.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/forgot_password.html" afterPath="$PROJECT_DIR$/templates/security/forgot_password.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/login_user.html" afterPath="$PROJECT_DIR$/templates/security/login_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/register_user.html" afterPath="$PROJECT_DIR$/templates/security/register_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/reset_password.html" afterPath="$PROJECT_DIR$/templates/security/reset_password.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/send_confirmation.html" afterPath="$PROJECT_DIR$/templates/security/send_confirmation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/send_login.html" afterPath="$PROJECT_DIR$/templates/security/send_login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/mbpst.html" afterPath="$PROJECT_DIR$/templates/blog.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,13 +395,107 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
+      <file leaf-file-name="mqarules_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ft.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/ft.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmax.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/fmax.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_result.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/search_result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/layouts/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="110" column="21" lean-forward="false" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rename_files.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rename_files.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/faq/toc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mqafaqlist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/faq/mqa/mqafaqlist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,13 +507,51 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="HTML4 File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>js/</find>
+      <find>topnav</find>
+      <find>navbar-brand</find>
+      <find>url_for</find>
+      <find>jq</find>
+      <find>mbpst_toc</find>
+      <find>ul</find>
+      <find>current</find>
+      <find>li</find>
+      <find>css</find>
+      <find>intro</find>
+      <find>jpg</find>
+      <find>rel=&quot;open&quot;</find>
+      <find>src=&quot;..</find>
+      <find>img</find>
+      <find>href=&quot;..</find>
+      <find>src=&quot;/static/mbpst/</find>
+      <find>con</find>
+      <find>cont</find>
+      <find>container</find>
+      <find>../</find>
+      <find>..</find>
+      <find>href</find>
+      <find>src=&quot;</find>
+      <find>src=&quot;../</find>
+      <find>faq</find>
+      <find>add_us</find>
+      <find>search</find>
+      <find>post</find>
+      <find>sear</find>
+      <find>whoosh_search</find>
     </findStrings>
+    <replaceStrings>
+      <replace>src=&quot;/static/mbpst</replace>
+      <replace>src=&quot;/static/mbpst/Chap2/</replace>
+      <replace>src=&quot;/static/mbpst/Chap3/</replace>
+      <replace>src=&quot;/static/mbpst/Chap4/</replace>
+      <replace>src=&quot;/static/mbpst/</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,32 +559,62 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/templates/security/change_password.html" />
-        <option value="$PROJECT_DIR$/templates/security/forgot_password.html" />
-        <option value="$PROJECT_DIR$/templates/security/register_user.html" />
-        <option value="$PROJECT_DIR$/templates/security/reset_password.html" />
-        <option value="$PROJECT_DIR$/templates/security/send_confirmation.html" />
-        <option value="$PROJECT_DIR$/templates/security/send_login.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst.html" />
-        <option value="$PROJECT_DIR$/templates/security/login_user.html" />
-        <option value="$PROJECT_DIR$/templates/contact.html" />
-        <option value="$PROJECT_DIR$/templates/about.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules.html" />
-        <option value="$PROJECT_DIR$/templates/mbpfaq.html" />
-        <option value="$PROJECT_DIR$/templates/add_user.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap2/IMVConst.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap2/HowFlowWorks.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/AccessSim.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/ArrangePlots.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/AutorunWhenLoading.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/CallFuncFromAnotherFile.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/CopyIMVtoAnotherPrj.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DataSparseness.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineGmNearVth.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineIdeff.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineTargetWithT25.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DisplayTargetOnY2.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/FinFETVthcon.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/HideExtraCol.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/IdsatNormalizedToMaxSASB.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/ReadWriteFile.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/RunOpt.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/SidOverId2.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/SynchronizeSAAndSB.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/Timer.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/SelectData.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/RegionSelection.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/GlobalVar.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineVth.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DataTransformation.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap4/SlowMBP.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/MBP.html" />
+        <option value="$PROJECT_DIR$/templates/search_result.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/toc.html" />
+        <option value="$PROJECT_DIR$/templates/post_added.html" />
         <option value="$PROJECT_DIR$/templates/add_post.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap4/AdvancedDebugging.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap4/SimpleDebugging.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/BuiltInJavaAlgorithm.html" />
+        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/APIs.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/setGminDC.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/mbpfaqlist.html" />
+        <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
+        <option value="$PROJECT_DIR$/templates/blog/mbpfaqlist.html" />
+        <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/rules/rule1.html" />
+        <option value="$PROJECT_DIR$/templates/faq/faq_index.html" />
+        <option value="$PROJECT_DIR$/templates/faq/toc.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/rules/ft.html" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask_whooshalchemy.py" />
+        <option value="$PROJECT_DIR$/templates/mqarules/mqarules_index.html" />
+        <option value="$PROJECT_DIR$/rename_files.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/layouts/base.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
-    <option name="y" value="2" />
-    <option name="width" value="1742" />
+    <option name="width" value="1264" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -95,6 +635,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -145,20 +687,90 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mqarules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mqarules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../flask_movie/env/Scripts/python.exe" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML4 File" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -170,14 +782,21 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\dmtalents\templates\mbpst\Chap2" />
+      <recent name="D:\projects\dmtalents\static\mbpst" />
+      <recent name="D:\projects\dmtalents\static\mbpst\Chap1" />
+      <recent name="D:\projects\dmtalents\static" />
       <recent name="D:\projects\dmtalents\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\dmtalents\templates" />
-      <recent name="D:\projects\dmtalents" />
+      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
+      <recent name="D:\projects\dmtalents\templates\mqarules" />
+      <recent name="D:\projects\dmtalents\templates\blog" />
+      <recent name="D:\projects\dmtalents\templates\faq\mqa" />
+      <recent name="D:\projects\dmtalents\templates\faq\mbp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.__init__">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -190,7 +809,41 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dmtalents" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="D:\projects\dmtalents\__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rename_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dmtalents" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rename_files.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dmtalents" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -329,12 +982,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <item index="1" class="java.lang.String" itemvalue="Python.rename_files" />
+      <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="1" class="java.lang.String" itemvalue="Python.rename_files" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -356,7 +1013,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484616323861</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1/16/2017">
+      <created>1484616530030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1484616530030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -369,27 +1033,45 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="2" width="1742" height="1160" extended-state="0" />
+    <frame x="0" y="0" width="1264" height="1160" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1637324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21533442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26447105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40918162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37225547" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3992016" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36027944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292978" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33988214" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3992016" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -405,356 +1087,374 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/HideExtraCol.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_user.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/GlobalVar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask_whooshalchemy.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/FinFETVthcon.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="192">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask/exthook.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DisplayTargetOnY2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="83" column="63" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
-          <folding>
-            <element signature="e#710#720#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="595">
+          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask_login.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DefineVth.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8636">
-          <caret line="522" column="8" lean-forward="false" selection-start-line="522" selection-start-column="8" selection-end-line="522" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="165">
+          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_post.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DefineTargetWithT25.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1775">
+          <caret line="109" column="34" lean-forward="false" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/faq.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DefineIdeff.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="618">
+          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/login_user.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DefineGmNearVth.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="785">
+          <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DataTransformation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1781">
+          <caret line="117" column="28" lean-forward="false" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DataSparseness.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="785">
+          <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/CopyIMVtoAnotherPrj.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="410">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/CallFuncFromAnotherFile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="635">
+          <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/AutorunWhenLoading.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/ArrangePlots.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/AccessSim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap2/IMVTargets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="97" column="14" lean-forward="false" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap2/IMVPlots.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap2/IMVConst.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap2/HowFlowWorks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="125" column="52" lean-forward="false" selection-start-line="125" selection-start-column="52" selection-end-line="125" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap2/DP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap2/DefineANewFlow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5984">
+          <caret line="352" column="11" lean-forward="false" selection-start-line="352" selection-start-column="7" selection-end-line="352" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap1/WhatIsMBPScript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap1/GetStarted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/post_added.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/templates/security/forgot_password.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap4/AdvancedDebugging.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="22" />
+        <state relative-caret-position="-423">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/register_user.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap4/SimpleDebugging.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+        <state relative-caret-position="546">
+          <caret line="126" column="34" lean-forward="false" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/reset_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/send_confirmation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/send_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/_macros.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/_messages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/change_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mbpst.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap4/SlowMBP.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/contact.html">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap5/BuiltInJavaAlgorithm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="-287">
+          <caret line="196" column="50" lean-forward="false" selection-start-line="196" selection-start-column="50" selection-end-line="196" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask_sqlalchemy/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/toc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="794" column="15" lean-forward="false" selection-start-line="790" selection-start-column="4" selection-end-line="813" selection-end-column="37" />
+        <state relative-caret-position="552">
+          <caret line="85" column="21" lean-forward="true" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask_login.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/mbpst_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8636">
-          <caret line="522" column="8" lean-forward="false" selection-start-line="522" selection-start-column="8" selection-end-line="522" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask/exthook.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap5/MBP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="83" column="63" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
-          <folding>
-            <element signature="e#710#720#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="535">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/flask_whooshalchemy.py">
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap5/APIs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/faq.html">
+    <entry file="file://$PROJECT_DIR$/templates/faq/mbp/setGminDC.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/login_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask_security/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="82" lean-forward="false" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="47" lean-forward="true" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="11" />
-          <folding />
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="493">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_user.html">
+    <entry file="file://$PROJECT_DIR$/templates/blog/toc.html" />
+    <entry file="file://$PROJECT_DIR$/templates/blog/blog_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/sqlalchemy/orm/scoping.py">
+    <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-44">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask_login.py">
+    <entry file="file://$PROJECT_DIR$/templates/faq/mbp/mbpfaqlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="791" column="0" lean-forward="false" selection-start-line="791" selection-start-column="0" selection-end-line="791" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/blinker/base.py">
+    <entry file="file://$PROJECT_DIR$/templates/blog/blog_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="266" column="0" lean-forward="false" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask_sqlalchemy/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/faq/faq_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/sqlalchemy/event/attr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask_whooshalchemy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="259" column="0" lean-forward="true" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#247#284#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/templates/faq/toc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/ft.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/fmax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/faq/mqa/mqafaqlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rename_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="110" column="21" lean-forward="false" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

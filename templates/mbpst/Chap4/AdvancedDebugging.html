@@ -1,0 +1,85 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Advanced Debugging</h2>
+	<hr>
+	MBP Script window provides advanced debugging mode, which allows us to set break-points and examine
+	code line by line, jump into and out of a function calls, inspect variables or expressions along
+	the way...
+	<br>To trigger the advanced debugging function, we need to firstly set a few break-points.
+	<ul>
+		<li>To set break-points, double click on the line number.</li>
+		<li>To remove break-points, double click on that line number again.</li>
+
+	</ul>
+	Then:
+	<ul>
+		<li>For IMV or DP targets, we need to do <b>Show Data Table</b> to run the code.
+		</li>
+		<li>For Flow Tasks, we click the <img src="/static/mbpst/Chap4/../images/buttons/play.png"> play button to
+			run the code.
+		</li>
+		<li>For any other user defined script Files, also click the<img
+			src="/static/mbpst/images/buttons/play.png"> play button to run the code.
+		</li>
+	</ul>
+	No matter which way we run the code, it will pause at the first encountered break-point, this
+	example uses Chap3.2 Define Vth by code:
+	<ul>
+		<li>It firstly pauses at line 9, the line background color becomes light green.</li>
+		<li>Click the <b>Step Over</b> button, the execute moves to next line and pauses there,
+			waiting for user to click <b>Step Over</b> or <b>Step Into</b> again.
+		</li>
+		<li>On the top left, the tab next to <b>Project</b> is called <b>Debug</b>, click on it.
+		</li>
+		<li>We will see <b>Threads</b> panel, which shows the flow of the code, from which function
+			to which.
+		</li>
+		<li>We will see <b>Variables</b> panel, which displays current local variables, their values
+			will be automatically updated when we step over to corresponding lines.
+	</ul>
+	<br>
+	<img src="/static/mbpst/Chap4/images/4.2/1.png" border="1px">
+	<ul>
+		<li>Keep <b>Step Over</b>, we see the execution moves to next and next lines.
+		</li>
+		<li>The local variable values update accordingly when we move on.</li>
+		<li>When comes to line 22, it calls another local function <b>calculate</b>, please click <b>Step
+				Into</b> button to jump into that function.
+		</li>
+		<li>If you don't wish to jump into a function, continue to click on <b>Step Over</b>.
+		</li>
+
+
+	</ul>
+	<img src="/static/mbpst/Chap4/images/4.2/2.png" border="1px">
+	<ul>
+		<li>Now, we jumped into the <b>calculate</b> function, continue <b>Step Over</b>.
+		</li>
+		<li>on the left, there is an <b>Expression</b> tab sitting left to the <b>Variables</b> tab,
+			where we can right click and <b>Add</b> custom variable or expressions, such as <b>Math.abs(con-ids[index])</b>,
+			the value of these expressions will be evaluated on the fly.
+		</li>
+		<li>This is very useful especially when we are in loops, we can inspect the variables in real
+			time.</li>
+	</ul>
+	<img src="/static/mbpst/Chap4/images/4.2/3.png" border="1px">
+	<ul>
+		<li>Finally, click the <b>Continue</b> button to run through the code to see the final output
+			result.
+		</li>
+		<li>or, click the <b>Stop</b> button to give up one test and make further changes in the
+			code.
+		</li>
+
+	</ul>
+	It might be a bit overkill for small applications where the simple Print can do a decent job; the
+	advanced debugging function, however, will serve a complicate coding very well, especially when
+	there are cascaded function calls and loops.
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>IMV Targets</h2>
+	<hr>
+	Intermediate Variables(IMV) are targets calculated/extracted from IV/CV data, such as Vth, Idlin,
+	Idsat, Gm, Rout, etc. People may have their own way to create or define these targets, that's why
+	it's important to make IMV fully customizable and flexible in MBP.
+	<br>
+	<br>There are two ways to create an IMV Target, they are "IMV" and "Data" when we bring up the
+	pop-up menu by right-clicking on the
+	<b>imv</b> node in Script Window, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/1.png">
+	<br> "IMV" option is to create an IMV Target using GUI definition, it's an easy way to create
+	a "Data". Whereas "Data" option is to create a IMV Target from scratch via scripting. In essence,
+	"IMV" is also a "Data" with a few pre-defined GUI options.
+	<br> We could imagine that a "Data" in MBP Script stands for a data table, a table that
+	contains measurement and simulation data, such as device geometry, temperature, bias condition,
+	current output, etc. For instance:
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/8.png">
+	<br>
+	<div style="width: 75%">
+		<h3>IMV</h3>
+		<hr>
+	</div>
+	When create a IMV, after giving it an arbitrary name, say "myT1" here, we get the following GUI
+	packed with options.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/2.png">
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/3.png">
+	<br> At the top of the IMV definition panel, there are
+	<b>IMV Type</b> options.
+	<ul>
+		<li><b>Java Algorithm</b>, it is to use one of MBP's built-in algorithm to calculate a
+			target, see more explanation below.</li>
+		<li><b>Script Algorithm</b></li>
+		<li><b>Expression</b>, it's to create a new target based on an expression of other
+			pre-defined targets, <a href="/mbpst/chap3.1.1">Chap 3.1.1 Define Ideff</a> is a perfect
+			example of using Expression.</li>
+		<li><b>Auto Refer</b>, it's to refer to other targets.</li>
+		<li><b>Local Param</b></li>
+		<li><b>Trans to Point</b></li>
+		<li><b>Corner</b></li>
+	</ul>
+
+	<div style="margin-left: 20px">
+		<div style="width: 50%">
+			<h4>Java Algorithm</h4>
+			<hr>
+		</div>
+		There are a few options under Java Algorithm:
+		<ul>
+			<li><b>Page Name</b>, it is the IV/CV plot name, say Ids_Vgs_Vbs. Note: in MBP Id_Vg_Vb is
+				different from Ids_Vgs_Vbs; however, it is case-insensitive.</li>
+			<li><b>Restrictions</b>, we could apply restrictions including device geometry, temperature,
+				and bias conditions. <br>>. Usually, we accept all device geometry and temperature, this is
+				achieved by using the <b>device</b> keyword.<br>>. We can restrict this target to only
+				Vbs=0, or if we want to include all Vbs, we simply put Vbs here.<br> >. Functions <b>absmax(),
+					absmin(), max(), min()</b> can be used to get absolute(or not) max or min value of that variable
+				from currently loaded measurement data dynamically.</li>
+			<li><b>Algorithm Class</b>, has a few built-in Java algorithm or so call Java Class, please
+				refer to the <a href="/mbpst/chap5.1">MBP Builti-in Java Algorithm</a>.</li>
+			<li><b>Algorithm Parameters</b>, the input parameters for the selected Algorithm Class.</li>
+			<li><b>Attached Targets</b>, we can attach other pre-defined IMV targets into this one for
+				calculation. Use semi-colon(;) to separate more than one attached targets when necessary. <a
+				href="/mbpst/chap5.1">See example here</a>.</li>
+			<li><b>Parameters</b>, is a table where we can specify the algorithm's parameter sweep or
+				constant value, user defined variables such as Vdd, Vdlin can be used.</li>
+			<img src="/static/mbpst/Chap2/images/2.1/4.png" border="1px">
+		</ul>
+
+	</div>
+	<br>
+	<div style="width: 75%">
+		<h3>Data</h3>
+		<hr>
+	</div>
+	Again, "Data" option is to create an IMV Target from scratch via scripting, and essentially it will
+	be a data table as explained above, so when we create a "Data", after giving it a name, we
+	immediately get a code template asking us to return a DATA. As shown below:
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/5.png">
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/6.png">
+	<br>
+	<br>
+	<b>DATA</b> is a MBP built-in object, which stands for the table that this target generates,
+	beginning from using the selector function
+	<b>sfunc</b> to select a piece of data from loaded IV/CV measurement data, or another pre-defined
+	IMV target's data. There is a lot of things we can do to manipulate the data, such as: split,
+	group, filter, sort, etc. and we could even merge two tables together when needed to created a
+	bigger table according to user defined conditions.
+	<br>For more details, please refer to Chap 3.1.4 or Chap 3.1.6, also Chap 5.2 Script APIs.
+	<br>
+	<br> To view the data table associated with an IMV target, no matter it's created by "IMV" or
+	"Data", select that IMV target, right-click, and do "Show Data Table". For instance, let's load all
+	IV data from $MBPHOME/demo/DC/mosfet/nmos/mdm/, and do "Show Data Table" on Idlin.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/7.png">
+	<br> we will get the following Idlin table, which contains W/L/T and bias sweep, etc.
+	<br> Once we got such a Data Table, we are ready to create some Plot or Graph, let's continue
+	to
+	<a href="/mbpst/chap2.1.2">Chap 2.1.2 IMV Plots</a>.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.1/9.png">
+	<br>
+
+
+
+
+
+
+{% endblock %}

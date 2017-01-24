@@ -1,0 +1,117 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Hide Columns in Data Table</h2>
+	<hr>
+	In spreadsheet softwares we can hide columns that we currently don't need, so that we could focus
+	on fewer columns, easier to navigate the table as well. Yes, we deal with lots of Data Tables in
+	MBP Script, and this example demonstrates how we hide columns, or pick columns we want to keep.
+
+	<br>
+	<br> When MBP loads measured data, all the instance parameters coming from the data will be
+	read in by default, for example, this demo used .mdm files from
+	<b>Chap3/ExampleFiles/3.17/MDM</b>, please load them all into MBP via menu "File -> Data -> Load".
+	<br>
+	<br> The example Script .zip file can be found at
+	<b><i>ScriptZipFiles/16_Hide_Columns.zip</i></b>.
+	<br>
+	<br> Then, come to MBP Script window, under
+	<b>imv.imv</b> create a New -> Data, call it "Ids_hidden_col", as shown below.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/1.png" border="1px">
+	<br>
+
+	<br> Right now, we just do:
+	<pre class="code">
+DATA load(sfunc select){
+	DATA m = select("ids_vgs_vds");
+
+	return m;
+}
+	</pre>
+	Then,
+	<b>Show Data Table</b> on this target, we see a lot of columns, we will see that many columns have
+	the same value, such as nrd, nrs, sa, sb, etc.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/2.png" border="1px">
+	<br>
+	<br> These columns may not be a problem until we start to create IMV plots, for example, let's
+	create a "Ids_Vgs_t" plot where we put Temperature on the Z axis.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/10.png" border="1px">
+	<br> When viewing the plot, the index table is so big that we cannot easily find the right
+	conditions, now, it's time to hide a few columns, such as nrd, nrs, sa, sb, vs, etc, that have a
+	single value, especially just 0.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/5.png" border="1px">
+
+	<br>
+
+	<br>The trick is to create such a function that can hide columns.
+	<br> Let's do a New -> File under
+	<b>imv.imv</b>, and call it
+	<b>funcs</b>.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/3.png" border="1px">
+	<br>
+	<br> In this
+	<b>funcs</b> file, write the
+	<b>filterColumns</b> function, as follows:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/4.png" border="1px">
+	<br> Here is the code for copy-paste, the combination use of
+	<b>DATA.split()</b> and
+	<b>trans()</b> functions just do the job we need, it's a result of data transformation; for more
+	information, please refer to Chap3.6.
+	<pre class="code">
+DATA filterColumns(DATA in, String columnsToStay){
+	String targetName=in.getOutputNames()[0];
+	return in.split(columnsToStay).transSubToPoint(trans,targetName);	
+}
+
+void trans(POINT to, DATA from){
+	String targetName=from.getOutputNames()[0];
+	to->targetName = from->targetName;
+}
+
+	</pre>
+
+	Next, back to the IMV target "Ids_hidden_col" code, we call that
+	<b>filterColumns</b> function, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/6.png" border="1px">
+	<br>
+	<br> When done, it will look like this, where we can specify what columns to stay, and all the
+	rest will be hidden.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/7.png" border="1px">
+	<br>
+	<br> Now,
+	<b>Show Data Table</b> on this target will show a much compact table.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/8.png" border="1px">
+	<br>
+	<br> And, the IMV plot's index table also got improved, much easier to navigate now. Cheers!
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.17/9.png" border="1px">
+	<br>
+	<br> Here is the final code in "Ids_hidden_col":
+	<pre class="code">
+DATA load(sfunc select){
+	DATA m = select("ids_vgs_vds");
+	
+	//going to pick needed columns and hide others
+	String columnsToStay="w,l,t,ad,as,pd,ps,vbs,vds,vgs";
+	//We now get rid of "nf,nrd,nrs,sa,sb,sd,sca,scb,scc,vs"
+	m=imv.imv.funcs::filterColumns(m,columnsToStay);
+	
+	return m;
+}
+
+	
+	</pre>
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}

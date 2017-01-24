@@ -1,0 +1,55 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>IMV Const</h2>
+	<hr>
+	An important and useful component in for IMV is the IMV Constant Table, where user constants are
+	defined, such as Vdd, Vdlin, Vgg, and Icon for calculating Vth using constant current method, etc.
+	A constant must be defined before use. As shown below:
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3/1.png">
+	<br>
+	<br> Once a constant is defined, it can be used in IMV Target and IMV Plot creation, and it is
+	a good idea to use constant as much as possible so that we don't have fixed "magic number"
+	everywhere.
+	<br>
+	<br> For instance, the following screenshot shows how a constant
+	<b>Vdd</b> is used in IMV Target definition where we have Vds=Vdd/2, on the contrary, to hard code
+	Vgs=1.5 is not a good idea in the long run.
+	<br>
+	<img src="/static/mbpst/Chap2/images/2.3/2.png">
+	<br>
+	<br> To create a new IMV constant, simply type in a new name in the last blank Name column,
+	and hit Enter, and MBP will automatically increase the Table row count to allow adding more
+	constants.
+	<br>
+
+	<br> Now, let's take a close look at the IMV Const Table:
+	<br>
+	<ul>
+		<b>Related Targets:</b> When we click on a constant, it will show us where this constant is used.
+		For exmaple, Vdd is used in Idlow and Idhigh in the first screenshot.
+
+		<li><b>Name</b> could be an arbitrary name, for example, we can define both "Iconn" and
+			"Iconp" to be used in NMOS and PMOS targets respectively when necessary.</li>
+		<li><b>Value String</b> is where we should firstly input the value for this constant, the
+			reason it is called a String is that we can employ an expression or function here, for example, <b>absmax(Vds)</b>
+			which gets the absolute max Vds number from currently loaded measurement data dynamically. It
+			could be just a plain number as well.</li>
+		<li><b>Value</b>, it will show the evaluated value if an expression is put in <b>Value
+				String</b>, also, when working on a PMOS or PNP model, the value will be multiplied by a minus sign
+			if the <b>IsDTSens</b> check-box got checked.</li>
+		<li><b>IsDTSens</b>, stands for Is Device Type Sensitive, meaning to differentiate N and P
+			polarity. When checked, a minus sign will be applied to the <b>Value</b>.</li>
+		<li><b>Description</b> is for user to put in some comments.</li>
+
+	</ul>
+
+	When edited, please click either
+	<b>OK</b>, or
+	<b>Apply</b> button to make the change effective.
+	<br>
+	<br>
+	<br>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Auto-run Script when loading a project</h2>
+	<hr>
+	MBP Script window provides a place to auto-run code when loading the project, or loading a Script
+	.zip file.
+	<br>
+	<br> It is to place the code in
+	<b>setup</b> node of the script tree, as shown below.
+	<br> Note,
+	<b>init</b> is another place MBP will execute upon loading; however, it runs even before the setup
+	of IMVs and other stuff, so it's not recommended to put user code in
+	<b>init</b> because many settings may not be ready yet.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.11/1.png" border="1">
+	<br>
+	<br> The above screenshot shows the default code in
+	<b>setup</b> for a BSIM4-Hspice project, and the code is to add two menu items to the "Extraction"
+	menu, "GA Flow" and "NoBin Flow", as shown below. This explains that MBP's menu items are
+	customizable, and sometimes we see different items under different projects.
+
+
+
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.11/2.png" border="1">
+	<br>
+
+	<br> So, user defined codes can be added here, and next time we open a MBP project or load
+	another previously saved Script .zip file, these codes got executed automatically.
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}

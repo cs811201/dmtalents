@@ -1,0 +1,37 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+Search Result
+{% endblock %}
+
+{% block content %}
+<br/>
+
+<div class="container">
+
+    {% if slist.__len__()>0 %}
+    <h3>Searched results for: <I style="color:#8B0000"> {{searchfor}}</I> , {{slist.__len__()}} match(es).</h3><br/>
+    <div style="height: 1000px; overflow:auto">
+
+        {% for item in slist:%}
+        <h4><a href="{{item.route}}">{{item.title}}</a></h4>
+        <h5><u>Keywords</u>: {{item.abs}}</h5>
+        <h5><u>Category</u>: {{ myfunction(item.category) }}</h5>
+        {% if item.content.__len__()>110 %}
+        {{item.content[:100]}}...
+        {% else %}
+        {{item.content}}
+        {% endif %}
+        <br/><br/><br/>
+        {% endfor %}
+        {% else %}
+        <h3>No results found for: <I style="color:#8B0000"> {{searchfor}}</I></h3>
+        <br/><br/><br/>
+        {% endif %}
+
+    </div>
+
+</div>
+
+
+{% endblock %}

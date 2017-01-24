@@ -1,0 +1,125 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Define Target with T = 25</h2>
+	<hr>
+	To find a reference point among all conditions is often desired, for example, people may want to
+	find
+	<b>Idsat_T25</b> which is the Idsat @ Temperature = 25 degrees, and create normalized
+	<b>Idsat_norm = Idsat/Idsat_T25</b>, and this logic can be applied to many more applications, such
+	as Vth_T25, Idsat_Lmax, Idsat_SASBmax, and so on.
+	<br>
+	<br>Here, let's see how Idsat_norm = Idsat/Idsat_T25 is done.
+	<br>
+	<br> The example Script .zip file can be found at
+	<b><i>ScriptZipFiles/07_IMV_IdsatT25.zip</i></b>
+	<br> And the sample measurement data with multi-T can be found at
+	<b><i>Chap3/ExampleFiles/3.5/*.mea</i></b>, please load all of these files in MBP via menu
+	File->Data->Load.
+
+	<br>
+	<br> There are two approaches to get Idsat_T25:
+	<ul>
+		<li><a href="#GUI">GUI mode, no coding is needed</a></li>
+		<li><a href="#Code">Write a bit of code, prefer this way?</a></li>
+	</ul>
+	<div style="width: 75%">
+		<h3>
+			<a name="GUI">GUI mode</a>
+		</h3>
+		<hr>
+	</div>
+
+	Let's begin with an existing Idsat, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/6.png">
+	<br> And when we do "Show Data Table" on Idsat, we see the following data, note that there are
+	T=-40, 25, 55 and 125.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/5.png">
+	<br> Now, please create a new IMV, name it Idsat_T25, as shown below.
+	<br> Pay attention to the following places:
+	<ul>
+		<table>
+			<tr>
+				<td>Page Name:</td>
+				<td>imv.imv.Idsat</td>
+				<td>We are going to use the existing Idsat Data as input.</td>
+			</tr>
+			<tr>
+				<td>Restrictions:</td>
+				<td>device,vds,vgs,vbs,<b>T=25</b></td>
+				<td>The key is to apply T=25.</td>
+			</tr>
+			<tr>
+				<td>Algorithm Class:</td>
+				<td>acc/Current</td>
+				<td>This algorithm simply return the output column of the input, in this case it is Idsat.</td>
+			</tr>
+			<tr>
+				<td>Algorithm Parameters:</td>
+				<td>Idsat</td>
+				<td>The output column's name</td>
+			</tr>
+
+		</table>
+	</ul>
+
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/8.png">
+	<br> When the definition is done, we do a "Show Data Table" on Idsat_T25, we shall see the
+	following table with only T=25 rows.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/7.png">
+	<br> Next, let's create another new IMV and call it Idsat_norm.
+	<br>
+	<ul>
+		<li>Choose <b>Expression</b> IMV Type
+		</li>
+		<li>Attached Targets: <b>Idsat,Idsat_T25</b>, if there were any typo, we will see red error
+			message at the bottom of MBP Script window.
+		</li>
+		<li>Expression: <b>Idsat/Idsat_T25</b></li>
+		<li>Restriction: <b>w,l,vbs</b>, note that right now we couldn't use "device" here, because
+			"device" includes device's instances and T, and T cannot be a restriction in this case.
+		</li>
+	</ul>
+	<img src="/static/mbpst/Chap3/images/3.5/9.png">
+	<br> Now, we shall be able to see the Data Table of Idsat_norm, as follows:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/11.png">
+	<br>
+	<br> Then, it's time to create a Graph under Idsat_norm, say Idsat_norm_T for Temperature
+	dependency. As shown below:
+
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/10.png">
+	<br>
+	<br>
+	<br>
+	<div style="width: 75%">
+		<h3>
+			<a name="Code">Select T=25 using code</a>
+		</h3>
+		<hr>
+	</div>
+	An alternative approach to get the Idsat_T25 is to write some code directly, it is every
+	straightforward if one gets familiar with MBP Scripting, simple and clean.
+	<br> As shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.5/12.png">
+	<br> In this approach, we create a New-> Data, which provides a DATA load() function template,
+	where we write the following:
+	<br>
+	<ul>
+		<li>Line 1 is to get Idsat DATA, give it a name called <b>m</b>.
+		</li>
+		<li>Line 2 is to perform select() function on Data <b>m</b>.
+		</li>
+		<li>That's it, now return the updated Data <b>m</b>, done!
+		</li>
+	</ul>
+	<br>
+
+
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "layouts/mf.html" %}
+{% extends "layouts/base.html" %}
 
 {% block title %}
 Add Post
@@ -11,27 +11,33 @@ Add Post
     <form method="post" action="/add_post">
 
         <label>Title:</label>
-        <input id="title" name="title" size="90" type="text"/>
+        <input id="title" name="title" size="90" type="text" class="form-control"/>
         <br/><br/>
 
-        <label>Keywords(Optional, to be searched):</label><br/>
-        <textarea name="abs" rows="3" cols="30">
+        <label>Keywords(Optional, to be searched, comma separated words):</label><br/>
+        <input id="abs" name="abs" type="text" class="form-control"/>
 
-        </textarea>
         <br/>
         <br/>
         <label>Category:</label>
 
         <select name="category">
-            <option value="mbp">MBP</option>
-            <option value="mqa">MQA</option>
+            <option value="mbpst">MBP Script Tutorial</option>
+            <option value="mbpfaq">MBP FAQ</option>
+            <option value="mqarules">MQA Rules</option>
+            <option value="mqafaq">MQA FAQ</option>
+            <option value="blog">Blog</option>
         </select>
         <br/><br/>
         <label>Content:</label><br/>
-        <textarea name="content" rows="30" cols="150">
+        <textarea name="content" rows="20" cols="150" class="form-control">
 
         </textarea>
         <br/><br/>
+        <label>Route URL (internal use):</label>
+        <input id="route" name="route"  type="text" class="form-control"/>
+        <br/><br/>
+
         <input type="submit">
 
     </form>

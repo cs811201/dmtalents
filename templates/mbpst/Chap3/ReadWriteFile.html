@@ -1,0 +1,150 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+
+	<h2>Read Write Files in Script</h2>
+	<hr>
+	This example shows how to Read from and Write to text files in MBP Script.
+	<br>
+	<br> The example Script .zip file can be found at
+	<b><i>ScriptZipFiles/15_ReadWriteFile.zip</i></b>
+	<br> A "funcs" script file is created under
+	<b>prog</b> to demonstrate how to read a file, and another "funcs2w" is for how to write to a file.
+
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.16/1.png" border="1px">
+	<br>
+	<h4>Read a File</h4>
+	We use the
+	<b>java.io.RandomAccessFile</b> object to read a user file line by line. In this example, we simply
+	print out the file contents to the
+	<b>Message</b> panel of MBP; however, user can use these info anyway they like once it's read in.
+	<ul>
+		<li>Always call the <b>close()</b> function to close the file after use.
+		</li>
+	</ul>
+	<img src="/static/mbpst/Chap3/images/3.16/2.png" border="1px">
+	<br> The code of "funcs" is here for copy-paste:
+	<pre class="code">
+import java.io.RandomAccessFile;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+//Read contents line by line from a text file.
+String filePath="C:/Test/test.txt";
+//create a RandomAccessFile instance with "r" or "read" mode.
+RandomAccessFile raFile = new RandomAccessFile(filePath, "r");
+//create an ArrayList to contain all lines, optional
+ArrayList list=new ArrayList();
+//read in the first line
+String line=raFile.readLine();
+while(line!=null){
+	list.add(line);
+	System.out.println("read in: "+line);
+	//read in next line
+	line=raFile.readLine();
+	
+}
+
+//close the file after it's done.
+raFile.close();
+
+System.out.println("");	
+import java.io.RandomAccessFile;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+//Read contents line by line from a text file.
+String filePath="C:/Test/test.txt";
+//create a RandomAccessFile instance with "r" or "read" mode.
+RandomAccessFile raFile = new RandomAccessFile(filePath, "r");
+//create an ArrayList to contain all lines, optional
+ArrayList list=new ArrayList();
+//read in the first line
+String line=raFile.readLine();
+while(line!=null){
+	list.add(line);
+	System.out.println("read in: "+line);
+	//read in next line
+	line=raFile.readLine();
+	
+}
+
+//close the file after it's done.
+raFile.close();
+
+for(int i=0; i&lt;list.size();i++){
+	//check what have been added in the ArrayList.
+	System.out.println("in List: "+list.get(i));
+}
+	</pre>
+	<h4>Write to a File</h4>
+	We can also use the
+	<b>java.io.RandomAccessFile</b> object to write to a file. Please pay attention to the comments in
+	the example code:
+	<ul>
+		<li>What if the file we write to doesn't exist.</li>
+		<li>What if the folder doesn't exist.</li>
+		<li>Better way to manage large String contents.</li>
+		<li>How to append line by line.</li>
+		<li>How to insert text to a file in a certain position.</li>
+		<li>Always call the <b>close()</b> function to close the file after use.
+		</li>
+	</ul>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.16/3.png" border="1px">
+	<br> The code of "funcs2w" is here for copy-paste:
+	<pre class="code">
+import java.io.File;
+import java.io.RandomAccessFile;
+import java.io.IOException;
+
+//Write contents to a file.
+String filePath="C:/Test/test2w.txt";
+
+File newFile = new File(filePath);
+boolean existed = newFile.exists();
+if(!existed){
+	//if the file folder doesn't exist either, uncomment line 11-13
+	//String fileFolder="C:/Test";
+	//File newFolder = new File(fileFolder);
+	//newFolder.mkdirs();
+	newFile.createNewFile();
+}
+//create a RandomAccessFile instance with "rw" or "read and write" mode.
+RandomAccessFile raFile = new RandomAccessFile(filePath, "rw");
+
+//New contents to dump into the file
+String str="There is something new!";
+raFile.write(str.getBytes());
+//if we want to append to the end of the file, fo the following:
+long length=raFile.length();
+raFile.seek(length);
+String linebreak=System.getProperty("line.separator");
+String str2=linebreak+"Another Line";
+raFile.write(str2.getBytes());
+
+//It's better to use StringBuffer to construct multi-line large text to be dumped to a file.
+//StringBuffer is more memory friendly than String, uncomment line 31-35
+//StringBuffer sb = new StringBuffer();
+//sb.append("line1"+linebreak);
+//sb.append("line2"+linebreak);
+//sb.append("lineN"+linebreak);
+//raFile.write(sb.toString().getBytes());
+
+
+//make sure to close this file when done.
+raFile.close();
+	
+	</pre>
+	<br> More, reading and writing files could involve heavily about dealing with Strings, in MBP
+	Script, we can use all the available Java String built-in functions, such as split(), startsWith(),
+	toLowerCase(), etc. very handy.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.16/4.png" border="1px">
+	<br>
+	<br>
+	<br>
+{% endblock %}

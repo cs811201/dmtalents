@@ -1,0 +1,126 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+
+	<h2>Select DATA with Conditions</h2>
+	<hr>
+	In MBP Script, in terms of data filtering, selection, etc. we can do the following operations:
+	<br>1. For one DATA:
+	<ul>
+		<li>Select, or Filter by user defined conditions</li>
+		<li>Group into Sub-tables</li>
+		<li>Split into Sub-tables</li>
+		<li>Order</li> Variables and functions can be used when specifying functions, see details below.
+	</ul>
+	2. We could also attach one or more DATA to another DATA to make a larger table according to user
+	define conditions, where we usually end up with multi-targets in one table, so that we can
+	implement cross-targets type of work.
+
+	<br>
+	<br>
+	<div style="width: 75%">
+		<h3>Select</h3>
+		<hr>
+	</div>
+	DATA has a universal
+	<b>build</b> function to accept all of these keywords/operations, as shown below, and we can use
+	expressions in the
+	<b>SelectBy</b> keyword. This keyword returns only selected rows.
+	<pre class="code">
+//use the universal <b>build</b> function.
+//comparison operations can be used in the expression
+//where 1.5 can be replaced by a variable.
+DATA m2 = m.build("selectBy(Vgs=1.5)");
+DATA m2 = m.build("selectBy(Vgs>Vth)");
+
+//to select rows where only sa=sb, sa and sb are two column names.
+DATA m3 = m.build("selectBy(sa=sb)");   
+
+//or, equivalently use select() function on DATA
+DATA m2=m.select("Vgs=1.5");
+DATA m2=m.select("T=25");
+DATA m2=m.select("sa=sb");
+
+//we could even use functions in the expression, e.g.
+//functions like max(), min(), absmax(), absmin(), abs()
+DATA m = imv.imv.Idsat::get();
+DATA maxSA=m.select("SA=max(SA)");
+	</pre>
+	<div style="width: 75%">
+		<h3>Group</h3>
+		<hr>
+	</div>
+	The following code snippet shows how to group rows in a DATA, and returns a table with sub-tables,
+	each sub-table is a group per use condition.
+	<pre class="code">
+//use the universal <b>build</b> function.
+DATA m2 = m.build("groupBy(Vgs)");
+
+//or, use group() function on DATA
+DATA m2=m.group("Vgs");
+
+//to group more than one variables, join them by comma, e.g.
+m2 = m.build("groupBy(Vgs,Vds)");
+//or equivalently:
+m2 = m.group("Vgs,Vds");
+	</pre>
+
+	<div style="width: 75%">
+		<h3>Split</h3>
+		<hr>
+	</div>
+	The following code snippet shows how to split rows, and returns a table with sub-tables.
+	<pre class="code">
+//use the universal <b>build</b> function.
+DATA m2 = m.build("splitBy(Vgs>1)");
+
+//or, use split() function on DATA
+DATA m2=m.split("Vgs>1");
+	</pre>
+
+	<div style="width: 75%">
+		<h3>Order</h3>
+		<hr>
+	</div>
+	The following code snippet shows how to put rows in order, and returns an ordered table.
+	<pre class="code">
+//use the universal <b>build</b> function.
+DATA m2 = m.build("orderBy(Vds)");
+
+//or, use orderby() function on DATA
+DATA m2=m.orderby("Vds");
+	</pre>
+	<div style="width: 75%">
+		<h3>Attach DATA</h3>
+		<hr>
+
+	</div>
+	The following picture demonstrates how to attach DATA according to user defined conditions. Imagine
+	many more we can do with the merged table, when desired targets are all on the same row, we can use
+	the simplest
+	<b>trans</b> function to do 1:1 transform for each row and get what we needed.
+	<br>
+	<br>
+
+	<img src="/static/mbpst/Chap3/images/3.4/1.png">
+	<br> The example code can be found at
+	<b><i>ScriptZipFiles/12_DATA_Attach.zip</i></b>.
+	<br>
+	<br> In this example, we do everything in code in one shot, as shown below:
+	<ul>
+		<li>Line 1, get the original Idsat DATA table.</li>
+		<li>Line 2, select max SA rows to a new DATA called maxSA.</li>
+		<li>Line 3, it's necessary to rename the Idsat in maxSA a different name to be able to be
+			attached later on. The rename is done by a <b>trans</b> function, see <a
+			href="/mbpst/chap3.6">Chap 3.6 DATA Transformation</a> for the use of trans functions.
+		</li>
+		<li>Line 4 does the <b>attachData</b>, it attaches maxSA to the original m, with conditions
+			that "W,L,T,Vbs,Vds,Vgs" column all must match per row, in another word, we don't care SA and SB.
+		</li>
+	</ul>
+	<img src="/static/mbpst/Chap3/images/3.4/2.png">
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock %}

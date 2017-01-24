@@ -1,0 +1,66 @@
+{% extends "mbpst/mbpst_index.html" %}
+ {{ super() }}
+{% block mbpstmain %}
+<h2>What is MBP Script</h2>
+<hr>
+<div overflow="scroll">
+    <div>
+        MBP Script is a Java&trade; based scripting language, object oriented, no compilation is required
+        at user end, just code as we go. And, many MBP specific APIs(Application Program Interface) and
+        high efficiency programming structures are nicely introduced for Device Modeling work. MBP Script
+        runs equivalently on Windows and Linux. <br> <br> On the other hand, MBP Script window
+        is also full of GUI based user-friendly interfaces which allow us to view/create many things
+        without any coding, MBP knows how to translate GUI input into scripts under the hood.
+    </div>
+    <br>
+    <div>
+        MBP Script can be used to access, define, customize, and automate a lot of MBP objects and
+        operations, including: <br>
+        <ul>
+            <li>Model Parameters</li>
+            <li>Measurement Data</li>
+            <li>IMV(Intermediate Variables), many are pre-defined, such as Vth, Gm, Gds, Idlin, Idsast,
+                etc.
+            </li>
+            <li>Scaling Plots, such as Vth vs. L, Idsat/W vs. W, etc.</li>
+            <li>Math Transformation, such as Line Fitting, Data Analysis, etc.</li>
+            <li>Simulation and Optimization</li>
+            <li>Extraction Flow Automation</li>
+            <li>GUI Components</li>
+            <li>And all kinds of things that Java&trade; can do, such as: File Management, Invoke System
+                Executables, etc...
+            </li>
+        </ul>
+    </div>
+    <div style="width: 75%">
+        <h3>For Example</h3>
+        <hr>
+    </div>
+    To get a Model Parameter value, say, currently we have a BSIM4 model loaded in MBP, and we wanted
+    to check the value of "Vth0" from the script, as follows:
+    <br>
+    <img src="/static/mbpst/Chap1/images/1.1ScriptBasics/1.png">
+
+    <br> Here, Param and MBP are built-in objects ready for user to access things from MBP
+    environment, they don't require additional definition beforehand, just use them in Script whenever
+    we want.
+    <br/>Example Script code is shown below:
+    <br/>
+    <pre class="code">
+//Get Model Parameter "Vth0" value.
+Param pVth0 = MBP.getParam("Vth0");
+double v = pVth0.getValue();
+
+System.out.println("Vth0=" + v);
+	</pre>
+
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

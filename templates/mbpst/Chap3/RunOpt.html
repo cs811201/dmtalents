@@ -1,0 +1,162 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Run Optimization in Script</h2>
+	<hr>
+	In MBP
+	<b>Flow</b> we see that we can define a
+	<b>Task</b> and run optimization on selected parameters against selected regions on plots, all in
+	GUI mode, as shown below.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/1.png">
+	<br>
+	<br>Here, we demonstrate how to do the same thing when coding is desired or needed. To do
+	optimization in code, we need to meet the same requisites, they are:
+	<ul>
+		<li>select a few devices</li>
+		<li>select plots from selected devices</li>
+		<li>select regions on plots</li>
+		<li>select parameters to optimize</li>
+		<li>choose a optimizer(optimization algorithm) and run optimization</li>
+	</ul>
+	<br> This example Script .zip file can be found at
+	<b><i>ScriptZipFiles/13_Optimization.zip</i></b>
+	<br> And, please use $MBPHOME/demo/DC/mosfet/nmos/mdm/iv*.mdm file as measurement input, where
+	W/L=10/10 is the max device.
+	<br>
+	<br> In this demo, we are going to:
+	<ul>
+		<li>Select the Ids_Vgs_Vbs plot at Vds=Vdlin for the max W/L device.</li>
+		<li>Select the threshold region on Ids_Vgs_Vbs plot for optimization</li>
+		<li>Also select Vth_Vbs IMV plot, and Vbs=0 point on this plot for optimization</li>
+		<li>Select model parameter <b>Vth0</b> for optimization
+		</li>
+		<li>Clean up region and parameter selection after optimization</li>
+
+	</ul>
+	In MBP Script window, under
+	<b>prog</b> node, let's right click and New->File, name it
+	<b>funcs</b> when asked.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/7.png">
+	<br>
+	<br> Here is the complete code of this demo, lines led by // are comments.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/2.png" border="1">
+	<br>
+	<br>
+	<ul>
+		<li>Line 1 - 4 are pre-setup, it's critical to clear any existing plot region and parameter
+			selections, otherwise optimization result will be affected by undesired region selection.</li>
+		<li>Line 6-9 are to get Ids_vgs_Vbs plot for W/L=10/10 device at Vds=Vdlin</li>
+		<li>Line 11-15 are to get the calculated Vth value from existing IMV target table.</li>
+		<li>Line 16-18 are to select the Vth region on the Ids_Vgs_Vbs plot, X axis ranging from
+			[Vth-0.1, Vth+0.1]</li>
+		<li>Line 20-22 are to get Vth_Vbs IMV plot for W/L/Vds=10/10/Vdlin device</li>
+		<li>Line 24-26 are to get the absmin(Vbs), and just select that point on Vth_Vbs plot.</li>
+		<li>Line 28-30 are to display the IV and IMV plots on GUI</li>
+		<li>Line 32-37 are to call the MBP default optimizer, AND, at the same time, specify which
+			model parameters to optimize on. Also, the optimize function requires an error function.</li>
+		<li>Line 40-42 defines the error function, which simply returns the run-time RMS on plots.</li>
+	</ul>
+	To run the code, click the play button on the toolbar.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/8.png" border="1">
+	<br>
+	<br>This is how MBP looks like when the code executes to Line 30, regions are selected on
+	plots. Note that the simulation is not fitting the measured data well.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/3.png">
+	<br>
+	<br> This is how MBP looks like when the code ran through Line 42, the optimization is done,
+	the simulation fits much better. And plots, regions and parameters remain selected.
+	<br> Tip: sometimes the optimization result wasn't very good because certain selected
+	parameters reached their boundary, one could either turn on the "auto expand boundary" option, or
+	expand parameter boundary in code.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/4.png">
+	<br>
+	<br> We could write another script file to clean thing up, such as clear region and parameter
+	selections.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/5.png">
+	<br>
+	<br> After the
+	<b>clean_up</b> is executed, we see MBP only displays the plots without anything selected.
+	<br>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.12/6.png">
+	<br>
+	<br> Note, the "select device" part comes inherently with the access to
+	<b>PageGroup</b>, which stands for plots in MBP, such as "Ids_Vgs_Vbs" plots in this example, this
+	<b>PageGroup</b> would have information of all loaded devices, we then further narrow down to
+	certain device by building and applying the condition, such as "select(W=max(W))", etc. In the end,
+	the plots we got will be from desired devices only.
+	<br>
+	<br> Here is the code for copy-paste:
+	<pre class="code">
+//clear existing plots/region/param selection
+cmd.clearPlots();
+cmd.clearParam();
+cmd.clearRegion();
+cmd.setPlotLayout(1,2);
+
+String condition="select(w=max(w)).select(l=max(l)).select(vds=min(vds))";
+//get IV plots for W/L = 10/10 device, by condition.
+def pg = cmd.getPageGroup("ids_vgs_vbs");
+def plots=pg.build(condition).toPagePlots();
+
+//get Vth from measurement data
+DATA vthData=imv.imv.Vth::get().build(condition);
+POINT p=vthData.getFirstPoint();
+double vth=p->"Vth";
+System.out.println("Vth="+vth);
+//select a region near Vth.
+def plot=plots[0];
+plot.selectRegion(vth-0.1,vth+0.1);
+
+// get IMV Vth_Vbs plot
+def imv_plots= cmd.getPageGroup("imv.imv.Vth.Vth_Vbs").build(condition).toPagePlots();
+def imv_plot=imv_plots[0];
+
+DATA vthVbs0=vthData.select("Vbs=absmin(Vbs)");
+double vbsabsmin=vthVbs0->"vbs";
+imv_plot.selectRegion(vbsabsmin,vbsabsmin);
+
+//show both IV and IMV plots on screen
+cmd.plot(plots);
+cmd.plot(imv_plots);
+
+//call optimizer with a customized error function
+//at the same time, model parameters are determined
+MBPOPT.DEFAULT.optimize("Vth0", errorFunc);
+//if we need to optimize multi parameters, do the following:
+//String[] params=new String[]{"Vth0", "U0"};
+//MBPOPT.DEFAULT.optimize(params, errorFunc);
+
+
+double errorFunc(){
+	return cmd.getRMS();
+}
+
+</pre>
+	<br>
+
+	<br>
+	<h3>Synchronize model parameters in optimization</h3>
+	If we want to keep two or more parameters's value synchronized in some way, we can do so in the
+	error function, an example is shown in the following code, where we want to optimize both Cgdo and
+	Cgso in a Cgdo=Cgso way.
+	<pre class="code">
+MBPOPT.DEFAULT.optimize("Cgdo", errorFunc);
+
+double errorFunc(){
+	double cgdo=MBP.getParamValue("Cgdo");
+	MBP.getParam("Cgso").setValue(cgdo);
+	
+	return cmd.getRMS();
+}
+
+	</pre>
+
+{% endblock %}

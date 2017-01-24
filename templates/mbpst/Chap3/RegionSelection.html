@@ -1,0 +1,77 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Region Selection</h2>
+	<hr>
+	Let's see how to select regions on plot using Script in order to be used in Flow.
+	<br>
+	<br> Basically, from
+	<a href="/mbpst/chap3.12">Chap3.12 Run Optimization in Script</a> we learnt that we can apply the
+	<b>selectRegion(x_low,x_high);</b> to select a region on from plot, as shown below:
+	<pre class="code">
+plot.selectRegion(vth-0.1,vth+0.1);
+	
+	</pre>
+	We are going to use the same API; however, plots and regions to be used in GUI mode
+	<b>OptTask</b> type of Tasks in Flows must be defined under the
+	<b>Data -> region</b> category, as shown below, it's a special setting in MBP.
+	<br>On the other hand, if a Task is define as a
+	<b>Task</b> type, then it has no such limit because we have full access to APIs.
+	<br>Again, the description in this chapter only applies to
+	<b>OptTask</b>.
+	<ul>
+		<li>In MBP Script window, go to the <b>Data</b> tab.
+		</li>
+		<li>Expand the <b>region</b> node, we see many pre-defined targets and associated plots.
+		</li>
+		<li>Open one plot, such as "vth_vbs", it is the same IMV graph definition.</li>
+	</ul>
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.21/1.png">
+	<br>
+	<br> If we just define an IMV Graph, there won't be any points selected by default, The key is
+	to go to the "GRAPH_MODIFY" tab of the Graph, every IMV Graph has this tab at the bottom.
+	<br> The code is here for copy-paste:
+	<pre class="code">
+void modify(Plot p,DATA data){
+	Graph2D g = (Graph2D)p;
+	double[][] vbs = data->"vbs";
+	g.selectRegion(vbs.min()*data.getPolarity(),vbs.max()*data.getPolarity());
+}
+	
+	</pre>
+	Every IMV Graph would provide us an empty
+	<b>modify</b> template with
+	<b>Plot p</b> and
+	<b>DATA data</b> to use. So, it's very handy to get access to all kinds of things of the current
+	Graph.
+	<b>Plot p</b> stands for the Graph itself, and
+	<b>DATA data</b>stands for the DATA Table of current IMV target.
+	<ul>
+		<li>Code line 1 is a must to convert to <b>Graph2D</b> so that we can use the <b>selectRegion()</b>
+			method.
+		</li>
+		<li>Code line 2 is to get bias from the <b>data</b>, similarly we should be able to get
+			W/L/T/Bias, etc from it as long as the DATA Table contains them.
+		</li>
+		<li>Eventually, apply the <b>selectRegion()</b> method to select a region.
+		</li>
+	</ul>
+
+	<img src="/static/mbpst/Chap3/images/3.21/2.png">
+	<br> We could edit or create new IMV targets and Graphs under
+	<b>Data -> region</b>, so that they can be listed in the drop-down list while we adding a Plot on
+	the GUI for "Plot Select" for an
+	<b>OptTask</b>, as shown below.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.21/3.png">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<br>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>DP Target and Plot</h2>
+	<hr>
+
+	DP(Device Parameter), refers to measurement files that contain device parameters, such as Vth,
+	Idsat(also called Device Targets), etc. as opposed to IV/CV sweeps. We have known that IMVs are
+	device targets calculated or extracted from IV/CV sweeps, in essence, IMV and DP are the same
+	thing!
+	<br>
+	<br>DP can be considered as a shortcut where people directly measure Vth, Idsat from DUTs,
+	when these targets are the main focus at a later use, and measuring full IV/CV sweeps seems a waste
+	of time, plus additional effort to convert to IMVs anyway.
+	<br>
+	<br> Note, before reading on, if we haven't found ourselves using DP, it's totally fine. We
+	don't need to unless our measurement guy handed us some DP data.
+
+	<br>
+	<br> An example DP data file is shown below, this file is
+	$MBPHOME/demo/DC/mosfet/dp_data/DP_Nmos.mea.
+	<br>
+	<br>
+	<img src="/static/mbpst/Chap2/images/22.1/1.png">
+	<br>
+	<br>
+	<ul>
+		<li>Line 4 says this is a nmos device.</li>
+		<li>Line 6 says what device instance parameters are in use.</li>
+		<li>Line 7 says what bias condtion is in use.</li>
+		<li>Line 8 says what columns are in the Data block below, Line 9 and onwards.</li>
+		<li>Line 9 and all the rest lines in the Data block are measurement data, one line one
+			device, all columns after the w,l,t are targets value, they are read-in in the same order as
+			written on Line 8.</li>
+	</ul>
+	The targets are
+	<b>ioff5,ioffs,ieff,imid,ion3,ion5...</b> Who knows what
+	<b>ion3</b> is? well, they all can be arbitrary names; however, they all must be defined in MBP
+	Script window so that MBP could understand it, under
+	<b>imv.dp</b>, as shown below.
+	<br>Now, we see that
+	<b>ion3</b> just defined as Ids at Vgs=Vgg, Vds=Vdlin and Vbs=0 conditions from Ids_Vgs_Vbs plot.
+	<br>
+
+	<img src="/static/mbpst/Chap2/images/22.1/2.png">
+	<br>
+	<br>
+	<br> When we load this DP_Nmos.mea file into MBP via "File->Data->Load", and we can see the
+	Data Table of
+	<b>ion3</b> when we do "Show Data Table". All the GUI operations are the same as IMV, please refer
+	to Chapter 2.1 IMV for details if necessary.
+	<br>
+	<img src="/static/mbpst/Chap2/images/22.1/3.png">
+	<br>
+	<br>Again, it will be all the same to create a DP Plot as we do with IMV Plots.
+	<br>
+	<img src="/static/mbpst/Chap2/images/22.1/5.png">
+	<br>
+	<br> Back to MBP main window, DP plots are shown in
+	<b>IMV Pages</b> panel, as shown below.
+	<br>To be noted, they are not shown in the
+	<b>Device Navigator</b> panel where we usually see IV/CV devices/plots.
+	<br>
+	<img src="/static/mbpst/Chap2/images/22.1/4.png">
+	<br>
+	<br> Then, we can select model parameters for extraction or optimization, there will be no
+	difference from using IV/IMV plots later on.
+	<br>
+	<br>
+
+	<br>
+	<br>
+
+{% endblock %}

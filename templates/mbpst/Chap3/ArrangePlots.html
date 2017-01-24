@@ -1,0 +1,118 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Arrange Plots in Script</h2>
+	<hr>
+	To arrange plots by Script would be handy and time-saving, imagine how much time we spent everyday
+	on trying to put together desired plots on screen.
+	<br>
+	<br> Here, we will use APIs from the built-in
+	<b>cmd</b> or
+	<b>CMD</b>, either all lower-case, or all upper-case.
+
+	<h4>Set Layout</h4>
+	<pre class="code">
+//set how many rows and columns to display in MBP main window.
+//cmd.setPlotLayout(row,col);
+cmd.setPlotLayout(1,2);
+	</pre>
+	This is equivalent to set from menu, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.13/1.png" border="1px">
+	<h4>Clear Plots</h4>
+	<pre class="code">
+cmd.clearPlots(); // clear all plots display.
+
+</pre>
+	This is equivalent to click the Remove All Screens
+	<img src="/static/mbpst/images/buttons/removeAllScreens.png"> button, as shown below:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.13/2.png" border="1px">
+
+	<h4>Display IV/CV Plots</h4>
+	<pre class="code">
+//cmd.plot(PagePlot[]);
+//the <b>plot</b> function takes PagePlot[] as input argument, we need to get PagePlot firstly.
+//PagePlot[] are obtained from PageGroup
+//To get PageGroup from IV, CV sweep, simply specify the sweep name.
+def plots = cmd.getPageGroup("ids_vgs_vbs").toPagePlots();
+cmd.plot(plots);
+</pre>
+	the sweep name is the text before the @ sign, as shown here:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.6/5.png" border="1">
+
+	<br>
+	<br> The default X/Y Axis scale is linear, to set log scale, please use the following
+	<b>@PlotInfo YScale=log</b> decoration when fetching plots:
+	<pre class="code">
+def plots = cmd.getPageGroup("ids_vgs_vbs@PlotInfo YScale=log").toPagePlots();
+
+//make XScale=log
+//def plots = cmd.getPageGroup("ids_vgs_vbs@PlotInfo XScale=log").toPagePlots();
+
+//make both XScale and YScale log, use a comma to join the two options
+//def plots = cmd.getPageGroup("ids_vgs_vbs@PlotInfo XScale=log,YScale=log").toPagePlots();
+	</pre>
+
+	<h4>Display IMV Plots</h4>
+	<pre class="code">
+//To get PageGroup from IMV, use the path: imv.imv.Hierarchy.PlotName
+//For example: when Hierarchy is define, use the Hierarchy string "gm/gds" in this case.
+def gm_plots= cmd.getPageGroup("imv.imv.gm/gds.Vth.Vth_Vbs").toPagePlots();
+
+//Another example: imv.imv.Vth.Vth_Vbs, where Hierarchy is not define, 
+//then it uses the TargetName for Hierarchy.
+def imv_plots= cmd.getPageGroup("imv.imv.Vth.Vth_Vbs").toPagePlots();
+cmd.plot(imv_plots);
+
+	</pre>
+	The IMV path is from the following hierarchy:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.13/6.png" border="1px">
+	<br> Note, IMV plot doesn't support
+	<b>@PlotInfo YScale=log</b>, instead, we can easily set Y/X Axes to be Log when creating then, as
+	shown below, set it here, and display it as is later on.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.13/8.png" border="1px">
+	<br>
+
+	<br> The following example shows how to display some IV and IMV plots together:
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.13/5.png" border="1px">
+	<br>
+	<br> In MBP main window, we will see a 2x2 layout, filled with Ids_Vds_Vgs, and Idsat_L,
+	Idlin_L and Vth_Vbs plots one by one. Code line 17-20 determines which plot(s) go first. BTW, if we
+	don't use condition to filter out plots, we may get many screens of plots.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.13/4.png" border="1px">
+	<br> The code is provided here for copy-paste:
+	<pre class="code">
+//clear existing plots/region selection
+cmd.clearPlots();
+cmd.clearRegion();
+cmd.setPlotLayout(2,2);
+
+String condition="select(w=max(w)).select(l=max(l)).select(vbs=min(vbs))";
+//get IV plots for W/L = 10/10 device, by condition.
+def pg = cmd.getPageGroup("ids_vds_vgs");
+//if we want to make YScale=log, try this
+//def pg = cmd.getPageGroup("ids_vds_vgs@PlotInfo YScale=log");
+def iv_plots=pg.build(condition).toPagePlots();
+
+// get IMV Idplot
+def idsat_plots= cmd.getPageGroup("imv.imv.Idsat.Idsat_L").build("W=max(W)").toPagePlots();
+def idlin_plots= cmd.getPageGroup("imv.imv.Idlin.Idlin_L").build("W=max(W)").toPagePlots();
+condition="select(W=max(W)).select(L=Max(L)).select(Vds=min(Vds))";
+def vth_plots= cmd.getPageGroup("imv.imv.Vth.Vth_Vbs").build(condition).toPagePlots();
+
+//show  IV and IMV plots on screen one after one
+cmd.plot(iv_plots);
+cmd.plot(idsat_plots);
+cmd.plot(idlin_plots);
+cmd.plot(vth_plots);
+	</pre>
+	<br>
+	<br>
+
+{% endblock %}

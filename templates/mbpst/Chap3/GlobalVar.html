@@ -1,0 +1,101 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+	<h2>Global Variables</h2>
+	<hr>
+
+	Variables defined in each IMV, file or Task are by default local variables, namely they can only be
+	referred within that particular script file; however, in many cases, we would need global variables
+	that can be seen across script files.
+	<br>
+	<br>This chapter demonstrates how to set and get global variables using the built-in
+	<b>MBPVAR</b> object, to record and calculate the time used to run a Flow.
+	<a href="mbpst/chap3.22">Chap3.22 Time Tasks in Flow</a> shows how to record the time when each Task
+	runs, here, we will take one step further, save these times, from start to end, and calculate the
+	total time used by the Flow, as highlighted below.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/6.png">
+	<br>
+	<br> This chapter uses the
+	<b><i>ScriptZipFiles/22_GlobalVar.zip</i></b> as an example, it is an extension of
+	<b><i>ScriptZipFiles/21_Timer.zip</i></b>,
+	<br> Let's use the same demo mosfet data files from $MBPHOME/demo/DC/mosfet/nmos/mdm/*.mdm.
+	<br>
+	<br> Firstly, let's add one more method in the "flow.util" file, called "getCurrentTime()", it
+	simply returns the current system time in milli-second.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/1.png">
+	<br> Next, it's better to create another New -> Task, call it "init", so as to record the
+	start time.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/2.png">
+	<br> The key is to use the
+	<b>MBPVAR.set()</b> method to put time
+	<b>t1</b> into the global scope, and latter on, we will use the key "t1" to fetch it. "t1" is an
+	arbitrary string, simply a token or key. And, we could set
+	<b>String</b>,
+	<b>double</b>,
+	<b>int</b>,
+	<b>double[]</b>,
+	<b>int[]</b>. Note, it seems
+	<b>String[]</b> is not supported for now; however, we can alternatively concatenate strings into a
+	single long string, and later on split it to restore the String[].
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/set.png" border="1">
+	<br> Then, drag and drop the "init" Task into the Flow, re-do the arrow paths, as shown below.
+	<br> Here is the code for copy-paste:
+	<pre class="code">
+// init ...
+task()(){
+	double t1=flow.util::getCurrentTime();
+	
+	MBPVAR.set("t1",t1);
+	
+	flow.util::printNow();
+}
+TASK.start();
+
+	
+	</pre>
+	<img src="/static/mbpst/Chap3/images/3.23/3.png">
+	<br> Note that "Task2" is the very last Task, we hence add the following code into "Task2".
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/4.png">
+	<br> Now, we can use the various
+	<b>MBPVAR.get...()</b> function to fetch the value of the global variable by feeding the key,
+	namely "t1" in this case.
+	<br>On code line 9, we calculate
+	<b>(t2-t1)/1000</b> to get the time difference between start and finish, remember that t1 and t2
+	are in milli-seconds, so we divide it by 1000 to get seconds.
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/get.png" border="1">
+	<br>
+	<br> Here is the code for copy-paste:
+	<pre class="code">
+// Task2 ...
+task()(){
+	System.out.println("flow continues...");
+	
+	double t2=flow.util::getCurrentTime();
+	
+	double t1=MBPVAR.getDouble("t1");
+	
+	flow.util::printNow();
+	
+	System.out.println("Time used: "+ (t2-t1)/1000 +" seconds.");
+	
+}
+TASK.start();
+
+	</pre>
+	Without too much effort, we get the total time used to run the entire flow, it feels good!
+	<br>
+	<img src="/static/mbpst/Chap3/images/3.23/5.png">
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	<br>
+{% endblock %}

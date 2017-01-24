@@ -1,0 +1,40 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+
+{% block content %}
+<br/><br/>
+<div class="container">
+
+    {% if slist.__len__()>0 %}
+
+    <div style="float:center; height:1000px; overflow:auto">
+
+        {% for item in slist:%}
+        <h4><a href="{{item.route}}">{{item.title}}</a></h4>
+        <h5><u>Keywords</u>: {{item.abs}}</h5>
+        <h5><u>Category</u>: {{ func(item.category) }}</h5>
+        {% if item.content.__len__()>110 %}
+        {{item.content[:100]}}...
+        {% else %}
+        {{item.content}}
+        {% endif %}
+        <br/><br/><br/>
+        {% endfor %}
+        {% else %}
+        <h3>No posts yet!</I></h3>
+        <br/><br/><br/>
+    {% endif %}
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

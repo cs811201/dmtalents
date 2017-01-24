@@ -1,0 +1,176 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>Define Vth</h2>
+<hr>
+Threshold Voltage, Vth, is a commonly used key term and consideration in transistor modeling,
+stands for the moment(at certain Vgs) where the transistor is about to turn on, meaning the output
+Id current reaches to a certain level of interest.
+<br> Currently there are some industry standard means to calculate/extract Vth from Id_Vg
+curves, such as:
+<ul>
+    <li>Constant Current Method</li>
+    <li>Max Gm Method</li>
+    <li>Other variants based on above two methods, such as using Log(Id), or applying deltaW and
+        deltaL, etc.
+    </li>
+</ul>
+Further, according to applied Vds bias, people usually define:
+<ul>
+    <li>Vtlin @ Vds=Vdlin</li>
+    <li>Vtsat @ Vds=Vdd</li>
+</ul>
+MBP has quite a few built-in algorithms for calculating Vth, please refer to
+<a href="/mbpst/chap5.1">Chap 5.1</a> for more details.
+<br>
+<br> Here, let's use the Constant Current Method as an example to explain how it's defined in
+MBP Script as an IMV target.
+<br>
+
+<img src="/static/mbpst/Chap3/images/3.2/1.png">
+<br> As shown above, we use a
+<b>Iref = Icon * M * W / L</b> to intercept the Ids_Vgs curve horizontally, and return the Vgs of
+that intercept point as Vth. Note,
+<b>Icon</b> must be defined in
+<b>imv_const</b> in advance and be assigned with a meaningful value for selected process.
+<br>
+<br> We now demonstrate how it's created in the following two approaches, we could use
+$MBPHOME/demo/DC/mosfet/nmos/mdm/*.mdm files as demo measurement data for calculating Vth.
+<ul>
+    <li><a href="#Java">Use a Built-in Java Algorithm, GUI mode, no coding needed.</a></li>
+    <li><a href="#Script">Scripting from scratch, coding required.</a></li>
+</ul>
+
+The example Script .zip file can be found at
+<b><i>ScriptZipFiles/05_IMV_Vth.zip</i></b>
+
+<div style="width: 75%">
+    <h3>
+        <a name="Java">Built-in Java Algorithm</a>
+    </h3>
+    <hr>
+</div>
+Firstly, let's make sure
+<b>Icon</b> is defined in imv_const table with a meaning value, as shown below.
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/2.png">
+<br>
+<br> Now, let's right click on
+<b>imv</b> node to New -> IMV, give it a name "Vth" when asked.
+<br>
+
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/3.png">
+<br>
+<br> The default IMV definition panel looks like this, Java Algorithm is selected, too.
+
+<br>
+
+<img src="/static/mbpst/Chap3/images/3.2/4.png">
+<br>
+
+<br> We need to edit a few places, as follows:
+<ul>
+    <li>Change <b>Restrictions</b> to "device,vbs,vds", we will differentiate Vtlin and Vtsat
+        later on.
+    </li>
+    <li>Change to <b>acc/VTH_CON</b> in the Algorithm Class drop down list.
+    </li>
+    <li>Change <b>Algorithm Parameters</b> to "vgs,ids,Icon", it is the order of "X, Y, Icon" and
+        the order matters! which means we cannot write "Icon,ids,vgs".
+    </li>
+    <li>Empty the <b>Parameter</b> table since we don't need them for now, the Vgs/Vds/Vbs will
+        be inhertied from measurement data.
+    </li>
+</ul>
+Now it looks like this:
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/5.png">
+<br>
+<br> If we do a "Show Data Table" on this newly created Vth, we shall see the following table
+with calculated Vth. Note, Vds has both Vdlin(0.05) and Vdd(1.5) for now.
+<br>
+
+<img src="/static/mbpst/Chap3/images/3.2/6.png">
+<br>
+<br> Next, create another two IMV targets, and call them Vtlin and Vtsat respectively, as
+shown below:
+<br>
+<br> For them, we use "imv.imv.Vth" as the
+<b>Page Name</b> as input, and apply the
+<b>Restrictions</b> as Vds=Vdlin for Vtlin, and Vds=Vdd for Vtsat, respectively.
+<img src="/static/mbpst/Chap3/images/3.2/7.png">
+<ul>
+    <li>Note 1: besides applying Vds=Vdlin, the trick we did here is to change the <b>Algorithm
+        Class</b> to "acc/Current", and <b>Algorithm Parameters</b> to "Vth", because "acc/Current" will
+        simply return the only output, usually it is Ids, however, in this case it becomes Vth; and
+        magically, the new restrictions are in place!
+    </li>
+    <li>Note 2: "imv.imv.Vth" is the path on the IMV tree to "Vth", similarly we could also
+        refer to "Vtlin" as "imv.imv.Vtlin" later on either on GUI or in script if we were to wirte some
+        code.
+    </li>
+</ul>
+<br> The Data Table of Vtlin now only has Vds=0.05 rows.
+<br>
+
+<img src="/static/mbpst/Chap3/images/3.2/9.png">
+<br>
+<br> Here is for Vtsat:
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/8.png">
+<br> And Vtsat would only have Vds=1.5 rows.
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/10.png">
+<br>
+<br> Eventually, we would create L/W/Vbs scaling plots under these targets, as shown here:
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/11.png">
+<br>
+<br> And, back to MBP main window, in the IMV Pages panel, we can use these scaling plots for
+model extraction right away.
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/12.png">
+<br>
+
+
+<div style="width: 75%">
+    <h3>
+        <a name="Script">Scripting from scratch</a>
+    </h3>
+    <hr>
+</div>
+Now let's New -> Data from
+<b>imv</b> node.
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/13.png">
+<br> Give it a name "Vth2".
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/14.png">
+<br> And, we get the Script Editor window names "imv.imv.Vth2".
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/15.png">
+<br>
+<br> In the Script Editor, we need to implement the following logic:
+<ol>
+    <li>Get the raw IV curves of Ids_Vgs</li>
+    <li>Find Ids[] and Vgs[] for each curve</li>
+    <li>Find W, L, M, etc associated with each Ids_Vgs curve</li>
+    <li>Get Icon and calcualte Iref=Icon*M*W/L</li>
+    <li>Intercept the curve and get Vth back</li>
+</ol>
+The full code can be found in the example
+<b><i>ScriptZipFiles/05_IMV_Vth.zip</i></b> file.
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/16.png">
+<br> We could constantly check the "Show Data Table" table, to see if the output is correct,
+as shown below:
+<br>
+<img src="/static/mbpst/Chap3/images/3.2/17.png">
+<br>
+<br> For more details about MBP Scripting, please refer to Chap 5.2 Script APIs.
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

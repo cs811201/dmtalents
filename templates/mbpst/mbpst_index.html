@@ -1,0 +1,27 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+MBP Script Tutorial
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+        <div style="float:left; width: 22%; margin-right:5px;">
+            {% include 'mbpst/toc.html' %}
+
+        </div>
+        <div style="float:center; height:1400px; overflow: auto">
+            {% block mbpstmain %}
+            {% endblock %}
+            <br/><br/>
+        </div>
+
+
+
+</div>
+
+
+{% endblock %}
