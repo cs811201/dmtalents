@@ -1,0 +1,41 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Alternative Optimization Error Function in Script</h2>
+<hr>
+
+We've learnt that we can do Optimization in MBP Script, where this error function is used:
+<br/><br/>
+<pre class="code">
+double errorFunc(){
+	return cmd.getRMS();
+}
+</pre>
+
+However, sometimes one may find this function not working, RMS won't further reduce. This is a known issue and here is the workaround.
+<br/><br/>
+Please try using the following alternative Error Function, as shown below:<br/>
+<img src="/static/faq/mbp/scriptOptErrFuncTrick/1.png" border="1px"><br/><br/>
+
+Here is the code for copy-paste:
+<br/><br/>
+<pre class="code">
+import com.accelicon.modelbuilder.optimization.optimizer.conf.OptimizerConfig;
+import com.accelicon.modelbuilder.ModelBuilder;
+
+// your other code
+
+double errorFunc(){
+            OptimizerConfig opt = OptimizerConfig.getInstance(ModelBuilder.framework);
+            return opt.getGUIRMS(false); // false means not to use weight setting.
+}
+</pre>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

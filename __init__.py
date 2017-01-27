@@ -6,6 +6,7 @@ from flask import Flask
 from flask import render_template, url_for, request, redirect
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import desc
 
 app = Flask(__name__)
 app.debug = True
@@ -158,7 +159,7 @@ def mbpst():
 @login_required
 def mbpfaq():
     recordPostHistory('/mbpfaq')
-    results = Post.query.filter(Post.category == 'mbpfaq').all()
+    results = Post.query.filter(Post.category == 'mbpfaq').order_by(desc(Post.create_date)).all()
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
 
@@ -522,6 +523,18 @@ def mbpfaqSetgmindc():
     recordPostHistory('/mbpfaq/setgmindc')
     return render_template('/faq/mbp/setGminDC.html')
 
+@app.route('/mbpfaq/scriptOptErrFuncTrick')
+@login_required
+def mbpfaqscriptOptErrFuncTrick():
+    recordPostHistory('/mbpfaq/scriptOptErrFuncTrick')
+    return render_template('/faq/mbp/scriptOptErrFuncTrick.html')
+
+
+@app.route('/mbpfaq/optOptions')
+@login_required
+def mbpfaqoptOptions():
+    recordPostHistory('/mbpfaq/optOptions')
+    return render_template('/faq/mbp/optOptions.html')
 
 #### MQA FAQ
 

@@ -1,0 +1,34 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Optimizer Options</h2>
+<hr>
+MBP provides more than 10 built-in Optimizers for Optimization, as shown below:<br><br>
+<img src="/static/faq/mbp/optOptions/1.png" border="1px"><br/><br/>
+
+Below are some explanation to these options when we come to take a closer look at them.
+<br/><br/>
+Use MBP menu "Optimization -> Choose Optimizer" to open the following window:<br/><br/>
+<img src="/static/faq/mbp/optOptions/2.png" border="1px"><br/><br/>
+
+
+By unchecking these checkboxes to the right of each option, we will be able to change them.<br/>
+<ul>
+    <li>VTR: Value to reach. The optimization will stop its minimization if either the maximum number of iterations is
+        reached or the best parameter vector found makes the objective function value less than VTR.
+    </li>
+    <li>IterMax: Maximum number of iterations.</li>
+    <li>TOL: Tolerance of the parameter optimized.</li>
+    <li>SynchStep: The optimizer will exert convergence check every “SynchStep” iterations.</li>
+    <li>SynchMax: Maximum number of iterations for tolerance convergence.</li>
+</ul>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}
