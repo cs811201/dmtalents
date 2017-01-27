@@ -4,15 +4,17 @@ import sys
 import flask_whooshalchemy as wa
 from flask import Flask
 from flask import render_template, url_for, request, redirect
+from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
+from flask_security import roles_required
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 
 if sys.platform == 'win32':
-    print('win32')
+    # print('win32')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/dm.db'
     app.config['WHOOSH_BASE'] = 'whoosh_index'
 else:
@@ -23,7 +25,17 @@ else:
 app.config['SECRET_KEY'] = 'super-secret007'
 app.config['SECURITY_REGISTERABLE'] = True
 
+# config for email
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = 'cs8112010033@gmail.com'
+app.config['MAIL_PASSWORD'] = 'iamcsman121'
+
 db = SQLAlchemy(app)
+
+mail = Mail(app)
 
 # Define models
 roles_users = db.Table('roles_users',
@@ -85,6 +97,9 @@ wa.whoosh_index(app, Post)
 user_datastore = SQLAlchemyUserDatastore(db, User, Post)
 security = Security(app, user_datastore)
 
+# display how many in most search list
+displayUpto = 50
+
 
 def getCategory(txt):
     if txt == 'mbpst':
@@ -134,6 +149,19 @@ def index():
     return render_template('index.html')
 
 
+# test send email
+@app.route("/send_email")
+@login_required
+@roles_required('bumblebee')
+def send_email():
+    # msg = Message('Hello',
+    #               sender='cs8112010033@gmail.com',
+    #               recipients=['cs811201@gmail.com'])
+    # msg.body = "This is the email body"
+    # mail.send(msg)
+    return "Sent"
+
+
 @app.route('/login')
 def login():
     return redirect(url_for('login'))
@@ -159,7 +187,7 @@ def mbpst():
 @login_required
 def mbpfaq():
     recordPostHistory('/mbpfaq')
-    results = Post.query.filter(Post.category == 'mbpfaq').order_by(desc(Post.create_date)).all()
+    results = Post.query.filter(Post.category == 'mbpfaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
 
@@ -167,7 +195,7 @@ def mbpfaq():
 @login_required
 def mqafaq():
     recordPostHistory('/mqafaq')
-    results = Post.query.filter(Post.category == 'mqafaq').all()
+    results = Post.query.filter(Post.category == 'mqafaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mqa/mqafaqlist.html', slist=results, func=getCategory)
 
 
@@ -175,7 +203,7 @@ def mqafaq():
 @login_required
 def blog():
     recordPostHistory('/blog')
-    results = Post.query.filter(Post.category == 'blog').all()
+    results = Post.query.filter(Post.category == 'blog').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('blog/blog_index.html', slist=results, func=getCategory)
 
 
@@ -219,7 +247,7 @@ def add_post():
 def search():
     txt = request.form['search']
     recordSearchHistory(txt)
-    results = Post.query.whoosh_search(txt).all()
+    results = Post.query.whoosh_search(txt).limit(displayUpto).all()
     return render_template('search_result.html', slist=results, searchfor=txt, myfunction=getCategory)
 
 
@@ -523,6 +551,7 @@ def mbpfaqSetgmindc():
     recordPostHistory('/mbpfaq/setgmindc')
     return render_template('/faq/mbp/setGminDC.html')
 
+
 @app.route('/mbpfaq/scriptOptErrFuncTrick')
 @login_required
 def mbpfaqscriptOptErrFuncTrick():
@@ -535,6 +564,7 @@ def mbpfaqscriptOptErrFuncTrick():
 def mbpfaqoptOptions():
     recordPostHistory('/mbpfaq/optOptions')
     return render_template('/faq/mbp/optOptions.html')
+
 
 #### MQA FAQ
 
