@@ -8,7 +8,14 @@
     {% for item in slist:%}
     <h4><a href="{{item.route}}">{{item.title}}</a></h4>
     <h5><u>Keywords</u>: {{item.abs}}</h5>
-    <h5><u>Category</u>: <font style="background-color:#800000; color:#FFFFFF">{{ func(item.category) }}</font></h5>
+    <h5><u>Category</u>:
+        {% if func(item.category).startswith('MBP')  %}
+        <font style="background-color:#800000; color:#FFFFFF">{{ func(item.category) }}</font>
+        {% elif func(item.category).startswith('MQA')  %}
+        <font style="background-color:#008000; color:#FFFFFF">{{ func(item.category) }}</font>
+        {% else %}
+            {{ func(item.category) }}
+        {% endif %}</h5>
     {% if item.content.__len__()>110 %}
     {{item.content[:100]}}...
     {% else %}

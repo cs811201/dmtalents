@@ -182,6 +182,16 @@ def mbpst():
 
 
 # default to MBP FAQ list
+@app.route('/faq')
+# @roles_required('bumblebee')
+@login_required
+def faq():
+    # recordPostHistory('/faq')
+    results = Post.query.filter((Post.category == 'mbpfaq') | (Post.category=='mqafaq')).order_by(desc(Post.create_date)).limit(displayUpto).all()
+    return render_template('faq/faq_list.html', slist=results, func=getCategory)
+
+
+# default to MBP FAQ list
 @app.route('/mbpfaq')
 # @roles_required('bumblebee')
 @login_required

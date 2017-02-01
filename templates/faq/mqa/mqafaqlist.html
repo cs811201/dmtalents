@@ -8,7 +8,7 @@
     {% for item in slist:%}
     <h4><a href="{{item.route}}">{{item.title}}</a></h4>
     <h5><u>Keywords</u>: {{item.abs}}</h5>
-    <h5><u>Category</u>: {{ func(item.category) }}</h5>
+    <h5><u>Category</u>: <font style="background-color:#008000; color:#FFFFFF"> {{ func(item.category) }}</font></h5>
     {% if item.content.__len__()>110 %}
     {{item.content[:100]}}...
     {% else %}
