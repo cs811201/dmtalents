@@ -1,0 +1,65 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>How to QA a 5 Terminal Device</h2>
+<hr>
+
+In general, it is the “model.icf” file determines how MQA creates a netlist for SPICE simulator.
+<br/><br/>
+For models like BSIM3 and BSIM4, by default, the "model.icf" file is configured with just 4 nodes/terminals.
+
+
+<br/><br/>
+When we are dealing with a 5-terminal device, for example, a bsim4 based subckt
+model which has 5 terminals, we will have to update the default “model.icf” file from BSIM4
+default rule directory, because the BSIM4 default “model.icf” file only defines 4 terminals.
+<ul>
+    <li>$MQAHOME/etc/model/hspice/mos/54/model.icf</li>
+</ul>
+
+Usually the default “model.icf” in installation folder is read-only, we need to make a local copy in
+order to modify it, and then use the local copy in MQA project later on.
+For example, we copy the default one to $USER/somewhere/model.icf.
+<br/>
+<br/>
+Two sections we need to modify in “model.icf” file, as follows:
+<br/><br/>
+
+1. Under [PORT] setcion, we can add the 5th node e in the following two ways:
+
+<ul>
+    <li>(1) If we want this node e to be always grounded, we add it this way:
+        e = {5,0,0}
+    </li>
+    <li>(2) if we want this node e to be connected to other components(not grounded):
+        e = {5,NULL,0}
+    </li>
+</ul>
+
+2. under [Connection] section, we add node e’s Voltage and Current connection settings,
+as shown below
+<img src="/static/faq/mqa/5TdeviceQA/1.png" border="1px"><br/><br/>
+
+Here are the new V and I definition lines for copy-paste:
+
+<pre>
+Ve = {e,0,v,in/out,dc,v}
+Ves = {e,s,v,in/out,dc,v}
+Ie = {e,0,i,in/out,dc,mA}
+</pre>
+
+
+<br>
+<br>
+Next, when we create a QA project for this 5-terminal device in MQA Lib Explorer window:
+<br/>
+1. Remember to choose "5" in the "Node Number" dropdown list , as shown below.
+<br>
+<img src="/static/faq/mqa/5TdeviceQA/2.png" border="1px"><br/><br/>
+2. Pick up the modified local copy “model.icf” in Project setup, as shown below:
+<br>
+<img src="/static/faq/mqa/5TdeviceQA/3.png" border="1px"><br/><br/>
+
+Done, we should be able run the 5-terminal device successfully.
+<br/><br/><br/><br/>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>MQA MAX WAITING TIME</h2>
+<hr>
+
+MQA calls external simulators a lot, and sometimes we are in short of simulator licenses and have to wait for it.
+<br/>
+However, by default, MQA would time out the current rule when it awaits too long, and continue to run the next rule in our QA project, which would result in failed rules.
+
+<br/>
+<br/>
+
+As a workaround to this problem, we could take use of the following option supported by MQA:
+<ul>
+    <li>MQA_MAX_WAITING_TIME</li>
+</ul>
+
+This is an option to be set for the OS, Windows or Linux, for example:
+<br/>
+
+
+<img src="/static/faq/mqa/maxWaitTime/1.png" border="1px"><br/><br/>
+
+The value is the waiting time in seconds, up to 4 days!<br/>
+The above 300 second is equally to say 5 minutes, please choose a value that is appropriate for you when necessary. =)
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

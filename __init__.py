@@ -567,6 +567,42 @@ def mbpfaqoptOptions():
 
 
 #### MQA FAQ
+@app.route('/mqafaq/synchroVdVg')
+@login_required
+def mqafaqsynchroVdVg():
+    recordPostHistory('/mqafaq/synchroVdVg')
+    return render_template('/faq/mqa/synchroVdVg.html')
+
+@app.route('/mqafaq/maxWaitTime')
+@login_required
+def mqafaqmaxWaitTime():
+    recordPostHistory('/mqafaq/maxWaitTime')
+    return render_template('/faq/mqa/maxWaitTime.html')
+
+@app.route('/mqafaq/compareMode')
+@login_required
+def mqafaqcompareMode():
+    recordPostHistory('/mqafaq/compareMode')
+    return render_template('/faq/mqa/compareMode.html')
+
+@app.route('/mqafaq/5TdeviceQA')
+@login_required
+def mqafaq5TdeviceQA():
+    recordPostHistory('/mqafaq/5TdeviceQA')
+    return render_template('/faq/mqa/5TdeviceQA.html')
+
+
+@app.route('/mqafaq/CallMultiVerOfSim')
+@login_required
+def mqafaqCallMultiVerOfSim():
+    recordPostHistory('/mqafaq/CallMultiVerOfSim')
+    return render_template('/faq/mqa/CallMultiVerOfSim.html')
+
+@app.route('/mqafaq/CheckNetlist')
+@login_required
+def mqafaqCheckNetlist():
+    recordPostHistory('/mqafaq/CheckNetlist')
+    return render_template('/faq/mqa/CheckNetlist.html')
 
 
 #### MQA Rules

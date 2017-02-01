@@ -1,0 +1,36 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Compare Mode</h2>
+<hr>
+
+When we create a Compare Project in MQA, we have this CompareMode option in the Project settings window, right above where
+we specify the rule index file. As shown below:
+
+<br/>
+<br/>
+<img src="/static/faq/mqa/compareMode/1.png" border="1px"><br/><br/>
+
+It has 3 options, 0, 1 and 2, as explained below:
+<ul>
+    <li>0: Model A and B use the same constants from Model A.</li>
+    <li>1: Model A and B use their own Bias settings, but use A’s Geometry (default).</li>
+    <li>2: Model A and B use their own Bias and Geometry.</li>
+
+</ul>
+
+The picture below shows Bias and Geometry constant table, each model has its own, and Model A is the first model on the
+selected list which is done as the first step when creating a Compare Project.
+<br/><br/>
+When compare 2 processes that have different Lmin/Wmin, etc, please use CompareMode=2.
+<br/><br/>
+
+<img src="/static/faq/mqa/compareMode/2.png" border="1px"><br/><br/>
+
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

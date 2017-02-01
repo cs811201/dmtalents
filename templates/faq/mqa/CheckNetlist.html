@@ -1,0 +1,46 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Check MQA auto-created netlist and simulation output</h2>
+<hr>
+The huge benefit of using MQA is that it could generate netlist automatically for all types of simulators.
+<br/><br/>
+Often, we need to check these auto-created netlist files as well as the simulation output, especially when we need to debug a Rule.
+<br/>
+Because the simulation output files contain useful warning/error information when something went wrong.
+<br/><br/>
+
+There are a few places we can turn on / off saving netlist files on GUI.<br/><br/>
+1. is from the menu, Options -> Configuration -> Delete Netlist files, as shown below:<br/>
+<img src="/static/faq/mqa/CheckNetlist/1.png" border="1px"><br/><br/>
+
+The log window at the bottom will print the latest status after changing the option.<br/>
+<img src="/static/faq/mqa/CheckNetlist/2.png" border="1px"><br/><br/>
+2. is when we are about to run a QA project, there is a check box at the bottom to control this option:<br/>
+<img src="/static/faq/mqa/CheckNetlist/3.png" border="1px"><br/><br/>
+Our goal is to save netlist file, so we need to deselect this option, and Netlist files will be saved under each project’s folder.
+<br>
+<br>
+Please be noted, these places are synchronized, means that either way we control this option, the effect would be global.
+<br/><br/>
+
+Once a QA project is done, we can right click on each rule to view the relevant netlist and simulation output files via menu item "Related Netlist".<br/>
+<img src="/static/faq/mqa/CheckNetlist/8.png" border="8px"><br/><br/>
+
+And, on the popup window, double-click on either the .sp file or .lis file.<br/>
+<img src="/static/faq/mqa/CheckNetlist/4.png" border="8px"><br/><br/>
+From the .sp file, we can see how devices are netlisted, what’s their instance parameter, etc.<br/>
+
+And from the qaxxx.lis file we can find the output from the simulator, namely the log information, including any possible warning or errors ,
+and will be very useful for debugging.<br/>
+<br/>
+
+More, for users who prefer to use batch mode(without using GUI), this option is can be found in the file $USER/.mqa_set/mqa.ini.<br/>
+<img src="/static/faq/mqa/CheckNetlist/5.png" border="1px"><br/><br/>
+The option is called DeleteFile, and we can assign 0 or 1, and 0 means not to delete.<br/><br/>
+
+
+
+
+<br/><br/><br/><br/>
+{% endblock %}

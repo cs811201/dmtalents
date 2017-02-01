@@ -1,12 +1,13 @@
 import os,sys
 
-directory = r'C:\work\Code\MBP_Script_Tutorial\Tutorial\WebContent\Chap4\images'
+directory = r'D:\projects\dmtalents\static\faq\mqa\CheckNetlist'
 
 
 def renameIt(dir):
     files = os.listdir(dir)
     for f in files:
         path = dir+'/'+f
+        #print(path)
         if os.path.isdir(path):
             renameIt(path)
         elif os.path.isfile(path):
@@ -18,6 +19,6 @@ def renameIt(dir):
                 os.rename(path, newpath)
 
 
-#renameIt(directory)
+renameIt(directory)
 
-print(sys.platform)
+#print(sys.platform)

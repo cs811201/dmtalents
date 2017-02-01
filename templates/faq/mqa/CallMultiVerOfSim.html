@@ -1,0 +1,42 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Call Multiple Versions of the Same Simulator</h2>
+<hr>
+
+MQA started to support call-multi-version-of-the-same-simulator since MQA2013.01 version.
+<br/><br/>
+Note: This document uses Keysight ADS simulator as an example, however, this function applies to any other
+simulators supported by MQA, such as Spectre, Hspice, etc.
+<br/><br/>
+
+For example, user can compare the same ADS model by calling ADS2008 and ADS2014 at the same time.
+<br/>
+Here are the steps(Close MQA program if it is running):
+<br/><br/>
+1. Assume MQA has already successfully linked to ADS2014, which is to say we got "Successful" when we do "Check SPICE"
+in MQA for ADS simulator.<br/>
+<img src="/static/faq/mqa/CallMultiVerOfSim/1.png" border="1px"><br/><br/>
+
+2. Copy the current working "runads.bat" from $MQAHOME/bin folder, paste to the same folder,<br/><br/>
+3. Rename the copied one as, for example "runAds2008.bat", then open the file, modify the path to point to ADS2008,<br/>
+<br/>
+4. We can also rename the original "runads.bat" to "runAds2014.bat",<br/><br/>
+5. Open the file "$HOME/.mqa_set/mqa.ini", append these two lines under [SPICE] section, as below, save the file.<br/>
+<br/>
+<img src="/static/faq/mqa/CallMultiVerOfSim/2.png" border="1px"><br/><br/>
+Note:
+<ul>
+    (1) The simulator name and version number must be separated by a "_" (underscore).<br/>
+    (2) By default MQA will search for these .bat files under $MQAHOME/bin folder, however, if $MQAHOME/bin is
+        read-only,
+        we can make a copy to user’s local directory, and just put the correct path there, for example:
+        ADS_2008=/home/user/runAds2008.bat
+</ul>
+<br/><br/>
+6. Restart MQA, we will be able to see these new simulator options, as shown below.<br/><br/>
+<img src="/static/faq/mqa/CallMultiVerOfSim/3.png" border="1px"><br/><br/>
+
+Now, simply choose the desired SPICE version when loading in a model file, and start to create QA project as usual.
+<br/><br/><br/><br/>
+{% endblock %}

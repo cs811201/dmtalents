@@ -1,0 +1,66 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Synchronize Vd and Vg on graph</h2>
+<hr>
+
+When my measurement data is collect in a way that Vd = Vg, MQA by default displays them out of sync.
+<br/>
+<br/>
+By taking use of the <font style="color:red">Synchro</font> option in MQA rule, we could make them in sync.
+
+This Synchro needs to be use in two places in one rule, as shown below:
+<br/><br/>
+<pre>
+[Label: 4001:title= Example rule]
+[Condition:1]
+[option:datablock=id_vg_vb_vd_vs:<font style="color:red">Synchro=Vg_Vd</font> ]
+[Loops
+: X=Vg
+: P=Vd
+: P1=Vb
+: P2=Vs
+: P3=W
+: p4=L
+: P5=T]
+[Target
+: y=Id
+]
+[<font style="color:blue">Compare</font>: 02:Plot Id_Vg_Vb with Synced Vd:compPlot(p1,x,y,<font style="color:red">"@synchro=Vg_Vd"</font>): error: TBD]
+</pre>
+Attention: When measurement data is involved to be compared with model simulation, we need to use
+<font style="color:blue">Compare</font> instead of <font style="color:blue">Check</font> functions.
+
+
+<div style="width:50%">
+    <hr/>
+</div>
+Similarly, we could synchronize other variables including device instance parameters, such as W and L, for example:
+<br/><br/>
+<pre>
+[Label: 4001:title= Example rule]
+[Condition:1]
+[option:<font style="color:red">synchro=W_L</font>]
+[Loops
+: X=Vgs(start=0,stop=vgg,num=51)
+: P=Vds(vd_lin,vdd)
+: P1=W(start=g_wmin,stop=g_wmax,num=2)
+: p2=L(start=g_lmin,stop=g_lmax,num=2)
+: P3=Vbs(0)
+: P4=T(tnom)]
+[Target
+: y=Idsat
+]
+[Check: 01:Plot Trend:saveAnyDdata(p2,p1,x,y,<font style="color:red">"@synchro=W_L"</font>): error: Trend is not right]
+</pre>
+<br>
+
+<img src="/static/faq/mqa/synchroVdVg/1.png" border="1px"><br/><br/>
+
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}
