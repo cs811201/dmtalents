@@ -1,0 +1,28 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+Video Demos
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+        <div style="float:left; width: 25%; height:1000px; margin-right:5px; overflow:auto; border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+            {% include 'video/toc.html' %}
+        </div>
+        <div style="float:center; height:1200px; overflow: auto">
+            <br/>
+            {% block videomain%}
+            <h3>Please pick a Demo from the left, or Search.</h3>
+            {% endblock %}
+            <br/><br/>
+        </div>
+
+
+
+</div>
+
+
+{% endblock %}

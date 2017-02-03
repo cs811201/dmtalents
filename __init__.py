@@ -1,5 +1,6 @@
 import datetime
 import sys
+#import pygal
 
 import flask_whooshalchemy as wa
 from flask import Flask
@@ -106,6 +107,8 @@ def getCategory(txt):
         return "MBP Script Tutorial"
     elif txt == "mbpfaq":
         return "MBP FAQ"
+    elif txt == "video":
+        return "Video Demos"
     elif txt == "mqarules":
         return "MQA Rules"
     elif txt == "mqafaq":
@@ -118,6 +121,9 @@ def getCategory(txt):
 
 def recordPostHistory(rt):
     id = current_user.id
+    if id == 3: # 3 is Shuang Cai, no need to record myself. :)
+        return
+
     now = datetime.datetime.now()
     ph = PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
     flag = False
@@ -138,6 +144,9 @@ def recordPostHistory(rt):
 
 def recordSearchHistory(txt):
     id = current_user.id
+    if id == 3: # 3 is Shuang Cai, no need to record myself. :)
+        return
+
     now = datetime.datetime.now()
     searchHis = SearchHistory(user_id=id, search_string=txt, date=now)
     db.session.add(searchHis)
@@ -148,18 +157,18 @@ def recordSearchHistory(txt):
 def index():
     return render_template('index.html')
 
-
-# test send email
-@app.route("/send_email")
-@login_required
-@roles_required('bumblebee')
-def send_email():
-    # msg = Message('Hello',
-    #               sender='cs8112010033@gmail.com',
-    #               recipients=['cs811201@gmail.com'])
-    # msg.body = "This is the email body"
-    # mail.send(msg)
-    return "Sent"
+#
+# # test send email
+# @app.route("/send_email")
+# @login_required
+# @roles_required('bumblebee')
+# def send_email():
+#     # msg = Message('Hello',
+#     #               sender='cs8112010033@gmail.com',
+#     #               recipients=['cs811201@gmail.com'])
+#     # msg.body = "This is the email body"
+#     # mail.send(msg)
+#     return "Sent"
 
 
 @app.route('/login')
@@ -263,17 +272,18 @@ def search():
 
 @app.route('/about')
 def about():
-    recordPostHistory('/about')
+    #recordPostHistory('/about')
     return render_template('about.html')
 
 
 @app.route('/contact')
 def contact():
-    recordPostHistory('/contact')
+    #recordPostHistory('/contact')
     return render_template('contact.html')
 
 
 @app.route('/add_user_kasdjfahviuner^sh&&*djfnkj__kdfj!!dfnl')
+@login_required
 def goAddUser():
     users = User.query.all()
     return render_template('add_user.html', userList=users)
@@ -628,6 +638,127 @@ def mqarulesFt():
 def mqarulesFmax():
     recordPostHistory('/mqarules/fmax')
     return render_template('/mqarules/rules/fmax.html')
+
+
+#### Video Demos
+route_video='/video'
+@app.route(route_video)
+@login_required
+def videoindex():
+    recordPostHistory(route_video)
+    return render_template('/video/video_index.html')
+
+
+
+route_video_mqaHvsS='/video/mqaHvsS'
+@app.route(route_video_mqaHvsS)
+@login_required
+def videomqaHvsS():
+    recordPostHistory(route_video_mqaHvsS)
+    return render_template('/video/MQA_HvsS.html')
+
+route_video_MQA_check_netlist='/video/mqachecknetlist'
+@app.route(route_video_MQA_check_netlist)
+@login_required
+def videomqachecknetlist():
+    recordPostHistory(route_video_MQA_check_netlist)
+    return render_template('/video/MQA_check_netlist.html')
+
+
+
+route_video_MQA_NearVth='/video/MQA_NearVth'
+@app.route(route_video_MQA_NearVth)
+@login_required
+def videoMQA_NearVth():
+    recordPostHistory(route_video_MQA_NearVth)
+    return render_template('/video/MQA_NearVth.html')
+
+
+route_video_MQA_SimVerComp='/video/MQA_SimVerComp'
+@app.route(route_video_MQA_SimVerComp)
+@login_required
+def videoMQA_SimVerComp():
+    recordPostHistory(route_video_MQA_SimVerComp)
+    return render_template('/video/MQA_SimVerComp.html')
+
+route_video_MBP_check_netlist='/video/MBP_check_netlist'
+@app.route(route_video_MBP_check_netlist)
+@login_required
+def videoMBP_check_netlist():
+    recordPostHistory(route_video_MBP_check_netlist)
+    return render_template('/video/MBP_check_netlist.html')
+
+
+route_video_MBP_tabs_sfloat='/video/MBP_tabs_sfloat'
+@app.route(route_video_MBP_tabs_sfloat)
+@login_required
+def videoMBP_tabs_sfloat():
+    recordPostHistory(route_video_MBP_tabs_sfloat)
+    return render_template('/video/MBP_tabs_sfloat.html')
+
+
+route_video_MBP_comp_models='/video/MBP_comp_models'
+@app.route(route_video_MBP_comp_models)
+@login_required
+def videoMBP_comp_models():
+    recordPostHistory(route_video_MBP_comp_models)
+    return render_template('/video/MBP_comp_models.html')
+
+
+route_video_MBP_pseudo_data='/video/MBP_pseudo_data'
+@app.route(route_video_MBP_pseudo_data)
+@login_required
+def videoMBP_pseudo_data():
+    recordPostHistory(route_video_MBP_pseudo_data)
+    return render_template('/video/MBP_pseudo_data.html')
+
+route_video_MBP_multiDie_data='/video/MBP_multiDie_data'
+@app.route(route_video_MBP_multiDie_data)
+@login_required
+def videoMBP_multiDie_data():
+    recordPostHistory(route_video_MBP_multiDie_data)
+    return render_template('/video/MBP_multiDie_data.html')
+
+route_video_MBP_export_pdf='/video/MBP_export_pdf'
+@app.route(route_video_MBP_export_pdf)
+@login_required
+def videoMBP_export_pdf():
+    recordPostHistory(route_video_MBP_export_pdf)
+    return render_template('/video/MBP_export_pdf.html')
+
+
+route_video_MBP_set_gminDC='/video/MBP_set_gminDC'
+@app.route(route_video_MBP_set_gminDC)
+@login_required
+def videoMBP_set_gminDC():
+    recordPostHistory(route_video_MBP_set_gminDC)
+    return render_template('/video/MBP_set_gminDC.html')
+
+
+route_video_MBP_bigger_RMS='/video/MBP_bigger_RMS'
+@app.route(route_video_MBP_bigger_RMS)
+@login_required
+def videoMBP_bigger_RMS():
+    recordPostHistory(route_video_MBP_bigger_RMS)
+    return render_template('/video/MBP_bigger_RMS.html')
+
+
+
+route_video_MBP_sigNum_symbolSize='/video/MBP_sigNum_symbolSize'
+@app.route(route_video_MBP_sigNum_symbolSize)
+@login_required
+def videoMBP_sigNum_symbolSize():
+    recordPostHistory(route_video_MBP_sigNum_symbolSize)
+    return render_template('/video/MBP_sigNum_symbolSize.html')
+
+
+route_video_MBP_RMS_algor='/video/MBP_RMS_algor'
+@app.route(route_video_MBP_RMS_algor)
+@login_required
+def videoMBP_RMS_algor():
+    recordPostHistory(route_video_MBP_RMS_algor)
+    return render_template('/video/MBP_RMS_algor.html')
+
 
 
 if __name__ == '__main__':

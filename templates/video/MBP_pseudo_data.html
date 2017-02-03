@@ -1,0 +1,25 @@
+{% extends "video/video_index.html" %}
+{% block videomain %}
+
+<h2>MBP FAQ</h2>
+
+<h3>Generate Pseudo Data</h3>
+<hr>
+Why pseudo data? <br/><br/>
+<ol>1. sometimes we got a model card but no measured data, how can we quickly check out the model’s performance in
+    MBP.
+</ol>
+<ol>2. we may just have some measured data, say drain current Id, but we want to also see gate/substrate current, or CV
+    simulation. this would be the right time to generate some pseudo data from MBP.
+</ol>
+<ol>3. to share simulated data with others without sending your real silicon data. enabled communication as well as IP
+    protection.
+</ol>
+<br/><br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z3WVpN1rDbY" frameborder="0"
+        allowfullscreen></iframe>
+
+<br/><br/><br/><br/>
+
+{% endblock %}

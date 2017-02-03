@@ -1,0 +1,27 @@
+{% extends "video/video_index.html" %}
+{% block videomain %}
+
+<h2>MBP FAQ</h2>
+
+<h3>Check MBP simulation netlist files</h3>
+<hr>
+
+Say we have model and data loaded, and by default MBP uses its internal simulator and netlisting is done in memory so no netlist files are created.
+<br/><br/>
+To turn on saving netlist file, please follow the steps in this demo:<br/><br/>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0nZcJDFqgd0" frameborder="0"
+        allowfullscreen></iframe>
+
+<br/><br/>
+<ol>1. switch to external Hspice, or Spectre from the Simulation menu, here we use Hspice as the example.</ol>
+<ol>2. go to the External Spice options, make sure the checkbox is not checked, indicating I want my netlist files
+    saved.
+</ol>
+<ol>3. then click the simulate button from the toolbar to let MBP call hspice.</ol>
+
+
+<br/><br/><br/><br/>
+
+{% endblock %}

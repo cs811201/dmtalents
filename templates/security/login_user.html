@@ -5,6 +5,11 @@
 Login
 {% endblock %}
 {% block content %}
+<script>
+function handleClick(cb) {
+  display("Clicked, new value = " + cb.checked);
+}
+</script>
 <div class="container">
     <br/><br/>
     <br/><br/>
@@ -15,10 +20,16 @@ Login
         {{ render_field_with_errors(login_user_form.email, class="form-control") }}
         {{ render_field_with_errors(login_user_form.password, class="form-control") }}
         {{ render_field_with_errors(login_user_form.remember) }}
+        <label><input type="checkbox" id="ck_agree" onclick="handleClick(this);" onchange="handleClick(this);" checked>I agree to the <a href="/about" target="_blank">Terms of Use Agreement</a>
+        </label>
         {{ render_field(login_user_form.next) }}
         {{ render_field(login_user_form.submit, class="btn btn-primary") }}
+
     </form>
     <br/><br/>
     <br/><br/>
 </div>
+
+
+
 {% endblock %}
