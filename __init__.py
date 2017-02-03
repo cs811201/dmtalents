@@ -275,11 +275,15 @@ def about():
     #recordPostHistory('/about')
     return render_template('about.html')
 
-
-@app.route('/contact')
-def contact():
-    #recordPostHistory('/contact')
-    return render_template('contact.html')
+@app.route('/disclaimer')
+def disclaimer():
+    #recordPostHistory('/disclaimer')
+    return render_template('disclaimer.html')
+#
+# @app.route('/contact')
+# def contact():
+#     #recordPostHistory('/contact')
+#     return render_template('contact.html')
 
 
 @app.route('/add_user_kasdjfahviuner^sh&&*djfnkj__kdfj!!dfnl')
