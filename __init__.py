@@ -1,6 +1,7 @@
 import datetime
+import operator
 import sys
-#import pygal
+from collections import Counter
 
 import flask_whooshalchemy as wa
 from flask import Flask
@@ -121,7 +122,7 @@ def getCategory(txt):
 
 def recordPostHistory(rt):
     id = current_user.id
-    if id == 3: # 3 is Shuang Cai, no need to record myself. :)
+    if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
         return
 
     now = datetime.datetime.now()
@@ -144,7 +145,7 @@ def recordPostHistory(rt):
 
 def recordSearchHistory(txt):
     id = current_user.id
-    if id == 3: # 3 is Shuang Cai, no need to record myself. :)
+    if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
         return
 
     now = datetime.datetime.now()
@@ -156,6 +157,7 @@ def recordSearchHistory(txt):
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 #
 # # test send email
@@ -196,7 +198,8 @@ def mbpst():
 @login_required
 def faq():
     # recordPostHistory('/faq')
-    results = Post.query.filter((Post.category == 'mbpfaq') | (Post.category=='mqafaq')).order_by(desc(Post.create_date)).limit(displayUpto).all()
+    results = Post.query.filter((Post.category == 'mbpfaq') | (Post.category == 'mqafaq')).order_by(
+        desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/faq_list.html', slist=results, func=getCategory)
 
 
@@ -272,13 +275,16 @@ def search():
 
 @app.route('/about')
 def about():
-    #recordPostHistory('/about')
+    # recordPostHistory('/about')
     return render_template('about.html')
+
 
 @app.route('/disclaimer')
 def disclaimer():
-    #recordPostHistory('/disclaimer')
+    # recordPostHistory('/disclaimer')
     return render_template('disclaimer.html')
+
+
 #
 # @app.route('/contact')
 # def contact():
@@ -597,17 +603,20 @@ def mqafaqsynchroVdVg():
     recordPostHistory('/mqafaq/synchroVdVg')
     return render_template('/faq/mqa/synchroVdVg.html')
 
+
 @app.route('/mqafaq/maxWaitTime')
 @login_required
 def mqafaqmaxWaitTime():
     recordPostHistory('/mqafaq/maxWaitTime')
     return render_template('/faq/mqa/maxWaitTime.html')
 
+
 @app.route('/mqafaq/compareMode')
 @login_required
 def mqafaqcompareMode():
     recordPostHistory('/mqafaq/compareMode')
     return render_template('/faq/mqa/compareMode.html')
+
 
 @app.route('/mqafaq/5TdeviceQA')
 @login_required
@@ -621,6 +630,7 @@ def mqafaq5TdeviceQA():
 def mqafaqCallMultiVerOfSim():
     recordPostHistory('/mqafaq/CallMultiVerOfSim')
     return render_template('/faq/mqa/CallMultiVerOfSim.html')
+
 
 @app.route('/mqafaq/CheckNetlist')
 @login_required
@@ -645,7 +655,9 @@ def mqarulesFmax():
 
 
 #### Video Demos
-route_video='/video'
+route_video = '/video'
+
+
 @app.route(route_video)
 @login_required
 def videoindex():
@@ -653,15 +665,19 @@ def videoindex():
     return render_template('/video/video_index.html')
 
 
+route_video_mqaHvsS = '/video/mqaHvsS'
 
-route_video_mqaHvsS='/video/mqaHvsS'
+
 @app.route(route_video_mqaHvsS)
 @login_required
 def videomqaHvsS():
     recordPostHistory(route_video_mqaHvsS)
     return render_template('/video/MQA_HvsS.html')
 
-route_video_MQA_check_netlist='/video/mqachecknetlist'
+
+route_video_MQA_check_netlist = '/video/mqachecknetlist'
+
+
 @app.route(route_video_MQA_check_netlist)
 @login_required
 def videomqachecknetlist():
@@ -669,8 +685,9 @@ def videomqachecknetlist():
     return render_template('/video/MQA_check_netlist.html')
 
 
+route_video_MQA_NearVth = '/video/MQA_NearVth'
 
-route_video_MQA_NearVth='/video/MQA_NearVth'
+
 @app.route(route_video_MQA_NearVth)
 @login_required
 def videoMQA_NearVth():
@@ -678,14 +695,19 @@ def videoMQA_NearVth():
     return render_template('/video/MQA_NearVth.html')
 
 
-route_video_MQA_SimVerComp='/video/MQA_SimVerComp'
+route_video_MQA_SimVerComp = '/video/MQA_SimVerComp'
+
+
 @app.route(route_video_MQA_SimVerComp)
 @login_required
 def videoMQA_SimVerComp():
     recordPostHistory(route_video_MQA_SimVerComp)
     return render_template('/video/MQA_SimVerComp.html')
 
-route_video_MBP_check_netlist='/video/MBP_check_netlist'
+
+route_video_MBP_check_netlist = '/video/MBP_check_netlist'
+
+
 @app.route(route_video_MBP_check_netlist)
 @login_required
 def videoMBP_check_netlist():
@@ -693,7 +715,9 @@ def videoMBP_check_netlist():
     return render_template('/video/MBP_check_netlist.html')
 
 
-route_video_MBP_tabs_sfloat='/video/MBP_tabs_sfloat'
+route_video_MBP_tabs_sfloat = '/video/MBP_tabs_sfloat'
+
+
 @app.route(route_video_MBP_tabs_sfloat)
 @login_required
 def videoMBP_tabs_sfloat():
@@ -701,7 +725,9 @@ def videoMBP_tabs_sfloat():
     return render_template('/video/MBP_tabs_sfloat.html')
 
 
-route_video_MBP_comp_models='/video/MBP_comp_models'
+route_video_MBP_comp_models = '/video/MBP_comp_models'
+
+
 @app.route(route_video_MBP_comp_models)
 @login_required
 def videoMBP_comp_models():
@@ -709,21 +735,29 @@ def videoMBP_comp_models():
     return render_template('/video/MBP_comp_models.html')
 
 
-route_video_MBP_pseudo_data='/video/MBP_pseudo_data'
+route_video_MBP_pseudo_data = '/video/MBP_pseudo_data'
+
+
 @app.route(route_video_MBP_pseudo_data)
 @login_required
 def videoMBP_pseudo_data():
     recordPostHistory(route_video_MBP_pseudo_data)
     return render_template('/video/MBP_pseudo_data.html')
 
-route_video_MBP_multiDie_data='/video/MBP_multiDie_data'
+
+route_video_MBP_multiDie_data = '/video/MBP_multiDie_data'
+
+
 @app.route(route_video_MBP_multiDie_data)
 @login_required
 def videoMBP_multiDie_data():
     recordPostHistory(route_video_MBP_multiDie_data)
     return render_template('/video/MBP_multiDie_data.html')
 
-route_video_MBP_export_pdf='/video/MBP_export_pdf'
+
+route_video_MBP_export_pdf = '/video/MBP_export_pdf'
+
+
 @app.route(route_video_MBP_export_pdf)
 @login_required
 def videoMBP_export_pdf():
@@ -731,7 +765,9 @@ def videoMBP_export_pdf():
     return render_template('/video/MBP_export_pdf.html')
 
 
-route_video_MBP_set_gminDC='/video/MBP_set_gminDC'
+route_video_MBP_set_gminDC = '/video/MBP_set_gminDC'
+
+
 @app.route(route_video_MBP_set_gminDC)
 @login_required
 def videoMBP_set_gminDC():
@@ -739,7 +775,9 @@ def videoMBP_set_gminDC():
     return render_template('/video/MBP_set_gminDC.html')
 
 
-route_video_MBP_bigger_RMS='/video/MBP_bigger_RMS'
+route_video_MBP_bigger_RMS = '/video/MBP_bigger_RMS'
+
+
 @app.route(route_video_MBP_bigger_RMS)
 @login_required
 def videoMBP_bigger_RMS():
@@ -747,8 +785,9 @@ def videoMBP_bigger_RMS():
     return render_template('/video/MBP_bigger_RMS.html')
 
 
+route_video_MBP_sigNum_symbolSize = '/video/MBP_sigNum_symbolSize'
 
-route_video_MBP_sigNum_symbolSize='/video/MBP_sigNum_symbolSize'
+
 @app.route(route_video_MBP_sigNum_symbolSize)
 @login_required
 def videoMBP_sigNum_symbolSize():
@@ -756,7 +795,9 @@ def videoMBP_sigNum_symbolSize():
     return render_template('/video/MBP_sigNum_symbolSize.html')
 
 
-route_video_MBP_RMS_algor='/video/MBP_RMS_algor'
+route_video_MBP_RMS_algor = '/video/MBP_RMS_algor'
+
+
 @app.route(route_video_MBP_RMS_algor)
 @login_required
 def videoMBP_RMS_algor():
@@ -764,6 +805,91 @@ def videoMBP_RMS_algor():
     return render_template('/video/MBP_RMS_algor.html')
 
 
+#### dashboard  ####
+route_dashboard = '/dashboard'
+
+
+def getPostTitleByRoute(myroute):
+    post = Post.query.filter(Post.route == myroute).first()
+    if type(post).__name__ == 'NoneType':
+        return ''
+    return post.title
+
+
+def getUserNameById(user_id):
+    user = User.query.filter(User.id == user_id).first()
+    return user.username
+
+def getEmailById(user_id):
+    user = User.query.filter(User.id == user_id).first()
+    return user.email
+
+
+@app.route(route_dashboard)
+@roles_required('sunshine')
+@login_required
+def dashboard():
+    # recordPostHistory(route_dashboard)
+    # PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
+    iccapPost = Post.query.filter(Post.category == 'iccap').all()
+    iccap_ct = iccapPost.__len__()
+    mbpPost = Post.query.filter((Post.category == 'mbpst') | (Post.category == 'mbpfaq')).all()
+    mbp_ct = mbpPost.__len__()
+    mqaPost = Post.query.filter((Post.category == 'mqafaq')).all()
+    mqa_ct = mqaPost.__len__()
+    wpePost = Post.query.filter((Post.category == 'wpe')).all()
+    wpe_ct = wpePost.__len__()
+    alfnaPost = Post.query.filter((Post.category == 'alfna')).all()
+    alfna_ct = alfnaPost.__len__()
+    videoPost = Post.query.filter((Post.category == 'video')).all()
+    video_ct = videoPost.__len__()
+    users = User.query.all()
+    user_ct = users.__len__() - 3  # except internal testing account
+    searches = SearchHistory.query.all()
+    search_ct = searches.__len__()
+
+    postHis = PostHistory.query.order_by(desc(PostHistory.route)).all()
+
+    ### for for post his rate
+    routes = []
+    for p in postHis:
+        routes.append(p.route)
+
+    rz = Counter(routes).items()
+    sortedRt = reversed(sorted(rz, key=operator.itemgetter(1)))
+
+    postTop = []
+    tmp = 0
+    for ii in sortedRt:
+        title = getPostTitleByRoute(ii[0])
+        if title == '':
+            continue
+        postTop.append((ii[0], getPostTitleByRoute(str(ii[0])), ii[1]))
+        tmp += 1
+        if tmp >= 10:
+            break
+
+    ### look for user info
+    ids = []
+    for p in postHis:
+        ids.append(p.user_id)
+
+    iz = Counter(ids).items()
+
+    sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # user_id, count
+    userHis = []  # user id, user name, email, count
+    for ii in sortedIz:
+        if ii[0] ==1 or ii[0]==2 or ii[0]==3:
+            continue
+        userHis.append((ii[0], getUserNameById(ii[0]),getEmailById(ii[0]), ii[1]))
+
+
+    return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
+                           alfna_ct=alfna_ct,
+                           video_ct=video_ct,
+                           user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis)
+
 
 if __name__ == '__main__':
     app.run()
+

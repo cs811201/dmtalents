@@ -1,0 +1,59 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>What We Have</h3>
+    <hr/>
+    ICCAP <font size="6"> {{ iccap_ct }} </font> -
+    MBP <font size="6"> {{ mbp_ct }} </font>-
+    MQA <font size="6"> {{ mqa_ct }} </font>-
+    WPE <font size="6"> {{ wpe_ct }} </font>-
+    A-LFNA <font size="6"> {{alfna_ct }}</font> -
+    Video Demos <font size="6"> {{video_ct}}</font>
+    <br/>
+    User Count: <font size="6"> {{user_ct}}</font>
+    <br/>
+    Search Count: <font size="6"> {{search_ct}}</font>
+    <br/>
+    <br/>
+    <h3>Top 10 Views</h3>
+    <hr/>
+    {% for p in postTop %}
+    <a href="{{p[0]}}" target="_blank"><font size="4">{{ p[1] }} </font></a> - {{p[2]}}
+    <br/>
+    {% endfor %}
+
+
+    <br/>
+    <br/>
+    <h3>Views by User | Company</h3>
+    <hr/>
+    <table width="80%">
+        <thead>
+        <tr>
+            <th width="20px">User ID</th>
+            <th width="50px">User Name</th>
+            <th width="60px">Email</th>
+            <th width="30px">View #</th>
+        </tr>
+        </thead>
+        {% for p in userHis %}
+        <tr>
+            <td> {{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{p[2]}}</td>
+            <td>{{p[3]}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/> <br/><br/><br/>
+
+</div>
+{% endblock %}
