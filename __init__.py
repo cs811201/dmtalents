@@ -1,10 +1,11 @@
 import datetime
 import operator
-import sys,os
+import os
+import sys
 from collections import Counter
 
 import flask_whooshalchemy as wa
-from flask import Flask, session
+from flask import Flask
 from flask import render_template, url_for, request, redirect
 from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
@@ -24,9 +25,14 @@ else:
     app.config['WHOOSH_BASE'] = '/var/www/FlaskApp/dmworks/whoosh_index'
 
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.secret_key=os.urandom(24)
-#app.config['SECRET_KEY'] = 'super-secret007'
-app.config['SECURITY_REGISTERABLE'] = True
+app.secret_key = os.urandom(24)
+app.config['SECRET_KEY'] = 'super-secret007'
+app.config['SECURITY_REGISTERABLE'] = False
+app.config['SECURITY_TOKEN_MAX_AGE'] = 60 * 30
+app.config['SECURITY_TRACKABLE'] = True
+# app.config['SECURITY_PASSWORD_SALT'] = 'something_super_secret_802jfkj__fd!'
+
+
 
 # config for email
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -51,16 +57,30 @@ class Role(db.Model, RoleMixin):
     name = db.Column(db.String(80), unique=True)
     description = db.Column(db.String(255))
 
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return '<Role %r>' % self.name
+
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True)
     password = db.Column(db.String(255))
     username = db.Column(db.String(255), unique=True)
+    last_login_at = db.Column(db.DateTime())
+    current_login_at = db.Column(db.DateTime())
     active = db.Column(db.Boolean())
     confirmed_at = db.Column(db.DateTime())
+    last_login_ip = db.Column(db.String(45))
+    current_login_ip = db.Column(db.String(45))
+    login_count = db.Column(db.Integer)
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
+
+    def __repr__(self):
+        return '<User %r>' % self.email
 
 
 class Post(db.Model):
@@ -183,7 +203,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('/'))
+    return redirect(url_for('index'))
 
 
 @app.route('/mbpst')
@@ -233,9 +253,9 @@ def blog():
 @app.route('/mqarules')
 @login_required
 def mqarules():
-    #recordPostHistory('/mqarules')
+    # recordPostHistory('/mqarules')
 
-    return render_template('mqarules/mqarules_index.html', slist=results, func=getCategory)
+    return render_template('mqarules/mqarules_index.html', func=getCategory)
 
 
 @app.route('/add_post', methods=['GET', 'POST'])
@@ -892,16 +912,21 @@ def dashboard():
             continue
         userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]), ii[1]))
 
+    # search list
+    searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(10).all();
+    sList=[]
+    for item in searchList:
+        sList.append(item.search_string)
+
     return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
                            alfna_ct=alfna_ct,
                            video_ct=video_ct,
-                           user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis)
+                           user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis,
+                           searchList=sList)
 
 
 # user history view
 route_user_view_history = '/user_view_history/<uid>'
-
-
 @app.route(route_user_view_history)
 @login_required
 def userViewHistory(uid):
@@ -923,8 +948,12 @@ def userViewHistory(uid):
             date = getPostViewTimeById(v.id)
             if title != '':
                 vl.append((title, route, date.ctime()))
+        searchHis = SearchHistory.query.filter(SearchHistory.user_id == uid).order_by(SearchHistory.date).all()
+        sList = []
+        for v in searchHis:
+            sList.append(v.search_string)
 
-        return render_template('/viewerHis.html', uname=uname, viewList=vl)
+        return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList)
 
 
 if __name__ == '__main__':

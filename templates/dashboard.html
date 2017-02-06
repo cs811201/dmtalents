@@ -22,12 +22,26 @@ Dashboard
     Search Count: <font size="6"> {{search_ct}}</font>
     <br/>
     <br/>
-    <h3>Top 10 Views</h3>
-    <hr/>
-    {% for p in postTop %}
-    <a href="{{p[0]}}" target="_blank"><font size="4">{{ p[1] }} </font></a> - {{p[2]}}
-    <br/>
-    {% endfor %}
+
+    <div style="float:left; width: 50%; height:400px; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+        <h3>Top 10 Views</h3>
+        <hr/>
+        {% for p in postTop %}
+        <a href="{{p[0]}}" target="_blank"><font size="4">{{ p[1] }} </font></a> - {{p[2]}}
+        <br/>
+        {% endfor %}
+    </div>
+    <div style="float:center;  overflow: auto">
+        <h3>Recent 10 Searches</h3>
+        <hr/>
+        {% for p in searchList %}
+        <font size="4">{{ p }} </font>
+        <br/>
+        {% endfor %}
+
+
+        <br/><br/>
+    </div>
 
 
     <br/>
@@ -37,9 +51,9 @@ Dashboard
     <table width="80%">
         <thead>
         <tr>
-            <th width="20px">User ID</th>
+            <th width="18px">User ID</th>
             <th width="50px">User Name</th>
-            <th width="60px">Email</th>
+            <th width="50px">Email</th>
             <th width="30px">View #</th>
         </tr>
         </thead>

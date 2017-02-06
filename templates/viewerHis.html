@@ -21,6 +21,16 @@ View History
         {% endfor %}
     </table>
 
+    <h3>Search History by {{ uname }}</h3>
+    <hr/>
+
+    {% for p in searchList%}
+
+    <font size="4">{{ p }}</font>
+
+    {% endfor %}
+
+
     <br/><br/> <br/><br/><br/>
 
 </div>
