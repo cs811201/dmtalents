@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+View History
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>View History for {{ uname }}</h3>
+    <hr/>
+    <table width="80%">
+        {% for p in viewList%}
+        <tr>
+            <td width="400">
+                <a href="{{p[1]}}" target="_blank"><font size="4">{{ p[0] }}</font></a></td>
+            <td>{{ p[2] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br/><br/> <br/><br/><br/>
+
+</div>
+{% endblock %}

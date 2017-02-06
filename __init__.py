@@ -1,14 +1,14 @@
 import datetime
 import operator
-import sys
+import sys,os
 from collections import Counter
 
 import flask_whooshalchemy as wa
-from flask import Flask
+from flask import Flask, session
 from flask import render_template, url_for, request, redirect
 from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
-from flask_security import roles_required
+from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
@@ -24,7 +24,8 @@ else:
     app.config['WHOOSH_BASE'] = '/var/www/FlaskApp/dmworks/whoosh_index'
 
 # app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-app.config['SECRET_KEY'] = 'super-secret007'
+app.secret_key=os.urandom(24)
+#app.config['SECRET_KEY'] = 'super-secret007'
 app.config['SECURITY_REGISTERABLE'] = True
 
 # config for email
@@ -181,12 +182,12 @@ def login():
 @app.route('/logout')
 @login_required
 def logout():
-    return redirect(url_for('logout'))
+    logout_user()
+    return redirect(url_for('/'))
 
 
 @app.route('/mbpst')
 @login_required
-# @roles_required('bumblebee')
 def mbpst():
     recordPostHistory('/mbpst')
     return render_template('mbpst/Chap1/WhatIsMBPScript.html')
@@ -232,8 +233,8 @@ def blog():
 @app.route('/mqarules')
 @login_required
 def mqarules():
-    recordPostHistory('/mqarules')
-    results = Post.query.filter(Post.category == 'mqarules').all()
+    #recordPostHistory('/mqarules')
+
     return render_template('mqarules/mqarules_index.html', slist=results, func=getCategory)
 
 
@@ -805,8 +806,11 @@ def videoMBP_RMS_algor():
     return render_template('/video/MBP_RMS_algor.html')
 
 
-#### dashboard  ####
-route_dashboard = '/dashboard'
+def getPostViewTimeById(uid):
+    post = PostHistory.query.filter(PostHistory.id == uid).first()
+    if type(post).__name__ == 'NoneType':
+        return ''
+    return post.date
 
 
 def getPostTitleByRoute(myroute):
@@ -820,9 +824,14 @@ def getUserNameById(user_id):
     user = User.query.filter(User.id == user_id).first()
     return user.username
 
+
 def getEmailById(user_id):
     user = User.query.filter(User.id == user_id).first()
     return user.email
+
+
+#### dashboard  ####
+route_dashboard = '/dashboard01.46738.99846kkli58010_odugjfkadj!jf.11'
 
 
 @app.route(route_dashboard)
@@ -879,10 +888,9 @@ def dashboard():
     sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # user_id, count
     userHis = []  # user id, user name, email, count
     for ii in sortedIz:
-        if ii[0] ==1 or ii[0]==2 or ii[0]==3:
+        if ii[0] == 1 or ii[0] == 2 or ii[0] == 3:
             continue
-        userHis.append((ii[0], getUserNameById(ii[0]),getEmailById(ii[0]), ii[1]))
-
+        userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]), ii[1]))
 
     return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
                            alfna_ct=alfna_ct,
@@ -890,6 +898,34 @@ def dashboard():
                            user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis)
 
 
+# user history view
+route_user_view_history = '/user_view_history/<uid>'
+
+
+@app.route(route_user_view_history)
+@login_required
+def userViewHistory(uid):
+    id = current_user.id
+    flag = False
+    if id == 3:  # only CS can view others
+        flag = True
+    else:  # view oneself.
+        if id == uid:
+            flag = True
+
+    if flag:
+        uname = getUserNameById(uid)
+        postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(PostHistory.route).all()
+        vl = []
+        for v in postHis:
+            route = v.route
+            title = getPostTitleByRoute(route)
+            date = getPostViewTimeById(v.id)
+            if title != '':
+                vl.append((title, route, date.ctime()))
+
+        return render_template('/viewerHis.html', uname=uname, viewList=vl)
+
+
 if __name__ == '__main__':
     app.run()
-
