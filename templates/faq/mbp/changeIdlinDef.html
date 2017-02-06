@@ -1,0 +1,66 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Change Idlin Definition Condition</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+In MBP, device targets such as Idlin, Idsat, etc. are defined in MBP Script.
+<br/>
+<br/>
+The default definition for Idlin is shown below, where:<br/>
+<br/>
+<ul>Vds = absmin(vds), Vgs = absmax(vgs), Vbs=absmin(vbs)</ul>
+
+Which means to get the absolute minimum(absmin) value or absolute maximum(absmax) value from
+real-time measurement data dynamically, and use them as the condition to define Idlin, so-called Restrictions on the GUI.
+<br/>
+<img src="/static/faq/mbp/changeIdlinDef/1.png" border="1px"><br/><br/>
+
+However, in some cases, the absmin(vds) leads to Vds = 0 because
+the current measurement data contains Vds = 0 bias condition; while we still want to have Idlin defined at Vds=50mV.
+<br/><br/>
+
+One can image the fix is rather simple, by changing the Vds condtion to 50mV would do the job(Vds=0.05), it's totally ok to do so;
+however, we would recommend to make a copy of the default Idlin, and modify the copied one, as follows:<br/><br/>
+Right click on the existing Idlin, and do "Copy" from the popup menu.<br/>
+<img src="/static/faq/mbp/changeIdlinDef/2.png" border="1px"><br/><br/>
+Next, we need to click on the "imv" node(one level up), right-click, and do "Paste".<br/>
+<img src="/static/faq/mbp/changeIdlinDef/3.png" border="1px"><br/><br/>
+Give it a new name, such as "Idlin_vds50mv" when asked.<br/>
+<img src="/static/faq/mbp/changeIdlinDef/4.png" border="1px"><br/><br/>
+
+The newly created target would appear at the bottom of the imv list, double-click to open it, and change the Restriction accordingly.
+As shown below:<br/>
+<img src="/static/faq/mbp/changeIdlinDef/5.png" border="1px"><br/><br/>
+
+To verify whether the modification is valid or not, right click on the target, and do "Show Data Table".<br/>
+<img src="/static/faq/mbp/changeIdlinDef/6.png" border="1px"><br/><br/>
+
+Make sure we can see the table with correct bias conditions. <br/>
+<img src="/static/faq/mbp/changeIdlinDef/7.png" border="1px"><br/><br/>
+
+OK, one more step, is to link all the default Idlin graphs to the new target "Idlin_vds50mv".<br/>
+we would go back to the origainl "Idlin", change it to "Auto Refer" type, and from the Targets drop-down list choose "Idlin_vds50mv".
+<br/>
+<img src="/static/faq/mbp/changeIdlinDef/8.png" border="1px"><br/><br/>
+
+Now, refresh the IMV graphes, we shall see the Idlin is with Vds=0.05.<br/>
+<img src="/static/faq/mbp/changeIdlinDef/10.png" border="1px"><br/><br/>
+
+Lastly, always remember to export the Script settings to a .zip file. Use the third icon
+<img src="/static/mbpst/images/buttons/dump.png" border="1px"> on the toolbar.<br/>
+The saved .zip file can later-on be loaded back in MBP Script window by using the first icon <img
+        src="/static/mbpst/images/buttons/load.png" border="1px"> on the toolbar.<br/>
+<img src="/static/faq/mbp/changeIdlinDef/9.png" border="1px"><br/><br/>
+
+MBP Script window handles the .zip files directly, please do not unzip them!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

@@ -8,18 +8,16 @@ Dashboard
 <br/><br/><br/>
 <div class="container">
     <br/>
-    <h3>What We Have</h3>
+    <h3>Dashboard</h3>
     <hr/>
-    ICCAP <font size="6"> {{ iccap_ct }} </font> -
-    MBP <font size="6"> {{ mbp_ct }} </font>-
-    MQA <font size="6"> {{ mqa_ct }} </font>-
-    WPE <font size="6"> {{ wpe_ct }} </font>-
-    A-LFNA <font size="6"> {{alfna_ct }}</font> -
+    ICCAP <font size="6"> {{ iccap_ct }} </font> --
+    MBP <font size="6"> {{ mbp_ct }} </font> --
+    MQA <font size="6"> {{ mqa_ct }} </font> --
+    WPE <font size="6"> {{ wpe_ct }} </font> --
+    A-LFNA <font size="6"> {{alfna_ct }}</font> --
     Video Demos <font size="6"> {{video_ct}}</font>
     <br/>
-    User Count: <font size="6"> {{user_ct}}</font>
-    <br/>
-    Search Count: <font size="6"> {{search_ct}}</font>
+    User Count: <font size="6"> {{user_ct}}</font> ---- Search Count: <font size="6"> {{search_ct}}</font>
     <br/>
     <br/>
 
@@ -38,7 +36,8 @@ Dashboard
         <font size="4">{{ p }} </font>
         <br/>
         {% endfor %}
-
+        <br/>
+        <a href="/recent100SearchHis" target="_blank">Recent 100 Search Text</a>
 
         <br/><br/>
     </div>
@@ -54,6 +53,7 @@ Dashboard
             <th width="18px">User ID</th>
             <th width="50px">User Name</th>
             <th width="50px">Email</th>
+            <th width="50px">Company</th>
             <th width="30px">View #</th>
         </tr>
         </thead>
@@ -63,6 +63,7 @@ Dashboard
             <td><a href="/user_view_history/{{p[0]}}" target="_blank">{{ p[1] }}</a></td>
             <td>{{p[2]}}</td>
             <td>{{p[3]}}</td>
+            <td>{{p[4]}}</td>
 
         </tr>
         {% endfor %}

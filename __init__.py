@@ -68,6 +68,7 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True)
     password = db.Column(db.String(255))
+    company= db.Column(db.String(255))
     username = db.Column(db.String(255), unique=True)
     last_login_at = db.Column(db.DateTime())
     current_login_at = db.Column(db.DateTime())
@@ -333,8 +334,9 @@ def add_user():
         password = request.form['password']
         active = True
         username = request.form['username']
+        company = request.form['company']
         now = datetime.datetime.now()
-        user = User(email=email, password=password, active=active, username=username, confirmed_at=now)
+        user = User(email=email, password=password, active=active, username=username, confirmed_at=now, company=company)
         db.session.add(user)
         db.session.commit()
         return redirect(url_for('index'))
@@ -617,6 +619,14 @@ def mbpfaqoptOptions():
     return render_template('/faq/mbp/optOptions.html')
 
 
+route_changeIdlinDef='/changeIdlinDef'
+@app.route(route_changeIdlinDef)
+@login_required
+def mbpfaqchangeIdlinDef():
+    recordPostHistory(route_changeIdlinDef)
+    return render_template('/faq/mbp/changeIdlinDef.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -849,11 +859,12 @@ def getEmailById(user_id):
     user = User.query.filter(User.id == user_id).first()
     return user.email
 
+def getCompanybyId(user_id):
+    user = User.query.filter(User.id == user_id).first()
+    return user.company
 
 #### dashboard  ####
 route_dashboard = '/dashboard01.46738.99846kkli58010_odugjfkadj!jf.11'
-
-
 @app.route(route_dashboard)
 @roles_required('sunshine')
 @login_required
@@ -910,11 +921,12 @@ def dashboard():
     for ii in sortedIz:
         if ii[0] == 1 or ii[0] == 2 or ii[0] == 3:
             continue
-        userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]), ii[1]))
+        userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]),  getCompanybyId(ii[0]),ii[1]))
 
     # search list
+
     searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(10).all();
-    sList=[]
+    sList = []
     for item in searchList:
         sList.append(item.search_string)
 
@@ -925,9 +937,31 @@ def dashboard():
                            searchList=sList)
 
 
+route_recent_100_search = '/recent100SearchHis'
+@app.route(route_recent_100_search)
+@roles_required('sunshine')
+@login_required
+def recent100Search():
+    searchAll = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(100).all();
+    sAll = []
+    for item in searchAll:
+        sAll.append(item.search_string)
+
+    iz = Counter(sAll).items()
+    sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # string, count
+    userHis = []  #
+    for ii in sortedIz:
+        userHis.append((ii[0], ii[1]))
+
+    return render_template('/recent100Searches.html', slist=userHis)
+
+
 # user history view
 route_user_view_history = '/user_view_history/<uid>'
+
+
 @app.route(route_user_view_history)
+@roles_required('sunshine')
 @login_required
 def userViewHistory(uid):
     id = current_user.id

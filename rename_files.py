@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\faq\mqa\CheckNetlist'
+directory = r'D:\projects\dmtalents\static\faq\mbp\changeIdlinDef'
 
 
 def renameIt(dir):

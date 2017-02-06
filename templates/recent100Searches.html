@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Search History
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>Recent 100 Search History</h3>
+    <hr/>
+    <table>
+        <thead>
+        <th>
+            <tr>
+                <td width="350px">Searched String</td>
+                <td>Hit #</td>
+            </tr>
+        </th>
+
+        </thead>
+        {% for p in slist%}
+        <tr>
+            <td>
+                <font size="4">{{ p[0] }}</font></td>
+            <td> {{ p[1] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br/><br/> <br/>
+</div>
+{% endblock %}
