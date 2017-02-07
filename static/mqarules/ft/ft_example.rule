@@ -1,0 +1,25 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 9:Title=Test Ft ]
+
+[Label: 9001:title= Ft vs Vgs]
+[Condition: 1]
+[Loops
+: p1=Vds(vdd)
+: p2=Vgs(start=Vgg/2,stop=vgg,step=0.1)
+: p3=w(g_wmin)
+: p4=l(g_lmin)
+: p5=Freq(start=1e8,stop=3e10,num=30)
+: p6=t(tnom)
+: p7=Vbs(0)
+]
+[Target 
+: y0=Y11_r 
+: H21=CalComplex("Y21/Y11") 
+: H21mag=CalComplex("Mod(H21)") 
+: Ft=CalCurve(freq,H21mag_r,"FindX","Y=1")  
+: y=Ft 
+] 
+[Check:1:Check Ft vs. Vgs:Save2DData(p4,p2,y): info: no check]
+[Compare:2:compre Ft:CompPlot(p4,p2,y):error:TBD]

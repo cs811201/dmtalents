@@ -6,7 +6,7 @@ from collections import Counter
 
 import flask_whooshalchemy as wa
 from flask import Flask
-from flask import render_template, url_for, request, redirect
+from flask import render_template, url_for, request, redirect, send_file, send_from_directory
 from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
 from flask_security import roles_required, logout_user
@@ -230,7 +230,7 @@ def faq():
 # @roles_required('bumblebee')
 @login_required
 def mbpfaq():
-    recordPostHistory('/mbpfaq')
+    #recordPostHistory('/mbpfaq')
     results = Post.query.filter(Post.category == 'mbpfaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
@@ -238,7 +238,7 @@ def mbpfaq():
 @app.route('/mqafaq')
 @login_required
 def mqafaq():
-    recordPostHistory('/mqafaq')
+    #recordPostHistory('/mqafaq')
     results = Post.query.filter(Post.category == 'mqafaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mqa/mqafaqlist.html', slist=results, func=getCategory)
 
@@ -988,6 +988,25 @@ def userViewHistory(uid):
             sList.append(v.search_string)
 
         return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList)
+
+
+## download files
+route_download_ft_rule='/mqarules/ft/ft_example'
+@app.route(route_download_ft_rule)
+@login_required
+def download_ft_rule():
+    recordPostHistory(route_download_ft_rule)
+    return send_file('static/mqarules/ft/ft_example.rule',attachment_filename='ft_example.rule')
+
+route_download_fmax_rule='/mqarules/fmax/fmax_example'
+@app.route(route_download_fmax_rule)
+@login_required
+def download_fmax_rule():
+    recordPostHistory(route_download_fmax_rule)
+    return send_file('static/mqarules/fmax/fmax_example.rule',attachment_filename='ft_example.rule')
+
+
+
 
 
 if __name__ == '__main__':

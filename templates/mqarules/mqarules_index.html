@@ -9,17 +9,82 @@ MQA Rules
 
 <div class="container">
 
-        <div style="float:left; width: 18%; height:1200px; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
-            {% include 'mqarules/toc.html' %}
-        </div>
-        <div style="float:center; height:1400px; overflow: auto">
-            <br/>
-            {% block mqarulesmain %}
-            <h3>Please pick a Rule Example from the left, or Search.</h3>
-            {% endblock %}
-            <br/><br/>
-        </div>
+    <div style="float:left; width: 18%; height:1200px; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+        {% include 'mqarules/toc.html' %}
+    </div>
+    <div style="float:center; height:1400px; overflow: auto">
+        <br/>
+        {% block mqarulesmain %}
+        <h3>Please pick a Rule Example from the left, or Search.</h3>
+        <hr/>
+        <br/>
+        <h4>How to Use Example Rules in General</h4>
+        <hr/>
+        Examples Rules can be saved as .rule files and plug into your other MQA projects; we also need to create a rule.index file
+        to
+        include new rule file(s), or add them into your existing rule.index file. As illustrated below:
+        <br/><br/>
 
+        Ft_example.rule file
+        <pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group:<font style="color:blue">9</font> :Title=Test Ft ]
+
+[Label: <font style="color:blue">9001</font>:title= Ft vs Vgs]
+[Condition: 1]
+[Loops
+: p1=Vds(vdd)
+: p2=Vgs(start=Vgg/2,stop=vgg,step=0.1)
+: p3=w(g_wmin)
+: p4=l(g_lmin)
+: p5=Freq(start=1e8,stop=3e10,num=30)
+: p6=t(tnom)
+: p7=Vbs(0)
+]
+[Target
+: y0=Y21_r
+: H21=CalComplex("Y21/Y11")
+: H21mag=CalComplex("Mod(H21)")
+: Ft=CalCurve(freq,H21mag_r,"FindX","Y=1")
+: y=Ft
+]
+[Check:1:Check Ft vs. Vgs:Save2DData(p4,p2,y): info: no check]
+[Compare:2:Compre Ft:CompPlot(p4,p2,y):error:TBD]
+
+        </pre>
+        Please make sure the Rule Group ID(<font style="color:blue">9</font>) and Rule Label(<font
+            style="color:blue">9001</font>) are unique through out your QA project, duplicated IDs would
+        cause
+        trouble.<br/>
+        <br/>
+        Create a new rule.index file
+        <pre>
+            <font style="color:red">
+[rule]
+file = Ft_example.rule
+            </font>
+        </pre>
+
+        Or, add to an existing rule.index file:
+        <pre>
+[rule]
+file = Scalability.rule
+[rule]
+file = MathematicRobustness.rule
+<font style="color:red">
+[rule]
+file = Ft_example.rule
+</font>
+
+        </pre>
+
+        The new or updated rule.index file can then be used in a MQA project, so that the new rule(s) will take effect.
+
+        {% endblock %}
+        <br/><br/>
+    </div>
 
 
 </div>

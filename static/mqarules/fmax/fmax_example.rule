@@ -1,0 +1,27 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 10:Title=Test Fmax ]
+
+[Label: 10001:title= Fmax vs Vgs]
+[Condition:1]
+[Loops
+: p1=Vds(vdd)
+: p2=Vgs(start=Vgg/2,stop=vgg,step=0.1)
+: p3=w(g_wmin)
+: p4=l(g_lmin)
+: p5=Freq(start=1e10,stop=1e15,perdec=4)
+: p6=t(tnom)
+: p7=Vbs(0)
+]
+[Target 
+:y0=Y11_r
+:D=CalComplex("Y21-Y12") 
+:Nu = (D_r*D_r + D_i*D_i)
+:De = 4*(Y11_r*Y22_r - Y12_r*Y21_r)
+:MAG = sqrt(Nu/De)
+:Fmax=CalCurve(freq,MAG,"FindX","Y=1")
+:y=Fmax
+]
+[check:01:Fmax by CalComplex:Save2DData(p4,p2,y): info: no check] 
+[Compare:02:compre Fmax:CompPlot(p4,p2,y):error:TBD]

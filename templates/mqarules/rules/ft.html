@@ -1,11 +1,59 @@
 {% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Ft Rule
+{% endblock %}
 {% block mqarulesmain %}
 
-Coming...
+<h2>Ft Example</h2>
+<h3>MQA Rules</h3>
+<hr>
+Ft is the frequency at which current gain equals unity, and can be obtained at the following condtion:
+<br/><br/>
+ℎ21(Ft) = 1
+<br/><br/>
+H parameters can be derived from Y parameters: H21 = Y21/Y11. And, S and Y parameters are built-in in MQA,
+so we can use them directly in MQA rule [Target] section to carry out the above equation.
 
 <br>
 <br>
+Ft_example.rule: <a href="/mqarules/ft/ft_example" target="_blank">download</a>
+<pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 9:Title=Test Ft ]
+
+[Label: 9001:title= Ft vs Vgs]
+[Condition: 1]
+[Loops
+: p1=Vds(vdd)
+: p2=Vgs(start=Vgg/2,stop=vgg,step=0.1)
+: p3=w(g_wmin)
+: p4=l(g_lmin)
+: p5=Freq(start=1e8,stop=3e10,num=30)
+: p6=t(tnom)
+: p7=Vbs(0)
+]
+[Target
+:<font style="color:blue"> y0=Y11_r</font>
+: H21=CalComplex("Y21/Y11")
+: H21mag=CalComplex("Mod(H21)")
+: Ft=<font style="color:red">CalCurve(freq,H21mag_r,"FindX","Y=1")</font>
+: y=Ft
+]
+[Check:1:Check Ft vs. Vgs:Save2DData(p4,p2,y): info: no check]
+[Compare:2:compre Ft:CompPlot(p4,p2,y):error:TBD]
+
+</pre>
 <br>
+Note: we have to declare <font style="color:blue">:y0=Y11_r</font> at the beginning in the [Target] section to triger Y parameter.
+<br><br>
+Once we get the magnitude of the H21(H21mag) which is an equation of freq, the last step is to use Y=1 to intercept the "H21mag vs Freq" curve,
+and return the X value of the interception point, and that gives us the desired Ft, this is done by
+<font style="color:red">CalCurve(freq,H21mag_r,"FindX","Y=1")</font>
+<br/><br/>
+Now that we have derived the Fmax, we could put it in the check/plotting functions as Y axis, and pick p2=Vgs as X axis, (option: and some other variable as Z axis.)
+
 <br>
 
 
