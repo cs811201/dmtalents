@@ -255,7 +255,6 @@ def blog():
 @login_required
 def mqarules():
     # recordPostHistory('/mqarules')
-
     return render_template('mqarules/mqarules_index.html', func=getCategory)
 
 
@@ -290,7 +289,7 @@ def add_post():
 @login_required
 def search():
     txt = request.form['search']
-    recordSearchHistory(txt)
+    recordSearchHistory(txt.strip())
     results = Post.query.whoosh_search(txt).limit(displayUpto).all()
     return render_template('search_result.html', slist=results, searchfor=txt, myfunction=getCategory)
 
@@ -669,6 +668,14 @@ def mqafaqCheckNetlist():
     recordPostHistory('/mqafaq/CheckNetlist')
     return render_template('/faq/mqa/CheckNetlist.html')
 
+route_mqafaq_cornerOnly='/mqafaq/cornerOnly'
+@app.route(route_mqafaq_cornerOnly)
+@login_required
+def mqafaqcornerOnly():
+    recordPostHistory(route_mqafaq_cornerOnly)
+    return render_template('/faq/mqa/cornerOnly.html')
+
+
 
 #### MQA Rules
 @app.route('/mqarules/ft')
@@ -683,6 +690,14 @@ def mqarulesFt():
 def mqarulesFmax():
     recordPostHistory('/mqarules/fmax')
     return render_template('/mqarules/rules/fmax.html')
+
+
+route_mqarules_vth_finfet='/mqarules/vth_finfet'
+@app.route(route_mqarules_vth_finfet)
+@login_required
+def mqarulesVthfinfet():
+    recordPostHistory(route_mqarules_vth_finfet)
+    return render_template('/mqarules/rules/vthcon_finfet.html')
 
 
 #### Video Demos
@@ -875,7 +890,7 @@ def dashboard():
     iccap_ct = iccapPost.__len__()
     mbpPost = Post.query.filter((Post.category == 'mbpst') | (Post.category == 'mbpfaq')).all()
     mbp_ct = mbpPost.__len__()
-    mqaPost = Post.query.filter((Post.category == 'mqafaq')).all()
+    mqaPost = Post.query.filter((Post.category == 'mqafaq')| (Post.category == 'mqarules')).all()
     mqa_ct = mqaPost.__len__()
     wpePost = Post.query.filter((Post.category == 'wpe')).all()
     wpe_ct = wpePost.__len__()
@@ -1005,6 +1020,12 @@ def download_fmax_rule():
     recordPostHistory(route_download_fmax_rule)
     return send_file('static/mqarules/fmax/fmax_example.rule',attachment_filename='ft_example.rule')
 
+route_download_vth_finfet_rule='/mqarules/vth_finfet/vth_FinFET'
+@app.route(route_download_vth_finfet_rule)
+@login_required
+def download_vth_finfet_rule():
+    recordPostHistory(route_download_vth_finfet_rule)
+    return send_file('static/mqarules/vth_finfet/vth_FinFET.rule',attachment_filename='vth_FinFET.rule')
 
 
 

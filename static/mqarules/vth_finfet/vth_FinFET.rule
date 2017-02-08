@@ -1,0 +1,27 @@
+[common]
+appliedmodel= global, binning,macro
+
+
+[Group:10:title=Vth_con for FinFET Example]
+
+
+[Label:1001:title=Vth_L]
+[Condition:1]
+[loops
+:x=L(start=g_lmin,stop=g_lmax,num=11)
+:P=NF(1)
+:P1=Vgs(start=0,stop=Vgg,step=0.01)
+:P2=Vbs(0)
+:P3=Vds(Vd_lin,Vdd)
+:P4=NFIN(1.2E-7,5E-7)
+:P5=HFIN(8E-7)
+]
+[Target
+: y = Ids
+: logIds=ln(Ids)
+: Vth_lin=FINDX(Vgs,logIds,"Y=8.2E-8*NFIN/L","@Vds=vd_lin")
+: Vth_sat=FINDX(Vgs,logIds,"Y=8.2E-8*NFIN/L","@Vds=vdd")
+: y1=Vth_lin
+: y2=Vth_sat]
+[Check: 01:Vtlin_L @ Vdlin:Save2DData(L,y1):error:fitting error]
+[Check: 02:Vtsat_L @ Vdd:Save2DData(L,y2):error:fitting error]

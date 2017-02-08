@@ -1,0 +1,74 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Vth_con FinFET
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Vth_con Rule for FinFET</h2>
+<h3>MQA Rules</h3>
+<hr>
+The default CalPage() function to get Vth_con may face a hurdle when dealing with FinFET devices, because traditionally
+we apply W/L to the Icon inside the built-in CalPage() function, but FinFET devices have NFIN instead of W.
+<br>
+<br>
+Here, we show alternatively how we can use <font
+        style="color:red">FindX()</font> function to get Vth_con easily for FinFET, as shown below.
+
+<br>
+<br>
+
+Example vth_finfet.rule: <a href="/mqarules/vth_finfet/vth_FinFET" target="_blank"> download </a>
+<pre>
+[common]
+appliedmodel= global, binning,macro
+
+[Group:10:title=Vth_con for FinFET Example]
+
+[Label:1001:title=Vth_L]
+[Condition:1]
+[loops
+:x=L(start=g_lmin,stop=g_lmax,num=11)
+:P=NF(1)
+:P1=Vgs(start=0,stop=Vgg,step=0.01)
+:P2=Vbs(0)
+:P3=Vds(<font style="color:orange">Vd_lin</font>,<font style="color:green">Vdd</font>)
+:P4=NFIN(1.2E-7,5E-7)
+:P5=HFIN(8E-7)
+]
+[Target
+: y = Ids
+: logIds=ln(Ids)
+: Vth_lin=<font style="color:red"> FindX(Vgs,logIds,"Y=1.2E-8*NFIN/L","@Vds=<font
+        style="color:orange">Vd_lin</font>")</font>
+: Vth_sat=<font style="color:red"> FindX(Vgs,logIds,"Y=1.2E-8*NFIN/L","@Vds=<font
+        style="color:green">Vdd</font>")</font>
+: y1=Vth_lin
+: y2=Vth_sat]
+[Check: 01:Vtlin_L @ Vdlin:Save2DData(L,y1):error:fitting error]
+[Check: 02:Vtsat_L @ Vdd:Save2DData(L,y2):error:fitting error]
+
+</pre>
+In the [Target] section whether to do a logIds is optional, the key is to apply the <font style="color:red">
+    FindX()</font> function on the Ids_Vgs curve
+by providing a horizontal line ( Y=[some value or expression]), it will return us the intercepted X value. As shown below conceptually:
+<br/>
+<img src="/static/mbpst/Chap3/images/3.10/1.png" border="1px"/><br/><br/>
+Additional conditions can be applied into the FindX() function, such as "@Vds=Vd_lin" or "@Vds=Vdd" to get Vtlin and
+Vtsat respectively.
+<br/><br/>
+Again, the format is the following:
+<br/><br/>
+Something = FindX(X-axis,Y-axis,”Y=[some value or expression]”), variables such as Icon, Vdd, NFIN, L, etc can all be used in the expression if necessary.
+<br/>
+Note: If we are working with a PMOS, then please give Icon a negative value accordingly, the FindX() function won't automatically flip the Icon sign for us in case of PMOS.
+<br/><br/>
+And, for your interests, there is also a <font
+        style="color:blue">FindY()</font>  function, which requires us to provide a vertical X line to
+intercept the X-Y curve, and additional conditions
+can be applied as well.
+<br/><br/>
+
+Something = <font style="color:blue">FindY( X-axis,Y-axis, "X=[some value or expression]")</font>
+<br/><br/>
+{% endblock %}

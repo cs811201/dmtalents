@@ -1,0 +1,31 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Corner Only</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+By creating a CornerQA project, we get the curves across all the selected corners, as shown below.<br/>
+<br/>
+<img src="/static/faq/mqa/cornerOnly/2.png" border="1px"><br/><br/>
+
+By default, we got the Corner Relation plots together with all the individual Corner plots, as highlighted in blue mask below:
+<br/><br/>
+
+<img src="/static/faq/mqa/cornerOnly/3.png" border="1px"><br/><br/>
+
+Sometimes, these individual Corner's plots seem unnecessary, and users may want to get rid of them.<br/>
+<br/>
+To do so, we just need to turn on the Option called "CornerOnly" when creating the CornerQA project,
+as shown below:<br/>
+<img src="/static/faq/mqa/cornerOnly/1.png" border="1px"><br/><br/>
+
+And, after deleting the old results and re-run the project, we get the result with "Corner Relation" only.
+<br/>
+<img src="/static/faq/mqa/cornerOnly/4.png" border="1px"><br/><br/>
+
+Note: for users who run .prj files in terminal(batch mode), please add this statement <font style="color:red">RequiredFunction=corner </font> in the %Action section, as
+shown below:<br/><br/>
+<img src="/static/faq/mqa/cornerOnly/5.png" border="1px"><br/><br/>
+<br/><br/><br/><br/>
+{% endblock %}
