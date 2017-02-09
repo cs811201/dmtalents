@@ -2,11 +2,10 @@ import datetime
 import operator
 import os
 import sys
-from csutil import *
-from dmdataModel import *
 from collections import Counter
 
 import flask_whooshalchemy as wa
+
 from flask import Flask
 from flask import render_template, url_for, request, redirect, send_file
 from flask_mail import Mail
@@ -14,6 +13,8 @@ from flask_security import Security, login_required, SQLAlchemyUserDatastore, Us
 from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
+
+from csutil import *
 
 app = Flask(__name__)
 app.debug = False
@@ -47,7 +48,6 @@ app.config['MAIL_PASSWORD'] = 'iamcsman121'
 db = SQLAlchemy(app)
 
 mail = Mail(app)
-
 
 
 def recordPostHistory(rt):
@@ -106,7 +106,7 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True)
     password = db.Column(db.String(255))
-    company= db.Column(db.String(255))
+    company = db.Column(db.String(255))
     username = db.Column(db.String(255), unique=True)
     last_login_at = db.Column(db.DateTime())
     current_login_at = db.Column(db.DateTime())
@@ -163,10 +163,9 @@ security = Security(app, user_datastore)
 displayUpto = 50
 
 
-
 @app.route('/')
 def index():
-    return render_template('index.html',num=getRandomIntFrom1toGiven(8))
+    return render_template('index.html', num=getRandomIntFrom1toGiven(8))
 
 
 #
@@ -218,7 +217,7 @@ def faq():
 # @roles_required('bumblebee')
 @login_required
 def mbpfaq():
-    #recordPostHistory('/mbpfaq')
+    # recordPostHistory('/mbpfaq')
     results = Post.query.filter(Post.category == 'mbpfaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
@@ -226,7 +225,7 @@ def mbpfaq():
 @app.route('/mqafaq')
 @login_required
 def mqafaq():
-    #recordPostHistory('/mqafaq')
+    # recordPostHistory('/mqafaq')
     results = Post.query.filter(Post.category == 'mqafaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mqa/mqafaqlist.html', slist=results, func=getCategory)
 
@@ -606,7 +605,9 @@ def mbpfaqoptOptions():
     return render_template('/faq/mbp/optOptions.html')
 
 
-route_changeIdlinDef='/changeIdlinDef'
+route_changeIdlinDef = '/changeIdlinDef'
+
+
 @app.route(route_changeIdlinDef)
 @login_required
 def mbpfaqchangeIdlinDef():
@@ -656,13 +657,15 @@ def mqafaqCheckNetlist():
     recordPostHistory('/mqafaq/CheckNetlist')
     return render_template('/faq/mqa/CheckNetlist.html')
 
-route_mqafaq_cornerOnly='/mqafaq/cornerOnly'
+
+route_mqafaq_cornerOnly = '/mqafaq/cornerOnly'
+
+
 @app.route(route_mqafaq_cornerOnly)
 @login_required
 def mqafaqcornerOnly():
     recordPostHistory(route_mqafaq_cornerOnly)
     return render_template('/faq/mqa/cornerOnly.html')
-
 
 
 #### MQA Rules
@@ -680,7 +683,9 @@ def mqarulesFmax():
     return render_template('/mqarules/rules/fmax.html')
 
 
-route_mqarules_vth_finfet='/mqarules/vth_finfet'
+route_mqarules_vth_finfet = '/mqarules/vth_finfet'
+
+
 @app.route(route_mqarules_vth_finfet)
 @login_required
 def mqarulesVthfinfet():
@@ -862,12 +867,16 @@ def getEmailById(user_id):
     user = User.query.filter(User.id == user_id).first()
     return user.email
 
+
 def getCompanybyId(user_id):
     user = User.query.filter(User.id == user_id).first()
     return user.company
 
+
 #### dashboard  ####
 route_dashboard = '/dashboard01.46738.99846kkli58010_odugjfkadj!jf.11'
+
+
 @app.route(route_dashboard)
 @roles_required('sunshine')
 @login_required
@@ -878,7 +887,7 @@ def dashboard():
     iccap_ct = iccapPost.__len__()
     mbpPost = Post.query.filter((Post.category == 'mbpst') | (Post.category == 'mbpfaq')).all()
     mbp_ct = mbpPost.__len__()
-    mqaPost = Post.query.filter((Post.category == 'mqafaq')| (Post.category == 'mqarules')).all()
+    mqaPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mqarules')).all()
     mqa_ct = mqaPost.__len__()
     wpePost = Post.query.filter((Post.category == 'wpe')).all()
     wpe_ct = wpePost.__len__()
@@ -924,7 +933,7 @@ def dashboard():
     for ii in sortedIz:
         if ii[0] == 1 or ii[0] == 2 or ii[0] == 3:
             continue
-        userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]),  getCompanybyId(ii[0]),ii[1]))
+        userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]), getCompanybyId(ii[0]), ii[1]))
 
     # search list
 
@@ -941,6 +950,8 @@ def dashboard():
 
 
 route_recent_100_search = '/recent100SearchHis'
+
+
 @app.route(route_recent_100_search)
 @roles_required('sunshine')
 @login_required
@@ -994,28 +1005,34 @@ def userViewHistory(uid):
 
 
 ## download files
-route_download_ft_rule='/mqarules/ft/ft_example'
+route_download_ft_rule = '/mqarules/ft/ft_example'
+
+
 @app.route(route_download_ft_rule)
 @login_required
 def download_ft_rule():
     recordPostHistory(route_download_ft_rule)
-    return send_file('static/mqarules/ft/ft_example.rule',attachment_filename='ft_example.rule')
+    return send_file('static/mqarules/ft/ft_example.rule', attachment_filename='ft_example.rule')
 
-route_download_fmax_rule='/mqarules/fmax/fmax_example'
+
+route_download_fmax_rule = '/mqarules/fmax/fmax_example'
+
+
 @app.route(route_download_fmax_rule)
 @login_required
 def download_fmax_rule():
     recordPostHistory(route_download_fmax_rule)
-    return send_file('static/mqarules/fmax/fmax_example.rule',attachment_filename='ft_example.rule')
+    return send_file('static/mqarules/fmax/fmax_example.rule', attachment_filename='ft_example.rule')
 
-route_download_vth_finfet_rule='/mqarules/vth_finfet/vth_FinFET'
+
+route_download_vth_finfet_rule = '/mqarules/vth_finfet/vth_FinFET'
+
+
 @app.route(route_download_vth_finfet_rule)
 @login_required
 def download_vth_finfet_rule():
     recordPostHistory(route_download_vth_finfet_rule)
-    return send_file('static/mqarules/vth_finfet/vth_FinFET.rule',attachment_filename='vth_FinFET.rule')
-
-
+    return send_file('static/mqarules/vth_finfet/vth_FinFET.rule', attachment_filename='vth_FinFET.rule')
 
 
 if __name__ == '__main__':

@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/1.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/2.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/3.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/4.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/6.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/7.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csutil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dmdataModel.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notebook.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/faq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/intro-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/mbpst.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/mqa.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dmdataModel.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rename_files.py" afterPath="$PROJECT_DIR$/rename_files.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/landing-page.css" afterPath="$PROJECT_DIR$/static/css/landing-page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/about.html" afterPath="$PROJECT_DIR$/templates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/disclaimer.html" afterPath="$PROJECT_DIR$/templates/disclaimer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,13 +24,34 @@
       <file leaf-file-name="__init__.py" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
-                <element signature="e#5273#5274#0" expanded="false" />
-                <element signature="e#26140#26571#0" expanded="false" />
-                <marker date="1486601419236" expanded="false" signature="26754:27630" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#5249#5250#0" expanded="false" />
+                <element signature="e#26137#26568#0" expanded="false" />
+                <marker date="1486605042081" expanded="false" signature="26751:27627" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disclaimer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/disclaimer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cornerOnly.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cornerOnly.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/faq/mqa/cornerOnly.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -180,7 +186,6 @@
         <option value="$PROJECT_DIR$/templates/video/MBP_bigger_RMS.html" />
         <option value="$PROJECT_DIR$/templates/contact.html" />
         <option value="$PROJECT_DIR$/templates/security/login_user.html" />
-        <option value="$PROJECT_DIR$/templates/disclaimer.html" />
         <option value="$PROJECT_DIR$/templates/security/register_user.html" />
         <option value="$PROJECT_DIR$/templates/viewerHis.html" />
         <option value="$PROJECT_DIR$/templates/recent100Searches.html" />
@@ -193,7 +198,6 @@
         <option value="$PROJECT_DIR$/templates/mqarules/rules/ft.html" />
         <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
         <option value="$PROJECT_DIR$/templates/mqarules/rules/vthcon_finfet.html" />
-        <option value="$PROJECT_DIR$/templates/about.html" />
         <option value="$PROJECT_DIR$/templates/faq/mqa/cornerOnly.html" />
         <option value="$PROJECT_DIR$/notebook.py" />
         <option value="$PROJECT_DIR$/util.py" />
@@ -201,8 +205,10 @@
         <option value="$PROJECT_DIR$/static/css/landing-page.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/csutil.py" />
-        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/dmdataModel.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/about.html" />
+        <option value="$PROJECT_DIR$/templates/disclaimer.html" />
       </list>
     </option>
   </component>
@@ -244,6 +250,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -277,7 +297,7 @@
       <recent name="D:\projects\dmtalents\templates\mbpst\Chap2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.rename_files">
+  <component name="RunManager" selected="Python.__init__">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -618,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486514932980</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="1/24/2017">
+      <created>1486605016031</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1486605016031</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -743,13 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="97" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/disclaimer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -989,16 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/faq_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1071,18 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding>
-            <element signature="e#5273#5274#0" expanded="false" />
-            <element signature="e#26140#26571#0" expanded="false" />
-            <marker date="1486601419236" expanded="false" signature="26754:27630" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dmdataModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1124,6 +1122,35 @@
           <folding>
             <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#5249#5250#0" expanded="false" />
+            <element signature="e#26137#26568#0" expanded="false" />
+            <marker date="1486605042081" expanded="false" signature="26751:27627" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/disclaimer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
