@@ -2,11 +2,13 @@ import datetime
 import operator
 import os
 import sys
+from csutil import *
+from dmdataModel import *
 from collections import Counter
 
 import flask_whooshalchemy as wa
 from flask import Flask
-from flask import render_template, url_for, request, redirect, send_file, send_from_directory
+from flask import render_template, url_for, request, redirect, send_file
 from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
 from flask_security import roles_required, logout_user
@@ -45,6 +47,42 @@ app.config['MAIL_PASSWORD'] = 'iamcsman121'
 db = SQLAlchemy(app)
 
 mail = Mail(app)
+
+
+
+def recordPostHistory(rt):
+    id = current_user.id
+    if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
+        return
+
+    now = datetime.datetime.now()
+    ph = PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
+    flag = False
+    if ph.__len__() > 0:
+        for p in ph:
+            # date = datetime.datetime.strptime(p.date, "%Y-%m-%d %H:%M:%S.%f");
+            diff = now - p.date
+            diffmin = diff / datetime.timedelta(minutes=1)
+            # print('diffmin', diffmin)
+            if diffmin < 30:  # 30 minutes
+                flag = True
+                break
+    if not flag:  # record only when the time is longer than 30 minutes.
+        posthis = PostHistory(user_id=id, route=rt, date=now)
+        db.session.add(posthis)
+        db.session.commit()
+
+
+def recordSearchHistory(txt):
+    id = current_user.id
+    if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
+        return
+
+    now = datetime.datetime.now()
+    searchHis = SearchHistory(user_id=id, search_string=txt, date=now)
+    db.session.add(searchHis)
+    db.session.commit()
+
 
 # Define models
 roles_users = db.Table('roles_users',
@@ -125,60 +163,10 @@ security = Security(app, user_datastore)
 displayUpto = 50
 
 
-def getCategory(txt):
-    if txt == 'mbpst':
-        return "MBP Script Tutorial"
-    elif txt == "mbpfaq":
-        return "MBP FAQ"
-    elif txt == "video":
-        return "Video Demos"
-    elif txt == "mqarules":
-        return "MQA Rules"
-    elif txt == "mqafaq":
-        return "MQA FAQ"
-    elif txt == "blog":
-        return "Blog"
-
-    return "Not Categorized."
-
-
-def recordPostHistory(rt):
-    id = current_user.id
-    if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
-        return
-
-    now = datetime.datetime.now()
-    ph = PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
-    flag = False
-    if ph.__len__() > 0:
-        for p in ph:
-            # date = datetime.datetime.strptime(p.date, "%Y-%m-%d %H:%M:%S.%f");
-            diff = now - p.date
-            diffmin = diff / datetime.timedelta(minutes=1)
-            # print('diffmin', diffmin)
-            if diffmin < 30:  # 30 minutes
-                flag = True
-                break
-    if not flag:  # record only when the time is longer than 30 minutes.
-        posthis = PostHistory(user_id=id, route=rt, date=now)
-        db.session.add(posthis)
-        db.session.commit()
-
-
-def recordSearchHistory(txt):
-    id = current_user.id
-    if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
-        return
-
-    now = datetime.datetime.now()
-    searchHis = SearchHistory(user_id=id, search_string=txt, date=now)
-    db.session.add(searchHis)
-    db.session.commit()
-
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',num=getRandomIntFrom1toGiven(8))
 
 
 #

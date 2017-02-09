@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\faq\mqa\cornerOnly'
+directory = r'D:\projects\dmtalents\static\img'
 
 
 def renameIt(dir):
@@ -14,7 +14,7 @@ def renameIt(dir):
             if f.index(r'-min') > 0:
                 print(f)
                 idx = f.index(r'-min')
-                newF = f[0:idx] + '.png'
+                newF = f[0:idx] + '.jpg'
                 newpath = dir + '/' + newF
                 os.rename(path, newpath)
 
