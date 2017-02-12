@@ -1,0 +1,56 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Sweep Vgs from Negative
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Sweep Vgs from Negative</h2>
+<h3>MQA Rules</h3>
+<hr>
+Most MQA default rules for Vth have Vgs sweep starting from 0 for NMOS; however, in case of transistors in depletion mode(such as FDSOI), we need to sweep Vgs
+from a negative value because the Vth will be negative.
+<br>
+<br>
+It is easy to do so by editing(or make a copy of) an existing rule, and simply add the proper Vgs sweep starting from a negative value, say -0.5.
+<br>
+<br>
+Example rule: <a href="/mqarules/sweepVgsNeg/Vth_DepletedMode" target="_blank"> download </a>
+<pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 11:Title=Sweep Vgs from Negative for Depletion Mode ]
+
+[Label: 11001:title= Vth of Depletion Mode]
+[Condition:1]
+[Loops
+:X=L(start=g_lmin,stop=g_lmax,num=11)
+:P=W(g_wmin,g_wmax)
+:P1=<font style="color:red">Vgs(start=-0.5,stop=Vgg,step=0.01)</font>
+:P2=Vbs(0)
+:P3=Vds(Vd_lin)
+:P4=T(Tnom)
+]
+[Target
+:y=Vth_lin
+]
+[Check:01:Plot Trend:Save2dData(p2,x,y):error:no check]
+[Compare:02:RMS of Vth vs. L:CompPlot(p2,x,y): error: TBD]
+[Corner:03:Check corner of Vth vs. L:CompareTREND(x,y,"@TREND=-1"): error: TBD]
+</pre>
+
+Then, apply this rule, and rerun that QA project.
+<br/><br/>
+<hr/>
+Background:
+<br/><br/>
+In most default Vth rules, the Vgs sweep is omitted, because it's defined in the "model.icf" file, as shown below, we can see that
+the default Vgs start=0. We could also change the start value here, but it's highly recommended to update the rule file. When a rule and a model.icf have
+different settings, the rule has the highest privilege.
+<br/>
+ <img src="/static/mqarules/sweepVthfromNegative/1.png">
+
+
+
+{% endblock %}

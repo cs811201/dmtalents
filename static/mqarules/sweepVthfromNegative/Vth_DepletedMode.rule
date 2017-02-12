@@ -1,0 +1,21 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 11:Title=Sweep Vgs from Negative for Depletion Mode ]
+
+[Label: 11001:title= Vth of Depletion Mode]
+[Condition:1]
+[Loops
+:X=L(start=g_lmin,stop=g_lmax,num=11)
+:P=W(g_wmin,g_wmax)
+:P1=Vgs(start=-0.5,stop=Vgg,step=0.01)
+:P2=Vbs(0)
+:P3=Vds(Vd_lin)
+:P4=T(Tnom)
+]
+[Target
+:y=Vth_lin
+]
+[Check:01:Plot Trend:Save2dData(p2,x,y):error:no check]
+[Compare:02:RMS of Vth vs. L:CompPlot(p2,x,y): error: TBD]
+[Corner:03:Check corner of Vth vs. L:CompareTREND(x,y,"@TREND=-1"): error: TBD]

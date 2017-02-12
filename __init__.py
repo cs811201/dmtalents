@@ -3,6 +3,7 @@ import operator
 import os
 import sys
 from collections import Counter
+from random import randint
 
 import flask_whooshalchemy as wa
 from flask import Flask
@@ -12,8 +13,6 @@ from flask_security import Security, login_required, SQLAlchemyUserDatastore, Us
 from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
-
-from csutil import *
 
 app = Flask(__name__)
 app.debug = False
@@ -160,6 +159,30 @@ security = Security(app, user_datastore)
 
 # display how many in most search list
 displayUpto = 50
+
+
+def getRandomIntFrom1toGiven(top):
+    if top <= 1:
+        return 1
+    else:
+        return randint(1, top)
+
+
+def getCategory(txt):
+    if txt == 'mbpst':
+        return "MBP Script Tutorial"
+    elif txt == "mbpfaq":
+        return "MBP FAQ"
+    elif txt == "video":
+        return "Video Demos"
+    elif txt == "mqarules":
+        return "MQA Rules"
+    elif txt == "mqafaq":
+        return "MQA FAQ"
+    elif txt == "blog":
+        return "Blog"
+
+    return "Not Categorized."
 
 
 @app.route('/')
@@ -704,6 +727,16 @@ def mqarulesVthfinfet():
     return render_template('/mqarules/rules/vthcon_finfet.html')
 
 
+route_mqarules_sweepFromNegaiveVgs = '/mqarules/sweepFromNegativeVgs'
+
+
+@app.route(route_mqarules_sweepFromNegaiveVgs)
+@login_required
+def mqarulessweepFromNegaiveVgs():
+    recordPostHistory(route_mqarules_sweepFromNegaiveVgs)
+    return render_template('/mqarules/rules/sweepFromNegaiveVgs.html')
+
+
 #### Video Demos
 route_video = '/video'
 
@@ -1023,7 +1056,8 @@ route_download_ft_rule = '/mqarules/ft/ft_example'
 @login_required
 def download_ft_rule():
     recordPostHistory(route_download_ft_rule)
-    return send_file('static/mqarules/ft/ft_example.rule', attachment_filename='ft_example.rule')
+    return send_file('static/mqarules/ft/ft_example.rule', attachment_filename='ft_example.rule', mimetype='text/rule',
+                     as_attachment=True)
 
 
 route_download_fmax_rule = '/mqarules/fmax/fmax_example'
@@ -1033,7 +1067,8 @@ route_download_fmax_rule = '/mqarules/fmax/fmax_example'
 @login_required
 def download_fmax_rule():
     recordPostHistory(route_download_fmax_rule)
-    return send_file('static/mqarules/fmax/fmax_example.rule', attachment_filename='ft_example.rule')
+    return send_file('static/mqarules/fmax/fmax_example.rule', attachment_filename='fmax_example.rule',
+                     mimetype='text/rule', as_attachment=True)
 
 
 route_download_vth_finfet_rule = '/mqarules/vth_finfet/vth_FinFET'
@@ -1043,7 +1078,19 @@ route_download_vth_finfet_rule = '/mqarules/vth_finfet/vth_FinFET'
 @login_required
 def download_vth_finfet_rule():
     recordPostHistory(route_download_vth_finfet_rule)
-    return send_file('static/mqarules/vth_finfet/vth_FinFET.rule', attachment_filename='vth_FinFET.rule')
+    return send_file('static/mqarules/vth_finfet/vth_FinFET.rule', attachment_filename='vth_FinFET.rule',
+                     mimetype='text/rule', as_attachment=True)
+
+
+route_download_sweepVgsNegative_rule = '/mqarules/sweepVgsNeg/Vth_DepletedMode'
+
+
+@app.route(route_download_sweepVgsNegative_rule)
+@login_required
+def download_sweepVgsNegative_rule():
+    recordPostHistory(route_download_sweepVgsNegative_rule)
+    return send_file('static/mqarules/sweepVthfromNegative/Vth_DepletedMode.rule',
+                     attachment_filename='Vth_DepletedMode.rule', mimetype='text/rule', as_attachment=True)
 
 
 if __name__ == '__main__':
