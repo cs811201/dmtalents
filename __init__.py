@@ -5,7 +5,6 @@ import sys
 from collections import Counter
 
 import flask_whooshalchemy as wa
-
 from flask import Flask
 from flask import render_template, url_for, request, redirect, send_file
 from flask_mail import Mail
@@ -165,7 +164,19 @@ displayUpto = 50
 
 @app.route('/')
 def index():
-    return render_template('index.html', num=getRandomIntFrom1toGiven(8))
+    mbpPost = Post.query.filter((Post.category == 'mbpst')).all()
+    mbpstCt = mbpPost.__len__()
+    rulePost = Post.query.filter((Post.category == 'mqarules')).all()
+    ruleCt = rulePost.__len__()
+
+    videoPost = Post.query.filter((Post.category == 'video')).all()
+    videoCt = videoPost.__len__()
+
+    faqPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mbpfaq')).all()
+    faqCt = faqPost.__len__()
+
+    return render_template('index.html', num=getRandomIntFrom1toGiven(8), mbpstCt=mbpstCt, videoCt=videoCt,
+                           ruleCt=ruleCt, faqCt=faqCt)
 
 
 #
@@ -317,10 +328,10 @@ def add_user():
     email = request.form['email']
     user = User.query.filter_by(email=email).first()
     if not user:
-        password = request.form['password']
+        password = request.form['password'].strip()
         active = True
-        username = request.form['username']
-        company = request.form['company']
+        username = request.form['username'].strip()
+        company = request.form['company'].strip()
         now = datetime.datetime.now()
         user = User(email=email, password=password, active=active, username=username, confirmed_at=now, company=company)
         db.session.add(user)
