@@ -1,0 +1,35 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>TABLE APIs</h2>
+<hr>
+TABLE is a special format of DATA.  Therefore, all DATA API can be used in TABLE. <br/>
+Here list all other functions that TABLE has besides what it inherits from DATA.
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>POINT insert(double[] value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Inserts one line in a table.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+TABLE d = MBPDATA.createTable("w,l","vgs","ids");
+d.insert(new double[]{1e-6,2e-6,3,4e-6});
+Debug.showData(d);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

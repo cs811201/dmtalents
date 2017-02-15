@@ -1,39 +1,40 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>Access Simulation</h2>
-	<hr>
-	In creating IMV or DP targets, we may have noticed that the output columns have just measurement
-	data; however, there will be cases where we need to access simulation data in code, and we can
-	further do things with both the measurement and simulation, such as:
-	<ul>
-		<li>Get delta between measurement and simulation</li>
-		<li>Change model parameter value in code, run simulation, do something else per the new
-			simulated value, and so on, and refresh GUI display eventually. Work could be fun!</li>
-	</ul>
-	This is example is based on Chap3.2 Define Vth, and we are going view both VtlinM(measurement) and
-	VtlinS(simulation) in the
-	<b>Show Data Table</b>.
-	<br>And, the updated example Script .zip file can be found as
-	<b><i>ScriptZipFiles/17_AccessSim.zip</i></b>.
-	<br>
-	<br> We use Vtlin as the example, but the logic can be applied to any other IMVs.
-	<br>Firstly, let's
-	<b>Show Data Table</b> on existing Vtlin, provided that we have loaded some IV data from
-	$MBPHOME/demo/DC/mosfet/nmos/mdm.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.18/1.png" border="1px">
-	<br> We shall see the Vtlin table, as shown below.
-	<br> Now we say explictly that the Vtlin column numbers are actually from measurement.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.18/2.png" border="1px">
-	<br>
-	<br> Let's go ahead to create a New -> Data to integrate the simulation, call the new IMV
-	"Vtlin_sim".
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.18/3.png" border="1px">
-	<br> Add type in the code, as provided below:
-	<pre class="code">
+<h2>Access Simulation</h2>
+<hr>
+In creating IMV or DP targets, we may have noticed that the output columns have just measurement
+data; however, there will be cases where we need to access simulation data in code, and we can
+further do things with both the measurement and simulation, such as:
+<ul>
+    <li>Get delta between measurement and simulation</li>
+    <li>Change model parameter value in code, run simulation, do something else per the new
+        simulated value, and so on, and refresh GUI display eventually. Work could be fun!
+    </li>
+</ul>
+This is example is based on Chap3.2 Define Vth, and we are going view both VtlinM(measurement) and
+VtlinS(simulation) in the
+<b>Show Data Table</b>.
+<br>And, the updated example Script .zip file can be found as <a href="/scriptZip/17_AccessSim/download" target="_blank">
+    <b><i>ScriptZipFiles/17_AccessSim.zip</i></b></a>.
+<br>
+<br> We use Vtlin as the example, but the logic can be applied to any other IMVs.
+<br>Firstly, let's
+<b>Show Data Table</b> on existing Vtlin, provided that we have loaded some IV data from
+$MBPHOME/demo/DC/mosfet/nmos/mdm.
+<br>
+<img src="/static/mbpst/Chap3/images/3.18/1.png" border="1px">
+<br> We shall see the Vtlin table, as shown below.
+<br> Now we say explictly that the Vtlin column numbers are actually from measurement.
+<br>
+<img src="/static/mbpst/Chap3/images/3.18/2.png" border="1px">
+<br>
+<br> Let's go ahead to create a New -> Data to integrate the simulation, call the new IMV
+"Vtlin_sim".
+<br>
+<img src="/static/mbpst/Chap3/images/3.18/3.png" border="1px">
+<br> Add type in the code, as provided below:
+<pre class="code">
 DATA load(sfunc select){
 	DATA m = imv.imv.Vtlin::get();
 
@@ -51,34 +52,36 @@ void addSim(POINT to, POINT from){
 }
 	
 	</pre>
-	The keys are:
-	<ul>
-		<li>DATA objects have .m() and .s() methods, standing for measurement and simulation data
-			respecitvely.</li>
-		<li>We can also call the DATA object's doSimulation() method to make sure it simulates
-			properly.</li>
-		<li>In the <b>trans</b> functions, we can name the new output targets names arbitrarily, in
-			this example, they are "VtlinM" and "VtlinS".
-		</li>
+The keys are:
+<ul>
+    <li>DATA objects have .m() and .s() methods, standing for measurement and simulation data
+        respecitvely.
+    </li>
+    <li>We can also call the DATA object's doSimulation() method to make sure it simulates
+        properly.
+    </li>
+    <li>In the <b>trans</b> functions, we can name the new output targets names arbitrarily, in
+        this example, they are "VtlinM" and "VtlinS".
+    </li>
 
-	</ul>
+</ul>
 
-	<img src="/static/mbpst/Chap3/images/3.18/4.png" border="1px">
-	<br>
-	<br> Now,
-	<b>Show Data Table</b> on "Vtlin_sim", we shall see both "VtlinM" and "VtlinS" columns.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.18/5.png" border="1px">
-	<br>
-	<br> This example simply displays the simulation numbers, in real life, they can be used for
-	many other applications, enjoy!
+<img src="/static/mbpst/Chap3/images/3.18/4.png" border="1px">
+<br>
+<br> Now,
+<b>Show Data Table</b> on "Vtlin_sim", we shall see both "VtlinM" and "VtlinS" columns.
+<br>
+<img src="/static/mbpst/Chap3/images/3.18/5.png" border="1px">
+<br>
+<br> This example simply displays the simulation numbers, in real life, they can be used for
+many other applications, enjoy!
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 {% endblock %}

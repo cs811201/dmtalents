@@ -1,0 +1,629 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>DATA APIs</h2>
+<hr>
+
+Conceptually, a DATA can be considered as a multi-row, multi-column table, and a POINT is a row in the table.
+Please refer to <a href="/mbpst/chap3.4" target="_blank">Chap3.4</a>  and <a href="/mbpst/chap3.6" target="_blank">Chap3.6</a>  for more of what we can do with DATA in MBP Script.
+<br/>
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA build(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Organizes the data to according to the given expression, return a DATA.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs")
+d = d.build("splitIgnore(vgs,vbs).splitBy(vbs)");
+Debug.showData(d);
+                    </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>int size()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the number of sub tables.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.build("splitIgnore(vgs,vbs).splitBy(vbs)");
+System.out.println(d.size());
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA get(int index)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the sub table at "index".</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.build("splitIgnore (vgs,vbs).splitBy(vbs)");
+d = d.get(0);
+Debug.showData(d);
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA get(int begin,int end) </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the sub table data from “begin” to “end-1”.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.build("splitBy(device)");
+d = d.get(0,3);
+Debug.showData(d);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA attachData(DATA[] attachedData, String restrictions) </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Adds the output columns of “attachedData” to the current data, according to the restrictions.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+// Please load MBP default IMV setting before trying this code.
+DATA d = MBPDATA.get("ids_vgs_vbs");
+DATA idsat = imv.imv.idsat::get();
+d = d.attachData(new DATA[]{idsat},"device");
+Debug.showData(d);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA filterBy(DATA f)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Selects the points which match "f".</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+DATA dev = MBPDATA.get("[device]");
+dev = dev.build("selectBy(w==max(w)&&l==max(l))");
+d = d.filterBy(dev);
+Debug.showData(d);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA filterBy(DATA f,String restrictions)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Selects the points which match “f” with “restrictions”.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+DATA dev = MBPDATA.get("[device]");
+dev = dev.build("selectBy(w==max(w)&&l==max(l))");
+d = d.filterBy(dev, "w,l");
+Debug.showData(d);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>String[] getPropertyNames()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the property column names. Properties are parameters not directly used in simulation (i.e., vgg,vdd in
+            DP data)
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("[dp]vth");
+String[] names = d.getPropNames();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>String[] getInstanceNames()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the instance column names.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+String[] names = d.getInstNames();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>String[] getBiasNames()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the bias column names.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+String[] names = d.getBiasNames();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>String[] getOutputNames()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the output column names.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+String[] names = d.getOutputNames();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA[] toArray()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Changes the sub table to DATA array.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.build("splitIgnore (vgs,vbs).splitBy(vbs)");
+DATA[] sub = d.toSubArray();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>POINT getFirstPoint()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the first point in data.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+POINT p = d.getFirstPoint();
+System.out.println(p->”ids”);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>TABLE getColumnData(String columns)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates new data with columns, where the duplicated points will be consolidated.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+DATA wl = d.getColumnData("w,l");
+Debug.showData(wl);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>double getRMS(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the RMS value of data with expression</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+double p = d.getRMS("ids");
+System.out.println(p);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>double sum(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the total of the value of data with expression.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+double p = d.sum("ids*vds");
+System.out.println(p);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>double max(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the maximum value of data with expression.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+double p = d.max("ids*vds");
+System.out.println(p);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>double min(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the minimum value of data with expression.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+double p = d.min("ids*vds");
+System.out.println(p);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>double avg(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the average value of data with expression.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+double p = d.avg("ids*vds");
+System.out.println(p);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA transSubToPoint(sfunc algorithm,String outputs)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>transSubToPoint is to split the input table into sub-tables first,
+            and convert sub-tables into POINTs. This is M:1 operation, using multi-row(a sub-table)
+            to calculate a single target, such as to get Vth(single point) from a IdVg curve(multi-Vgs,
+            hence multi-rows). <br/>For more info, please refer to <a href="/mbpst/chap3.6"
+                                                                      target="_blank">Chap3.6</a>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA newTable = m.transSubToPOINT(transFunc,"maxIds");
+
+void transFunc(POINT TO, DATA from){
+
+	//user logic goes here
+
+}
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA trans(sfunc algorithm,String outputs)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>trans is POINT to POINT, namely Row-by-Row or 1:1 operation. The transformation runs on each row,
+            and no cross row visibility. <br/>For more info, please refer to <a href="/mbpst/chap3.6"
+                                                                                target="_blank">Chap3.6</a></td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA newData = m.trans(transFunc, "new_output");
+
+void transFunc(POINT to, POINT from){
+
+	//user logic goes here...
+
+}
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>boolean doSimulation()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>ask MBP to do simulation.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.s();
+double[] ids = d->"ids";
+d.doSimulation();
+ids = d->"ids";
+System.out.println("after simulation:"+ids.sum());
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>int getPolarity()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>For nmos,npn,njf, it returns 1.<br/>
+            For pmos,pnp, pjf,it returns -1.<br/>
+            For others, it returns 1.
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+System.out.println(d.getPolarity());
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA m()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the measurement data.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.m();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA s()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the simulation data.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.s();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+{% endblock %}

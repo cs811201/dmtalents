@@ -1,91 +1,93 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>Define Gm Near Vth</h2>
-	<hr>
-	Sometimes, it is necessary for us to get some target value near Vth, such as:
-	<ul>
-		<li>Ids near Vth</li>
-		<li>Gm near Vth</li>
-		<li>Gds near Vth</li>
-		<li>Rout near Vth</li>
+<h2>Define Gm Near Vth</h2>
+<hr>
+Sometimes, it is necessary for us to get some target value near Vth, such as:
+<ul>
+    <li>Ids near Vth</li>
+    <li>Gm near Vth</li>
+    <li>Gds near Vth</li>
+    <li>Rout near Vth</li>
 
-	</ul>
-	And algorithmically speaking, Vth can be anything else.
-	<br>
-	<br> To get Gm from a Vth offset point is illustrated below:
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/1.png">
-	<br>
-	<br> To achieve this, we need the following functions:
-	<ol>
-		<li>Able to access other IMV Target(Vth)</li>
-		<li>Able to calculate an offset, the offset can be positive or negative.</li>
-		<li>Give X, and return veritcally intercepted Y on the curve.</li>
-	</ol>
+</ul>
+And algorithmically speaking, Vth can be anything else.
+<br>
+<br> To get Gm from a Vth offset point is illustrated below:
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/1.png">
+<br>
+<br> To achieve this, we need the following functions:
+<ol>
+    <li>Able to access other IMV Target(Vth)</li>
+    <li>Able to calculate an offset, the offset can be positive or negative.</li>
+    <li>Give X, and return veritcally intercepted Y on the curve.</li>
+</ol>
 
-	MBP Script provides a built-in Java Algorithm to do so,
-	<b>acc/GetValueAtPoint</b>.
-	<br>
-	<br> This example can be found as
-	<b><i>ScriptZipFiles/06_IMV_GmNearVth.zip</i></b>
-	<br>
-	<br> Let's begin with existing Vth and Gm in
-	<b>imv</b>, as shown below, they are included in BSIM4 default IMV settings.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/2.png">
-	<br> Now, create a New -> IMV, and name it GmNearVth.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/3.png">
-	<br> Because we are going to use a variable called "deltaVg", we need to define it in the
-	<b>imv_const</b> table beforehand.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/4.png">
-	<br>
-	<br> Then, edit the IMV definition to the following:
-	<ul>
-		<table>
-			<tr>
-				<td>Page Name:</td>
-				<td>imv.imv.gm, input data, because we eventually want to get a Gm value.</td>
-			</tr>
-			<tr>
-				<td>Restrictions:</td>
-				<td>device,vbs,vds</td>
-			</tr>
-			<tr>
-				<td>Algorithm Class:</td>
-				<td>acc/GetValueAtPoint, this is to give a X, and return a Y from a curve at the
-					intercepted point.</td>
-			</tr>
-			<tr>
-				<td>Attached Targets:</td>
-				<td>Vth, this is how we pass in another IMV Target.</td>
-			</tr>
-			<tr>
-				<td>Algorithm Parameters:</td>
-				<td>gm,vgs,vth+deltaVg, the order must be Y, X, X_Value_For_Interception, and expressions
-					are supported here for best usability.</td>
-			</tr>
-		</table>
-	</ul>
-	<img src="/static/mbpst/Chap3/images/3.3/5.png">
-	<br> Now, do a "Show Data Table" to verify the output is correct.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/7.png">
-	<br>
-	<br> And, then create some scaling plots such as GmNearVth_L and GmNearVth_W, etc.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/6.png">
-	<br>
-	<br> We now have these plots in MBP main window ready for model extraction/optimization!
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.3/8.png">
-	<br>
+MBP Script provides a built-in Java Algorithm to do so,
+<b>acc/GetValueAtPoint</b>.
+<br>
+<br> This example can be found as <a href="/scriptZip/06_IMV_GmNearVth/download" target="_blank">
+    <b><i>ScriptZipFiles/06_IMV_GmNearVth.zip</i></b></a>
+<br>
+<br> Let's begin with existing Vth and Gm in
+<b>imv</b>, as shown below, they are included in BSIM4 default IMV settings.
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/2.png">
+<br> Now, create a New -> IMV, and name it GmNearVth.
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/3.png">
+<br> Because we are going to use a variable called "deltaVg", we need to define it in the
+<b>imv_const</b> table beforehand.
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/4.png">
+<br>
+<br> Then, edit the IMV definition to the following:
+<ul>
+    <table>
+        <tr>
+            <td>Page Name:</td>
+            <td>imv.imv.gm, input data, because we eventually want to get a Gm value.</td>
+        </tr>
+        <tr>
+            <td>Restrictions:</td>
+            <td>device,vbs,vds</td>
+        </tr>
+        <tr>
+            <td>Algorithm Class:</td>
+            <td>acc/GetValueAtPoint, this is to give a X, and return a Y from a curve at the
+                intercepted point.
+            </td>
+        </tr>
+        <tr>
+            <td>Attached Targets:</td>
+            <td>Vth, this is how we pass in another IMV Target.</td>
+        </tr>
+        <tr>
+            <td>Algorithm Parameters:</td>
+            <td>gm,vgs,vth+deltaVg, the order must be Y, X, X_Value_For_Interception, and expressions
+                are supported here for best usability.
+            </td>
+        </tr>
+    </table>
+</ul>
+<img src="/static/mbpst/Chap3/images/3.3/5.png">
+<br> Now, do a "Show Data Table" to verify the output is correct.
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/7.png">
+<br>
+<br> And, then create some scaling plots such as GmNearVth_L and GmNearVth_W, etc.
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/6.png">
+<br>
+<br> We now have these plots in MBP main window ready for model extraction/optimization!
+<br>
+<img src="/static/mbpst/Chap3/images/3.3/8.png">
+<br>
 
-	<br>
-	<br>
+<br>
+<br>
 
-	<br>
+<br>
 
 {% endblock %}

@@ -1,0 +1,126 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>MBPRF APIs</h2>
+<hr>
+MBPRF provides built-in methods for RF applications. <br/>
+MBPRF is an internal variable but not a class.
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>Methods of RF transforms</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>void y2s(POINT from, POINT to, complex z0)<br/>
+            void y2t(POINT from, POINT to, complex z0) <br/>
+            void y2h(POINT from, POINT to, complex z0) <br/>
+            void y2z(POINT from, POINT to, complex z0)<br/>
+            void s2y(POINT from, POINT to, complex z0) <br/>
+            void s2t(POINT from, POINT to, complex z0) <br/>
+            void s2h(POINT from, POINT to, complex z0) <br/>
+            void s2z(POINT from, POINT to, complex z0) <br/>
+            void t2y(POINT from, POINT to, complex z0) <br/>
+            void t2s(POINT from, POINT to, complex z0) <br/>
+            void h2y(POINT from, POINT to, complex z0) <br/>
+            void h2s(POINT from, POINT to, complex z0)
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+
+//"from" is the original point and "to" is the target point.
+//For example:
+//"from":
+//Freq	S11r	S11i	S12r	S12i	S21r	S21i	S22r	S22i	Zr	Zi
+//
+//"to":
+//Freq	Y11r	Y11i	Y12r	Y12i	Y21r	Y21i	Y22r	Y22i	Zr	Zi
+
+//Upon execution of
+
+MBPRF.s2y(from,to,from=>"z")
+
+//MBP will get the value of "s11,s12,s21,s22" from “from”,then calculate
+// "y11,y12,y21,y22" and set them to "to".
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>complex[][] get(DATA p, String name) </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the values as an array.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+//For example:
+//"p":
+//Freq	S11r	S11i	S12r	S12i	S21r	S21i	S22r	S22i	Zr	Zi
+
+complex[][] s = MBPRF.get(p,"s");
+
+//It is equivalent to the code below:
+complex[][] s = new complex[2][2];
+s[0][0] = p=>"s11";
+s[0][1] = p=>"s12";
+s[1][0] = p=>"s21";
+s[1][1] = p=>"s22";
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>void set(DATA p, String name, complex[][] value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Set the values as data </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+//For example:
+//"p":
+//Freq	S11r	S11i	S12r	S12i	S21r	S21i	S22r	S22i	Zr	Zi
+
+MBPRF.set(p,"s", s);
+
+//It is equivalent to the code below:
+complex[][] s = new complex[2][2];
+p=>"s11"= s[0][0];
+p=>"s12"= s[0][1];
+p=>"s21"= s[1][0];
+p=>"s22"= s[1][1];
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

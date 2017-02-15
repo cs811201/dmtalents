@@ -1,0 +1,157 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>MBPDATA  APIs</h2>
+<hr>
+MBPDATA provides built-in methods to deal with DATA.<br/>
+MBPDATA is a system variable but not a class.
+
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA get(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Access data from MBP.<br/>
+MBPDATA.get(“analysis name”);//get dc data<br/>
+MBPDATA.get(“[device]”);//get dc device<br/>
+MBPDATA.get(“[rf]y”);//get default y parameter<br/>
+MBPDATA.get(“[rf]analysis name”); //get y parameter with other rf analysis<br/>
+MBPDATA.get(“[rfdc]analysis name”);//get dc <br/>
+MBPDATA.get(“[dp]target name”);//get dp data<br/>
+MBPDATA.get(“[noise]analysis name”);//get noise data<br/>
+MBPDATA.get(“[noise][analysis name]op name”);//get noise op<br/>
+MBPDATA.get(“[stat]target name”);//get statistical data<br/>
+MBPDATA.get(“[mis]target name”);//get mismatch data
+</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+Debug.showData(d);
+
+DATA d = MBPDATA.get("[device]");
+Debug.showData(d);
+
+DATA d = MBPDATA.get("[rf]y");
+Debug.showData(d);
+
+DATA d = MBPDATA.get("[dp]vth");
+Debug.showData(d);
+
+DATA d = MBPDATA.get("[noise]sid");
+Debug.showData(d);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>TABLE createTable(String instNames,String biasNames,String outputNames)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates an empty table.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.createTable("w,l,t","vgs,vbs,vds","ids");
+Debug.showData(d);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4>TABLE createTable(String propertyNames,String instNames,String biasNames,String outputNames) </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates an empty table.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.createTable("vgg,vdd,vbb","w,l,t","","vth");
+Debug.showData(d);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>TABLE createTable(String analysisName,String polar,String instNames,String biasNames,String outputNames)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates an empty table and this table can be simulated.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.createTable("ids_vgs_vbs","nmos","w,l,t","vbs,vds,vgs","ids");
+Debug.showData(d);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4>DATA merge(DATA[] data)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Merges data array to a larger table.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+DATA d = MBPDATA.get("ids_vgs_vbs");
+d = d.build("splitBy(device)").get(0,3);
+DATA[] sub = d.toSubArray();
+d = MBPDATA.merge(sub);
+Debug.showData(d);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

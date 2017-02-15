@@ -610,12 +610,63 @@ def mbpstchap5_2():
     return render_template('/mbpst/Chap5/APIs.html')
 
 
-@app.route('/mbpst/chap5.2.1')
+route_mbpst_api_MBP = '/mbpst/chap5.2/MBP'
+
+
+@app.route(route_mbpst_api_MBP)
 @login_required
-def mbpstchap5_2_1():
-    recordPostHistory('/mbpst/chap5.2.1')
+def mbpstchap5_2_MBP():
+    recordPostHistory(route_mbpst_api_MBP)
     return render_template('/mbpst/Chap5/MBP.html')
 
+
+route_mbpst_api_data = '/mbpst/chap5.2/DATA'
+
+
+@app.route(route_mbpst_api_data)
+@login_required
+def mbpstchap5_2_DATA():
+    recordPostHistory(route_mbpst_api_data)
+    return render_template('/mbpst/Chap5/DATA.html')
+
+
+route_mbpst_api_table = '/mbpst/chap5.2/TABLE'
+
+
+@app.route(route_mbpst_api_table)
+@login_required
+def mbpstchap5_2_TABLE():
+    recordPostHistory(route_mbpst_api_table)
+    return render_template('/mbpst/Chap5/TABLE.html')
+
+
+route_mbpst_api_point = '/mbpst/chap5.2/POINT'
+
+
+@app.route(route_mbpst_api_point)
+@login_required
+def mbpstchap5_2_POINT():
+    recordPostHistory(route_mbpst_api_point)
+    return render_template('/mbpst/Chap5/POINT.html')
+
+route_mbpst_api_mbpdata = '/mbpst/chap5.2/MBPDATA'
+
+
+@app.route(route_mbpst_api_mbpdata)
+@login_required
+def mbpstchap5_2_MBPDATA():
+    recordPostHistory(route_mbpst_api_mbpdata)
+    return render_template('/mbpst/Chap5/MBPDATA.html')
+
+
+route_mbpst_api_mbpRF = '/mbpst/chap5.2/MBPRF'
+
+
+@app.route(route_mbpst_api_mbpRF)
+@login_required
+def mbpstchap5_2_MBPRF():
+    recordPostHistory(route_mbpst_api_mbpRF)
+    return render_template('/mbpst/Chap5/MBPRF.html')
 
 #### MBP FAQ
 @app.route('/mbpfaq/setgmindc')
@@ -1048,8 +1099,8 @@ def userViewHistory(uid):
         return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList)
 
 
-## download files
-route_download_ft_rule = '/mqarules/ft/ft_example'
+## download files, all routes must end with 'download' for data analysis
+route_download_ft_rule = '/mqarules/ft/ft_example/download'
 
 
 @app.route(route_download_ft_rule)
@@ -1060,7 +1111,7 @@ def download_ft_rule():
                      as_attachment=True)
 
 
-route_download_fmax_rule = '/mqarules/fmax/fmax_example'
+route_download_fmax_rule = '/mqarules/fmax/fmax_example/download'
 
 
 @app.route(route_download_fmax_rule)
@@ -1071,7 +1122,7 @@ def download_fmax_rule():
                      mimetype='text/rule', as_attachment=True)
 
 
-route_download_vth_finfet_rule = '/mqarules/vth_finfet/vth_FinFET'
+route_download_vth_finfet_rule = '/mqarules/vth_finfet/vth_FinFET/download'
 
 
 @app.route(route_download_vth_finfet_rule)
@@ -1082,7 +1133,7 @@ def download_vth_finfet_rule():
                      mimetype='text/rule', as_attachment=True)
 
 
-route_download_sweepVgsNegative_rule = '/mqarules/sweepVgsNeg/Vth_DepletedMode'
+route_download_sweepVgsNegative_rule = '/mqarules/sweepVgsNeg/Vth_DepletedMode/download'
 
 
 @app.route(route_download_sweepVgsNegative_rule)
@@ -1091,6 +1142,248 @@ def download_sweepVgsNegative_rule():
     recordPostHistory(route_download_sweepVgsNegative_rule)
     return send_file('static/mqarules/sweepVthfromNegative/Vth_DepletedMode.rule',
                      attachment_filename='Vth_DepletedMode.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_scriptZip_01 = '/scriptZip/01_ModelParameter/download'
+
+
+@app.route(route_download_scriptZip_01)
+@login_required
+def download_scriptZip_01():
+    recordPostHistory(route_download_scriptZip_01)
+    return send_file('static/mbpst/scriptZip/01_ModelParameter.zip',
+                     attachment_filename='01_ModelParameter.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_02 = '/scriptZip/02_IMV_Simple/download'
+
+
+@app.route(route_download_scriptZip_02)
+@login_required
+def download_scriptZip_02():
+    recordPostHistory(route_download_scriptZip_02)
+    return send_file('static/mbpst/scriptZip/02_IMV_Simple.zip',
+                     attachment_filename='02_IMV_Simple.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_03 = '/scriptZip/03_IMV_Idlin_Plot/download'
+
+
+@app.route(route_download_scriptZip_03)
+@login_required
+def download_scriptZip_03():
+    recordPostHistory(route_download_scriptZip_03)
+    return send_file('static/mbpst/scriptZip/03_IMV_Idlin_Plot.zip',
+                     attachment_filename='03_IMV_Idlin_Plot.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_04 = '/scriptZip/04_IMV_Ideff/download'
+
+
+@app.route(route_download_scriptZip_04)
+@login_required
+def download_scriptZip_04():
+    recordPostHistory(route_download_scriptZip_04)
+    return send_file('static/mbpst/scriptZip/04_IMV_Ideff.zip',
+                     attachment_filename='04_IMV_Ideff.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_05 = '/scriptZip/05_IMV_Vth/download'
+
+
+@app.route(route_download_scriptZip_05)
+@login_required
+def download_scriptZip_05():
+    recordPostHistory(route_download_scriptZip_05)
+    return send_file('static/mbpst/scriptZip/05_IMV_Vth.zip',
+                     attachment_filename='05_IMV_Vth.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_06 = '/scriptZip/06_IMV_GmNearVth/download'
+
+
+@app.route(route_download_scriptZip_06)
+@login_required
+def download_scriptZip_06():
+    recordPostHistory(route_download_scriptZip_06)
+    return send_file('static/mbpst/scriptZip/06_IMV_GmNearVth.zip',
+                     attachment_filename='06_IMV_GmNearVth.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_07 = '/scriptZip/07_IMV_IdsatT25/download'
+
+
+@app.route(route_download_scriptZip_07)
+@login_required
+def download_scriptZip_07():
+    recordPostHistory(route_download_scriptZip_07)
+    return send_file('static/mbpst/scriptZip/07_IMV_IdsatT25.zip',
+                     attachment_filename='07_IMV_IdsatT25.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_08 = '/scriptZip/08_IMV_Y2/download'
+
+
+@app.route(route_download_scriptZip_08)
+@login_required
+def download_scriptZip_08():
+    recordPostHistory(route_download_scriptZip_08)
+    return send_file('static/mbpst/scriptZip/08_IMV_Y2.zip',
+                     attachment_filename='08_IMV_Y2.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_09 = '/scriptZip/09_IMV_SASB_Synch/download'
+
+
+@app.route(route_download_scriptZip_09)
+@login_required
+def download_scriptZip_09():
+    recordPostHistory(route_download_scriptZip_09)
+    return send_file('static/mbpst/scriptZip/09_IMV_SASB_Synch.zip',
+                     attachment_filename='09_IMV_SASB_Synch.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_10 = '/scriptZip/10_IMV_Idsat_MaxSASB/download'
+
+
+@app.route(route_download_scriptZip_10)
+@login_required
+def download_scriptZip_10():
+    recordPostHistory(route_download_scriptZip_10)
+    return send_file('static/mbpst/scriptZip/10_IMV_Idsat_MaxSASB.zip',
+                     attachment_filename='10_IMV_Idsat_MaxSASB.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_11 = '/scriptZip/11_IMV_Vth_con_FinFET/download'
+
+
+@app.route(route_download_scriptZip_11)
+@login_required
+def download_scriptZip_11():
+    recordPostHistory(route_download_scriptZip_11)
+    return send_file('static/mbpst/scriptZip/11_IMV_Vth_con_FinFET.zip',
+                     attachment_filename='11_IMV_Vth_con_FinFET.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_12 = '/scriptZip/12_DATA_Attach/download'
+
+
+@app.route(route_download_scriptZip_12)
+@login_required
+def download_scriptZip_12():
+    recordPostHistory(route_download_scriptZip_12)
+    return send_file('static/mbpst/scriptZip/12_DATA_Attach.zip',
+                     attachment_filename='12_DATA_Attach.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_13 = '/scriptZip/13_Optimization/download'
+
+
+@app.route(route_download_scriptZip_13)
+@login_required
+def download_scriptZip_13():
+    recordPostHistory(route_download_scriptZip_13)
+    return send_file('static/mbpst/scriptZip/13_Optimization.zip',
+                     attachment_filename='13_Optimization.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_14 = '/scriptZip/14_FuncCall/download'
+
+
+@app.route(route_download_scriptZip_14)
+@login_required
+def download_scriptZip_14():
+    recordPostHistory(route_download_scriptZip_14)
+    return send_file('static/mbpst/scriptZip/14_FuncCall.zip',
+                     attachment_filename='14_FuncCall.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_15 = '/scriptZip/15_ReadWriteFile/download'
+
+
+@app.route(route_download_scriptZip_15)
+@login_required
+def download_scriptZip_15():
+    recordPostHistory(route_download_scriptZip_15)
+    return send_file('static/mbpst/scriptZip/15_ReadWriteFile.zip',
+                     attachment_filename='15_ReadWriteFile.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_16 = '/scriptZip/16_Hide_Columns/download'
+
+
+@app.route(route_download_scriptZip_16)
+@login_required
+def download_scriptZip_16():
+    recordPostHistory(route_download_scriptZip_16)
+    return send_file('static/mbpst/scriptZip/16_Hide_Columns.zip',
+                     attachment_filename='16_Hide_Columns.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_17 = '/scriptZip/17_AccessSim/download'
+
+
+@app.route(route_download_scriptZip_17)
+@login_required
+def download_scriptZip_17():
+    recordPostHistory(route_download_scriptZip_17)
+    return send_file('static/mbpst/scriptZip/17_AccessSim.zip',
+                     attachment_filename='17_AccessSim.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_18 = '/scriptZip/18_SidOverId2/download'
+
+
+@app.route(route_download_scriptZip_18)
+@login_required
+def download_scriptZip_18():
+    recordPostHistory(route_download_scriptZip_18)
+    return send_file('static/mbpst/scriptZip/18_SidOverId2.zip',
+                     attachment_filename='18_SidOverId2.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_19 = '/scriptZip/19_DataSparseness/download'
+
+
+@app.route(route_download_scriptZip_19)
+@login_required
+def download_scriptZip_19():
+    recordPostHistory(route_download_scriptZip_19)
+    return send_file('static/mbpst/scriptZip/19_DataSparseness.zip',
+                     attachment_filename='19_DataSparseness.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_20 = '/scriptZip/20_Flow/download'
+
+
+@app.route(route_download_scriptZip_20)
+@login_required
+def download_scriptZip_20():
+    recordPostHistory(route_download_scriptZip_20)
+    return send_file('static/mbpst/scriptZip/20_Flow.zip',
+                     attachment_filename='20_Flow.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_21 = '/scriptZip/21_Timer/download'
+
+
+@app.route(route_download_scriptZip_21)
+@login_required
+def download_scriptZip_21():
+    recordPostHistory(route_download_scriptZip_21)
+    return send_file('static/mbpst/scriptZip/21_Timer.zip',
+                     attachment_filename='21_Timer.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_scriptZip_22 = '/scriptZip/22_GlobalVar/download'
+
+
+@app.route(route_download_scriptZip_22)
+@login_required
+def download_scriptZip_22():
+    recordPostHistory(route_download_scriptZip_22)
+    return send_file('static/mbpst/scriptZip/22_GlobalVar.zip',
+                     attachment_filename='22_GlobalVar.zip', mimetype='application/zip', as_attachment=True)
 
 
 if __name__ == '__main__':

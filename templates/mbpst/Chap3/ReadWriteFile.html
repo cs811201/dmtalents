@@ -2,30 +2,30 @@
 {% block mbpstmain %}
 
 
-	<h2>Read Write Files in Script</h2>
-	<hr>
-	This example shows how to Read from and Write to text files in MBP Script.
-	<br>
-	<br> The example Script .zip file can be found at
-	<b><i>ScriptZipFiles/15_ReadWriteFile.zip</i></b>
-	<br> A "funcs" script file is created under
-	<b>prog</b> to demonstrate how to read a file, and another "funcs2w" is for how to write to a file.
+<h2>Read Write Files in Script</h2>
+<hr>
+This example shows how to Read from and Write to text files in MBP Script.
+<br>
+<br> The example Script .zip file can be found at <a href="/scriptZip/15_ReadWriteFile/download" target="_blank">
+    <b><i>ScriptZipFiles/15_ReadWriteFile.zip</i></b></a>
+<br> A "funcs" script file is created under
+<b>prog</b> to demonstrate how to read a file, and another "funcs2w" is for how to write to a file.
 
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.16/1.png" border="1px">
-	<br>
-	<h4>Read a File</h4>
-	We use the
-	<b>java.io.RandomAccessFile</b> object to read a user file line by line. In this example, we simply
-	print out the file contents to the
-	<b>Message</b> panel of MBP; however, user can use these info anyway they like once it's read in.
-	<ul>
-		<li>Always call the <b>close()</b> function to close the file after use.
-		</li>
-	</ul>
-	<img src="/static/mbpst/Chap3/images/3.16/2.png" border="1px">
-	<br> The code of "funcs" is here for copy-paste:
-	<pre class="code">
+<br>
+<img src="/static/mbpst/Chap3/images/3.16/1.png" border="1px">
+<br>
+<h4>Read a File</h4>
+We use the
+<b>java.io.RandomAccessFile</b> object to read a user file line by line. In this example, we simply
+print out the file contents to the
+<b>Message</b> panel of MBP; however, user can use these info anyway they like once it's read in.
+<ul>
+    <li>Always call the <b>close()</b> function to close the file after use.
+    </li>
+</ul>
+<img src="/static/mbpst/Chap3/images/3.16/2.png" border="1px">
+<br> The code of "funcs" is here for copy-paste:
+<pre class="code">
 import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -80,23 +80,23 @@ for(int i=0; i&lt;list.size();i++){
 	System.out.println("in List: "+list.get(i));
 }
 	</pre>
-	<h4>Write to a File</h4>
-	We can also use the
-	<b>java.io.RandomAccessFile</b> object to write to a file. Please pay attention to the comments in
-	the example code:
-	<ul>
-		<li>What if the file we write to doesn't exist.</li>
-		<li>What if the folder doesn't exist.</li>
-		<li>Better way to manage large String contents.</li>
-		<li>How to append line by line.</li>
-		<li>How to insert text to a file in a certain position.</li>
-		<li>Always call the <b>close()</b> function to close the file after use.
-		</li>
-	</ul>
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.16/3.png" border="1px">
-	<br> The code of "funcs2w" is here for copy-paste:
-	<pre class="code">
+<h4>Write to a File</h4>
+We can also use the
+<b>java.io.RandomAccessFile</b> object to write to a file. Please pay attention to the comments in
+the example code:
+<ul>
+    <li>What if the file we write to doesn't exist.</li>
+    <li>What if the folder doesn't exist.</li>
+    <li>Better way to manage large String contents.</li>
+    <li>How to append line by line.</li>
+    <li>How to insert text to a file in a certain position.</li>
+    <li>Always call the <b>close()</b> function to close the file after use.
+    </li>
+</ul>
+<br>
+<img src="/static/mbpst/Chap3/images/3.16/3.png" border="1px">
+<br> The code of "funcs2w" is here for copy-paste:
+<pre class="code">
 import java.io.File;
 import java.io.RandomAccessFile;
 import java.io.IOException;
@@ -139,12 +139,12 @@ raFile.write(str2.getBytes());
 raFile.close();
 	
 	</pre>
-	<br> More, reading and writing files could involve heavily about dealing with Strings, in MBP
-	Script, we can use all the available Java String built-in functions, such as split(), startsWith(),
-	toLowerCase(), etc. very handy.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.16/4.png" border="1px">
-	<br>
-	<br>
-	<br>
+<br> More, reading and writing files could involve heavily about dealing with Strings, in MBP
+Script, we can use all the available Java String built-in functions, such as split(), startsWith(),
+toLowerCase(), etc. very handy.
+<br>
+<img src="/static/mbpst/Chap3/images/3.16/4.png" border="1px">
+<br>
+<br>
+<br>
 {% endblock %}

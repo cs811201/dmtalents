@@ -1,258 +1,254 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<a name="top"></a>
-	<h2>Define a New Flow</h2>
-	<hr>
-	Now, we dive into the details of how to create a Flow, which consists of Tasks and the control of
-	the Tasks.
-	<br>
-	<br> Two ways to create a Task:
-	<ul>
-		<li><a href="#OptTask">Create a <b>OptTask</b>, GUI mode, used for optimization jobs,
-				easy and intuitive.
-		</a></li>
-		<li><a href="#Task">Create a <b>Task</b>, coding mode, full access to APIs, capable for
-				all kinds of jobs.
-		</a></li>
-	</ul>
+<a name="top"></a>
+<h2>Define a New Flow</h2>
+<hr>
+Now, we dive into the details of how to create a Flow, which consists of Tasks and the control of
+the Tasks.
+<br>
+<br> Two ways to create a Task:
+<ul>
+    <li><a href="#OptTask">Create a <b>OptTask</b>, GUI mode, used for optimization jobs,
+        easy and intuitive.
+    </a></li>
+    <li><a href="#Task">Create a <b>Task</b>, coding mode, full access to APIs, capable for
+        all kinds of jobs.
+    </a></li>
+</ul>
 
-	<br>The control of the Flow can be:
-	<ul>
-		<li><a href="#Sequential">Sequential</a></li>
-		<li><a href="#ifelse">If/Else Branches</a></li>
-		<li><a href="#Loops">Loops</a></li>
-	</ul>
-	<a href="#Hierarchical">The structure of the Flow can be just one level, or hierarchical.</a>
-	<br>
+<br>The control of the Flow can be:
+<ul>
+    <li><a href="#Sequential">Sequential</a></li>
+    <li><a href="#ifelse">If/Else Branches</a></li>
+    <li><a href="#Loops">Loops</a></li>
+</ul>
+<a href="#Hierarchical">The structure of the Flow can be just one level, or hierarchical.</a>
+<br>
 
-	<br> This chapter uses the
-	<b><i>ScriptZipFiles/20_Flow.zip</i></b> as an example.
-	<br> let's load the demo mosfet data files from $MBPHOME/demo/DC/mosfet/nmos/mdm/*.mdm.
-	<br>
-
-
-	<div style="width: 75%">
-		<h3>
-			<a name="OptTask">Creation - OptTask</a>
-		</h3>
-		<hr>
-	</div>
-	Right click on the
-	<b>flow</b> node, and New -> OptTask, as shown below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt1.png">
-	<br> Call it "OptTask1" when prompted, and it will appear like this, a GUI consists of 4
-	parts:
-	<ul>
-		<li>Device Select</li>
-		<li>Plot Select</li>
-		<li>Parameter Select</li>
-		<li>Optimizer Select</li>
-	</ul>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt2.png">
-	<br> Step 1, click the "Device Select" button, and from the all "Selector" list, pick
-	"wmaxlmax" and click on the
-	<img src="/static/mbpst/images/buttons/select_a_selector.png"> button to have it selected to the
-	"Selected Device" list.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt3.png">
-	<br> We can click on the
-	<img src="/static/mbpst/images/buttons/preview_a_device.png"> button, to make sure the Wmax and Lmax
-	device is selected on the W/L matrix graphically, as shown below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt4.png">
-	<br> Step 2, go to the "Plot Select", in the Plot Name field, start typing "Vth.vth_", we will
-	notice that MBP shows all matched available plots, and continues to narrow down the list while
-	typing.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt5.png">
-	<br> We could click the
-	<img src="/static/mbpst/images/buttons/graph_icon.png"> button to preview the graph to make sure we got
-	the desired one, as shown below. Be noted that, the region selection is also determined at this
-	step, which is because the code to select the region has already been embedded into this graph, we
-	will see how it's done from
-	<a href="/mbpst/chap3.21">here</a>.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt6.png">
-	<br> We could use the
-	<img src="/static/mbpst/images/buttons/add_plot.png"> button to keep introducing more plots, and, use
-	the little cross on the right top of each Plot to remove it.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt7.png">
-	<br> Step 3, click to the "Parameter Select", type parameter name in the Search bar, MBP will
-	list matched parameter names and keep narrowing down while typing. Hit Enter while typing will add
-	the first parameter from the drop-down list, or use up and down arrows to navigate the drop-down
-	list and then hit Enter.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt8.png">
-	<br> once a parameter is added, the bottom will show it's explanation.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt9.png">
-	<br> Surely we could add multiple model parameters in one Task for optimization, as shown
-	below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt10.png">
-	<br> Finally, Step 4, come to the "Optimizer Select", this is to choose an optimization
-	algorithm.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt11.png">
-	<br> Where we can enable "Extend boundary" to allow automatic parameter upper/lower boundary
-	extension.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt12.png">
-	<br> Now, click the Save
-	<img src="/static/mbpst/images/buttons/save.png"> button to save the work, we have just successfully
-	created an
-	<b>OptTask</b>.
-	<br>Click the
-	<img src="/static/mbpst/images/buttons/play.png"> button to run this OptTask. We shall see the Vth_Vbs
-	graph gets selected, and Vth0, K1, K2 model parameters get selected, and very quickly the
-	optimization is done, meaning the simulation matches the measurement.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/opt13.png">
-	<br>
-	<br>
+<br> This chapter uses the<a href="/scriptZip/20_Flow/download" target="_blank">
+    <b><i>ScriptZipFiles/20_Flow.zip</i></b> </a>as an example.
+<br> let's load the demo mosfet data files from $MBPHOME/demo/DC/mosfet/nmos/mdm/*.mdm.
+<br>
 
 
-	<a href="#top">to Top</a>
-	<div style="width: 75%">
-		<h3>
-			<a name="Task">Creation - Task</a>
-		</h3>
-		<hr>
-	</div>
-	Now, let's go ahead to New -> Task from the "flow" node in MBP Script window, as shown below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/t1.png">
-	<br> Let's call it "Task1" when prompted, it will be filled with some template code, as shown
-	below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/t2.png">
-	<br> We need to insert user code in between the curly brackets of the "task()(){}", for
-	example, let's print out the optimized value of model parameter Vth0.
-	<br> Once we save the code and run it, we shall see the value is printed in MBP message window
-	at the bottom.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/t3.png">
-	<br> More Task that's created this way can be found in most default model's Flows, for
-	example, the Extraction type of Tasks are usually implemented purely by code, because they require
-	extensive Math, or by definition are not an Optimization. OptTask are only good for Optimization,
-	or simply to display a few plots.
-	<br>
+<div style="width: 75%">
+    <h3>
+        <a name="OptTask">Creation - OptTask</a>
+    </h3>
+    <hr>
+</div>
+Right click on the
+<b>flow</b> node, and New -> OptTask, as shown below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt1.png">
+<br> Call it "OptTask1" when prompted, and it will appear like this, a GUI consists of 4
+parts:
+<ul>
+    <li>Device Select</li>
+    <li>Plot Select</li>
+    <li>Parameter Select</li>
+    <li>Optimizer Select</li>
+</ul>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt2.png">
+<br> Step 1, click the "Device Select" button, and from the all "Selector" list, pick
+"wmaxlmax" and click on the
+<img src="/static/mbpst/images/buttons/select_a_selector.png"> button to have it selected to the
+"Selected Device" list.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt3.png">
+<br> We can click on the
+<img src="/static/mbpst/images/buttons/preview_a_device.png"> button, to make sure the Wmax and Lmax
+device is selected on the W/L matrix graphically, as shown below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt4.png">
+<br> Step 2, go to the "Plot Select", in the Plot Name field, start typing "Vth.vth_", we will
+notice that MBP shows all matched available plots, and continues to narrow down the list while
+typing.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt5.png">
+<br> We could click the
+<img src="/static/mbpst/images/buttons/graph_icon.png"> button to preview the graph to make sure we got
+the desired one, as shown below. Be noted that, the region selection is also determined at this
+step, which is because the code to select the region has already been embedded into this graph, we
+will see how it's done from
+<a href="/mbpst/chap3.21">here</a>.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt6.png">
+<br> We could use the
+<img src="/static/mbpst/images/buttons/add_plot.png"> button to keep introducing more plots, and, use
+the little cross on the right top of each Plot to remove it.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt7.png">
+<br> Step 3, click to the "Parameter Select", type parameter name in the Search bar, MBP will
+list matched parameter names and keep narrowing down while typing. Hit Enter while typing will add
+the first parameter from the drop-down list, or use up and down arrows to navigate the drop-down
+list and then hit Enter.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt8.png">
+<br> once a parameter is added, the bottom will show it's explanation.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt9.png">
+<br> Surely we could add multiple model parameters in one Task for optimization, as shown
+below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt10.png">
+<br> Finally, Step 4, come to the "Optimizer Select", this is to choose an optimization
+algorithm.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt11.png">
+<br> Where we can enable "Extend boundary" to allow automatic parameter upper/lower boundary
+extension.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt12.png">
+<br> Now, click the Save
+<img src="/static/mbpst/images/buttons/save.png"> button to save the work, we have just successfully
+created an
+<b>OptTask</b>.
+<br>Click the
+<img src="/static/mbpst/images/buttons/play.png"> button to run this OptTask. We shall see the Vth_Vbs
+graph gets selected, and Vth0, K1, K2 model parameters get selected, and very quickly the
+optimization is done, meaning the simulation matches the measurement.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/opt13.png">
+<br>
+<br>
 
 
-	<a href="#top">to Top</a>
-	<div style="width: 75%">
-		<h3>
-			<a name="Sequential">Control - Sequential</a>
-		</h3>
-		<hr>
-	</div>
-	Now that we have created 2 Tasks as demonstrated above, it's time to put the Tasks together to form
-	a Flow!
-	<br> To start a new Flow, right click and New -> Task Group, as shown below.
-	<br>
-
-	<img src="/static/mbpst/Chap2/images/2.3.2/f1.png">
-	<br> Name it "myFirstFlow", it shows up as an empty canvas.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f2.png">
-	<br> We now simply drag the Tasks and drop them to the canvas, they will show up as light blue
-	blocks with their names displayed as we release the mouse. The highlighted Task will be shown in
-	orange color.
-	<br>
-	<b>To remove or delete a Task block</b> from the canvas, click on it and hit the Delete button from
-	keyboard.
-
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f3.png">
-	<br> Then, hold Ctrl key and anchor the cursor to the first "OptTask1", keep holding Ctrl key
-	and start to draw a line to another Task "Taks1", this is how we define a sequential flow, by
-	simply drawing the arrowed lines!
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f4.png">
-	<br> When we release the mouse and Ctrl key, we see the arrow line from "OptTask1" to "Task1"
-	is completed. MBP then knows to call these Tasks in such an order by following the user defined
-	path.
-	<br> When a Task block is removed or deleted, its associated arrow paths will also be removed.
-	<br> To remove an arrow path/line, click on that line, then hit Delete key from keyboard.
-	<br>
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f5.png">
-	<br> Now, right click on the canvas, and do "Arrange" from the pop-up menu.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f6.png">
-	<br> It will arrange the Task blocks neatly, as shown below
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f7.png">
-	<br> Now, click on the first "OptTask1" to make it highlighted, and click on the
-	<img src="/static/mbpst/images/buttons/play.png"> button to run the whole flow, it runs through one Task
-	after anther, and we will see MBP main window updates accordingly.
-	<br>
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/f8.png">
-	<br> This is how we create and run a flow. Following this approach, we could add more Tasks
-	and link them in the way we desired in one flow, and also feel free to create multi-flows for
-	different applications! Chapter 3 provides many examples of utilizing MBP Script to implement
-	various things, and all of those could be integrated and implemented as Tasks as part of a flow.
-	<br>
+<a href="#top">to Top</a>
+<div style="width: 75%">
+    <h3>
+        <a name="Task">Creation - Task</a>
+    </h3>
+    <hr>
+</div>
+Now, let's go ahead to New -> Task from the "flow" node in MBP Script window, as shown below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/t1.png">
+<br> Let's call it "Task1" when prompted, it will be filled with some template code, as shown
+below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/t2.png">
+<br> We need to insert user code in between the curly brackets of the "task()(){}", for
+example, let's print out the optimized value of model parameter Vth0.
+<br> Once we save the code and run it, we shall see the value is printed in MBP message window
+at the bottom.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/t3.png">
+<br> More Task that's created this way can be found in most default model's Flows, for
+example, the Extraction type of Tasks are usually implemented purely by code, because they require
+extensive Math, or by definition are not an Optimization. OptTask are only good for Optimization,
+or simply to display a few plots.
+<br>
 
 
+<a href="#top">to Top</a>
+<div style="width: 75%">
+    <h3>
+        <a name="Sequential">Control - Sequential</a>
+    </h3>
+    <hr>
+</div>
+Now that we have created 2 Tasks as demonstrated above, it's time to put the Tasks together to form
+a Flow!
+<br> To start a new Flow, right click and New -> Task Group, as shown below.
+<br>
+
+<img src="/static/mbpst/Chap2/images/2.3.2/f1.png">
+<br> Name it "myFirstFlow", it shows up as an empty canvas.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f2.png">
+<br> We now simply drag the Tasks and drop them to the canvas, they will show up as light blue
+blocks with their names displayed as we release the mouse. The highlighted Task will be shown in
+orange color.
+<br>
+<b>To remove or delete a Task block</b> from the canvas, click on it and hit the Delete button from
+keyboard.
+
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f3.png">
+<br> Then, hold Ctrl key and anchor the cursor to the first "OptTask1", keep holding Ctrl key
+and start to draw a line to another Task "Taks1", this is how we define a sequential flow, by
+simply drawing the arrowed lines!
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f4.png">
+<br> When we release the mouse and Ctrl key, we see the arrow line from "OptTask1" to "Task1"
+is completed. MBP then knows to call these Tasks in such an order by following the user defined
+path.
+<br> When a Task block is removed or deleted, its associated arrow paths will also be removed.
+<br> To remove an arrow path/line, click on that line, then hit Delete key from keyboard.
+<br>
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f5.png">
+<br> Now, right click on the canvas, and do "Arrange" from the pop-up menu.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f6.png">
+<br> It will arrange the Task blocks neatly, as shown below
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f7.png">
+<br> Now, click on the first "OptTask1" to make it highlighted, and click on the
+<img src="/static/mbpst/images/buttons/play.png"> button to run the whole flow, it runs through one Task
+after anther, and we will see MBP main window updates accordingly.
+<br>
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/f8.png">
+<br> This is how we create and run a flow. Following this approach, we could add more Tasks
+and link them in the way we desired in one flow, and also feel free to create multi-flows for
+different applications! Chapter 3 provides many examples of utilizing MBP Script to implement
+various things, and all of those could be integrated and implemented as Tasks as part of a flow.
+<br>
 
 
-
-
-	<a href="#top">to Top</a>
-	<div style="width: 75%">
-		<h3>
-			<a name="ifelse">Control - If/Else</a>
-		</h3>
-		<hr>
-	</div>
-	Next, let's learn how to create a if/else conditional Task, and we will accomplish something like
-	this, as follows. We are going to introduce a conditional Task, within which we will make a
-	judgment, and create 2 output branches.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if0.png">
-	<br> Step 1, create another New -> Task, and name it "cond1".
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if1.png">
-	<br> The "cond1" comes up with no difference from a typical Task with some built-in template.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if2.png">
-	<br> Step 2, simply add some string in the first parenthesis after the keyword
-	<b>task</b> on line 0. This string can be anything, in this example, we used "planB"; however, it
-	can be called anything, such as "false", "failed", "corgi", etc. And, the exact same string must be
-	used in a
-	<b>return</b> statement later on.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if3.png">
-	<br> Step 3, now re-open "myFirstFlow" canvas, and drag and drop "cond1" in it. We now "cond1"
-	shows up as a diamond shape with 2 outlets, the one on the right is called "planB"!
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if4.png">
-	<br> To complete this demo, let's create another 2 New -> Task, called "Task2" and "TaskPlanB"
-	respectively, as shown below. Remember to hold Ctrl key and draw lines from outlets of "cond1" to
-	these 2 new Task blocks. And do a right-click and "Arrange" to make the flow blocks look neat.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if5.png">
-	<br> In "Task2", we simply print out "flow continues...".
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if6.png">
-	<br> And, in "TaskPlanB", we print out "goes to Plan B...".
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if7.png">
-	<br> Now, go back to "cond1" and add the following code in between the curly brackets, as
-	shown below, it is to get the Vtlin RMS at that moment.
-	<br> If the RMS is larger than 1E-3, we will go "planB", otherwise simply continues by "return
-	next;" where
-	<b>next</b> is a built-in keyword. Now, we see that, "planB" as a user-input string must be used
-	consistently through the whole Task.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if8.png">
-	<br> Here is the code for copy-paste:
-	<pre class="code">
+<a href="#top">to Top</a>
+<div style="width: 75%">
+    <h3>
+        <a name="ifelse">Control - If/Else</a>
+    </h3>
+    <hr>
+</div>
+Next, let's learn how to create a if/else conditional Task, and we will accomplish something like
+this, as follows. We are going to introduce a conditional Task, within which we will make a
+judgment, and create 2 output branches.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if0.png">
+<br> Step 1, create another New -> Task, and name it "cond1".
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if1.png">
+<br> The "cond1" comes up with no difference from a typical Task with some built-in template.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if2.png">
+<br> Step 2, simply add some string in the first parenthesis after the keyword
+<b>task</b> on line 0. This string can be anything, in this example, we used "planB"; however, it
+can be called anything, such as "false", "failed", "corgi", etc. And, the exact same string must be
+used in a
+<b>return</b> statement later on.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if3.png">
+<br> Step 3, now re-open "myFirstFlow" canvas, and drag and drop "cond1" in it. We now "cond1"
+shows up as a diamond shape with 2 outlets, the one on the right is called "planB"!
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if4.png">
+<br> To complete this demo, let's create another 2 New -> Task, called "Task2" and "TaskPlanB"
+respectively, as shown below. Remember to hold Ctrl key and draw lines from outlets of "cond1" to
+these 2 new Task blocks. And do a right-click and "Arrange" to make the flow blocks look neat.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if5.png">
+<br> In "Task2", we simply print out "flow continues...".
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if6.png">
+<br> And, in "TaskPlanB", we print out "goes to Plan B...".
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if7.png">
+<br> Now, go back to "cond1" and add the following code in between the curly brackets, as
+shown below, it is to get the Vtlin RMS at that moment.
+<br> If the RMS is larger than 1E-3, we will go "planB", otherwise simply continues by "return
+next;" where
+<b>next</b> is a built-in keyword. Now, we see that, "planB" as a user-input string must be used
+consistently through the whole Task.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if8.png">
+<br> Here is the code for copy-paste:
+<pre class="code">
 task(planB)(){
 	DATA vtlin=imv.imv.Vtlin::get();
 	vtlin=vtlin.build("select(L=max(L)).select(W=max(W))");
@@ -268,47 +264,47 @@ task(planB)(){
 TASK.start();
 
 	</pre>
-	Finally, we highlight the first Task "OptTask1", and hit the
-	<img src="/static/mbpst/images/buttons/play.png"> button to run the entire flow, we shall watch the flow
-	runs through with expected outputs, as shown below. According to the if/else condition defined in
-	the "cond1" Task, we see the run goes to "planB" branch.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/if9.png">
-	<br>
-	<br>
+Finally, we highlight the first Task "OptTask1", and hit the
+<img src="/static/mbpst/images/buttons/play.png"> button to run the entire flow, we shall watch the flow
+runs through with expected outputs, as shown below. According to the if/else condition defined in
+the "cond1" Task, we see the run goes to "planB" branch.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/if9.png">
+<br>
+<br>
 
-	<a href="#top">to Top</a>
-	<div style="width: 75%">
-		<h3>
-			<a name="Loops">Control - Loops</a>
-		</h3>
-		<hr>
-	</div>
-	When creating the if/else Task above, we may have wondered what is the second parenthesis for in
-	the first
-	<b>task</b> line? It is to create a counter for Loops!
-	<br> In this section, we are going to create a looped flow as shown below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/loop1.png">
-	<br> Step 1, New -> Task, and name it "loop1", and write the following code in it.
-	<br> Noted that, we write a string "redo" for the return loop path in the first parenthesis,
-	and this type of Task block will provide us a default path at the bottom even if we don't specify
-	"return next;", but code line 6 "return redo;" is a must to define the logic flow.
-	<br> We then put "int count = 3" in the second parenthesis, this is the key to create a loop,
-	and we must decrease the counter as did on code line 1.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/loop2.png">
-	<br> Again, we hold Ctrl key and draw lines to form the flow, now we have both if/else and
-	loops! As shown below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/loop4.png">
-	<br> Finally, highlight the first "OptTask1" and run
-	<img src="/static/mbpst/images/buttons/play.png"> the flow, we will see the flow loops 3 times as
-	expected, as shown below.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/loop3.png">
-	<br> Here is the code for copy-paste.
-	<pre class="code">
+<a href="#top">to Top</a>
+<div style="width: 75%">
+    <h3>
+        <a name="Loops">Control - Loops</a>
+    </h3>
+    <hr>
+</div>
+When creating the if/else Task above, we may have wondered what is the second parenthesis for in
+the first
+<b>task</b> line? It is to create a counter for Loops!
+<br> In this section, we are going to create a looped flow as shown below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/loop1.png">
+<br> Step 1, New -> Task, and name it "loop1", and write the following code in it.
+<br> Noted that, we write a string "redo" for the return loop path in the first parenthesis,
+and this type of Task block will provide us a default path at the bottom even if we don't specify
+"return next;", but code line 6 "return redo;" is a must to define the logic flow.
+<br> We then put "int count = 3" in the second parenthesis, this is the key to create a loop,
+and we must decrease the counter as did on code line 1.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/loop2.png">
+<br> Again, we hold Ctrl key and draw lines to form the flow, now we have both if/else and
+loops! As shown below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/loop4.png">
+<br> Finally, highlight the first "OptTask1" and run
+<img src="/static/mbpst/images/buttons/play.png"> the flow, we will see the flow loops 3 times as
+expected, as shown below.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/loop3.png">
+<br> Here is the code for copy-paste.
+<pre class="code">
 task(redo)(int count = 3){
 	count --;
 	System.out.println("count:"+count);
@@ -333,29 +329,29 @@ double getErr(){
 	
 
 	</pre>
-	<br>
+<br>
 
 
-	<a href="#top">to Top</a>
-	<div style="width: 75%">
-		<h3>
-			<a name="Hierarchical">Structure - Hierarchical</a>
-		</h3>
-		<hr>
-	</div>
-	MBP Script flow supports to have hierarchy, for example, as shown below, we can create another New
-	-> Task Group, and at a higher level "flow", we drag and drop "myFirstFlow" and "my2ndFlow" into
-	it, the flows also show up as light blue blocks and we can link them up by holding Ctrl and drawing
-	lines, just as we do for Task blocks.
-	<br>
-	<img src="/static/mbpst/Chap2/images/2.3.2/hi.png">
-	<br>
-	<a href="#top">to Top</a>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+<a href="#top">to Top</a>
+<div style="width: 75%">
+    <h3>
+        <a name="Hierarchical">Structure - Hierarchical</a>
+    </h3>
+    <hr>
+</div>
+MBP Script flow supports to have hierarchy, for example, as shown below, we can create another New
+-> Task Group, and at a higher level "flow", we drag and drop "myFirstFlow" and "my2ndFlow" into
+it, the flows also show up as light blue blocks and we can link them up by holding Ctrl and drawing
+lines, just as we do for Task blocks.
+<br>
+<img src="/static/mbpst/Chap2/images/2.3.2/hi.png">
+<br>
+<a href="#top">to Top</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 {% endblock %}

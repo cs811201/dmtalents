@@ -1,78 +1,78 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>Vth_con for FinFET</h2>
-	<hr>
-	BSIMCMG for FinFET model by default has no W(channel width), when calculating Vth thru the
-	traditional Vth_con method, W is often considered as an effective W, for example, in the following
-	fashion:
-	<br>
-	<ul>
-		<b>Weff = 2*HFin*NFin*NF</b>
-	</ul>
-	<img src="/static/mbpst/Chap3/images/3.10/1.png" border="1px">
-	<br>In fact the built-in Java Algorithm Vth_Con has already considered this case, it knows to
-	calculate Weff using the above equation when it detects a BSIMCMG model is in use. However, some
-	people may choose to use a different equation for Weff, then this demo shows how to define a
-	Vth_Con by code where user has full control.
-	<br>
-	<br> The Example Script .zip file can be found at
-	<b><i>ScriptZipFiles/11_IMV_Vth_con_FinFET.zip</i></b>
+<h2>Vth_con for FinFET</h2>
+<hr>
+BSIMCMG for FinFET model by default has no W(channel width), when calculating Vth thru the
+traditional Vth_con method, W is often considered as an effective W, for example, in the following
+fashion:
+<br>
+<ul>
+    <b>Weff = 2*HFin*NFin*NF</b>
+</ul>
+<img src="/static/mbpst/Chap3/images/3.10/1.png" border="1px">
+<br>In fact the built-in Java Algorithm Vth_Con has already considered this case, it knows to
+calculate Weff using the above equation when it detects a BSIMCMG model is in use. However, some
+people may choose to use a different equation for Weff, then this demo shows how to define a
+Vth_Con by code where user has full control.
+<br>
+<br> The Example Script .zip file can be found at <a href="/scriptZip/11_IMV_Vth_con_FinFET/download" target="_blank">
+    <b><i>ScriptZipFiles/11_IMV_Vth_con_FinFET.zip</i></b></a>
 
-	<br>
-	<br> In this case, we firstly switch to a BSIMCMG model in MBP, go for menu "Model -> Select
-	Model", as shown below.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/2.png" border="1px">
-	<br> A default BSIMCMG model will be loaded automatically, now we need to load in some sample
-	IV data, from Chap3\ExampleFiles\3.10\sampleData.mea, and we see curves, as shown below.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/3.png" border="1px">
-	<br>
-	<br> We now open IMV Pages tab and take a look at the default Vth, it's all zero!!
-	<br> This is because the built-in Vth_Con searches HFin, NFin, L, etc. all from the
-	measurement data; however, in this case and many other cases, HFin is only defined as a model
-	parameter.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/4.png" border="1px">
-	<br> HFin as a model parameter, as shown here.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/5.png" border="1px">
-	<br>
-	<br> So, we have to do something to correct this. Let's open MBP Script window via menu
-	"Script -> Script Project", and on
-	<b>imv</b> New -> Data, call it
-	<b>vth_con_FinFET</b>, as shown below.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/6.png" border="1px">
-	<br> The full code is available in the example .zip file, and we also created many scaling
-	plots for L and NFin, etc. well, actually they are the copy-and-paste from default Vth plots for
-	BSIMCMG.
-	<br> In the code, we see that, we can access all of the following in order to calculate Weff
-	and eventually Vth_Con:
-	<ul>
-		<li>Ids_Vgs IV data, current and bias.</li>
-		<li>Icon, variables from <b>imv_const</b> table
-		</li>
-		<li>L, NFin, etc device instance parameters</li>
-		<li>HFin, as a model parameter</li>
+<br>
+<br> In this case, we firstly switch to a BSIMCMG model in MBP, go for menu "Model -> Select
+Model", as shown below.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/2.png" border="1px">
+<br> A default BSIMCMG model will be loaded automatically, now we need to load in some sample
+IV data, from Chap3\ExampleFiles\3.10\sampleData.mea, and we see curves, as shown below.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/3.png" border="1px">
+<br>
+<br> We now open IMV Pages tab and take a look at the default Vth, it's all zero!!
+<br> This is because the built-in Vth_Con searches HFin, NFin, L, etc. all from the
+measurement data; however, in this case and many other cases, HFin is only defined as a model
+parameter.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/4.png" border="1px">
+<br> HFin as a model parameter, as shown here.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/5.png" border="1px">
+<br>
+<br> So, we have to do something to correct this. Let's open MBP Script window via menu
+"Script -> Script Project", and on
+<b>imv</b> New -> Data, call it
+<b>vth_con_FinFET</b>, as shown below.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/6.png" border="1px">
+<br> The full code is available in the example .zip file, and we also created many scaling
+plots for L and NFin, etc. well, actually they are the copy-and-paste from default Vth plots for
+BSIMCMG.
+<br> In the code, we see that, we can access all of the following in order to calculate Weff
+and eventually Vth_Con:
+<ul>
+    <li>Ids_Vgs IV data, current and bias.</li>
+    <li>Icon, variables from <b>imv_const</b> table
+    </li>
+    <li>L, NFin, etc device instance parameters</li>
+    <li>HFin, as a model parameter</li>
 
-	</ul>
-	Line 24 shows how Weff is calculated, feel free to edit it if we have another way to define
-	it.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/7.png" border="1px">
-	<br> Now we do a "Show Data Table" on vth_con_FinFET, we see
-	<b>vth</b> has meaningful value.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/8.png" border="1px">
-	<br>
-	<br> And, go back to MBP main window and refresh the IMV plots, we got the Vth_Con curves!
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.10/9.png" border="1px">
-	<br>
-	<br>
-	<br>
-	<br>
+</ul>
+Line 24 shows how Weff is calculated, feel free to edit it if we have another way to define
+it.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/7.png" border="1px">
+<br> Now we do a "Show Data Table" on vth_con_FinFET, we see
+<b>vth</b> has meaningful value.
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/8.png" border="1px">
+<br>
+<br> And, go back to MBP main window and refresh the IMV plots, we got the Vth_Con curves!
+<br>
+<img src="/static/mbpst/Chap3/images/3.10/9.png" border="1px">
+<br>
+<br>
+<br>
+<br>
 
 {% endblock %}

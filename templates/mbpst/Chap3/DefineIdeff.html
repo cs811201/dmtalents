@@ -1,47 +1,47 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>Define Ideff</h2>
-	<hr>
-	<b>Ideff</b> is defined in the following fashion, and it's a perfect case to use
-	<b>Expression</b> type of IMV definition. From Ids_Vds_Vgs plot, we have:
+<h2>Define Ideff</h2>
+<hr>
+<b>Ideff</b> is defined in the following fashion, and it's a perfect case to use
+<b>Expression</b> type of IMV definition. From Ids_Vds_Vgs plot, we have:
 
-	<div style="margin-left: 20px; font-size: 90%">
-		<br> <br>Ideff = ( Idhigh + Idlow ) / 2<br> Idhigh is Ids @ Vds=Vdd/2, Vgs=Vgg<br>
-		Idlow is Ids @ Vds=Vdd, Vgs=Vgg/2.
-	</div>
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.1/1.png" border="1px">
-	<br> This example Script .zip file can be found at
-	<b><i>ScriptZipFiles/04_IMV_Ideff.zip</i></b>
-	<br>
-	<br> Our goal is to have Ideff defined as an
-	<b>Expression</b>, as follows:
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.1/2.png" border="1px">
-	<br>
-	<br> In order to calculate Ideff, we need to firstly define Idhigh and Idlow, and then attach
-	them to Ideff as
-	<b>Attached Targets</b>. And they can be defined using Java Algorithm IMV type, as follows:
-	<br>
-	<br>
-	<b>Idlow: </b>
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.1/3.png" border="1px">
-	<br>
-	<b>Idhigh: </b>
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.1/4.png" border="1px">
-	<br> When done, we do a "View Data Table"" on either of these 3 targets, we shall be able to see
-	valid data in the table.
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.1/5.png" border="1px">
-	<br> In this example, we also crated Ideff_L and Ideff_W scaling plots, as shown below:
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.1/6.png" border="1px">
-	<br>
-	<br>
-	<br>
-	<br>
+<div style="margin-left: 20px; font-size: 90%">
+    <br> <br>Ideff = ( Idhigh + Idlow ) / 2<br> Idhigh is Ids @ Vds=Vdd/2, Vgs=Vgg<br>
+    Idlow is Ids @ Vds=Vdd, Vgs=Vgg/2.
+</div>
+<br>
+<img src="/static/mbpst/Chap3/images/3.1/1.png" border="1px">
+<br> This example Script .zip file can be found at<a href="/scriptZip/04_IMV_Ideff/download" target="_blank">
+    <b><i>ScriptZipFiles/04_IMV_Ideff.zip</i></b></a>
+<br>
+<br> Our goal is to have Ideff defined as an
+<b>Expression</b>, as follows:
+<br>
+<img src="/static/mbpst/Chap3/images/3.1/2.png" border="1px">
+<br>
+<br> In order to calculate Ideff, we need to firstly define Idhigh and Idlow, and then attach
+them to Ideff as
+<b>Attached Targets</b>. And they can be defined using Java Algorithm IMV type, as follows:
+<br>
+<br>
+<b>Idlow: </b>
+<br>
+<img src="/static/mbpst/Chap3/images/3.1/3.png" border="1px">
+<br>
+<b>Idhigh: </b>
+<br>
+<img src="/static/mbpst/Chap3/images/3.1/4.png" border="1px">
+<br> When done, we do a "View Data Table"" on either of these 3 targets, we shall be able to see
+valid data in the table.
+<br>
+<img src="/static/mbpst/Chap3/images/3.1/5.png" border="1px">
+<br> In this example, we also crated Ideff_L and Ideff_W scaling plots, as shown below:
+<br>
+<img src="/static/mbpst/Chap3/images/3.1/6.png" border="1px">
+<br>
+<br>
+<br>
+<br>
 
 {% endblock %}
