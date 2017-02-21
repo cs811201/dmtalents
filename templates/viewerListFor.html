@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Viewer List
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>Viewer List for <a href="{{route}}" target="_blank">{{title}}</a></h3>
+    <hr/>
+
+
+    <table width="80%">
+        <thead>
+        <tr>
+            <th width="18px">User ID</th>
+            <th width="50px">User Name</th>
+            <th width="50px">Email</th>
+            <th width="50px">Company</th>
+            <th width="30px">View #</th>
+        </tr>
+        </thead>
+        {% for p in userHis %}
+        <tr>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td>{{ p[4] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <br/><br/> <br/><br/><br/>
+
+</div>
+{% endblock %}

@@ -1,33 +1,251 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>MBP APIs</h2>
-	<hr>
-	<b>MBP</b> provides built-in methods to access models and model parameters in MBP. There could be
-	multiple models loaded in MBP at the same time; however, there is only one model called the "Main
-	Model" at a given time, the model that's selected in the model panel currently.
+<h2>MBP APIs</h2>
+<hr>
+<b>MBP</b> provides built-in methods to access models and model parameters in MBP. There could be
+multiple models loaded in MBP at the same time; however, there is only one model called the "Main
+Model" at a given time, the model that's selected in the model panel currently.
 
 
 <div style="width: 75%">
     <hr/>
-    <h4>DATA m()</h4>
+    <h4 style="background-color:#D3D3D3">Model getModels().getMainModel()</h4>
 </div>
 <table>
     <tr>
         <td>Description:</td>
-        <td>Gets the simulation data.</td>
+        <td>Returns currently selected model.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">int getModels().getModelCount()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>MBP may load several models.
+            It returns the number of models loaded in MBP.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Model getModels().getModel(int index)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>MBP may load several models.
+            It returns the model with given index.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean toBinningMode()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Switches to binning point mode.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">DATA getLocalModelManager().createTable(String outputNames)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates a table with models loaded in "Local Model Manager"(One can open it with menu "Model->Local Model
+            Manager" in RF Mode).<br/>
+            The instances are defined in "Local Model Manager".<br/>
+            The outputs of measurement are loaded from models in "Local Model Manager".<br/>
+            The outputs of simulation will be calculated with current model.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String[] getDataNames(String type)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the data names loaded in MBP.<br/>
+            Here "type" can be:<br/>
+            "[DC]"— All the DC data names<br/>
+            "[RF]" — All the RF data names<br/>
+            "[DP]" — All the DP data names<br/>
+            "[NOISE]" — All the noise data names<br/>
+            "[STAT]" — All the statistical data names<br/>
+            "[MIS]" — All the mismatch data names"
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param getParam(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the parameters by name.</td>
 
     </tr>
     <tr>
         <td>Example</td>
         <td>
                 <pre>
-DATA d = MBPDATA.get("ids_vgs_vbs");
-d = d.s();
+Param param = MBP.getParam("u0");
 
                 </pre>
         </td>
     </tr>
 </table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param[] getParams(String names)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the parameters by names.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+Param[] params = MBP.getParams("u0,k1,vth0");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getSpiceName() </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the SPICE name of the model.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param createBinningPointDeltaParam(String[] sectionNames,String paramName) </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates a parameter for binning tweaking.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param createBinningPointRatioParam(String[] sectionNames,String paramName)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates a parameter for binning tweaking.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String[] getBinPointNames(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the bin names with expression.<br/>
+            For example:<br/>
+            Model model = …;<br/>
+            model.getBinNames("w>1u && l < 1u");<br/>
+            It will return all the bins which satisfy “w>1u && l < 1u”.<br/>
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">DATA createParamData(String paramNames,TABLE table)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>It will create a new table, which instances are from “table”, and outputs are “paramNames”.
+            It is used to calculate the parameter values with data.
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getStatParamNames() </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the names of statistical parameters. </td>
+
+    </tr>
+
+</table>
+
+
 
 {% endblock %}

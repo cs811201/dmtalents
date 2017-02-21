@@ -1,0 +1,144 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>ScriptDialog  APIs</h2>
+<hr>
+ScriptDialog is used to make some actions easier in Script.<br/>
+For file chooser, it will record the recent paths.
+
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">File selectFile()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows a file chooser and returns the file which has been chosen.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+File f = ScriptDialog.selectFile();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">File[] selectFiles()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows a file chooser and returns the files which have been chosen.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+File[] files = ScriptDialog.selectFile();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">File[] selectDir()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows a file chooser and returns the directory which been chosen.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+File f = ScriptDialog.selectDir();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">File[] selectDirs()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows a file chooser and returns the directories which been chosen.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+File[] files = ScriptDialog.selectDirs();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">File saveFile()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows a file chooser and returns the file which user wants to save.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+File f = ScriptDialog.saveFile();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getInputString()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows an input dialog and returns the String which the user inputs.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String str = ScriptDialog.getInputString();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

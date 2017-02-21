@@ -1,0 +1,260 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>MBPVAR APIs</h2>
+<hr>
+
+MBPVAR is used to define global variables, that can be set/get across DATAs, such as IMV Targets, or any user defined DATA, Flow, Setup, etc.
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void set(String name, String value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the value of “name” variable as String “value”.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+MBPVAR.set("var1","value1");
+//set the value of var1 as value1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getString(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the String value of “name” variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String var1 = MBPVAR.getString("var1”);
+//get the String value of var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void set(String name, int value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the int value to the variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+MBPVAR.set("var1",10);
+//sets int value 10 to var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">int getInt(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the int value of “name” variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+int var1 = MBPVAR.getInt("var1”);
+//gets the int value of var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void set(String name, double value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the double value to the variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+MBPVAR.set("var1",10.1);
+//sets double value 10.1 to var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">int getDouble(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the double value of “name” variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+double var1 = MBPVAR.getDouble("var1”);
+//gets the double value of var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void set(String name, int[] value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the int array to the variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+MBPVAR.set("var1",new int[]{1,2,3});
+//sets int array[1,2,3] to var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">int getIntArray(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the int array value of “name” variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+int[] var1 = MBPVAR.getIntArray("var1”);
+//gets the int array value of var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void set(String name, double[] value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the double array to the variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+MBPVAR.set("var1",new double[]{1.1,2.2,3});
+//sets int array[1.1,2.2,3.3] to var1
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">int getDoubleArray(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the double array of the variable.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+double[] var1 = MBPVAR.getDoubleArray("var1");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void show()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows the GUI of “VarTable”.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+double[] var1 = MBPVAR.show();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

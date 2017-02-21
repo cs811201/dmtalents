@@ -1,0 +1,140 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>GraphDataSource APIs</h2>
+<hr>
+GraphDataSource contains information regarding a graph, such as X/Y/P axis names, graph title, etc.
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getXName()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>
+            Gets X axis name of the graph.
+        </td>
+
+    </tr>
+     <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String xName = graphDataSource.getXName();
+
+                </pre>
+        </td>
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getYName()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets Y axis name of the graph.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String yName = graphDataSource.getYName();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getPName()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets P axis name of the graph; P axis in MBP is also known as Z axis, the legend.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String pName = graphDataSource.getPName();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getGraphName()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets name of the graph.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String graphName = graphDataSource.getGraphName();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getDeviceProperty(String propertyName)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets device property value of the graph.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+Double w_val = graphDataSource.getDeviceProperty("w");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getPropertyValue(int curveIndex, String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets property value of the curve.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String pName = graphDataSource.getPName();
+double pValue = graphDataSource.getPropertyValue(1,pName);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

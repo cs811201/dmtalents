@@ -1,0 +1,581 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>CMD APIs</h2>
+<hr>
+CMD provides a lot of APIs to deal with Plot, Region, Data File, Model Parameter, Optimization, GUI components, File, etc.
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PagePlot[] plot(String plotExpression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Plots the graphs with “plotExpression”, and returns the plots.<br/>
+            <br/>
+            CMD.plot("analysisname@condition1,condition2...@plotInfo option1, option2...");<br/>
+            CMD.plot("navigatorname.graphname@ condition1,condition2...@plotInfo option1, option2…");<br/>
+            <br/>
+            Options can be:<br/>
+            xScale = log/linear<br/>
+            yScale = log/linear<br/>
+            region=[#vgg/2,#vgg] <br/>
+            range=[x_lower,x_upper,y_lower,y_upper] <br/>
+            math=mathName
+
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.plot("ids_vgs_vbs");
+CMD.plot("imv.imv.vth.vth_w_l");
+CMD.plot("ids_vgs_vbs@w=1u,l=1u,abs(vds)<0.5");
+CMD.plot("ids_vgs_vbs@plotInfo xScale=log,math=y'");
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void plot(PagePlot[] plots)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Plots the graphs.</td>
+
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PageGroup[] getPageGroup(String graphName)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets a page group with “graphName”, and one can use the page group to select a graph to plot.<br/>
+            CMD.getPageGroup("analysisname");<br/>
+            CMD.getPageGroup("navigatorname.graphname);
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.plot("ids_vgs_vbs");
+CMD.plot("imv.imv.vth.vth_w_l");
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void clearPlots()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Removes all the plots from the browser. And it will also clear the selected regions.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.clearPlots();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void clearParam()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Removes all the selected parameters.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.clearParam();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void clearRegion()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Removes all the selected regions.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.clearRegion();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void selectParam(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Selects parameters by name.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.selectParam("vth0");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void setParamValue(String name, double value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets parameter value.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+
+//if there are several bins, and each bin has "vth0", only the "vth0" in current bin will be changed.
+CMD.setParamValue("vth0",0.3);
+
+//”nmos” is the bin name
+CMD.setParamValue("nmos.vth0",0.3);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getParamValue(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the parameter value.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+//if there are several bins, and each bin has "vth0", only the "vth0" in current bin will be changed.
+double v = CMD.getParamValue("vth0");
+System.out.println(v);
+
+//”nmos” is the bin name
+double v = CMD.getParamValue("nmos.vth0");
+System.out.println(v);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setParamBoundary(String name, double lower, double upper)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Set soft boundary of parameter</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.setParamBoundary("vth0",0.1,0.7);
+
+CMD.setParamBoundary("nmos.vth0",0.1,0.7);
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setParamHardBoundary(String name, double lower, double upper)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets hard boundary of parameter</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.setParamHardBoundary("vth0",0.1,0.7);
+
+CMD.setParamHardBoundary("nmos.vth0",0.1,0.7);
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void optimize()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Performs optimization with the selected plots and parameters.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+
+CMD.optimize();
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void addMenu(String name, sfunc action)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Adds a menu to MBP.<br/>
+            The user can define what to do in "action".
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.addMenu("customize->clearData",action);
+void action(){
+	cmd.clearData();
+}
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void clearMenu()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Removes all the menu defined in MBP scripts.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.clearMenu();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void loadTasktree(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Loads the task tree by name.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.loadTasktree("autoBin.bsim3");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void runTasktree()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Runs task tree.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.runTasktree();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void loadModel(String file)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Loads a model from a file.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.loadModel("C:\\nmos.l");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void saveModel(String file)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Saves current model to a file.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.saveModel("C:\\nmos.l");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void loadData(String file)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Loads data from a file.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.loadData("C:\\nmos.mdm");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void clearData()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Removes all the data in MBP.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.clearData();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void exec(String command)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Runs a system command.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.exec("notepad");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String readFile(String file)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Reads a file and returns its content.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+String content = CMD.readFile("c:\\a.txt");
+System.out.println(content);
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void saveFile(String file, String content)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Saves “content” to a file.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.saveFile("c:\\a.txt","sample");
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void repaint()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Refreshes all graphs.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+CMD.repaint();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getRMS()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the RMS error value in the selected graph.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+double rms = CMD.getRMS();
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+{% endblock %}

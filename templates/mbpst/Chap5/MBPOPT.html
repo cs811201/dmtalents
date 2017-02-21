@@ -1,0 +1,124 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>MBPOPT APIs</h2>
+<hr>
+MBPOPT provides some methods to do optimization.<br/>
+MBPOPT is an internal variable but not a class.
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void setOption(String name, String value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets Optimizer options, including optimizer type and others.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getOption(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets option of Optimizer.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setError(sfunc error)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>"error" is the error function which returns double.
+            Optimizer will try to minimize its value to zero.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setCheck(sfunc check)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>"check" is a function which returns Boolean.
+            Optimizer will exclude the solutions that return value is false.
+            If it is set to null, the optimizer will ignore the check.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double[][] optimize(Param[] params)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Optimizes with "params".
+            The return values are the best results that optimizer finds.
+            One may use MBPOPT.POPULATE_PARAM to save it for next optimization run to obtain a better result.
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double[][] optimize(Param[] params, double[][] initial)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Description Optimizes with "params".
+            "initial" are several former results, which the optimization start from.
+            The user may get them from MBPOPT.POPULATE_PARAM.
+            The return values are several best results that optimizer found.
+            The user may use MBPOPT.POPULATE_PARAM to save it for next optimization,
+            and may get a better result of next optimization.
+
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean recover()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>After running the method optimize(…), one may use this method to roll back
+            parameter changes if the optimization result is unsatisfactory.
+        </td>
+
+    </tr>
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,159 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>PageGroup  APIs</h2>
+<hr>
+
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PageGroup build(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Organizes the page group to a tree.
+The expression is the same as in DATA.build(…)
+</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+def group = cmd.getPageGroup("ids_vgs_vbs");
+group = group.build("select(w == min(w) && l==min(l))");
+cmd.plot(group.toPagePlots());
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PageGroup get(int index)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the sub page group at index.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+def group = cmd.getPageGroup("ids_vgs_vbs");
+group = group.build("splitBy(w)");
+cmd.plot(group.get(0).toPagePlots());
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">int size()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the number of sub groups.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+def group = cmd.getPageGroup("ids_vgs_vbs");
+group = group.build("splitBy(w)");
+System.out.println(group.size());
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PageGroup filterBy(DATA data)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Filters the plots with data.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+def group = cmd.getPageGroup("ids_vgs_vbs");
+DATA d = MBPDATA.get("[device]");
+d = d.build("select(w == max(w) && l == max(l))");
+group = group.filterBy(data);
+cmd.plot(group.toPagePlots());
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PageGroup filterBy(DATA data, String restrictions)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Filters the plots with data.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+def group = cmd.getPageGroup("ids_vgs_vbs");
+DATA d = MBPDATA.get("[device]");
+d = d.build("select(w == max(w) && l == max(l))");
+group = group.filterBy(data, "w,l");
+cmd.plot(group.toPagePlots());
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">PagePlot[] toPagePlots()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns all the plots.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+def group = cmd.getPageGroup("ids_vgs_vbs");
+cmd.plot(group.toPagePlots());
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

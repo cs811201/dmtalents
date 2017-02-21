@@ -1,0 +1,43 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>STR  APIs</h2>
+<hr>
+STR is used to create String more clearly.<br/><br/>
+If there are many variables in the String, there will be lots of quotation marks, and it could be error-prone.
+STR can provide convenience for string concatenation.
+
+
+
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String STR(String str)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the value of str. If there is a variable, add “#” ahead of it.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+double vgg = 1;
+double vdlin = 1;
+DATA d = MBPDATA.select("ids_vgs_vbs");
+//Normal usage:
+d = d.build("select(vgs=="+vgg+"&&vds=="+vdlin+")");
+
+//STR usage:
+d = d.build("select(vgs==#vgg&&vds==#vdlin) ");
+
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

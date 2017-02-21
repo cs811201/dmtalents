@@ -15,7 +15,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
 app = Flask(__name__)
-app.debug = False
+app.debug = True
 
 if sys.platform == 'win32':
     # print('win32')
@@ -62,10 +62,10 @@ def recordPostHistory(rt):
             diff = now - p.date
             diffmin = diff / datetime.timedelta(minutes=1)
             # print('diffmin', diffmin)
-            if diffmin < 30:  # 30 minutes
+            if diffmin < 10:  # 10 minutes
                 flag = True
                 break
-    if not flag:  # record only when the time is longer than 30 minutes.
+    if not flag:  # record only when the time is longer than 10 minutes.
         posthis = PostHistory(user_id=id, route=rt, date=now)
         db.session.add(posthis)
         db.session.commit()
@@ -240,7 +240,7 @@ def mbpst():
 # @roles_required('bumblebee')
 @login_required
 def faq():
-    # recordPostHistory('/faq')
+    recordPostHistory('/faq')
     results = Post.query.filter((Post.category == 'mbpfaq') | (Post.category == 'mqafaq')).order_by(
         desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/faq_list.html', slist=results, func=getCategory)
@@ -251,7 +251,7 @@ def faq():
 # @roles_required('bumblebee')
 @login_required
 def mbpfaq():
-    # recordPostHistory('/mbpfaq')
+    recordPostHistory('/mbpfaq')
     results = Post.query.filter(Post.category == 'mbpfaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
@@ -259,7 +259,7 @@ def mbpfaq():
 @app.route('/mqafaq')
 @login_required
 def mqafaq():
-    # recordPostHistory('/mqafaq')
+    recordPostHistory('/mqafaq')
     results = Post.query.filter(Post.category == 'mqafaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mqa/mqafaqlist.html', slist=results, func=getCategory)
 
@@ -275,7 +275,7 @@ def blog():
 @app.route('/mqarules')
 @login_required
 def mqarules():
-    # recordPostHistory('/mqarules')
+    recordPostHistory('/mqarules')
     return render_template('mqarules/mqarules_index.html', func=getCategory)
 
 
@@ -668,6 +668,154 @@ def mbpstchap5_2_MBPRF():
     recordPostHistory(route_mbpst_api_mbpRF)
     return render_template('/mbpst/Chap5/MBPRF.html')
 
+
+route_mbpst_api_mbpopt = '/mbpst/chap5.2/MBPOPT'
+
+
+@app.route(route_mbpst_api_mbpopt)
+@login_required
+def mbpstchap5_2_MBPOPT():
+    recordPostHistory(route_mbpst_api_mbpopt)
+    return render_template('/mbpst/Chap5/MBPOPT.html')
+
+
+route_mbpst_api_mbpopt_POPULATE_PARAM = '/mbpst/chap5.2/MBPOPT.POPULATE_PARAM'
+
+
+@app.route(route_mbpst_api_mbpopt_POPULATE_PARAM)
+@login_required
+def mbpstchap5_2_MBPOPT_POPULATE_PARAM():
+    recordPostHistory(route_mbpst_api_mbpopt_POPULATE_PARAM)
+    return render_template('/mbpst/Chap5/MBPOPT.POPULATE_PARAM.html')
+
+
+route_mbpst_api_PARAM = '/mbpst/chap5.2/Param'
+
+
+@app.route(route_mbpst_api_PARAM)
+@login_required
+def mbpstchap5_2_PARAM():
+    recordPostHistory(route_mbpst_api_PARAM)
+    return render_template('/mbpst/Chap5/Param.html')
+
+
+route_mbpst_api_cmd = '/mbpst/chap5.2/CMD'
+
+
+@app.route(route_mbpst_api_cmd)
+@login_required
+def mbpstchap5_2_CMD():
+    recordPostHistory(route_mbpst_api_cmd)
+    return render_template('/mbpst/Chap5/CMD.html')
+
+route_mbpst_api_pageplot = '/mbpst/chap5.2/PagePlot'
+
+
+@app.route(route_mbpst_api_pageplot)
+@login_required
+def mbpstchap5_2_PagePlot():
+    recordPostHistory(route_mbpst_api_pageplot)
+    return render_template('/mbpst/Chap5/PagePlot.html')
+
+route_mbpst_api_PageGroup = '/mbpst/chap5.2/PageGroup'
+
+
+@app.route(route_mbpst_api_PageGroup)
+@login_required
+def mbpstchap5_2_PageGroup():
+    recordPostHistory(route_mbpst_api_PageGroup)
+    return render_template('/mbpst/Chap5/PageGroup.html')
+
+
+route_mbpst_api_PlotCurve = '/mbpst/chap5.2/PlotCurve'
+
+
+@app.route(route_mbpst_api_PlotCurve)
+@login_required
+def mbpstchap5_2_PlotCurve():
+    recordPostHistory(route_mbpst_api_PlotCurve)
+    return render_template('/mbpst/Chap5/PlotCurve.html')
+
+
+route_mbpst_api_DataProvider = '/mbpst/chap5.2/DataProvider'
+
+
+@app.route(route_mbpst_api_DataProvider)
+@login_required
+def mbpstchap5_2_DataProvider():
+    recordPostHistory(route_mbpst_api_DataProvider)
+    return render_template('/mbpst/Chap5/DataProvider.html')
+
+
+route_mbpst_api_STR = '/mbpst/chap5.2/STR'
+
+
+@app.route(route_mbpst_api_STR)
+@login_required
+def mbpstchap5_2_STR():
+    recordPostHistory(route_mbpst_api_STR)
+    return render_template('/mbpst/Chap5/STR.html')
+
+
+
+route_mbpst_api_CMD_VARTABLE = '/mbpst/chap5.2/CMD.VARTABLE'
+
+
+@app.route(route_mbpst_api_CMD_VARTABLE)
+@login_required
+def mbpstchap5_2_CMD_VARTABLE():
+    recordPostHistory(route_mbpst_api_CMD_VARTABLE)
+    return render_template('/mbpst/Chap5/CMD.VARTABLE.html')
+
+route_mbpst_api_model = '/mbpst/chap5.2/Model'
+
+
+@app.route(route_mbpst_api_model)
+@login_required
+def mbpstchap5_2_Model():
+    recordPostHistory(route_mbpst_api_model)
+    return render_template('/mbpst/Chap5/Model.html')
+
+route_mbpst_api_mbpvar = '/mbpst/chap5.2/MBPVAR'
+
+
+@app.route(route_mbpst_api_mbpvar)
+@login_required
+def mbpstchap5_2_MBPVAR():
+    recordPostHistory(route_mbpst_api_mbpvar)
+    return render_template('/mbpst/Chap5/MBPVAR.html')
+
+
+
+route_mbpst_api_GraphDataSource = '/mbpst/chap5.2/GraphDataSource'
+
+
+@app.route(route_mbpst_api_GraphDataSource)
+@login_required
+def mbpstchap5_2_GraphDataSource():
+    recordPostHistory(route_mbpst_api_GraphDataSource)
+    return render_template('/mbpst/Chap5/GraphDataSource.html')
+
+route_mbpst_api_Math = '/mbpst/chap5.2/Math'
+
+
+@app.route(route_mbpst_api_Math)
+@login_required
+def mbpstchap5_2_Math():
+    recordPostHistory(route_mbpst_api_Math)
+    return render_template('/mbpst/Chap5/Math.html')
+
+
+
+route_mbpst_api_ScriptDialog = '/mbpst/chap5.2/ScriptDialog'
+
+
+@app.route(route_mbpst_api_ScriptDialog)
+@login_required
+def mbpstchap5_2_ScriptDialog():
+    recordPostHistory(route_mbpst_api_ScriptDialog)
+    return render_template('/mbpst/Chap5/ScriptDialog.html')
+
 #### MBP FAQ
 @app.route('/mbpfaq/setgmindc')
 @login_required
@@ -946,6 +1094,20 @@ def getPostViewTimeById(uid):
     return post.date
 
 
+
+def getPostIdByRoute(myroute):
+    post = Post.query.filter(Post.route == myroute).first()
+    if type(post).__name__ == 'NoneType':
+        return ''
+    return post.id
+
+def getPostRouteById(pid):
+    post = Post.query.filter(Post.id== pid).first()
+    if type(post).__name__ == 'NoneType':
+        return ''
+    return post.route
+
+
 def getPostTitleByRoute(myroute):
     post = Post.query.filter(Post.route == myroute).first()
     if type(post).__name__ == 'NoneType':
@@ -1032,7 +1194,7 @@ def dashboard():
 
     # search list
 
-    searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(10).all();
+    searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(10).all()
     sList = []
     for item in searchList:
         sList.append(item.search_string)
@@ -1041,7 +1203,7 @@ def dashboard():
                            alfna_ct=alfna_ct,
                            video_ct=video_ct,
                            user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis,
-                           searchList=sList)
+                           searchList=sList, getPostIdFunc=getPostIdByRoute)
 
 
 route_recent_100_search = '/recent100SearchHis'
@@ -1051,7 +1213,7 @@ route_recent_100_search = '/recent100SearchHis'
 @roles_required('sunshine')
 @login_required
 def recent100Search():
-    searchAll = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(100).all();
+    searchAll = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(100).all()
     sAll = []
     for item in searchAll:
         sAll.append(item.search_string)
@@ -1063,6 +1225,36 @@ def recent100Search():
         userHis.append((ii[0], ii[1]))
 
     return render_template('/recent100Searches.html', slist=userHis)
+
+
+# post viewed by users
+route_post_viewed_by_users = '/viewerListFor/<postId>'
+
+
+@app.route(route_post_viewed_by_users)
+@roles_required('sunshine')
+@login_required
+def user_post_viewed_by_users(postId):
+    route=getPostRouteById(postId)
+    viewers=PostHistory.query.filter(PostHistory.route==route).all()
+    vv =[]
+    for vi in viewers:
+        uid = vi.user_id
+        vv.append(uid)
+    iz = Counter(vv).items()
+
+    sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # uid, count
+    userHis = []  # uid, user name, email, company, count
+    for ii in sortedIz:
+        if ii[0] == 1 or ii[0] == 2 or ii[0] == 3:
+            continue
+        userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]), getCompanybyId(ii[0]), ii[1]))
+
+    return render_template('/viewerListFor.html', userHis=userHis, route=route, title=getPostTitleByRoute(route))
+
+
+
+
 
 
 # user history view
@@ -1083,7 +1275,7 @@ def userViewHistory(uid):
 
     if flag:
         uname = getUserNameById(uid)
-        postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(PostHistory.route).all()
+        postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         vl = []
         for v in postHis:
             route = v.route

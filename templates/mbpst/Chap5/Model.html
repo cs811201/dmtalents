@@ -1,0 +1,149 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>Model APIs</h2>
+<hr>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param getParam(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the parameters by name.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getSpiceName() </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the SPICE name of the model.</td>
+
+    </tr>
+
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param createBinningPointDeltaParam(String[] sectionNames,String
+        paramName) </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates a parameter for binning tweaking.</td>
+
+    </tr>
+
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Param createBinningPointRatioParam(String[] sectionNames,String paramName)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Creates a parameter for binning tweaking.</td>
+
+    </tr>
+
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String[] getBinPointNames(String expression)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the bin names with expression.<br/>
+            For example:<br/>
+            Model model = …;<br/>
+            model.getBinNames("w>1u && l < 1u");<br/>
+            It will return all the bins which satisfy “w>1u && l < 1u”.
+        </td>
+
+    </tr>
+
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">DATA createParamData(String paramNames,TABLE table)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>It will create a new table, whose which instances are from “table”, and outputs are “paramNames”.
+            It is used to calculate the parameter values with data.<br/><br/>
+            For example:<br/>
+            table:<br/>
+            W L<br/>
+            1u 1u<br/>
+            1u 10u<br/><br/>
+
+            model:<br/>
+            …<br/>
+            a = w * l<br/>
+            b = w / l<br/>
+            …<br/><br/>
+            model.createParamData("a,b",table):<br/>
+            <table border="1">
+                <tr>
+                    <td>W</td>
+                    <td>L</td>
+                    <td>a</td>
+                    <td>b</td>
+                </tr>
+                <tr>
+                    <td>1u</td>
+                    <td>1u</td>
+                    <td>1e-12</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1u</td>
+                    <td>10u</td>
+                    <td>10e-12</td>
+                    <td>0.1</td>
+                </tr>
+            </table>
+            <br/>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+model.createParamData("a,b",table):
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getStatParamNames() </h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the names of statistical parameters.</td>
+
+    </tr>
+
+</table>
+
+{% endblock %}

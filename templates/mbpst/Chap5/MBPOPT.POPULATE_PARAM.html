@@ -1,0 +1,109 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>MBPOPT.POPULATE_PARAM APIs</h2>
+<hr>
+MBPOPT.POPULATE_PARAM provides built-in methods to deal with multiple results of parameters.
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double[][] getValues(Param[] params)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns values of params.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double[][] getValues(Param[] params,Param[] reset,sfunc check)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns values of params.
+            The "reset" parameter will be generated automatically.
+            And it will make the generated values can access "check".
+        </td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void updateValue(Param[] params, double[][] values)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Updates values to MBPOPT.POPULATE_PARAM.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void load(File file)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Loads the values from a file.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void save(File file)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Saves the values to a file.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void show()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Shows the values.</td>
+
+    </tr>
+
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void clear()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Clears the values.</td>
+
+    </tr>
+
+</table>
+
+{% endblock %}

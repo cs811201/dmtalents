@@ -25,7 +25,7 @@ Dashboard
         <h3>Top 10 Views</h3>
         <hr/>
         {% for p in postTop %}
-        <a href="{{p[0]}}" target="_blank"><font size="4">{{ p[1] }} </font></a> - {{p[2]}}
+        <a href="{{p[0]}}" target="_blank"><font size="4">{{ p[1] }}</font></a> - {{p[2]}} - <a href="/viewerListFor/{{getPostIdFunc(p[0])}}" target="_blank">Viewers</a>
         <br/>
         {% endfor %}
     </div>

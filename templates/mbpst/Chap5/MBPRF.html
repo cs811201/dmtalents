@@ -9,7 +9,7 @@ MBPRF is an internal variable but not a class.
 
 <div style="width: 75%">
     <hr/>
-    <h4>Methods of RF transforms</h4>
+    <h4 style="background-color:#D3D3D3">Methods of RF transforms</h4>
 </div>
 <table>
     <tr>
@@ -58,7 +58,7 @@ MBPRF.s2y(from,to,from=>"z")
 
 <div style="width: 75%">
     <hr/>
-    <h4>complex[][] get(DATA p, String name) </h4>
+    <h4 style="background-color:#D3D3D3">complex[][] get(DATA p, String name) </h4>
 </div>
 <table>
     <tr>
@@ -92,12 +92,12 @@ s[1][1] = p=>"s22";
 
 <div style="width: 75%">
     <hr/>
-    <h4>void set(DATA p, String name, complex[][] value)</h4>
+    <h4 style="background-color:#D3D3D3">void set(DATA p, String name, complex[][] value)</h4>
 </div>
 <table>
     <tr>
         <td>Description:</td>
-        <td>Set the values as data </td>
+        <td>Set the values as data</td>
 
     </tr>
     <tr>
@@ -118,6 +118,52 @@ p=>"s21"= s[1][0];
 p=>"s22"= s[1][1];
 
 
+                </pre>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">Methods of RF transforms</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>complex[][] y2t(complex[][] y, complex z0)<br/>
+            complex[][] t2y(complex[][] t, complex z0)<br/>
+            complex[][] y2z(complex[][] y, complex z0)<br/>
+            complex[][] z2y(complex[][] z, complex z0)<br/>
+            complex[][] y2h(complex[][] y, complex z0)<br/>
+            complex[][] h2y(complex[][] h, complex z0)<br/>
+            complex[][] s2y(complex[][] s, complex z0)<br/>
+            complex[][] y2s(complex[][] y, complex z0)<br/>
+            complex[][] s2t(complex[][] s, complex z0)<br/>
+            complex[][] t2s(complex[][] t, complex z0)<br/>
+            complex[][] s2h(complex[][] s, complex z0)<br/>
+            complex[][] h2s(complex[][] h, complex z0)<br/>
+            complex[][] s2z(complex[][] s, complex z0)<br/>
+            complex[][] z2s(complex[][] z, complex z0)
+        </td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+//for example:
+//y[0][0] is y11
+//y[1][0] is y21
+//y[0][1] is y12
+//y[1][1] is y22
+
+complex[][] s = MBPRF.y2s(y,z);
+
+//s[0][0] is s11
+//s[1][0] is s21
+//s[0][1] is s12
+//s[1][1] is s22
                 </pre>
         </td>
     </tr>

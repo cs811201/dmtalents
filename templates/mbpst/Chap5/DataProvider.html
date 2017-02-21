@@ -1,0 +1,46 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>DataProvider  APIs</h2>
+<hr>
+
+DataProvider is used in IMV algorithm
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getDouble(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the value with name.</td>
+
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>
+                <pre>
+
+double vgg = dataProvider.getDouble("vgg")
+//the dataProvider is from the super function
+
+                </pre>
+        </td>
+    </tr>
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double[] getDoubleArray(String name)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns the values with name.</td>
+
+    </tr>
+
+</table>
+
+{% endblock %}

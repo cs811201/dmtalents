@@ -1,0 +1,182 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>Param APIs</h2>
+<hr>
+
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getValue()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the parameter value.</td>
+
+    </tr>
+
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setValue(double value)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the parameter value.
+            If the value is out of the soft boundary, the soft boundary will be extended automatically.
+            If the value is out of the hard boundary, it will be set to the hard boundary.
+        </td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getUpper()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the soft upper bound.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getLower()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the soft lower bound.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setBoundary(double lower, double upper)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the parameter’s soft boundary.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getHardUpper()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the hard upper bound.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getHardLower()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the hard lower bound.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean setHardBoundary(double lower, double upper)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the parameter’s hard boundary.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">double getStep()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Sets the tuning step of parameter.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void extendBound(double ratio)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Extends soft boundary with “ratio” value.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">void extendBound(double lowerRatio, double upperRatio)</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Extends soft boundary with “lowerRatio” and “upperRatio” values.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean reachLowerBound()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns true if the parameter value equals to its soft lower bound.</td>
+
+    </tr>
+
+</table>
+
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">boolean reachUpperBound()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Returns true if the parameter value equals to its soft upper bound.</td>
+
+    </tr>
+
+</table>
+<div style="width: 75%">
+    <hr/>
+    <h4 style="background-color:#D3D3D3">String getName()</h4>
+</div>
+<table>
+    <tr>
+        <td>Description:</td>
+        <td>Gets the parameter name.</td>
+
+    </tr>
+
+</table>
+
+{% endblock %}
