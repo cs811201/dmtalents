@@ -15,7 +15,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 
 if sys.platform == 'win32':
     # print('win32')
@@ -25,7 +25,7 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////var/www/FlaskApp/dmworks/db/dm.db'
     app.config['WHOOSH_BASE'] = '/var/www/FlaskApp/dmworks/whoosh_index'
 
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.secret_key = os.urandom(24)
 app.config['SECRET_KEY'] = 'super-secret007'
 app.config['SECURITY_REGISTERABLE'] = False
@@ -198,7 +198,7 @@ def index():
     faqPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mbpfaq')).all()
     faqCt = faqPost.__len__()
 
-    return render_template('index.html', num=getRandomIntFrom1toGiven(8), mbpstCt=mbpstCt, videoCt=videoCt,
+    return render_template('index.html', num=getRandomIntFrom1toGiven(9), mbpstCt=mbpstCt, videoCt=videoCt,
                            ruleCt=ruleCt, faqCt=faqCt)
 
 
@@ -936,6 +936,17 @@ def mqarulessweepFromNegaiveVgs():
     return render_template('/mqarules/rules/sweepFromNegaiveVgs.html')
 
 
+
+route_mqarules_synchro = '/mqarules/synchro'
+
+
+@app.route(route_mqarules_synchro)
+@login_required
+def mqarulessynchro():
+    recordPostHistory(route_mqarules_synchro)
+    return render_template('/mqarules/rules/synchro.html')
+
+
 #### Video Demos
 route_video = '/video'
 
@@ -1335,6 +1346,19 @@ def download_sweepVgsNegative_rule():
     return send_file('static/mqarules/sweepVthfromNegative/Vth_DepletedMode.rule',
                      attachment_filename='Vth_DepletedMode.rule', mimetype='text/rule', as_attachment=True)
 
+
+route_download_synchro_rule = '/mqarules/synchro/rule/download'
+
+
+@app.route(route_download_synchro_rule)
+@login_required
+def download_synchro_rule():
+    recordPostHistory(route_download_synchro_rule)
+    return send_file('static/mqarules/synchro/SynchroSA_SB.rule',
+                     attachment_filename='SynchroSA_SB.rule', mimetype='text/rule', as_attachment=True)
+
+
+#### Script Zip files downloads
 
 route_download_scriptZip_01 = '/scriptZip/01_ModelParameter/download'
 

@@ -1,0 +1,26 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 50:Title= Synchro SA SB Example]
+
+[Label: 5001:title= Idsat_W vs. SA] 
+[Condition:1]
+[Option:Synchro=SA_SB]
+[Loops
+: X=SA(Start=5E-7, Stop=2E-6, num=11)
+: P0=SB(Start=5E-7, Stop=2E-6, num=11)
+: P=W(g_wmin)
+: P1=Vgs(vgg) 
+: P2=Vds(vdd) 
+: P3=Vbs(0)
+: P4=T(tnom)
+: P5=L(g_lmin)
+]
+[Target
+: Idsat_W=Idsat/W
+: y=Idsat_W
+]
+[Check: 01:Check Trend: Save2DData (p,x,y,"@Synchro=SA_SB"): error: Trend is not right]
+[Check: 02:Check Trend, SA SB not in Sync: Save2DData (p,x,y): error: Trend is not right]
+[Compare: 03:RMS of Idsat vs. L : CompPlot(p,x,y,"@Synchro=SA_SB"): error: TBD]
+[Corner:04:Check corner of Idsat vs. L : CompareTREND(x,y,"@TREND=1","@Synchro=SA_SB"): error: TBD]
