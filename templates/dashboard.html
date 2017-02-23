@@ -20,37 +20,102 @@ Dashboard
     User Count: <font size="6"> {{user_ct}}</font> ---- Search Count: <font size="6"> {{search_ct}}</font>
     <br/>
     <br/>
+    <div style="height:530px">
+        <div style="float:left; width: 50%; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+            <h3>Top 20 Views</h3>
+            <hr/>
+            {% for p in postTop %}
+            <a href="{{p[0]}}" target="_blank"><font size="3">{{ p[1] }}</font></a> - {{p[2]}} -
+            {% if getPostIdFunc(p[0])>0 %}
+            <a href="/viewerListFor/{{getPostIdFunc(p[0])}}" target="_blank">Viewers</a>
+            {% endif %}
 
-    <div style="float:left; width: 50%; height:400px; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
-        <h3>Top 10 Views</h3>
-        <hr/>
-        {% for p in postTop %}
-        <a href="{{p[0]}}" target="_blank"><font size="4">{{ p[1] }}</font></a> - {{p[2]}} - <a href="/viewerListFor/{{getPostIdFunc(p[0])}}" target="_blank">Viewers</a>
-        <br/>
-        {% endfor %}
+            <br/>
+            {% endfor %}
+        </div>
+        <div style="float:center;  overflow: auto">
+            <h3>Recent 20 Searches</h3>
+            <hr/>
+            <table>
+
+                {% for p in searchList %}
+                <tr>
+                    <td width="50%"><font size="3">{{ p[0] }} </font></td>
+                    <td>{{p[1]}}</td>
+                </tr>
+
+                {% endfor %}
+            </table>
+            <br/>
+            <a href="/recent100SearchHis" target="_blank">Recent 100 Search Text</a>
+
+            <br/><br/>
+        </div>
     </div>
-    <div style="float:center;  overflow: auto">
-        <h3>Recent 10 Searches</h3>
-        <hr/>
-        {% for p in searchList %}
-        <font size="4">{{ p }} </font>
-        <br/>
-        {% endfor %}
-        <br/>
-        <a href="/recent100SearchHis" target="_blank">Recent 100 Search Text</a>
-
-        <br/><br/>
-    </div>
-
 
     <br/>
+
+    <h3>Last 20 Views</h3>
+    <hr/>
+    <table width="90%">
+        <thead>
+        <tr>
+            <th width="34%">Title</th>
+            <th width="18%">Date</th>
+            <th width="15%">User Name</th>
+            <th width="24%">Email</th>
+            <th width="15%">Company</th>
+        </tr>
+        </thead>
+        {% for p in latestViews %}
+        <!--# route 0, date 1,title 2,userName 3, email 4, company 5-->
+        <tr>
+
+            <td><a href="{{p[0]}}" target="_blank">{{ p[2] }}</a></td>
+            <td>{{p[1]}}</td>
+            <td>{{p[3]}}</td>
+            <td>{{p[4]}}</td>
+            <td>{{p[5]}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Downloads</h3>
+    <hr/>
+    <table width="90%">
+        <thead>
+        <tr>
+
+            <th width="34%">Route</th>
+            <th width="18%">Date</th>
+            <th width="15%">User Name</th>
+            <th width="24%">Email</th>
+            <th width="15%">Company</th>
+        </tr>
+        </thead>
+        {% for p in downloads %}
+        <!--#  #route 0, date 1, user name 2, email 3, company 4 -->
+        <tr>
+
+            <td>{{ p[0] }}</td>
+            <td>{{p[1]}}</td>
+            <td>{{p[2]}}</td>
+            <td>{{p[3]}}</td>
+            <td>{{p[4]}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+
     <br/>
     <h3>Views by User | Company</h3>
     <hr/>
     <table width="80%">
         <thead>
         <tr>
-            <th width="18px">User ID</th>
+            <th width="18px">ID</th>
             <th width="50px">User Name</th>
             <th width="50px">Email</th>
             <th width="50px">Company</th>

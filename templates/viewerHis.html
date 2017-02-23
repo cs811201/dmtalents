@@ -13,8 +13,8 @@ View History
     <table width="80%">
         {% for p in viewList%}
         <tr>
-            <td width="400">
-                <a href="{{p[1]}}" target="_blank"><font size="4">{{ p[0] }}</font></a></td>
+            <td width="50%">
+                <a href="{{p[1]}}" target="_blank"><font size="3">{{ p[0] }}</font></a></td>
             <td>{{ p[2] }}</td>
 
         </tr>
@@ -23,13 +23,19 @@ View History
 
     <h3>Search History by {{ uname }}</h3>
     <hr/>
+    <table>
 
-    {% for p in searchList%}
+        {% for p in searchList%}
+        <tr>
+            <td width="50%">
+                <font size="3">{{ p[0] }}</font>
+            </td>
+            <td>{{ p[1] }}</td>
+        </tr>
 
-    <font size="4">{{ p }}</font>
 
-    {% endfor %}
-
+        {% endfor %}
+    </table>
 
     <br/><br/> <br/><br/><br/>
 

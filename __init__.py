@@ -649,6 +649,7 @@ def mbpstchap5_2_POINT():
     recordPostHistory(route_mbpst_api_point)
     return render_template('/mbpst/Chap5/POINT.html')
 
+
 route_mbpst_api_mbpdata = '/mbpst/chap5.2/MBPDATA'
 
 
@@ -708,6 +709,7 @@ def mbpstchap5_2_CMD():
     recordPostHistory(route_mbpst_api_cmd)
     return render_template('/mbpst/Chap5/CMD.html')
 
+
 route_mbpst_api_pageplot = '/mbpst/chap5.2/PagePlot'
 
 
@@ -716,6 +718,7 @@ route_mbpst_api_pageplot = '/mbpst/chap5.2/PagePlot'
 def mbpstchap5_2_PagePlot():
     recordPostHistory(route_mbpst_api_pageplot)
     return render_template('/mbpst/Chap5/PagePlot.html')
+
 
 route_mbpst_api_PageGroup = '/mbpst/chap5.2/PageGroup'
 
@@ -757,7 +760,6 @@ def mbpstchap5_2_STR():
     return render_template('/mbpst/Chap5/STR.html')
 
 
-
 route_mbpst_api_CMD_VARTABLE = '/mbpst/chap5.2/CMD.VARTABLE'
 
 
@@ -767,6 +769,7 @@ def mbpstchap5_2_CMD_VARTABLE():
     recordPostHistory(route_mbpst_api_CMD_VARTABLE)
     return render_template('/mbpst/Chap5/CMD.VARTABLE.html')
 
+
 route_mbpst_api_model = '/mbpst/chap5.2/Model'
 
 
@@ -775,6 +778,7 @@ route_mbpst_api_model = '/mbpst/chap5.2/Model'
 def mbpstchap5_2_Model():
     recordPostHistory(route_mbpst_api_model)
     return render_template('/mbpst/Chap5/Model.html')
+
 
 route_mbpst_api_mbpvar = '/mbpst/chap5.2/MBPVAR'
 
@@ -786,7 +790,6 @@ def mbpstchap5_2_MBPVAR():
     return render_template('/mbpst/Chap5/MBPVAR.html')
 
 
-
 route_mbpst_api_GraphDataSource = '/mbpst/chap5.2/GraphDataSource'
 
 
@@ -795,6 +798,7 @@ route_mbpst_api_GraphDataSource = '/mbpst/chap5.2/GraphDataSource'
 def mbpstchap5_2_GraphDataSource():
     recordPostHistory(route_mbpst_api_GraphDataSource)
     return render_template('/mbpst/Chap5/GraphDataSource.html')
+
 
 route_mbpst_api_Math = '/mbpst/chap5.2/Math'
 
@@ -806,7 +810,6 @@ def mbpstchap5_2_Math():
     return render_template('/mbpst/Chap5/Math.html')
 
 
-
 route_mbpst_api_ScriptDialog = '/mbpst/chap5.2/ScriptDialog'
 
 
@@ -815,6 +818,7 @@ route_mbpst_api_ScriptDialog = '/mbpst/chap5.2/ScriptDialog'
 def mbpstchap5_2_ScriptDialog():
     recordPostHistory(route_mbpst_api_ScriptDialog)
     return render_template('/mbpst/Chap5/ScriptDialog.html')
+
 
 #### MBP FAQ
 @app.route('/mbpfaq/setgmindc')
@@ -934,7 +938,6 @@ route_mqarules_sweepFromNegaiveVgs = '/mqarules/sweepFromNegativeVgs'
 def mqarulessweepFromNegaiveVgs():
     recordPostHistory(route_mqarules_sweepFromNegaiveVgs)
     return render_template('/mqarules/rules/sweepFromNegaiveVgs.html')
-
 
 
 route_mqarules_synchro = '/mqarules/synchro'
@@ -1118,6 +1121,20 @@ def videoMBP_RMS_algor():
     return render_template('/video/MBP_RMS_algor.html')
 
 
+route_video_MBP_Ion_Ioff = '/video/MBP_Ion_Ioff_Correlation'
+
+
+@app.route(route_video_MBP_Ion_Ioff)
+@login_required
+def videoMBP_Ion_Ioff():
+    recordPostHistory(route_video_MBP_Ion_Ioff)
+    return render_template('/video/MBP_Ion_Ioff_correlation.html')
+
+
+######################
+
+
+
 def getPostViewTimeById(uid):
     post = PostHistory.query.filter(PostHistory.id == uid).first()
     if type(post).__name__ == 'NoneType':
@@ -1125,15 +1142,15 @@ def getPostViewTimeById(uid):
     return post.date
 
 
-
 def getPostIdByRoute(myroute):
     post = Post.query.filter(Post.route == myroute).first()
     if type(post).__name__ == 'NoneType':
-        return ''
+        return -1
     return post.id
 
+
 def getPostRouteById(pid):
-    post = Post.query.filter(Post.id== pid).first()
+    post = Post.query.filter(Post.id == pid).first()
     if type(post).__name__ == 'NoneType':
         return ''
     return post.route
@@ -1142,7 +1159,7 @@ def getPostRouteById(pid):
 def getPostTitleByRoute(myroute):
     post = Post.query.filter(Post.route == myroute).first()
     if type(post).__name__ == 'NoneType':
-        return ''
+        return myroute
     return post.title
 
 
@@ -1206,7 +1223,7 @@ def dashboard():
             continue
         postTop.append((ii[0], getPostTitleByRoute(str(ii[0])), ii[1]))
         tmp += 1
-        if tmp >= 10:
+        if tmp >= 20:
             break
 
     ### look for user info
@@ -1225,16 +1242,39 @@ def dashboard():
 
     # search list
 
-    searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(10).all()
+    searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(20).all()
     sList = []
     for item in searchList:
-        sList.append(item.search_string)
+        sList.append((item.search_string,str(item.date)[:-10]))
+
+    # latestViews
+    postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
+    if postHis.__len__() > 20:  # get the last 20 views.
+        postHis = postHis[:20]
+
+    latestViews = []
+    for item in postHis:
+        uid = item.user_id
+        route = item.route
+        title = getPostTitleByRoute(route)
+        # route, date,title,userName, email, company
+        latestViews.append(
+            (route, str(item.date)[:-10], title, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid)))
+
+    postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
+    downloads=[]
+    for item in postHis:
+        route=item.route
+        uid = item.user_id
+        if str(route).endswith('download'):
+            #route 0, date 1, user name 2, email 3, company 4
+            downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid)))
 
     return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
                            alfna_ct=alfna_ct,
                            video_ct=video_ct,
                            user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis,
-                           searchList=sList, getPostIdFunc=getPostIdByRoute)
+                           searchList=sList, getPostIdFunc=getPostIdByRoute, latestViews=latestViews, downloads=downloads)
 
 
 route_recent_100_search = '/recent100SearchHis'
@@ -1266,9 +1306,9 @@ route_post_viewed_by_users = '/viewerListFor/<postId>'
 @roles_required('sunshine')
 @login_required
 def user_post_viewed_by_users(postId):
-    route=getPostRouteById(postId)
-    viewers=PostHistory.query.filter(PostHistory.route==route).all()
-    vv =[]
+    route = getPostRouteById(postId)
+    viewers = PostHistory.query.filter(PostHistory.route == route).all()
+    vv = []
     for vi in viewers:
         uid = vi.user_id
         vv.append(uid)
@@ -1282,10 +1322,6 @@ def user_post_viewed_by_users(postId):
         userHis.append((ii[0], getUserNameById(ii[0]), getEmailById(ii[0]), getCompanybyId(ii[0]), ii[1]))
 
     return render_template('/viewerListFor.html', userHis=userHis, route=route, title=getPostTitleByRoute(route))
-
-
-
-
 
 
 # user history view
@@ -1313,11 +1349,11 @@ def userViewHistory(uid):
             title = getPostTitleByRoute(route)
             date = getPostViewTimeById(v.id)
             if title != '':
-                vl.append((title, route, date.ctime()))
+                vl.append((title, route, str(date)[:-10]))
         searchHis = SearchHistory.query.filter(SearchHistory.user_id == uid).order_by(SearchHistory.date).all()
         sList = []
         for v in searchHis:
-            sList.append(v.search_string)
+            sList.append((v.search_string,str(v.date)[:-10]))
 
         return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList)
 
@@ -1376,7 +1412,6 @@ def download_synchro_rule():
     recordPostHistory(route_download_synchro_rule)
     return send_file('static/mqarules/synchro/SynchroSA_SB.rule',
                      attachment_filename='SynchroSA_SB.rule', mimetype='text/rule', as_attachment=True)
-
 
 
 route_download_normalize_rule = '/mqarules/normalize/rule/download'
