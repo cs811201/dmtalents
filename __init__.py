@@ -947,6 +947,26 @@ def mqarulessynchro():
     return render_template('/mqarules/rules/synchro.html')
 
 
+route_mqarules_normalize = '/mqarules/normalize'
+
+
+@app.route(route_mqarules_normalize)
+@login_required
+def mqarulesnormalize():
+    recordPostHistory(route_mqarules_normalize)
+    return render_template('/mqarules/rules/normalize.html')
+
+
+route_mqarules_ideff = '/mqarules/ideff'
+
+
+@app.route(route_mqarules_ideff)
+@login_required
+def mqarulesIdeff():
+    recordPostHistory(route_mqarules_ideff)
+    return render_template('/mqarules/rules/ideff.html')
+
+
 #### Video Demos
 route_video = '/video'
 
@@ -1356,6 +1376,29 @@ def download_synchro_rule():
     recordPostHistory(route_download_synchro_rule)
     return send_file('static/mqarules/synchro/SynchroSA_SB.rule',
                      attachment_filename='SynchroSA_SB.rule', mimetype='text/rule', as_attachment=True)
+
+
+
+route_download_normalize_rule = '/mqarules/normalize/rule/download'
+
+
+@app.route(route_download_normalize_rule)
+@login_required
+def download_normalize_rule():
+    recordPostHistory(route_download_normalize_rule)
+    return send_file('static/mqarules/normalize/Normalization_Example.rule',
+                     attachment_filename='Normalization_Example.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_ideff_rule = '/mqarules/ideff/rule/download'
+
+
+@app.route(route_download_ideff_rule)
+@login_required
+def download_ideff_rule():
+    recordPostHistory(route_download_ideff_rule)
+    return send_file('static/mqarules/ideff/Ideff.rule',
+                     attachment_filename='Ideff.rule', mimetype='text/rule', as_attachment=True)
 
 
 #### Script Zip files downloads

@@ -1,0 +1,65 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: Ideff
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Ideff Example Rule</h2>
+<h3>MQA Rules</h3>
+<hr>
+We discussed how to define <a href="/mbpst/chap3.1" target="_blank">Ideff in MBP Script</a>, here let's take a look at how to apply the same definition in a MQA rule.
+<br>
+<br>
+Again, Ideff is defined using the following condition:
+<div style="margin-left: 20px; font-size: 90%">
+    <br> <br>Ideff = ( Idhigh + Idlow ) / 2<br> Idhigh is Ids @ Vds=Vdd/2, Vgs=Vgg<br>
+    Idlow is Ids @ Vds=Vdd, Vgs=Vgg/2.
+</div>
+<br/>
+<img src="/static/mbpst/Chap3/images/3.1/1.png" border="1px"><br/>
+<br/>
+
+Ideff.rule: <a href="/mqarules/ideff/rule/download" target="_blank">download</a>
+<pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 41:Title=Ideff Demo]
+
+[Label:4101:title=Ideff vs. L]
+[Condition:1]
+[Loops
+: X=L(Start=g_lmin, stop=g_lmax,num=51)
+: P=W(g_wmin)
+: P1=Vgs(Vgg/2,Vgg)
+: P2=Vds(Vdd/2,Vdd)
+: P3=Vbs(0)
+: P4=T(tnom)]
+[Target
+: y0=Ids
+: Idhigh = CalPage(Vgs,Vds,Ids,"Ids","@vds~vdd/2","@vgs~vgg")
+: Idlow =CalPage(Vgs,Vds,Ids,"Ids","@vds~vdd","@vgs~vgg/2")
+: <font style="color:red">Ideff = (Idhigh+Idlow)/2</font>
+: y=Ideff
+]
+[Check: 01:Check Idhigh: CheckTrend2D(p,x,Idhigh,"times=1","incAtFirst=-1"): error: Trend is not right]
+[Check: 02:Check Idlow: CheckTrend2D(p,x,Idlow,"times=1","incAtFirst=-1"): error: Trend is not right]
+[Check: 03:Check Ideff: CheckTrend2D(p,x,y,"times=1","incAtFirst=-1"): error: Trend is not right]
+[Check: 04:Ideff|Idhigh|Idlow: <font style="color:purple">SaveAnyDData</font>(p,x,y,Idhigh,Idlow): error: TBD]
+
+</pre>
+Below is the Ideff output graph, by [Check: 03]:<br/>
+
+<img src="/static/mqarules/ideff/1.png" border="1px"/><br/><br/>
+
+And, we can even put Idhigh, Idlow and Ideff all on one graph, by [Check :04], as shown below:<br/>
+<img src="/static/mqarules/ideff/2.png" border="1px"/><br/><br/>
+
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

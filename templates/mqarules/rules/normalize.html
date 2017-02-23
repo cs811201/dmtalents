@@ -1,0 +1,89 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: Idsat Normalization
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Normalize Idsat by Idsat@Max(SA)</h2>
+<h3>MQA Rules</h3>
+<hr>
+Often, we wish to see the Idsat vs SA curve with Idsat normalized by one special Idsat where SA=Max(SA).
+<br/>This can be done by taking use of the FindY() function to find that special Idsat reference point.
+
+<br>
+<br>
+
+Normalization_Example.rule: <a href="/mqarules/normalize/rule/download" target="_blank">download</a>
+<pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 40:Title= Normalization Example]
+
+[Label: 4001:title= Idsat_W-normalized-by-max-SA vs. SA]
+[Condition:1]
+[Option:Synchro=SA_SB]
+[Loops
+: X=SA(Start=5E-7, Stop=2E-6, num=11)
+: P0=SB(Start=5E-7, Stop=2E-6, num=11)
+: P=W(g_wmin)
+: P1=Vgs(vgg)
+: P2=Vds(vdd)
+: P3=Vbs(0)
+: P4=T(tnom)
+: P5=L(g_lmin)
+]
+[Target
+: Ids2= <font style="color:red">RemoveX(Ids,"SB")</font>
+: Idsat_W = Ids2/W
+: Yref = <font style="color:blue">FindY(SA,Idsat_W,<font style="color:orange">"X=max"</font> )</font>
+: Ynom = Idsat_W/Yref
+: y=Ynom
+]
+[Check: 01:Check Trend: Save2DData (p,x,y,"@PlotInfo YLabel=Ynom"): error: Trend is not right]
+#[Check: 02:Check Trend: Save2DData (p,x,y, "@Synchro=SA_SB"): error: err] don't use this one after we RemoveX for SB.
+[Compare: 03:RMS of Idsat vs. L : CompPlot(p,x,y): error: TBD]
+[Corner:04:Check corner of Idsat vs. L : CompareTREND(x,y,"@TREND=1"): error: TBD]
+</pre>
+
+We can see that the normalization is done by :Ynom = Idsat_W/Yref, and the Yref is found by FindY() function.
+<br/>
+<img src="/static/mqarules/normalize/1.png" border="1px"/><br/>
+<br/>
+<br/>
+We've seen FindX() or FindY() function can take a value or an expression, it can also take "min" and "max" as input to get us the min or max value of X-axis variable,
+in this case, it's max SA.
+<br/><br/>
+As follows:
+<br/>
+FindX(X, Y, "Y=min|max|value|expression")
+<br/>
+FindY(X, Y, "X=min|max|value|expression")
+<br/>
+<br/>
+And, one more important step we are doing in this example rule, is we have used the <font style="color:red">RemoveX()</font>  function to remove the SB column data, otherwise the FindY() function won't work properly.
+<br/> As illustrated below:<br/>
+
+<img src="/static/mqarules/normalize/2.png" border="1px"/><br/>
+
+Only after we RemoveX() for the SB column, can we get the reference Yref correctly.<br/>
+More explanation of RemoveX() can be found in MQA user manual.
+
+<br/>
+<br/>
+One more thing, in MQA:<br/>
+FindX(X,Y,[options]) == CalCurve(X,Y, ”FindX” ,[options])<br/>
+FindY(X,Y,[options]) == CalCurve(X,Y, ”FindY” ,[options])
+
+<br/><br/>
+FindX/Y is the simplified version to call CalCurve(X,Y, "FindX/Y"), they are identical.
+
+
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

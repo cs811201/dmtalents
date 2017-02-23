@@ -1,0 +1,29 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 40:Title= Normalization Example]
+
+[Label: 4001:title= Idsat_W-normalized-by-max-SA vs. SA] 
+[Condition:1]
+[Option:Synchro=SA_SB]
+[Loops
+: X=SA(Start=5E-7, Stop=2E-6, num=11)
+: P0=SB(Start=5E-7, Stop=2E-6, num=11)
+: P=W(g_wmin)
+: P1=Vgs(vgg) 
+: P2=Vds(vdd) 
+: P3=Vbs(0)
+: P4=T(tnom)
+: P5=L(g_lmin)
+]
+[Target
+: Ids2= RemoveX(Ids,"SB")
+: Idsat_W  = Ids2/W
+: Yref = CalCurve(SA,Idsat_W,"FindY","X=max")
+: Ynom = Idsat_W/Yref
+: y=Ynom
+]
+[Check: 01:Check Trend: Save2DData (p,x,y,"@PlotInfo YLabel=Ynom"): error: Trend is not right]
+#[Check: 02:Check Trend: Save2DData (p,x,y, "@Synchro=SA_SB"): error: Trend is not right] don't use this one
+[Compare: 03:RMS of Idsat vs. L : CompPlot(p,x,y): error: TBD]
+[Corner:04:Check corner of Idsat vs. L : CompareTREND(x,y,"@TREND=1"): error: TBD]

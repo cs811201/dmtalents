@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mqarules/synchro/SynchroSA_SB.rule" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/synchro.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mqarules/ideff/Ideff.rule" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mqarules/normalize/Normalization_Example.rule" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/ideff.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/normalize.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules/toc.html" afterPath="$PROJECT_DIR$/templates/mqarules/toc.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="1375" column="50" lean-forward="true" selection-start-line="1375" selection-start-column="50" selection-end-line="1375" selection-end-column="50" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#6256#6257#0" expanded="false" />
@@ -38,41 +41,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faq_index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/faq_index.html">
+      <file leaf-file-name="ideff.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/ideff.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ideff.rule" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/mqarules/ideff/Ideff.rule">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faq_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/faq_list.html">
+      <file leaf-file-name="DefineIdeff.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DefineIdeff.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="69" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewerListFor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/viewerListFor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mqarules_index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -82,17 +79,17 @@
         <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synchro.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="synchro.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/synchro.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
@@ -105,21 +102,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vthcon_finfet.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/vthcon_finfet.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="55" column="73" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="73" />
+            <state relative-caret-position="340">
+              <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <file leaf-file-name="normalize.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/normalize.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="187">
+              <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vth_DepletedMode.rule" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/mqarules/sweepVthfromNegative/Vth_DepletedMode.rule">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vthcon_finfet.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/vthcon_finfet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -138,10 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>01_ModelParameter'</find>
-      <find>Ideff</find>
-      <find>script</find>
-      <find>12</find>
       <find>09</find>
       <find>13</find>
       <find>15</find>
@@ -165,9 +183,13 @@
       <find>}</find>
       <find>viewerListFor</find>
       <find>func</find>
-      <find>download</find>
       <find>ndex</find>
       <find>mqarules</find>
+      <find>synchro</find>
+      <find>download</find>
+      <find>blue</find>
+      <find>sync</find>
+      <find>ideff</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/static/mbpst</replace>
@@ -193,8 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineIdeff.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineVth.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineGmNearVth.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap3/SelectData.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap3/DefineTargetWithT25.html" />
@@ -236,22 +256,23 @@
         <option value="$PROJECT_DIR$/templates/mbpst/Chap5/GraphDataSource.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap5/Math.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap5/Model.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
         <option value="$PROJECT_DIR$/templates/viewerLitsFor.html" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/viewerListFor.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
-        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/templates/mqarules/rules/synchro.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/rules/normalize.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/rules/ideff.html" />
+        <option value="$PROJECT_DIR$/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1038" />
+    <option name="x" value="184" />
+    <option name="width" value="1736" />
+    <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -391,6 +412,72 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mqarules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sweepVthfromNegative" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mqarules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="normalize" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mqarules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dmtalents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -419,11 +506,11 @@
       <recent name="D:\projects\dmtalents\static\faq\mqa\maxWaitTime" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\dmtalents\static\mqarules\synchro" />
       <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
+      <recent name="D:\projects\dmtalents\static\mqarules\ideff" />
+      <recent name="D:\projects\dmtalents\static\mqarules\normalize" />
+      <recent name="D:\projects\dmtalents\static\mqarules\synchro" />
       <recent name="D:\projects\dmtalents\templates" />
-      <recent name="D:\projects\dmtalents\templates\mbpst\Chap5" />
-      <recent name="D:\projects\dmtalents\static\mbpst\scriptZip" />
     </key>
   </component>
   <component name="RunManager" selected="Python.__init__">
@@ -809,7 +896,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487643080602</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="1/24/2017">
+      <created>1487745783663</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1487745783663</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -822,15 +916,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1038" extended-state="0" />
+    <frame x="184" y="0" width="1736" height="1160" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17074469" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18904594" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3493014" sideWeight="0.5031056" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30838323" sideWeight="0.49689442" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20454545" sideWeight="0.49689442" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17964073" sideWeight="0.49689442" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33433133" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22177091" sideWeight="0.503992" order="2" side_tool="true" content_ui="tabs" />
@@ -881,48 +975,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/FinFETVthcon.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="100" lean-forward="false" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/RunOpt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="21" column="99" lean-forward="false" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/CallFuncFromAnotherFile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/ReadWriteFile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/HideExtraCol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="94" lean-forward="false" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/AccessSim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="103" lean-forward="false" selection-start-line="17" selection-start-column="103" selection-end-line="17" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DataSparseness.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1147,13 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="12" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1215,37 +1260,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/vthcon_finfet.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
-          <caret line="55" column="73" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="73" />
+          <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
+    <entry file="file://$PROJECT_DIR$/static/mqarules/normalize/Normalization_Example.rule">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#6256#6257#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/mqarules/sweepVthfromNegative/Vth_DepletedMode.rule">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/synchro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
@@ -1253,6 +1295,74 @@
             <element signature="n#style#0;n#font#3;n#pre#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#font#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/normalize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/mqarules/ideff/Ideff.rule">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mbpst/Chap3/DefineIdeff.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/ideff.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#pre#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="1375" column="50" lean-forward="true" selection-start-line="1375" selection-start-column="50" selection-end-line="1375" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#6256#6257#0" expanded="false" />
           </folding>
         </state>
       </provider>

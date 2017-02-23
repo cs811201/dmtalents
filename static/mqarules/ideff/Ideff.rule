@@ -1,0 +1,26 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 41:Title=Ideff demo]
+
+
+[Label:4101:title=Ideff vs. L]
+[Condition:1]
+[Loops
+: X=L(Start=g_lmin, stop=g_lmax,num=51)
+: P=W(g_wmin)
+: P1=Vgs(Vgg/2,Vgg) 
+: P2=Vds(Vdd/2,Vdd) 
+: P3=Vbs(0)
+: P4=T(tnom)]
+[Target
+: y0=Ids
+: Idhigh = CalPage(Vgs,Vds,Ids,"Ids","@vds~vdd/2","@vgs~vgg")
+: Idlow =CalPage(Vgs,Vds,Ids,"Ids","@vds~vdd","@vgs~vgg/2")
+: Ideff = (Idhigh+Idlow)/2
+: y=Ideff
+]
+[Check: 01:Check Idhigh: CheckTrend2D(p,x,Idhigh,"times=1","incAtFirst=-1"): error: Trend is not right]
+[Check: 02:Check Idlow: CheckTrend2D(p,x,Idlow,"times=1","incAtFirst=-1"): error: Trend is not right]
+[Check: 03:Check Ideff: CheckTrend2D(p,x,y,"times=1","incAtFirst=-1"): error: Trend is not right]
+[Check: 04:Ideff|Idhigh|Idlow: SaveAnyDData(p,x,y,Idhigh,Idlow): error: TBD]
