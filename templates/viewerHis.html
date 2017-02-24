@@ -11,10 +11,12 @@ View History
     <h3>View History for {{ uname }}</h3>
     <hr/>
     <table width="80%">
+        <!--#title 0, route 1, date 2, category 3-->
         {% for p in viewList%}
         <tr>
             <td width="50%">
                 <a href="{{p[1]}}" target="_blank"><font size="3">{{ p[0] }}</font></a></td>
+            <td>{{ p[3] }}</td>
             <td>{{ p[2] }}</td>
 
         </tr>

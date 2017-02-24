@@ -21,17 +21,27 @@ Dashboard
     <br/>
     <br/>
     <div style="height:530px">
-        <div style="float:left; width: 50%; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+        <div style="float:left; width: 70%; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
             <h3>Top 20 Views</h3>
             <hr/>
-            {% for p in postTop %}
-            <a href="{{p[0]}}" target="_blank"><font size="3">{{ p[1] }}</font></a> - {{p[2]}} -
-            {% if getPostIdFunc(p[0])>0 %}
-            <a href="/viewerListFor/{{getPostIdFunc(p[0])}}" target="_blank">Viewers</a>
-            {% endif %}
+            <table width="100%">
+                {% for p in postTop %}
+                <tr>
+                    <td width="50%">
 
-            <br/>
-            {% endfor %}
+                        <a href="{{p[0]}}" target="_blank"><font size="3">{{ p[1] }}</font></a></td>
+                    <td width="20%">{{p[3]}}</td>
+                    <td width="10%">{{p[2]}}</td>
+                    <td width="20%">
+                        {% if getPostIdFunc(p[0])>0 %}
+                        <a href="/viewerListFor/{{getPostIdFunc(p[0])}}" target="_blank">Viewers</a>
+                    </td>
+
+                    {% endif %}
+
+                </tr>
+                {% endfor %}
+            </table>
         </div>
         <div style="float:center;  overflow: auto">
             <h3>Recent 20 Searches</h3>
@@ -57,21 +67,23 @@ Dashboard
 
     <h3>Last 20 Views</h3>
     <hr/>
-    <table width="90%">
+    <table width="100%">
         <thead>
         <tr>
-            <th width="34%">Title</th>
-            <th width="18%">Date</th>
+            <th width="28%">Title</th>
+            <th width="10%">Category</th>
+            <th width="15%">Date</th>
             <th width="15%">User Name</th>
-            <th width="24%">Email</th>
-            <th width="15%">Company</th>
+            <th width="22%">Email</th>
+            <th width="20%">Company</th>
         </tr>
         </thead>
         {% for p in latestViews %}
-        <!--# route 0, date 1,title 2,userName 3, email 4, company 5-->
+        <!--# route 0, date 1,title 2,userName 3, email 4, company 5, category 6-->
         <tr>
 
             <td><a href="{{p[0]}}" target="_blank">{{ p[2] }}</a></td>
+            <td>{{p[6]}}</td>
             <td>{{p[1]}}</td>
             <td>{{p[3]}}</td>
             <td>{{p[4]}}</td>

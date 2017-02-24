@@ -168,23 +168,6 @@ def getRandomIntFrom1toGiven(top):
         return randint(1, top)
 
 
-def getCategory(txt):
-    if txt == 'mbpst':
-        return "MBP Script Tutorial"
-    elif txt == "mbpfaq":
-        return "MBP FAQ"
-    elif txt == "video":
-        return "Video Demos"
-    elif txt == "mqarules":
-        return "MQA Rules"
-    elif txt == "mqafaq":
-        return "MQA FAQ"
-    elif txt == "blog":
-        return "Blog"
-
-    return "Not Categorized."
-
-
 @app.route('/')
 def index():
     mbpPost = Post.query.filter((Post.category == 'mbpst')).all()
@@ -1178,6 +1161,46 @@ def getCompanybyId(user_id):
     return user.company
 
 
+def getPostCategoryById(pid):
+    post = Post.query.filter(Post.id == pid).first()
+    if type(post).__name__ == 'NoneType':
+        return ''
+    return post.category
+
+
+def getPostCategoryByRoute(route):
+    post = Post.query.filter(Post.route == route).first()
+    if type(post).__name__ == 'NoneType':
+        if route == '/mbpst':
+            return 'mbpst'
+        elif route == '/video':
+            return 'video'
+        elif route == '/mbpfaq':
+            return 'mbpfaq'
+        elif route == '/mqafaq':
+            return 'mqafaq'
+        else:
+            return ''
+    return post.category
+
+
+def getCategory(txt):
+    if txt == 'mbpst':
+        return "MBP Script Tutorial"
+    elif txt == "mbpfaq":
+        return "MBP FAQ"
+    elif txt == "video":
+        return "Video Demos"
+    elif txt == "mqarules":
+        return "MQA Rules"
+    elif txt == "mqafaq":
+        return "MQA FAQ"
+    elif txt == "blog":
+        return "Blog"
+
+    return ""
+
+
 #### dashboard  ####
 route_dashboard = '/dashboard01.46738.99846kkli58010_odugjfkadj!jf.11'
 
@@ -1221,7 +1244,10 @@ def dashboard():
         title = getPostTitleByRoute(ii[0])
         if title == '':
             continue
-        postTop.append((ii[0], getPostTitleByRoute(str(ii[0])), ii[1]))
+        if title.__len__() >= 35:
+            title = title[0:35] + '...'
+        # route, title, count, category
+        postTop.append((ii[0], title, ii[1], getCategory(getPostCategoryByRoute(ii[0]))))
         tmp += 1
         if tmp >= 20:
             break
@@ -1245,7 +1271,7 @@ def dashboard():
     searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(20).all()
     sList = []
     for item in searchList:
-        sList.append((item.search_string,str(item.date)[:-10]))
+        sList.append((item.search_string, str(item.date)[:-10]))
 
     # latestViews
     postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
@@ -1257,24 +1283,28 @@ def dashboard():
         uid = item.user_id
         route = item.route
         title = getPostTitleByRoute(route)
-        # route, date,title,userName, email, company
+        # route, date,title,userName, email, company, category
+        if title.__len__() > 30:
+            title = title[:30] + '...'
         latestViews.append(
-            (route, str(item.date)[:-10], title, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid)))
+            (route, str(item.date)[:-10], title, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid),
+             getPostCategoryByRoute(route)))
 
     postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
-    downloads=[]
+    downloads = []
     for item in postHis:
-        route=item.route
+        route = item.route
         uid = item.user_id
         if str(route).endswith('download'):
-            #route 0, date 1, user name 2, email 3, company 4
+            # route 0, date 1, user name 2, email 3, company 4
             downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid)))
 
     return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
                            alfna_ct=alfna_ct,
                            video_ct=video_ct,
                            user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis,
-                           searchList=sList, getPostIdFunc=getPostIdByRoute, latestViews=latestViews, downloads=downloads)
+                           searchList=sList, getPostIdFunc=getPostIdByRoute, latestViews=latestViews,
+                           downloads=downloads)
 
 
 route_recent_100_search = '/recent100SearchHis'
@@ -1349,11 +1379,12 @@ def userViewHistory(uid):
             title = getPostTitleByRoute(route)
             date = getPostViewTimeById(v.id)
             if title != '':
-                vl.append((title, route, str(date)[:-10]))
+                #title 1, route, 2, date 3, category 4
+                vl.append((title, route, str(date)[:-10], getPostCategoryByRoute(route)))
         searchHis = SearchHistory.query.filter(SearchHistory.user_id == uid).order_by(SearchHistory.date).all()
         sList = []
         for v in searchHis:
-            sList.append((v.search_string,str(v.date)[:-10]))
+            sList.append((v.search_string, str(v.date)[:-10]))
 
         return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList)
 
