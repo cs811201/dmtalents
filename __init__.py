@@ -49,7 +49,10 @@ mail = Mail(app)
 
 
 def recordPostHistory(rt):
-    id = current_user.id
+    id = -1  # anonymous, used for public
+    if hasattr(current_user, 'id'):
+        id = current_user.id
+
     if id == 3:  # 3 is Shuang Cai, no need to record myself. :)
         return
 
@@ -185,6 +188,16 @@ def index():
                            ruleCt=ruleCt, faqCt=faqCt)
 
 
+route_update_history = '/update_history'
+
+
+@app.route(route_update_history)
+def updateHis():
+    # record view history
+    recordPostHistory(route_update_history)
+    return render_template('update_history.html')
+
+
 #
 # # test send email
 # @app.route("/send_email")
@@ -300,13 +313,13 @@ def search():
 
 @app.route('/about')
 def about():
-    # recordPostHistory('/about')
+    recordPostHistory('/about')
     return render_template('about.html')
 
 
 @app.route('/disclaimer')
 def disclaimer():
-    # recordPostHistory('/disclaimer')
+    recordPostHistory('/disclaimer')
     return render_template('disclaimer.html')
 
 
@@ -897,6 +910,7 @@ def mqafaqRedefinedparams():
     recordPostHistory(route_mqafaq_redefinedparams)
     return render_template('/faq/mqa/redefinedparams.html')
 
+
 #### MQA Rules
 @app.route('/mqarules/ft')
 @login_required
@@ -970,6 +984,7 @@ route_mqarules_mis_hsp_mos = '/mqarules/misHspMos'
 def mqarulesmismatch_hsp_mos():
     recordPostHistory(route_mqarules_mis_hsp_mos)
     return render_template('/mqarules/rules/mismatch_hsp_mos.html')
+
 
 route_mqarules_mis_spe_mos = '/mqarules/misSpeMos'
 
@@ -1175,16 +1190,22 @@ def getPostTitleByRoute(myroute):
 
 
 def getUserNameById(user_id):
+    if user_id == -1:
+        return 'public'
     user = User.query.filter(User.id == user_id).first()
     return user.username
 
 
 def getEmailById(user_id):
+    if user_id == -1:
+        return ''
     user = User.query.filter(User.id == user_id).first()
     return user.email
 
 
 def getCompanybyId(user_id):
+    if user_id == -1:
+        return 'public'
     user = User.query.filter(User.id == user_id).first()
     return user.company
 
@@ -1256,7 +1277,7 @@ def dashboard():
     searches = SearchHistory.query.all()
     search_ct = searches.__len__()
 
-    postHis = PostHistory.query.order_by(desc(PostHistory.route)).all()
+    postHis = PostHistory.query.order_by(desc(PostHistory.route)).filter(PostHistory.user_id != -1).all()
 
     ### for for post his rate
     routes = []
@@ -1407,7 +1428,7 @@ def userViewHistory(uid):
             title = getPostTitleByRoute(route)
             date = getPostViewTimeById(v.id)
             if title != '':
-                #title 1, route, 2, date 3, category 4
+                # title 1, route, 2, date 3, category 4
                 vl.append((title, route, str(date)[:-10], getPostCategoryByRoute(route)))
         searchHis = SearchHistory.query.filter(SearchHistory.user_id == uid).order_by(SearchHistory.date).all()
         sList = []
@@ -1495,7 +1516,6 @@ def download_ideff_rule():
                      attachment_filename='Ideff.rule', mimetype='text/rule', as_attachment=True)
 
 
-
 route_download_mismatch_hsp_mos_rule = '/mqarules/mismatch_hsp_mos/download'
 
 
@@ -1516,7 +1536,6 @@ def download_Mismatch_spe_mos_rule():
     recordPostHistory(route_download_mismatch_spe_mos_rule)
     return send_file('static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule',
                      attachment_filename='mismatch_spe_mos.rule', mimetype='text/rule', as_attachment=True)
-
 
 
 #### Script Zip files downloads
