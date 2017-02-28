@@ -1,0 +1,58 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>'redefinedparams' Error in Spectre Simulation</h2>
+<hr>
+
+If we ran into the following error during Spectre simulation, that complains about redefined parameters, here is the
+workaround without trying to find and remove the redefined parameters.<br/><br/>
+
+When we see the following error message in the .lis file after running Spectre simultion:
+<pre>
+Error found by spectre during circuit read-in.
+    ERROR (SFE-59): "qaac72845.sp" 6: Parameter <font style="color:red">'some_param_name'</font>  was previously defined.
+    Please try to add `+spice' in command line or
+        option <font style="color:blue">'redefinedparams'</font>  in netlist to avoid these type of errors.
+
+</pre>
+In the above example, these error messages are found from a file called "qaac72845.lis", that is the simulation output file related to "qaac72845.sp", all these netlist input/outout files
+are saved to every project's folder.
+<br/><br/>
+
+And, by looking through Spectre's user manual, we found the following explanation about <font style="color:blue">'redefinedparams'</font>.
+<br/>
+
+<pre>
+redefinedparams=error -- Error message which halts the simulation (default)
+redefinedparams=warning -- Warning message only
+redefinedparams=ignore -- Spectre silently supports it.
+
+</pre>
+
+Looks like <font
+        style="color:blue">redefinedparams</font> has 3 options, and defaults to error, that’s why we see these errors
+that prevent us from running simulation successfully.
+<br/><br/>
+
+So, the workaround is to declare it to be ignored, by using the following option statement in the netlist:
+<pre>
+myOptions options redefinedparams=ignore
+
+</pre>
+And, in order to insert such an option statement in MQA's auto-generated netlist file, we just need to do the following,
+as shown below:<br/>
+<img src="/static/faq/mqa/redefinedparams/1.png" border="1px"><br/><br/>
+
+The text inserted in these boxes on the GUI when we set every model, will be literally inserted to the netlist later on. And, we have flexibility between:
+"inserted after model" and "inserted before model", they determine whether to inserted before/after the ".include" statement for the main model path.
+
+As shown below:
+<br/><br/>
+
+<img src="/static/faq/mqa/redefinedparams/2.png" border="1px"><br/><br/>
+
+The text here can really be anything besides Simulation options, since they are literally inserted.
+
+
+<br/><br/><br/><br/>
+{% endblock %}

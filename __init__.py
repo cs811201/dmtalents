@@ -888,6 +888,15 @@ def mqafaqcornerOnly():
     return render_template('/faq/mqa/cornerOnly.html')
 
 
+route_mqafaq_redefinedparams = '/mqafaq/redefinedparams'
+
+
+@app.route(route_mqafaq_redefinedparams)
+@login_required
+def mqafaqRedefinedparams():
+    recordPostHistory(route_mqafaq_redefinedparams)
+    return render_template('/faq/mqa/redefinedparams.html')
+
 #### MQA Rules
 @app.route('/mqarules/ft')
 @login_required
@@ -951,6 +960,25 @@ route_mqarules_ideff = '/mqarules/ideff'
 def mqarulesIdeff():
     recordPostHistory(route_mqarules_ideff)
     return render_template('/mqarules/rules/ideff.html')
+
+
+route_mqarules_mis_hsp_mos = '/mqarules/misHspMos'
+
+
+@app.route(route_mqarules_mis_hsp_mos)
+@login_required
+def mqarulesmismatch_hsp_mos():
+    recordPostHistory(route_mqarules_mis_hsp_mos)
+    return render_template('/mqarules/rules/mismatch_hsp_mos.html')
+
+route_mqarules_mis_spe_mos = '/mqarules/misSpeMos'
+
+
+@app.route(route_mqarules_mis_spe_mos)
+@login_required
+def mqarulesmismatch_spe_mos():
+    recordPostHistory(route_mqarules_mis_spe_mos)
+    return render_template('/mqarules/rules/mismatch_spe_mos.html')
 
 
 #### Video Demos
@@ -1465,6 +1493,30 @@ def download_ideff_rule():
     recordPostHistory(route_download_ideff_rule)
     return send_file('static/mqarules/ideff/Ideff.rule',
                      attachment_filename='Ideff.rule', mimetype='text/rule', as_attachment=True)
+
+
+
+route_download_mismatch_hsp_mos_rule = '/mqarules/mismatch_hsp_mos/download'
+
+
+@app.route(route_download_mismatch_hsp_mos_rule)
+@login_required
+def download_Mismatch_hsp_mos_rule():
+    recordPostHistory(route_download_mismatch_hsp_mos_rule)
+    return send_file('static/mqarules/mismatch_hsp_mos/Mismatch_hsp_mos.rule',
+                     attachment_filename='Mismatch_hsp_mos.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_mismatch_spe_mos_rule = '/mqarules/mismatch_spe_mos/download'
+
+
+@app.route(route_download_mismatch_spe_mos_rule)
+@login_required
+def download_Mismatch_spe_mos_rule():
+    recordPostHistory(route_download_mismatch_spe_mos_rule)
+    return send_file('static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule',
+                     attachment_filename='mismatch_spe_mos.rule', mimetype='text/rule', as_attachment=True)
+
 
 
 #### Script Zip files downloads
