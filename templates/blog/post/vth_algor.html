@@ -1,0 +1,112 @@
+{% extends "layouts/base.html" %}
+{% block title%}
+Vth Algorithm
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <h3>How to Extract Threshold Voltage of MOSFETs</h3>
+    <h5>by MA Long on Nov 17, 2016 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2016/11/18/device-modeling-101-how-to-extract-threshold-voltage-of-mosfets"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.mbp.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    Treshold voltage (Vth) is one of the most important electrical parameters in MOSFET modeling. There are many
+    existing
+    methods for Vth extraction. Most of these procedures are based on static drain current versus gate voltage
+    characteristics
+    of single transistor. The most popular methods used in industry are:
+    <ul>
+        <li>Constant Current (CC) method</li>
+        <li>Extrapolation in Linear Region (ELR) method.</li>
+    </ul>
+    The CC method defines Vth as the gate voltage (Vg) required to achieve a chosen drain current (Id) in the device's
+    linear region of operation. Usually drain voltage (Vd) is less than 100mV to bias transistor at linear region and
+    both source and body nodes are connected to ground. Id is determined by (Wm/Lm) x Icon, where Wm and Lm are the mask
+    channel width and length respectively, Icon is the arbitrary value assigned by users. Typical value of Icon is 1e-7.
+    Icon may be different for different process nodes. CC method is widely adopted because of its simplicity. Drawback
+    of CC method is that extracted Vth strongly depends on Icon. The procedure of CC method is shown as Figure 1.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_algor/pastedImage_1.png" alt=""><br/>
+        Figure 1: Procedure of Constant Current Method
+    </div>
+    <br/>
+    The ELR method evaluates Vth by finding the intercept at Vg axis of the linear extrapolation of “Id vs. Vg“ curve at
+    the point of maximum trans-conductance (gm). The value of Vth is calculated by subtracting Vd/2 to Vg intercept
+    point to minimize the effect of different value of Vd. The bias condition is the same with the CC method. The
+    procedure of ELR method is shown as Figure 2.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_algor/1.png" alt=""><br/>
+        Figure 2: Procedure of Extrapolation in Linear Region Method
+    </div>
+    <br/><br/>
+    In Keysight’s MBP, Model Builder Program, both CC and ELR methods are implemented in built-in libraries and can be
+    easily used in IMV (InterMediate Variable) page as shown in Figure 3.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_algor/pastedImage_2.png" alt=""><br/>
+        Figure 3: Vth vs. Length in MBP
+    </div>
+    <br/>
+    For the CC method, MBP also provides different algorithms for you to choose directly:
+    <br/>
+    <br/><br/>
+    <div align="left">
+        <table width="80%" border="1">
+            <thead align="center">
+            <td width="40%"> Algorithm Class in MBP</td>
+            <td width="60%"> Vth Calculation Method</td>
+            </thead>
+            <tr>
+                <td>&nbsp;VTH_CON (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_3.png" alt=""><br/></td>
+            </tr>
+            <tr>
+                <td> &nbsp;VTH_CON_LogId (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_4.png" alt=""><br/></td>
+            </tr>
+            <tr>
+                <td>&nbsp; VTH_CONW (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_5.png" alt=""><br/></td>
+            </tr>
+            <tr>
+                <td> &nbsp;VTH_CONW_LogId (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_6.png" alt=""><br/></td>
+            </tr>
+            <tr>
+                <td>&nbsp; VTH_CON_ABS (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_7.png" alt=""><br/></td>
+            </tr>
+            <tr>
+                <td>&nbsp; VTH_CON_XWXL (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_8.png" alt=""><br/></td>
+            </tr>
+            <tr>
+                <td> &nbsp;VTH_CON_LogId_XWXL (x, y, icon)</td>
+                <td><img src="/static/blog/vth_algor/pastedImage_9.png" alt=""><br/></td>
+            </tr>
+        </table>
+    </div>
+    <br/><br/>
+    <i>
+        References:<br/>
+        [1] A. Ortiz-Conde et al., “A review of recent MOSFET threshold voltage extraction methods,” Solid-State
+        Electron.,
+        vol. 47, no. 4, pp. 677–683, 2003.
+    </i>
+
+    <br/><br/>
+    Interested in Model Builder Program (MBP) Software? - Click <a href="http://www.keysight.com/find/mytrial.mbp.blg
+" target="_blank">here to apply for a FREE 30-Day Evaluation</a>.
+
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

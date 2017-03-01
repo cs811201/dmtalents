@@ -1,0 +1,181 @@
+{% extends "layouts/base.html" %}
+{% block title%}
+Vth Near Gm
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <h3>Transconductance Modeling for Low-Power Design</h3>
+    <h5>By Raj Sodhi on Jan 18, 2017 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/01/18/transconductance-modeling-for-low-power-design"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.mbp.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    Egineers are constantly being challenged to work at lower supply voltages that are now on par with the threshold
+    voltage of the device itself. For design successes in microprocessors, transceivers and mobile devices, it becomes
+    imperative to accurately model CMOS transconductance (Gm) and threshold voltage (Vth). In our December 2016
+    newsletter, we described different ways to define the Vth of a transistor. Today, we will explain how to extract Gm
+    near Vth using Keysight’s Model Builder Program (MBP) in 3 simple steps.
+    <ul>
+        <li>Access your previously calculated Vth, and define your target Vgs relative to Vth.</li>
+        <li>Look up or interpolate the derivative of Id with respect to Vgs at your target Vgs</li>
+        <li>Expand your analysis of Gm to observe how it scales with respect to device width and length.</li>
+    </ul>
+    <br/>
+    Transistor transconductance, Gm, is defined as the derivative of output current with respect to input voltage:<br/>
+    <ul>
+        <em>Gm = d(Iout)/d(Vin) given a fixed Vds and Vbs (50 mV and 0 V, for example) </em>
+    </ul>
+
+    This has special significance in CMOS modeling, because almost all the amplifier gain is a function of
+    transconductance of a MOSFET. Hence it is one of the most important measures of a device.
+    <br/><br/>
+    On a single device, we control Vgs, Vds and Vbs and measure current Ids or Id.
+
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pastedImage_1.png" alt="">
+
+    </div>
+    <br/>
+    An IV graph (Ids vs. Vgs) of a transistor is shown below at Vds = 50 mV and at a range of Vbs.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/ids_vgs_10_10.png" alt="">
+
+    </div>
+    <br/><br/>
+    Let’s go through each step described above.
+    <br/><br/>
+    <ins><em>Access your previously calculated Vth, and define your target Vgs relative to Vth<br/></em></ins>
+    <br/>
+    InterMediate Variables (IMV), as the name implies, are bridging variables between the raw data and the final device
+    model parameters. We may look to see how Vth and Gm evolve over temperature or across device geometry, and then
+    capture these behaviors in our model. As shown below, Vth and Gm are included in BSIM4 default IMV settings.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pastedImage_3.png" alt="">
+
+    </div>
+    <br/><br/>
+    Since small signal characteristics like Gm depend on device operating point, it becomes helpful to choose an
+    operating point. Circuit designers may look at Gm at a point just above the threshold voltage.
+    <ul>Vgs = Vth + deltaVg</ul>
+    Let’s define deltaVg as our parameter of interest, say 0.1V.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/1.png" alt="">
+
+    </div>
+    <br/><br/>
+    Because we are going to use a variable called "deltaVg", we need to define it in a table of intermediate variable
+    constants called <em>“imv_const.”</em>
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pastedImage_5.png" alt="">
+
+    </div>
+    <br/><br/>
+    Next, we’ll create a new intermediate variable called “GmNearVth.”
+    Run the command New -> IMV.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pastedImage_6.png" alt="">
+
+    </div>
+    <br/><br/>
+    Edit the IMV definition to reflect the following:
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pastedImage_7.png" alt="">
+
+    </div>
+    <br/><br/>
+    <div align="left">
+        <table width="80%">
+            <tr>
+                <td width="30%">Page Name:</td>
+                <td width="70%">
+                    imv.imv.gm, input data, because we eventually want to get a Gm value.
+                </td>
+
+
+            </tr>
+            <tr>
+                <td>Restrictions:</td>
+                <td>device,vbs,vds</td>
+            </tr>
+            <tr>
+                <td>Algorithm Class:</td>
+                <td>acc/GetValueAtPoint means simply look up the Y value at a chosen X.</td>
+            </tr>
+            <tr>
+                <td>Attached Targets:</td>
+                <td>Vth, this is how we pass in another IMV Target.</td>
+            </tr>
+            <tr>
+                <td>Algorithm Parameters:</td>
+                <td>gm,vgs,vth+deltaVg, the order must be Y, X, X_Value_Lookup, and expressions are supported here for
+                    best
+                    usability.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br/><br/>
+    <ins><em>Look up or interpolate the derivative of Id with respect to Vgs at your target Vgs</em></ins>
+    <br/>
+    After calculating the first derivative, we present Gm, as shown below.<br/><br/>
+
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pic+for+Gm+with+Vgs+marker.png" width="500px" alt="">
+
+    </div>
+    <br/><br/>
+    This Gm data is interpolated at our chosen Vgs, slightly above Vth.<br/><br/>
+
+    <ins><em>Expand analysis of Gm to observe scaling with respect to device width and length</em></ins>
+    <br/>
+    Next, we can see how these IMV’s scale with respect to device geometry. In MBP, it’s easy to create plots such as
+    GmNearVth_L and GmNearVth_W, etc.
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/pastedImage_13.png" alt="">
+
+    </div>
+    <br/><br/>
+    After saving your work, you may return to the MBP main window to refresh the IMV graphs. We now have
+    transconductance plots ready for model extraction and optimization!
+    <br/><br/>
+    <div align="left">
+        <img src="/static/blog/vth_near_gm/GmNearVth_Plots.png" alt="">
+
+    </div>
+    <br/><br/>
+
+    Using a similar approach, we may define other figures of merit to complete the modeling near Vth, for example:
+    <ul>
+        <li>Ids near Vth</li>
+        <li>Gds near Vth</li>
+        <li>Rout near Vth</li>
+    </ul>
+    Furthermore, Vth can even be any other IMV or lookup value.
+
+    We are excited by the power and flexibility of the Model Builder Program and hope you see the amazing potential that
+    we see daily. To not only enable the next generation low-power circuit design, but also expand your group’s modeling
+    capability, we look forward to helping you achieve your modeling goals.<br/>
+    <br/>
+    For more information, please feel free to contact eesof_support@keysight.com
+    <br/> <br/>
+    Interested in Model Builder Program (MBP) Software? - Click <a href="http://www.keysight.com/find/mytrial.mbp.blg
+" target="_blank">here to apply for a FREE 30-Day Evaluation</a>.
+
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

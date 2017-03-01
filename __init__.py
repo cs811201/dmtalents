@@ -184,7 +184,7 @@ def index():
     faqPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mbpfaq')).all()
     faqCt = faqPost.__len__()
 
-    return render_template('index.html', num=getRandomIntFrom1toGiven(9), mbpstCt=mbpstCt, videoCt=videoCt,
+    return render_template('index.html', num=getRandomIntFrom1toGiven(12), mbpstCt=mbpstCt, videoCt=videoCt,
                            ruleCt=ruleCt, faqCt=faqCt)
 
 
@@ -260,13 +260,30 @@ def mqafaq():
     return render_template('faq/mqa/mqafaqlist.html', slist=results, func=getCategory)
 
 
+# open blog to public
 @app.route('/blog')
-@login_required
 def blog():
     recordPostHistory('/blog')
     results = Post.query.filter(Post.category == 'blog').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('blog/blog_index.html', slist=results, func=getCategory)
 
+
+route_blog_vth_algor='/blog/vth_algor'
+@app.route(route_blog_vth_algor)
+def blog_vth_algor():
+    recordPostHistory(route_blog_vth_algor)
+    return render_template('blog/post/vth_algor.html')
+
+route_blog_vth_near_gm='/blog/vth_near_gm'
+@app.route(route_blog_vth_near_gm)
+def blog_vth_near_gm():
+    recordPostHistory(route_blog_vth_near_gm)
+    return render_template('blog/post/vth_near_gm.html')
+
+
+
+
+# MQA rules
 
 @app.route('/mqarules')
 @login_required

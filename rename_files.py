@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\Personal\ESV\_Friends\Wubo\Mu Ren Ji\newp'
+directory = r'D:\projects\dmtalents\static\blog'
 
 
 def renameIt(dir):
@@ -21,6 +21,8 @@ def renameIt(dir):
 
                 newpath = dir + '/' + newF
                 os.rename(path, newpath)
+            else:
+                continue
 
 
 renameIt(directory)

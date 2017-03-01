@@ -6,35 +6,57 @@ Blog
 
 
 {% block content %}
-<br/><br/>
+
+
 <div class="container">
 
-    {% if slist.__len__()>0 %}
+    <div>
+        <a href="/blog/vth_near_gm">
 
-    <div style="float:center; height:1000px; overflow:auto">
+            <div>
+                <div>
+                    <h4>Transconductance Modeling for Low-Power Design</h4>
+                    <h5>By Raj Sodhi on Jan 18, 2017</h5>
+                </div>
+            </div>
+            <br/>
+            <div>
+                <img src="static/blog/vth_near_gm/1.png" alt="">
+            </div>
 
-        {% for item in slist:%}
-        <h4><a href="{{item.route}}">{{item.title}}</a></h4>
-        <h5><u>Keywords</u>: {{item.abs}}</h5>
-        <h5><u>Category</u>: {{ func(item.category) }}</h5>
-        {% if item.content.__len__()>110 %}
-        {{item.content[:100]}}...
-        {% else %}
-        {{item.content}}
-        {% endif %}
-        <br/><br/><br/>
-        {% endfor %}
-        {% else %}
-        <h3>No posts yet!</I></h3>
-        <br/><br/><br/>
-    {% endif %}
-
+        </a>
     </div>
-</div>
-<br>
-<br>
-<br>
-<br>
+    <br/>
+    <hr/>
 
+    <div>
+        <a href="/blog/vth_algor">
+
+            <div>
+                <div>
+                    <h4>How to Extract Threshold Voltage of MOSFETs</h4>
+                    <h5>By MA Long on Nov 17, 2016</h5>
+
+                </div>
+
+            </div>
+            <br/>
+            <div>
+                <img src="static/blog/vth_algor/1.png" alt="">
+            </div>
+
+        </a>
+    </div>
+
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
 
 {% endblock %}
