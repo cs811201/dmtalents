@@ -1,0 +1,78 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+Ft Fmax
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>What are Ft and Fmax of a transistor? </h3>
+    <h5>by Jason Chen Dec 18, 2016 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2016/12/19/device-modeling-101-what-are-ft-and-fmax"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    <img src="/static/blog/ftfmax/ft.png"/> and <img src="/static/blog/ftfmax/fmax.png"/> are indexes used for RF
+    transistors to benchmark high frequency performance. <img src="/static/blog/ftfmax/ft.png"/> is the frequency at
+    which current gain equals unity and output is AC shorted. <img src="/static/blog/ftfmax/ft.png"/> is also known as
+    cut-off frequency. <img src="/static/blog/ftfmax/fmax.png"/> is the
+    frequency at which maximum unilateral power gain equals unity. <img src="/static/blog/ftfmax/fmax.png"/> is also
+    known as maximum frequency of
+    oscillation. “Unilateral” means the 2-port network is one directional, i.e. S12 = 0. Both parameters can be measured
+    and derived using network analyzer and S-parameters. The conversion formula from S parameters to Hybrid parameters
+    and Y parameters can be found in Reference [1].
+    <br/><br/>
+    <img src="/static/blog/ftfmax/2.png" alt=""><br/>
+    <br/><br/>
+    <img src="/static/blog/ftfmax/1.png" alt=""><br/>
+    <i>FIGURE 1: FT AND FMAX OF A TRANSISTOR</i>
+    <br/><br/>
+
+    Figure 1 shows the plot of current gain and unilateral power gain of a MOSFET transistor. <img
+        src="/static/blog/ftfmax/fmax.png"/> is higher than <img src="/static/blog/ftfmax/ft.png"/>
+    due to ideally matched input and output network. The theoretical equations of <img
+        src="/static/blog/ftfmax/ft.png"/> and <img src="/static/blog/ftfmax/fmax.png"/> can be derived from
+    small signal equivalent circuit. The equivalent circuit of MOSFET in common source configuration is shown as Figure
+    2. Because <img src="/static/blog/ftfmax/ft.png"/> is the current gain at output AC shorted, Cload and Rload are
+    eliminated and <img src="/static/blog/ftfmax/ft.png"/> can be expressed as
+    g_m⁄((2πC_in ) ). From time domain aspect of view, (C_in⁄g_m ) is also known as electrical transit time of a
+    transistor. This is an insightful equation for designing RF transistors. To maximize <img
+        src="/static/blog/ftfmax/ft.png"/>, gm should be maximized
+    while minimizing Cin.
+    <br/><br/>
+    <img src="/static/blog/ftfmax/3.png" alt=""><br/>
+    <i>FIGURE 2: SIMPLIFIED AC EQUIVALENT CIRCUIT OF COMMON-SOURCE MOSFET</i>
+    <br/><br/>
+    <img src="/static/blog/ftfmax/fmax.png"/> can be expressed as <img src="/static/blog/ftfmax/e1.png" align="bottom"/>
+    [1][2]. The detail derivation steps can be found in Reference [2]. To
+    maximize <img src="/static/blog/ftfmax/fmax.png"/>, Ri should be minimized while maximizing <img
+        src="/static/blog/ftfmax/ft.png"/> and Rload.
+    <br/><br/>
+    Kesyight IC-CAP is a powerful device measurement and modeling platform. In IC-CAP, users can build customized
+    procedures for measurement, de-embedding and extraction procedures. Figure 3 shows <img
+        src="/static/blog/ftfmax/ft.png"/> and <img src="/static/blog/ftfmax/fmax.png"/> plots using
+    Keysight HBT modeling kit.
+    <br/><br/>
+    <img src="/static/blog/ftfmax/4.png" alt=""><br/>
+    <i>FIGURE 3: FT & FMAX PLOTS IN IC-CAP</i>
+    <br/><br/>
+    <i>
+        References:<br/><br/>
+        [1] G. Gonzalez, “Microwave Transistor Amplifiers Analysis and Design,” 2nd Edition, Prentice-Hall, 1996.<br/>
+        [2] A. M. Niknejad, “Two-Port Power Gain,” Lecture Note of Advanced ICs for Communications, Univ. of California
+        Berkeley.<br/>
+        [3] M. S. Gupta, “Power Gain in Feedback Amplifiers, a Classic Revisited,” IEEE Trans. On Microwave Theory and
+        Techniques, Vol. 40, No. 5, May 1992.
+    </i>
+    <br/><br/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

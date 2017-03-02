@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\blog'
+directory = r'D:\projects\dmtalents\static\blog\ftfmax'
 
 
 def renameIt(dir):
@@ -11,7 +11,7 @@ def renameIt(dir):
         if os.path.isdir(path):
             renameIt(path)
         elif os.path.isfile(path):
-            if f.index(r'-min') > 0:
+            if f.find(r'-min') > 0:
                 print(f)
                 idx = f.index(r'-min')
                 if f.endswith('jpg'):

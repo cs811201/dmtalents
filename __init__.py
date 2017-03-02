@@ -58,16 +58,19 @@ def recordPostHistory(rt):
 
     now = datetime.datetime.now()
     ph = PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
-    flag = False
+    flag = False  # True is not to record
     if ph.__len__() > 0:
         for p in ph:
             # date = datetime.datetime.strptime(p.date, "%Y-%m-%d %H:%M:%S.%f");
             diff = now - p.date
             diffmin = diff / datetime.timedelta(minutes=1)
             # print('diffmin', diffmin)
-            if diffmin < 10:  # 10 minutes
+            if diffmin < 2:  # 10 minutes
                 flag = True
                 break
+    if id == -1:
+        flag = False # record all public views.
+
     if not flag:  # record only when the time is longer than 10 minutes.
         posthis = PostHistory(user_id=id, route=rt, date=now)
         db.session.add(posthis)
@@ -268,19 +271,36 @@ def blog():
     return render_template('blog/blog_index.html', slist=results, func=getCategory)
 
 
-route_blog_vth_algor='/blog/vth_algor'
+route_blog_vth_algor = '/blog/vth_algor'
+
+
 @app.route(route_blog_vth_algor)
 def blog_vth_algor():
     recordPostHistory(route_blog_vth_algor)
     return render_template('blog/post/vth_algor.html')
 
-route_blog_vth_near_gm='/blog/vth_near_gm'
+
+route_blog_vth_near_gm = '/blog/vth_near_gm'
+
+
 @app.route(route_blog_vth_near_gm)
 def blog_vth_near_gm():
     recordPostHistory(route_blog_vth_near_gm)
     return render_template('blog/post/vth_near_gm.html')
 
 
+route_blog_why_dm_servo = '/blog/why_dm_services'
+@app.route(route_blog_why_dm_servo)
+def blog_why_dm_servo():
+    recordPostHistory(route_blog_why_dm_servo)
+    return render_template('blog/post/why_dm_services.html')
+
+
+route_blog_ftfmax = '/blog/ftfmax'
+@app.route(route_blog_ftfmax)
+def blog_ftfmax():
+    recordPostHistory(route_blog_ftfmax)
+    return render_template('blog/post/ftfmax.html')
 
 
 # MQA rules
