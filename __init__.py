@@ -6,12 +6,14 @@ from collections import Counter
 from random import randint
 
 import flask_whooshalchemy as wa
+import pygal
 from flask import Flask
 from flask import render_template, url_for, request, redirect, send_file
 from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
 from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
+from pygal.style import Style
 from sqlalchemy import desc
 
 app = Flask(__name__)
@@ -69,7 +71,7 @@ def recordPostHistory(rt):
                 flag = True
                 break
     if id == -1:
-        flag = False # record all public views.
+        flag = False  # record all public views.
 
     if not flag:  # record only when the time is longer than 10 minutes.
         posthis = PostHistory(user_id=id, route=rt, date=now)
@@ -290,6 +292,8 @@ def blog_vth_near_gm():
 
 
 route_blog_why_dm_servo = '/blog/why_dm_services'
+
+
 @app.route(route_blog_why_dm_servo)
 def blog_why_dm_servo():
     recordPostHistory(route_blog_why_dm_servo)
@@ -297,6 +301,8 @@ def blog_why_dm_servo():
 
 
 route_blog_ftfmax = '/blog/ftfmax'
+
+
 @app.route(route_blog_ftfmax)
 def blog_ftfmax():
     recordPostHistory(route_blog_ftfmax)
@@ -1298,7 +1304,12 @@ def dashboard():
     # recordPostHistory(route_dashboard)
     # PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
     iccapPost = Post.query.filter(Post.category == 'iccap').all()
-    iccap_ct = iccapPost.__len__()
+    iccap_ct = iccapPost.__len__() + 1
+
+    service_ct = 1  # why DM services
+    blogPost = Post.query.filter(Post.category == 'blog').all()
+    blog_ct = blogPost.__len__()
+
     mbpPost = Post.query.filter((Post.category == 'mbpst') | (Post.category == 'mbpfaq')).all()
     mbp_ct = mbpPost.__len__()
     mqaPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mqarules')).all()
@@ -1309,6 +1320,7 @@ def dashboard():
     alfna_ct = alfnaPost.__len__()
     videoPost = Post.query.filter((Post.category == 'video')).all()
     video_ct = videoPost.__len__()
+
     users = User.query.all()
     user_ct = users.__len__() - 3  # except internal testing account
     searches = SearchHistory.query.all()
@@ -1387,10 +1399,66 @@ def dashboard():
 
     return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
                            alfna_ct=alfna_ct,
-                           video_ct=video_ct,
+                           video_ct=video_ct, blog_ct=blog_ct, service_ct=service_ct,
                            user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis,
                            searchList=sList, getPostIdFunc=getPostIdByRoute, latestViews=latestViews,
                            downloads=downloads)
+
+
+route_dashboard_chart_view = '/chart_view_98adsfhrhwgijj!!kjfskvgahvg877awefjkjdfkagh0248_df83j'
+
+
+@app.route(route_dashboard_chart_view)
+@roles_required('sunshine')
+@login_required
+def dashboard_chart_view():
+    iccapPost = Post.query.filter(Post.category == 'iccap').all()
+    iccap_ct = iccapPost.__len__() + 1
+
+    service_ct = 1  # why DM services
+    blogPost = Post.query.filter(Post.category == 'blog').all()
+    blog_ct = blogPost.__len__()
+
+    mbpPost = Post.query.filter((Post.category == 'mbpst') | (Post.category == 'mbpfaq')).all()
+    mbp_ct = mbpPost.__len__()
+    mqaPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mqarules')).all()
+    mqa_ct = mqaPost.__len__()
+    wpePost = Post.query.filter((Post.category == 'wpe')).all()
+    wpe_ct = wpePost.__len__()
+    alfnaPost = Post.query.filter((Post.category == 'alfna')).all()
+    alfna_ct = alfnaPost.__len__()
+    videoPost = Post.query.filter((Post.category == 'video')).all()
+    video_ct = videoPost.__len__()
+
+    custom_style = Style(
+        label_font_size=25,
+        value_font_size=25,
+        title_font_size=30
+
+    )
+
+    contents_chart = pygal.Bar(style=custom_style, print_values=True)
+
+    contents_chart.title = 'Contents'
+    contents_chart.x_labels = ('MBP', 'MQA', 'ICCAP', 'Video', 'Blog', 'WPE', 'ALFNA', 'Service')
+    # contents_chart.add('MBP', mbp_ct)
+    # contents_chart.add('MQA', mqa_ct)
+    # contents_chart.add('ICCAP', iccap_ct)
+    # contents_chart.add('Video', video_ct)
+    # contents_chart.add('Blog', blog_ct)
+    # contents_chart.add('WPE', wpe_ct)
+    # contents_chart.add('ALFNA', alfna_ct)
+    # contents_chart.add('Service', service_ct)
+    contents_chart.add("", [mbp_ct, mqa_ct, iccap_ct, video_ct, blog_ct, wpe_ct, alfna_ct, service_ct])
+
+    contents_graph = contents_chart.render_data_uri()
+
+    users = User.query.all()
+    user_ct = users.__len__() - 3  # except internal testing account
+    searches = SearchHistory.query.all()
+    search_ct = searches.__len__()
+
+    return render_template('/dashboard_chart_view.html', contents_graph=contents_graph)
 
 
 route_recent_100_search = '/recent100SearchHis'

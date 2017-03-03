@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Dashboard - Charts
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>Dashboard Charts View</h3>
+    <hr/>
+    <div>
+        <embed type="image/svg+xml" src={{contents_graph|safe}} style="max-width:550px"/>
+    </div>
+
+
+    <br/><br/> <br/><br/><br/>
+
+</div>
+{% endblock %}
