@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+200 Views
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>Last 300 Views</h3>
+    <hr/>
+    <table width="100%">
+        <thead>
+        <tr>
+            <th width="28%">Title</th>
+            <th width="10%">Category</th>
+            <th width="15%">Date</th>
+            <th width="15%">User Name</th>
+            <th width="22%">Email</th>
+            <th width="20%">Company</th>
+        </tr>
+        </thead>
+        {% for p in latestViews %}
+        <!--# route 0, date 1,title 2,userName 3, email 4, company 5, category 6-->
+        <tr>
+
+            <td><a href="{{p[0]}}" target="_blank">{{ p[2] }}</a></td>
+            <td>{{p[6]}}</td>
+            <td>{{p[1]}}</td>
+            <td>{{p[3]}}</td>
+            <td>{{p[4]}}</td>
+            <td>{{p[5]}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <br/><br/> <br/>
+</div>
+{% endblock %}

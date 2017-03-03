@@ -1233,21 +1233,21 @@ def getPostTitleByRoute(myroute):
 
 
 def getUserNameById(user_id):
-    if user_id == -1:
+    if int(user_id) == -1:
         return 'public'
     user = User.query.filter(User.id == user_id).first()
     return user.username
 
 
 def getEmailById(user_id):
-    if user_id == -1:
+    if int(user_id) == -1:
         return ''
     user = User.query.filter(User.id == user_id).first()
     return user.email
 
 
 def getCompanybyId(user_id):
-    if user_id == -1:
+    if int(user_id) == -1:
         return 'public'
     user = User.query.filter(User.id == user_id).first()
     return user.company
@@ -1271,6 +1271,8 @@ def getPostCategoryByRoute(route):
             return 'mbpfaq'
         elif route == '/mqafaq':
             return 'mqafaq'
+        elif route == '/blog':
+            return 'blog'
         else:
             return ''
     return post.category
@@ -1290,7 +1292,7 @@ def getCategory(txt):
     elif txt == "blog":
         return "Blog"
 
-    return ""
+    return "Other"
 
 
 #### dashboard  ####
@@ -1326,7 +1328,7 @@ def dashboard():
     searches = SearchHistory.query.all()
     search_ct = searches.__len__()
 
-    postHis = PostHistory.query.order_by(desc(PostHistory.route)).filter(PostHistory.user_id != -1).all()
+    postHis = PostHistory.query.order_by(desc(PostHistory.route)).all()
 
     ### for for post his rate
     routes = []
@@ -1369,7 +1371,9 @@ def dashboard():
     searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(20).all()
     sList = []
     for item in searchList:
-        sList.append((item.search_string, str(item.date)[:-10]))
+        # search text 0, date 1, userName 2, company 3
+        sList.append(
+            (item.search_string, str(item.date)[:-10], getUserNameById(item.user_id), getCompanybyId(item.user_id)))
 
     # latestViews
     postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
@@ -1430,35 +1434,116 @@ def dashboard_chart_view():
     videoPost = Post.query.filter((Post.category == 'video')).all()
     video_ct = videoPost.__len__()
 
-    custom_style = Style(
+    style_contents = Style(
         label_font_size=25,
+        major_label_font_size=25,
         value_font_size=25,
         title_font_size=30
 
     )
 
-    contents_chart = pygal.Bar(style=custom_style, print_values=True)
+    contents_chart = pygal.Bar(style=style_contents, print_values=True, show_legend=False, height=350)
 
     contents_chart.title = 'Contents'
     contents_chart.x_labels = ('MBP', 'MQA', 'ICCAP', 'Video', 'Blog', 'WPE', 'ALFNA', 'Service')
-    # contents_chart.add('MBP', mbp_ct)
-    # contents_chart.add('MQA', mqa_ct)
-    # contents_chart.add('ICCAP', iccap_ct)
-    # contents_chart.add('Video', video_ct)
-    # contents_chart.add('Blog', blog_ct)
-    # contents_chart.add('WPE', wpe_ct)
-    # contents_chart.add('ALFNA', alfna_ct)
-    # contents_chart.add('Service', service_ct)
     contents_chart.add("", [mbp_ct, mqa_ct, iccap_ct, video_ct, blog_ct, wpe_ct, alfna_ct, service_ct])
 
     contents_graph = contents_chart.render_data_uri()
 
-    users = User.query.all()
-    user_ct = users.__len__() - 3  # except internal testing account
-    searches = SearchHistory.query.all()
-    search_ct = searches.__len__()
+    # view count by User
+    postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
+    ### look for user info
+    ids = []
+    for p in postHis:
+        ids.append(p.user_id)
 
-    return render_template('/dashboard_chart_view.html', contents_graph=contents_graph)
+    iz = Counter(ids).items()
+    sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # user_id, count
+    nameList = []
+    countList = []
+    for ii in sortedIz:
+        uid = ii[0]
+        if uid == 1 or uid == 2 or uid == 3:
+            continue
+        uid = ii[0]
+        nameList.append(getUserNameById(uid))
+        countList.append(ii[1])
+
+    style_userView = Style(
+        label_font_size=20,
+        major_label_font_size=20,
+        value_font_size=20,
+        title_font_size=25
+
+    )
+    # height = 400, width = 1000, spacing = 20,
+    userView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-60)
+    userView_chart.title = 'Viewer Count'
+    userView_chart.x_labels = nameList
+    userView_chart.add("", countList)
+    userView_graph = userView_chart.render_data_uri()
+
+    # top 30 view title
+
+    postHis = PostHistory.query.order_by(desc(PostHistory.route)).all()
+
+    ### for for post his rate
+    routes = []
+    for p in postHis:
+        routes.append(p.route)
+
+    rz = Counter(routes).items()# route, count
+    sortedRt = reversed(sorted(rz, key=operator.itemgetter(1))) #sort by count
+
+    titleList=[]
+    countTitleList=[]
+    postTop = []
+    tmp = 0
+    for ii in sortedRt:
+        route=ii[0]
+        title = getPostTitleByRoute(route)
+        if title == '':
+            continue
+        if title.__len__() >= 35:
+            title = title[:35] + '...'
+        titleList.append(title)
+        countTitleList.append(ii[1])
+        tmp += 1
+        if tmp >= 30:
+            break
+
+    topView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-60)
+    topView_chart.title = 'Top 30 Views'
+    topView_chart.x_labels=titleList
+    topView_chart.add("", countTitleList)
+
+    topView_graph = topView_chart.render_data_uri()
+
+    # View count by Category
+
+    postHisAll=PostHistory.query.order_by(PostHistory.route).all()
+    cates=[]
+    for p in postHisAll:
+        route=p.route
+        cates.append(getCategory(getPostCategoryByRoute(route)))
+
+    rz = Counter(cates).items()  # category, count
+    sortedCates = reversed(sorted(rz, key=operator.itemgetter(1)))  # sort by count
+    cateNameList=[]
+    cateCountList=[]
+    for ii in sortedCates:
+        cateNameList.append(ii[0])
+        cateCountList.append(ii[1])
+
+    countByCategory_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-20)
+    countByCategory_chart.title = 'View Count by Category'
+    countByCategory_chart.x_labels = cateNameList
+    countByCategory_chart.add("", cateCountList)
+    countByCategory_graph = countByCategory_chart.render_data_uri()
+
+
+    return render_template('/dashboard_chart_view.html', contents_graph=contents_graph, userView_graph=userView_graph,
+                           topView_graph=topView_graph, countByCategory_graph=countByCategory_graph)
 
 
 route_recent_100_search = '/recent100SearchHis'
@@ -1468,18 +1553,29 @@ route_recent_100_search = '/recent100SearchHis'
 @roles_required('sunshine')
 @login_required
 def recent100Search():
-    searchAll = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(100).all()
-    sAll = []
-    for item in searchAll:
-        sAll.append(item.search_string)
+    # searchAll = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(100).all()
+    # sAll = []
+    # for item in searchAll:
+    #     sAll.append(item.search_string)
+    #
+    # iz = Counter(sAll).items()
+    # sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # string, count
+    # userHis = []  #
+    # for ii in sortedIz:
+    #     userHis.append((ii[0], ii[1]))
+    # search list
 
-    iz = Counter(sAll).items()
-    sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))  # string, count
-    userHis = []  #
-    for ii in sortedIz:
-        userHis.append((ii[0], ii[1]))
+    searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).filter(SearchHistory.user_id != 3).all()
+    print('search:', searchList.__len__())
+    if searchList.__len__() > 100:
+        searchList = searchList[:100]
+    sList = []
+    for item in searchList:
+        # search text 0, date 1, userName 2, company 3
+        sList.append(
+            (item.search_string, str(item.date)[:-10], getUserNameById(item.user_id), getCompanybyId(item.user_id)))
 
-    return render_template('/recent100Searches.html', slist=userHis)
+    return render_template('/recent100Searches.html', sList=sList)
 
 
 # post viewed by users
@@ -1508,6 +1604,33 @@ def user_post_viewed_by_users(postId):
     return render_template('/viewerListFor.html', userHis=userHis, route=route, title=getPostTitleByRoute(route))
 
 
+route_last_300_views = '/last_300_views'
+
+
+@app.route(route_last_300_views)
+@roles_required('sunshine')
+@login_required
+def last200views():
+    # latestViews
+    postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
+    if postHis.__len__() > 300:  # get the last 200 views.
+        postHis = postHis[:300]
+
+    latestViews = []
+    for item in postHis:
+        uid = item.user_id
+        route = item.route
+        title = getPostTitleByRoute(route)
+        # route, date,title,userName, email, company, category
+        if title.__len__() > 30:
+            title = title[:30] + '...'
+        latestViews.append(
+            (route, str(item.date)[:-10], title, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid),
+             getPostCategoryByRoute(route)))
+
+    return render_template('/last300views.html', latestViews=latestViews)
+
+
 # user history view
 route_user_view_history = '/user_view_history/<uid>'
 
@@ -1525,12 +1648,15 @@ def userViewHistory(uid):
             flag = True
 
     if flag:
+        print('uid', uid)
         uname = getUserNameById(uid)
         postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         vl = []
         for v in postHis:
             route = v.route
             title = getPostTitleByRoute(route)
+            if title.__len__() > 30:
+                title = title[:29] + '...'
             date = getPostViewTimeById(v.id)
             if title != '':
                 # title 1, route, 2, date 3, category 4

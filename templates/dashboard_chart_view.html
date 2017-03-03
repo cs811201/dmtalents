@@ -1,18 +1,39 @@
 {% extends "layouts/base.html" %}
 
 {% block title %}
-Dashboard - Charts
+Dashboard | Charts
 {% endblock %}
 
 {% block content %}
 <br/><br/><br/>
 <div class="container">
     <br/>
-    <h3>Dashboard Charts View</h3>
-    <hr/>
+    <h3>Dashboard | Charts View</h3>
+
     <div>
-        <embed type="image/svg+xml" src={{contents_graph|safe}} style="max-width:550px"/>
+        <embed type="image/svg+xml" src={{contents_graph|safe}} style="max-width:600px"/>
     </div>
+
+    <hr/>
+
+    <h3>Viewer Counts</h3>
+    <div>
+        <embed type="image/svg+xml" src={{userView_graph|safe}} style="max-width:800px; "/>
+    </div>
+
+    <hr/>
+
+    <h3>Top 30 Views</h3>
+    <div>
+        <embed type="image/svg+xml" src={{topView_graph|safe}} style="max-width:800px; "/>
+    </div>
+     <hr/>
+
+    <h3>View Count by Category</h3>
+    <div>
+        <embed type="image/svg+xml" src={{countByCategory_graph|safe}} style="max-width:800px; "/>
+    </div>
+
 
 
     <br/><br/> <br/><br/><br/>

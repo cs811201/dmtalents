@@ -10,21 +10,15 @@ Search History
     <br/>
     <h3>Recent 100 Search History</h3>
     <hr/>
-    <table>
-        <thead>
-        <th>
-            <tr>
-                <td width="350px">Searched String</td>
-                <td>Hit #</td>
-            </tr>
-        </th>
+    <table width="90%">
+        <!--# search text 0, date 1, userName 2, company 3-->
+        {% for p in sList %}
 
-        </thead>
-        {% for p in slist%}
         <tr>
-            <td>
-                <font size="4">{{ p[0] }}</font></td>
-            <td> {{ p[1] }}</td>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
 
         </tr>
         {% endfor %}
