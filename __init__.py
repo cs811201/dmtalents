@@ -13,6 +13,7 @@ from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
 from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
+from pygal.style import CleanStyle
 from pygal.style import Style
 from sqlalchemy import desc
 
@@ -67,13 +68,13 @@ def recordPostHistory(rt):
             diff = now - p.date
             diffmin = diff / datetime.timedelta(minutes=1)
             # print('diffmin', diffmin)
-            if diffmin < 2:  # 10 minutes
+            if diffmin < 2:  # # record only when the time is longer than XX minutes.
                 flag = True
                 break
     if id == -1:
         flag = False  # record all public views.
 
-    if not flag:  # record only when the time is longer than 10 minutes.
+    if not flag:
         posthis = PostHistory(user_id=id, route=rt, date=now)
         db.session.add(posthis)
         db.session.commit()
@@ -1444,14 +1445,15 @@ def dashboard_chart_view():
 
     contents_chart = pygal.Bar(style=style_contents, print_values=True, show_legend=False, height=350)
 
-    contents_chart.title = 'Contents'
+    totalPostCount = mbp_ct + mqa_ct + iccap_ct + video_ct + blog_ct + wpe_ct + alfna_ct + service_ct
+    contents_chart.title = 'Contents (total: ' + str(totalPostCount) + ' )'
     contents_chart.x_labels = ('MBP', 'MQA', 'ICCAP', 'Video', 'Blog', 'WPE', 'ALFNA', 'Service')
     contents_chart.add("", [mbp_ct, mqa_ct, iccap_ct, video_ct, blog_ct, wpe_ct, alfna_ct, service_ct])
 
     contents_graph = contents_chart.render_data_uri()
 
     # view count by User
-    postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
+    postHis = PostHistory.query.filter(PostHistory.user_id != 3).order_by(desc(PostHistory.date)).all()
     ### look for user info
     ids = []
     for p in postHis:
@@ -1478,29 +1480,29 @@ def dashboard_chart_view():
     )
     # height = 400, width = 1000, spacing = 20,
     userView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-60)
-    userView_chart.title = 'Viewer Count'
+    userView_chart.title = 'User View # (totoal: ' + str(postHis.__len__()) + ')'
     userView_chart.x_labels = nameList
     userView_chart.add("", countList)
     userView_graph = userView_chart.render_data_uri()
 
     # top 30 view title
 
-    postHis = PostHistory.query.order_by(desc(PostHistory.route)).all()
+    postHis = PostHistory.query.filter(PostHistory.user_id != 3).order_by((PostHistory.route)).all()
 
     ### for for post his rate
     routes = []
     for p in postHis:
         routes.append(p.route)
 
-    rz = Counter(routes).items()# route, count
-    sortedRt = reversed(sorted(rz, key=operator.itemgetter(1))) #sort by count
+    rz = Counter(routes).items()  # route, count
+    sortedRt = reversed(sorted(rz, key=operator.itemgetter(1)))  # sort by count
 
-    titleList=[]
-    countTitleList=[]
+    titleList = []
+    countTitleList = []
     postTop = []
     tmp = 0
     for ii in sortedRt:
-        route=ii[0]
+        route = ii[0]
         title = getPostTitleByRoute(route)
         if title == '':
             continue
@@ -1513,34 +1515,33 @@ def dashboard_chart_view():
             break
 
     topView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-60)
-    topView_chart.title = 'Top 30 Views'
-    topView_chart.x_labels=titleList
+    topView_chart.title = 'Top 30 Posts'
+    topView_chart.x_labels = titleList
     topView_chart.add("", countTitleList)
 
     topView_graph = topView_chart.render_data_uri()
 
     # View count by Category
 
-    postHisAll=PostHistory.query.order_by(PostHistory.route).all()
-    cates=[]
+    postHisAll = PostHistory.query.order_by(PostHistory.route).all()
+    cates = []
     for p in postHisAll:
-        route=p.route
+        route = p.route
         cates.append(getCategory(getPostCategoryByRoute(route)))
 
     rz = Counter(cates).items()  # category, count
     sortedCates = reversed(sorted(rz, key=operator.itemgetter(1)))  # sort by count
-    cateNameList=[]
-    cateCountList=[]
+    cateNameList = []
+    cateCountList = []
     for ii in sortedCates:
         cateNameList.append(ii[0])
         cateCountList.append(ii[1])
 
     countByCategory_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-20)
-    countByCategory_chart.title = 'View Count by Category'
+    countByCategory_chart.title = 'View # by Category'
     countByCategory_chart.x_labels = cateNameList
     countByCategory_chart.add("", cateCountList)
     countByCategory_graph = countByCategory_chart.render_data_uri()
-
 
     return render_template('/dashboard_chart_view.html', contents_graph=contents_graph, userView_graph=userView_graph,
                            topView_graph=topView_graph, countByCategory_graph=countByCategory_graph)
