@@ -13,7 +13,6 @@ from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
 from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
-from pygal.style import CleanStyle
 from pygal.style import Style
 from sqlalchemy import desc
 
@@ -1543,8 +1542,53 @@ def dashboard_chart_view():
     countByCategory_chart.add("", cateCountList)
     countByCategory_graph = countByCategory_chart.render_data_uri()
 
+    # user # by Category
+    tmp = []
+    for p in postHisAll:
+
+        route = p.route
+        tmp.append(route)
+
+    rz = Counter(tmp).items()  # route, count
+
+    sortedRoute = reversed(sorted(rz, key=operator.itemgetter(1)))  # sort by count
+
+
+    ucNames = []
+    ucCounts = []
+    tmp2={}
+    for ss in sortedRoute:
+        route = ss[0]
+        ppp=PostHistory.query.filter(PostHistory.route==route).all()
+        userList=[]
+        for p in ppp:
+            uid=p.user_id
+            userList.append(uid)
+
+        uidCt =Counter(userList).items()#uid,count
+
+        cate=getCategory(getPostCategoryByRoute(route))
+        if cate not in tmp2.keys():
+            tmp2[cate] =uidCt.__len__()
+        else:
+            tmp2[cate] = tmp2[cate]+uidCt.__len__()
+
+    for item in tmp2.items():
+        ucNames.append(item[0])
+        ucCounts.append(item[1])
+
+
+
+    userCountByCategory_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
+                                          x_label_rotation=-20)
+    userCountByCategory_chart.title = 'User # by Category'
+    userCountByCategory_chart.x_labels = ucNames
+    userCountByCategory_chart.add("", ucCounts)
+    userCountByCategory_graph = userCountByCategory_chart.render_data_uri()
+
     return render_template('/dashboard_chart_view.html', contents_graph=contents_graph, userView_graph=userView_graph,
-                           topView_graph=topView_graph, countByCategory_graph=countByCategory_graph)
+                           topView_graph=topView_graph, countByCategory_graph=countByCategory_graph,
+                           userCountByCategory_graph=userCountByCategory_graph)
 
 
 route_recent_100_search = '/recent100SearchHis'
@@ -1567,7 +1611,7 @@ def recent100Search():
     # search list
 
     searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).filter(SearchHistory.user_id != 3).all()
-    print('search:', searchList.__len__())
+    # print('search:', searchList.__len__())
     if searchList.__len__() > 100:
         searchList = searchList[:100]
     sList = []
@@ -1649,25 +1693,76 @@ def userViewHistory(uid):
             flag = True
 
     if flag:
-        print('uid', uid)
+        # print('uid', uid)
         uname = getUserNameById(uid)
         postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         vl = []
+        titleList = []
+        cateList = []
         for v in postHis:
             route = v.route
+            cateList.append(getCategory(getPostCategoryByRoute(route)))
             title = getPostTitleByRoute(route)
             if title.__len__() > 30:
                 title = title[:29] + '...'
+
+            titleList.append(title)
             date = getPostViewTimeById(v.id)
             if title != '':
                 # title 1, route, 2, date 3, category 4
                 vl.append((title, route, str(date)[:-10], getPostCategoryByRoute(route)))
+
         searchHis = SearchHistory.query.filter(SearchHistory.user_id == uid).order_by(SearchHistory.date).all()
         sList = []
         for v in searchHis:
             sList.append((v.search_string, str(v.date)[:-10]))
 
-        return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList)
+        style_userView = Style(
+            label_font_size=20,
+            major_label_font_size=20,
+            value_font_size=20,
+            title_font_size=25
+
+        )
+
+        # prepare title and count for Chart
+        nameList = []
+        countList = []
+        iz = Counter(titleList).items()  # title, count
+
+        sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))
+        for ss in sortedIz:
+            nameList.append(ss[0])
+            countList.append(ss[1])
+
+        userView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
+                                   x_label_rotation=-50)
+        userView_chart.title = 'View # by Post : totoal( ' + str(postHis.__len__()) + ' )'
+        userView_chart.x_labels = nameList
+        userView_chart.add("", countList)
+        userView_graph = userView_chart.render_data_uri()
+        if vl.__len__() > 50:
+            vl = vl[:50]  # only show recent up to 50
+
+        # user view by Category
+        cateNames = []
+        cateCounts = []
+        iz = Counter(cateList).items()  # category, count
+
+        sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))
+        for ss in sortedIz:
+            cateNames.append(ss[0])
+            cateCounts.append(ss[1])
+
+        userViewByCat_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
+                                        x_label_rotation=-30, height=500)
+        userViewByCat_chart.title = 'View # by Category'
+        userViewByCat_chart.x_labels = cateNames
+        userViewByCat_chart.add("", cateCounts)
+        userViewByCat_graph = userViewByCat_chart.render_data_uri()
+
+        return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList,
+                               userView_graph=userView_graph, userViewByCat_graph=userViewByCat_graph)
 
 
 ## download files, all routes must end with 'download' for data analysis

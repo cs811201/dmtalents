@@ -10,6 +10,17 @@ View History
     <br/>
     <h3>View History for {{ uname }}</h3>
     <hr/>
+    <div>
+        <embed type="image/svg+xml" src={{userView_graph|safe}} style="max-width:800px"/>
+    </div>
+    <hr/>
+    <h3>View History by Category</h3>
+
+    <div>
+        <embed type="image/svg+xml" src={{userViewByCat_graph|safe}} style="max-width:600px"/>
+    </div>
+    <hr/>
+    <h4>Recent Views(up to 50)</h4>
     <table width="80%">
         <!--#title 0, route 1, date 2, category 3-->
         {% for p in viewList%}
@@ -22,6 +33,8 @@ View History
         </tr>
         {% endfor %}
     </table>
+
+    <hr/>
 
     <h3>Search History by {{ uname }}</h3>
     <hr/>
