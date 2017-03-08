@@ -1479,7 +1479,7 @@ def dashboard_chart_view():
     )
     # height = 400, width = 1000, spacing = 20,
     userView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False, x_label_rotation=-60)
-    userView_chart.title = 'User View # (totoal: ' + str(postHis.__len__()) + ')'
+    userView_chart.title = 'User View # (total: ' + str(postHis.__len__()) + ')'
     userView_chart.x_labels = nameList
     userView_chart.add("", countList)
     userView_graph = userView_chart.render_data_uri()
@@ -1737,7 +1737,7 @@ def userViewHistory(uid):
 
         userView_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
                                    x_label_rotation=-50)
-        userView_chart.title = 'View # by Post : totoal( ' + str(postHis.__len__()) + ' )'
+        userView_chart.title = 'View # by Post : total( ' + str(postHis.__len__()) + ' )'
         userView_chart.x_labels = nameList
         userView_chart.add("", countList)
         userView_graph = userView_chart.render_data_uri()
