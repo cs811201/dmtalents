@@ -1,0 +1,185 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+ICCAP | Python
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Python Programming integration with IC-CAP</h3>
+    <h5>by Raj Sodhi[Keysight] on Mar 16, 2017 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/03/17/python-programming-integration-with-ic-cap"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    Python<sup>TM</sup> is a programming language that lets you work quickly and integrate systems more effectively.
+    It’s been used
+    in many areas such as Statistical Analysis, or Artificial Intelligence; and it is also very useful in Device
+    Modeling.<br/><br/>
+    Today we are going to introduce the Python integration with Keysight IC-CAP device modeling platform (version 2013
+    and up), where we can readily use Python to gain additional productivity.<br/><br/>
+    We will go through one example to get the MOSFET threshold voltage (Vth) using Python, but first, let’s take a look
+    at what version and libraries are supported in IC-CAP.<br/><br/>
+    <i>
+        <ul>
+            <table width="80%">
+                <tr>
+                    <td width="20%"
+                        style="border-right:solid; border-right-width:1px; border-bottom:solid;border-bottom-width:1px">
+                        Python Version
+                    </td>
+                    <td style="border-bottom:solid;border-bottom-width:1px">&nbsp;2.7.3</td>
+                </tr>
+                <tr>
+                    <td style="border-right:solid; border-right-width:1px; ">
+                        Platform
+                    </td>
+                    <td>&nbsp;Windows and Linux IC-CAP</td>
+                </tr>
+
+            </table>
+        </ul>
+    </i>
+    <br/><br/>
+    Supported Libraries:<br/><br/>
+    <img src="/static/blog/iccap_python/libs.png"/><br/><br/>
+
+    <ul>
+        <table width="80%">
+            <tr>
+                <td width="20%"
+                    style="border-right:solid; border-right-width:1px; border-bottom:solid;border-bottom-width:1px">
+                    iccap
+                </td>
+                <td style="border-bottom:solid;border-bottom-width:1px">&nbsp;The built-in IC-CAP APIs dedicated to
+                    device
+                    modeling.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%"
+                    style="border-right:solid; border-right-width:1px; border-bottom:solid;border-bottom-width:1px">
+                    NumPy
+                </td>
+                <td style="border-bottom:solid;border-bottom-width:1px">&nbsp;The fundamental package for scientific
+                    computing
+                    with Python.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%"
+                    style="border-right:solid; border-right-width:1px; border-bottom:solid;border-bottom-width:1px">
+                    SciPy
+                </td>
+                <td style="border-bottom:solid;border-bottom-width:1px">&nbsp;Goes hand-in-hand with NumPy, is an
+                    ecosystem
+                    for mathematics, science, and engineering.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%"
+                    style="border-right:solid; border-right-width:1px; border-bottom:solid;border-bottom-width:1px">
+                    matplotlib
+                </td>
+                <td style="border-bottom:solid;border-bottom-width:1px">&nbsp;A Python 2D plotting library which
+                    produces
+                    publication quality figures.
+                </td>
+            </tr>
+            <tr>
+                <td width="20%"
+                    style="border-right:solid; border-right-width:1px">
+                    PySide
+                </td>
+                <td>&nbsp;Python bindings for the Qt to create innovative devices, modern UIs.
+                </td>
+            </tr>
+
+        </table>
+    </ul>
+
+    "iccap" is a built-in Python module in IC-CAP which provides objects (such as Model, Dut and Input) to interact with
+    IC-CAP data structures. Below is the Python API tree, and more detailed API explanation and Python tutorial can be
+    found in IC-CAP’s user manual.
+    <br/>
+    <br/>
+    <img src="/static/blog/iccap_python/apis.png"/><br/><br/>
+
+    Now, let’s take a look at how to use Python to do data analysis, such as to calculate Vth from an IdVg curve in
+    IC-CAP. The example is based on the built-in model file:<i>$ICCAP_ROOT/examples/model_files/mosfet/nmos3.mdl</i> .
+    <br/>
+    <img src="/static/blog/iccap_python/vth.png"/><br/>
+    <em>Figure 1. Vth algorithm using Icon method with deltaW(xw) and deltaL(xl)</em>
+    <br/>
+    NOTE: There are many possible methods to calculate Vth<sub>[1]</sub> . For today’s example, we will use the constant
+    current
+    approach<sub>[1],[2]</sub>, which is widely used in industry due to its simplicity.
+    <br/><br/>
+
+    The steps are:<br/>
+    1. Open the “nmos3.mdl” file from ICCAP Main window.<br/>
+    <img src="/static/blog/iccap_python/ic1.png"/><br/><br/>
+    2. Open the nmos3 model window, as shown below:<br/>
+    <img src="/static/blog/iccap_python/ic2.png"/><br/><br/>
+    3. Switch to the “Macros” tab, where we see some pre-defined PEL macros.<br/>
+    <img src="/static/blog/iccap_python/ic3.png"/><br/><br/>
+    4. Now, we can add a macro via the "New…" button at left, name it "cal_vth", and set the Macro type to be "Python
+    (Local Namespace)" option, as highlighted below:<br/>
+    <img src="/static/blog/iccap_python/ic4.png"/><br/><br/>
+    The Python script shown above calculates Vth from the IdVg@Vb=0 curve from the large DUT.
+    <br/><br/>
+    5.On line 23, we used a Python class called VthCon in which the Vth extraction algorithm is implemented. This
+    calculation can be implemented in the IC-CAP UI, or one can create and refer to an existing Python script created
+    outside of IC-CAP. We will show both methods.<br/><br/>
+    (1) Create the VthCon Python Class in ICCAP<br/>
+    Use “New…” to create another macro, name it VthCon, and add the content, as shown below:
+    <img src="/static/blog/iccap_python/ic5.png"/><br/><br/>
+    After the class <em>VthCon</em> and <em>calculate</em> functions have been defined, click on the “Execute” button so
+    that the class
+    gets registered in ICCAP memory and can now be used by other Python macros.<br/>
+    To see this in action, go back to the “cal_vth” macro, click the “Execute” button, and see the Vth value printed in
+    IC-CAP’s Status window.<br/>
+    <img src="/static/blog/iccap_python/ic6.png"/><br/><br/>
+    (2) Refer to a Python Class defined outside of ICCAP<br/>
+    If we have existing Python files that have utility functions or Python classes defined, we can certainly use them
+    directly without re-creating them again in ICCAP.<br/>
+    This approach requires we set an OS environment variable called ICCAP_USER_PYTHON_PATH to the directory where those
+    python files are located, as shown below:<br/>
+    <img src="/static/blog/iccap_python/ic7.png"/><br/><br/>
+    Python source code files are then stored in the directory specified:<br/>
+    <img src="/static/blog/iccap_python/ic8.png"/><br/><br/>
+    If files were newly added to that directory, you will need to restart IC-CAP, load the nmos3.mdl again and go back
+    to the Macros tab to access these programs. To test this, add another new Macro, name it ‘cal_vth_use_external’, and
+    again set the Type to be Python (Local Namespace).<br/><br/>
+    We now can import the class or functions from the external files by adding the 2 lines highlighted below to the top
+    of the macro.<br/>
+    The remainder of code is the same as for the cal_vth function we saw above.<br/>
+    <pre>
+    from iccap_vth import VthCon
+    from iccap_util import *
+    </pre>
+    <img src="/static/blog/iccap_python/ic9.png"/><br/><br/>
+    <br/><br/>
+
+    Please contact us to download the IC-CAP model and Python files used in this example.
+    Thank you!<br/><br/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+    <br/><br/>
+    <i>
+        References:<br/><br/>
+        [1] <a href="http://www.sciencedirect.com/science/article/pii/S0026271402000276" target="_blank">A review of
+        recent MOSFET threshold voltage extraction methods</a>
+        <br/>
+        [2] <a href="/mbpst/chap5.1#VTH_CON_XWXL" target="_blank">MBP Vth_Con_XWXL Algorithm</a> <br/>
+
+    </i>
+    <br/><br/>
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

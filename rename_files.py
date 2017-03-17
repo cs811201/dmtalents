@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\blog\ftfmax'
+directory = r'D:\projects\dmtalents\static\blog\iccap_python'
 
 
 def renameIt(dir):

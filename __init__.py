@@ -50,6 +50,13 @@ db = SQLAlchemy(app)
 mail = Mail(app)
 
 
+def getRandomIntFrom1toGiven(top):
+    if top <= 1:
+        return 1
+    else:
+        return randint(1, top)
+
+
 def recordPostHistory(rt):
     id = -1  # anonymous, used for public
     if hasattr(current_user, 'id'):
@@ -168,12 +175,6 @@ security = Security(app, user_datastore)
 # display how many in most search list
 displayUpto = 50
 
-
-def getRandomIntFrom1toGiven(top):
-    if top <= 1:
-        return 1
-    else:
-        return randint(1, top)
 
 
 @app.route('/')
@@ -298,6 +299,18 @@ route_blog_why_dm_servo = '/blog/why_dm_services'
 def blog_why_dm_servo():
     recordPostHistory(route_blog_why_dm_servo)
     return render_template('blog/post/why_dm_services.html')
+
+
+route_blog_iccap_python = '/blog/iccap_python'
+
+
+@app.route(route_blog_iccap_python)
+def blog_iccap_python():
+    recordPostHistory(route_blog_iccap_python)
+    return render_template('blog/post/iccap_python.html')
+
+
+
 
 
 route_blog_ftfmax = '/blog/ftfmax'
