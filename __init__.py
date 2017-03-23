@@ -1213,6 +1213,16 @@ def videoMBP_Ion_Ioff():
     return render_template('/video/MBP_Ion_Ioff_correlation.html')
 
 
+
+route_video_MBP_dIdsat_sa = '/video/MBP_dIdsat_by_SA'
+
+
+@app.route(route_video_MBP_dIdsat_sa)
+@login_required
+def videoMBP_dIdsat_sa():
+    recordPostHistory(route_video_MBP_dIdsat_sa)
+    return render_template('/video/MBP_dIdsat_SA.html')
+
 ######################
 
 
@@ -1286,6 +1296,8 @@ def getPostCategoryByRoute(route):
             return 'mqafaq'
         elif route == '/blog':
             return 'blog'
+        elif route == '/iccapfaq':
+            return 'iccapfaq'
         else:
             return ''
     return post.category
@@ -1302,6 +1314,8 @@ def getCategory(txt):
         return "MQA Rules"
     elif txt == "mqafaq":
         return "MQA FAQ"
+    elif txt == "iccapfaq":
+        return "ICCAP FAQ"
     elif txt == "blog":
         return "Blog"
 

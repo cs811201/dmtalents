@@ -1,0 +1,22 @@
+{% extends "video/video_index.html" %}
+{% block videomain %}
+
+<h2>MBP FAQ</h2>
+
+<h3>Create dIdsat normalized by max SA/SB</h3>
+<hr>
+In this video, we are going to demo in MBP, how to define the delta-Idsat for the LOD stress effect in BSIM3 or BSIM4 models,
+for example, we will plot dIdsat vs SA @ W, the detal-Idsat is defined by the following equation, that every point is that Idsat minus the Idsat whose SA equals to 1 micron(max SA), divided by Idsat_sa_1u.
+<br/><br/>
+<img src="/static/video/dIdsat_sa/eq.png" alt=""><br/>
+<i>The equation can be customized easily per user's needs.</i>
+<br/><br/>
+This video also, in an animated way, explains how <font style="color:blue">trans</font> function works in MBP Script, check it out!
+<br/><br/>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6qVdqQQC4Fg" frameborder="0"
+        allowfullscreen></iframe>
+<br/><br/><br/><br/>
+
+{% endblock %}
