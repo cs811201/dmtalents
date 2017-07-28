@@ -9,6 +9,7 @@ Login
 function handleClick(cb) {
   display("Clicked, new value = " + cb.checked);
 }
+
 </script>
 <div class="container">
     <br/><br/>
@@ -20,7 +21,8 @@ function handleClick(cb) {
         {{ render_field_with_errors(login_user_form.email, class="form-control") }}
         {{ render_field_with_errors(login_user_form.password, class="form-control") }}
         {{ render_field_with_errors(login_user_form.remember) }}
-        <label>By logging in, I agree to the <a href="/disclaimer" target="_blank">Terms of Use Agreement</a>.
+        <a href="/requestlogin" target="_blank">Request a login.</a> <br/>
+        <label>By logging in, I agree to the <a href="/disclaimer" target="_blank">Terms of Use</a>.
         </label>
         {{ render_field(login_user_form.next) }}
         {{ render_field(login_user_form.submit, class="btn btn-primary") }}
@@ -29,7 +31,6 @@ function handleClick(cb) {
     <br/><br/>
     <br/><br/>
 </div>
-
 
 
 {% endblock %}

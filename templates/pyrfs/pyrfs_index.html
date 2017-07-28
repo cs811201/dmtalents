@@ -1,0 +1,27 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+MQA PyRFS Tutorial
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+        <div style="float:left; width: 22%; margin-right:5px; border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+            {% include 'pyrfs/toc.html' %}
+
+        </div>
+        <div style="float:center; height:1400px; overflow: auto">
+            {% block pyrfsmain %}
+            {% endblock %}
+            <br/><br/>
+        </div>
+
+
+
+</div>
+
+
+{% endblock %}

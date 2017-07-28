@@ -1,0 +1,65 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>How to use PyRFS</h2>
+<hr>
+<div overflow="scroll">
+    A comprehensive API documentation can be found as <a href="/pyrfs/manual/download" target="_blank">$MQAHOME/kedrfs/python/doc/manual.pdf</a>
+    , here let’s have a quick
+    rundown and see how PyRFS works.
+    <br/><br/>
+    PyRFS works on existing MQA project result, so we need to run our MQA projects firstly, once the simulation are
+    done, we proceed to take advantage of PyRFS, in 3 simple steps:
+    <ul>
+        <li>1. Fetch MQA result data</li>
+        <li>2. Build content to be written in the table</li>
+        <li>3. Save to a file, done!</li>
+    </ul>
+
+    <br/>
+    <mark>In a bit more detail:</mark>
+    <br/><br/>
+    1. Fetch MQA result data, by telling PyRFS where the project result folder is.
+    <ul>
+        a. Config ‘result_dirs’, could be just one project folder, or multi-folders.<br/>
+        b. Create a data provider ‘dp’ using the config set in the above step.
+    </ul>
+
+    2. Build content to be written in the table
+    <ul>
+        a. Query data from the ‘dp’ by rule_group/rule/check names.<br/>
+        b. Find desired targets, such as Vth, Idsat, etc.<br/>
+        c. Find conditions, such as W/L/T/Bias, etc.<br/>
+        d. Create a ‘ReportTable’ and its layout<br/>
+        e. Add contents to the layout, we can do the following:<br/>
+        <ul>
+            i. Which variable/column goes first<br/>
+            ii. Sort one or more columns<br/>
+            iii. Filter conditions by a single value(min/max) or a list<br/>
+
+
+        </ul>
+    </ul>
+    3. Save to a file, done
+    <ul>
+        a. Specify output file path<br/>
+        b. Specify output file format: xlsx or csv<br/>
+        c. Whether to overwrite an existing file
+    </ul>
+    <br/>
+    In the next Chapter, we will exercise the above 3 steps by walking through examples.<br/><br/>
+    Note: Besides this tutorial, there are also 15 built-in examples(.py files) under $MQAHOME/kedrfs/python/demo
+    directory, as shown below.
+    <br/>
+    <img src="/static/pyrfs/chap01/1.2_howto_guide_line/1.png">
+
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

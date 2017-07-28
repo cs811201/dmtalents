@@ -1,0 +1,83 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Enable the Upgraded Internal Spice3 for MQA </h2>
+<h3>MQA FAQ</h3>
+<hr>
+An upgraded Internal Spice3 simulator, that can run the latest BSIMCMG, BSIMIMG, etc models, is one of the great features that come with the MQA 2017 release.
+<br/><br/>
+The benefits of using the internal Spice3 are significant:
+<ul>
+    <li>Support the latest model versions, such as BSIM-CMG, BSIM-IMG, BSIM-BULK,etc.</li>
+    <li>Speed up the QA spins, averagely 7X faster than calling external simulators.</li>
+    <li>No need to call external simulator, saves license usage.</li>
+</ul>
+
+The current version does have certain limits, as listed below; however, good enough for plenty of tasks and most default MQA rules can be used right away; and will be improved in future MQA releases.
+<ul>
+    <li>Support Hspice formatted models only</li>
+    <li>Support DC and AC simulations only</li>
+</ul>
+
+Let’s see it in action:<br/><br/>
+Firstly, we shall see the “Spice3_internal” shown in the SPICE dropdown list. If you don’t see it in your MQA 2017, please read on,
+<a href="#enable">the later part of this FAQ explains how to enabled it.</a>
+<br/>
+<img src="/static/faq/mqa/internalSpice/3.png"><br/><br/>
+
+And, we shall see Check SPICE successful immediately. <br/>
+<img src="/static/faq/mqa/internalSpice/4.png"><br/><br/>
+
+To verify, here is a comparison between the Internal Spice3 and an external Hspice, we can see that the RMS is 0%, the results are on top of each other.
+<br/>
+
+<img src="/static/faq/mqa/internalSpice/8.png"><br/><br/>
+
+To reproduce the above comparison graph, we can load the same model twice, for example: $MQAHOME/example/Hb3v3.l, into MQA’s Lib Explorer window, and specify “Spice3_internal” to one, and “Hspice” to another as the SPICE type.
+<br/>
+<img src="/static/faq/mqa/internalSpice/5.png"><br/><br/>
+<img src="/static/faq/mqa/internalSpice/7.png">
+<a name="enable"></a>
+<br/><br/>
+
+<br/><br/>
+<h4>How to enable it </h4>
+
+<hr>
+If we don’t see the “Spice3_internal” in the SPICE dropdown list, it’s because we have old MQA versions installed, and the key config file $USER/.mqa_set/mqa.ini didn’t get updated. This is by design to protect existing user settings.
+<br/><br/>
+
+Once we update the “mqa.ini” file, we will see it on GUI, in two steps:<br/><br/>
+Step one, open the master copy of this file from the installation folder: $MQAHOME/bin/mqa.ini, as shown below, copy line 18
+<em>Spice3_interanl = runspice3_internal.bat</em>.
+The “runspice3_internal.bat” is also located in $MQAHOME/bin folder.<br/>
+
+<img src="/static/faq/mqa/internalSpice/1.png"><br/><br/>
+
+And, paste this line to our user copy $USER/.mqa_set/mqa.ini, as shown below, line 22. <br/>
+<img src="/static/faq/mqa/internalSpice/2.png"><br/><br/>
+
+Save the local copy of “mqa.ini”, and come back to MQA GUI, open the Options window via menu “Options -> General”, we shall now see Spice3_internal, as shown below.
+<br/>
+<img src="/static/faq/mqa/internalSpice/6.png"><br/><br/>
+Step 2, it’s critical to also turn on the “Flatten model library” option, as highlighted in green in the above screenshot; otherwise we may see simulation failure.
+<br/><br/>
+
+
+Then, click “OK” button to close the above “General Options” window, we shall be able to run the Spice3_internal successfully.
+<br/><br/>
+
+The use of <em>Spice3_internal</em> is the same as using Hspice or Spectre, if you are not familiar with the basic usage yet, please refer to this video tutorial:
+<a href="/video/mqaHvsS" target="_blank">HSPICE vs. SPECTRE model libraries</a> .
+<br/><br/>
+
+
+Enjoy the lightning speed!<br/><br/>
+
+
+Thanks!
+
+
+<br/><br/><br/><br/>
+{% endblock %}
+

@@ -1,0 +1,108 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Idsat Table</h2>
+<hr>
+<div overflow="scroll">
+    In this first example, we are going to exercise the whole flow of creating a Table, as simple/plain as follows, once
+    we get familiar with the flow, we can add more controls to it.
+
+    <br/><br/>
+    This Idsat table has W/L/T as conditions for the first 3 columns, the rows are ordered by W/L/T in an ascending
+    order, with the Idsat value as the fourth column.<br/>
+
+    <img src="/static/pyrfs/chap02/01_idsat_table/table.png"><br/><br/>
+    It comes from the MQA rule “Model Scalability -> Check Idsat vs L”, where we have Idsat curves from 3 temperatures
+    and different W and L. As shown below:<br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/mqa_gui.png"><br/><br/>
+
+    The code is here, effectively less than 20 lines.<br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/code.png"><br/><br/>
+
+    Next, let’s analyze the code line by line.<br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/src01.png"><br/><br/>
+    Line 1 and 2 import necessary Python modules, “os” is Python’s native module for operation system, and “pyrfs” is
+    with MQA 2017.
+    <br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/src02.png"><br/><br/>
+    Line 4 is to get current python file’s directory.<br/>
+    Line 5 is to locate the example MQA project folder’s path, as shown below, actually there are more than one
+    projects, and only one project named “qa_nchTT” is used in this example.<br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/demo_data_folder.png"><br/><br/>
+    This project contains results from 11 Rule groups, as shown below, and we are going to just use the
+    “02_Model_Scalability” rule group.
+    <br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/rule_groups.png"><br/><br/>
+    Ok, back to the code.
+    <br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/src03.png"><br/><br/>
+    Line 6 is to prepare the option called “config” that specifies the project’s path, it is to be fed into line 7 that
+    creates a data provider “dp”, now “dp” shall have access to all the information of the specified project for us to
+    query.
+    <br><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/src04.png"><br/><br/>
+    Line 9 calls the “dp.query()” function by further specifying “rule_group”, “rule” and “check” as arguments, the
+    values of these arguments are the folder names respectively, as we can see from Windows Explorer window, this
+    “qa_nchTT” project folder has a subfolder tree hierarchy.<br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/folder_names.png"><br/><br/>
+    To be noted, they are not the strings displayed on MQA GUI where we usually don’t see underscores in between words,
+    as shown below.
+    <br/><br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/mqa_gui_mini.png"><br/><br/>
+
+    By now, the “dp” object has narrowed down to information only from this node.<br/><br/>
+    Line 10 – 12 are to get W/L/T as Conditions, and line 13 is to get Idsat as a Target.<br/>
+    Note: we must use lower case names for Conditions and Targets, for example, dp.conditions["w"] is good, but
+    dp.conditions["W"] will fail.<br/>
+    <br/>
+    <img src="/static/pyrfs/chap02/01_idsat_table/src05.png"><br/><br/>
+    Next, line 15, we create a “table” by calling “rfs.ReportTable()” and give “idsat_table_01” as its name, a file with
+    this name will be created in the end.<br/>
+    Line 16 defines a RightLayout and associates it with the “table”, a Layout is how we fill up the table, and
+    RightLayout means PyRFS will automatically fill the table from left to right, starting from the top-left cell “A1”
+    by default, and grow rows and columns as necessary so that we don’t need to worry about cell indices. We have
+    more Layout options and controls; however, these will be topics later-on.<br/>
+    Line 17 is to add W, L, T into the table as first 3 columns.<br/>
+    Line 18 is to add Idsat into the table as the fourth column, the Target needs to be added separately.<br/><br/>
+
+    <img src="/static/pyrfs/chap02/01_idsat_table/src06.png"><br/><br/>
+
+    Finally, line 19 is to fill the “table” with the info we specified above, and line 20 is simply to save the table
+    into specified “out_dir” with the given format; the format by default is .xlsx, and can also be .csv, for example:
+    <pre>
+rfs.save(report=table, out_dir=this_file_path, format='csv')
+
+    </pre>
+    <br/>
+    Here we can <a href="/pyrfs/idsat_table/download" target="_blank">download a copy of the generated
+    “Idsat_table_01.xlsx” file</a>.
+
+    <br/><br/>
+    Code for copy-paste:
+    <pre>
+import os
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+
+dp.query(rule_group="02_Model_Scalability", rule="Rule_4001", check="Check_01")
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+Idsat = dp.targets["idsat"]
+
+table = rfs.ReportTable(name="idsat_table_01")
+rightLayout = rfs.RightLayout(table)
+rightLayout.add_constraint([W, L, T])
+rightLayout.add_constraint(Idsat)
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path, format='csv')
+
+    </pre>
+
+
+</div>
+{% endblock %}

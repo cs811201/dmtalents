@@ -1,0 +1,100 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Idsat Table | merge W L</h2>
+<hr>
+<div overflow="scroll">
+    In this example, let’s see how we can merge W and L into one column, as shown below:<br/><br/>
+
+
+    <img src="/static/pyrfs/chap02/08_idsat_table_merge_wl/table.png"><br/><br/>
+
+    This example is based on <a href="/pyrfs/chap2.a2" target="_blank">Chapter 2.2 Idsat table | T</a> , and added a
+    few touch-ups that we have exercised by
+    far.<br/><br/>
+    The code snippet that has the new effect is as follows:<br/><br/>
+
+
+    <img src="/static/pyrfs/chap02/08_idsat_table_merge_wl/code.png"><br/><br/>
+
+    On line 26, when we create a Layout for a Table, we can specify the starting location, location = (2, 2) move the
+    cursor to cell B2 in this case that became the top-left corner of the table.<br/><br/>
+    Line 29, the option “gap = -1” does the trick to merge W and L together in one column, the syntax of “gap” is as
+    follows:
+    <ul>
+        number of empty rows or columns between two elements.<br/>
+
+        <li>0: the default, two elements will be arranged side by side;</li>
+        <li><0: two elements will be laid out in the same cell;</li>
+        <li>n>0: two elements will be separated by gap number "n" of rows or columns, per the layout direction.</li>
+
+    </ul>
+    So, “gap=-1” tells PyRFS to lay elements in the constraint list [W, L] in the same cell. <br/><br/>
+    Line 32 filters L to be Lmin only, the condMin() function is defined early-on, we can see it in the complete code at the end of this page.<br/><br/>
+    Further, we made the output format a bit nicer by setting “ndr_format”(name display range format) and
+    “vdr_format”(value display format) on line 30 and 31 respectively.<br/><br/>
+    If we don’t apply line 30 and 31, we will by default get the following output, variables joined by comma:<br/><br/>
+    <img src="/static/pyrfs/chap02/08_idsat_table_merge_wl/t2.png"><br/><br/>
+
+    Or, if we specify gap > 0, say “gap = 2”, then we will get gaps(2 empty columns) between W and L, as
+    follows:<br/><br/>
+    <img src="/static/pyrfs/chap02/08_idsat_table_merge_wl/t3.png"><br/><br/>
+    And, note that we also made temperature cells’ format look better by line 36.<br/><br/>
+
+
+    Here is a <a href="/pyrfs/idsat_table_merge_wl/download" target="_blank">copy of “idsat_table_merge_wl.xlsx” for
+    download</a> .<br/><br/>
+
+    Code for copy-paste:
+    <pre>
+import os
+import pyrfs as rfs
+
+def condMin(cond):
+    ticks = cond.get_axis().ticks
+    return min(ticks)
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="02_Model_Scalability",
+         rule="Rule_4001",
+         check="Check_01")
+
+Idsat = dp.targets["idsat"]
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+T_count = T.get_num_values()
+
+table = rfs.ReportTable(name="idsat_table_merge_wl")
+right = rfs.RightLayout(table, location=(2, 2))
+right.add_constraint([W, L],
+                     offset=(1, 0),
+                     gap=-1,
+                     ndr_format="$1.n+'(um)/'+$2.n+'(um)'",
+                     vdr_format="str($1.v*1E+6) + '/' + str($2.v*1E6)",
+                     val_filter={2: (condMin(L),)}
+                     )
+right.add_constraint(Idsat, repeat=T_count)
+right.add_constraint([T], ndr=0, offset=(-1, -T_count),
+                     vdr_format="$1.n+'('+str($1.v)+')'",
+                     vdr_direction=rfs.LAYOUT_DIR_RIGHT,
+                     tgr_direction=rfs.LAYOUT_DIR_DOWN)
+
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path)
+
+
+    </pre>
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

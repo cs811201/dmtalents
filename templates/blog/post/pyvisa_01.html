@@ -1,0 +1,76 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+PyVISA Instrument Control
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Extending the Power of IC-CAP Software with Python - PyVISA Instrument Control</h3>
+    <h5>by Michael Arendall [nSpace Labs], May 31, 2017 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/05/31/setting-up-a-python-virtual-environment-for-installing-pyvisa-instrument-control-in-keysight-ic-cap-2016"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    <br/><br/>
+
+    Many of you already know that Keysight's IC-CAP software provides an open flexible architecture that supports many
+    industry standard and proprietary models. It also provides drivers for a range of popular test instruments required
+    to make characterization measurements for extracting device model parameters and performing optimizations. But did
+    you know that you can customize your IC-CAP environment to tackle your own measurement challenges?
+    <br/><br/>
+    This might be very welcome news if you are working with cutting-edge devices and need more than the capabilities
+    already provided by IC-CAP. For many of these devices, skirting the limits of today’s technology often means that
+    the measurement capabilities required are a moving target. And that can be a costly and time-consuming proposition
+    if you have to buy and integrate new software tools every time you need new functionality. Your ability to automate
+    these advanced measurements may even mean the difference between the success or failure of your project.
+    <br/><br/>
+    What if you need to implement your own behavioral model in Verilog-A along with custom parameter extraction
+    routines? What if you want to create new measurement routines for controlling an arbitrary waveform generator? What
+    if you want to add a time-domain measurement capability using an oscilloscope to capture your device’s fast pulse
+    response?
+    <br/><br/>
+    I faced such a scenario in my work at nSpace Labs, where I'm developing custom models for memristors and adding
+    advanced measurement routines using the Keysight B1500A Semiconductor Device Analyzer. This analyzer is configured
+    with multiple high-resolution SMUs (Source Measurement Units) and an integrated B1530A WGFMU (Waveform
+    Generator/Fast Measurement Unit) to apply pulsed and arbitrary waveforms to the memristor’s electrodes, while
+    simultaneously performing Fast-IV measurements. I needed to communicate with the WGFMU via GPIB using a Keysight
+    provided software library and API for the WGFMU, something that is not currently supported by IC-CAP.
+    <br/><br/>
+    To take advantage of the WGFMU capabilities, I decided to use the Python programming language, included in all
+    recent versions of IC-CAP, and PyVISA—a Python module that enables control of all kinds of measurement devices
+    independent of the interface (e.g., GPIB, RS-232, USB or LAN). Utilizing IC-CAP's integrated Python environment, I
+    was able to extend the software’s built-in measurement capabilities by integrating the third-party libraries and
+    Python modules I needed for my application. This enabled me to programmatically generate the waveforms using Python,
+    and then send the appropriate commands to the WGFMU for pulsing and simultaneously making Fast-IV measurements on my
+    devices.
+    <br/><br/>
+    It took some effort, but I figured out how to install the WGFMU library and PyVISA package within a virtual Python
+    environment for use with Keysight IC-CAP 2016. Now, I'd like to share with you the procedure for using some free
+    Python packages and modules to extend the capabilities of IC-CAP. Using the WGFMU measurement routines that I have
+    developed in Python, I am now able to extract and optimize parameters for my memristor model and have the ability to
+    more accurately simulate the incremental conductance change of the memristor when a series of pulses are applied.
+    Having more accurate models and the accompanying time-based measurement data provide me with a better understanding
+    of the performance of the memristor-based circuits that I am designing. For you personally, extending the
+    capabilities of IC-CAP means you can realize a significant return on your investment in your IC-CAP software,
+    because you can now customize your environment to tackle whatever measurement challenge you might face.
+
+
+    <br/><br/>
+    Please read more step-by-step details from the <a
+        href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/05/31/setting-up-a-python-virtual-environment-for-installing-pyvisa-instrument-control-in-keysight-ic-cap-2016"
+        target="_blank">Original Post</a>.
+
+
+    <hr/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

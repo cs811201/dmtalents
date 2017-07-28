@@ -1,0 +1,52 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Save DUT Parameters and Variables into MDM file</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+When we do "Export Data..." from ICCAP, we don't get the DUT Parameters such as W, L, TEMP output in the .MDM file.<br/>
+We got Inputs and Outputs in the Header section by defaut.<br/>
+<img src="/static/faq/iccap/saveInstToMDM/3.png"><br/><br/>
+However, in case where these information are needed, such as to be used in MBP and MQA, it's always good to have them in the .MDM file.
+<br/>
+As highlighted below.
+<br/>
+<img src="/static/faq/iccap/saveInstToMDM/5.png"><br/>
+<br/>
+To do this, we just need to introduce a built-in ICCAP variable called
+<em>MDM_VALUES_LIST</em>, and specify W, L, TEMP, etc. as its Value, as shown below:<br/>
+<img src="/static/faq/iccap/saveInstToMDM/6.png"><br/>
+<br/>
+
+This variable is categoried under "Data Manager Options". <br/>
+<img src="/static/faq/iccap/saveInstToMDM/4.png"><br/><br/>
+<pre>
+
+Specifies a space or comma separated list of Parameter or Variable names.  The values
+of these Paramters/Variables are written to the MDM file.  When an MDM file with values
+stored in it is imported or used to auto-create a setup, these Paramters/Variables
+are atutomatically reset to the values stored in the MDM.  However, if a Parameter or
+Variable no longer exists in the scope of the setup being imported to, a variable will be
+created for that value in the Setup Variables Table.
+
+</pre>
+
+Then, we do the "Export Data..." again, we will find them saved in the .MDM file.
+<br/><br/>
+We can save variables from "DUT Parameters" tab: <br/>
+<img src="/static/faq/iccap/saveInstToMDM/1.png"><br/>
+<br/>
+As well as the "DUT Variables" tab:<br/>
+
+<img src="/static/faq/iccap/saveInstToMDM/2.png"><br/>
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

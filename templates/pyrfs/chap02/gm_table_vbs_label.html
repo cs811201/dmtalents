@@ -1,0 +1,88 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>gm Table | Vbs Label</h2>
+<hr>
+<div overflow="scroll">
+    In this chapter, let’s see how we can add label back to the Vbs values, as shown below:
+
+
+    <br/>
+    <img src="/static/pyrfs/chap02/07_gm_table_vbs_label/table.png"><br/><br/>
+
+    In our previous example, when we split the Target(gm) into multiple column per Vbs, the Vbs header only has its
+    value, and no “Vbs” name, because we have to use the “ndr=0” option on line 33.<br/><br/>
+    “ndr” stands for “name display range”, and “ndr=0” tells PyRFS not to print the variable’s name.<br/><br/>
+    To add the name back, we could take use of the “vdr_format” option, as highlighted on line 35.<br/><br/>
+    <img src="/static/pyrfs/chap02/07_gm_table_vbs_label/code.png"><br/><br/>
+
+    “vdr_format” stands for “value display range format”, and therein we could use $1.n to refer to the first
+    Constraint’s name, the Constraint here is [Vbs], and $1.v to refer to the first Constraint’s value, eventually we
+    will get strings like “Vbs=0”. And, because the value is a double number, we need to do “str($1.v)” to convert it to
+    a string.<br/><br/>
+    If we have more than one Constraints as input, say [Vbs, T], then we can use $2.n and $2.v to refer to the second
+    constraint, and so on.<br/><br/>
+    The “=” sign in between is added for easy reading, we can do other symbols too, such as “|”, then the output will be
+    “Vbs|0”, or space “ “, etc.<br/><br/>
+
+
+    Here is a <a href="/pyrfs/gm_table_vbs_label/download" target="_blank">copy of “gm_table_vbs_label.xlsx” for
+    download</a> .<br/><br/>
+
+    Code for copy-paste:
+    <pre>
+import os
+
+import pyrfs as rfs
+
+def getMaxCond(cond):
+    ticks = cond.get_axis().ticks
+    return max(ticks)
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="09_Mathematic_Robustness_2",
+         rule="Rule_1204",
+         check="Check_01")
+gm = dp.targets["gm"]
+Vds = dp.conditions['vds']
+Vgs = dp.conditions['vgs']
+Vbs = dp.conditions['vbs']
+Vbs_count = Vbs.get_num_values()
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+
+table = rfs.ReportTable(name="gm_table_vbs_label")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, T, Vds, Vgs],
+                     offset=(1, 0),
+                     val_filter={1: (getMaxCond(W),), 2: (getMaxCond(L),), 3: (25,)}
+                     )
+right.add_constraint([gm], repeat=Vbs_count)
+right.add_constraint([Vbs], offset=(-1, -Vbs_count),
+                     ndr=0,
+                     val_sort={1: 'dec'},
+                     vdr_format="$1.n+'='+str($1.v)",
+                     vdr_direction=rfs.LAYOUT_DIR_RIGHT,
+                     tgr_direction=rfs.LAYOUT_DIR_DOWN
+                     )
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path, format='xlsx', overwrite=True)
+
+
+
+
+    </pre>
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

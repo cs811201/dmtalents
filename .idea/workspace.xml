@@ -2,14 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/video/MBP_dIdsat_SA.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/load_csv_in_mbp/more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_sram/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/pyvisa/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/derivative/code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/derivative/gm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/linefit/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/linefit/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/linefit/code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/linefit/equ1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/linefit/equ2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/linefit/tip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pyrfs/chap02/02_idsat_table_T/idsat_table.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pyrfs/chap02/07_gm_table_vbs_label/gm_table_vbs_label.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pyrfs/chap02/08_idsat_table_merge_wl/idsat_table_merge_wl.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/load_csv_in_mbp/nmos_IdVd.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/angelov_in_ads.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/load_csv_in_mbp.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/mbp_bsim4_flow.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/mbp_sram.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/mqa_pyrfs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/pyvisa_01.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/srammodeling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/edit_post.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/edit_post_entry.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/iccap/iccapfaqlist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/iccap/saveInstToMDM.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/addInstParam.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/derivative.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/linefit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/tinyNumbers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/addPyRFS.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/enableInternalSpice3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/symm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap01/PyRFS_Basics.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap01/getStarted.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap01/guide_line.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/cond_target_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_sort_vbs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_t25.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs_label.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_merge_wl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_t.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/toc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/requestlogin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/video/ICCAP_bjt_modeling.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/video/ICCAP_open_gui.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/video/MBP_IV_diff_T.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/video/MBP_sram.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/video/MBP_use_diff_res.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flaskapp.wsgi" afterPath="$PROJECT_DIR$/flaskapp.wsgi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rename_files.py" afterPath="$PROJECT_DIR$/rename_files.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/about.html" afterPath="$PROJECT_DIR$/templates/about.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/add_post.html" afterPath="$PROJECT_DIR$/templates/add_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blog_index.html" afterPath="$PROJECT_DIR$/templates/blog/blog_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/disclaimer.html" afterPath="$PROJECT_DIR$/templates/disclaimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq/faq_list.html" afterPath="$PROJECT_DIR$/templates/faq/faq_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq/toc.html" afterPath="$PROJECT_DIR$/templates/faq/toc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/base.html" afterPath="$PROJECT_DIR$/templates/layouts/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules/toc.html" afterPath="$PROJECT_DIR$/templates/mqarules/toc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/login_user.html" afterPath="$PROJECT_DIR$/templates/security/login_user.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/updateHisCore.html" afterPath="$PROJECT_DIR$/templates/updateHisCore.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/video/MBP_dIdsat_SA.html" afterPath="$PROJECT_DIR$/templates/video/MBP_dIdsat_SA.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/video/toc.html" afterPath="$PROJECT_DIR$/templates/video/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/video/video_index.html" afterPath="$PROJECT_DIR$/templates/video/video_index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,15 +89,44 @@
     <favorites_list name="dmtalents" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file leaf-file-name="symm.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/symm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mqarules_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="1309" column="23" lean-forward="true" selection-start-line="1309" selection-start-column="23" selection-end-line="1309" selection-end-column="23" />
+            <state relative-caret-position="125">
+              <caret line="1211" column="37" lean-forward="false" selection-start-line="1211" selection-start-column="23" selection-end-line="1211" selection-end-column="37" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#6306#6307#0" expanded="false" />
+                <element signature="e#6760#6761#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -43,8 +135,8 @@
       <file leaf-file-name="updateHisCore.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            <state relative-caret-position="68">
+              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -55,44 +147,44 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="HTML4 File" />
         <option value="Python Script" />
+        <option value="HTML4 File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>text-faded</find>
-      <find>img-responsive</find>
-      <find>:hover</find>
-      <find>hover</find>
-      <find>bootstrap</find>
-      <find>center</find>
-      <find>f_T</find>
-      <find>f_max</find>
-      <find>(Keysight)</find>
-      <find>dash</find>
-      <find>pygal</find>
-      <find>char</find>
-      <find>blog</find>
-      <find>view_h</find>
-      <find>recent100SearchHis</find>
-      <find>chart</find>
-      <find>countTitleList</find>
-      <find>order_by</find>
-      <find>record</find>
-      <find>user_view</find>
-      <find>print</find>
-      <find>graph</find>
+      <find>iccapfaq</find>
+      <find>mqafaqli</find>
+      <find>/</find>
+      <find>index</find>
       <find>dashb</find>
+      <find>iccapfaq/</find>
+      <find>faq</find>
+      <find>mbpfaq</find>
+      <find>here</find>
+      <find>mqafaq</find>
+      <find>addpy</find>
+      <find>ange</find>
+      <find>sram</find>
+      <find>update</find>
+      <find>db.</find>
+      <find>flow</find>
+      <find>/add</find>
+      <find>pdf</find>
       <find>download</find>
-      <find>getCategory</find>
-      <find>why_dm_services</find>
-      <find>lineseq</find>
-      <find>blue</find>
+      <find>pyrfs</find>
+      <find>mbpst</find>
+      <find>iccap</find>
+      <find>12</find>
+      <find>top</find>
+      <find>getRandomIntFrom1toGiven</find>
+      <find>blog</find>
       <find>video</find>
-      <find>mqafa</find>
+      <find>blue</find>
+      <find>rule</find>
+      <find>symm</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/static/mbpst</replace>
@@ -123,65 +215,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/APIs.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/CMD.VARTABLE.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/MBPVAR.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/ScriptDialog.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/GraphDataSource.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/Math.html" />
-        <option value="$PROJECT_DIR$/templates/mbpst/Chap5/Model.html" />
-        <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
-        <option value="$PROJECT_DIR$/templates/viewerLitsFor.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/synchro.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/normalize.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/ideff.html" />
-        <option value="$PROJECT_DIR$/templates/video/MBP_Ion_Ioff_corelation.html" />
-        <option value="$PROJECT_DIR$/templates/video/MBP_Ion_Ioff_correlation.html" />
-        <option value="$PROJECT_DIR$/templates/faq/mqa/redefinedparam.html" />
-        <option value="$PROJECT_DIR$/templates/faq/mqa/redefinedparams.html" />
-        <option value="$PROJECT_DIR$/static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule" />
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/mismatch_spe_mos.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/mismatch_hsp_mos.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
-        <option value="$PROJECT_DIR$/templates/update_history.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/static/css/creative.css" />
-        <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/templates/blog/post/vth_algor.html" />
-        <option value="$PROJECT_DIR$/templates/blog/post/vth_near_gm.html" />
-        <option value="$PROJECT_DIR$/templates/blog/post/why_dm_services.html" />
-        <option value="$PROJECT_DIR$/templates/blog/post/ftfmax.html" />
-        <option value="$PROJECT_DIR$/templates/layouts/base.html" />
-        <option value="$PROJECT_DIR$/templates/last200views.html" />
-        <option value="$PROJECT_DIR$/templates/last300views.html" />
-        <option value="$PROJECT_DIR$/templates/viewerListFor.html" />
-        <option value="$PROJECT_DIR$/templates/recent100Searches.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/templates/viewerHis.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard_chart_view.html" />
-        <option value="$PROJECT_DIR$/static/css/landing-page.css" />
-        <option value="$PROJECT_DIR$/funcs/dbfuncs.py" />
-        <option value="$PROJECT_DIR$/funcs/downloads.py" />
-        <option value="$PROJECT_DIR$/funcs/csutil.py" />
-        <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
-        <option value="$PROJECT_DIR$/rename_files.py" />
-        <option value="$PROJECT_DIR$/templates/blog/post/iccap_python.html" />
-        <option value="C:/work/Customers/Micron/Demo_032017/python/csvc.py" />
-        <option value="$PROJECT_DIR$/templates/video/toc.html" />
-        <option value="$PROJECT_DIR$/templates/video/video_index.html" />
-        <option value="$PROJECT_DIR$/templates/video/MBP_dIdsat_SA.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/linefit.html" />
+        <option value="$PROJECT_DIR$/templates/video/MBP_use_diff_res.html" />
+        <option value="$PROJECT_DIR$/addE12.py" />
+        <option value="$PROJECT_DIR$/templates/faq/toc.html" />
+        <option value="$PROJECT_DIR$/templates/faq/iccap/saveInstToMDM.html" />
+        <option value="$PROJECT_DIR$/templates/faq/iccap/iccapfaqlist.html" />
+        <option value="$PROJECT_DIR$/templates/faq/faq_list.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/tinyNumbers.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/addInstParam.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mqa/addPyRFS.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mqa/enableInternalSpice3.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/srammodeling.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/angelov_in_ads.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/mbp_sram_01.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/mbp_sram.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/mbp_bsim4_flow.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/pyvisa_01.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_t.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/cond_target_list.html" />
         <option value="$PROJECT_DIR$/templates/add_post.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap01/guide_line.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_merge_wl.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap01/getStarted.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/toc.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs_label.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_t25.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_sort_vbs.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_merge_wl.html" />
+        <option value="$PROJECT_DIR$/rename_files.py" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap01/PyRFS_Basics.html" />
+        <option value="$PROJECT_DIR$/templates/requestlogin.html" />
+        <option value="$PROJECT_DIR$/templates/security/login_user.html" />
+        <option value="$PROJECT_DIR$/templates/disclaimer.html" />
+        <option value="$PROJECT_DIR$/templates/about.html" />
+        <option value="$PROJECT_DIR$/templates/video/ICCAP_utility.html" />
+        <option value="$PROJECT_DIR$/templates/video/ICCAP_open_gui.html" />
+        <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/mqa_pyrfs.html" />
+        <option value="$PROJECT_DIR$/templates/layouts/base.html" />
+        <option value="$PROJECT_DIR$/templates/video/ICCAP_bjt_modeling.html" />
+        <option value="$PROJECT_DIR$/templates/video/toc.html" />
+        <option value="$PROJECT_DIR$/templates/video/MBP_sram.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/rules/symm.html" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="x" value="35" />
+    <option name="y" value="36" />
+    <option name="width" value="1876" />
+    <option name="height" value="1121" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -201,7 +293,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -215,122 +306,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dmtalents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dIdsat_sa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="DefaultHtmlFileTemplate" value="HTML4 File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -349,31 +333,26 @@
       <recent name="D:\projects\dmtalents\static\faq\mqa\maxWaitTime" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
       <recent name="D:\projects\dmtalents\templates\video" />
       <recent name="D:\projects\dmtalents\templates\blog\post" />
       <recent name="D:\projects\dmtalents\templates" />
-      <recent name="D:\projects\dmtalents\static\js" />
-      <recent name="D:\projects\dmtalents\static\css" />
+      <recent name="D:\projects\dmtalents\static\pyrfs\chap02\08_idsat_table_merge_wl" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="Python.__init__">
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dmtalents" />
-      <option name="SCRIPT_NAME" value="D:\projects\dmtalents\__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="rename_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -389,6 +368,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rename_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -406,6 +386,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="notebook" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -423,6 +404,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notebook.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="csvc" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -440,6 +422,25 @@
       <option name="SCRIPT_NAME" value="C:/work/Customers/Micron/Demo_032017/python/csvc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="addE12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dmtalents" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/addE12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -457,6 +458,7 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -469,25 +471,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dmtalents" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dmtalents" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -519,15 +502,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dmtalents" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -540,19 +518,44 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dmtalents" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dmtalents" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.rename_files" />
+      <item index="1" class="java.lang.String" itemvalue="Python.__init__" />
+      <item index="2" class="java.lang.String" itemvalue="Python.notebook" />
+      <item index="3" class="java.lang.String" itemvalue="Python.csvc" />
+      <item index="4" class="java.lang.String" itemvalue="Python.addE12" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="1" class="java.lang.String" itemvalue="Python.rename_files" />
+        <item index="2" class="java.lang.String" itemvalue="Python.addE12" />
+        <item index="3" class="java.lang.String" itemvalue="Python.csvc" />
+        <item index="4" class="java.lang.String" itemvalue="Python.notebook" />
+      </list>
+    </recent_temporary>
+    <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -569,29 +572,8 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.rename_files" />
-      <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
-      <item index="3" class="java.lang.String" itemvalue="Python.notebook" />
-      <item index="4" class="java.lang.String" itemvalue="Python.csvc" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="1" class="java.lang.String" itemvalue="Python.csvc" />
-        <item index="2" class="java.lang.String" itemvalue="Python.rename_files" />
-        <item index="3" class="java.lang.String" itemvalue="Python.notebook" />
-        <item index="4" class="java.lang.String" itemvalue="Python.main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -859,7 +841,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489783141226</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="1/24/2017">
+      <created>1490303528390</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1490303528390</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -872,19 +861,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="35" y="36" width="1876" height="1121" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14978679" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17070484" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3493014" sideWeight="0.5031056" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20768432" sideWeight="0.49689442" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30838323" sideWeight="0.49689442" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23968565" sideWeight="0.49689442" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123046875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33433133" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3233533" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22177091" sideWeight="0.503992" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26620826" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -941,7 +931,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -950,285 +940,310 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/video/MBP_Ion_Ioff_correlation.html">
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/srammodeling.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="66" lean-forward="false" selection-start-line="69" selection-start-column="3" selection-end-line="79" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/ftfmax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/pyvisa_01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/mbp_bsim4_flow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addE12.py" />
+    <entry file="file://$PROJECT_DIR$/static/pyrfs/chap02/02_idsat_table_T/idsat_table.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pyrfs/chap02/02_idsat_table_T/src.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pyrfs/chap02/02_idsat_table_T/src05.png" />
+    <entry file="file://$PROJECT_DIR$/static/pyrfs/chap02/02_idsat_table_T/src06.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/pyrfs/chap02/03_gm_table_list/detailT.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/synchro.html">
+    <entry file="file://$PROJECT_DIR$/templates/add_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="63" />
+        <state relative-caret-position="89">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/faq/mqa/redefinedparams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/mqarules/mismatch_hsp_mos/Mismatch_hsp_mos.rule">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/ideff.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/mismatch_spe_mos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/mismatch_hsp_mos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="23" lean-forward="false" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/update_history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/creative.min.css" />
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap2.css" />
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/templates/add_user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/creative.css" />
-    <entry file="file://$PROJECT_DIR$/static/js/creative.js">
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap01/guide_line.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+        <state relative-caret-position="374">
+          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap01/getStarted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_t25.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_sort_vbs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/cond_target_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs_label.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-711">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_t.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_merge_wl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/toc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rename_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap01/PyRFS_Basics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/requestlogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/security/login_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/disclaimer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/blog/vth_algor/pastedImage_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-758">
-          <caret line="4" column="6111" lean-forward="false" selection-start-line="4" selection-start-column="6111" selection-end-line="4" selection-end-column="6111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/font-awesome/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/post/vth_near_gm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="60" column="69" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/post/why_dm_services.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/pygal/graph/public.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/last300views.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/recent100Searches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/viewerListFor.html">
+    <entry file="file://$PROJECT_DIR$/templates/video/ICCAP_open_gui.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard_chart_view.html">
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/load_csv_in_mbp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/viewerHis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/landing-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="392" column="1" lean-forward="true" selection-start-line="392" selection-start-column="1" selection-end-line="392" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funcs/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/plots.py" />
-    <entry file="file://$PROJECT_DIR$/linkedIn_pics/1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funcs/downloads.py" />
-    <entry file="file://$PROJECT_DIR$/funcs/dbfuncs.py" />
-    <entry file="file://$PROJECT_DIR$/funcs/csutil.py" />
-    <entry file="file://$PROJECT_DIR$/rename_files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="459">
+          <caret line="27" column="98" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/blog_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="77" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="77" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/post/vth_algor.html">
+    <entry file="file://$PROJECT_DIR$/templates/layouts/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="518">
+          <caret line="97" column="53" lean-forward="true" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_python.html">
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/mqa_pyrfs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2533">
-          <caret line="149" column="36" lean-forward="false" selection-start-line="149" selection-start-column="36" selection-end-line="149" selection-end-column="36" />
+        <state relative-caret-position="408">
+          <caret line="23" column="76" lean-forward="false" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/os.py">
+    <entry file="file://$PROJECT_DIR$/templates/video/ICCAP_bjt_modeling.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="89" column="10" lean-forward="false" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/work/Customers/Micron/Demo_032017/python/csvc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/post/ftfmax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/video/toc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+        <state relative-caret-position="170">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/video/MBP_set_gminDC.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/mbp_sram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/video/MBP_tabs_sfloat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/video/MBP_sram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="85" lean-forward="false" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/vthcon_finfet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/video/video_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#h5#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post_added.html">
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1236,39 +1251,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/video/MBP_dIdsat_SA.html">
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_post.html">
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/symm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        <state relative-caret-position="386">
+          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="1309" column="23" lean-forward="true" selection-start-line="1309" selection-start-column="23" selection-end-line="1309" selection-end-column="23" />
+        <state relative-caret-position="125">
+          <caret line="1211" column="37" lean-forward="false" selection-start-line="1211" selection-start-column="23" selection-end-line="1211" selection-end-column="37" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#6306#6307#0" expanded="false" />
+            <element signature="e#6760#6761#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>

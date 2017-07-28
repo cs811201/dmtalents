@@ -1,0 +1,38 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Display Tiny Numbers</h2>
+<h3>MBP FAQ</h3>
+<hr>
+Sometimes, we found tiny numbers were not correctly displayed on MBP's graphs, one example is shown below. Pay attention to the blue and green curves in the circled region, it looks like some points got cut off, and didn't go all the way to Vgs=0.
+<br/>
+<img src="/static/faq/mbp/tinyNumbers/1.png"><br/><br/>
+
+Here is the correctly displayed graph:<br/>
+<img src="/static/faq/mbp/tinyNumbers/2.png"><br/><br/>
+
+Well, this is controlled by a couple of options in MBP, as shown below:<br/><br/>
+Go to menu "Tool->Preferences", and in the Preferences window, under "Error And RMS -> RMS Options", we can see the Resolution and Cutoff settings. By changing the default Resolution and Cutoff form 1.0E-12 to 1.0E-15 or even lower value(such as 1E-18) per our data and model, and click "OK" or "Apply" button on the Preference window, the graphs will update accordingly.
+<br/>
+<img src="/static/faq/mbp/tinyNumbers/3.png"><br/><br/>
+
+Another option we can play with that will affect the simulation is the GminDC setting, as illustrated <a
+        href="/mbpfaq/setgmindc"
+        target="_blank">here
+    in another FAQ</a>, it will effectively update the simulation results hence the graph display.<br/>
+<img src="/static/faq/mbp/tinyNumbers/4.png"><br/><br/>
+
+If we set GminDC = 1E-15, we will get the following simulation curves.<br/>
+<img src="/static/faq/mbp/tinyNumbers/5.png"><br/><br/>
+
+<br/><br/>
+The data and model used in this FAQ are from MBP's default BSIM4 model and demo DC mosfet data.<br/><br/>
+Thanks!
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

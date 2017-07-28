@@ -1,0 +1,98 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Symmetry Check Rule
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Symmetry Check up to 3rd-order Derivative</h2>
+<h3>MQA Rules</h3>
+<hr>
+Often, latest models present symmetry issue with bias(Vds) across 0 voltage for Drain and Source currents. So, it's important to do this symmetry check for every version of the models, this example rule described here can be applied to many models, such as BSIM4, BSIMIMG, BSIMBULK, etc.
+
+<br>
+<br>
+Example output of a BSIMIMG model is shown below:<br>
+<br>
+1. Differece between Drain and Source currents: Ix = (Is - Id)/2  <br/>
+<img src="/static/mqarules/symm/1.jpg"/><br/><br/>
+
+2. Overlay Drain and Source currents. <br/>
+<img src="/static/mqarules/symm/2.jpg"/><br/><br/>
+
+3. 1st-order Derivative of Drain current.<br/>
+<img src="/static/mqarules/symm/3.jpg"/><br/><br/>
+
+4. 2nd-order Derivative of Drain current.<br/>
+<img src="/static/mqarules/symm/4.jpg"/><br/><br/>
+
+5. 3rd-order Derivative of Drain current.<br/>
+<img src="/static/mqarules/symm/5.jpg"/><br/><br/>
+
+symmTest.rule: <a href="/mqarules/symm/download" target="_blank">download</a>
+<pre>
+[common]
+appliedmodel = global, binning, macro
+
+[Group: 3:Title= Symmetry Test]
+
+[Label: 83001:title=Symmetry Test for NMOS up to 3rd-order Derivative]
+[Condition:devtype=1]
+[option:sweeptype=dc]
+[Loops
+: x=vx
+: p=Vg(0.6, 0.8, 1.0, 1.2)
+: p1=vb(0)
+: p2=vd(0)
+: p3=W(g_wmin)
+: p4=L(g_lmin)
+]
+[Target
+:y1=Ivd
+:y2=Ivs
+:Ix=0.5*(y2-y1)
+:y3=Ix
+:y4=Ivd*1e12
+:y5=Ivs*1e12
+:y1prime=-1*y1
+:dIddVx1st=D1(x,y1prime,2)*1e6
+:dIddVx2nd=D1(x,dIddVx1st,2)
+:dIddVx3rd=D1(x,dIddVx2nd,2)
+:y6=dIddVx1st
+:y7=dIddVx2nd
+:y8=dIddVx3rd
+]
+[Check: 01:check Ix continuity:checkkink2d(p,x,y3):Discontinuity in Ix]
+[Check: 02:Id_Is plot:Saveanyddata(p,x,y1,y2): error: Plot only]
+[Check: 03:1st-order Derivative:Saveanyddata(p,x,y6): error: Plot only]
+[Check: 04:2nd-order Derivative:Saveanyddata(p,x,y7): error: Plot only]
+[Check: 05:3rd-order Derivative:Saveanyddata(p,x,y8): error: Plot only]
+[Check: 06:check Id kink:checkkink2d(p,x,y4): error: Bow near vds=0 occurs]
+[Check: 07:check Is kink:checkkink2d(p,x,y5): error: Bow near vds=0 occurs]
+[Compare: 11:Compare Ix continuity:compPlot(p,x,y3):Discontinuity in Ix]
+[Compare: 12:Compare Id_Is plot:compPlot(p,x,y1,y2): error: TBD]
+[Compare: 13:Compare 1st-order Derivative:compPlot(p,x,y6): error: TBD]
+[Compare: 14:Compare 2nd-order Derivative:compPlot(p,x,y7): error: TBD]
+[Compare: 15:Compare 3rd-order Derivative:compPlot(p,x,y8): error: TBD]
+[Compare: 16:Compare Id kink:compPlot(p,x,y4): error: TBD]
+[Compare: 17:Compare Is kink:compPlot(p,x,y5): error: TBD]
+
+[benchmark]
+*gumsym3- mGST, nmos accumulation
+@@xx_m1 d g s b @@mm_LV_NMOS w=@w l=@l
+vb b 0 @vb
+vg g 0 @vg
+vx x 0 0
+vd d x @vd
+es y 0 x 0 -1
+vs s y 0
+.dc vx -0.2 0.2 0.01
+.plot dc Ivd=i(vd) Ivs=i(vs)
+.end
+
+</pre>
+
+<br/><br/><br/><br/>
+
+
+{% endblock %}

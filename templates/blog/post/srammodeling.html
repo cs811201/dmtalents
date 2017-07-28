@@ -1,0 +1,86 @@
+<p>{% extends "layouts/mf.html" %} {% block title%} Load .csv {% endblock %} {% block content %}</p>
+<div class="container">
+    <h3>SRAM Cell Model Generation and Modeling Efficiency Take Center Stage in New Software Releases</h3>
+    <h5>by Kaelly Farnham[Keysight] May 4, 2017 --
+        <a
+                href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/05/04/sram-cell-model-generation-and-modeling-efficiency-take-center-stage-in-new-software-releases"
+                target="_blank">Original Post</a>
+    </h5>
+    <hr/>
+    <div align="right"><a href="http://www.keysight.com/find/mytrial.mbp.blg" target="_blank"> <img
+            src="/static/blog/Apply+for+a+free+trial.jpg" alt=""/></a></div>
+    <br/>
+    Accurate and efficient modeling is critical to successful design, especially when it comes to the Static Random
+    Access Memory (SRAM) cell, the minimum geometry devices in integrated circuit technology. Modeling such circuits has
+    grown increasingly complex with the advent of nanometer scale process geometries. That’s because increasing process
+    variation makes model stability more challenging.<br/><br/>
+
+    The latest release of Keysight Technologies’ <a
+        href="https://community.keysight.com/external-link.jspa?url=http%3A%2F%2Fwww.keysight.com%2Ffind%2Feesof-mbp2017"
+        target="_blank">Model Builder Program (MBP) 2017</a> now features a SRAM cell model
+    generation package that’s designed to address this challenge head on, by enabling engineers to extract
+    transistor-level and memory-cell models in one MBP session. The user can easily simulate cell-level
+    figures-of-merit, tune model parameters and even compare two memory cell models (Figure 1).<br/><br/>
+    <img src="/static/blog/sram_modeling/1.png"/><br/>
+    <em>Figure 1. With MBP 2017, users can easily compare SRAM cell models.</em>
+    <br/><br/>
+    According to Roberto Tinti, Keysight’s Device Modeling Planning Manager, the extraction package came about as a
+    result of a collaboration with a major customer. “Working together we developed a solution that not only reduces
+    modeling iteration but cuts the design cycle as well. It promises to bring many benefits to both existing and future
+    MBP customers.”<br/><br/>
+
+    Additional enhancements in MBP 2017 include:
+    <ul>
+        <li>An enhanced statistical model extraction flow and updated application examples</li>
+        <li>Enhanced extraction flows for BSIM3v3, BSIM4, and BSIM-CMG, etc.</li>
+        <li>Updates to the following models: BSIM-CMG 110.0, BSIM-CMG 109.0, BSIM-IMG 102.8, BSIM-IMG 102.7, HiSIM2
+            2.9.0, HiSIM_HV 2.3.2, HiSIM_HV 2.3.1, HiSIM_HV 2.3.0, EKV 302.00
+        </li>
+
+    </ul>
+    <img src="/static/blog/sram_modeling/2.png"/><br/>
+    <em>Figure 2. Available in MBP 2017 is an updated scripts-based model extraction flow.</em>
+    <br/><br/>
+    Keysight has also released a new version of its <a
+        href="https://community.keysight.com/external-link.jspa?url=http%3A%2F%2Fwww.keysight.com%2Ffind%2Feesof-mqa2017"
+        target="_blank">Model Quality Assurance (MQA) 2017</a> software with enhancements
+    designed to improve modeling efficiency and model quality. MQA 2017 contains a new internal SPICE3 engine that
+    allows users to run quick simulation and quality assurance (QA). It supports the latest compact model versions.
+    Python scripts are also now supported, enabling generation of user-defined Excel tables based on exciting QA
+    results.<br/><br/>
+
+    "The advanced effects and parasitics in new devices make device modeling more complicated than ever,” said MA Long,
+    Device Modeling Product Manager with Keysight. “With the new internal engine, users can run model quality checks
+    during parameter extraction and uncover potential risks in the early design stage. Support for Python scripts
+    provides the user even more flexibility and functionality in generating tables over the existing TCL and Perl
+    solutions offered."<br/><br/>
+    <img src="/static/blog/sram_modeling/3.png"/><br/>
+    <em>Figure 3. N/P compare table generation with Python Script as provided by MQA 2017.</em>
+    <br/><br/>
+
+    Other enhancements in MQA 2017 include support for Spectre native aging simulation, SmartSpice version 4.26.7.R and
+    Microsoft Office 2016. Unlike traditional manual scripting methods, MQA enables users to check their SPICE models,
+    compare models and generate QA reports in a complete and efficient way.<br/><br/>
+
+
+    MBP and MQA are Keysight’s industry-leading device modeling and characterization products. MQA is the industry
+    standard for SPICE model acceptance and sign off, and is widely adopted by leading integrated device manufacturers
+    (IDMs), foundries and design houses.
+    <br/><br/>
+    Information on MBP 2017 and MQA 2017, is available at
+    <a href="https://community.keysight.com/external-link.jspa?url=http%3A%2F%2Fwww.keysight.com%2Ffind%2Feesof-mbp2017"
+       target="_blank">www.keysight.com/find/eesof-mbp2017</a> and <a
+        href="https://community.keysight.com/external-link.jspa?url=http%3A%2F%2Fwww.keysight.com%2Ffind%2Feesof-mqa2017"
+        target="_blank">www.keysight.com/find/eesof-mqa2017</a>, respectively. To
+    apply for a free
+    software trial, go to <a
+        href="https://community.keysight.com/external-link.jspa?url=http%3A%2F%2Fwww.keysight.com%2Ffind%2Fmytrial.mbp.blg"
+        target="_blank">www.keysight.com/find/mytrial.mbp.blg</a> and <a
+        href="https://community.keysight.com/external-link.jspa?url=http%3A%2F%2Fwww.keysight.com%2Ffind%2Fmytrial.mqa.blg"
+        target="_blank">www.keysight.com/find/mytrial.mqa.blg</a>.
+    <br/><br/>
+    <hr/>
+    <br/><br/><br/><br/>
+
+
+    {% endblock %}

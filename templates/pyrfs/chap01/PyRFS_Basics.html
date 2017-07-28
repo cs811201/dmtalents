@@ -1,0 +1,64 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>What is PyRFS</h2>
+<hr>
+<div overflow="scroll">
+    For model quality assurance and/or report, device information in tabular format is very helpful, a table can
+    summarize a
+    lot of information when we organize it properly. Many times, a one page table summary can beat a
+    30-page report full of curves, helping save a tree.<br/><br/>
+
+    MQA has always been good at exporting reports in graphs, and also tables; however, the built-in table
+    formats were relatively limited. Please refer to MQA user manual “Appendix -> Table Types” for all built-in tables
+    types.
+    <br/><br/>
+    <mark>What if the built-in table formats are not sufficient?</mark>
+    <br/><br/>
+    Now, MQA 2017 release comes up with a great module called <font style="color:red">PyRFS</font>, a Python module
+    that allows users to fully customize (generate or update existing) tables in .csv or .xlsx files formats, using its
+    high efficiency Python APIs.<br/>
+    <em>Note: Python 2.7 based.</em><br/><br/>
+
+    This tutorial will lead us to be PyRFS experts by exercising many examples.<br/><br/>
+
+    In the first chapter, let’s firstly take a look at what benefits we get from PyRFS.
+    <h3>Benefits of PyRFS for MQA users</h3>
+
+    Simple enough to generate all sorts of tables quickly, while with plenty of options to customize the table in a flexibly way:
+    <ul>
+        <li>1. Query and have fine control of MQA projects’ results</li>
+        <li>2. Create tables in a flexible and scalable way, sort/filter/formulate/format/layout the data in many
+            ways.
+        </li>
+        <li>3. It’s Python, so feel free to blend in your favorite python stuff.</li>
+    </ul>
+
+    <br/>
+    <h4>Some examples</h4>
+    1. A table where we put device targets in columns per different temperature.<br/>
+
+    <img src="/static/pyrfs/chap01/1.1_benefits/2.png">
+    <br/><br/>
+    2. A table where we apply math formula.<br/>
+
+    <img src="/static/pyrfs/chap01/1.1_benefits/3.png"><br/><br/>
+    3. A table where we put a variety of device targets of different W/T from different corners together, even combine
+    both NCH and PCH.
+    <img src="/static/pyrfs/chap01/1.1_benefits/1.png"><br/><br/>
+
+    4. A group of tables<br/>
+    <img src="/static/pyrfs/chap01/1.1_benefits/4.png"><br/><br/>
+
+    5. Customized location, header and number format, grouped varibles, sorted/filtered contents, etc<br/>
+    <img src="/static/pyrfs/chap01/1.1_benefits/5.png"><br/><br/>
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

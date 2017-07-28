@@ -1,0 +1,83 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+Apply Angelov GaN Model Extracted by IC-CAP in ADS
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Apply Angelov GaN Model Extracted by IC-CAP in ADS</h3>
+    <h5>by Feng Gu [Keysight] May 22, 2017</h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    This blog explains how to apply the Angelov GaN model extracted by IC-CAP in ADS(Keysight Advanced Design System),
+    for large signal simulation verification and/or other circuitry simulation. The difficulty was caused by the fact
+    that Angelov GaN model is in VerilogA format and is somehow different from ADS’s built-in models.
+    <br/><br/>
+    Here are the steps for ADS users to use ICCAP-saved .mps and .lib files.
+    <br/><br/>
+    1. Add the VerilogA designKit into ADS in order to handle the verilogA code of Angelov GaN model.<br/><br/>
+
+    (1) In ADS main window, do “DesignKit > Manage Favorite Design Kits”, open the “Manage Favorite Design Kits”
+    dialog.<br/>
+    (2) Click on “Add Library Definition File”, and select the $HPEESOF_DIR/tiburonda/ads/designkits/tiburon-da_veriloga
+    directory.<br/>
+    (3) Pick up the “Lib.defs” file, and click Open.<br/>
+    (4) From the “Add Design Kit” window, add the it to the current workspace, click OK.<br/>
+    (5) Now, close the Manage Favorite Design Kits window, and open a Schematic window, we now see “Devices-Verilog-A”
+    available in the Component Palette. As shown below. <br/>
+
+    <br/><img src="/static/blog/angelov_in_ads/1.png"/><br/><br/>
+
+    2. Select one of the icons highlighted in the red rectangle for Angelov model.<br/><br/>
+    3. Load the model card, and there are two ways to do it:<br/>
+    (1) do “Tools > IC-CAP Import > Any Device”, as shown below.
+
+
+    <br/><img src="/static/blog/angelov_in_ads/2.png"/><br/><br/>
+
+    Input “angelov_gan_va_Model” (Case sensitive).
+    <br/><img src="/static/blog/angelov_in_ads/3.png"/><br/><br/>
+
+    A Dialog will pop up, go ahead to load the ICCAP-saved .mps file.<br/>
+
+    We shall see the model parameters are loaded in the Schematic.
+    <br/><img src="/static/blog/angelov_in_ads/4.png"/><br/>
+    Note: this method would allow user to further adjust model parameters.
+    <br/><br/>
+    (2) We could also use “DynamicLink > Add Netlist File Include”<br/>
+
+    <br/><img src="/static/blog/angelov_in_ads/5.png"/><br/><br/>
+
+    Then, pick the .lib file saved from ICCAP. Note, the path of the VerilogA file in the lib file must be correct.<br/>
+
+    <br/><img src="/static/blog/angelov_in_ads/6.png"/><br/>
+    Note: this method won’t allow user to further adjust model parameters.<br/>
+
+
+    <br/>
+
+
+    4. Next, we can build a circuitry to simulate the Angelov GaN model in ADS, such as the following:<br/>
+    <br/><img src="/static/blog/angelov_in_ads/7.png"/><br/><br/>
+
+    And, here is the simulation results.
+    <br/><img src="/static/blog/angelov_in_ads/8.png"/><br/><br/>
+
+
+    Thanks!
+    <br/><br/>
+    <hr/>
+
+    <br/><br/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

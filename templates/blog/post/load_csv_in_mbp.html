@@ -1,0 +1,61 @@
+<p>{% extends "layouts/mf.html" %} {% block title%} Load .csv {% endblock %} {% block content %}</p>
+<div class="container">
+    <h3>How to load comma separated values(CSV) into MBP</h3>
+    <h5>by Shuang Cai[Keysight] Mar 28, 2017</h5>
+    <hr/>
+    <div><a href="http://www.keysight.com/find/mytrial.mbp.blg" target="_blank"> <img
+            src="/static/blog/Apply+for+a+free+trial.jpg" alt=""/></a></div>
+    <br/>
+    All modeling activities rest on the shoulders of accurate data that must be parsed and analyzed by the
+    modeling tool. Sometimes, this data may arrive in different formats and from different sources. While many modeling
+    tools will only accept specific formats, we are pleased to report that MBP may accept and analyze CSV formatted data
+    with arbitrary column names and headers. This turns out to be both very useful and easy to do. <br/><br/> Using the
+    powerful scripting capability in MBP, we may write a short program of approximate 20 lines of code to finish the
+    reading, no matter how large the .csv file is; and then build necessary graphs by selecting any 2 or 3 columns from
+    the data, which can be readily used for simulation/optimization/auto-flow. <br/><br/>
+    <h4>Example</h4>
+    An example CSV file is provided for your reference: nmos_IdVd.csv <a href="/blog/load_csv_in_mbp/download"
+                                                                         target="_blank">[download]</a> <br/><br/>
+    Below, we show a snapshot of a small section of the CSV file, with separate columns for gate width, length,
+    temperature, etc.&nbsp; The drain current ID for this nmos MOSFET device is tabulated to the far right.<br/> <img
+        src="/static/blog/load_csv_in_mbp/1.png" alt=""/><br/> <em>Figure 1.</em> <br/><br/> In a text editor, we may
+    see the actual comma-separated values. <br/> <img src="/static/blog/load_csv_in_mbp/2.png" alt=""/><br/> <em>Figure
+    2.</em> <br/><br/> Our goal in this exercise is to map the contents of the .csv to an MBP <em>DATA</em> object,
+    where <em>DATA</em> is a MBP built-in data structure that can be visualized as a table.&nbsp; For more details,
+    please refer to <a href="/mbpst/chap3.4" target="_blank"> Chapter 3.4</a> or <a href="/mbpst/chap3.6"
+                                                                                    target="_blank">Chapter 3.6</a> of
+    the user manual.<br/> <br/> When we are done, it will look like the following DATA table in MBP as shown below:<br/>
+    <img src="/static/blog/load_csv_in_mbp/table.png" alt=""/><br/> <em>Figure 3.</em> <br/><br/> And we will then be
+    able to create and view graphs like these:<br/><br/> (1) Ids_Vds_Vgs graphs<br/>&nbsp;In the graph below, the square
+    symbols represent measured data, and solid lines represent simulation data.<br/> Note: our "measured" data is
+    actually simulated, so the model and measurement fit perfectly.<br/><br/> <img
+        src="/static/blog/load_csv_in_mbp/idvdvg.png" alt=""/><br/> <em> Figure 4.</em> <br/><br/> (2) Ids_Vgs_T
+    graphs<br/> Given that there are multiple temperatures in this example CSV file, we observe a family of curves
+    representing each temperature.&nbsp; <br/> <img src="/static/blog/load_csv_in_mbp/idvdt.png" alt=""/><br/> <em>Figure
+    5.</em> <br/><br/> To accomplish this, we created a new <em>DATA</em> set from an intermediate variable
+    (<em>imv</em>), and named it<em> &ldquo;CSV_IDVD&rdquo;.&nbsp; P</em>lease refer to <a href="/mbpst/chap2.1.1"
+                                                                                           target="_blank">Chapter
+    2.1.1</a> for more details on IMV's.&nbsp; The following script shows how we may parse each of the columns to the
+    MBP data set. <br/> <img src="/static/blog/load_csv_in_mbp/code.png" alt=""/><br/> <em>Figure 6.</em> <br/><br/> On
+    line 8, we created a new table, and then inserted values into it on line 31.&nbsp; In every round of the
+    <em>while</em> loop (lines 21-30), we parse one line from the .csv, and insert it as one row in the <em>DATA</em>
+    table that is finally returned on line 37. It is this straightforward and simple. By running the script in Figure 6,
+    we shall get the table shown above in Figure 3.<br/> <br/> For a more detailed explanation of the function to create
+    a table, you may click the following:&nbsp;<em> <a href="/mbpst/chap5.2/MBPDATA" target="_blank">MBPDATA.createDCTable()</a>.</em><br/><br/>If
+    your .csv file has a different number of columns, then you may simply change line 8 to reflect the variable names in
+    your table.&nbsp; In the <em>while</em> loop, we added a few extra lines to refer to the added variables.&nbsp; Be
+    sure to assign proper column index for each element.
+    <br/><br/>
+
+    For example, if one's .csv file has more device instance variables(such as SA, SB) and more output columns(such as
+    Igate, Isub), below is the updated code to reflect the necessary change:<br/> <img
+            src="/static/blog/load_csv_in_mbp/more.png" alt=""/><br/> Note: even though we used the same name &ldquo;ids_vds_vgs&rdquo;
+    as the analysis name(highlighted in blue), we will get Igate and Isub in the output DATA table which may be further
+    be used to create Igate and Isub graphs just as Ids. <br/> <br/> Next, we go ahead to pick any 2 or 3 columns form
+    the table, and assign them as X/Y/Z axes, we shall get Figure 4, 5 and more. For more details about how to create
+    graphs from a table (no more than a few clicks), please refer to <a href="/mbpst/chap2.1.2" target="_blank">Chapter
+        2.1.2</a> .<br/> <br/>
+    <hr/>
+    <br/> Interested in Model Builder Program (MBP) Software? - Click <a href="http://www.keysight.com/find/mytrial.mbp.blg
+" target="_blank">here to apply for a FREE 30-Day Evaluation</a>. <br/><br/><br/><br/></div>
+<p>{% endblock %}</p>

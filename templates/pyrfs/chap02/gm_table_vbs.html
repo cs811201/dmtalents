@@ -1,0 +1,75 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>gm Table | Vbs</h2>
+<hr>
+<div overflow="scroll">
+
+    In this example, we are going to generate such a gm table, as follows.<br/><br/>
+    It is using the result of the Check GM rule from the “qa_nchTT” project.
+
+    <br/>
+    <img src="/static/pyrfs/chap02/04_gm_table_vbs/table.png"><br/><br/>
+    From the previous chapter, we have obtained the names of conditions and targets, so we can go ahead to fetch them
+    correctly.<br/><br/>
+    <img src="/static/pyrfs/chap02/04_gm_table_vbs/list.png"><br/><br/>
+    Here is the code:<br/><br/>
+    <img src="/static/pyrfs/chap02/04_gm_table_vbs/code.png"><br/><br/>
+    We now commented out line 12 and 13, and get Vds/Vgs/Vbs/W/L/T and gm from line 15 – 22.<br/><br/>
+    Line 18 is to get the count of Vbs, because we will need it to transpose gm to 3 columns according to Vbs.<br/><br/>
+    On line 26, we add W/L/T/Vds/Vgs as the condition columns, PyRFS will export them in the same order we put them here
+    in this array [W, L, T, Vds, Vgs], and we again used the “offset=(1,0)” option to set cell A2 as the starting point.<br/><br/>
+    Line 27 adds “gm”, and “repeat=Vbs_count” asks it to be repeated Vbs_count(3) times.<br/><br/>
+    Line 28 is the trick we do on Vbs as we did for Temperature in Chapter 2.2, so that Vbs will be exported in cells
+    F1:H1.<br/><br/>
+    Lastly, line 32 fills the table with all numbers, and line 33 saves the .xlsx file.<br/><br/>
+    Here is a <a href="/pyrfs/gm_table_vbs/download" target="_blank">copy of “gm_table_vbs.xlsx” for download</a> .<br/><br/>
+
+    Code for copy-paste:
+    <pre>
+import os
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="09_Mathematic_Robustness_2",
+         rule="Rule_1204",
+         check="Check_01")
+
+# conditions = dp.list_conditions(detail=True, print_it=False)
+# targets = dp.list_targets(detail=True, print_it=False)
+
+Vds = dp.conditions['vds']
+Vgs = dp.conditions['vgs']
+Vbs = dp.conditions['vbs']
+Vbs_count = Vbs.get_num_values()
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+gm = dp.targets["gm"]
+
+table = rfs.ReportTable(name="gm_table_vbs")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, T, Vds, Vgs],offset=(1, 0))
+right.add_constraint([gm], repeat=Vbs_count)
+right.add_constraint([Vbs], offset=(-1, -Vbs_count),ndr=0,
+                     vdr_direction=rfs.LAYOUT_DIR_RIGHT,
+                     tgr_direction=rfs.LAYOUT_DIR_DOWN
+                     )
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path, format='xlsx', overwrite=True)
+
+
+    </pre>
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

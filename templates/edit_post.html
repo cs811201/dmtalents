@@ -1,0 +1,61 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Edit Post
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/><br/>
+
+<div class="container">
+    <h4>Editing a Post...</h4>
+    <hr>
+    <form method="post" action="/edit_post_finish">
+
+        <label>Title:</label>
+        <input id="title" name="title" size="90" type="text" class="form-control" value="{{ post.title}}"/>
+        <br/><br/>
+
+        <label>Keywords(Optional, to be searched, comma separated words):</label><br/>
+        <input id="abs" name="abs" type="text" class="form-control" value="{{post.abs}}"/>
+
+        <br/>
+        <br/>
+        <label>Category:</label>
+
+        <select name="category" id="category">
+            <option value="mbpst">MBP Script Tutorial</option>
+            <option value="mbpfaq">MBP FAQ</option>
+            <option value="mqafaq">MQA FAQ</option>
+            <option value="video">Video Demo</option>
+            <option value="blog">Blog</option>
+            <option value="mqarules">MQA Rules</option>
+            <option value="iccapfaq">ICCAP FAQ</option>
+        </select>
+        <br/><br/>
+        <label>Content:</label><br/>
+        <textarea name="content" rows="20" cols="150" class="form-control">
+            {{post.content}}
+        </textarea>
+        <br/><br/>
+        <label>Route URL (internal use):</label>
+        <input id="route" name="route" type="text" class="form-control" value="{{post.route}}"/>
+        <br/><br/>
+
+        <input type="submit">
+
+    </form>
+</div>
+
+<br/><br/><br/><br/>
+<script type="text/javascript">
+function SelectCategoryElement()
+{
+    var element = document.getElementById('category');
+    element.value = '{{post.category}}';
+
+}
+SelectCategoryElement();
+
+</script>
+{% endblock %}

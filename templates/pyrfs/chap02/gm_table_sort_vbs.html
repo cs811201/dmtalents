@@ -1,0 +1,95 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>gm Table | Sort Vbs</h2>
+<hr>
+<div overflow="scroll">
+    This chapter we are going to talk about how to sort variables in the table.<br/><br/>
+    We got a gm table from the previous chapter, all the condition variables are in ascending/increasing order by
+    default.<br/><br/>
+    For example, Vbs are [-3.3, -1.65, 0], and Vds is firstly 0.1 and then 3.3.
+
+
+    <br/>
+    <img src="/static/pyrfs/chap02/06_gm_table_sort_vbs/table_old.png"><br/><br/>
+    In the following exercise, we will reverse the order of Vbs and Vds, as shown below, Vbs will be [0, -1.65, -3,3]
+    and Vds will be 3.3 first.<br/><br/>
+
+    <mark>Note: the target(gm) values are adjusted correspondingly.</mark>
+    <br/><br/>
+
+    <img src="/static/pyrfs/chap02/06_gm_table_sort_vbs/table.png"><br/><br/>
+    Let’s do Vbs firstly, here is the code snippet:<br/><br/>
+
+    <img src="/static/pyrfs/chap02/06_gm_table_sort_vbs/code.png"><br/><br/>
+
+    On line 33, we added a new option called “val_sort”, the syntax is:<br/>
+    <ul>
+        <em>Val_sort = {index_of_constraint: ‘inc’, another_index: ‘dec’}</em><br/>
+        Note: ‘inc’ is the keyword for increasing order, and ‘dec’ is for decreasing.
+    </ul>
+    Similarly, as shown below, we can apply the “val_sort” option to other Constraints, such as Vds.<br/><br/>
+
+    <img src="/static/pyrfs/chap02/06_gm_table_sort_vbs/code2.png"><br/><br/>
+
+    Line 30 does the trick, because Vds is the fourth element in the list [W,L, T, Vds, Vgs], we do “val_sort={4:
+    ’dec’}”.<br/><br/>
+
+    Here is a <a href="/pyrfs/gm_table_sort_vbs/download" target="_blank">copy of “gm_table_sort_vbs.xlsx” for
+    download</a> .<br/><br/>
+
+
+    Code for copy-paste:
+    <pre>
+import os
+import pyrfs as rfs
+
+def condMax(cond):
+    ticks = cond.get_axis().ticks
+    return max(ticks)
+def condMin(cond):
+    ticks = cond.get_axis().ticks
+    return min(ticks)
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="09_Mathematic_Robustness_2",
+         rule="Rule_1204",
+         check="Check_01")
+Vds = dp.conditions['vds']
+Vgs = dp.conditions['vgs']
+Vbs = dp.conditions['vbs']
+Vbs_count = Vbs.get_num_values()
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+gm = dp.targets["gm"]
+table = rfs.ReportTable(name="gm_table_sort_vbs")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, T, Vds, Vgs], offset=(1, 0),
+                     val_filter={1: (condMax(W),), 2: (condMin(L),), 3: (25,), 5: ('range', (-0.1, 1.02))},
+                     val_sort={4:'dec'}
+                     )
+right.add_constraint([gm], repeat=Vbs_count)
+right.add_constraint([Vbs], offset=(-1, -Vbs_count), ndr=0,
+                     val_sort={1: 'dec'},
+                     vdr_direction=rfs.LAYOUT_DIR_RIGHT,
+                     tgr_direction=rfs.LAYOUT_DIR_DOWN
+                     )
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path, format='xlsx', overwrite=True)
+
+
+    </pre>
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

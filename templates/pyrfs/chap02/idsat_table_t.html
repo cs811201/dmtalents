@@ -1,0 +1,82 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Idsat Table | T</h2>
+<hr>
+<div overflow="scroll">
+
+    The previous simple Idsat Table has 3 temperature all mixed up, not easy to read, so we may want to get something
+    like this, we arrange temperature as columns.
+
+    <br/>
+    <img src="/static/pyrfs/chap02/02_idsat_table_T/idsat_table.png"><br/><br/>
+    So, based on our previous example, let’s do a little trick to transpose T, the code is as follows: <br/>
+    <img src="/static/pyrfs/chap02/02_idsat_table_T/src.png"><br/><br/>
+
+    Next, let’s analyze the code, the first 1 – 14 lines are the same.
+    <br><br>
+    Line 15 is to get the count of T, 3 in this case, now we know how many temperatures are swept dynamically.<br><br>
+    And, to help us understand what’s happening next, let’s imagine we have a cursor located at A1 in the beginning.<br><br>
+    On line 19, we add W and L, and the “offset=(1,0)” option tells PyRFS to start filling the table from cell A2, this
+    is to save the first row for filling up the values of Temperature later on.<br><br>
+
+    Again, this offset is to locate the cursor to A2, namely the second row in first column, and after line 19 the
+    cursor
+    will be moved to C2.<br><br>
+    <img src="/static/pyrfs/chap02/02_idsat_table_T/src06.png"><br/><br/>
+    Line 20 starts to fill Idsat by repeating T_count times, namely 3 columns, this would move the cursor from C2 to E2.<br><br>
+    Line 21-24 is one statement but break into 4 lines, which put T over Idsat by the offset, vdr_direction and
+    tgr_direction options. Firstly, the offset=(-1, -T_count) moves the cursor from cell E2 back up to C1, then fill the
+    Temperature numbers rightward(vdr_direction=rfs.LAYOUT_DIR_RIGHT), and fill its associated target(Idsat) values
+    downward(tgr_direction=rfs.LAYOUT_DIR_DOWN)<br><br>
+    Now we have done the header part of the table.<br><br>
+    <img src="/static/pyrfs/chap02/02_idsat_table_T/src07.png"><br/><br/>
+    Finally, line 25 fills up all the W/L/T and Idsat numbers according to the constraints we define from line 19
+    through 24.<br><br>
+    And, line 26 save the table to a .xlsx file.<br><br>
+    Here we can <a href="/pyrfs/idsat_table_t/download" target="_blank">download a copy of this “Idsat_table_t.xlsx”
+    file</a>.<br><br>
+
+    Code for copy-paste:<br/>
+    <pre>
+import os
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="02_Model_Scalability", rule="Rule_4001", check="Check_01")
+
+Idsat = dp.targets["idsat"]
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+T_count = T.get_num_values()
+
+table = rfs.ReportTable(name="idsat_table")
+rightLayout = rfs.RightLayout(table)
+rightLayout.add_constraint([W, L], offset=(1, 0))
+rightLayout.add_constraint(Idsat, repeat=T_count)
+rightLayout.add_constraint(T, ndr=0, offset=(-1, -T_count),
+                           vdr_direction=rfs.LAYOUT_DIR_RIGHT,
+                           tgr_direction=rfs.LAYOUT_DIR_DOWN
+                           )
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path)
+
+
+    </pre>
+
+
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}

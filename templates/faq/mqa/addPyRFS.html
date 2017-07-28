@@ -1,0 +1,56 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Enable PyRFS (Python module) for MQA </h2>
+<h3>MQA FAQ</h3>
+<hr>
+MQA 2017(released April 27th, 2017) comes with a Python module called PyRFS, which provides powerful Python APIs for us to create Excel tables from MQA results, on both Linux and Windows.
+<br/><br/>
+
+In a nutshell, currently PyRFS supports the following functions:
+<ul>
+    <li>Extract Constraints(data collections) from MQA result directories and arrange them into tables in an automated manner, no need to specify cell position such as ["A1:B4"].
+    </li>
+    <li>Support sorting and filtering for tables according to given conditions</li>
+    <li>Support displaying customized value formats and name formats of Constraints in tables</li>
+    <li>Support formulae contents calculated from other Constraints in tables</li>
+    <li>Divide data into different tables, sheets, or files according to given conditions</li>
+    <li>Generate tables as Microsoft Excel XLSX files on Linux and Windows platforms</li>
+    <li>Support to update XLSX files on Windows</li>
+
+</ul>
+
+Let's take a look at some examples under $MQAHOME/kedrfs/python/demo/golden_tables/ <br/><br/>
+
+Example 1: Idsat table for various W/L/T for one model.<br/>
+<img src="/static/faq/mqa/addPyRFS/t1.png" border="1px"><br/><br/>
+
+Example 2: table that contains info from 2 models, multi-corners.
+<img src="/static/faq/mqa/addPyRFS/t2.png" border="1px"><br/><br/>
+
+There are plenty of examples under the $MQAHOME/kedrfs/python/demo folder, plus a in-depth explanation on how to use these APIs in MQA user manual. However, one may have difficulty in importing "pyrfs" as a module in Python as the first step, and the blog is here to bridge this gap.
+<br/><br/>
+
+The PyRFS module resides in $MQAHOME/kedrfs/python/pyrfs directory, we just need to add it to PYTHONPATH, as shown below:
+<br/>
+<img src="/static/faq/mqa/addPyRFS/1.png" border="1px"><br/><br/>
+<pre>
+import sys
+
+sys.path.append(r'$MQAHOME/kedrfs/python')
+
+import pyrfs as rfs
+
+</pre>
+
+Or, we can certainly use any of our favoriate Python IDE, such as PyCharm. Simply add the $MQAHOME/kedrfs/python path to the IDE's proper setting, we shall be able to import pyrfs successfully, as shown below:
+<br/>
+<img src="/static/faq/mqa/addPyRFS/2.png" border="1px"><br/><br/>
+
+
+Thanks!
+
+
+<br/><br/><br/><br/>
+{% endblock %}
+

@@ -1,0 +1,112 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+MQA PyRFS
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Customizing Tables Just Got Easier with a New Python Module for MQA</h3>
+    <h5>by Shuang Cai [Keysight], July 07, 2017</h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.mqa.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    <br/>
+    <font size="5">W</font>orking with data tables is a basic skill every engineer learns early on in their career. When organized properly,
+    tables can summarize a great deal of device data into a helpful information format and that makes them extremely
+    useful. Often times, for example, a 1-page data table can pack as much punch as a thirty-page report that’s full of
+    curves. The table significantly minimizes the time it takes engineers to find the information their after, while
+    also minimizing paper waste and saving trees!<br/><br/>
+
+    But not every engineer wants their information displayed in the same tabular format. How the tables are created,
+    organized and filled may differ from one engineer or application to another and that’s why the ability to customize
+    tables is so critical. Doing so, allows engineers to derive the specific information that is so critical to
+    optimizing their design. Unfortunately, generating tables and customizing them to meet specific needs is not always
+    a straightforward task. And that can translate into wasted design time, added cost and slower time to
+    market.<br/><br/>
+
+    For those engineers wanting to quickly and easily customize tables, the answer comes in the form of Keysight
+    Technologies’ Model Quality Assurance (MQA) solution. MQA is well known, automated SPICE model validation software
+    that allows engineers to check and analyze SPICE model libraries, compare different models, and generate quality
+    assurance (QA) reports in a complete and efficient way. MQA 2017 extends these capabilities by introducing the
+    Python Report Formatting System (PyRFS) module, which allows engineers to customize tables—either generate new
+    tables or update existing tables—in .csv and .xlsx file formats.<br/><br/>
+
+    PyRFS is simple enough to generate all sorts of tables quickly, with plenty of options to customize those tables in
+    a flexible and scalable way. For engineers using MQA, that means the ability to sort, filter, formulate, format, and
+    layout data in many different ways. It also enables them to query and have fine control over MQA project results.
+    And, because it’s Python based, engineers can even feel free to blend in their own favorite Python stuff. <br/><br/>
+    For you personally, having access to this functionality promises to cut your design time and speed time to market.
+    But, how do you leverage this module? To do that, I’ll walk you through a simple, yet complete flow for creating a
+    .xlsx file using the table in Figure 1 as an example. The table filters and sorts W/L/T for certain device targets
+    (Idsat).<br/><br/>
+
+    <img src="/static/blog/mqa_pyrfs/table.png"><br/> <em>Figure 1. Example table</em> <br/><br/>
+
+    The example table comes from the QA result of one MQA rule “Model Scalability -> Check Idsat vs L,” where there are
+    Idsat curves from 3 temperatures and different W and L. The demo project to reproduce this example can be found as
+    $MQAHOME/kefrfs/python/demo/data/. The first few lines of the code for generating this table are shown in Figure 2.
+    <br/><br/>
+
+    <img src="/static/blog/mqa_pyrfs/1.png"><br/> <em>Figure 2. Initial code for creating the table in Figure 1</em>
+    <br/><br/>
+
+    In Figure 2, line 1 and 2 import necessary Python modules; “os” is Python’s native module for the operation system,
+    and “pyrfs” is the module that comes with MQA 2017. Line 4 gets the current python file’s directory, while line 5
+    locates the example MQA project folder’s path. Line 6 prepares the option called “config,” which specifies that the
+    project’s path is to be fed into line 7. Line 7 then creates a data provider “dp”, and gives it access to all of the
+    information of the specified project for you to query.<br/><br/>
+    On line 9, the “dp.query()” function is called by specifying “rule_group,” “rule,” and “check” as arguments. The
+    values of these arguments are the folder names, respectively. The “dp” object has been narrowed down to information
+    only from this node. Lines 10 – 12 are designed to get W/L/T as conditions, while line 13 gets Idsat as a
+    target.<br/><br/>
+    Figure 3 shows the next few lines of code. On line 15, a “table” is created by calling “rfs.ReportTable()” and
+    giving “example_idsat_table” as its name. At the end, a file with this name is created.<br/><br/>
+
+    <img src="/static/blog/mqa_pyrfs/2.png"><br/> <em>Figure 3. Additional lines of code need to generate the table in
+    Figure 1</em> <br/><br/>
+
+    Line 16 defines a RightLayout and associates it with the “table.” A Layout is how we fill up the table. RightLayout
+    means PyRFS will automatically fill the table from left to right, starting from the top-left cell “A1” by default,
+    and growing rows and columns as necessary so that you don’t need to worry about cell indices.<br/><br/>
+    Line 17 adds W, L into the table with a few options to make them appear in one column with a certain format,
+    ascending, and filtered by L=Lmin. Line 24 adds Idsat into the table, and repeats it in 3 columns because it is
+    dependent on the 3 temperatures to be added in line 25. Once these constraints are well defined, lines 30 and 31
+    fill up and save the table, respectively.
+    From this simple example, it’s easy to see how useful the PyRFS module is and how helpful it can be in automating
+    your table generation tasks. For more information on the PyRFS module functionality and step-by-step examples of how
+    it can be used, refer to the “PyRFS Function List” at the end of the blog and check out the online <a href="/pyrfs"
+                                                                                                          target="_blank">PyRFS
+    Tutorial here</a> .
+
+    <br/><br/>
+    <h4>PyRFS Function List</h4>
+
+
+    The MQA 2017 PyRFS is a powerful Python module for easy, yet fully customizable table generation and reporting.
+    Below is a summary of the functions that PyRFS provides:<br/>
+    <ul>
+        • Automatic extraction of constraints (data collections) from MQA result directories<br/>
+        • Generation of tables and ability to save them as Microsoft Excel .xlsx files or .csv files on Linux and
+        Windows platforms<br/>
+        • Support for updating .xlsx files under Windows.<br/>
+        • Support for sorting and filtering per user specification<br/>
+        • Support for customized formatting of constraints in tables<br/>
+        • Support for formulas calculated from other constraints in tables<br/>
+        • Ability to divide data into different tables, sheets, or files per user specified conditions
+    </ul>
+
+    <br/><br/>
+
+
+    <hr/>
+    Interested in MQA Software? - Click <a href="http://www.keysight.com/find/mytrial.mqa.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

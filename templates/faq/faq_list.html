@@ -13,6 +13,9 @@
         <font style="background-color:#800000; color:#FFFFFF">{{ func(item.category) }}</font>
         {% elif func(item.category).startswith('MQA')  %}
         <font style="background-color:#008000; color:#FFFFFF">{{ func(item.category) }}</font>
+
+        {% elif func(item.category).startswith('ICCAP')  %}
+        <font style="background-color:#2BD4CA; color:#FFFFFF">{{ func(item.category) }}</font>
         {% else %}
             {{ func(item.category) }}
         {% endif %}</h5>

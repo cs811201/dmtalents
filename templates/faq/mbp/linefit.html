@@ -1,0 +1,116 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Linefit - Extract BSIM4 Parameter NFACTOR<sub>(Subthreshold Swing Coefficient)</sub></h2>
+<h3>MBP Application Note</h3>
+<hr>
+This application note will demonstrate how extract a BSIM4 model parameter NFACTOR using the “line fit” functions in MBP, which is essential
+to most model parameter extraction process.
+<br/><br/>
+Below is the “Subthreshold Swing n” equation cited from the BSIM4 model book:
+<br/>
+<img src="/static/faq/mbp/linefit/equ1.png"><br/>
+<em>Equ 1.</em>
+<br/><br/>
+Graphically we will be looking the Swing of the subthreshold region on the Id-Vg curve, log(Id),
+and we expect to extract model parameter NFACTOR(Subthreshold swing Coefficient) from it.
+<br/>
+
+<img src="/static/faq/mbp/linefit/1.png"><br/><br/>
+
+If we look at the Wmax/Lmax device and Vds=Vdlin, Vbs=0 condition for room temperature(T=25),
+we can ignore the Cdsc_Term, we can also ignore the CIT term since we will be looking at just the slope, then
+the equation could be practically simplified to the following:
+<br/>
+<img src="/static/faq/mbp/linefit/equ2.png"><br/>
+<em>Equ 2.</em>
+<br/><br/>
+And, it now becomes the simple linear equation format: Y=b+aX, and by performing a linear “line fit” function,
+we expect to get “a” as Slope and “b” as Intercept from the given X and Y, which should be double[] (double arrays) in
+MBP Script, as shown below:
+<br/>
+
+<img src="/static/faq/mbp/linefit/2.png"><br/><br/>
+<br/>
+Below is the key code to get the <em>Subthreshold Swing n</em> from the Ids_Vgs curve:<br/><br/>
+Line 3 to 6 is to get the IV data we need, now we have Ids and Vgs as double[] for the entire curve.<br/>
+We shall only perform the “line fit” function on the subthreshold region, so we need to narrow it down by finding a Lower
+and Upper for Vgs and Ids. This is done from line 8 to line 12.
+<br/>
+The Lower and Upper is hardcoded here just for demo purpose, they could be dynamically determined. <br/>
+Note, line 12 also applied the “cal()” function to transform Ids to Log(Ids); “cal()” is another built-in function for double[] objects
+in MBP Script, just as the “linefit()” function on line 14, we can use them directly.
+<br/>
+
+
+<img src="/static/faq/mbp/linefit/code.png"><br/><br/>
+
+The syntax of “linefit()” function is as follows:<br/>
+<img src="/static/faq/mbp/linefit/tip.png"><br/><br/>
+
+It can be called on a Y double[], and the first argument is the associated X double[]; more, we need to give a second argument
+<font style="color:blue">n</font> , which can be either 1 or 2.
+<br/>
+<ul>
+    <li><font style="color:blue">n</font> = 1, it does the linear line fit: Y=aX + b</li>
+    <li><font style="color:blue">n</font> = 2, it does the quadratic line fit: Y=aX<sup>2</sup> + bX + c</li>
+</ul>
+And, the returned value(let’s call it <font
+        style="color:red">re</font>) of the “linefit()” function is also a double[], as
+follows:<br/>
+<ul>
+    <li><font style="color:blue">n</font> = 1, <font style="color:red">re[0]</font> = intercept, <font
+            style="color:red">re[1]</font> = slope
+    </li>
+    <li><font style="color:blue">n</font> = 2, <font style="color:red">re[0]</font>= constant, <font
+            style="color:red">re[1]</font> = coefficient of X term, <font style="color:red">re[2]</font> =
+        coefficient of X<sup>2</sup>
+        term.
+    </li>
+</ul>
+<br/>
+
+Now we have <font
+        style="color:red">re[1]</font> as the <em>Subthreshold Swing
+    n</em>, namely the left item of the equal sign on Equ 2, which serves as the new Y of the following linear function which leads us to NFACTOR:
+<br/>
+<ul>
+    <em>Y = 1 + NFACTOR * X</em>
+</ul>
+
+In order to extract NFACTOR, we need to further calculate C<sub>dep</sub>/C
+<sub>oxe</sub> to be the new X, which is described in the BSIM4 model book and not repeated here;
+then we apply the linefit() function again on the new set of Y and X
+, namely re = n.linefit(C<sub>dep</sub>/C<sub>oxe</sub>,1),  we will finally get the slope as NFACTOR's extracted value.
+
+<br/><br/><br/>
+FYI:<br/>
+Permittivity of silicon oxide is 3.9&epsilon;0, where &epsilon;0 = 8.854E-14 Fcm
+<sup>-1</sup> is the permittivity of free space or air.
+<pre>
+// Coxe = Permittivity_of_Silicon_Oxide / Toxe;
+// 3.9 x 8.854e-14 = 3.45e-13
+double permittivity_sio2 = 3.45e-13;
+double Coxe = permittivity_sio2 / MBP.getParam("TOXE").getValue();
+
+</pre>
+
+
+<br/>
+After we extracted the slope, we assign it to the NFACTOR model parameter, and the extraction for this parameter is done,
+we shall see simulation change on any displayed graphs right away.
+<pre>
+// ... previous code to get re[1] as the slope
+MBP.getParam("NFACTOR").setValue(re[1]);
+
+
+</pre>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

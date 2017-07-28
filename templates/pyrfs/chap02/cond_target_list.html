@@ -1,0 +1,60 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Condition and Target List</h2>
+<hr>
+<div overflow="scroll">
+    For example, we are going to create a table using the Check GM result, as shown below.
+
+    <br/>
+    <img src="/static/pyrfs/chap02/03_gm_table_list/mqa_gui.png"> <br/> <br/>
+    When we query data from MQA project result, we specify the rule_group, rule and check to that node, as shown in code
+    line 8-10.
+    <br/> <br/>
+    <img src="/static/pyrfs/chap02/03_gm_table_list/code.png"> <br/> <br/>
+    Next, we need to know Condition names and Target names so as to fetch them correctly.<br/> <br/>
+    PyRFS provides 2 functions to do so, as shown one line 12 and 13. <br/> <br/>
+    And, by default, when executing these 2 functions, the list will be printed in the terminal/console window, as shown
+    below, now we know exactly what names to use.<br/> <br/>
+
+
+    <img src="/static/pyrfs/chap02/03_gm_table_list/list.png"> <br/> <br/>
+    The target “gm” is what we expected, and another one “result” is MQA’s built-in target, which stands for the result
+    table we see on the GUI, as shown below.<br/> <br/>
+
+    <img src="/static/pyrfs/chap02/03_gm_table_list/result.png"> <br/> <br/>
+
+    More, we can turn on the “detail=True” option to have them print out more details.<br/> <br/>
+    <img src="/static/pyrfs/chap02/03_gm_table_list/detailT.png"> <br/> <br/>
+    As follows:<br/> <br/>
+    <img src="/static/pyrfs/chap02/03_gm_table_list/detailOutput.png"> <br/> <br/>
+    And, after done testing, we can turn the print off, using the “print_it=False” option, as shown below.<br/> <br/>
+    <img src="/static/pyrfs/chap02/03_gm_table_list/printF.png"> <br/> <br/>
+    Code for copy-paste:<br/>
+    <pre>
+import os
+
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="09_Mathematic_Robustness_2",
+         rule="Rule_1204",
+         check="Check_01")
+
+conditions = dp.list_conditions(detail=True, print_it=False)
+targets = dp.list_targets(detail=True, print_it=False)
+
+
+    </pre>
+
+    Alright, please continue to next chapter where we will create a gm table.
+    <br>
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}

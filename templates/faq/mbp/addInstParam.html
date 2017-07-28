@@ -1,0 +1,69 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Add Device Instance Parameters</h2>
+<h3>MBP FAQ</h3>
+<hr>
+Sometimes, we want to use certain variables as device instance parameters that's not pre-configured in MBP.  <br/><br/>
+For example, when using BSIMCMG model for FinFET devices, the W(Channel Width) is not a default device instance parameter; however, we've seen cases where people recorded W in measurement files and could use the W as an equivalent variable in some customized calculation.
+<br/><br/>
+
+This FAQ illustrates how to enable W in MBP for BSIMCMG project. And, this method can be used to add any non-default device instance parameters.
+<br/><br/>
+
+Let's see what it looks like... at the beginning, there was no W in the device instance list for FinFET, as shown below:
+<br/>
+<img src="/static/faq/mbp/addInstParam/0.png"/><br/><br/>
+
+Later, after we enable it, we will see W in the list:<br/>
+<img src="/static/faq/mbp/addInstParam/7.png"/><br/><br/>
+
+Once we select to display W(checking the checkbox), we will see it on the Device table. <br/>
+<img src="/static/faq/mbp/addInstParam/8.png"/><br/><br/>
+And the value of W comes from measurement data file, as shown below:<br/>
+<img src="/static/faq/mbp/addInstParam/mea.png" style="border:1px solid black"/><br/><br/>
+
+Alright, here is the trick: it requires to add W as another device instance parameter in the "inst.ini" config file, which is located in $MBPHONE/etc/$simulator/mosfet/bsimcmg/$version/inst_core/ as shown below, all the DUT instance parameters are defined here.
+<br/>
+<img src="/static/faq/mbp/addInstParam/1.png" style="border:1px solid black"/><br/><br/>
+
+Note: This is the
+<mark>global setting file
+</mark> in installation folder, if an end user(especially on Linux) doesn't have permission to edit this file, please click
+<a href="#local">here for where to edit a local copy</a>; however, please read on to understand how to edit this config file.
+
+The content of this config file is as follows:<br/>
+<img src="/static/faq/mbp/addInstParam/2.png"/><br/><br/>
+
+Let's insert <em>W=&lt;1e-7,W,1e-6,0,um> </em>after L term, as shown below:<br/>
+<img src="/static/faq/mbp/addInstParam/3.png"/><br/><br/>
+The format is illustrated as follows:<br/>
+Note: in case of M and NFIN where no unit is needed, please leave the unit term blank.<br/>
+<img src="/static/faq/mbp/addInstParam/4.png"/><br/><br/>
+
+More, if we want to make W to be displayed in the Device table by default, instead of having to select it from the popup list, please edit the "instdisplay.ini" file, and insert W in it, as shown below:
+<br/>
+<img src="/static/faq/mbp/addInstParam/6.png"/><br/><br/>
+After restarting MBP and New a BSIMCMG Project to that specific version(say 110.0 in the above example), we will be able to use W.
+<br/>
+This is also to say that, we need to bring the same change to other versions of bsimcmg if they are to be used, as shown below;  we can quickly copy&paste to other versions' folders.
+<br/>
+<img src="/static/faq/mbp/addInstParam/9.png"/><br/><br/>
+<br/>
+<hr/>
+<a name="local"></a>
+<h4>Edit local copy of inst.ini</h4>
+Once we save a MBP project, the "inst.ini" config file is saved as a local copy, so this way we can just edit the local copy, and re-open the project, no restart MBP needed.
+<br/><br/>
+For example, a demo project is saved under /users/shuancai/MBP/inst_demo/test, then this config file can be found as .../test/config/default/inst.ini.
+<br/>
+<img src="/static/faq/mbp/addInstParam/10.png"/><br/><br/>
+
+Thanks!
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

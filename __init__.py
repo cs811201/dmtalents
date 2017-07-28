@@ -15,6 +15,7 @@ from flask_security import roles_required, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from pygal.style import Style
 from sqlalchemy import desc
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.debug = False
@@ -35,7 +36,11 @@ app.config['SECURITY_TOKEN_MAX_AGE'] = 60 * 30
 app.config['SECURITY_TRACKABLE'] = True
 # app.config['SECURITY_PASSWORD_SALT'] = 'something_super_secret_802jfkj__fd!'
 
-
+# config to upload folder
+UPLOAD_FOLDER = '/static/upload'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024  # limit up to 2Mb per file
 
 # config for email
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -176,7 +181,6 @@ security = Security(app, user_datastore)
 displayUpto = 50
 
 
-
 @app.route('/')
 def index():
     mbpPost = Post.query.filter((Post.category == 'mbpst')).all()
@@ -184,14 +188,18 @@ def index():
     rulePost = Post.query.filter((Post.category == 'mqarules')).all()
     ruleCt = rulePost.__len__()
 
+    pyrfsPost = Post.query.filter((Post.category == 'pyrfs')).all()
+    pyrfsCt = pyrfsPost.__len__()
+
     videoPost = Post.query.filter((Post.category == 'video')).all()
     videoCt = videoPost.__len__()
 
-    faqPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mbpfaq')).all()
+    faqPost = Post.query.filter(
+        (Post.category == 'mqafaq') | (Post.category == 'mbpfaq') | (Post.category == 'iccapfaq')).all()
     faqCt = faqPost.__len__()
 
-    return render_template('index.html', num=getRandomIntFrom1toGiven(12), mbpstCt=mbpstCt, videoCt=videoCt,
-                           ruleCt=ruleCt, faqCt=faqCt)
+    return render_template('index.html', num=getRandomIntFrom1toGiven(15), mbpstCt=mbpstCt, videoCt=videoCt,
+                           ruleCt=ruleCt, faqCt=faqCt, pyrfsCt=pyrfsCt)
 
 
 route_update_history = '/update_history'
@@ -236,6 +244,12 @@ def mbpst():
     recordPostHistory('/mbpst')
     return render_template('mbpst/Chap1/WhatIsMBPScript.html')
 
+route_reqeust_login='/requestlogin'
+@app.route(route_reqeust_login)
+def request_login():
+    recordPostHistory(route_reqeust_login)
+    return render_template('requestlogin.html')
+
 
 # default to MBP FAQ list
 @app.route('/faq')
@@ -243,7 +257,8 @@ def mbpst():
 @login_required
 def faq():
     recordPostHistory('/faq')
-    results = Post.query.filter((Post.category == 'mbpfaq') | (Post.category == 'mqafaq')).order_by(
+    results = Post.query.filter(
+        (Post.category == 'mbpfaq') | (Post.category == 'mqafaq') | (Post.category == 'iccapfaq')).order_by(
         desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/faq_list.html', slist=results, func=getCategory)
 
@@ -264,6 +279,17 @@ def mqafaq():
     recordPostHistory('/mqafaq')
     results = Post.query.filter(Post.category == 'mqafaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/mqa/mqafaqlist.html', slist=results, func=getCategory)
+
+
+route_iccapfaq_list = "/iccapfaq"
+
+
+@app.route(route_iccapfaq_list)
+@login_required
+def iccapfaq():
+    recordPostHistory(route_iccapfaq_list)
+    results = Post.query.filter(Post.category == 'iccapfaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
+    return render_template('faq/iccap/iccapfaqlist.html', slist=results, func=getCategory)
 
 
 # open blog to public
@@ -310,9 +336,6 @@ def blog_iccap_python():
     return render_template('blog/post/iccap_python.html')
 
 
-
-
-
 route_blog_ftfmax = '/blog/ftfmax'
 
 
@@ -320,6 +343,69 @@ route_blog_ftfmax = '/blog/ftfmax'
 def blog_ftfmax():
     recordPostHistory(route_blog_ftfmax)
     return render_template('blog/post/ftfmax.html')
+
+
+route_blog_load_csv_in_mbp = '/blog/load_csv_in_mbp'
+
+
+@app.route(route_blog_load_csv_in_mbp)
+def blog_load_csv_in_mbp():
+    recordPostHistory(route_blog_load_csv_in_mbp)
+    return render_template('blog/post/load_csv_in_mbp.html')
+
+
+route_blog_sram_modeling_mbp2017 = '/blog/sram_modeling_mbp2017'
+
+
+@app.route(route_blog_sram_modeling_mbp2017)
+def blog_sram_modeling_mbp2017():
+    recordPostHistory(route_blog_sram_modeling_mbp2017)
+    return render_template('blog/post/srammodeling.html')
+
+
+route_blog_angelov_in_ads = '/blog/angelov_in_ads'
+
+
+@app.route(route_blog_angelov_in_ads)
+def blog_angelov_in_ads():
+    recordPostHistory(route_blog_angelov_in_ads)
+    return render_template('blog/post/angelov_in_ads.html')
+
+
+route_blog_mbp_sram = '/blog/mbp_sram'
+
+
+@app.route(route_blog_mbp_sram)
+def blog_mbp_sram():
+    recordPostHistory(route_blog_mbp_sram)
+    return render_template('blog/post/mbp_sram.html')
+
+
+route_blog_mbp_bsim4_flow = '/blog/mbp_bsim4_flow'
+
+
+@app.route(route_blog_mbp_bsim4_flow)
+def blog_mbp_bsim4_flow():
+    recordPostHistory(route_blog_mbp_bsim4_flow)
+    return render_template('blog/post/mbp_bsim4_flow.html')
+
+
+route_blog_iccap_pyvisa_101 = '/blog/iccap_pyvisa_101'
+
+
+@app.route(route_blog_iccap_pyvisa_101)
+def blog_iccap_pyvisa_101():
+    recordPostHistory(route_blog_iccap_pyvisa_101)
+    return render_template('blog/post/pyvisa_01.html')
+
+
+route_blog_mqa_pyrfs = '/blog/mqa_pyrfs'
+
+
+@app.route(route_blog_mqa_pyrfs)
+def blog_mqa_pyrfs():
+    recordPostHistory(route_blog_mqa_pyrfs)
+    return render_template('blog/post/mqa_pyrfs.html')
 
 
 # MQA rules
@@ -904,6 +990,46 @@ def mbpfaqchangeIdlinDef():
     return render_template('/faq/mbp/changeIdlinDef.html')
 
 
+route_mbpfaq_derivative = '/mbpfaq/derivative'
+
+
+@app.route(route_mbpfaq_derivative)
+@login_required
+def mbpfaq_derivative():
+    recordPostHistory(route_mbpfaq_derivative)
+    return render_template('/faq/mbp/derivative.html')
+
+
+route_mbpfaq_linefit = '/mbpfaq/linefit'
+
+
+@app.route(route_mbpfaq_linefit)
+@login_required
+def mbpfaq_linefit():
+    recordPostHistory(route_mbpfaq_linefit)
+    return render_template('/faq/mbp/linefit.html')
+
+
+route_mbpfaq_tinyNumbers = '/mbpfaq/tinyNumbers'
+
+
+@app.route(route_mbpfaq_tinyNumbers)
+@login_required
+def mbpfaq_tinyNumbers():
+    recordPostHistory(route_mbpfaq_tinyNumbers)
+    return render_template('/faq/mbp/tinyNumbers.html')
+
+
+route_mbpfaq_addInstParam = '/mbpfaq/addInstParam'
+
+
+@app.route(route_mbpfaq_addInstParam)
+@login_required
+def mbpfaq_addInstParam():
+    recordPostHistory(route_mbpfaq_addInstParam)
+    return render_template('/faq/mbp/addInstParam.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -965,6 +1091,38 @@ route_mqafaq_redefinedparams = '/mqafaq/redefinedparams'
 def mqafaqRedefinedparams():
     recordPostHistory(route_mqafaq_redefinedparams)
     return render_template('/faq/mqa/redefinedparams.html')
+
+
+route_mqafaq_addPyrfs = '/mqafaq/addPyrfs'
+
+
+@app.route(route_mqafaq_addPyrfs)
+@login_required
+def mqafaqaddPyrfs():
+    recordPostHistory(route_mqafaq_addPyrfs)
+    return render_template('/faq/mqa/addPyRFS.html')
+
+
+route_mqafaq_internalspice3 = '/mqafaq/internalspice3'
+
+
+@app.route(route_mqafaq_internalspice3)
+@login_required
+def mqafaqinternalspice3():
+    recordPostHistory(route_mqafaq_internalspice3)
+    return render_template('/faq/mqa/enableInternalSpice3.html')
+
+
+#### ICCAP FAQ ######
+
+route_iccapfaq_saveInstToMDM = '/iccapfaq/saveInstToMDM'
+
+
+@app.route(route_iccapfaq_saveInstToMDM)
+@login_required
+def iccapfaqsaveInstToMDM():
+    recordPostHistory(route_iccapfaq_saveInstToMDM)
+    return render_template('/faq/iccap/saveInstToMDM.html')
 
 
 #### MQA Rules
@@ -1051,6 +1209,14 @@ def mqarulesmismatch_spe_mos():
     recordPostHistory(route_mqarules_mis_spe_mos)
     return render_template('/mqarules/rules/mismatch_spe_mos.html')
 
+route_mqarules_symm = '/mqarules/symm'
+
+
+@app.route(route_mqarules_symm)
+@login_required
+def mqarule_symm():
+    recordPostHistory(route_mqarules_symm)
+    return render_template('/mqarules/rules/symm.html')
 
 #### Video Demos
 route_video = '/video'
@@ -1213,7 +1379,6 @@ def videoMBP_Ion_Ioff():
     return render_template('/video/MBP_Ion_Ioff_correlation.html')
 
 
-
 route_video_MBP_dIdsat_sa = '/video/MBP_dIdsat_by_SA'
 
 
@@ -1222,6 +1387,55 @@ route_video_MBP_dIdsat_sa = '/video/MBP_dIdsat_by_SA'
 def videoMBP_dIdsat_sa():
     recordPostHistory(route_video_MBP_dIdsat_sa)
     return render_template('/video/MBP_dIdsat_SA.html')
+
+
+route_video_MBP_IV_T = '/video/MBP_IV_T'
+
+
+@app.route(route_video_MBP_IV_T)
+@login_required
+def videoMBP_IV_T():
+    recordPostHistory(route_video_MBP_IV_T)
+    return render_template('/video/MBP_IV_diff_T.html')
+
+
+route_video_MBP_diff_res = '/video/MBP_diff_res'
+
+
+@app.route(route_video_MBP_diff_res)
+@login_required
+def videoMBP_diff_res():
+    recordPostHistory(route_video_MBP_diff_res)
+    return render_template('/video/MBP_use_diff_res.html')
+
+
+
+
+route_video_ICCAP_OPEN_GUI = '/video/ICCAP_OPEN_GUI'
+
+
+@app.route(route_video_ICCAP_OPEN_GUI)
+def videoICCAP_OPEN_GUI():
+    recordPostHistory(route_video_ICCAP_OPEN_GUI)
+    return render_template('/video/ICCAP_open_gui.html')
+
+
+route_video_iccap_bjt_modeling = '/video/iccap_bjt_modeling'
+
+
+@app.route(route_video_iccap_bjt_modeling)
+def videoiccap_bjt_modeling():
+    recordPostHistory(route_video_iccap_bjt_modeling)
+    return render_template('/video/ICCAP_bjt_modeling.html')
+
+
+route_video_mbp_sram = '/video/mbp_sram'
+
+
+@app.route(route_video_mbp_sram)
+def videombp_sram():
+    recordPostHistory(route_video_mbp_sram)
+    return render_template('/video/MBP_sram.html')
 
 ######################
 
@@ -1298,6 +1512,8 @@ def getPostCategoryByRoute(route):
             return 'blog'
         elif route == '/iccapfaq':
             return 'iccapfaq'
+        elif route == '/pyrfs':
+            return 'pyrfs'
         else:
             return ''
     return post.category
@@ -1318,6 +1534,8 @@ def getCategory(txt):
         return "ICCAP FAQ"
     elif txt == "blog":
         return "Blog"
+    elif txt == "pyrfs":
+        return "PyRFS"
 
     return "Other"
 
@@ -1572,7 +1790,6 @@ def dashboard_chart_view():
     # user # by Category
     tmp = []
     for p in postHisAll:
-
         route = p.route
         tmp.append(route)
 
@@ -1580,31 +1797,28 @@ def dashboard_chart_view():
 
     sortedRoute = reversed(sorted(rz, key=operator.itemgetter(1)))  # sort by count
 
-
     ucNames = []
     ucCounts = []
-    tmp2={}
+    tmp2 = {}
     for ss in sortedRoute:
         route = ss[0]
-        ppp=PostHistory.query.filter(PostHistory.route==route).all()
-        userList=[]
+        ppp = PostHistory.query.filter(PostHistory.route == route).all()
+        userList = []
         for p in ppp:
-            uid=p.user_id
+            uid = p.user_id
             userList.append(uid)
 
-        uidCt =Counter(userList).items()#uid,count
+        uidCt = Counter(userList).items()  # uid,count
 
-        cate=getCategory(getPostCategoryByRoute(route))
+        cate = getCategory(getPostCategoryByRoute(route))
         if cate not in tmp2.keys():
-            tmp2[cate] =uidCt.__len__()
+            tmp2[cate] = uidCt.__len__()
         else:
-            tmp2[cate] = tmp2[cate]+uidCt.__len__()
+            tmp2[cate] = tmp2[cate] + uidCt.__len__()
 
     for item in tmp2.items():
         ucNames.append(item[0])
         ucCounts.append(item[1])
-
-
 
     userCountByCategory_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
                                           x_label_rotation=-20)
@@ -1891,6 +2105,16 @@ def download_Mismatch_spe_mos_rule():
     return send_file('static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule',
                      attachment_filename='mismatch_spe_mos.rule', mimetype='text/rule', as_attachment=True)
 
+route_download_symm_rule = '/mqarules/symm/download'
+
+
+@app.route(route_download_symm_rule)
+@login_required
+def download_symm_rule():
+    recordPostHistory(route_download_symm_rule)
+    return send_file('static/mqarules/symm/symTest.rule',
+                     attachment_filename='symTest.rule', mimetype='text/rule', as_attachment=True)
+
 
 #### Script Zip files downloads
 
@@ -2136,5 +2360,319 @@ def download_scriptZip_22():
                      attachment_filename='22_GlobalVar.zip', mimetype='application/zip', as_attachment=True)
 
 
+route_download_blog_load_csv_in_mbp = '/blog/load_csv_in_mbp/download'
+
+
+@login_required
+@app.route(route_download_blog_load_csv_in_mbp)
+def download_blog_load_csv_in_mbp():
+    recordPostHistory(route_download_blog_load_csv_in_mbp)
+    return send_file('static/blog/load_csv_in_mbp/nmos_IdVd.csv',
+                     attachment_filename='nmos_IdVd.csv', mimetype='text/plain', as_attachment=True)
+
+
+route_download_pyrfs_idsat_table = '/pyrfs/idsat_table/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_idsat_table)
+def download_pyrfs_idsat_table():
+    recordPostHistory(route_download_pyrfs_idsat_table)
+    return send_file('static/pyrfs/chap02/01_idsat_table/idsat_table_01.xlsx',
+                     attachment_filename='idsat_table_01.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+route_download_pyrfs_idsat_table_t = '/pyrfs/idsat_table_t/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_idsat_table_t)
+def download_pyrfs_idsat_table_t():
+    recordPostHistory(route_download_pyrfs_idsat_table_t)
+    return send_file('static/pyrfs/chap02/02_idsat_table_T/idsat_table.xlsx',
+                     attachment_filename='idsat_table.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+route_download_pyrfs_gm_table_vbs = '/pyrfs/gm_table_vbs/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_gm_table_vbs)
+def download_pyrfs_gm_table_vbs():
+    recordPostHistory(route_download_pyrfs_gm_table_vbs)
+    return send_file('static/pyrfs/chap02/04_gm_table_vbs/gm_table_vbs.xlsx',
+                     attachment_filename='gm_table_vbs.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+route_download_pyrfs_gm_table_t25 = '/pyrfs/gm_table_t25/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_gm_table_t25)
+def download_pyrfs_gm_table_t25():
+    recordPostHistory(route_download_pyrfs_gm_table_t25)
+    return send_file('static/pyrfs/chap02/05_gm_table_t25/gm_table_T25.xlsx',
+                     attachment_filename='gm_table_T25.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+route_download_pyrfs_gm_table_sort_vbs = '/pyrfs/gm_table_sort_vbs/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_gm_table_sort_vbs)
+def download_pyrfs_gm_table_sort_vbs():
+    recordPostHistory(route_download_pyrfs_gm_table_sort_vbs)
+    return send_file('static/pyrfs/chap02/06_gm_table_sort_vbs/gm_table_sort_vbs.xlsx',
+                     attachment_filename='gm_table_sort_vbs.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+route_download_pyrfs_manual = '/pyrfs/manual/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_manual)
+def download_pyrfs_manual():
+    recordPostHistory(route_download_pyrfs_manual)
+    return send_file('static/pyrfs/chap01/1.2_howto_guide_line/pyrfs_manual.pdf',
+                     attachment_filename='pyrfs_manual.pdf', mimetype='application/pdf', as_attachment=True)
+
+
+route_download_pyrfs_gm_table_vbs_label = '/pyrfs/gm_table_vbs_label/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_gm_table_vbs_label)
+def download_pyrfs_gm_table_vbs_label():
+    recordPostHistory(route_download_pyrfs_gm_table_vbs_label)
+    return send_file('static/pyrfs/chap02/07_gm_table_vbs_label/gm_table_vbs_label.xlsx',
+                     attachment_filename='gm_table_vbs_label.xlsx', mimetype='text/plain', as_attachment=True)
+
+route_download_pyrfs_idsat_table_merge_wl = '/pyrfs/idsat_table_merge_wl/download'
+
+
+@login_required
+@app.route(route_download_pyrfs_idsat_table_merge_wl)
+def download_pyrfs_idsat_table_merge_wl():
+    recordPostHistory(route_download_pyrfs_idsat_table_merge_wl)
+    return send_file('static/pyrfs/chap02/08_idsat_table_merge_wl/idsat_table_merge_wl.xlsx',
+                     attachment_filename='idsat_table_merge_wl.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+### Upload a file
+route_update_a_file = "/upload"
+
+
+@app.route(route_update_a_file)
+def upload():
+    return render_template("/upload/upload.html")
+
+
+### process a uploaded a file
+route_process_updated_file = "/uploader"
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@app.route(route_process_updated_file, methods=['POST'])
+def uploader():
+    file = request.files['file']
+    if file.filename == '':
+        return redirect(request.url)
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        savePath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(savePath)
+        return 'file uploaded successfully' + savePath
+
+
+# edit post
+route_edit_post_entry = '/edit_post_entry'
+
+
+@login_required
+@roles_required('sunshine')
+@app.route(route_edit_post_entry)
+def route_edit_post_entry():
+    return render_template('edit_post_entry.html')
+
+
+route_edit_post = '/edit_post'
+
+
+@login_required
+@roles_required('sunshine')
+@app.route(route_edit_post, methods=['POST'])
+def route_edit_post():
+    route = request.form['route']
+    post = Post.query.filter(Post.route == route).first()
+
+    return render_template('/edit_post.html', post=post)
+
+
+route_edit_post_finish = '/edit_post_finish'
+
+
+@login_required
+@roles_required('sunshine')
+@app.route(route_edit_post_finish, methods=['POST'])
+def route_edit_post_finish():
+    # update the database
+    # only CS can add for now.
+    if current_user.email != 'shuang_cai@keysight.com':
+        return redirect(url_for('index'))
+
+    title = request.form['title'].strip()
+    abs = request.form['abs'].strip()
+    category = request.form['category']
+    content = request.form['content'].strip()
+    now = datetime.datetime.now()
+    route = request.form['route'].strip()
+
+    post = Post.query.filter(Post.route == route).first()
+
+    post.title = title
+    post.abs = abs
+    post.category = category
+    post.content = content
+    post.last_modify_date = now;
+
+    db.session.commit()
+
+    return redirect(route)
+
+
+route_pyrfs = '/pyrfs'
+
+
+@app.route(route_pyrfs)
+def pyrfs():
+    recordPostHistory(route_pyrfs)
+    return render_template('pyrfs/chap01/PyRFS_Basics.html')
+
+
+route_pyrfs_chap1_1 = '/pyrfs/chap1.1'
+
+
+@app.route(route_pyrfs_chap1_1)
+@login_required
+def pyrfs_chap1_1():
+    recordPostHistory(route_pyrfs_chap1_1)
+    return render_template('pyrfs/chap01/PyRFS_Basics.html')
+
+
+route_pyrfs_chap1_2 = '/pyrfs/chap1.2'
+
+
+@app.route(route_pyrfs_chap1_2)
+@login_required
+def pyrfs_chap1_2():
+    recordPostHistory(route_pyrfs_chap1_2)
+    return render_template('pyrfs/chap01/guide_line.html')
+
+
+route_pyrfs_chap1_3 = '/pyrfs/chap1.3'
+
+
+@app.route(route_pyrfs_chap1_3)
+@login_required
+def pyrfs_chap1_3():
+    recordPostHistory(route_pyrfs_chap1_3)
+    return render_template('pyrfs/chap01/getStarted.html')
+
+
+route_pyrfs_chap2 = '/pyrfs/chap2'
+
+
+@app.route(route_pyrfs_chap2)
+@login_required
+def pyrfs_chap2():
+    recordPostHistory(route_pyrfs_chap2)
+    return render_template('pyrfs/chap02/agenda.html')
+
+
+route_pyrfs_chap2_1 = '/pyrfs/chap2.a1'
+
+
+@app.route(route_pyrfs_chap2_1)
+@login_required
+def pyrfs_chap2_1():
+    recordPostHistory(route_pyrfs_chap2_1)
+    return render_template('pyrfs/chap02/idsat_table.html')
+
+
+route_pyrfs_chap2_2 = '/pyrfs/chap2.a2'
+
+
+@app.route(route_pyrfs_chap2_2)
+@login_required
+def pyrfs_chap2_2():
+    recordPostHistory(route_pyrfs_chap2_2)
+    return render_template('pyrfs/chap02/idsat_table_t.html')
+
+
+route_pyrfs_chap2_3 = '/pyrfs/chap2.a3'
+
+
+@app.route(route_pyrfs_chap2_3)
+@login_required
+def pyrfs_chap2_3():
+    recordPostHistory(route_pyrfs_chap2_3)
+    return render_template('pyrfs/chap02/cond_target_list.html')
+
+
+route_pyrfs_chap2_4 = '/pyrfs/chap2.a4'
+
+
+@app.route(route_pyrfs_chap2_4)
+@login_required
+def pyrfs_chap2_4():
+    recordPostHistory(route_pyrfs_chap2_4)
+    return render_template('pyrfs/chap02/gm_table_vbs.html')
+
+
+route_pyrfs_chap2_b1 = '/pyrfs/chap2.b1'
+
+
+@app.route(route_pyrfs_chap2_b1)
+@login_required
+def pyrfs_chap2_b1():
+    recordPostHistory(route_pyrfs_chap2_b1)
+    return render_template('pyrfs/chap02/gm_table_t25.html')
+
+
+route_pyrfs_chap2_b2 = '/pyrfs/chap2.b2'
+
+
+@app.route(route_pyrfs_chap2_b2)
+@login_required
+def pyrfs_chap2_b2():
+    recordPostHistory(route_pyrfs_chap2_b2)
+    return render_template('pyrfs/chap02/gm_table_sort_vbs.html')
+
+
+route_pyrfs_chap2_b3 = '/pyrfs/chap2.b3'
+
+
+@app.route(route_pyrfs_chap2_b3)
+@login_required
+def pyrfs_chap2_b3():
+    recordPostHistory(route_pyrfs_chap2_b3)
+    return render_template('pyrfs/chap02/gm_table_vbs_label.html')
+
+
+route_pyrfs_chap2_b4 = '/pyrfs/chap2.b4'
+
+
+@app.route(route_pyrfs_chap2_b4)
+@login_required
+def pyrfs_chap2_b4():
+    recordPostHistory(route_pyrfs_chap2_b4)
+    return render_template('pyrfs/chap02/idsat_table_merge_wl.html')
+
+
+#########################
 if __name__ == '__main__':
     app.run()

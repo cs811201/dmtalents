@@ -1,0 +1,65 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Derivative</h2>
+<h3>MBP FAQ</h3>
+<hr>
+In this application note, we will explain how to get a X-Y curve’s derivative in MBP Script.
+<br/><br/>
+MBP data (double array, double[]) has the built-in <i>derivative()</i> function which makes this process rather simple, as follows:
+<pre>
+//where X and Y are also double arrays.
+double[] derivative = Y.derivative(X);
+
+</pre>
+
+However, one may wonder how to get the desired X-Y data in the first place. Here we go:<br/><br/>
+<h4>Example:</h4>
+Say we have an Ids_Vgs_Vbs graph, and want to get Gm_Vgs_Vbs, and by definition Gm is the derivative of Ids_Vgs.<br/><br/>
+
+Step 1. Fetch our Ids_Vgs_Vbs, and group by Vgs, as follows:
+<pre>
+// find our Ids_Vgs_Vbs data, but it returns a big table with all W/L/T/Biases
+DATA source = MBPDATA.get("Ids_Vgs_Vbs");
+//next to group the data by Vgs so that it returns a group of sub-tables where each one just contains one Ids_Vgs curve,
+// they are ready for applying the <i>derivative()</i> function.
+source = source.group("vgs");
+
+</pre>
+
+Step 2. Call a transform function(to be created in next step) to transform the group of sub-tables.
+<pre>
+DATA target = source.<a href="/mbpst/chap3.6" target="_blank">transSubToPointArray</a>(transFunc,"<font style="color:red">gm</font>");
+//Note: <font style="color:red">gm</font> here is a user given name, arbitrary, for the new output after transform.
+</pre>
+
+Step 3. Create such a “transFunc” function to perform the <i>derivative</i> function.
+<pre>
+void transFunc(POINT[] to,DATA from){
+	double[] vgs = from->"vgs"; // the arrow operator gets us the data with a given name.
+	double[] ids = from->"ids";
+	double[] gm = ids.derivative(vgs);
+	for(int i = 0;i&lt;gm.length;i++){
+		to[i]->"<font style="color:red">gm</font>" = gm[i];
+	}
+}
+//Note: must use the same new output name <font style="color:red">gm</font> in the transFunc.
+
+</pre>
+
+The complete script implementation looks as follows:<br/>
+<img src="/static/faq/mbp/derivative/code.png" border="1px"><br/><br/>
+The derivative function is done on line 11.<br/><br/>
+Below is the Gm_Vgs_Vbs plots, as follows:<br/><br/>
+<img src="/static/faq/mbp/derivative/gm.png" border="1px"><br/><br/>
+
+<br/><br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>gm Table | T=25</h2>
+<hr>
+<div overflow="scroll">
+    The previous gm table has 3 temperatures, [ -40, 25, 125 ], here, let’s see how we can generate a table with only
+    T=25, and also how to filter other condition variables, such as W/L/Bias, etc. <br/><br/>
+    The first a few rows of the table with T=25, W=Wmax, L=Lmin and Vgs=(0, 1) is shown below.
+
+    <br/>
+    <img src="/static/pyrfs/chap02/05_gm_table_t25/table.png"><br/><br/>
+
+    Let’s begin with T=25, here is the code<br/><br/>
+    <img src="/static/pyrfs/chap02/05_gm_table_t25/code.png"><br/><br/>
+
+    The new stuff is that we use “val_filter” option in the add_constraint() function in line 24.<br/><br/>
+    The syntax for this option is:
+    <ul>
+        <em>val_filter = { index_of_condition: (value list), and so on }</em>
+    </ul>
+    or:
+    <ul>
+        <em>val_filter = { index_of_condition: (‘range’,(min,max)), and so on }</em><br/>
+        note: min and max will not be included, min < value < max.
+    </ul>
+    Note that currently we still need to add a comma in the value list (25,) when there is only one number, missing the
+    comma (25) will fail.<br/><br/>
+    Next, let’s apply W=Wmax and L=Lmin, as follows:<br/><br/>
+    <img src="/static/pyrfs/chap02/05_gm_table_t25/code2.png"><br/><br/>
+
+    Line 6 – 13, we define two functions to return the max and min value of a Condition, and on line 36 we apply it to W
+    and L respectively.<br/><br/>
+    More, let’s see how to filter a condition by setting a range, say only export Vgs from 0 to 1.<br/><br/>
+    The code is as follows:<br/><br/>
+    <img src="/static/pyrfs/chap02/05_gm_table_t25/code3.png"><br/><br/>
+    On line 36, we further apply “5: ('range', (-0.1, 1.02))” in the “val_filter” option, because Vgs is the 5th
+    condition variable in the list, and according to the syntax that min and max will not be included, we need to expand
+    the boundary a little bit(-0.1, 1.02) in order to include 0 and 1.<br/><br/>
+
+    Here is a <a href="/pyrfs/gm_table_t25/download" target="_blank">copy of “gm_table_vbs.xlsx” for download</a> .<br/><br/>
+
+    Code for copy-paste:
+    <pre>
+import os
+
+import pyrfs as rfs
+
+
+def condMax(cond):
+    ticks = cond.get_axis().ticks
+    return max(ticks)
+
+
+def condMin(cond):
+    ticks = cond.get_axis().ticks
+    return min(ticks)
+
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="09_Mathematic_Robustness_2",
+         rule="Rule_1204",
+         check="Check_01")
+
+Vds = dp.conditions['vds']
+Vgs = dp.conditions['vgs']
+Vbs = dp.conditions['vbs']
+Vbs_count = Vbs.get_num_values()
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+gm = dp.targets["gm"]
+
+table = rfs.ReportTable(name="gm_table_T25")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, T, Vds, Vgs], offset=(1, 0),
+                     val_filter={1: (condMax(W),), 2: (condMin(L),), 3: (25,), 5: ('range', (-0.1, 1.02))}
+                     )
+right.add_constraint([gm], repeat=Vbs_count)
+right.add_constraint([Vbs], offset=(-1, -Vbs_count), ndr=0,
+                     vdr_direction=rfs.LAYOUT_DIR_RIGHT,
+                     tgr_direction=rfs.LAYOUT_DIR_DOWN
+                     )
+
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path, format='xlsx', overwrite=True)
+
+
+
+    </pre>
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+{% endblock %}
