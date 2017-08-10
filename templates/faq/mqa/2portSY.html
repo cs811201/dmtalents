@@ -1,0 +1,38 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>How to Change 2-port Network Input and Output Ports</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+By default, for a transistor, MQA uses Gate as the Input port and Darin as the Output port for 2-port network application, to simulate and calculate S and Y parameters.
+<br/><br/>
+
+In case we want to change the Input and Output ports assignment to a different device terminal, here is the way:
+<br/><br/>
+
+The In/Out ports are specified in the "model.icf" file, and each MQA project requires a "model.icf" file, so this arrangement will be project dependent.
+<br/>
+Of course one could also change the master copy of the "model.icf" file to make the changes global. <br/><br/>
+
+Take BSIM4 model as an example, the default "model.icf" file is located at:<br/>
+<ul>
+    <em>$MQAHOME/etc/model/$simulator/mos/bsim4(54)/model.icf</em>
+</ul>
+
+<img src="/static/faq/mqa/2port/1.png" border="1px"><br/><br/>
+
+In the [PORT] section, the highlighted 3rd item in the curly braces defines the In/Out or GROUND ports.
+<ul>
+    <li>1 stands for Input port</li>
+    <li>2 stands for Output port</li>
+    <li>0 stands for GROUND</li>
+</ul>
+
+So, we can change the numbers here to adjust the Input and Output ports for 2-port network simulation.
+<br/><br/>
+
+S/Y/Z/H/T parameters can be later on converted to one another when needed.
+
+<br/><br/><br/><br/>
+{% endblock %}

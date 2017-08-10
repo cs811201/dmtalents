@@ -1,0 +1,74 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: WPE
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>WPE: Vth vs SCA</h2>
+<h3>MQA Rules</h3>
+<hr>
+
+For Well Proximity Effect, in BSIM models we have SCA, SCB, SCC as instance parameters that represent the integral of
+the first/second/third distribution function for scattered well dopant.<br/><br/>
+<img src="/static/mqarules/wpe/2.png" border="1px"/><br/><br/>
+
+And, one problem comes when SCA/SCB/SCC are calculated, often conditionally, in foundry models, that their values can not be easily determined using regular MQA rule arrangement.
+<br/><br/>
+So, one quick and effective workaround is that, let's calculate their values in advance, and save them in a spreadsheet(.csv file) and let MQA run simulation given the spreadsheet as the input.
+<br/><br/>
+The .csv file are simply columns of data, we can add more columns when necessary, as shown below. <br/>
+<a href="/mqarule/wpe/download"
+   target="_blank">Download
+    an example of the wpe.csv file here.</a>
+<br>
+<img src="/static/mqarules/wpe/1.png" border="1px"/><br/><br/>
+
+Please put the wpe.csv file together with the MQA rule file in the same directory, then in MQA rule, we use a special option called
+<font
+        style="color:red">DataTable=csvFileName</font> to let MQA incorporate it.<br/><br/>
+
+
+wpe.rule Example:
+<pre>
+[common]
+appliedmodel = binning,global,macro
+
+[Group:WPE csv:Title=WPE effect]
+
+[Label:wpe_9001:title=Vth_lin vs. SCA]
+[Condition:1]
+[Option:<font style="color:red">DataTable</font>=wpe.csv]
+[Loops
+: X=<font style="color:blue">SCA</font>
+: p0=Vgs(start=0.05*devtype,stop=vgg,step=0.01)
+: P=T(tnom)
+: P1=<font style="color:blue">W</font>
+: P2=Vds(vd_lin)
+: P3=Vbs(0)
+: P4=<font style="color:blue">L</font>
+: p5=<font style="color:blue">SCB</font>
+: p6=<font style="color:blue">SCC</font>
+: p8=<font style="color:blue">SA</font>
+: p9=<font style="color:blue">SB</font>
+]
+[target
+:Id=<font style="color:purple">RemoveX(Ids,"SCB,SCC,SA,SB")</font>
+:Vth_lin=CalPage(Vds,Vgs,Id,"Vth_con")
+:y=Vth_lin]
+[Check: 01:Plot Vth_lin vs. SCA: Savepage(p1,x,y): error: Trend is not right]
+[Corner:02: Corner Trend of Vth_lin: CompareTrend(p1,x,y): error: TBD]
+[Compare:03:Vth_lin vs SCA:CompareTREND(x,y):error:no check]
+
+
+</pre>
+
+Since <font style="color:blue">W/L/SA/SB/SCA/SCB/SCC</font>  are provided in the .csv file via DataTable option, we simply leave them blank in [loops] section, they will be retrieved from the .csv file.
+
+<br/><br/>
+Note: the <font style="color:purple">RemoveX(Ids,"SCB,SCC,SA,SB")</font> function is neccessary here in order to be able to draw the Vth vs SCA curve, because SA/SB/SCB/SCC may have different value, and by default they will be put in the index table if not removed/ignored, and that would prevent us from overlaying all points in one graph. Please don't worry,they are only ignored for display purpose, the simulation still uses all of their proper values.
+
+<br/><br/><br/>
+
+
+{% endblock %}

@@ -183,6 +183,7 @@ displayUpto = 50
 
 @app.route('/')
 def index():
+    recordPostHistory("/")
     mbpPost = Post.query.filter((Post.category == 'mbpst')).all()
     mbpstCt = mbpPost.__len__()
     rulePost = Post.query.filter((Post.category == 'mqarules')).all()
@@ -210,6 +211,7 @@ def updateHis():
     # record view history
     recordPostHistory(route_update_history)
     return render_template('update_history.html')
+
 
 
 #
@@ -244,7 +246,10 @@ def mbpst():
     recordPostHistory('/mbpst')
     return render_template('mbpst/Chap1/WhatIsMBPScript.html')
 
-route_reqeust_login='/requestlogin'
+
+route_reqeust_login = '/requestlogin'
+
+
 @app.route(route_reqeust_login)
 def request_login():
     recordPostHistory(route_reqeust_login)
@@ -1113,6 +1118,36 @@ def mqafaqinternalspice3():
     return render_template('/faq/mqa/enableInternalSpice3.html')
 
 
+route_mqafaq_2port = '/mqafaq/2port'
+
+
+@app.route(route_mqafaq_2port)
+@login_required
+def mqafaq_2port():
+    recordPostHistory(route_mqafaq_2port)
+    return render_template('/faq/mqa/2portSY.html')
+
+
+route_mqafaq_openoffice = '/mqafaq/openoffice'
+
+
+@app.route(route_mqafaq_openoffice)
+@login_required
+def mqafaq_openoffice():
+    recordPostHistory(route_mqafaq_openoffice)
+    return render_template('/faq/mqa/openoffice.html')
+
+
+route_mqafaq_TightLoopWithMeasData = '/mqafaq/TightLoopWithMeasData'
+
+
+@app.route(route_mqafaq_TightLoopWithMeasData)
+@login_required
+def mqafaq_TightLoopWithMeasData():
+    recordPostHistory(route_mqafaq_TightLoopWithMeasData)
+    return render_template('/faq/mqa/TightLoopWithMeasData.html')
+
+
 #### ICCAP FAQ ######
 
 route_iccapfaq_saveInstToMDM = '/iccapfaq/saveInstToMDM'
@@ -1209,6 +1244,7 @@ def mqarulesmismatch_spe_mos():
     recordPostHistory(route_mqarules_mis_spe_mos)
     return render_template('/mqarules/rules/mismatch_spe_mos.html')
 
+
 route_mqarules_symm = '/mqarules/symm'
 
 
@@ -1217,6 +1253,27 @@ route_mqarules_symm = '/mqarules/symm'
 def mqarule_symm():
     recordPostHistory(route_mqarules_symm)
     return render_template('/mqarules/rules/symm.html')
+
+
+route_mqarules_misR = '/mqarules/misR'
+
+
+@app.route(route_mqarules_misR)
+@login_required
+def mqarule_misR():
+    recordPostHistory(route_mqarules_misR)
+    return render_template('/mqarules/rules/mismatch_hsp_res.html')
+
+
+route_mqarules_wpe = '/mqarules/wpe'
+
+
+@app.route(route_mqarules_wpe)
+@login_required
+def mqarule_wpe():
+    recordPostHistory(route_mqarules_wpe)
+    return render_template('/mqarules/rules/wpe.html')
+
 
 #### Video Demos
 route_video = '/video'
@@ -1409,8 +1466,6 @@ def videoMBP_diff_res():
     return render_template('/video/MBP_use_diff_res.html')
 
 
-
-
 route_video_ICCAP_OPEN_GUI = '/video/ICCAP_OPEN_GUI'
 
 
@@ -1436,6 +1491,7 @@ route_video_mbp_sram = '/video/mbp_sram'
 def videombp_sram():
     recordPostHistory(route_video_mbp_sram)
     return render_template('/video/MBP_sram.html')
+
 
 ######################
 
@@ -2105,6 +2161,7 @@ def download_Mismatch_spe_mos_rule():
     return send_file('static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule',
                      attachment_filename='mismatch_spe_mos.rule', mimetype='text/rule', as_attachment=True)
 
+
 route_download_symm_rule = '/mqarules/symm/download'
 
 
@@ -2447,6 +2504,7 @@ def download_pyrfs_gm_table_vbs_label():
     return send_file('static/pyrfs/chap02/07_gm_table_vbs_label/gm_table_vbs_label.xlsx',
                      attachment_filename='gm_table_vbs_label.xlsx', mimetype='text/plain', as_attachment=True)
 
+
 route_download_pyrfs_idsat_table_merge_wl = '/pyrfs/idsat_table_merge_wl/download'
 
 
@@ -2456,6 +2514,17 @@ def download_pyrfs_idsat_table_merge_wl():
     recordPostHistory(route_download_pyrfs_idsat_table_merge_wl)
     return send_file('static/pyrfs/chap02/08_idsat_table_merge_wl/idsat_table_merge_wl.xlsx',
                      attachment_filename='idsat_table_merge_wl.xlsx', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mqarule_wpe = '/mqarule/wpe/download'
+
+
+@login_required
+@app.route(route_download_mqarule_wpe)
+def download_mqarule_wpe():
+    recordPostHistory(route_download_mqarule_wpe)
+    return send_file('static/mqarules/wpe/wpe.csv',
+                     attachment_filename='wpe.csv', mimetype='text/plain', as_attachment=True)
 
 
 ### Upload a file

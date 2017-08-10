@@ -1,0 +1,91 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Mismatch Rule - Hspice - Resistor
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Mismatch Rule - Resistor - Hspice</h2>
+<h4>MQA Rules</h4>
+<hr>
+When an "agauss()"(Gaussian distribution function) function is introduced to a passive device, such as a resistor or capacitor, we can run mismatch analysis on them, too.
+<br/><br/>
+
+Below is an example of a resistor model that includes the agauss() function:
+<pre>
+.LIB  MC_RES
+.param a1=agauss(0,1,3)
+.subckt r n2 n1 w=10u l=1u
+.param  rmis='6e-3/sqrt(w*l*1e12)*a1'
+.param dl=-0.65u dw=0.113u
+.param rsh='13.1*(1+rmis)' ptc1=5.22E-04 ptc2=6.71E-09 pvc1=6.43E-04 pvc2=2.00E-03 pt='temper'
+.param tfac='1.0+ptc1*(pt-25.0)+ptc2*(pt-25.0)*(pt-25.0)'
+r n1 n2 'rsh*((l-dl)/(w-dw))*(1+pvc1*abs(v(n2,n1))+pvc2*v(n2,n1)*v(n2,n1))*tfac'
+.ends
+
+.ENDL MC_RES
+</pre>
+
+Together with the MQA rule below, we can run mismatch analysis for the above resistor model in MQA.<br/><br/>
+<img src="/static/mqarules/misR/1.png" border="1px"><br/><br/>
+
+Mismatch_hsp_res.rule:
+<br/>
+Due to the netlist in the [benchmark] section is written in Hspice format, which limits the rule to be used with Hspice only.
+<br/><br/>
+
+For more information, please read <a href="/mqarules/misHspMos" target="_blank">Mismatch Rule for MOS</a> .<br/>
+<pre>
+[common]
+appliedmodel = binning, global, macro
+<font style="color:red">montecarlo=yes</font>
+
+[Group:701:Title=Mismatch Model QA ]
+
+[Label:7011:title=Mismatch for Sigma R] *Hspice Resistor
+[Condition:1]
+[Option:sweeptype=dc]
+[Loops
+: XX=VSweep
+: P1=Vin(Vin)
+: X=L(start=g_lmin,stop=g_lmax,num=3)
+: P=W(start=g_wmin,stop=g_wmax,num=3)
+: P4=T(tnom)
+]
+[Target
+:IR1=I_Vin1
+:IR2=I_Vin2
+:dR=IR2/IR1-1
+:y=dR
+]
+[Statistic:01:Mismatch:PrintStdDv(y,"@YPercentScale=1"):error:data error]
+[benchmark]
+
+.temp @T
+
+VSweep a 0 1
+Rsweep a 0 100k
+
+Ein1     in1  0 a 0 1
+Vout1    out1 0    0
+@@xx_R1 in1 out1 r  l=@L w=@W
+
+Ein2     in2  0  a 0 1
+Vout2    out2 0    0
+@@xx_R2 in2 out2 r  l=@L w=@W
+
+.dc VSweep POI 1  @Vin
++sweep monte=@MonteCarloNum
+
+.PLOT dc I_Vin1=I(Vout1)
+.PLOT dc I_Vin2=I(Vout2)
+.end
+
+
+</pre>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

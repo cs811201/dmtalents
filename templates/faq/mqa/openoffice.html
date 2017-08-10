@@ -1,0 +1,57 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Enable OpenOffice on Linux for Reporting</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+Besides PDF and HTML, MQA generates Microsoft(c) Office documents on Windows, such as Excel, PPT, and Word. The good news is, with a bit setup, we can
+integrate OpenOffice with MQA so as to generate Spreadsheet, Presentation and Document that are equivalent to Excel, PPT and Word respectively. Moreover, actually
+we can also even generate Microsoft Excel, PPT and Word on Linux, which is a feature comes with OpenOffice.
+<br/><br/>
+Note: There is no need to install a separate OpenOffice, the integrated version is provided in this note, as follows:
+<br/><br/>
+
+Steps:<br/><br/>
+1.    download OpenOffice and configuration files from the following FTP folder:
+<ul>
+    <li>ftp.eesofeda.keysight.com</li>
+    <li>Username: edacust</li>
+    <li>Password: cc39fa03de (note: the password is subject to change without notice)</li>
+    <li>
+        <em>You need to type “/files/MQA_openoffice” completely in the “Remote site” path to be able to view the files.
+            Download all of the files.</em></li>
+</ul>
+
+<img src="/static/faq/mqa/openoffice/1.png" border="1px"><br/><br/>
+
+2.    Locate your MQA installation folder, for example, /home/cs/Keysight/MQA_2017 <br/>
+Then put these files under “/home/cs/Keysight/”, it's important that the files are at the same level of MQA installation, but not under it.
+<ul>
+    <li>report.jar</li>
+    <li>jre1.6.0_43.tar.gz</li>
+    <li>oosdk.jar</li>
+    <li>openoffice3.3.tar.gz</li>
+    <li>runMeToConfigOO.sh</li>
+</ul>
+
+3.    Edit “runMeToConfigOO.sh” for the correct MQA version, change to your installed version.<br/>
+<img src="/static/faq/mqa/openoffice/2.png" border="1px"><br/><br/>
+
+4.    run  “runMeToConfigOO.sh” and you will see a message at the end of the execution, modify PATH accordingly.<br/>
+<br/>
+
+5.    Now It is ok to generate report using OpenOffice in MQA.<br/><br/>
+Please go to menu "Report -> Properties", switch to Open Office, and choose file formats, as shown below:<br/>
+
+<img src="/static/faq/mqa/openoffice/3.png" border="1px"><br/><br/>
+
+Then, when do reporting, the Excel, PPT, Word will be in selected formats and created by by OpenOffice.<br/>
+<img src="/static/faq/mqa/openoffice/4.png" border="1px"><br/><br/>
+
+
+Note: OpenOffice may open a flashing window only for the first time, simply close it if it persists; later on OpenOffice will run in the background unknowingly.
+<br/><br/>
+Thanks you!
+<br/><br/><br/><br/>
+{% endblock %}

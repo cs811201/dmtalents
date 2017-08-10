@@ -1,0 +1,64 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Use Synchronized Instance Parameter Values from Measurement for Simulation</h2>
+<h3>MQA FAQ</h3>
+<hr>
+When dealing with model simulation vs. measurement accuracy checks, there is one MQA option called
+<mark>TightLoopWithMeasData</mark> we can use in Rule to improve the following situation:<br/><br/>
+
+For example, if, in measurement there are only 2 devices; however, they have several device instance parameters:
+<ul>
+    inst0: W=1e-05,L=1e-06, AD=5E-12, AS=5E-12<br/>
+    Inst1: W=2e-05,L=2e-06, AD=6E-12, AS=6E-12
+</ul>
+By default(TightLoopWithMeasData=No), MQA would parse all the instance parameters, W/L/AD/AS/... and do a full combination for simulation.
+<br/>
+And, often this default behavior results in unexpected trouble, the above 2 instances from measurement data, would result in 4x4=16 devices in simulation other than just 2, as follows:
+<br/>
+<ul>
+    inst0: W=1e-05,L=1e-06, AD=5E-12, AS=5E-12<br/>
+    Inst1: W=1e-05,L=2e-06, AD=5E-12, AS=5E-12<br/>
+    inst2: W=2e-05,L=1e-06, AD=5E-12, AS=5E-12<br/>
+    Inst3: W=2e-05,L=2e-06, AD=5E-12, AS=5E-12<br/>
+    Inst4: W=1e-05,L=1e-06, AD=6E-12, AS=6E-12(... all the way to Inst15)<br/>
+</ul>
+
+And, we see cases where MQA ended up with thousands of netlists(DUTs) for simuation, because there could be W/L/T/SA/SB/AD/AS/PD/PS/SCA/SCB/SCC/... more instance parameters combination. And it took hours to finish just one QA simulation which is very unreasonable.
+<br/><br/>
+
+So, the solution is to introduce <font
+        style="color:blue">TightLoopWithMeasData=yes</font> in MQA Rule's [Option] section, and immediately MQA would use exact the same device count for simulation, no more cumbersome full combination, and we see previously hours of simulation reduces into seconds right away, phew...
+<br/><br/>
+As follows:
+<pre>
+[common]
+appliedmodel= global,binning,macro
+<font style="color:red">Measurement = yes</font>
+
+[Group:10:title=Model Accuracy Check]
+
+[Label:0101:title=Ids_Vgs_Vbs]
+[Condition:1]
+[option: datablock=Ids_Vgs_Vbs:simlation=yes:<font style="color:blue">TightLoopWithMeasData=yes</font> ]
+[loops
+:x =Vgs
+:p =Vbs
+:p1=Vds
+:p2=SA
+:p3=SB
+:p4=W
+:P5=L
+:P6=T
+]
+[target:y1=Ids:y2=Gm]
+[Compare: 01:RMS of Ids_Vgs_Vbs:CompPlot(Vbs,Vgs,y1):error:fitting error]
+[Compare: 02:RMS of Gm_Vgs_Vbs:CompPlot(Vbs,Vgs,y2):error:fitting error]
+</pre>
+
+Note, when measurement is in use, we must enable <font style="color:red">Measurement =
+    yes</font> in the [common] section of a rule file; then, in each rule we introduce <font style="color:blue">TightLoopWithMeasData=yes</font> in the [option] section.
+
+
+<br/><br/><br/><br/>
+{% endblock %}
