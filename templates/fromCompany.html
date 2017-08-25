@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+From Company
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/>
+<div class="container">
+    <br/>
+    <h3>From Company: {{companyName}}</h3>
+    <hr/>
+    <table width="100%">
+        <thead>
+        <tr>
+            <th width="30%">Name</th>
+            <th width="30%">Email</th>
+            <th width="20%">Last Login Time</th>
+            <th width="10%">Last Login IP</th>
+            <th width="10%">View #</th>
+
+        </tr>
+        </thead>
+        {% for p in companyUsers %}
+        <!--# name, email,  last login time, last login IP, view # -->
+        <tr>
+
+            <td>{{p[0]}}</td>
+            <td>{{p[1]}}</td>
+            <td>{{p[2]}}</td>
+            <td>{{p[3]}}</td>
+            <td>{{p[4]}}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <br/><br/> <br/>
+</div>
+{% endblock %}

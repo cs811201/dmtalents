@@ -1,0 +1,165 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Sid/Id^2 | Formula</h2>
+<hr>
+<div overflow="scroll">
+
+    In MBP <a href="/mbpst/chap3.19" target="_blank">Script Tutorial Chapter 3.19</a> we discussed how to get Sid/Id^2
+    vs. Freq in MBP. Here, we are going to discuss how to get it from MQA as a model verification item.<br/><br/>
+    As it turns out that to get Sid/Id^2 we need to run both DC and 1/f analyses, and the regular MQA rule could only
+    host one type of analysis unless we use the advanced script-based MQA rule, which is a separate topic; However, by
+    using PyRFS, we can easily combine two regular rules' result together in one Excel table, so that we can go ahead to
+    create the Sid/Id^2
+    vs. Freq plot, as shown below.<br/><br/>
+
+    More over, we could make such an Excel table a template, so that in the future we can just update the numbers, and
+    the
+    plots defined in the Excel will update automatically and correspondingly.
+    <br/><img src="/static/pyrfs/chap02/09_sid_id2/0.png"><br/><br/>
+
+    In the above table, we put W/L/Freq/Ids/Sid/Sid/Id^2 side by side.<br/><br/>
+
+    This is achieved by running the DC and 1/f noise analysis rules in MQA, preferred to put these 2 rules in one rule
+    group(file), as shown
+    below, where we have (1)
+    Sid vs Feq, and (2) Ids output that has the same W/L/T/Vgs/Vds/Vbs conditions as of the first Sid rule. The example
+    rule file is appended at the end of this webpage.<br/><br/>
+    Sid vs. Freq result:
+    <br/><img src="/static/pyrfs/chap02/09_sid_id2/1.png"><br/><br/>
+
+    Ids at W/L/Bias result:
+    <br/><img src="/static/pyrfs/chap02/09_sid_id2/2.png"><br/><br/>
+
+
+    The changes in code from what we have covered previously:<br/>
+    <ul>
+        1. On line 8 in the query() function, we use an array to include both the DC and 1/f noise rules.
+        <br/><img src="/static/pyrfs/chap02/09_sid_id2/3.png"><br/><br/>
+
+        2. AFTER we added line 29, we add line 30-32 the add_formula() function, where we define the formula's
+        <em>name</em>(string output to the Excel), <em>constraints</em>(what variables to use), and <em>formula</em>(the
+        equation, Sid/(Ids*Ids)). in the formula, we
+        use <em>$1</em> and <em>$2</em>
+        to refer to the first and second variables in the constraints list from line 31, we will have $3, $4, and so on
+        if there are more variables.
+        <br/><img src="/static/pyrfs/chap02/09_sid_id2/4.png"><br/><br/>
+
+    </ul>
+
+
+    The complete example Python code to generate the Excel file is as follows:<br/>
+    <pre>
+import pyrfs as rfs
+
+project_path = r'C:\Users\cs\MQA_test\QA_mqa_sid_id2'
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+
+dp.query(rule_group="05_Check_Noise_Simulation",
+         <mark>rule=["Rule_1101", "Rule_4001_sid"],</mark>
+         check="Check_01")
+
+dp.list_conditions(detail=True)
+dp.list_targets(detail=True)
+
+sid = dp.targets["sid"]
+ids = dp.targets["ids"]
+
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+#T = dp.conditions["t"]
+freq = dp.conditions['freq']
+
+table = rfs.ReportTable(name="Sid_id_table")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, freq],
+                     offset=(1, 1),
+                     val_sort={1: 'inc', 2: 'inc', 3: 'inc'},
+                     # val_filter={1: (getMaxCond(W),), 2: (getMaxCond(L),), 3: (25,)}
+                     )
+right.add_constraint([ids, sid])
+<mark>
+right.add_formula(name="Sid/Id^2",
+                  constraints=[ids, sid],
+                  formula="$2/($1*$1)")
+</mark>
+rfs.fill_in(table)
+
+out_path = r'C:\Users\cs\MQA_test'
+rfs.save(report=table, out_dir=out_path, format='xlsx', overwrite=True)
+
+
+    </pre>
+    <br/><br/>
+
+    MQA Rule used in this example is provided here for copy-paste:<br/>
+    <pre>
+[common]
+appliedmodel = global, binning, macro
+[Group:11:Title=Check Noise Simulation]
+
+[Label: 1101_id:title= Get Idsat for Sid] *for NMOS
+[Condition:(devtype=1)and(application=1 or application=2 or application=3)]
+[Loops
+: X=L(g_lmin,g_lmax)
+: P=W(g_wmin,g_wmax)
+: P1=Vgs(vgg)
+: P2=Vds(vdd)
+: P3=Vbs(0)
+: P4=T(tnom)
+]
+[Target: y=<font style="color:red">Ids</font> ]
+[Check: 01:Check Trend: Save2DData (p,x,y): error: Trend is not right]
+[Compare: 03:RMS of Idsat vs. L : CompPlot(p,x,y): error: TBD]
+[Corner:04:Check corner of Idsat vs. L : CompareTREND(x,y,"@TREND=1"): error: TBD]
+
+
+[label:1101_sid:title=Check 1/f Noise]
+[Condition: devtype=1]
+[Option:sweeptype=ac]
+[loops
+: x  = Freq
+: p  = Vgs(vgg)
+: p1 = Vds(vdd)
+: p2 = Vbs(0)
+: p2 = L(g_lmin,g_lmax)
+: p3 = W(g_wmin,g_wmax)
+: p4 = T(tnom)]
+[target
+:Sid=VSid*VSid
+:y1=<font style="color:red">Sid</font>
+]
+[check:01:Plot Sid vs. freq:Save2dData(p1,x,y1,"@PlotInfo YSCALE=LOG XSCALE=LOG"):error:no check ]
+[Corner:03:Check corner of Sid vs. Freq:CompareTREND(x,y1,"@PlotInfo YSCALE=LOG XSCALE=LOG"):error:TBD]
+
+[benchmark]
+.option post=2 post_version=2001
+
+vg gate 0 @vgs ac 1
+vd drain 0 @vds
+vs source 0 0
+vb bulk 0 @vbs
+fcccs extra 0 cccs poly(1) vd scale=1 0 1
+rcccs extra 0 rmodel1 r=1
+.model rmodel1 r (noise=0)
+@@xx_mn1 drain gate source bulk @@mm_LV_NMOS w=@W l=@L dtemp='@T-25'
+.ac dec 4 1 10k
+.noise v(extra) vg 10
+
+.print noise VSid=onoise
+.end
+
+    </pre>
+
+
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}

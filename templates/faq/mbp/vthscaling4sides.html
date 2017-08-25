@@ -1,0 +1,84 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Vth Scaling Plots of 4 Sides on W/L Matrix</h2>
+<h3>MBP FAQ</h3>
+<hr>
+We all know how important Threshold Voltage(Vth) is, and this note demonstrates how to view Vth scaling plots on four sides of the device geometries, W/L matrix, as follows:
+<br/>
+<br/>
+
+
+<ul>
+    <table width="80%">
+        <tr>
+            <td><img src="/static/faq/mbp/vthscaling4sides/vthlwmax.png"/></td>
+            <td><img src="/static/faq/mbp/vthscaling4sides/vthlwmin.png"/></td>
+
+        </tr>
+        <tr>
+            <td>Vth vs L @ Wmax</td>
+            <td>Vth vs L @ Wmin</td>
+
+        </tr>
+        <tr>
+            <td><img src="/static/faq/mbp/vthscaling4sides/vthwlmax.png"/></td>
+            <td><img src="/static/faq/mbp/vthscaling4sides/vthwlmin.png"/></td>
+        </tr>
+        <tr>
+            <td>Vth vs W @ Lmax</td>
+            <td>Vth vs W @ Lmin</td>
+
+        </tr>
+
+    </table>
+
+</ul>
+
+Now, let’s take a look at how they look like in MBP, as follows, we can create a Task in the Flow, and by simply clicking the Task button, “Display_Vth_Scaling_4_sides”, MBP display these 4 plots right away.
+<br/>
+<br/>
+
+So that, we can always come back to check on them, and tune/optimize model parameters when necessary, to make sure our Vths are fit through out.
+<br/>
+<br/>
+
+<img src="/static/faq/mbp/vthscaling4sides/button.png"/><br/>
+<br/><br/>
+Alright, let’s see how we can bring it up in MBP as a Flow Task.<br/><br/>
+As shown below, we firstly create an OptTask in Flow, and call it “Display_Vth_Scaling_4_sides”, please refer to <a
+        href="/mbpst/chap2.3.2" target="_blank">Chapter 2.3 Creation – OptTask</a> for how to create it.
+<br/><br/>
+Then, in its Plot Select tab, click the “Add Plot” button to add these 4 plots, they are from 2 plot groups “vth_l_vbs” and “vth_w_vbs” and we filter the plots out by certain conditions, for example, as highlighted in green for the first plot where
+<mark>vds=abs(min(vds))
+    <font style="color:red">&&</font> w=max(w)
+</mark>, this determines to pick the plot with only the absolute min Vds, and max W conditions;
+<font style="color:red">&&</font>  is a logical operator that means “AND”.
+<br/><br/>
+<img src="/static/faq/mbp/vthscaling4sides/plots.png"/><br/><br/>
+We may have noticed that this notes depicts the steps in backwards, so we now are wondering where and how these
+<mark>vth.vth_l_vbs</mark> and
+<mark>vth.vth_w_vbs</mark> plots are defined, as follows:
+<br/><br/>
+They are defined under “data -> region” in MPP Script window, this location is required by MBP, we must create them here otherwise the Plot Select in the OptTask won’t be able to find them. Other than this, there is no other limit about how many or what targets/plots we can create.
+<br/><br/>
+<img src="/static/faq/mbp/vthscaling4sides/region.png"/><br/><br/>
+
+To create a Target under “data -> region”, simply right click on “region” and do “New -> Data”, and to create Graphs under a Target is right click on(vth) that Target and do “New -> Graph”, which all the same as IMVs, please refer to
+<a href="/mbpst/chap2.1.1" target="_blank">Chapter 2.1</a> for more details.
+<br/><br/>
+Well, last bit, how we create the target “vth” here, by double clicking on it, we see the source code, it could be an algorithm completed customized, or as simple as retrieving the existing “vth_con”(or Vth_gm, you name it, or have Vtsat/Vtlin all together) that has been defined under “imv.imv” which we use all the time, please also refer to
+<a href="/mbpst/chap2.1.1" target="_blank">Chapter 2.1 </a>for IMV definition/customization details.
+<br/><br/>
+<img src="/static/faq/mbp/vthscaling4sides/vth.png"/><br/><br/>
+
+<br/><br/><br/>
+Thank you!
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\pyrfs'
+directory = r'D:\projects\dmtalents\static\faq\mbp\vthscaling4sides'
 
 
 def renameIt(dir):

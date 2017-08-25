@@ -1,0 +1,47 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Display Vth, Idsat RMS on W/L/T/Vdd Grid</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+Considering the typical case where device modeling engineers work on a global model with multiple device sizes in W/L, various temperature(T) and drive voltage(Vdd),  think about how much time we spend in making sure a quality model across all these dimensions, will we be thrilled if there is an easy way to holistically bring up numbers of all key device targets? such Vth(Threshold Voltage), Idsat(Drive Current), GM(Transconductance), and their RMS, etc, across these dimensions, so that we can monitor them in one place, and tune or optimize model parameters while watching the numbers update on the fly?
+<br/><br/>
+
+In this note, we are going to go through a couple of examples to see how MBP Script makes globally monitor device targets easier than ever before.
+<br/><br/>
+The following picture show Vth and Idsat RMS distribution on the W/L matrix.<br/>
+<img src="/static/faq/mbp/errorDataGrid/1.png"/><br/><br/>
+
+This type of graph is called
+<em>ErroDataGrid</em> plot, it presents the RMS of device targets in a 2-dimension plane, and the best part is that we can choose what are the two dimensions from all of the available input, for example, W and L, or W/L and T, W/L and VDD, etc.
+<br/><br/>
+When tuning model parameters, we can observe the RMS update on the fly, as well as the length and color of the RMS bars, for example, another state of the model gives the following ErrorDataGrid plots.
+<br/><br/>
+
+<img src="/static/faq/mbp/errorDataGrid/2.png"/><br/><br/>
+
+
+The above ErroDataGrid plots are  defined in MBP’s Script window, as shown below, by picking
+<em>ErrorDataGrid</em> as the Graph Type on the top, and we can specify what X and Y axes are, what target to display, what color to use for every RMS range, etc. We could even define multi-targets in one ErroDataGrid plot if that’s desired, by looking for those targets one by one and click "Add Target" button.
+<br/>
+<br/><img src="/static/faq/mbp/errorDataGrid/3.png"/>
+<br/><br/>
+Moreover, these ErrorDataGrid plots can be integrated in the Flow as a Task button, just like other IMV graphs, as shown below:
+<br/>
+<br/><img src="/static/faq/mbp/errorDataGrid/4.png"/><br/><br/>
+
+
+<br/><br/>
+Thanks!
+
+
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

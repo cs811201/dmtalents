@@ -22,7 +22,10 @@ Dashboard
     <br/>
     User Count: <font size="6"> {{user_ct}}</font> ---- Search Count: <font size="6"> {{search_ct}}</font>
     <br/>
-    <br/>
+    Company Count: <font size="6"> {{company_ct}}</font><br/>
+    Total View #:<font size="6"> {{totalViewCount}}</font>
+
+    <br/><br/>
     <div style="height:530px">
         <!--style="float:left; width: 0%; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3"-->
         <div>
@@ -53,7 +56,7 @@ Dashboard
     <hr/>
 
     <div>
-        <h3>Recent 20 Searches ||  <a href="/recent100SearchHis" target="_blank">Recent 100 Searches</a></h3>
+        <h3>Recent 20 Searches || <a href="/recent100SearchHis" target="_blank">Recent 100 Searches</a></h3>
         <hr/>
         <table width="90%">
 
@@ -131,9 +134,9 @@ Dashboard
 
 
     <br/>
-    <h3>Views by User | Company</h3>
+    <h3>Views by User</h3>
     <hr/>
-    <table width="80%">
+    <table width="90%">
         <thead>
         <tr>
             <th width="18px">ID</th>
@@ -141,6 +144,7 @@ Dashboard
             <th width="50px">Email</th>
             <th width="50px">Company</th>
             <th width="30px">View #</th>
+
         </tr>
         </thead>
         {% for p in userHis %}
@@ -151,6 +155,29 @@ Dashboard
             <td>{{p[3]}}</td>
             <td>{{p[4]}}</td>
 
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br/>
+    <h3>User # by Company</h3>
+    <hr/>
+    <table width="90%">
+        <thead>
+        <tr>
+            <th width="20%">Index</th>
+            <th width="40%">Company Name</th>
+            <th width="20%">How Many Users</th>
+            <th width="20%">Total View #</th>
+
+        </tr>
+        </thead>
+        {% for p in companListForDisplay %}
+        <tr>
+            <td> {{ p[0] }}</td>
+            <td><a href="/fromCompany/{{p[1]}}" target="_blank">{{p[1]}}</a></td>
+            <td>{{p[2]}}</td>
+            <td>{{p[3]}}</td>
         </tr>
         {% endfor %}
     </table>

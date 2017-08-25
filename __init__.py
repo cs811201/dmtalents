@@ -213,7 +213,6 @@ def updateHis():
     return render_template('update_history.html')
 
 
-
 #
 # # test send email
 # @app.route("/send_email")
@@ -1035,6 +1034,46 @@ def mbpfaq_addInstParam():
     return render_template('/faq/mbp/addInstParam.html')
 
 
+route_mbpfaq_changeDefaultScript = '/mbpfaq/changeDefaultScript'
+
+
+@app.route(route_mbpfaq_changeDefaultScript)
+@login_required
+def mbpfaq_changeDefaultScript():
+    recordPostHistory(route_mbpfaq_changeDefaultScript)
+    return render_template('/faq/mbp/changeDefaultScript.html')
+
+
+route_mbpfaq_addFlow2Menu = '/mbpfaq/addFlow2Menu'
+
+
+@app.route(route_mbpfaq_addFlow2Menu)
+@login_required
+def mbpfaq_addFlow2Menu():
+    recordPostHistory(route_mbpfaq_addFlow2Menu)
+    return render_template('/faq/mbp/addFlow2Menu.html')
+
+
+route_mbpfaq_vthscaling4sides = '/mbpfaq/vthscaling4sides'
+
+
+@app.route(route_mbpfaq_vthscaling4sides)
+@login_required
+def mbpfaq_vthscaling4sides():
+    recordPostHistory(route_mbpfaq_vthscaling4sides)
+    return render_template('/faq/mbp/vthscaling4sides.html')
+
+
+route_mbpfaq_errorDataGrid = '/mbpfaq/errorDataGrid'
+
+
+@app.route(route_mbpfaq_errorDataGrid)
+@login_required
+def mbpfaq_errorDataGrids():
+    recordPostHistory(route_mbpfaq_errorDataGrid)
+    return render_template('/faq/mbp/errorDataGrid.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -1702,12 +1741,77 @@ def dashboard():
             # route 0, date 1, user name 2, email 3, company 4
             downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid)))
 
+    # get company count
+
+    company_ct = 0
+    companyHis = User.query.order_by(User.company).all()
+    # company_ct = companyHis.__len__()
+
+    ### for for post his rate
+    companyList = []
+    for p in companyHis:
+        tmpcmp = p.company
+        # if tmpcmp==None:
+        #     tmpcmp='public'
+        companyList.append(tmpcmp)
+
+    rz = Counter(companyList).items()
+    # print(type(rz))
+    # print(rz)
+    # sortedCompanyList = reversed(sorted(rz, key=operator.itemgetter(1)))
+    sortedCompanyList = sorted(rz)
+    company_ct = rz.__len__() - 1
+    companListForDisplay = []
+    companyIndex = 1
+    for cmp in sortedCompanyList:
+        # index, company name, count of a company
+        companListForDisplay.append((companyIndex, cmp[0], cmp[1], viewCountTotalByCompany(cmp[0])))
+        companyIndex = companyIndex + 1
+    # summarize Public view #, too
+    companListForDisplay.append((companyIndex, 'Public', 1, getViewCountByUserID(-1)))
+    # total view #
+    postHis = PostHistory.query.filter(PostHistory.user_id != 3).order_by(desc(PostHistory.date)).all()
+    totalViewCount = postHis.__len__()
+
     return render_template('/dashboard.html', iccap_ct=iccap_ct, mbp_ct=mbp_ct, mqa_ct=mqa_ct, wpe_ct=wpe_ct,
                            alfna_ct=alfna_ct,
                            video_ct=video_ct, blog_ct=blog_ct, service_ct=service_ct,
                            user_ct=user_ct, search_ct=search_ct, postTop=postTop, userHis=userHis,
                            searchList=sList, getPostIdFunc=getPostIdByRoute, latestViews=latestViews,
-                           downloads=downloads)
+                           downloads=downloads, company_ct=company_ct, companListForDisplay=companListForDisplay,
+                           totalViewCount=totalViewCount)
+
+
+def viewCountTotalByCompany(companyName):
+    userHis = User.query.filter(User.company == companyName).all()
+    totalCt = 0
+    for p in userHis:
+        viewCt = getViewCountByUserID(p.id)
+        totalCt = totalCt + viewCt
+
+    return totalCt
+
+
+rount_from_company = '/fromCompany/<companyName>'
+
+
+@app.route(rount_from_company)
+@roles_required('sunshine')
+@login_required
+def dashboard_from_company(companyName):
+    companyUsers = []
+    userHis = User.query.filter(User.company == companyName).all()
+    for p in userHis:
+        # name, email, last login time, last login IP, view count
+        companyUsers.append((p.username, p.email, p.last_login_at, p.last_login_ip, getViewCountByUserID(p.id)))
+
+    return render_template('/fromCompany.html', companyUsers=companyUsers, companyName=companyName)
+
+
+def getViewCountByUserID(uid):
+    UserHis = PostHistory.query.filter(PostHistory.user_id == uid).all()
+
+    return UserHis.__len__()
 
 
 route_dashboard_chart_view = '/chart_view_98adsfhrhwgijj!!kjfskvgahvg877awefjkjdfkagh0248_df83j'
@@ -2740,6 +2844,16 @@ route_pyrfs_chap2_b4 = '/pyrfs/chap2.b4'
 def pyrfs_chap2_b4():
     recordPostHistory(route_pyrfs_chap2_b4)
     return render_template('pyrfs/chap02/idsat_table_merge_wl.html')
+
+
+route_pyrfs_chap2_b5 = '/pyrfs/chap2.b5'
+
+
+@app.route(route_pyrfs_chap2_b5)
+@login_required
+def pyrfs_chap2_b5():
+    recordPostHistory(route_pyrfs_chap2_b5)
+    return render_template('pyrfs/chap02/sid_id2.html')
 
 
 #########################

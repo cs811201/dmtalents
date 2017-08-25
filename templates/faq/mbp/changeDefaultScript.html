@@ -1,0 +1,46 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Change Model's Default Script Setting File</h2>
+<h3>MBP FAQ</h3>
+<hr>
+MBP has a default Script setting for every model, be it BSIM4, BSIMCMG, BSIMIMG or PSP, etc. where the default IMV targets, scaling plots, extraction flow, etc. are defined. For more information about MBP Script's capability(essential, powerful), please refer to
+<a href="/mbpst" target="_blank">MBP Script Tutorial.</a>
+<br/>
+As shown below:
+<br/>
+<img src="/static/faq/mbp/changeDefaultScript/3.png" border="1px"><br/><br/>
+
+All of these settings can be exported as a single .zip file, that can be reused or shared among other MBP users. And, users are encouraged to come up with their own programs, targets/plots definition, etc, so when that happens, end users would like to have their own Script settings/definition to be the default, so that they don't have to load a .zip every time.
+<br/><br/>
+Especially when the settings are standardized for a group, we want to make that default for the whole group.
+<br/><br/>
+Here is how we do it:
+<br/><br/>
+
+Currently, the default "script.zip" is located at the following path,
+<ul>
+    $MBPHOME/program/dc/$simulator/$device/$model/
+
+</ul>
+each model has a folder of its own, and the path/location cannot be changed yet, so what we can do is to replace the default "script.zip" file with our new version. And, importantly,
+<mark>the file must be named "script.zip"</mark>.
+<br/>
+<img src="/static/faq/mbp/changeDefaultScript/1.png" border="1px"><br/><br/>
+
+For example, the "script.zip" under "bsimcmg" folder, and yes, please use all lowercase for model names.<br/>
+<img src="/static/faq/mbp/changeDefaultScript/2.png" border="1px"><br/><br/>
+
+If we don't see a folder of a particular model type in there, simply create a folder, for example "bsimimg", and put a "script.zip" file in it.
+Then, next time we start MBP, the new "script.zip" will be loaded as default Script setting when we switch to that model type.
+
+<br/><br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Display Customized Flow in MBP main GUI</h2>
+<h3>MBP FAQ</h3>
+<hr>
+When we developed/customized our own Extraction Flow in MBP Script window, we could further name it as a menu item(toggle menu item), and display it in MBP’s main GUI, as shown below, so that we can execute it easily.
+<br/>
+<br/>
+<img src="/static/faq/mbp/addFlow2Menu/1.png"/><br/><br/>
+
+Note, a few additional benefits we get once we integrate the Flows into MBP’s main GUI:<br/>
+<ul>
+    1. The Flow tabs can be floated, by double clicking on the tab stubs.<br/>
+    2. Each Task in the flow can be turned into a button, so that we can click on them in any order to have them
+    executed, which, brings more power to it.
+</ul>
+
+Firstly, we need to create the flow in MBP Script window. As shown below, for details of how to create a flow, please refer to
+<a href="/mbpst/chap2.3.1" target="_blank">MBP
+    Script Tutorial Chapter 2.3.</a><br/><br/>
+A few highlights:
+<ul>
+    (1) We can form the flow by linking the arrows between Tasks in any order we need, or no arrow/link at all.<br/>
+    (2) A group of Tasks form a flow, and we can further put a few flows together at a higher level to create a
+    bigger(hierarchical) flow.
+</ul>
+
+<img src="/static/faq/mbp/addFlow2Menu/4.png"/><br/><br/>
+
+Next, it’s recommended to define the following function in the “setup” node in the MBP Script window, as shown below:
+<br/>
+<img src="/static/faq/mbp/addFlow2Menu/5.png"/><br/><br/>
+
+Code written in the “setup” node will be automatically executed when we open a MBP project, we can also click the run button to run the code manually.
+<br/><br/>
+Line 34 adds a callback function, which is defined between line 26 - 33, to MBP's Extraction menu, and named by a string defined on line 24.
+<br/><br/>
+If we have more than one Flows to add, simply repeat these lines of code, and update the following correspondingly:
+<ul>
+    <li>The <font style="color:red">flow</font> ::TASKon line 28 to a new flow's name.</li>
+    <li>The callback function name <font style="color:blue">showTopflow</font> which is on line 26 and used on line 34.
+    </li>
+    <li>as well as update the String variable <font style="color:green">topFlow</font>.</li>
+</ul>
+<br/><br/>
+
+Here is the code for copy-paste:
+
+<pre>
+
+String <font style="color:green">topFlow="Top Flow"</font>;
+
+sfunc void <font style="color:blue">showTopFlow</font>(boolean selected){
+if(selected){
+	MBPGUI.addTaskPane(<font style="color:green">topFlow</font>,<font style="color:red">flow</font>::TASK);
+	}
+	else{
+		MBPGUI.removeTaskPane(<font style="color:green">topFlow</font>);
+	}
+}
+MBPGUI.addCheckMenu("Extraction->"+<font style="color:green">topFlow</font>, <font
+        style="color:blue">showTopFlow</font>);
+
+
+
+</pre>
+
+
+More, about the “button mode” of Tasks, for example, into the Plots flow, we have a few Tasks, as shown below. At the beginning, they are plain Tasks, click on them would not execute them.
+<br/>
+
+
+<br/>
+<img src="/static/faq/mbp/addFlow2Menu/2.png"/><br/><br/>
+
+If we select them and right click, and do “Button Mode”, they will be turned into buttons, as shown below, and now they are clickable, in any order.
+<br/>
+<img src="/static/faq/mbp/addFlow2Menu/3.png"/><br/><br/>
+
+Note: Don’t click the buttons too fast, wait until a Task finishes before click another one, there was reported issue that clicking too fast may cause MBP to freeze.
+<br/><br/>
+Thanks!
+
+
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+
