@@ -7,7 +7,7 @@ from random import randint
 
 import flask_whooshalchemy as wa
 import pygal
-from flask import Flask
+from flask import Flask, g
 from flask import render_template, url_for, request, redirect, send_file
 from flask_mail import Mail
 from flask_security import Security, login_required, SQLAlchemyUserDatastore, UserMixin, RoleMixin, current_user
@@ -183,7 +183,7 @@ displayUpto = 50
 
 @app.route('/')
 def index():
-    recordPostHistory("/")
+    # recordPostHistory("/")
     mbpPost = Post.query.filter((Post.category == 'mbpst')).all()
     mbpstCt = mbpPost.__len__()
     rulePost = Post.query.filter((Post.category == 'mqarules')).all()
@@ -198,6 +198,7 @@ def index():
     faqPost = Post.query.filter(
         (Post.category == 'mqafaq') | (Post.category == 'mbpfaq') | (Post.category == 'iccapfaq')).all()
     faqCt = faqPost.__len__()
+    g.__setattr__('dombp', True)
 
     return render_template('index.html', num=getRandomIntFrom1toGiven(15), mbpstCt=mbpstCt, videoCt=videoCt,
                            ruleCt=ruleCt, faqCt=faqCt, pyrfsCt=pyrfsCt)
@@ -412,6 +413,15 @@ def blog_mqa_pyrfs():
     return render_template('blog/post/mqa_pyrfs.html')
 
 
+route_blog_mbp_extr_across_conditions = '/blog/mbp_extr_across_conditions'
+
+
+@app.route(route_blog_mbp_extr_across_conditions)
+def blog_mbp_extr_across_conditions():
+    recordPostHistory(route_blog_mbp_extr_across_conditions)
+    return render_template('blog/post/mbp_extr_across_conditions.html')
+
+
 # MQA rules
 
 @app.route('/mqarules')
@@ -446,15 +456,100 @@ def add_post():
         return render_template('post_added.html', newpost=post)
 
 
+### Search Options ####
+searchOptions = {'isopen': 0, 'doiccap': 1, 'dombp': 1, 'domqa': 1, 'doblog': 1, 'dovideo': 1}
+
+
+def updateSearchOptions(isopen, doiccap, dombp, domqa, doblog, dovideo):
+    global searchOptions
+    searchOptions['isopen'] = 1 if isopen else 0
+    searchOptions['doiccap'] = 1 if doiccap else 0
+    searchOptions['dombp'] = 1 if dombp else 0
+    searchOptions['domqa'] = 1 if domqa else 0
+    searchOptions['doblog'] = 1 if doblog else 0
+    searchOptions['dovideo'] = 1 if dovideo else 0
+
+    return searchOptions
+
+
+@app.context_processor
+def inject_Search_Options():
+    return searchOptions
+
+
+### End -- Search Options ####
+
 # example
 # .filter(BlogPost.created >= two_days_ago)
+
+
 @app.route('/search', methods=['POST'])
 @login_required
 def search():
     txt = request.form['search']
     recordSearchHistory(txt.strip())
-    results = Post.query.whoosh_search(txt).limit(displayUpto).all()
-    return render_template('search_result.html', slist=results, searchfor=txt, myfunction=getCategory)
+    # add search option,
+    isOpen = request.form.get('searchOptionFlag')
+
+    doiccap = False
+    dombp = False
+    domqa = False
+    dowpe = False
+    doalfna = False
+    dovideo = False
+    doblog = False
+    if (request.form.get('iccap') != None):
+        doiccap = True
+    if (request.form.get('mbp') != None):
+        dombp = True
+    if (request.form.get('mqa') != None):
+        domqa = True
+    if (request.form.get('wpe') != None):
+        dowpe = True
+    if (request.form.get('alfna') != None):
+        doalfna = True
+    if (request.form.get('video') != None):
+        dovideo = True
+    if (request.form.get('blog') != None):
+        doblog = True
+
+    if (isOpen.strip() == 'Closed'):
+        isOpen = False
+    else:
+        isOpen = True
+
+    # searchOptions -> inject_Search_Options()
+    updateSearchOptions(isOpen, doiccap, dombp, domqa, doblog, dovideo)
+
+    qer = Post.query.whoosh_search(txt)
+    if not doiccap:
+        qer = qer.filter(Post.category != 'iccapfaq')
+    if not dombp:
+        qer = qer.filter(Post.category != 'mbpst').filter(Post.category != 'mbpfaq')
+    if not domqa:
+        qer = qer.filter(Post.category != 'pyrfs').filter(Post.category != 'mqafaq').filter(Post.category != 'mqarules')
+    if not doalfna:
+        qer = qer.filter((Post.category != 'alfna'))
+    if not dowpe:
+        qer = qer.filter((Post.category != 'wpe'))
+    if not dovideo:
+        qer = qer.filter((Post.category != 'video'))
+    if not doblog:
+        qer = qer.filter((Post.category != 'blog'))
+
+    # results = qer.whoosh_search(txt).limit(displayUpto).all()
+
+    results = qer.limit(displayUpto).all()
+    category =''
+    global searchOptions
+    category+='ICCAP  |  ' if searchOptions['doiccap']==1 else ''
+    category += 'MBP  |  ' if searchOptions['dombp'] ==1 else ''
+    category += 'MQA  |  ' if searchOptions['domqa'] == 1 else ''
+    category += 'Blog  |  ' if searchOptions['doblog'] == 1 else ''
+    category += 'Video  |  ' if searchOptions['dovideo'] == 1 else ''
+
+    return render_template('search_result.html', slist=results, searchfor=txt, myfunction=getCategory,
+                           category=category)
 
 
 @app.route('/about')
@@ -1074,6 +1169,26 @@ def mbpfaq_errorDataGrids():
     return render_template('/faq/mbp/errorDataGrid.html')
 
 
+route_mbpfaq_script_import_export = '/mbpfaq/script_import_export'
+
+
+@app.route(route_mbpfaq_script_import_export)
+@login_required
+def mbpfaq_script_import_export():
+    recordPostHistory(route_mbpfaq_script_import_export)
+    return render_template('/faq/mbp/script_import_export.html')
+
+
+route_mbpfaq_script_subckt_param = '/mbpfaq/script_subckt_param'
+
+
+@app.route(route_mbpfaq_script_subckt_param)
+@login_required
+def mbpfaq_script_subckt_param():
+    recordPostHistory(route_mbpfaq_script_subckt_param)
+    return render_template('/faq/mbp/script_subckt_param.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -1312,6 +1427,16 @@ route_mqarules_wpe = '/mqarules/wpe'
 def mqarule_wpe():
     recordPostHistory(route_mqarules_wpe)
     return render_template('/mqarules/rules/wpe.html')
+
+
+route_mqarules_fn_spe_finfet = '/mqarules/fn_spe_finfet'
+
+
+@app.route(route_mqarules_fn_spe_finfet)
+@login_required
+def mqarule_fn_spe_finfet():
+    recordPostHistory(route_mqarules_fn_spe_finfet)
+    return render_template('/mqarules/rules/fn_spe_finfet.html')
 
 
 #### Video Demos
@@ -1802,8 +1927,8 @@ def dashboard_from_company(companyName):
     companyUsers = []
     userHis = User.query.filter(User.company == companyName).all()
     for p in userHis:
-        # name, email, last login time, last login IP, view count
-        companyUsers.append((p.username, p.email, p.last_login_at, p.last_login_ip, getViewCountByUserID(p.id)))
+        # name, email, last login time, last login IP, view #, user.id
+        companyUsers.append((p.username, p.email, p.last_login_at, p.last_login_ip, getViewCountByUserID(p.id), p.id))
 
     return render_template('/fromCompany.html', companyUsers=companyUsers, companyName=companyName)
 
@@ -2277,6 +2402,28 @@ def download_symm_rule():
                      attachment_filename='symTest.rule', mimetype='text/rule', as_attachment=True)
 
 
+route_download_noise_spe_example = '/mqarules/fn_spe_finfet/download'
+
+
+@app.route(route_download_noise_spe_example)
+@login_required
+def download_noise_spe_example():
+    recordPostHistory(route_download_noise_spe_example)
+    return send_file('static/mqarules/fn_spe_finfet/noise_example.rule',
+                     attachment_filename='noise_example.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_bsimcmg_model = '/mqarules/bsimcmg_model/download'
+
+
+@app.route(route_download_bsimcmg_model)
+@login_required
+def download_bsimcmg_model():
+    recordPostHistory(route_download_bsimcmg_model)
+    return send_file('static/mqarules/fn_spe_finfet/model_bsimcmg.l',
+                     attachment_filename='model_bsimcmg.l', mimetype='text/rule', as_attachment=True)
+
+
 #### Script Zip files downloads
 
 route_download_scriptZip_01 = '/scriptZip/01_ModelParameter/download'
@@ -2631,6 +2778,17 @@ def download_mqarule_wpe():
                      attachment_filename='wpe.csv', mimetype='text/plain', as_attachment=True)
 
 
+route_download_mbpfaq_subckt_model = '/mbpfaq/subckt_model/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_subckt_model)
+def download_mbpfaq_subckt_model():
+    recordPostHistory(route_download_mbpfaq_subckt_model)
+    return send_file('static/faq/mbp/script_subckt_param/subckt_test.l',
+                     attachment_filename='subckt_test.l', mimetype='text/plain', as_attachment=True)
+
+
 ### Upload a file
 route_update_a_file = "/upload"
 
@@ -2854,6 +3012,16 @@ route_pyrfs_chap2_b5 = '/pyrfs/chap2.b5'
 def pyrfs_chap2_b5():
     recordPostHistory(route_pyrfs_chap2_b5)
     return render_template('pyrfs/chap02/sid_id2.html')
+
+
+route_pyrfs_chap2_b6 = '/pyrfs/chap2.b6'
+
+
+@app.route(route_pyrfs_chap2_b6)
+@login_required
+def pyrfs_chap2_b6():
+    recordPostHistory(route_pyrfs_chap2_b6)
+    return render_template('pyrfs/chap02/update_excel.html')
 
 
 #########################

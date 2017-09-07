@@ -1,0 +1,109 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Sid/Id^2 | Update Excel Template</h2>
+<hr>
+<div overflow="scroll">
+    This note is based on <a href="/pyrfs/chap2.b5" target="_blank">Chap 2.9. Sid/Id^2</a>, where we had the
+    Sid/Id^2 data generated in an Excel file, and created the Sid/Id^2 vs. Freq plot in the Excel manually. Now, we can
+    use this
+    Excel file as a template, so that when new QA result comes we may simply update the numbers in the Excel, and the
+    plot will update automatically.<br/><br/>
+    <em>Note: The auto-update-plot feature <font style="color:red">only works on Windows</font> for the current
+        version; if we run this PyRFS code on Linux, numbers will still be
+        updated but not the plot in Excel file.</em>
+    <br/><br/>
+    The new PyRFS API we are going to use is shown below, line 40 - 46.<br/>
+    Noticed that, since our goal here is just to update the existing Excel file, we no long need line 37 which is
+    commented out in this example.
+    <br/><img src="/static/pyrfs/chap02/10_update_excel/3.png"><br/><br/>
+
+    Line 40,
+    <mark>src_table = table</mark>
+    , the
+    <mark>table</mark>
+    is the object defined on line 22, that has all the new result numbers.<br/>
+    Line 41,
+    <mark>src_range="B3:G70"</mark>
+    is to specify the data range from the new table, as shown below, the starting cell is B3, and the ending cell is
+    G70, in this application, we do have to explicitly tell the cell indices.
+    <br/><img src="/static/pyrfs/chap02/10_update_excel/1.png"><br/>
+    <br/><img src="/static/pyrfs/chap02/10_update_excel/2.png"><br/><br/>
+    And, line 42
+    <mark>dest_dir</mark>
+    specifies the output directory, the existing Excel template file should be located there.<br/>
+    Then, line 43
+    <mark>dest_book_name</mark>
+    specifies the Excel template file name, and line 44
+    <mark>dest_sheet_name</mark>
+    specifies the sheet name in the Excel template that PyRFS will be looking for, as shown below.<br/>
+    Finally,
+    <mark>dest_begin = "B3"</mark>
+    on line 45
+    tells which cell to begin updating the numbers.
+
+    <br/><img src="/static/pyrfs/chap02/10_update_excel/4.png"><br/><br/>
+
+
+    Alright, that's about it. The complete example Python code to update an existing Excel file is provided below for copy-paste:<br/>
+    <pre>
+import pyrfs as rfs
+
+project_path = r'C:\Users\cs\MQA_test\QA_mqa_sid_id2'
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+
+dp.query(rule_group="05_Check_Noise_Simulation",
+         rule=["Rule_1101", "Rule_4001_sid"],
+         check="Check_01")
+
+dp.list_conditions(detail=True)
+dp.list_targets(detail=True)
+
+sid = dp.targets["sid"]
+ids = dp.targets["ids"]
+
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+#T = dp.conditions["t"]
+freq = dp.conditions['freq']
+
+table = rfs.ReportTable(name="Sid_id_table")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, freq],
+                     offset=(1, 1),
+                     val_sort={1: 'inc', 2: 'inc', 3: 'inc'},
+                     # val_filter={1: (getMaxCond(W),), 2: (getMaxCond(L),), 3: (25,)}
+                     )
+right.add_constraint([ids, sid])
+right.add_formula(name="Sid/Id^2",
+                  constraints=[ids, sid],
+                  formula="$2/($1*$1)")
+rfs.fill_in(table)
+
+out_path = r'C:\Users\cs\MQA_test'
+<mark>
+rfs.update_sheet( src_table = table,
+                   src_range = "B3:G70",
+                   dest_dir = out_path,
+                   dest_book_name = "sid_id_table.xlsx",
+                   dest_sheet_name = "sid_id_table",
+                   dest_begin = "B3"
+                 )
+</mark>
+
+
+    </pre>
+    <br/><br/>
+
+
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}

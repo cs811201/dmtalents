@@ -22,10 +22,10 @@ From Company
         </tr>
         </thead>
         {% for p in companyUsers %}
-        <!--# name, email,  last login time, last login IP, view # -->
+        <!--# name, email,  last login time, last login IP, view # , user.id-->
         <tr>
 
-            <td>{{p[0]}}</td>
+            <td><a href="/user_view_history/{{p[5]}}" target="_blank">{{p[0]}}</a></td>
             <td>{{p[1]}}</td>
             <td>{{p[2]}}</td>
             <td>{{p[3]}}</td>

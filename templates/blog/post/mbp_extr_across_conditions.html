@@ -1,0 +1,123 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Extract Device Model Parameters Across Geometry, Temperature and Voltage</h3>
+    <h5>by Raj Sodhi[Keysight], Aug 25, 2017. -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/08/25/extract-device-model-parameters-across-geometry-temperature-and-voltage"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="left">
+        <a href="http://www.keysight.com/find/mytrial.mbp.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+    <br/>
+    <font size="5">A</font> high-quality device model captures device behavior across geometry (W/L), temperature (T),
+    drive voltage (Vdd), among numerous other input conditions. How much time do we spend trying to achieve a good fit
+    across all these axes? What if we could easily bring up graphs of all key device targets such Vth (Threshold
+    Voltage), Idsat (Drive Current), GM (Transconductance), and their variations across these dimensions? We could then
+    monitor them in one place, and tune or optimize model parameters while observing the agreement between measured and
+    modeled data. With Keysight’s Model Builder Program (MBP) 2017, we can achieve this goal. In this note, we are going
+    to go through a couple of examples to show how MBP Script makes it possible to monitor device targets across the
+    entire matrix of input conditions.
+    <br/><br/>
+    First, let’s look at the Threshold Voltage (Vth) variation as we vary device width (W) and length (L) on 4 sides of
+    the W/L matrix, as shown below.<br/><br/>
+    <img src="/static/blog/mbp_extr_across_conditions/1.png"><br/>
+    <em>Figure 1. Four sides of the W/L matrix for evaluation of Vth variation</em>
+    <br/><br/>
+    The 4 sides of W/L space define the boundaries of modeled device sizes provided by a given semiconductor technology.
+    A customer may use a geometry outside of this space, but will then need to re-target the model parameters for this
+    unusual device.<br/><br/>
+
+    Vth is the key device parameter of any transistor device, be it BULK, SOI or FinFET. It defines when a transistor
+    transitions from off to on. If the Vth has been well modeled along the 4 sides of the W/L space, then we have good
+    confidence that the model will work over the entire W/L plane. Both short and narrow channel effects will be
+    covered.<br/><br/>
+    By placing Tasks in sequence, a user may define a real modeling flow to be executed automatically. A “Task” is
+    object to represent a step in a flow, and is represented by a blue icon in the flow panel, as shown below in figure
+    2. With Tasks, a modeling engineer can group modeling building blocks to extract the next logical group of device
+    parameters. In MBP, we may create a new Task button, as shown below, called “Display_Vth_Scaling_4_sides.” By
+    clicking on this button, we can define and display the related graphs.
+    <br/>
+    <img src="/static/blog/mbp_extr_across_conditions/2.png"><br/>
+    <em>Figure 2. Display Vth W/L scaling plots by Task button clicking</em><br/><br/>
+    In figure 2, we plot Vth in a 2x2 layout, where each quadrant represents one side of the W and L scaling space. The
+    solid represents simulated data and the square represent measurements. The MBP tool is now ready for model tuning or
+    optimization.<br/><br/>
+
+    To create this beautiful matrix of graphs, we need to create a new Task from MBP Script window and name it
+    “Display_Vth_Scaling_4_sides,” as shown in figure 3. In the newly created Task, in its Plot Select tab, click the
+    “Add Plot” button to add these 4 plots. We may populate the “Plot Name” using 2 of the predefined plot groups
+    “vth_l_vbs” and “vth_w_vbs.” In the “filter define” field, we may filter the data based on desired input conditions,
+    like “w=max(w)”. The filter definition is highlighted in green for the first plot where vds=abs(min(vds)) &&
+    w=max(w). In other words, we filter the data for the absolute minimum Vds, and maximum W input conditions.
+    <br/><br/>
+
+    <img src="/static/blog/mbp_extr_across_conditions/3.png"><br/>
+    <em>Figure 3. Create a Task by grouping Vth W/L scaling plots</em>
+    <br/><br/>
+    MBP provides the most commonly used device targets, including Vth, Gm, Idsat, Idlin, etc. as well as common plot
+    templates like the scaling graphs over W, L, T and Vdd.
+    <br/><br/>
+    One powerful plot type shows how well the model has been fitted across input conditions like geometry. This is
+    called an “Error Data Grid” plot. In figure 4, we present the RMS error of device targets Vth and Idsat in our
+    2-dimensional geometry plane. However, we can choose pairs of input conditions to study, for example:<br/><br/>
+    <ul>
+        <li> W and L</li>
+        <li> W/L and T</li>
+        <li> W/L and VDD</li>
+    </ul>
+    <img src="/static/blog/mbp_extr_across_conditions/4.png"><br/>
+    <em>Figure 4. RMS Error plots of Vth and Idsat across W/L plane.</em>
+
+    <br/><br/>
+    When tuning model parameters, we can observe the RMS errors update on the fly. For example, slightly different model
+    parameter settings lead to the following Error Data Grid plots:<br/><br/>
+    <img src="/static/blog/mbp_extr_across_conditions/5.png"><br/>
+    <em>Figure 5. another state of the RMS Error plot of Figure 4.</em>
+
+    The numbers are color-coded for quick and easy reading.<br/><br/>
+
+    In figure 6, we illustrate how to create these incredibly useful Error Data Grid plots. In MBP’s Script window, we
+    choose our device target (Idsat), specify the X and Y axes as ‘w’ and ‘l’ below, coloring for various RMS error
+    ranges, etc. We can even add more targets to our Error Data Grid plot.<br/><br/>
+    <img src="/static/blog/mbp_extr_across_conditions/6.png"><br/>
+    <em>Figure 6. ErrorDataGrid plot creation</em><br/><br/>
+    These newly created plots can be integrated in the Flow as another Task button, as shown below:<br/><br/>
+    <img src="/static/blog/mbp_extr_across_conditions/7.png"><br/>
+    <em>Figure 7. Display RMS Error plots by Task button clicking</em>
+    <br/><br/>
+    Every Task object has a few properties of which “button mode” is one. When the task is in button mode, then when you
+    click it, it executes just that code to do an action, like extracting a group of parameters. When the task is not in
+    button mode, clicking on it has no immediate effect. Rather, it marks where the flow may resume.<br/><br/>
+
+    By monitoring a model’s performance (RMS error) across all input conditions, MBP provides a high-level view of the
+    model in real time. Our modeling engineer may enjoy the peace of mind that the device model has been done thoroughly
+    and accurately.<br/><br/>
+
+    Please see the attachment below. We have attached an example project that includes:<br/>
+    <ul>
+        <li>1. demo data files</li>
+        <li>2. demo model files, initial version and final version</li>
+        <li>3. script file that defines the flow Tasks and ErrorDataGrid plots</li>
+    </ul>
+
+    For more details about how to customize device targets and plots and how to customize the flow, please refer to the
+    <a href="/mbpst" target="_blank">MBP Script tutorial.</a>
+    <br/><br/>
+    <hr/>
+    Information on MBP 2017, is available at
+    <a href="http://www.keysight.com/en/pd-2804700/mbp-2017?nid=-32892.1209899.00&cc=US&lc=eng&cmpid=zzfindeesof-mbp2017"
+       target="_blank">www.keysight.com/find/eesof-mbp2017</a> <br/>
+    To apply for a free software trial, please go to <a
+        href="http://www.keysight.com/find/mytrial.mbp.blg"
+        target="_blank">www.keysight.com/find/mytrial.mbp.blg</a> .
+
+    <br/><br/><br/><br/><br/><br/><br/>
+</div>
+
+{% endblock %}

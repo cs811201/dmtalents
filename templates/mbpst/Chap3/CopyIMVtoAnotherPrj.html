@@ -1,47 +1,51 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>Copy IMV to another project</h2>
-	<hr>
-	By loading .zip files, we can reuse previously saved Script project; however, the .zip file will
-	replace the entire existing MBP Script project completely, namely all the IMVs, Flows, etc are
-	replaced. What if we just want to copy a few IMVs to another project where we have other stuff
-	doesn't want to be wiped out?
-	<br>
-	<br> By MBP 2016.01 version, we still don't have the function to import/export a few selected
-	IMVs between projects, it might be implemented in the near future. For now, the workaround is to
-	manually manipulate the files on our hard-drive.
-	<br>
-	<br>The idea is based on that MBP saves IMV targets and plots as files. From GUI, for example,
-	we see "gds" and the associated plot "gds_vds_vgs".
-	<br>
-	<img src="/static/mbpst/Chap3/images/3.14/1.png" border="1px">
-	<br>
-	<br> If we go to the current MBP project folder, we will see a sub-folder called "script", go
-	into this "script" folder, we will see 1:1 file and folder hierarchy as we see from MBP Script
-	window.
-	<br>Now, go further into the "script/default/imv/imv/" folder, we see a file called "gds.pjt"
-	which is the Target definition, as well as another "gds" folder which contains all the plots we
-	defined to this target.
-	<br/>
-	<img src="/static/mbpst/Chap3/images/3.14/2.png" border="1px">
+<h2>Copy IMV to another project</h2>
+<hr>
 
-	<img src="/static/mbpst/Chap3/images/3.14/3.png" border="1px">
-	<br>
-	<br> Copy the "gds.*" and "gds" folder(if any) to another Script project B, to the same
-	hierarchy, will do the job. Once the targets and plots files were copied to project B, re-open
-	project B in MBP, we will see the targets and their plots show up and ready for use.
-	<br>
-	<ul>
-		<li>The .pjt file extension means a target is defined as <b>Data</b> Type.
-		</li>
-		<li>The .ijt file extension means a target is defined as <b>IMV</b> Type.
-		</li>
-		<li>If there is no target-named folder, which means no plots were created for that target.</li>
-		<li>During copy and paste, project B should be closed.</li>
+<font style="color:red">This workaround is NOT recommended any more, a new feature is introduced in MBP 2017 to <a
+        href="/mbpfaq/script_import_export" target="_blank">Partially Import/Export Script Settings </a></font><br/><br/>
 
-	</ul>
-	<br>
-	<br>
-	<br>
+By loading .zip files, we can reuse previously saved Script project; however, the .zip file will
+replace the entire existing MBP Script project completely, namely all the IMVs, Flows, etc are
+replaced. What if we just want to copy a few IMVs to another project where we have other stuff
+doesn't want to be wiped out?
+<br>
+<br> By MBP 2016.01 version, we still don't have the function to import/export a few selected
+IMVs between projects, it might be implemented in the near future. For now, the workaround is to
+manually manipulate the files on our hard-drive.
+<br>
+<br>The idea is based on that MBP saves IMV targets and plots as files. From GUI, for example,
+we see "gds" and the associated plot "gds_vds_vgs".
+<br>
+<img src="/static/mbpst/Chap3/images/3.14/1.png" border="1px">
+<br>
+<br> If we go to the current MBP project folder, we will see a sub-folder called "script", go
+into this "script" folder, we will see 1:1 file and folder hierarchy as we see from MBP Script
+window.
+<br>Now, go further into the "script/default/imv/imv/" folder, we see a file called "gds.pjt"
+which is the Target definition, as well as another "gds" folder which contains all the plots we
+defined to this target.
+<br/>
+<img src="/static/mbpst/Chap3/images/3.14/2.png" border="1px">
+
+<img src="/static/mbpst/Chap3/images/3.14/3.png" border="1px">
+<br>
+<br> Copy the "gds.*" and "gds" folder(if any) to another Script project B, to the same
+hierarchy, will do the job. Once the targets and plots files were copied to project B, re-open
+project B in MBP, we will see the targets and their plots show up and ready for use.
+<br>
+<ul>
+    <li>The .pjt file extension means a target is defined as <b>Data</b> Type.
+    </li>
+    <li>The .ijt file extension means a target is defined as <b>IMV</b> Type.
+    </li>
+    <li>If there is no target-named folder, which means no plots were created for that target.</li>
+    <li>During copy and paste, project B should be closed.</li>
+
+</ul>
+<br>
+<br>
+<br>
 {% endblock %}

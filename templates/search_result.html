@@ -10,7 +10,8 @@ Search Result
 <div class="container">
 
     {% if slist.__len__()>0 %}
-    <h3>Searched results for: <I style="color:#8B0000"> {{searchfor}}</I> , {{slist.__len__()}} match(es).</h3><br/>
+    <h3>Searched results for: <I style="color:#8B0000"> {{searchfor}}</I> , {{slist.__len__()}} match(es).</h3>
+    <h4>In category: <em><font style="color:#8B0000">{{category}}</font> </em></h4>
     <div style="height: 1000px; overflow:auto">
 
         {% for item in slist:%}
@@ -26,6 +27,7 @@ Search Result
         {% endfor %}
         {% else %}
         <h3>No results found for: <I style="color:#8B0000"> {{searchfor}}</I></h3>
+        <h4>In category: <em><font style="color:#8B0000">{{category}}</font> </em></h4>
         <br/><br/>
         {% endif %}
 

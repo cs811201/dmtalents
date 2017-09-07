@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\faq\mbp\vthscaling4sides'
+directory = r'D:\projects\dmtalents\static\faq\mbp\script_subckt_param'
 
 
 def renameIt(dir):

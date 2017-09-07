@@ -3,19 +3,51 @@
 {% block title %}
 {% endblock %}
 
+
 {% block search %}
+
 <!-- search bar -->
 <br/><br/><br/>
 <div class="container">
 
+
     <form method="post" action="/search">
 
 
-        <div style="float:center">
-            <input class="form-control" name="search" placeholder="Search This Site...    Wildcard(*) Supported" autocomplete="off"
-                   autofocus="autofocus" type="text">
-            <br/>
+        <div style="float:center;">
+            <!--<input class="input-group" name="search" placeholder="Search This Site...    Wildcard(*) Supported"-->
+            <!--autocomplete="off"-->
+            <!--autofocus="autofocus" type="text" width="80%">-->
+            <!--<button class="btn btn-secondary" type="button">Go!</button>-->
+            <div class="input-group" id="search_field_w_button">
+                <input type="text" class="form-control" name='search'
+                       placeholder="Search This Site...    Wildcard(*) Supported">
+                <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button" name='searchOptionButton' id='searchOptionButton'
+                        onclick="displaySearchOptions()">Options</button>
+                </span>
+                <input type="hidden" name='searchOptionFlag' id='searchOptionFlag' value="Closed">
+            </div>
+            <div id="search_checkbox_list" style="display:none">
+                <br/>
+                <label>Search for:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" name='blog' id='blog' value="blog" checked>Blog</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" name='iccap' id='iccap' value="iccap" checked>IC-CAP</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" name='mbp' id='mbp' value="mbp" checked>MBP</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" name='mqa' id='mqa' value="mqa" checked>MQA</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" name='video' id='video' value="video" checked>Video</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <!--<label><input type="checkbox" name='wpe' value="wpe" disabled>WaferPro</label>&nbsp;&nbsp;&nbsp;&nbsp;-->
+                <!--<label><input type="checkbox" name='alfna' value="alfna" disabled>A-LFNA</label>-->
+                <button type="button" id='checkButton' name='checkButton' onclick="changeCheckboxStatus()">
+                    Uncheck ALL
+                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Search">
+                <hr>
+            </div>
+
         </div>
+
+
         <!--<div style="float:right;width=25%; clear:both">-->
         <!--<label>Search in:</label>-->
         <!--<select name="category">-->
@@ -27,13 +59,113 @@
         <!--<option value="blog">Blog</option>-->
         <!--</select>-->
         <!--</div>-->
+
     </form>
 
 </div>
+
+
 {% endblock %}
 {% block content %}
 {% endblock %}
 
+{% block script %}
+
+<script>
+
+function uncheckAllSearchOptions(){
+ var blog=document.getElementById('blog');
+    var iccap=document.getElementById('iccap');
+    var mbp=document.getElementById('mbp');
+    var mqa=document.getElementById('mqa');
+    var video=document.getElementById('video');
+    blog.checked = false;
+         iccap.checked = false;
+         mbp.checked = false;
+         mqa.checked = false;
+         video.checked = false;
+}
+uncheckAllSearchOptions();
+if({{doiccap}}){
+    document.getElementById('iccap').checked=true;
+}
+if({{dombp}}){
+    document.getElementById('mbp').checked=true;
+}
+if({{domqa}}){
+    document.getElementById('mqa').checked=true;
+}
+if({{doblog}}){
+    document.getElementById('blog').checked=true;
+}
+if({{dovideo}}){
+    document.getElementById('video').checked=true;
+}
+if({{isopen}}){
+    openSearchBar();
+}else{
+    closeSearchBar();
+}
+
+function changeCheckboxStatus(){
+    var checkButton=document.getElementById('checkButton');
+
+    var blog=document.getElementById('blog');
+    var iccap=document.getElementById('iccap');
+    var mbp=document.getElementById('mbp');
+    var mqa=document.getElementById('mqa');
+    var video=document.getElementById('video');
+    var checkAll='Check All'
+    var uncheckAll='Uncheck All'
+
+    if(checkButton.innerHTML==checkAll){
+        blog.checked = true;
+        iccap.checked = true;
+        mbp.checked = true;
+        mqa.checked = true;
+        video.checked = true;
+        checkButton.innerHTML=uncheckAll
+    }else{
+         blog.checked = false;
+         iccap.checked = false;
+         mbp.checked = false;
+         mqa.checked = false;
+         video.checked = false;
+         checkButton.innerHTML=checkAll
+
+    }
+
+}
+
+function openSearchBar(){
+    document.getElementById('search_checkbox_list').style.display='block';
+        document.getElementById('searchOptionButton').innerHTML="Close";
+        document.getElementById('searchOptionFlag').value="Open";
+}
+function closeSearchBar(){
+        document.getElementById('search_checkbox_list').style.display='none';
+        document.getElementById('searchOptionButton').innerHTML="Options";
+        document.getElementById('searchOptionFlag').value="Closed";
+}
+
+function displaySearchOptions(){
+
+    if(document.getElementById('search_checkbox_list').style.display=='none') {
+        openSearchBar();
+    }else{
+        closeSearchBar();
+    }
+}
 
 
+
+
+
+
+
+
+
+</script>
+
+{% endblock %}
 

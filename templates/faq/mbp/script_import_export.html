@@ -1,0 +1,54 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Import/Export Script Settings Partially</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+Previously we had to Save and Load the entire Script window, so it was difficult to introduce stuff incrementally or individually. Now, we can! The new feature in MBP 2017 that allows us to import and export just part of the Script settings brings huge benefit to our daily work.
+<br/><br/>
+
+Note: A workaround was posted in <a href="/mbpst/chap3.14" target="_blank">MBP Script Tutorial Chapter
+    3.14</a> , that one is not recommended any more, now please start using the new feature explained in this application note.
+<br/><br/>
+
+Now, we have <font style="color:red">Import</font> and <font
+        style="color:red">Export</font> on the pop-up menu in MBP Script window, wherever it applies.<br/><br/>
+
+To use this new feature, say in IMV, it's better to create a New -> Group, and put the targets/plots we want to export there. As shown below, we are going to create a new Group called "RMS_Grids".
+
+<br/><img src="/static/faq/mbp/script_import_export/1.png"/><br/><br/>
+
+As explained before, every newly created IMV item, in this case the "RMS_Grid" will be appended to the bottom of the "imv.imv" tree. Scroll down to find it, add New -> Graph under it, in this example, we created 3 ErrorDataGrid plots, as shown below. Then, right click on "RMS_Grid", and do
+<font style="color:red">Export</font>.
+
+<br/><img src="/static/faq/mbp/script_import_export/2.png"/><br/><br/>
+We will be asked to save a .zip file to our harddrive, as shown below. For example, "MBP_RMS_Grids.zip" now this .zip file contains only the settings of RMS_Grids.
+<br/><img src="/static/faq/mbp/script_import_export/21.png"/><br/><br/>
+
+Next, it's ready to <font style="color:red">Import</font> the "MBP_RMS_Grids.zip" file in another MBP session.<br/><br/>
+
+Say we have come to a new MBP Script window, we need to create a New Group, also name it "RMS_Grids", as shown below.
+
+<br/><img src="/static/faq/mbp/script_import_export/3.png"/><br/><br/>
+Then, right click on it, and do <font
+        style="color:red">Import</font>, we will be asked to pick up a .zip file, load the  "MBP_RMS_Grids.zip" we just saved pleased.
+<br/><img src="/static/faq/mbp/script_import_export/4.png"/><br/><br/>
+
+Once it's loaded, we will see the 3 ErrorDataGrid plots are imported here, we may also have noticed that the "RMS_Grids" node got moved up beause now it is sorted in the alphabetic order. Done!
+<br/><img src="/static/faq/mbp/script_import_export/5.png"/><br/><br/>
+
+
+<br/><br/>
+Thanks!
+
+
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

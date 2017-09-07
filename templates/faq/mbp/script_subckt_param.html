@@ -1,0 +1,74 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Access Subckt Model Parameters in Script</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+In MBP Script, we can use the following function to access a model parameter, fetch/set its value, etc. <a
+        href="/mbpst/chap5.2/Param" target="_blank">Click here for more details about Param APIs. </a>
+<pre>
+Param pK1= MBP.getParam("K1");
+pK1.getValue();
+pK1.getUpper();
+pK1.setValue(0.5);
+
+</pre>
+
+When using a subckt model, where we could have multiple devices who may have the same named parameters, then the above approach will have problem, whose "K1" to fetch? and they have independent values, as shown below.
+<br/><img src="/static/faq/mbp/script_subckt_param/1.png"/><br/>
+<em>Figure 1, model parametes in MBP's model panel</em>
+<br/><br/>
+
+On the GUI, MBP has a color-coded tag to tell which parameter is from which, so in Script we need to do the similar, namely to use additional name tags to locate them, as shown below on line 5 and 6.
+<br/><img src="/static/faq/mbp/script_subckt_param/2.png"/><br/>
+<em>Figure 2, example code</em>
+<br/><br/>
+The syntax is to use the complete displayed name from the model panel shown in figure 1, <font style="color:#C3299D">mac@nmos</font>  and
+<font style="color:#C3299D">mac@ParaNMOS</font>  are the name tags for each device on line 5 and 6.
+<br/>And, the output of line 2, 8 and 9 are printed in the Message window in MBP when we execute the above code, as shown here.
+<br/><img src="/static/faq/mbp/script_subckt_param/4.png"/><br/><br/>
+
+Similarly, to select the proper model parameters in such situation, use the same name tag in the
+<em>selectParam()</em> function, as shown below.
+<br/><img src="/static/faq/mbp/script_subckt_param/3.png"/><br/><br/>
+
+And, we shall see
+<mark>K1</mark> from both devices are selected correctly by executing code line 16 and 17.
+<br/><img src="/static/faq/mbp/script_subckt_param/5.png"/><br/><br/>
+
+Click here to <a href="/mbpfaq/subckt_model/download" target="_blank">download the example subckt model.</a>  <br/><br/>
+Here is the code example for copy-paste:<br/>
+<pre>
+//when there is only one K1 in the model.
+double k1 = cmd.getParamValue("k1");
+System.out.println("k1: "+k1);
+
+//when in subckt model, there could be more than one K1.
+double k1_nmos=cmd.getParamValue("mac@nmos.k1");
+double k1_paraNmos=cmd.getParamValue("mac@ParaNMOS.k1");
+
+System.out.println("k1_nmos: "+k1_nmos);
+System.out.println("k1_paraNmos: "+k1_paraNmos);
+
+
+//cmd.selectParam("k1");
+
+cmd.clearParam();
+
+cmd.selectParam("mac@nmos.k1");
+cmd.selectParam("mac@ParaNMOS.k1");
+
+
+
+</pre>
+
+
+Thanks!
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+
