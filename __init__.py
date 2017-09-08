@@ -540,10 +540,10 @@ def search():
     # results = qer.whoosh_search(txt).limit(displayUpto).all()
 
     results = qer.limit(displayUpto).all()
-    category =''
+    category = ''
     global searchOptions
-    category+='ICCAP  |  ' if searchOptions['doiccap']==1 else ''
-    category += 'MBP  |  ' if searchOptions['dombp'] ==1 else ''
+    category += 'ICCAP  |  ' if searchOptions['doiccap'] == 1 else ''
+    category += 'MBP  |  ' if searchOptions['dombp'] == 1 else ''
     category += 'MQA  |  ' if searchOptions['domqa'] == 1 else ''
     category += 'Blog  |  ' if searchOptions['doblog'] == 1 else ''
     category += 'Video  |  ' if searchOptions['dovideo'] == 1 else ''
@@ -1836,9 +1836,10 @@ def dashboard():
     searchList = SearchHistory.query.order_by(desc(SearchHistory.date)).limit(20).all()
     sList = []
     for item in searchList:
-        # search text 0, date 1, userName 2, company 3
+        # search text 0, date 1, userName 2, company 3, user_id 4,
         sList.append(
-            (item.search_string, str(item.date)[:-10], getUserNameById(item.user_id), getCompanybyId(item.user_id)))
+            (item.search_string, str(item.date)[:-10], getUserNameById(item.user_id), getCompanybyId(item.user_id),
+             item.user_id))
 
     # latestViews
     postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
@@ -1850,12 +1851,12 @@ def dashboard():
         uid = item.user_id
         route = item.route
         title = getPostTitleByRoute(route)
-        # route, date,title,userName, email, company, category
+        # route, date,title,userName, email, company, category, uid
         if title.__len__() > 30:
             title = title[:30] + '...'
         latestViews.append(
             (route, str(item.date)[:-10], title, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid),
-             getPostCategoryByRoute(route)))
+             getPostCategoryByRoute(route),uid))
 
     postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
     downloads = []
@@ -1863,8 +1864,8 @@ def dashboard():
         route = item.route
         uid = item.user_id
         if str(route).endswith('download'):
-            # route 0, date 1, user name 2, email 3, company 4
-            downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid)))
+            # route 0, date 1, user name 2, email 3, company 4, uid 5
+            downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid),uid))
 
     # get company count
 
@@ -3022,6 +3023,16 @@ route_pyrfs_chap2_b6 = '/pyrfs/chap2.b6'
 def pyrfs_chap2_b6():
     recordPostHistory(route_pyrfs_chap2_b6)
     return render_template('pyrfs/chap02/update_excel.html')
+
+route_pyrfs_chap2_b7 = '/pyrfs/chap2.b7'
+
+
+@app.route(route_pyrfs_chap2_b7)
+@login_required
+def pyrfs_chap2_b7():
+    recordPostHistory(route_pyrfs_chap2_b7)
+    return render_template('pyrfs/chap02/hidden.html')
+
 
 
 #########################

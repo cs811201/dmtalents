@@ -1,6 +1,6 @@
 import os,sys
 
-directory = r'D:\projects\dmtalents\static\faq\mbp\script_subckt_param'
+directory = r'D:\projects\dmtalents\static\pyrfs\chap02\11_hidden'
 
 
 def renameIt(dir):

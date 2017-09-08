@@ -61,11 +61,11 @@ Dashboard
         <table width="90%">
 
             {% for p in searchList %}
-            <!--#search text 0, date 1, userName 2, company 3-->
+            <!--#search text 0, date 1, userName 2, company 3 , user_id 4,-->
             <tr>
                 <td width="40%"><font size="3">{{ p[0] }} </font></td>
-                <td width="20%">{{p[2]}}</td>
-                <td width="20%">{{p[3]}}</td>
+                <td width="20%"><a href="/user_view_history/{{p[4]}}" target="_blank">{{p[2]}}</a></td>
+                <td width="20%"><a href="/fromCompany/{{p[3]}}" target="_blank">{{p[3]}}</a></td>
                 <td width="20%">{{p[1]}}</td>
             </tr>
 
@@ -91,15 +91,15 @@ Dashboard
         </tr>
         </thead>
         {% for p in latestViews %}
-        <!--# route 0, date 1,title 2,userName 3, email 4, company 5, category 6-->
+        <!--# route 0, date 1,title 2,userName 3, email 4, company 5, category 6, uid 7-->
         <tr>
 
             <td><a href="{{p[0]}}" target="_blank">{{ p[2] }}</a></td>
             <td>{{p[6]}}</td>
             <td>{{p[1]}}</td>
-            <td>{{p[3]}}</td>
+            <td><a href="/user_view_history/{{p[7]}}" target="_blank">{{p[3]}}</a></td>
             <td>{{p[4]}}</td>
-            <td>{{p[5]}}</td>
+            <td><a href="/fromCompany/{{p[5]}}" target="_blank">{{p[5]}}</a></td>
 
         </tr>
         {% endfor %}
@@ -119,14 +119,14 @@ Dashboard
         </tr>
         </thead>
         {% for p in downloads %}
-        <!--#  #route 0, date 1, user name 2, email 3, company 4 -->
+        <!--#  #route 0, date 1, user name 2, email 3, company 4 , uid 5-->
         <tr>
 
             <td>{{ p[0] }}</td>
             <td>{{p[1]}}</td>
-            <td>{{p[2]}}</td>
+            <td><a href="/user_view_history/{{p[5]}}" target="_blank">{{p[2]}}</a></td>
             <td>{{p[3]}}</td>
-            <td>{{p[4]}}</td>
+            <td><a href="/fromCompany/{{p[4]}}" target="_blank">{{p[4]}}</a></td>
 
         </tr>
         {% endfor %}
@@ -152,7 +152,7 @@ Dashboard
             <td> {{ p[0] }}</td>
             <td><a href="/user_view_history/{{p[0]}}" target="_blank">{{ p[1] }}</a></td>
             <td>{{p[2]}}</td>
-            <td>{{p[3]}}</td>
+            <td><a href="/fromCompany/{{p[3]}}" target="_blank">{{p[3]}}</a></td>
             <td>{{p[4]}}</td>
 
         </tr>

@@ -2,37 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/blog/mbp_extr_across_conditions/banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mbp/script_subckt_param/subckt_test.l" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/mbp_extr_across_conditions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/script_import_export.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/script_subckt_param.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/fn_spe_finfet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/update_excel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/hidden.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/shuancai.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/shuancai.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rename_files.py" afterPath="$PROJECT_DIR$/rename_files.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blog_index.html" afterPath="$PROJECT_DIR$/templates/blog/blog_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/fromCompany.html" afterPath="$PROJECT_DIR$/templates/fromCompany.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/base.html" afterPath="$PROJECT_DIR$/templates/layouts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/mf.html" afterPath="$PROJECT_DIR$/templates/layouts/mf.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mbpst/Chap3/CopyIMVtoAnotherPrj.html" afterPath="$PROJECT_DIR$/templates/mbpst/Chap3/CopyIMVtoAnotherPrj.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules/toc.html" afterPath="$PROJECT_DIR$/templates/mqarules/toc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html" afterPath="$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/pyrfs/toc.html" afterPath="$PROJECT_DIR$/templates/pyrfs/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/requestlogin.html" afterPath="$PROJECT_DIR$/templates/requestlogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/search_result.html" afterPath="$PROJECT_DIR$/templates/search_result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/security/login_user.html" afterPath="$PROJECT_DIR$/templates/security/login_user.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/updateHisCore.html" afterPath="$PROJECT_DIR$/templates/updateHisCore.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="537" column="43" lean-forward="false" selection-start-line="537" selection-start-column="43" selection-end-line="537" selection-end-column="43" />
+            <state relative-caret-position="521">
+              <caret line="3033" column="47" lean-forward="false" selection-start-line="3033" selection-start-column="41" selection-end-line="3033" selection-end-column="47" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#6825#6826#0" expanded="false" />
@@ -64,11 +42,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mf.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
+      <file leaf-file-name="hidden.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/hidden.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="103" column="15" lean-forward="true" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+            <state relative-caret-position="463">
+              <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#font#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -77,7 +69,7 @@
       <file leaf-file-name="search_result.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/search_result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="221">
               <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#I#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
@@ -89,14 +81,66 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="rename_files.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rename_files.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="42" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pyrfs/toc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="updateHisCore.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="85">
+              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding>
-                <element signature="n#style#0;n#font#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyrfs_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agenda.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,8 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/login</find>
-      <find>dashb</find>
       <find>&lt;</find>
       <find>User.</find>
       <find>User.query</find>
@@ -144,6 +186,8 @@
       <find>g.do</find>
       <find>current_user</find>
       <find>search_res</find>
+      <find>dash</find>
+      <find>pyrfs/chap2.b</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/static/mbpst</replace>
@@ -174,7 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_vbs.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_t25.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/gm_table_sort_vbs.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/idsat_table_merge_wl.html" />
@@ -196,21 +239,16 @@
         <option value="$PROJECT_DIR$/templates/faq/mbp/changeDefaultScript.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/addFlow2Menu.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/vthscaling4sides.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/viewByCompany.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/errorDataGrid.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/sid_id2.html" />
         <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
         <option value="$PROJECT_DIR$/templates/blog/post/mbp_extr_across_conditions.html" />
-        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html" />
-        <option value="$PROJECT_DIR$/templates/pyrfs/toc.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/update_excel.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/import_export_script_settings.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/script_import_export.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap3/CopyIMVtoAnotherPrj.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/script_subckt_param.html" />
-        <option value="$PROJECT_DIR$/rename_files.py" />
         <option value="$PROJECT_DIR$/templates/fromCompany.html" />
         <option value="$PROJECT_DIR$/static/mqarules/fn_spe_finfet/noise_example.rule" />
         <option value="$PROJECT_DIR$/templates/mqarules/rules/fn_spe_finfet.html" />
@@ -223,14 +261,22 @@
         <option value="$PROJECT_DIR$/templates/layouts/base.html" />
         <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
         <option value="$PROJECT_DIR$/templates/search_result.html" />
-        <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/rename_files.py" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/toc.html" />
         <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/hidden.html" />
+        <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1582" />
-    <option name="height" value="1160" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -250,7 +296,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,7 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="pyrfs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -305,12 +350,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyrfs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chap02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -328,19 +382,19 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\dmtalents\templates\pyrfs\chap02" />
+      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
+      <recent name="D:\projects\dmtalents\static\faq\mbp\script_subckt_param" />
+      <recent name="D:\projects\dmtalents\templates\faq\mbp" />
+      <recent name="D:\projects\dmtalents\templates\blog\post" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\dmtalents\static\mqarules\misR" />
       <recent name="D:\projects\dmtalents\static\mbpst\scriptZip" />
       <recent name="D:\projects\dmtalents\templates\faq" />
       <recent name="D:\projects\dmtalents\static\faq\mqa\CheckNetlist" />
       <recent name="D:\projects\dmtalents\static\faq\mqa\compareMode" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
-      <recent name="D:\projects\dmtalents\static\faq\mbp\script_subckt_param" />
-      <recent name="D:\projects\dmtalents\templates\faq\mbp" />
-      <recent name="D:\projects\dmtalents\templates\pyrfs\chap02" />
-      <recent name="D:\projects\dmtalents\templates\blog\post" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -872,7 +926,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503638021079</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="1/24/2017">
+      <created>1504818146696</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1504818146696</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -885,13 +946,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1582" height="1160" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24441524" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2468017" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19660679" sideWeight="0.5086906" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934132" sideWeight="0.49130937" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19155206" sideWeight="0.49130937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30838323" sideWeight="0.49689442" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123046875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -967,28 +1028,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/viewerListFor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/collections/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="511" column="8" lean-forward="false" selection-start-line="511" selection-start-column="8" selection-end-line="511" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/sid_id2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1615">
@@ -1035,13 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="839">
           <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pyrfs/toc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1105,13 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rename_files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1265,20 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="20" lean-forward="false" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/fromCompany.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1302,15 +1313,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/mf.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="103" column="15" lean-forward="true" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+        <state relative-caret-position="1751">
+          <caret line="103" column="15" lean-forward="false" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/search_result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="221">
           <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="53" />
           <folding>
             <element signature="n#style#0;n#I#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
@@ -1321,24 +1332,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#td#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rename_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="537" column="43" lean-forward="false" selection-start-line="537" selection-start-column="43" selection-end-line="537" selection-end-column="43" />
+        <state relative-caret-position="521">
+          <caret line="3033" column="47" lean-forward="false" selection-start-line="3033" selection-start-column="41" selection-end-line="3033" selection-end-column="47" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#6825#6826#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/toc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/hidden.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#font#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#font#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pyrfs/chap02/agenda.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

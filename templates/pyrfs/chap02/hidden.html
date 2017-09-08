@@ -1,0 +1,94 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Hide Columns</h2>
+<hr>
+<div overflow="scroll">
+
+    In Chapter 2.9 we exampled how to <a href="/pyrfs/chap2.b5" target="_blank">append Sid/Id^2 as customized
+    formula</a> in the output Excel table, the Sid/Id^2
+    columns sits next to the Sid and Ids columns. <br/><br/>
+    In this note, we are going to introduce one option that allows us to hide columns in case we don't need to see them.
+    For example, say if we wanted to hide the Ids column, as shown below.
+
+    <br/><img src="/static/pyrfs/chap02/11_hidden/1.png"><br/><br/>
+
+    This is achieved by applying the <em>hidden=[1]</em> option on line 29 in the add_constraint() function, as shown
+    below. hidden=<font style="color:red">[1]</font> refers to the <font style="color:red">first</font> variable in the
+    [ids, sid] list. So, if we wrote in another order as [sid, ids],
+    then we will need to assign hidden=<font style="color:red">[2]</font>.
+
+    <br/><img src="/static/pyrfs/chap02/11_hidden/2.png"><br/><br/>
+
+    And, yes, as you probably have been wondering, we can hide both ids and sid columns, by assigning hidden=[1,2].
+
+    <br/><img src="/static/pyrfs/chap02/11_hidden/3.png"><br/><br/>
+
+    The output table will no longer have ids and sid, as shown below.
+
+    <br/><img src="/static/pyrfs/chap02/11_hidden/4.png"><br/><br/>
+
+    Similarly, we can hide the input condition columns, too, such as W and L, by inserting the hidden=[1,2] option in
+    line 25.
+    <br/><img src="/static/pyrfs/chap02/11_hidden/5.png"><br/><br/>
+
+    Then, the final output table will be simplied to just freq and Sid/Id^2 columns.
+    <br/><img src="/static/pyrfs/chap02/11_hidden/6.png"><br/><br/><br/>
+
+
+    The complete example Python code for copy-paste:<br/>
+    <pre>
+import pyrfs as rfs
+
+project_path = r'C:\Users\cs\MQA_test\QA_mqa_sid_id2'
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+
+dp.query(rule_group="05_Check_Noise_Simulation",
+         rule=["Rule_1101", "Rule_4001_sid"],
+         check="Check_01")
+
+sid = dp.targets["sid"]
+ids = dp.targets["ids"]
+
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+# T = dp.conditions["t"]
+
+freq = dp.conditions['freq']
+
+table = rfs.ReportTable(name="Sid_id_table")
+right = rfs.RightLayout(table)
+right.add_constraint([W, L, freq],
+                     offset=(1, 1),
+                     val_sort={1: 'inc', 2: 'inc', 3: 'inc'},
+                     hidden=[1,2]
+                     # val_filter={1: (getMaxCond(W),), 2: (getMaxCond(L),), 3: (25,)}
+                     )
+
+
+right.add_constraint([ids, sid], hidden=[1,2])
+right.add_formula(name="Sid/Id^2",
+                  constraints=[ids, sid],
+                  formula="$2/($1*$1)")
+rfs.fill_in(table)
+
+out_path = r'C:\Users\cs\MQA_test'
+rfs.save(report=table, out_dir=out_path, format='xlsx', overwrite=True)
+
+
+    </pre>
+    <br/><br/>
+
+    Thanks!
+
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}
