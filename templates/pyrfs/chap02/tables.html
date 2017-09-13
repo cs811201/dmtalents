@@ -1,0 +1,119 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Split into Multi-tables in a Sheet</h2>
+<hr>
+<div overflow="scroll">
+    Previously, we've been working on a single table. Now, we are going to introduce how to split
+    the contents into multi-tables, it could be tables in a sheet, or across multi-sheets in an Excel file, or even
+    generating multiple Excel files.
+    <br/><br/>
+    PyRFS follows the same terminology that Excel uses for the contents hierarchy, for example, an entire Excel file is
+    called a
+    <em>WorkBook</em>, a sheet in the WorkBook is called a <em>Sheet</em>
+    So, PyRFS has the following class hierarchy with similar naming convention:
+
+    <br/><img src="/static/pyrfs/chap02/12_tables/3.png"><br/><br/>
+    We have been using <em>ReportTable</em> class in all the previous examples, it stands for a Table of course; next we
+    are going
+    to use <em>ReportSheet</em> and <em>ReportBook</em>, which stands for a Sheet and a WorkBook respectively, and they
+    all are sub-classes of <em>ReportItem</em>.
+
+    <br/><br/>
+    <h4>ReportSheet</h4>
+    <hr>
+    By creating a <em>ReportSheet</em> class, which functions as a container of tables, we will be able to split the
+    contents into multi-tables in a sheet, for example, belows shows we split the Idsat table into 3 sub tables per
+    temperature:
+    <br/><img src="/static/pyrfs/chap02/12_tables/1.png"><br/><br/>
+
+    This example uses MQA result files from $MQAHOME/kedrfs/python/demo/data directory.<br/><br/>
+
+    The code is highlighted below, on line 18, we need to firstly create a
+    <mark>sheet = rfs.ReportSheet(name="Idsat_tables")</mark>
+    , the <em>name</em> string will be the Excel filename as well as the sheet's name.
+    <br/>
+    On line 19, we split the contents into tables by
+    <mark>condition=[T]</mark>
+    in the
+    <mark>rfs.create_tables_for_sheet()</mark>
+    function, and it determines how many sub-tables will be created.
+
+    <br/><img src="/static/pyrfs/chap02/12_tables/2.png"><br/><br/>
+    Next, line 21-26, we use a
+    <mark>for</mark>
+    loop to specify the constraints of each sub-table by looping through
+    <mark>sheet.tables</mark>
+    . The syntax here are the same as previous examples.
+
+    <br/><br/>
+    On line 22, we need to pay attention to the
+    <mark>location</mark>
+    option, as we know, it specifies a table's top-left corner's cell index. In this example, we have
+    <mark>right = rfs.RightLayout(table, location=(1, 1 + <font style="color:red">i </font> * 4))</mark>
+    where <font style="color:red">i </font> is the counter of the
+    <mark>for</mark>
+    loop starting from 0.
+    <br/>
+    <em>Note: The counter <font style="color:red">i</font> is provided by the <a
+            href="https://docs.python.org/2/library/functions.html#enumerate" target="_blank">
+        <mark>enumerate()</mark>
+    </a> function.</em>
+
+    <br/><br/>
+    In case we want to split the tables by more than one variables, we can do so by providing them in the
+    <mark>condition</mark>
+    option, such as
+    <mark>rfs.create_tables_for_sheet(sheet=sheet, <font style="color:red"> condition=[SA,SB]</font>)</mark>
+    .
+    <br/><br/>
+    At last, on line 28, we need to specify
+    <mark>rfs.save(report=<font style="color:red">sheet</font>)</mark>
+    .
+    <br/><br/>
+    The complete example Python code is provided below for copy-paste:<br/>
+    <pre>
+import os
+
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="02_Model_Scalability", rule="Rule_4001", check="Check_01")
+
+Idsat = dp.targets["idsat"]
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+T_count = T.get_num_values()
+
+sheet = rfs.ReportSheet(name="Idsat_tables")
+rfs.create_tables_for_sheet(sheet=sheet, condition=[T], val_sort='dec')
+
+for i, table in enumerate(sheet.tables):
+    right = rfs.RightLayout(table, location=(1, 1 + i * 4))
+    right.add_data(data=table.name, ndr=0, col_span=3)
+    right.add_constraint([W,L], offset=(1, -3))
+    right.add_constraint(Idsat)
+    rfs.fill_in(table)
+
+rfs.save(report=sheet, out_dir=this_file_path)
+
+
+    </pre>
+    <br/><br/>
+
+    Thanks!
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}

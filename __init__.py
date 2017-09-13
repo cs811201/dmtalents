@@ -3033,7 +3033,21 @@ def pyrfs_chap2_b7():
     recordPostHistory(route_pyrfs_chap2_b7)
     return render_template('pyrfs/chap02/hidden.html')
 
+route_pyrfs_chap2_c1 = '/pyrfs/chap2.c1'
 
+@app.route(route_pyrfs_chap2_c1)
+@login_required
+def pyrfs_chap2_c1():
+    recordPostHistory(route_pyrfs_chap2_c1)
+    return render_template('pyrfs/chap02/tables.html')
+
+route_pyrfs_chap2_c2 = '/pyrfs/chap2.c2'
+
+@app.route(route_pyrfs_chap2_c2)
+@login_required
+def pyrfs_chap2_c2():
+    recordPostHistory(route_pyrfs_chap2_c2)
+    return render_template('pyrfs/chap02/sheets.html')
 
 #########################
 if __name__ == '__main__':
