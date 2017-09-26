@@ -1189,6 +1189,16 @@ def mbpfaq_script_subckt_param():
     return render_template('/faq/mbp/script_subckt_param.html')
 
 
+route_mbpfaq_wleff = '/mbpfaq/weff_leff'
+
+
+@app.route(route_mbpfaq_wleff)
+@login_required
+def mbpfaq_wleff():
+    recordPostHistory(route_mbpfaq_wleff)
+    return render_template('/faq/mbp/wleff.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -1314,6 +1324,26 @@ def iccapfaqsaveInstToMDM():
     return render_template('/faq/iccap/saveInstToMDM.html')
 
 
+route_iccapfaq_link2ext = '/iccapfaq/link2ext'
+
+
+@app.route(route_iccapfaq_link2ext)
+@login_required
+def iccapfaq_link2ext():
+    recordPostHistory(route_iccapfaq_link2ext)
+    return render_template('/faq/iccap/link2externalsim.html')
+
+
+route_iccapfaq_link2ltspice = '/iccapfaq/link2ltspice'
+
+
+@app.route(route_iccapfaq_link2ltspice)
+@login_required
+def iccapfaq_link2ltspice():
+    recordPostHistory(route_iccapfaq_link2ltspice)
+    return render_template('/faq/iccap/link2ltspice.html')
+
+
 #### MQA Rules
 @app.route('/mqarules/ft')
 @login_required
@@ -1437,6 +1467,16 @@ route_mqarules_fn_spe_finfet = '/mqarules/fn_spe_finfet'
 def mqarule_fn_spe_finfet():
     recordPostHistory(route_mqarules_fn_spe_finfet)
     return render_template('/mqarules/rules/fn_spe_finfet.html')
+
+
+route_mqarules_dibl = '/mqarules/dibl'
+
+
+@app.route(route_mqarules_dibl)
+@login_required
+def mqarule_dibl():
+    recordPostHistory(route_mqarules_dibl)
+    return render_template('/mqarules/rules/dibl.html')
 
 
 #### Video Demos
@@ -1856,7 +1896,7 @@ def dashboard():
             title = title[:30] + '...'
         latestViews.append(
             (route, str(item.date)[:-10], title, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid),
-             getPostCategoryByRoute(route),uid))
+             getPostCategoryByRoute(route), uid))
 
     postHis = PostHistory.query.order_by(desc(PostHistory.date)).all()
     downloads = []
@@ -1865,7 +1905,7 @@ def dashboard():
         uid = item.user_id
         if str(route).endswith('download'):
             # route 0, date 1, user name 2, email 3, company 4, uid 5
-            downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid),uid))
+            downloads.append((route, item.date, getUserNameById(uid), getEmailById(uid), getCompanybyId(uid), uid))
 
     # get company count
 
@@ -2150,15 +2190,39 @@ def recent100Search():
     return render_template('/recent100Searches.html', sList=sList)
 
 
+route_page_view_his = '/page_view_his'
+
+
+@app.route(route_page_view_his)
+@roles_required('sunshine')
+@login_required
+def page_view_his():
+    return render_template('/pageViewHis.html')
+
+
+route_page_view_his_submit = '/page_view_his_submit'
+
+
+@app.route(route_page_view_his_submit, methods=['POST'])
+@roles_required('sunshine')
+@login_required
+def page_view_his_submit():
+    route = request.form['route'].strip()
+    if route.__len__() > 2:
+        route = route[1:]
+    return redirect(url_for('user_post_viewed_by_users', route=route))
+
+
 # post viewed by users
-route_post_viewed_by_users = '/viewerListFor/<postId>'
+route_post_viewed_by_users = '/viewerListFor/<path:route>'
 
 
 @app.route(route_post_viewed_by_users)
 @roles_required('sunshine')
 @login_required
-def user_post_viewed_by_users(postId):
-    route = getPostRouteById(postId)
+def user_post_viewed_by_users(route):
+    route = '/' + route
+
     viewers = PostHistory.query.filter(PostHistory.route == route).all()
     vv = []
     for vi in viewers:
@@ -2790,6 +2854,50 @@ def download_mbpfaq_subckt_model():
                      attachment_filename='subckt_test.l', mimetype='text/plain', as_attachment=True)
 
 
+route_download_mbpfaq_weff_model = '/mbpfaq/weff_leff_model/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_weff_model)
+def download_mbpfaq_weff_model():
+    recordPostHistory(route_download_mbpfaq_weff_model)
+    return send_file('static/faq/mbp/weff_leff/test.l',
+                     attachment_filename='test.l', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mbpfaq_weff_data = '/mbpfaq/weff_leff_data/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_weff_data)
+def download_mbpfaq_weff_data():
+    recordPostHistory(route_download_mbpfaq_weff_data)
+    return send_file('static/faq/mbp/weff_leff/test.mea',
+                     attachment_filename='test.mea', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mbpfaq_weff_zip = '/mbpfaq/weff_leff_script_zip/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_weff_zip)
+def download_mbpfaq_weff_zip():
+    recordPostHistory(route_download_mbpfaq_weff_zip)
+    return send_file('static/faq/mbp/weff_leff/imv.imv.Weff_Leff.zip',
+                     attachment_filename='imv.imv.Weff_Leff.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_iccapfaq_ltspice3 = '/iccapfaq/ltspice3/download'
+
+
+@login_required
+@app.route(route_download_iccapfaq_ltspice3)
+def download_iccapfaq_ltspice3():
+    recordPostHistory(route_download_iccapfaq_ltspice3)
+    return send_file('static/faq/iccap/link2ltspice/ltspice3.txt',
+                     attachment_filename='ltspice3.txt', mimetype='text/plain', as_attachment=True)
+
+
 ### Upload a file
 route_update_a_file = "/upload"
 
@@ -3024,6 +3132,7 @@ def pyrfs_chap2_b6():
     recordPostHistory(route_pyrfs_chap2_b6)
     return render_template('pyrfs/chap02/update_excel.html')
 
+
 route_pyrfs_chap2_b7 = '/pyrfs/chap2.b7'
 
 
@@ -3033,7 +3142,9 @@ def pyrfs_chap2_b7():
     recordPostHistory(route_pyrfs_chap2_b7)
     return render_template('pyrfs/chap02/hidden.html')
 
+
 route_pyrfs_chap2_c1 = '/pyrfs/chap2.c1'
+
 
 @app.route(route_pyrfs_chap2_c1)
 @login_required
@@ -3041,13 +3152,26 @@ def pyrfs_chap2_c1():
     recordPostHistory(route_pyrfs_chap2_c1)
     return render_template('pyrfs/chap02/tables.html')
 
+
 route_pyrfs_chap2_c2 = '/pyrfs/chap2.c2'
+
 
 @app.route(route_pyrfs_chap2_c2)
 @login_required
 def pyrfs_chap2_c2():
     recordPostHistory(route_pyrfs_chap2_c2)
     return render_template('pyrfs/chap02/sheets.html')
+
+
+route_pyrfs_chap2_d1 = '/pyrfs/chap2.d1'
+
+
+@app.route(route_pyrfs_chap2_d1)
+@login_required
+def pyrfs_chap2_d1():
+    recordPostHistory(route_pyrfs_chap2_d1)
+    return render_template('pyrfs/chap02/format.html')
+
 
 #########################
 if __name__ == '__main__':

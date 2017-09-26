@@ -1,0 +1,91 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to LTSpice</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+This note explains how to link ICCAP to LTSpiceIV.<br/><br/>
+
+It's recommended to read the <a href="/iccapfaq/link2ext" target="_blank">Link ICCAP to External Simulators in
+    General</a> firstly, including troubleshooting tips.<br/><br/>
+
+
+<p>LTSpice is not officially supported by ICCAP; however, we have a workaround to successfully link ICCAP to LTSpiceIV,
+    by disguising it as a spice3-alike simulator.</p>
+<p><em>Note: it’s not tested through with LTspiceXVII yet.</em></p>
+<p>As follows:</p>
+<ol>
+    <li>
+        Install LTSpiceIV, say at
+        <mark>C:\LTC\LTSpiceIV</mark>
+
+    </li>
+    <li>
+        <p>Append the following entry into <em>$ICCAP_ROOT/iccap/lib/usersimulators</em></p>
+        <pre>ltspice    <font
+                style="color:orange">spice3</font>     $ICCAP_ROOT\src\ltspice3.bat   ""   CANNOT_PIPE</pre>
+
+        <em>Note: we used spice3 as the <font style="color:orange">template_name</font>, so that ICCAP
+            will treat the simulation
+            input/output files as if they were for spice3.</em>
+    </li>
+    <li>
+        <p>Download the <a href="/iccapfaq/ltspice3/download" target="_blank"><em>ltspice3.bat</em></a> file.
+        </p>
+        <em>Note, the file is renamed to <strong>ltspice3.txt</strong> for security concerns, after we downloaded it,
+            please rename it back to <strong>.bat</strong>.</em>
+        <br/><br/>
+        <p>Open and edit <strong>ltspice3.bat</strong> on line 30, make sure it reflects the valid path of LTSpiceIV
+            executable <em>scad3.exe</em>, as shown below:</p>
+        <p><img src="/static/faq/iccap/link2ltspice/ltspice_path.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Put the <strong>ltspice3.bat</strong> file to directory <strong>$ICCAP_ROOT/src</strong>, which shall match
+            the directory defined in the <em>usersimulators</em> config file in step 2.</p>
+    </li>
+    <li>
+        <p>Restart ICCAP.</p>
+    </li>
+</ol>
+<br/>
+<h4>Verification of simulation link to LTSpiceIV</h4>
+<ol>
+    <li>
+        <p>load the following *.mdl file:<br/>
+            …/Examples/model_files/mosfet/nmos3.mdl</p>
+    </li>
+    <li>
+        <p>In the model Variables, add SIMULATOR and specify
+            <mark>ltspice</mark>
+            for it.
+        </p>
+        <p><img src="/static/faq/iccap/link2ltspice/ltspice.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Go to the /large/idvg/ setup, do Clear -&gt; Simulated so that any previously saved simulatioin will be
+            gone.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/clear_sim.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Simulate.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/simulate.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Open the /large/idvg/idvsvg plot, confirm that the simulated data appears.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/ltspice_plot.png" alt="Image"/></p>
+        <p><em>Note: the simulatioin data are solid lines on the plot.</em></p>
+    </li>
+</ol>
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

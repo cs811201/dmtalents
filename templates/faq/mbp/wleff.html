@@ -1,0 +1,123 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Effective Channel Length and Width</h2>
+<h3>MBP FAQ</h3>
+<hr>
+While MBP Equation Viewer has all the built-in model equations with real-time value, this note provides an example approach to get Weff and Leff for a BSIM4 model in MBP Script, so that Weff and Leff can be further used with other IMV targets and plots.
+<br/><br/>
+As shown below, we will have the following graphs, the Pin readouts present the exact numbers.
+<ul>
+    <li>Weff vs. L</li>
+    <li>Leff vs. L</li>
+</ul>
+<img src="/static/faq/mbp/weff_leff/2.png"/><br/><br/>
+
+The following example files are used in this case, please download them here:
+<ul>
+    <li>BSIM4 model file: <a href="/mbpfaq/weff_leff_model/download" target="_blank">test.l</a></li>
+    <li>Example data file: <a href="/mbpfaq/weff_leff_data/download" target="_blank">data.mea</a></li>
+    <li>Example IMV Script:<a href="/mbpfaq/weff_leff_script_zip/download" target="_blank">imv.imv.Weff_Leff.zip</a>
+    </li>
+    Note: Please use the <a target="_blank" href="/mbpfaq/script_import_export">
+    <mark>Import</mark>
+    feature </a>in MBP Script window to load the imv.imv.Weff_Leff.zip file, because it only contains the definition for
+    Weff and Leff. And, the Script is the key, once the Script is implemented/imported, users can switch to their
+    own data and BSIM4 model files.
+</ul>
+
+<br/>
+According to BSIM4 model book, we have the definitions for Weff and Leff.
+<br/> For Weff, we are just practicing with the equation 1.11, namely without bias dependencies.
+
+<br/><img src="/static/faq/mbp/weff_leff/1.png"/><br/><br/>
+
+We are going to implement equations(1.9 and 1.11) in MBP Script, by <a href="/mbpst/chap2.1.1" target="_blank">creating
+    an DATA type of IMV target and plots</a> .
+<br/>Note, the equations of Weff and Leff for other model types may be different, this example is only validated for BSIM4.
+<br/><br/>
+
+
+As shown below, we create a
+<mark>DATA</mark> type of IMV target so as to write script from scratch.  In the
+<mark>f
+</mark> <a href="/mbpst/chap3.6" target="_blank">trans
+    function</a>, we get to fetch all related model parameters and device instance parameters in order to calculate Weff and Leff.
+<br/><img src="/static/faq/mbp/weff_leff/3.png"/><br/><br/>
+
+Then, the equations of 1.9 and 1.11 are implemented via line 29-40, as highlighted below.
+<br/><img src="/static/faq/mbp/weff_leff/4.png"/><br/><br/>
+
+We can do right click on the new IMV target
+<mark>WLeff</mark> and do "Show Data Table" to verify the output.
+<br/><img src="/static/faq/mbp/weff_leff/5.png"/><br/><br/>
+
+As shown below:
+<br/><img src="/static/faq/mbp/weff_leff/6.png"/><br/><br/>
+
+Now, Weff and Leff are here, we could next use them to play with other existing IMV targets and plots, please feel free to contact your Keysight support should you have any problem.
+<br/><br/>
+
+Here is the complete code for copy-paste:
+<pre>
+DATA load(sfunc select){
+	DATA m = MBPDATA.get("[device]");
+	m = m.trans(f,"Weff,Leff");
+	return m;
+}
+
+void f(POINT to, POINT from) {
+	Model model = MBP.getModels().getMainModel();
+	Param xl = model.getParam("xl");
+	Param xw = model.getParam("xw");
+	Param lln = model.getParam("lln");
+	Param lwn = model.getParam("lwn");
+	Param ll = model.getParam("ll");
+	Param lw = model.getParam("lw");
+	Param lwl = model.getParam("lwl");
+	Param lint = model.getParam("lint");
+	Param wint = model.getParam("wint");
+	Param wln = model.getParam("wln");
+	Param wwn = model.getParam("wwn");
+	Param wl = model.getParam("wl");
+	Param ww = model.getParam("ww");
+	Param wwl = model.getParam("wwl");
+	double l = from->"l";
+	double w = from->"w";
+	double nf = from ->"nf";
+	if(Double.isNaN(nf)) {
+		nf = 1;
+	}
+
+	double Lnew = l + xl.getValue();
+	double Wnew = w/nf + xw.getValue();
+	double T0 = Math.pow(Lnew, lln.getValue());
+	double T1 = Math.pow(Wnew, lwn.getValue());
+	double tmp1 = ll.getValue()/T0 + lw.getValue()/T1 + lwl.getValue()/(T0*T1);
+	double dl = lint.getValue() + tmp1;
+	double T2 = Math.pow(Lnew, wln.getValue());
+	double T3 = Math.pow(Wnew, wwn.getValue());
+	tmp1 = wl.getValue()/T2 + ww.getValue()/T3 + wwl.getValue()/(T2*T3);
+	double dw = wint.getValue() + tmp1;
+	double leff = Lnew - 2*dl;
+	double weff = Wnew - 2*dw;
+	to->"leff" = leff;
+	to->"weff" = weff;
+}
+
+
+</pre>
+
+<br/><br/>
+Thanks!
+
+
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

@@ -1,0 +1,95 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to External Simulators in General</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+This note explains how to link ICCAP to an external simulator in general. <br/><br/>
+
+<p>IC-CAP enables modeling engineers to extract device model parameters using the simulator of their choice. For each
+    model parameter extraction, measured data is compared against simulated data, and parameters are optimized to
+    achieve the closest fit to the measured data. IC-CAP supports the following simulators' syntax:</p>
+<ul>
+    <li>spice2 (built-in)</li>
+    <li>spice3 (built-in)</li>
+    <li>hpspice (built-in)</li>
+    <li>hspice</li>
+    <li>eldo</li>
+    <li>smartspice</li>
+    <li>spectre</li>
+    <li>saber</li>
+    <li>hpeesofsim (ADS)</li>
+</ul>
+
+More, with some workaround, we can further link ICCAP to a few other SPICE simulators given their similarity to spice3. Such as:
+<ul>
+    <li>LTSpice</li>
+    <li>PSpice</li>
+
+</ul>
+
+<br/>
+
+
+To make a link between ICCAP and some external simulator, one must edit the config file
+<em>$ICCAP_ROOT/iccap/lib/usersimulators</em>.
+
+<p><img src="/static/faq/iccap/link2ltspice/usersimulators.png" alt="Image"/></p>
+<p><em>Figure 1.</em></p>
+<p>In this config file, we can find an entry for each simulator, in the following format:</p>
+<pre><code>simulator_name template_name path_name host_name pipe_capability
+</code></pre>
+<p>As shown below:</p>
+<p><img src="/static/faq/iccap/link2ltspice/usersimulators_content_ads.png" alt="Image"/></p>
+<p><em>Figure 2.</em></p>
+
+<p>To link to an external simulator, the generic steps are:</p>
+<ol>
+    <li>Install that simulator program, also make sure we have valid liense for it.</li>
+    <li>Append or edit the entry in the <em>$ICCAP_ROOT/iccap/lib/usersimulators</em> config file for that
+        particular
+        simulator.
+    </li>
+    <li>Re-start ICCAP.</li>
+    <li>In a model file where we want to use that simulator, specify the <em>SIMULATOR</em> variable to that simulator's
+        name defined in the <em>usersimulators</em>.
+    </li>
+</ol>
+
+
+<br/><br/>
+<h4>Troubleshooting</h4>
+
+Should you encounter any problem, please try the following, usually we can figure out the problem.
+<br/>If not, please collect info from all of these places, as well as any pop-up error message, and send them back to ICCAP support team.
+<br/><br/>
+
+<ol>
+    <li>
+        Turn on ICCAP's Status Window, and check if any warning or error message shown there.
+
+        <br/>
+        <img src="/static/faq/iccap/link2ltspice/status.png" alt="Image"/>
+    </li>
+    <br/>
+
+    <li>Turn on the Simulation Debugger window, and check the netlist and LTSpice output log.
+        <br/>
+        <img src="/static/faq/iccap/link2ltspice/debugger.png" alt="Image"/>
+
+    </li>
+</ol>
+
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

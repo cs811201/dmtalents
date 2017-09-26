@@ -1,0 +1,44 @@
+REM will get one of these:
+REM -b -
+REM -b -r rawfile -o textfile deck
+REM -b -o textfile deck
+
+if NOT "%6"=="" goto sim
+if NOT "%4"=="" goto mansim
+
+:sim
+set deck=%~f6
+set txt=%~f5
+set raw=%~f3
+set ascii=
+goto execute
+
+:mansim
+set deck=%~f4
+set txt=%~f3
+set raw=%deck%.dummy
+set ascii=-ascii
+
+goto execute
+
+:pipe
+exit
+
+
+:execute
+set deckraw=%deck%.raw
+"C:\LTC\LTspiceIV\scad3.exe" -b -ic-cap %ascii% %deck%
+REM "C:\LTC\LTspiceXVII\XVIIx64.exe" -b -ic-cap %ascii% %deck%
+if NOT "%ascii%"=="" goto skipSed
+(dir %deckraw%) >> outputstuff
+
+REM call %ICCAP_ROOT%\tools\bin\sh -c "`cygpath -u '%ICCAP_ROOT%\tools\bin\sed'` -e 's/device_current/current/' -e 's/I(\([a-zA-Z0-9_]*\))/\1#branch/' '%deckraw%' > `cygpath -u '%raw%'` ; sleep 2"
+REM call %ICCAP_ROOT%\tools\bin\sh -c "`cygpath -u '%ICCAP_ROOT%\tools\bin\sed'` -e 's/device_current/current/' -e 's/I(\([a-zA-Z0-9_]*\))/\1#branch/' '%deckraw%' > '%raw%'"
+copy %deckraw% %raw%
+dir %raw% >> outputstuff
+
+:skipSed
+
+if NOT "%ascii%"=="" move %deck%.raw %txt%
+if "%ascii%"=="" move %deck%.log %txt%
+if NOT "%ascii%"=="" type %deck%.log

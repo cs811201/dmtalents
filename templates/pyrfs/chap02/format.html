@@ -1,0 +1,78 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Scientific Notation</h2>
+<hr>
+<div overflow="scroll">
+    Sometimes, the default number format is not very consistent, for exmaple, from the previous example we got the
+    following tables, where L and Idsat are not all in scientific notation.<br/>
+    <img src="/static/pyrfs/chap02/13_sheets/1.png"><br/><br/>
+
+    And, we can format the numbers to be scientific notation with user-specified significant digits. As shown below:
+    <br/><img src="/static/pyrfs/chap02/14_format/2.png"><br/><br/>
+
+    The key is to take use of the
+    <mark>vdr_format</mark>
+    option when adding constraints, as shown on line 26 and 27, they share the same format definition from line 20:
+    <ul>
+        <mark>number_format = "'{0:.5E}'.format($1.v)"</mark>
+
+    </ul>
+    The above example specifies 5 signight digits, if one wants to use 6 digits, just change to
+    <mark>number_format =
+        "'{0:.<font style="color:red">6</font>E}'.format($1.v)"
+    </mark>
+
+    <br/><img src="/static/pyrfs/chap02/14_format/1.png"><br/><br/>
+
+
+    The complete example Python code is provided below for copy-paste:<br/>
+    <pre>
+import os
+
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+dp.query(rule_group="02_Model_Scalability", rule="Rule_4001", check="Check_01")
+
+Idsat = dp.targets["idsat"]
+W = dp.conditions["w"]
+L = dp.conditions["l"]
+T = dp.conditions["t"]
+
+book = rfs.ReportBook(name="Idsat_sheets")
+rfs.create_sheets_for_book(book=book, condition=[T], val_sort='inc')
+
+number_format = "'{0:.5E}'.format($1.v)"
+for sheet in book.sheets:
+    rfs.create_tables_for_sheet(sheet=sheet, condition=[W])
+    for i, table in enumerate(sheet.tables):
+        right = rfs.RightLayout(table, location=(1, 1 + i * 3))
+        right.add_data(data=table.name, ndr=0, col_span=2)
+        right.add_constraint([L], offset=(1, -2), vdr_format=number_format)
+        right.add_constraint([Idsat], vdr_format=number_format)
+        rfs.fill_in(table)
+
+rfs.save(report=book, out_dir=this_file_path)
+
+
+
+
+    </pre>
+    <br/><br/>
+
+    Thanks!
+    <br>
+
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}
