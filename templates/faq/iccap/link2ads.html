@@ -1,0 +1,88 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to ADS Simulator</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+
+This note explains how to link ICCAP to ADS Simulator,
+<em>hpssefosim</em>, which is from Keysigtht's Advance Design System(ADS) software. It supports to run simulation in the following approaches:
+<br/>
+<ul>
+    <br/>
+    <li>ADS native mode, netlist in ADS syntax</li>
+    <li>Spectre mode, netlist in Spectre syntax</li>
+    <li>HSpice mode, netlist in HSpice syntax</li>
+    <br/>
+    Note: The Spectre and HSpice modes allow us to directly use foundry models in these formats with ADS
+    simulator. As ICCAP comes with <font style="color:red">10X paralleled</font> ADS simulation capability, it is a big
+    benefit in terms of
+    simulation & optimization speed and well-supported model types.
+
+
+</ul>
+
+<br/>
+Note: It's recommended to read the <a href="/iccapfaq/link2ext" target="_blank">Link ICCAP to External Simulators in
+    General</a> firstly, including troubleshooting tips.<br/><br/>
+
+Entries in the <em>$ICCAP_ROOT/iccap/lib/usersimulators</em> config file for these 3 approaches are shown below.<br/>
+
+<img src="/static/faq/iccap/link2ltspice/usersimulators_content_ads.png" alt="Image"/><br/><br/>
+<h4>ADS native mode</h4>
+
+<br/>
+
+
+<ol>
+    <li>
+        <p>Comfirm ADS is installed.</p>
+    </li>
+    <li>
+        <p>Make sure the key system environment variable is pointed to the ADS installation.</p>
+        <p>(1) On Windows, the variable is <strong>ADS_DIR</strong>, as highlighted in <span
+                style="color:green">green</span> on line 49.</p>
+        <p>(2) On Linux, it is <strong>HPEESOF_DIR</strong></p>
+    </li>
+    <li>
+        <p>Restart ICCAP</p>
+    </li>
+    <li>
+        <p>Set <strong>SIMULATOR</strong> variable in IC-CAP model to be <em>hpeesofsim</em></p>
+        <p><img src="/static/faq/iccap/link2ltspice/hpeesofsim.png" alt="Image"/></p>
+    </li>
+</ol>
+<br/><br/>
+<h4>Run Spectre model with ADS</h4>
+<p>ADS has Spectre compatibility mode built-in, by using the <em>spmodeads</em> as template_name as shown on line 52,
+    which allows us to run model file in Spectre format
+    using ADS simulator. To do so, we need to make the following change in the 4th step stated above:</p>
+<ol start="4">
+    <li>
+        <p>Set <strong>SIMULATOR</strong> variable in IC-CAP model to be <em>spmodeads</em></p>
+        <p><img src="/static/faq/iccap/link2ltspice/spmodeads.png" alt="Image"/></p>
+    </li>
+</ol>
+<br/><br/>
+<h4>Run Hspice model with ADS</h4>
+<p>ADS also has Hspice compatibility mode built-in, by using the <em>hspicemodeads</em> as template_name as shown on
+    line 52, which allows us to run model file in Hspice format
+    using ADS simulator. Similarly, we make the following change in the 4th step stated above:</p>
+<ol start="4">
+    <li>
+        <p>Set <strong>SIMULATOR</strong> variable in IC-CAP model to be <em>hspicemodeads</em></p>
+        <p><img src="/static/faq/iccap/link2ltspice/hspicemodeads.png" alt="Image"/></p>
+    </li>
+</ol>
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

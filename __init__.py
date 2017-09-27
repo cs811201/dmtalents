@@ -1344,6 +1344,16 @@ def iccapfaq_link2ltspice():
     return render_template('/faq/iccap/link2ltspice.html')
 
 
+route_iccapfaq_link2ads = '/iccapfaq/link2ads'
+
+
+@app.route(route_iccapfaq_link2ads)
+@login_required
+def iccapfaq_link2ads():
+    recordPostHistory(route_iccapfaq_link2ads)
+    return render_template('/faq/iccap/link2ads.html')
+
+
 #### MQA Rules
 @app.route('/mqarules/ft')
 @login_required
