@@ -1,0 +1,75 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to Spectre Simulator</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+
+This note explains how to link ICCAP to Spectre Simulator.
+<br/><br/>
+
+
+Note: It's recommended to read the <a href="/iccapfaq/link2ext" target="_blank">Link ICCAP to External Simulators in
+    General</a> firstly, including troubleshooting tips.<br/><br/>
+
+<p>For <strong>Spectre</strong>, ICCAP supports two modes in the <em>$ICCAP_ROOT/iccap/lib/usersimulators</em> config
+    file, as shown below:</p>
+<p><img src="/static/faq/iccap/link2ltspice/usersimulators_content_spectre.png" alt="Image"/></p>
+<ol>
+    <li>Native spectre parsing, as shown on line 76.</li>
+    <li>Spice-mode spectre parsing, as shown on line 78</li>
+</ol>
+<p>We can choose the name to be either spectre, or a version name like mmsim15, etc… The only constraint is that the
+    name should not contain spaces or characters other than numbers.</p>
+<p>If we are on Linux, we can set the last variable to CAN_PIPE.</p>
+<p>If we are on windows, and the spectre is on Linux, the last variable should be CANNOT_PIPE since it is a remote
+    simulation link.</p>
+<br/>
+<h4>Example Script to call Spectre (MMSIM15)</h4>
+
+<pre><code>CDS_LIC_FILE=5280@sunny.srs.is.keysight.com
+export CDS_LIC_FILE
+CDS_INST_DIR=/gfs/scs/glow/d1/public/Cadence/linux/MMSIM15.10.466-ISR5
+export CDS_INST_DIR
+PATH=/bin:/usr/bin:/usr/bin/X11
+PATH=$CDS_INST_DIR/tools/bin:$PATH
+CADENCE_VERSION=MMSIM115.10.466-ISR5
+CDS_HOME=/gfs/scs/glow/d1/public/Cadence/linux/$CADENCE_VERSION
+$CDS_INST_DIR/tools.lnx86/bin/spectre $*
+</code></pre>
+<br/>
+<h4>Verification of simulation link to spectre</h4>
+<p>After we’ve done the above settings, to verify the link to spectre, restart ICCAP, and:</p>
+<ol>
+    <li>
+        <p>load the following *.mdl file:<br/>
+            …/Examples/model_files/bjt/spectrenpn.mdl</p>
+    </li>
+    <li>
+        <p>Set the SIMULATOR variable to be
+            <mark>spectre</mark>
+            , or however you named your spectre
+        </p>
+        <p><img src="/static/faq/iccap/link2ltspice/spectre.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Go to the /dc/fgummel DUT/ setup, open the ‘ibicvsve’ plot and clear the simulated data</p>
+    </li>
+    <li>
+        <p>Run a simulation and confirm that the simulated data appears on the ‘ibicvsve’ plot, as shown below:</p>
+        <p><img src="/static/faq/iccap/link2ltspice/spectre_plot.png" alt="Image"/></p>
+        <p><em>Note: the simulatioin data are solid lines on the plot.</em></p>
+    </li>
+</ol>
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

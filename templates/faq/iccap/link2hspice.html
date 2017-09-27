@@ -1,0 +1,73 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to HSpice Simulator</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+
+This note explains how to link ICCAP to HSpice Simulator.
+<br/><br/>
+
+Note: It's recommended to read the <a href="/iccapfaq/link2ext" target="_blank">Link ICCAP to External Simulators in
+    General</a> firstly, including troubleshooting tips.<br/><br/>
+
+
+<p><strong>HSpice</strong> has the following default entry in the <em>$ICCAP_ROOT/iccap/lib/usersimulators</em> config
+    file, as shown below:</p>
+<p><img src="/static/faq/iccap/link2ltspice/usersimulators_content_hspice.png" alt="Image"/></p>
+<p>Usually, we just need to update the path to the <strong>hspice.exe</strong> , and restart ICCAP.</p>
+<br/>
+<h4>Verification of simulation link to HSpice</h4>
+<p>After we’ve done the above settings, to verify the link to spectre, restart ICCAP, and:</p>
+<ol>
+    <li>
+        <p>load the following *.mdl file:<br/>
+            …/Examples/model_files/mosfet/hnmos6.mdl</p>
+    </li>
+    <li>
+        <p>Set the SIMULATOR variable to be <strong>hspice</strong></p>
+        <p><img src="/static/faq/iccap/link2ltspice/hspice.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Go to the /large/idvg/ setup, open the ‘idvsvg’ plot and clear the simulated data</p>
+    </li>
+    <li>
+        <p>Run a simulation and confirm that the simulated data appears on the ‘idvsvg’ plot, as shown below:</p>
+        <p><img src="/static/faq/iccap/link2ltspice/hspice_plot.png" alt="Image"/></p>
+        <p><em>Note: the simulatioin data are solid lines on the plot.</em></p>
+    </li>
+</ol>
+<br/>
+<h4>The <strong>hspice-C</strong> option</h4>
+<p>More, Hspice has a C/S mode, which stands for Client/Server. Correspondingly, in ICCAP this option is turned on by
+    using the <strong>hspice-C</strong> option simulator link, which will give best performance when using hspice.</p>
+<p>For example, in the <strong>usersimulators</strong> config file, define the following:</p>
+<pre><code> <font style="color:purple">hspice2k13C</font>  <font style="color:red">hspice-C</font>   c:\synopsys\Hspice_I-2013.12-SP1\WIN64\hspice.exe  &quot;&quot;   CANNOT_PIPE
+</code></pre>
+<p>Note: the template_name is now called <font style="color:red">hspice-C</font></p>
+<p>Importantly, we also need to turn on this mode at HSPICE’s side, as follows:</p>
+<ol>
+    <li>
+        <p>Start Hspui GUI, as shown below.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/hgui.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Check the <strong>Start C/S mode</strong> and the <strong>Use C/S mode</strong> checkboxes, both!</p>
+        <p><img src="/static/faq/iccap/link2ltspice/csmode.png" alt="Image"/></p>
+    </li>
+</ol>
+<p>Then, after re-starting ICCAP, we can now assign <strong>SIMULATOR</strong> to <font
+        style="color:purple">hspice2k13C</font> to start
+    using it.</p>
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
