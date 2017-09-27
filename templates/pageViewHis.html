@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Page View History
+{% endblock %}
+
+{% block content %}
+<br/><br/><br/><br/>
+
+<div class="container">
+    <form method="post" action="/page_view_his_submit">
+
+        <label>Route:</label>
+        <input id="route" name="route" size="90" type="text" class="form-control"/>
+        <br/><br/>
+
+
+        <input type="submit">
+
+    </form>
+</div>
+
+<br/><br/><br/><br/>
+
+{% endblock %}

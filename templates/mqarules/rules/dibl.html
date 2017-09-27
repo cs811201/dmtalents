@@ -1,0 +1,98 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: DIBL
+{% endblock %}
+
+{% block mqarulesmain %}
+<h2>DIBL Example Rule | FinFET</h2>
+
+<h3>MQA Rules</h3>
+
+<hr>
+
+As MOSFET channel length becomes shorter, Vth shows a greater dependence on
+channel length (SCE: short-channel effect) and drain bias (DIBL: drain induced barrier lowering). <br/><br/>
+This example focuses on DIBL effect, which is often characterized as
+<mark>Vtlin – Vtsat
+</mark> to reflect the Vth shift due to drain bias change, while keeping other conditions(such as W/L/T and gate & body biases) the same, as follows:
+<br/>
+<ul>
+    <li>Vtlin: Vth obtained at Vds = Vd_lin, usually 0.05V</li>
+    <li>Vtsat: Vth obtained at Vds = Vdd, say 1.2V</li>
+</ul>
+<br/>
+Which means, we need to get both Vtlin and Vtsat in one rule, and subtract Vtsat from Vtlin to get DIBL. <br/>
+<br/>The example rule is shown below, which applies to all device types, especially for FinFET where MQA’s default function to calculate DIBL wouldn’t work.
+<br/>
+<pre>
+Note: MQA has a default function to calculate DIBL, which is explained in MQA’s user manual
+    <em>DIBL= CalPage(Vds,Vgs,Ids,"Dibl","@vbs~0")</em>
+</pre>
+
+<br/>
+
+Here is the complete rule for copy-paste:<br/>
+<pre>
+[common]
+appliedmodel= global, binning,macro
+
+[Group:10:title=Vtlin_Vtsat_DIBL Example]
+
+[Label:0104_example_dibl:title=Vtlin_Vtsat_DIBL]
+[Condition:1]
+[loops
+:x=L(start=g_lmin,stop=g_lmax,num=11)
+:P=W(start=g_wmin,stop=g_wmax,num=3)
+:P1=Vgs(start=0,stop=1.5,step=0.01)
+:P2=Vbs(0)
+:P3=Vds(Vdd,Vd_lin)
+]
+[Target
+: Vth_lin=FINDX(Vgs,Ids,"Y=1E-7","@Vds=Vd_lin")
+: Vth_sat=FINDX(Vgs,Ids,"Y=1E-7","@Vds=Vdd")
+: vtlin = <mark>removeX(Vth_lin,"Vds")</mark>
+: vtsat = <mark>removeX(Vth_sat,"Vds")</mark>
+: y1=Vtlin
+: y2=Vtsat
+: DIBL=y1-y2
+: y3=DIBL
+]
+[Check: 01:Vtlin vs L:Save2DData(W,L,y1):error:fitting error]
+[Check: 02:Vtsat vs L:Save2DData(W,L,y2):error:fitting error]
+[Check: 03:DIBL vs L:Save2DData(W,L,y3):error:fitting error]
+
+</pre>
+
+
+Please pay attention to the
+<mark>removeX()
+</mark> function used in the [Target] section in the rule, where we got rid of Vds from the data structure of Vtlin and Vtsat, it’s required, otherwise we wouldn’t be able to perform the subtraction given different Vds conditions. In another words, MQA internally couldn’t find matched condition if Vds weren’t removed.
+<br/>
+<em>
+    Note: as explained in MQA user manual, removeX() function is performed after simulation, so the simulation result
+    are not affected; however, it helps to get rid of variable columns in the final result, so as to merge data tables
+    with desired columns/conditions to perform desired calculation.
+</em>
+<br/>
+<br/>
+Here is the example output:<br/>
+<ul>
+    <li> Vtlin vs L
+        <br/><img src="/static/mqarules/dibl/vtlin.png" border="1px"/><br/></li>
+    <br/>
+    <li>Vtsat vs L
+        <br/><img src="/static/mqarules/dibl/vtsat.png" border="1px"/><br/></li>
+    <br/>
+    <li> DIBL vs L
+        <br/><img src="/static/mqarules/dibl/dibl.png" border="1px"/><br/></li>
+</ul>
+
+<br/>
+<br/>
+Thanks!
+<br/>
+<br/>
+<br/><br/>
+<br/>
+
+{% endblock %}
