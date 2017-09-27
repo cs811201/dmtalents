@@ -1353,6 +1353,7 @@ def iccapfaq_link2ads():
     recordPostHistory(route_iccapfaq_link2ads)
     return render_template('/faq/iccap/link2ads.html')
 
+
 route_iccapfaq_link2spectre = '/iccapfaq/link2spectre'
 
 
@@ -1362,6 +1363,7 @@ def iccapfaq_link2spectre():
     recordPostHistory(route_iccapfaq_link2spectre)
     return render_template('/faq/iccap/link2spectre.html')
 
+
 route_iccapfaq_llink2hspice = '/iccapfaq/link2hspice'
 
 
@@ -1370,6 +1372,26 @@ route_iccapfaq_llink2hspice = '/iccapfaq/link2hspice'
 def iccapfaq_link2hspice():
     recordPostHistory(route_iccapfaq_llink2hspice)
     return render_template('/faq/iccap/link2hspice.html')
+
+
+route_iccapfaq_spice3 = '/iccapfaq/link2spice3'
+
+
+@app.route(route_iccapfaq_spice3)
+@login_required
+def iccapfaq_link2spice3():
+    recordPostHistory(route_iccapfaq_spice3)
+    return render_template('/faq/iccap/link2spice3.html')
+
+
+route_iccapfaq_link2pspice = '/iccapfaq/link2pspice'
+
+
+@app.route(route_iccapfaq_link2pspice)
+@login_required
+def iccapfaq_link2pspice3():
+    recordPostHistory(route_iccapfaq_link2pspice)
+    return render_template('/faq/iccap/link2pspice.html')
 
 
 #### MQA Rules

@@ -1,0 +1,59 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to PSpice Simulator</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+
+This note explains how to link ICCAP to PSpice Simulator.
+<br/><br/>
+
+Note: It's recommended to read the <a href="/iccapfaq/link2ext" target="_blank">Link ICCAP to External Simulators in
+    General</a> firstly, including troubleshooting tips.<br/><br/>
+
+<p>Use the <a
+        href="https://mandrillapp.com/track/click/30490939/cadencecom.vo.llnwd.net?p=eyJzIjoiaG1iZWFoWDZPSUpTVkM2WDIyX0swWmlpay1NIiwidiI6MSwicCI6IntcInVcIjozMDQ5MDkzOSxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvY2FkZW5jZWNvbS52by5sbG53ZC5uZXRcXFwvdjFcXFwvb3JjYWRcXFwvMTcuMi0yMDE2X1MwMTdfT3JDQURfTGl0ZV9BbGwlMjBQcm9kdWN0cy56aXBcIixcImlkXCI6XCJlMDY1YjQ2M2UwNjA0ZjA5YTcyN2QwOGI2MzMxOWVmOFwiLFwidXJsX2lkc1wiOltcIjIxMzE0ZGU0MzU3ZjNjYmNjMjJhNDg3MDcxODRiZDg4MjVhODA1ZGJcIl19In0">Download
+    Link</a> for OrCAD PCB Designer Lite, which is the free version.</p>
+<p>In <em>$ICCAP_ROOT/iccap/lib/usersimulators</em> look for line for pspice alias, and edit to look like the
+    following.</p>
+<pre><code># pspice  pspice   $CDSROOT\tools\pspice\psp_cmd.exe   &quot;&quot;   CANNOT_PIPE
+pspice pspice C:\Cadence\SPB_17.2\tools\bin\psp_cmd.exe   &quot;&quot;   CANNOT_PIPE
+</code></pre>
+<p>Then restart ICCAP.</p>
+<h4>Verification of simulation link to PSpice</h4>
+<ol>
+    <li>
+        <p>load the following *.mdl file:<br/>
+            …/Examples/model_files/mosfet/nmos3.mdl</p>
+    </li>
+    <li>
+        <p>In the model Variables, add SIMULATOR = pspice</p>
+        <p><img src="/static/faq/iccap/link2ltspice/pspice.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Go to the /large/idvg/ setup, do Clear -&gt; Simulated so that any previously saved simulatioin will be
+            gone.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/clear_sim.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Simulate.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/simulate.png" alt="Image"/></p>
+    </li>
+    <li>
+        <p>Open the /large/idvg/idvsvg plot, confirm that the simulated data appears.</p>
+        <p><img src="/static/faq/iccap/link2ltspice/ltspice_plot.png" alt="Image"/></p>
+        <p><em>Note: the simulation data are solid lines on the plot.</em></p>
+    </li>
+</ol>
+<br/>
+<p>Thanks!</p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

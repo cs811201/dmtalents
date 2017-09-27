@@ -1,0 +1,49 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link ICCAP to Spice2, Spice3, HPSpice</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+
+<p>Good news! <em>Spice2</em>, <em>Spice3</em> and <em>HPSpice</em> are built-in, we
+    can use them directly in ICCAP, and no need to define any entry in the <em>$ICCAP_ROOT/iccap/lib/usersimulators</em>
+    config file.
+</p>
+
+<p>Simply declare the SIMULATOR varible to one of them, it will start to work. As shown below:<br/>
+    <img src="/static/faq/iccap/link2ltspice/spice3.png" alt="Image"/></p><br/>
+
+<h4>Verification of simulation link to Spice3</h4>
+<ol>
+    <li>
+        <p>load the following *.mdl file:<br/>
+            …/Examples/model_files/mosfet/nmos3.mdl</p>
+    </li>
+    <li>
+        Make sure <em>spice3</em> is assigned to SIMULATOR.
+
+    </li>
+    <li>
+        <p>Go to the /large/idvg/ setup, open the ‘idvsvg’ plot and clear the simulated data</p>
+    </li>
+    <li>
+        <p>Run a simulation and confirm that the simulated data appears on the ‘idvsvg’ plot.</p>
+        <br/>
+        <img src="/static/faq/iccap/link2ltspice/spice3_plot.png" alt="Image"/><br/>
+    </li>
+</ol>
+<p>Note: we can change <em>spice3</em> to <em>spice2</em> or <em>hpspice</em> in this example to
+    verify them.</p>
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
