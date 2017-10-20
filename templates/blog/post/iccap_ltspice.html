@@ -1,0 +1,154 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+ICCAP | LTSpice
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Link IC-CAP to the LTspice Simulator</h3>
+    <h5>by Raj Sodhi[Keysight] on Oct 2, 2017 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/10/02/link-ic-cap-to-the-ltspice-simulator"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    <h4>LTspice</h4>
+    <br/>
+    LTspice is a SPICE simulator offered by Linear Technologies (now Analog Devices Inc.) as a free tool. Due to its
+    excellent convergence properties, the power electronics design community has wholeheartedly embraced it as their
+    simulation platform of choice. In fact, LTspice was originally called “SwitcherCAD.” In many instances, an engineer
+    might want to generate a model based on measured data, but use LTspice as the simulation engine. Here's a look at
+    how you do that.<br/><br/>
+
+    <br/><img src="/static/blog/iccap_ltspice/1.png"/><br/><br/>
+    But before delving into the details of that process, it's worth noting that as of this writing, the LTspice
+    documentation describes support for seven different MOSFET device models:
+    <br/><br/>
+    <ul>
+        <table width="70%">
+            <thead>
+            <tr style="border-bottom:1pt solid black;">
+                <td width="10%"><b>Level</b></td>
+                <td width="90%"><b>Model</b></td>
+            </tr>
+
+            </thead>
+            <tr style="border-bottom:1pt solid black;">
+                <td>1</td>
+                <td>Shichman-Hodges</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>2</td>
+                <td>MOS2 (A. Vladimirescu and S. Liu, October 1980)</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>3</td>
+                <td>MOS3, a semi-empirical model</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>4</td>
+                <td>BSIM (B. J. Sheu, D. L. Scharfetter, and P. K. Ko, May 1985)</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>5</td>
+                <td>BSIM2 (Min-Chie Jeng, October 1990)</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>6</td>
+                <td>MOS6 (T. Sakurai and A. R. Newton, March 1990)</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>8</td>
+                <td>BSIM3v3.3.0 from University of California, Berkeley, July 29, 2005</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>9</td>
+                <td>BSIMSOI3.2 (Silicon on insulator) from the BSIM Research Group, February 2004.</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>12</td>
+                <td>EKV 2.6 (M. Bucher, C. Lallement, F. Theodoloz, C. Enz, F. Krummenacher, June 1997.)</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>14</td>
+                <td>BSIM4.6.1 from the BSIM Research Group, May 18, 2007.</td>
+            </tr>
+            <tr style="border-bottom:1pt solid black;">
+                <td>73</td>
+                <td>HiSIMHV version 1.2 from the Hiroshima University and STARC.</td>
+            </tr>
+        </table>
+    </ul>
+    <br/>
+    <h4>How to Link IC-CAP to LTspice</h4>
+    <br/>
+    If you have no background on how to link IC-CAP to an external simulator, I recommend you read my previous post
+    entitled, <a
+        href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/09/27/link-ic-cap-modeling-tool-to-external-simulators"
+        target="_blank">“Link the IC-CAP Modeling Tool to External Simulators.”</a> It will provide you with an overview
+    of the basic process, along with some troubleshooting tips.<br/><br/>
+
+    LTspice is not officially supported by IC-CAP. However, we have a workaround to successfully link IC-CAP to LTspice
+    IV by disguising it as a SPICE3 look-alike. To date, this workaround has not yet been tried on LTspice
+    XVII.<br/><br/>
+
+    Assuming you have LTspice installed on your system, here are the steps:<br/><br/>
+    <ul>
+        1. Append the following line into your $ICCAP_ROOT/iccap/lib/usersimulators file.<br/>
+        <code>ltspice spice3 $ICCAP_ROOT\src\ltspice3.bat "" CANNOT_PIPE</code>
+        <br/>
+        We used spice3 as the template_name, so that IC-CAP will treat the simulation input/output files as if it were
+        for SPICE3, which is natively supported.<br/><br/>
+        2. Download the <a href="/iccapfaq/blog/ltspice3/download" target="_blank">ltspice3.bat file here.</a><br/>
+        Note, the file was renamed to ltspice3.txt for security concerns. After you download it, please rename it back
+        to ltspice3.bat.<br/>
+        Open and edit ltspice3.bat on line 30. Make sure it reflects the correct path to the LTSpice IV executable
+        scad3.exe, as shown below:<br/>
+        <br/><img src="/static/blog/iccap_ltspice/2.png"/><br/><br/>
+
+        3. Move the ltspice3.bat file to directory $ICCAP_ROOT/src.<br/><br/>
+        4. Restart IC-CAP.
+    </ul>
+    <br/>
+    <h4>Verify the Simulation Link to LTspice IV</h4>
+    Now, let’s verify that it works, to ensure we can indeed use LTspice as the simulator engine for IC-CAP model
+    parameter extraction. To do that:<br/><br/>
+    <ul>
+        1.Load the following *.mdl example file from within the IC-CAP
+        program:../Examples/model_files/mosfet/nmos3.mdl<br/><br/>
+        2. In the model Variables, add the variable SIMULATOR and set it to ltspice.<br/>
+        <br/><img src="/static/blog/iccap_ltspice/3.png"/><br/><br/>
+
+        3. Go to the /large/idvg/ setup, and clear out the simulated data using Clear -> Simulated. Any previously saved
+        simulation will be gone.<br/>
+        <br/><img src="/static/blog/iccap_ltspice/4.png"/><br/><br/>
+        We now see only the measured data (symbols) on the plot, whereas simulation data would be shown as
+        solid lines:<br/>
+        <br/><img src="/static/blog/iccap_ltspice/5.png"/><br/><br/>
+        4. Simulate.<br/>
+        <br/><img src="/static/blog/iccap_ltspice/6.png"/><br/><br/>
+
+        5. In the same DUT/Setup, open the plot tab under the /large/idvg/idvsvg plot, and confirm that the simulated
+        data appears.<br/>
+        <br/><img src="/static/blog/iccap_ltspice/7.png"/><br/><br/>
+        The simulated data is represented by solid lines on the plot.
+
+    </ul>
+    So there you have it! By following this process, you can now use LTspice as your simulator for model parameter
+    extraction within IC-CAP.<br/><br/>
+
+    Thank you!<br/><br/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+    <br/><br/>
+
+
+    <br/><br/>
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

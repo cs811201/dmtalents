@@ -1,0 +1,92 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+ICCAP | External Simulators
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Link the IC-CAP Modeling Tool to External Simulators</h3>
+    <h5>by Raj Sodhi[Keysight] on Sept 27, 2017 -- <a
+            href="https://community.keysight.com/community/keysight-blogs/eesof-eda/blog/2017/09/27/link-ic-cap-modeling-tool-to-external-simulators"
+            target="_blank">Original Post</a></h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    <h4>ICCAP - External Simulator interface</h4>
+    <br/>
+    IC-CAP is a tool that enables modeling engineers to extract device model parameters using the simulator of their
+    choice. For each model parameter extraction, measured data is compared against simulated data, and parameters are
+    optimized to achieve the closest fit to the measured data. Because different simulators may use different syntax or
+    "templates," adding a new simulator that is not supported requires its output to be adapted to one of these
+    templates. For example LTSpiceIV uses a syntax that is very similar to SPICE3. IC-CAP supports the following
+    simulator syntax:<br/><br/>
+    <ul>
+        <li>SPICE2</li>
+        <li>SPICE3</li>
+        <li>HPSPICE</li>
+        <li>HSPICE</li>
+        <li>Eldo</li>
+        <li>SPECTRE443</li>
+        <li>SmartSpice</li>
+        <li>SPECTRE</li>
+        <li>Saber</li>
+        <li>hpeesofsim (ADS)</li>
+        <li>spmodeads (ADS, SPECTRE mode)</li>
+        <li>spicemodeads (ADS, HSPICE Model)</li>
+
+    </ul>
+    <br/>
+    To make a link between IC-CAP and some external simulator, one must edit the config file:<br/>
+    <code>$ICCAP_ROOT/iccap/lib/usersimulators.</code><br/>
+
+    <br/><img src="/static/blog/iccap_ext_simulators/1.png"/><br/><br/>
+
+    In this config file, every line represents instructions on how to connect a different simulator to IC-CAP. The
+    format is presented as follows:
+    <br/><img src="/static/blog/iccap_ext_simulators/2.png"/><br/>
+    <i>Note: Lines with leading # sign are comments.</i><br/><br/>
+
+    To link to an external simulator, the steps are as follows:<br/>
+    <ul>
+        1. Install the simulator program, making note of where the binary executable file resides. Also, verify that you
+        have a valid license.<br/><br/>
+        2. Append or edit the entry in the $ICCAP_ROOT/iccap/lib/usersimulators config file for the external simulator
+        in question.<br/><br/>
+        3. Re-start IC-CAP.<br/><br/>
+        4. In the model file where the simulator is to be used, specify the SIMULATOR variable to that simulator's name
+        defined in the usersimulators file.<br/>
+    </ul>
+    <br/>
+    <h4>Troubleshooting</h4>
+    Should you encounter any problem, please try the following procedure, as it will usually allow you to figure out the
+    problem. If that doesn't work, simply collect information from the steps in this procedure, as well as any pop-up
+    error messages, and send it to the IC-CAP support team.<br/>
+    <ul>
+        1. Turn on IC-CAP's Status window, and check to see if any warning or error message appears.
+        <br/><img src="/static/blog/iccap_ext_simulators/3.png"/><br/><br/>
+        2. Further, turn on the Simulation Debugger window. Check the netlist created by IC-CAP and the simulator's
+        output files.
+        <br/><img src="/static/blog/iccap_ext_simulators/4.png"/><br/><br/>
+    </ul>
+
+    <i>Note: Once the problem is addressed, it's recommended that you close the Simulation Debugger window. Leaving it
+        open
+        will slow down the overall simulation speed due to additional input/output interaction.</i>
+    <br/><br/>
+    Using this process, you can quickly and easily link IC-CAP to a supported external simulator.
+
+    Thank you!<br/><br/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+    <br/><br/>
+
+
+    <br/><br/>
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

@@ -2,14 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/iccap/link2pspice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/iccap/link2spice3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mqarules/cgscgd/bsim3.l" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mqarules/cgscgd/bsim4.l" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mqarules/cgscgd/bsim6.l" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/iccap_ext_simulators.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/iccap_ltspice.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/site_die.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/unused_param.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/cgscgd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/clear_sim.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/clear_sim.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/csmode.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/csmode.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/hgui.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/hgui.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/hpeesofsim.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/hpeesofsim.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/hspice.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/hspice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/ltspice.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/ltspice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/ltspice_plot.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/ltspice_plot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/pspice.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/pspice.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/simulate.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/simulate.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/spectre.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/spectre.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/spice3_plot.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/spice3_plot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/spmodeads.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/spmodeads.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/usersimulators_content_ads.png" afterPath="$PROJECT_DIR$/static/faq/iccap/link2ltspice/usersimulators_content_ads.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq/iccap/link2externalsim.html" afterPath="$PROJECT_DIR$/templates/faq/iccap/link2externalsim.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq/iccap/link2hspice.html" afterPath="$PROJECT_DIR$/templates/faq/iccap/link2hspice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq/iccap/link2ltspice.html" afterPath="$PROJECT_DIR$/templates/faq/iccap/link2ltspice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq/iccap/link2spectre.html" afterPath="$PROJECT_DIR$/templates/faq/iccap/link2spectre.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blog_index.html" afterPath="$PROJECT_DIR$/templates/blog/blog_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules/toc.html" afterPath="$PROJECT_DIR$/templates/mqarules/toc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/updateHisCore.html" afterPath="$PROJECT_DIR$/templates/updateHisCore.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,14 +47,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="1376" column="11" lean-forward="false" selection-start-line="1376" selection-start-column="11" selection-end-line="1376" selection-end-column="11" />
+            <state relative-caret-position="326">
+              <caret line="1895" column="22" lean-forward="true" selection-start-line="1895" selection-start-column="22" selection-end-line="1895" selection-end-column="22" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cgscgd.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/cgscgd.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bsim6.l" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/mqarules/cgscgd/bsim6.l">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mqarules_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,106 +106,41 @@
         <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="60" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="60" />
+              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <file leaf-file-name="iccap_ltspice.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_ltspice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link2externalsim.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2externalsim.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="1768">
+              <caret line="104" column="48" lean-forward="false" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
               <folding>
-                <element signature="n#style#0;n#font#0;n#em#0;n#li#1;n#ol#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#2;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#3;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#4;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#5;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#6;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#7;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#8;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#9;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#10;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="link2spectre.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2spectre.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link2hspice.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2hspice.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#font#0;n#code#0;n#pre#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#font#1;n#code#0;n#pre#0;n#!!top" expanded="true" />
-                <element signature="e#2137#2143#0" expanded="true" />
-                <element signature="e#2143#2149#0" expanded="true" />
-                <element signature="n#style#0;n#font#0;n#p#6;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#font#0;n#p#8;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link2spice3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2spice3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="32" column="49" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link2pspice.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2pspice.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="35" />
-              <folding>
-                <element signature="e#1138#1144#0" expanded="true" />
-                <element signature="e#1144#1150#0" expanded="true" />
-                <element signature="e#1223#1229#0" expanded="true" />
-                <element signature="e#1229#1235#0" expanded="true" />
-                <element signature="e#1692#1696#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link2ltspice.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2ltspice.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="link2ads.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2ads.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#font#0;n#ul#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#p#1;n#li#1;n#ol#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -160,14 +158,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fromcompa</find>
-      <find>getuser</find>
-      <find>fromco</find>
-      <find>mqarule</find>
-      <find>search</find>
-      <find>getel</find>
       <find>query.filter</find>
-      <find>mbpfaq</find>
       <find>getcate</find>
       <find>/</find>
       <find>/search</find>
@@ -177,11 +168,9 @@
       <find>search_res</find>
       <find>dash</find>
       <find>pyrfs/chap2.b</find>
-      <find>blue</find>
       <find>route_mbpfaq_wleff</find>
       <find>script_import_export</find>
       <find>iccapfaq</find>
-      <find>download</find>
       <find>./_img</find>
       <find>LTSP</find>
       <find>viewerListFor</find>
@@ -190,6 +179,15 @@
       <find>url_for</find>
       <find>ltspice</find>
       <find>ads</find>
+      <find>pygal</find>
+      <find>blue</find>
+      <find>mbpfaq</find>
+      <find>blog</find>
+      <find>download</find>
+      <find>iccap_lts</find>
+      <find>mqarule</find>
+      <find>route_download_bsim6_model</find>
+      <find>cgscgd</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/static/mbpst</replace>
@@ -221,17 +219,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/mismatch_hsp_res.html" />
-        <option value="$PROJECT_DIR$/templates/faq/mqa/openoffice.html" />
-        <option value="$PROJECT_DIR$/templates/faq/mqa/TightLoopWithMeasData.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/rules/wpe.html" />
-        <option value="$PROJECT_DIR$/templates/faq/mbp/changeDefaultScript.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/addFlow2Menu.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/vthscaling4sides.html" />
         <option value="$PROJECT_DIR$/templates/viewByCompany.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/errorDataGrid.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/sid_id2.html" />
-        <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
         <option value="$PROJECT_DIR$/templates/blog/post/mbp_extr_across_conditions.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/update_excel.html" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/import_export_script_settings.html" />
@@ -250,7 +242,6 @@
         <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
         <option value="$PROJECT_DIR$/templates/search_result.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/hidden.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/sheets.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/chap02/tables.html" />
         <option value="$PROJECT_DIR$/templates/pyrfs/toc.html" />
@@ -259,24 +250,32 @@
         <option value="$PROJECT_DIR$/rename_files.py" />
         <option value="$PROJECT_DIR$/templates/faq/mbp/wleff.html" />
         <option value="$PROJECT_DIR$/templates/disclaimer.html" />
-        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
         <option value="$PROJECT_DIR$/templates/mqarules/rules/dibl.html" />
         <option value="$PROJECT_DIR$/templates/pageViewHis.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2ads.html" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2spice3.html" />
-        <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
-        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2pspice.html" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2spectre.html" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2ltspice.html" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2hspice.html" />
         <option value="$PROJECT_DIR$/templates/faq/iccap/link2externalsim.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/unused_param.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/site_die.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/iccap_ltspice.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/blog/post/iccap_ext_simulators.html" />
+        <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
+        <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/toc.html" />
+        <option value="$PROJECT_DIR$/templates/mqarules/rules/cgscgd.html" />
+        <option value="$PROJECT_DIR$/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1333" />
+    <option name="x" value="418" />
+    <option name="width" value="1488" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -297,7 +296,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,14 +312,14 @@
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
+              <item name="mqarules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
-              <item name="iccap" type="462c0819:PsiDirectoryNode" />
+              <item name="mqarules" type="462c0819:PsiDirectoryNode" />
+              <item name="cgscgd" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
@@ -332,25 +330,26 @@
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
+              <item name="mqarules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
-              <item name="iccap" type="462c0819:PsiDirectoryNode" />
+              <item name="mqarules" type="462c0819:PsiDirectoryNode" />
+              <item name="rules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -370,11 +369,11 @@
       <recent name="D:\projects\dmtalents\static\faq\mqa\compareMode" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\dmtalents\templates\faq\iccap" />
-      <recent name="D:\projects\dmtalents\static\faq\iccap\link2ltspice" />
-      <recent name="D:\projects\dmtalents\templates" />
+      <recent name="D:\projects\dmtalents\static\mqarules\cgscgd" />
       <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
+      <recent name="D:\projects\dmtalents\templates\blog\post" />
       <recent name="D:\projects\dmtalents\templates\faq\mbp" />
+      <recent name="D:\projects\dmtalents\templates\faq\iccap" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -950,7 +949,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506550284189</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add link ICCAP to pspice, spice2/3/hpsice">
+      <created>1506552085145</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1506552085145</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -963,13 +969,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1333" height="1160" extended-state="0" />
+    <frame x="418" y="0" width="1488" height="1160" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2340927" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24369748" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19660679" sideWeight="0.5086906" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3084577" sideWeight="0.49130937" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1402985" sideWeight="0.49130937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3074656" sideWeight="0.49689442" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123046875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1032,7 +1038,8 @@
     <MESSAGE value="improve the words in troubleshooting ICCAP simulation, link to external simulator in general." />
     <MESSAGE value="add link ICCAP to ADS" />
     <MESSAGE value="add link ICCAP to hspice and spectre" />
-    <option name="LAST_COMMIT_MESSAGE" value="add link ICCAP to hspice and spectre" />
+    <MESSAGE value="add link ICCAP to pspice, spice2/3/hpsice" />
+    <option name="LAST_COMMIT_MESSAGE" value="add link ICCAP to pspice, spice2/3/hpsice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1048,62 +1055,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/security/send_confirmation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="1681" column="34" lean-forward="false" selection-start-line="1681" selection-start-column="20" selection-end-line="1681" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/reset_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/requestlogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="791" column="0" lean-forward="false" selection-start-line="791" selection-start-column="0" selection-end-line="791" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Anaconda3/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="295" column="8" lean-forward="false" selection-start-line="295" selection-start-column="8" selection-end-line="295" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="359" column="56" lean-forward="true" selection-start-line="359" selection-start-column="56" selection-end-line="359" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask/globals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -1157,13 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1272,13 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/dibl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1321,14 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/faq/iccap/link2ltspice/spice3.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1339,94 +1268,168 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="60" lean-forward="false" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="1376" column="11" lean-forward="false" selection-start-line="1376" selection-start-column="11" selection-end-line="1376" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2spice3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="544">
           <caret line="32" column="49" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2spectre.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="1037">
           <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2pspice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="765">
           <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <element signature="e#1138#1144#0" expanded="true" />
-            <element signature="e#1144#1150#0" expanded="true" />
-            <element signature="e#1223#1229#0" expanded="true" />
-            <element signature="e#1229#1235#0" expanded="true" />
-            <element signature="e#1692#1696#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2ltspice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="1292">
           <caret line="76" column="35" lean-forward="false" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2hspice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+        <state relative-caret-position="629">
           <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#code#0;n#pre#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#font#1;n#code#0;n#pre#0;n#!!top" expanded="true" />
-            <element signature="e#2137#2143#0" expanded="true" />
-            <element signature="e#2143#2149#0" expanded="true" />
-            <element signature="n#style#0;n#font#0;n#p#6;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#font#0;n#p#8;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2ads.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#ul#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#li#1;n#ol#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/faq/iccap/link2externalsim.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        <state relative-caret-position="493">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/faq/mbp/unused_param.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="157" lean-forward="false" selection-start-line="26" selection-start-column="157" selection-end-line="26" selection-end-column="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/faq/mbp/site_die.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_ltspice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="104" column="48" lean-forward="false" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
           <folding>
-            <element signature="n#style#0;n#font#0;n#em#0;n#li#1;n#ol#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#2;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#3;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#4;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#5;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#6;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#7;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#8;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#9;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#10;n#table#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_ext_simulators.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="70" lean-forward="false" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/blog_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/mqarules_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/toc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="68" lean-forward="false" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/mqarules/cgscgd/bsim6.l">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mqarules/rules/cgscgd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#font#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#pre#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="1895" column="22" lean-forward="true" selection-start-line="1895" selection-start-column="22" selection-end-line="1895" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -422,6 +422,24 @@ def blog_mbp_extr_across_conditions():
     return render_template('blog/post/mbp_extr_across_conditions.html')
 
 
+route_blog_iccap_ltspice = '/blog/iccap_ltspice'
+
+
+@app.route(route_blog_iccap_ltspice)
+def blog_iccap_ltspice():
+    recordPostHistory(route_blog_iccap_ltspice)
+    return render_template('blog/post/iccap_ltspice.html')
+
+
+route_blog_iccap_ext_simulators = '/blog/iccap_ext_simulators'
+
+
+@app.route(route_blog_iccap_ext_simulators)
+def blog_iccap_ext_simulators():
+    recordPostHistory(route_blog_iccap_ext_simulators)
+    return render_template('blog/post/iccap_ext_simulators.html')
+
+
 # MQA rules
 
 @app.route('/mqarules')
@@ -1199,6 +1217,26 @@ def mbpfaq_wleff():
     return render_template('/faq/mbp/wleff.html')
 
 
+route_mbpfaq_unused_param = '/mbpfaq/unused_param'
+
+
+@app.route(route_mbpfaq_unused_param)
+@login_required
+def mbpfaq_unused_param():
+    recordPostHistory(route_mbpfaq_unused_param)
+    return render_template('/faq/mbp/unused_param.html')
+
+
+route_mbpfaq_site_die = '/mbpfaq/site_die'
+
+
+@app.route(route_mbpfaq_site_die)
+@login_required
+def mbpfaq_site_die():
+    recordPostHistory(route_mbpfaq_site_die)
+    return render_template('/faq/mbp/site_die.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -1527,6 +1565,16 @@ route_mqarules_dibl = '/mqarules/dibl'
 def mqarule_dibl():
     recordPostHistory(route_mqarules_dibl)
     return render_template('/mqarules/rules/dibl.html')
+
+
+route_mqarules_cgscgd = '/mqarules/cgscgd'
+
+
+@app.route(route_mqarules_cgscgd)
+@login_required
+def mqarule_cgscgd():
+    recordPostHistory(route_mqarules_cgscgd)
+    return render_template('/mqarules/rules/cgscgd.html')
 
 
 #### Video Demos
@@ -1860,7 +1908,7 @@ route_dashboard = '/dashboard01.46738.99846kkli58010_odugjfkadj!jf.11'
 def dashboard():
     # recordPostHistory(route_dashboard)
     # PostHistory.query.filter(PostHistory.user_id == id).filter(PostHistory.route == rt).all()
-    iccapPost = Post.query.filter(Post.category == 'iccap').all()
+    iccapPost = Post.query.filter(Post.category == 'iccapfaq').all()
     iccap_ct = iccapPost.__len__() + 1
 
     service_ct = 1  # why DM services
@@ -2063,7 +2111,7 @@ def dashboard_chart_view():
 
     )
 
-    contents_chart = pygal.Bar(style=style_contents, print_values=True, show_legend=False, height=350)
+    contents_chart = pygal.Bar(style=style_contents, print_values=True, show_legend=False, height=400)
 
     totalPostCount = mbp_ct + mqa_ct + iccap_ct + video_ct + blog_ct + wpe_ct + alfna_ct + service_ct
     contents_chart.title = 'Contents (total: ' + str(totalPostCount) + ' )'
@@ -2539,6 +2587,50 @@ def download_bsimcmg_model():
                      attachment_filename='model_bsimcmg.l', mimetype='text/rule', as_attachment=True)
 
 
+route_download_bsim3_model = '/mqarules/bsim3_model/download'
+
+
+@app.route(route_download_bsim3_model)
+@login_required
+def download_bsim3_model():
+    recordPostHistory(route_download_bsim3_model)
+    return send_file('static/mqarules/cgscgd/bsim3.l',
+                     attachment_filename='bsim3.l', mimetype='text/rule', as_attachment=True)
+
+route_download_bsim4_model = '/mqarules/bsim4_model/download'
+
+
+@app.route(route_download_bsim4_model)
+@login_required
+def download_bsim4_model():
+    recordPostHistory(route_download_bsim4_model)
+    return send_file('static/mqarules/cgscgd/bsim4.l',
+                     attachment_filename='bsim4.l', mimetype='text/rule', as_attachment=True)
+
+
+route_download_bsim6_model = '/mqarules/bsim6_model/download'
+
+
+@app.route(route_download_bsim6_model)
+@login_required
+def download_bsim6_model():
+    recordPostHistory(route_download_bsim6_model)
+    return send_file('static/mqarules/cgscgd/bsim6.l',
+                     attachment_filename='bsim6.l', mimetype='text/rule', as_attachment=True)
+
+
+
+route_download_cgscgd_rule = '/mqarules/cgscgd/rule/download'
+
+
+@app.route(route_download_cgscgd_rule)
+@login_required
+def download_cgscgd_rule():
+    recordPostHistory(route_download_cgscgd_rule)
+    return send_file('static/mqarules/cgscgd/CgsCgd.rule',
+                     attachment_filename='CgsCgd.rule', mimetype='text/rule', as_attachment=True)
+
+
 #### Script Zip files downloads
 
 route_download_scriptZip_01 = '/scriptZip/01_ModelParameter/download'
@@ -2946,6 +3038,38 @@ def download_iccapfaq_ltspice3():
     recordPostHistory(route_download_iccapfaq_ltspice3)
     return send_file('static/faq/iccap/link2ltspice/ltspice3.txt',
                      attachment_filename='ltspice3.txt', mimetype='text/plain', as_attachment=True)
+
+
+route_download_iccapfaq_ltspice3_forblog = '/iccapfaq/blog/ltspice3/download'
+
+
+@app.route(route_download_iccapfaq_ltspice3_forblog)
+def download_iccapfaq_ltspice3_forblog():
+    recordPostHistory(route_download_iccapfaq_ltspice3_forblog)
+    return send_file('static/faq/iccap/link2ltspice/ltspice3.txt',
+                     attachment_filename='ltspice3.txt', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mbpfaq_idvdvg_site11 = '/iccapfaq/idvdvg_site11/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_idvdvg_site11)
+def download_mbpfaq_idvdvg_site11():
+    recordPostHistory(route_download_mbpfaq_idvdvg_site11)
+    return send_file('static/faq/mbp/site_die/idvdvg_site11.mdm',
+                     attachment_filename='idvdvg_site11.mdm', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mbpfaq_idvdvg_site12 = '/iccapfaq/idvdvg_site12/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_idvdvg_site12)
+def download_mbpfaq_idvdvg_site12():
+    recordPostHistory(route_download_mbpfaq_idvdvg_site12)
+    return send_file('static/faq/mbp/site_die/idvdvg_site12.mdm',
+                     attachment_filename='idvdvg_site12.mdm', mimetype='text/plain', as_attachment=True)
 
 
 ### Upload a file

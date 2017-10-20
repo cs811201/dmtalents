@@ -1,0 +1,54 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Enable Die and Site Indices from Measurement</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+This note explains how to bring the Site and/or Die indices as additional identifiers in MBP, as shown below, so that we can view devices with the same geometry(W/L/T) but from different Dies/Sites as separate entries in MBP's device table.
+
+<br/><img src="/static/faq/mbp/site_die/4.png"/><br/><br/>
+
+The Site and Die indices are from the measurement data, as follows, and the two example files used here can be downloaded using these links:
+<a href="/iccapfaq/idvdvg_site11/download" target="_blank">idvdvg_site11.mdm</a>  and
+
+<a href="/iccapfaq/idvdvg_site12/download" target="_blank">idvdvg_site12.mdm</a> .
+<br/>
+<em>Note: We have to use <font style="color:red">numeric value</font> in the double quotes for all variables in the
+    <mark>ICCAP_VALUES</mark>
+    section, letters are not working, as shown on line 15 and 16. </em>
+<br/><img src="/static/faq/mbp/site_die/5.png"/><br/><br/>
+
+Now, there are two places to update in order to enable them.
+<br/><br/>
+1. Add them in the Data Loader Config window, via menu "File -> Data -> Data Loader Config", as shown below.
+<br/><img src="/static/faq/mbp/site_die/6.png"/><br/><br/>
+
+In this case, in the
+<mark>mosfet</mark> tab, scroll down to the end, append <em>Site</em>,
+<em>Die</em> to the table, the left column is the name used in measurement data file, the right column is the name recognized by MBP which is defined in the next step in the
+<mark>inst.ini</mark> config file, basically we are doing a mapping here in case these names don't match.
+<br/><img src="/static/faq/mbp/site_die/1.png"/><br/><br/>
+
+2. Add them in the
+<mark>inst.ini
+</mark> config file, importantly this config file is model type and model level dependent, we have to edit the right one. For more details about where to find the correct one and the format of the
+<mark>inst.ini</mark> file, <a href="/mbpfaq/addInstParam" target="_blank">please refer to another FAQ here</a>.
+
+<br/><img src="/static/faq/mbp/site_die/2.png"/><br/><br/>
+
+Then, restart MBP or reopen the project after we've done the above 2 changes. <br/>
+<br/>We shall see Site and Die appear in the
+<em>Edit
+    Instance</em> window by clicking on the gear icon on the left top of the device table. As shown below. Check these two check boxes, click OK, then we will see them as shown at the beginning.
+<br/><img src="/static/faq/mbp/site_die/3.png"/><br/><br/>
+
+
+Thanks!
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

@@ -1,0 +1,53 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Turn on Unused Model Parameters</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+Often when we work with a model file, either MBP's default ones or user's model files, we won't have all the model parameters listed, which is totally OK because all the missing model parameters would have a default value in the simulator.
+<br/><br/>
+
+
+The problme comes when we want to turn a model parameter which is not initially included in the model file. For example,
+<mark>alpha1
+</mark>, the channel length scaling parameter of impact ionization current, as shown below:<br/>
+<img src="/static/faq/mbp/unused_param/4.png" border="1px"><br/>
+<em>Figure 1. The impact ionization current model, cited form BSIM4 model book.</em>
+<br/><br/>
+It is often found not in the model file. Only
+<font style="color:#F21EAF  ">alpha0</font> and
+<font style="color:blue">beta0</font> show up when we tried to search for it.
+
+<br/><img src="/static/faq/mbp/unused_param/1.png" border="1px"><br/><br/>
+
+We could certainly edit he model file, adding "alpha1 = 0", and reload the model back in MBP via "File -> Model -> Load"; however, this application note introduces a way to quickly add it within the model table.
+<br/><br/>
+
+As shown below, at the bottom of the model table, there is a divider bar says "Unspecified Parameters", pull it up when we are in the "Rout" tab, we will see
+<mark>alpha1</mark> there. Then right click on it, and do "Add to model card". <br/>
+<em>Note: All CMC standard model parameters should be found here if not used at the beginning, otherwise we will have to
+    edit the model file manually to add it.</em>
+
+<br/><img src="/static/faq/mbp/unused_param/2.png" border="1px"><br/><br/>
+
+Now we have
+<mark>alpha1</mark> in the upper part of the model table that we can work with.
+<br/><img src="/static/faq/mbp/unused_param/5.png" border="1px"><br/><br/>
+
+As an additional note, MBP builds in explanations for every standard model parameter, we can right click on a parameter in the upper part of the model table, and open the Parameter Guide window, as shown below.
+<br/><img src="/static/faq/mbp/unused_param/6.png" border="1px"><br/><br/>
+Do a "Comment" on the pop up menu, we will open the "Parameter Guide" window.
+<br/><img src="/static/faq/mbp/unused_param/3.png" border="1px"><br/><br/>
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
