@@ -1507,6 +1507,16 @@ def mqarulesmismatch_hsp_mos():
     return render_template('/mqarules/rules/mismatch_hsp_mos.html')
 
 
+route_mqarules_mis_hsp_mos_finfet = '/mqarules/misHspMos_finfet'
+
+
+@app.route(route_mqarules_mis_hsp_mos_finfet)
+@login_required
+def mqarulesmismatch_hsp_mos_finfet():
+    recordPostHistory(route_mqarules_mis_hsp_mos_finfet)
+    return render_template('/mqarules/rules/mismatch_hsp_mos_finfet.html')
+
+
 route_mqarules_mis_spe_mos = '/mqarules/misSpeMos'
 
 
@@ -1575,6 +1585,26 @@ route_mqarules_cgscgd = '/mqarules/cgscgd'
 def mqarule_cgscgd():
     recordPostHistory(route_mqarules_cgscgd)
     return render_template('/mqarules/rules/cgscgd.html')
+
+
+route_mqarules_cxy = '/mqarules/cxy'
+
+
+@app.route(route_mqarules_cxy)
+@login_required
+def mqarule_cxy():
+    recordPostHistory(route_mqarules_cxy)
+    return render_template('/mqarules/rules/cxy.html')
+
+
+route_mqarules_crss = '/mqarules/crss_ciss_coss'
+
+
+@app.route(route_mqarules_crss)
+@login_required
+def mqarule_crss():
+    recordPostHistory(route_mqarules_crss)
+    return render_template('/mqarules/rules/crss.html')
 
 
 #### Video Demos
@@ -2542,6 +2572,27 @@ def download_Mismatch_hsp_mos_rule():
     return send_file('static/mqarules/mismatch_hsp_mos/Mismatch_hsp_mos.rule',
                      attachment_filename='Mismatch_hsp_mos.rule', mimetype='text/rule', as_attachment=True)
 
+route_download_mismatch_hsp_mos_finfet_rule = '/mqarules/mismatch_hsp_mos_finfet/download'
+
+
+@app.route(route_download_mismatch_hsp_mos_finfet_rule)
+@login_required
+def download_Mismatch_hsp_mos_finfet_rule():
+    recordPostHistory(route_download_mismatch_hsp_mos_finfet_rule)
+    return send_file('static/mqarules/mismatch_hsp_mos_finfet/Mismatch_hsp_mos_finfet.rule',
+                     attachment_filename='Mismatch_hsp_mos_finfet.rule', mimetype='text/rule', as_attachment=True)
+
+route_download_mismatch_hsp_model_lib = '/mqarules/mismatch_hsp_lib_finfet/download'
+
+
+@app.route(route_download_mismatch_hsp_model_lib)
+@login_required
+def download_Mismatch_hsp_mos_finfet_lib():
+    recordPostHistory(route_download_mismatch_hsp_model_lib)
+    return send_file('static/mqarules/mismatch_hsp_mos_finfet/AcceliconMis.lib',
+                     attachment_filename='AcceliconMis.lib', mimetype='text/lib', as_attachment=True)
+
+
 
 route_download_mismatch_spe_mos_rule = '/mqarules/mismatch_spe_mos/download'
 
@@ -2597,6 +2648,7 @@ def download_bsim3_model():
     return send_file('static/mqarules/cgscgd/bsim3.l',
                      attachment_filename='bsim3.l', mimetype='text/rule', as_attachment=True)
 
+
 route_download_bsim4_model = '/mqarules/bsim4_model/download'
 
 
@@ -2619,7 +2671,6 @@ def download_bsim6_model():
                      attachment_filename='bsim6.l', mimetype='text/rule', as_attachment=True)
 
 
-
 route_download_cgscgd_rule = '/mqarules/cgscgd/rule/download'
 
 
@@ -2629,6 +2680,28 @@ def download_cgscgd_rule():
     recordPostHistory(route_download_cgscgd_rule)
     return send_file('static/mqarules/cgscgd/CgsCgd.rule',
                      attachment_filename='CgsCgd.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_cxy_rule = '/mqarules/cxy/rule/download'
+
+
+@app.route(route_download_cxy_rule)
+@login_required
+def download_cxy_rule():
+    recordPostHistory(route_download_cxy_rule)
+    return send_file('static/mqarules/cxy/Cxy.rule',
+                     attachment_filename='Cxy.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_crss_rule = '/mqarules/crss_ciss_coss/rule/download'
+
+
+@app.route(route_download_crss_rule)
+@login_required
+def download_crss_rule():
+    recordPostHistory(route_download_crss_rule)
+    return send_file('static/mqarules/crss/crss_ciss_coss.rule',
+                     attachment_filename='crss_ciss_coss.rule', mimetype='text/rule', as_attachment=True)
 
 
 #### Script Zip files downloads

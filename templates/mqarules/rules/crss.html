@@ -1,0 +1,143 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: Crss Ciss Coss
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Crss Ciss Coss</h2>
+<h3>MQA Rules</h3>
+<hr>
+
+In a <a href="/mqarules/cxy" target="_blank">previous rule
+    example</a> , we explained how to get the basic 12 capacitances of a 4 terminal MOSFET transistor.
+<br><br>
+Now, with regard to the increasing importance of Capacitance to power devices, let’s take a look at the Crss, Coss, and Ciss. As defined below.
+<br/>
+
+<br/><img src="/static/mqarules/crss/1.png" border="1px"><br/><br/>
+
+Gate resistance (Rg), input, output and reverse transfer capacitances (Ciss, Coss and Crss) are often described in a device datasheet as typical parameters related to switching performance.
+<br/><br/>
+
+<ul>
+    <li>(1)<font style="color:red">Rg and Crss</font> dictate switching speed</li>
+    <li>(2) <font style="color:red">Ciss</font> determines driving condition</li>
+    <li>(3) Power loss due to charging and discharging <font style="color:red">Coss</font> is the primary component of
+        switching loss in the case of a
+        resonant converter
+    </li>
+</ul>
+<br/>
+From the illustration above, we can tell, in term of the 12 basic capacitances, we have:
+<ul>
+    <li>(1) Crss = Cgd</li>
+    <li>(2) Coss = Cds + Cgd</li>
+    <li>(3) Ciss = Cgs + Cgd, which is often recognized as <em>Cgc</em> (Gate to Channel)</li>
+    <li>Note: in CMOS modeling, we usually have another term <em>Cgg</em>, which is recognized as <em>Cgg= Cgs + Cgd +
+        Cgb</em>
+    </li>
+</ul>
+
+<br/><br/>
+Here is the MQA simulation result of Ciss, Coss and Crss when sweeping Vds from 0 to 20V. <br/>
+<br/><img src="/static/mqarules/crss/2.png" border="1px"><br/><br/>
+
+
+A BSIM4 model is used in this example, which can be downloaded here:<br/>
+<ul>
+    <a href="/mqarules/bsim4_model/download" target="_blank">BSIM4</a>
+</ul>
+<br/>
+
+One thing to be noticed, that MQA may not have the unit(pF) defined for Ciss, Coss and Crss by default, the result will be shown in unit of F(Farad), in this case, we need to update one config file
+<em>$HOME/.mqa_set/unitmap.ini</em> <br/>
+<br/><img src="/static/mqarules/crss/3.png" border="1px"><br/><br/>
+
+
+Here is the <a href="/mqarules/crss_ciss_coss/rule/download" target="_blank">crss_ciss_coss.rule for download</a> .
+<br/><br/>
+And, for copy-paste:
+<pre>
+[common]
+appliedmodel = global, binning, macro
+
+[Group:C12:Title=Crss Ciss Coss]
+
+[label:c1201:title=Crss, Ciss, Coss vs Vds]
+[Condition:devtype=1]
+[option:sweeptype=ac]
+[Loops
+: x=freq
+: p=Vd(start=0,stop=20,step=1)
+: p1=W(10e-6)
+: p2=L(20e-6)
+: p3=Vg(1.5)
+: p4=Vb(0)
+: p5=Vs(0)
+: p6=T(Tnom)
+]
+[target
+:yvg1=II_vg1
+:ygs=CalCurve(freq,yvg1,"yvg1","@freq~1e6")
+:Cgs=ygs/(2*3.14159*1e6)
+:y1=Cgs
+
+:yvg2=II_vg2
+:ygd=CalCurve(freq,yvg2,"yvg2","@freq~1e6")
+:Cgd=ygd/(2*3.14159*1e6)
+<mark>
+:Crss = Cgd
+:ycrss=Crss
+
+:Ciss = Cgs+Cgd
+:yciss = Ciss
+</mark>
+:yds3=II_vd3
+:yds=CalCurve(freq,yds3,"yds3","@freq~1e6")
+:Cds=yds/(2*3.14159*1e6)
+<mark>:Coss = Cds + Cgd
+:ycoss = Coss</mark>
+]
+[Check:011:Plot Crss, Ciss, Coss vs. Vds:SaveanydData(p5,p,ycrss,yciss,ycoss):error: no check]
+[Compare: 21: Compare Crss, Ciss, Coss vs. Vds: CompAnyD(p5,p,ycrss,yciss,ycoss):error: TBD]
+
+
+[benchmark]
+.options POST=2 INGOLD=1
+m1 d1 g1 s1 b1 @@mm_lv_nmos l=@l w=@w t=@T  **Cgs
+vd1 d1 0 dc=@vd
+vg1 g1 0 dc=@Vg
+vb1 b1 0 dc=@vb
+vs1 s1 0 dc=@Vs  ac=1
+
+m2 d2 g2 s2 b2 @@mm_lv_nmos l=@l w=@w t=@T  **Cgd
+vd2 d2 0 dc=@vd  ac=1
+vg2 g2 0 dc=@Vg
+vb2 b2 0 dc=@vb
+vs2 s2 0 dc=@Vs
+
+m3 d3 g3 s3 b3 @@mm_lv_nmos l=@l w=@w t=@T  **Cds
+vd3 d3 0 dc=@vd
+vg3 g3 0 dc=@Vg
+vb3 b3 0 dc=@vb
+vs3 s3 0 dc=@Vs ac=1
+
+.ac oct 1 1e6 2e6
+.print ac II_Vg1=ii(vg1) II_Vg2=ii(vg2) II_Vd3=ii(vd3)
+.end
+
+
+</pre>
+
+
+Thanks!
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}

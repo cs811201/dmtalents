@@ -1,0 +1,138 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Mismatch Rule - Hspice - FinFET
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Mismatch Rule - FinFET - Hspice</h2>
+<h4>MQA Rules</h4>
+<hr>
+Previously we have introduced the
+<a href="/mqarules/misHspMos" target="_blank">Mismatch QA rule for
+    MOSFET</a>, please read it firstly for more background information about how to run a Monte Carlo simulation in MQA.
+<br/><br/>
+
+Then, this note here is going to introduce the revised version for FinFET devices where <font
+        style="color:red">NFIN</font> is in used instead of W.
+<br/><br/>
+
+
+Let's see the final output MQA graph, as follows, the X axis is now exampled as the equation: <em>1/sqrt(L*<font
+        style="color:red">NFIN</font>)</em>, and we can further customize this equation to include other instance parameters, such as HFIN, NF and M, etc., if you will.
+<br/>
+<img src="/static/mqarules/mismatch_hsp_mos_finfet/2.png" border="1px"/><br/>
+
+<em>Note: a common way to deal with FinFET is to get an effective W, so as to fall back to traditional modeling
+    approaches. <br/>Examples can be found as:<br/>
+    <ul>
+        <li><a href="/mbpst/chap3.10" target="_blank">MBP Script - Vth_con for FinFET</a></li>
+        <li>or, <a href="/mqarules/vth_finfet" target="_blank">Vth_con - MQA Rule for FinFET</a></li>
+
+
+    </ul>
+</em>
+<br/>
+
+We can download the <a href="/mqarules/mismatch_hsp_lib_finfet/download" target="_blank">example Hspice model
+    library </a> using BSIMCMG models for this demo, a snippet of the beginning of the model is shown below.
+
+<br/>
+<img src="/static/mqarules/mismatch_hsp_mos_finfet/4.png" border="1px"/><br/>
+<br/>
+Load it into MQA's Lib Explorer window, set it up as follows.
+<br/>
+<img src="/static/mqarules/mismatch_hsp_mos_finfet/1.png" border="1px"/><br/><br/>
+Please pay attention to:
+<ol>
+    <li>Enable the MonteCarlo checkbox, as circled in red in the above screenshot, give it a number, say 200 or even
+        higher to get better random
+        distribution,
+        the trade-off is simulation speed.
+    </li>
+    <li>Make sure the Model level is 72, as of BSIMCMG in HSpice.</li>
+
+</ol>
+<br/>
+Next, use the following example rule, which can be <a href="/mqarules/mismatch_hsp_mos_finfet/download" target="_blank">download
+    here</a> , note that all the Ws are replaced by NFINs.
+<br/>
+<em>Due to the netlist in the [benchmark] section is written in Hspice format, which limits the rule to be used with
+    Hspice only.</em>
+<pre>
+[common]
+appliedmodel = binning, global, macro
+<font style="color:blue">montecarlo=yes</font>
+
+[Group:MIS01:Title=Mismatch Model QA]
+
+[Label:MIS0101:title=Mismatch of dIdsat]
+[Condition:devtype=1]
+[Option:sweeptype=dc]
+[Loops
+: P1=Vgs
+: X=L(start=g_lmin,stop=g_lmax,num=3)
+: P=<font style="color:red">NFIN(1,2,4,8)</font>
+: P2=Vds(Vdd)
+: P3=Vbs(0)
+: P4=T(tnom)
+: P5=Vgg(Vgg)
+]
+[Target
+:Id1=i_vdprobe1
+:Id2=i_vdprobe2
+:dIdd=(Id1-Id2)/Id1
+]
+[Statistic:01:Mismatch:<mark>PrintStdDv</mark>(dIdd,"@YPercentScale=1", <font
+        style="color:red">"@X=1e-6/sqrt(L*NFIN)"</font> ):error:data error]
+
+[benchmark]
+
+.temp @T
+vgswp    ext   0 0
+ruseless ext   0 1.0
+vds1     dext1 0  @Vds
+vdprobe1 dext1 d1 0
+evgs1    g1    0  ext 0 1
+vbs1     b1    0  @Vbs
+@@xx_MN1 d1 g1 0 b1 @@mm_LV_NMOS l=@L <font style="color:red">NFIN=@NFIN</font>
+vds2     dext2 0  @Vds
+vdprobe2 dext2 d2 0
+evgs2    g2    0  ext 0 1
+vbs2    b2    0  @Vbs
+@@xx_MN2 d2 g2 0 b2 @@mm_LV_NMOS  l=@L <font style="color:red">NFIN=@NFIN</font>
+.dc vgswp POI 1 @Vgg
++ sweep monte=@MonteCarloNum
+.PROBE dc i_vdprobe1=i(vdprobe1)
+.PROBE dc i_vdprobe2=i(vdprobe2)
+.end
+
+</pre>
+
+<br/>
+Note, equally importantly, we need to use the <font style="color:red">"@X=1e-6/sqrt(L*NFIN)"</font> option in the
+<mark>PrintStdDv()</mark>
+function, otherwise MQA by default will try to look for W and we will get error running the Rule.
+
+<br/><br/>For more options about the
+<mark>PrintStdDv()</mark> function, please check out MQA's built-in user manual via menu "Help -> User Guide".
+As show below:<br/>
+<img src="/static/mqarules/mismatch_hsp_mos_finfet/5.png" border="1px"/><br/><br/>
+
+
+More, on the Pelgrom graph, MQA provides an option to have the fitting line go through the origin (0, 0), if preferred,  which can be found on the pop-up menu when we do a right-click on the Pelgrom graph, as show below:
+<br/>
+<img src="/static/mqarules/mismatch_hsp_mos_finfet/3.png" border="1px"/><br/><br/>
+
+
+<br/>
+
+
+<br>
+Thank you!
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
