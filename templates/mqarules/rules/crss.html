@@ -81,22 +81,22 @@ appliedmodel = global, binning, macro
 :yvg1=II_vg1
 :ygs=CalCurve(freq,yvg1,"yvg1","@freq~1e6")
 :Cgs=ygs/(2*3.14159*1e6)
-:y1=Cgs
+:y1=abs(Cgs)
 
 :yvg2=II_vg2
 :ygd=CalCurve(freq,yvg2,"yvg2","@freq~1e6")
 :Cgd=ygd/(2*3.14159*1e6)
 <mark>
-:Crss = Cgd
+:Crss = abs(Cgd)
 :ycrss=Crss
 
-:Ciss = Cgs+Cgd
+:Ciss = abs(Cgs)+abs(Cgd)
 :yciss = Ciss
 </mark>
 :yds3=II_vd3
 :yds=CalCurve(freq,yds3,"yds3","@freq~1e6")
 :Cds=yds/(2*3.14159*1e6)
-<mark>:Coss = Cds + Cgd
+<mark>:Coss = abs(Cds) + abs(Cgd)
 :ycoss = Coss</mark>
 ]
 [Check:011:Plot Crss, Ciss, Coss vs. Vds:SaveanydData(p5,p,ycrss,yciss,ycoss):error: no check]

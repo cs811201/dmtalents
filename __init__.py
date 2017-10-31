@@ -200,7 +200,7 @@ def index():
     faqCt = faqPost.__len__()
     g.__setattr__('dombp', True)
 
-    return render_template('index.html', num=getRandomIntFrom1toGiven(15), mbpstCt=mbpstCt, videoCt=videoCt,
+    return render_template('index.html', num=getRandomIntFrom1toGiven(16), mbpstCt=mbpstCt, videoCt=videoCt,
                            ruleCt=ruleCt, faqCt=faqCt, pyrfsCt=pyrfsCt)
 
 
