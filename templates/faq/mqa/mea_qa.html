@@ -1,0 +1,119 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>QA with Measurement - 1/4</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+This is part of <a href="/mqarules/meas_qa" target="_blank">a series of application
+    notes</a>, that talks about how to run MQA projects when measurement data is involved.
+<br/><br/>
+
+In this first chapter, we will see how to load measurement data files into MQA and plot them. <br/><br/>
+
+A few Keysight standard formatted <a href="/mqafaq/meas_example_data/download" target="_blank">.mdm data files of a
+    MOSFET are downloadable here</a>, with which we can follow the tutorial accordingly.
+<br/><br/>
+The data contains <em>Ids_Vds_Vgs</em>, <em>Ids_Vgs_Vbs</em> and
+<em>Ig_Vgs_Vds</em> data, the plots look like the following in MQA, with a few W/L sizes and different biases.
+<br/><img src="/static/faq/mqa/meas_qa/5.png" border="1px"><br/>
+
+<em>
+    Note:
+    <ul>
+        in MQA, by default, measurement data are drawn as symbols/dots as shown above, whereas simulation curves will
+        be displayed as solid lines which we will see in the next chapter.
+    </ul>
+
+</em>
+<br/>
+Please unzip the downloaded .zip file, the files are shown below, we can load all of them at once in MQA.
+<br/><img src="/static/faq/mqa/meas_qa/1.png" border="1px"><br/><br/>
+
+As we know, MQA projects are driven by MQA Rules, which means we need to prepare a Rule file for our measurement data, as every data file could contain different information, the Rule file needs to reflect the data’s info.  However, please don’t worry, MQA can generate Rule files based on input data file automatically.
+<br/><br/>
+Note: the auto-created Rule file serves well as a template/starting point, as we move onto next chapters, we will see how to modify the auto-created Rule to get more job done.
+<br/><br/>
+
+Here we go, in 2 steps:<br/><br/>
+
+Step 1, go for menu item “Measurement -> Measurement QA -> Data From File”, as shown below.
+
+<br/><img src="/static/faq/mqa/meas_qa/2.png" border="1px"><br/><br/>
+
+It opens the following window.<br/><br/>
+<ul>
+    (1) “Measurement QA 1 of 2”, use the Add button to pick up all the .mdm files, then click Next.
+    <br/><img src="/static/faq/mqa/meas_qa/3.png" border="1px"><br/><br/>
+    (2) “Measurement QA 2 of 2”, now MQA has done the analysis of the data, and gives us the 3 Checks, as highlighted in
+    red.<br/>
+    This also means the Rule file has been created, we can Ctrl+Click on the Rule to open the Rule Editor to see the
+    contents.<br/><br/>
+    (3) Keep all 3 Rules checkboxes selected, and click the “OK” button to run the Measurement QA.
+    <br/><img src="/static/faq/mqa/meas_qa/4.png" border="1px"><br/><br/>
+</ul>
+Step 2, once the Measurement QA is finished, we shall see a Log window, simply close it; and the result will be
+automatically loaded into MQA main GUI, as shown below, feel free to click on different Checks to view the graphs.
+<ul>
+    <img src="/static/faq/mqa/meas_qa/5.png" border="1px" width="600"><br/><br/>
+</ul>
+Now, to better understand how MQA deals with the measurement data, we need to take a look at the auto-created Rule file.
+
+<ul>
+    1. Click to highlight one of the check functions, such as “kink of ids”, then right-click, and do “Open the Rule”
+    from the pop-up menu.<br/>
+    <br/><img src="/static/faq/mqa/meas_qa/6.png" border="1px"><br/><br/>
+    2. This opens the Rule Editor window. On the very top, the title bar of the Editor window shows the Rule file’s
+    path.
+    The Rule is in regular MQA Rule format; however, with the following emphases. <br/>
+    <ul>
+        (1) Line 4, we must turn on “Measurement = yes” in the [common] section of a Rule.<br/>
+        (2) Line 14, in the [Option] section, we have to use “datablock=ids_vds_vgs_vbs”, where “ids_vds_vgs_vbs” is the
+        datablock name, which is specific to each measurement data and is determined by MQA’s own algorithm. So:<br/>
+        <ul>
+            a. We have to follow the steps explained by far to let MQA determine the “datablock” name for us.<br/>
+            b. MQA determines it by the content of a file, not by the file name.
+        </ul>
+        (3) Line 14, another option says “simulation = no”, it’s perfectly fine for now, but we will need to turn it on
+        when
+        we introduce model simulation in next chapters.<br/>
+        (4) Line 15 – 26, the Input and Output variables in the [Loops] and [Target] sections are picked up from the
+        measurement data, please don't change their names. And, by default, MQA will use the values from the
+        measurement, so no sweeps are defined for
+        all
+        the variables in [Loops]
+        <br/>
+        In case we have different device instance parameter names in the model, say the measurement contains "L" but the
+        model uses "Lr",
+        please <a href="/mqafaq/instNameMapping" target="_blank">refer to this FAQ</a> for how to do the name mapping.
+    </ul>
+    <br/><img src="/static/faq/mqa/meas_qa/7.png" border="1px"><br/><br/>
+    As we scroll down to another Rule, we see a different “datablock” name for “ig_vgs_vds” at Line 60.
+    <br/><img src="/static/faq/mqa/meas_qa/8.png" border="1px"><br/><br/>
+</ul>
+Here is the <a href="/mqafaq/mea_qa1/download" target="_blank">link to download this Rule file</a>. <br/>
+
+<br/>
+Now that we have the auto-created Rule, we can go ahead to:<br/>
+<ol>
+    <li>Try changing the descriptions to be more meaningful.</li>
+    <li>Try more check functions, such as CheckTrend, CheckCross, etc. Please refer to MQA user manual for more
+        details
+        about all the available check functions.
+    </li>
+    <li>Try using different variables as X- or Z-axis on the plot</li>
+    <li>Try integrating device model for Measurement – Simulation Accuracy check</li>
+    <li>Try calculating and plotting/checking device targets, such as Vth, Idsat, etc., which
+        will be demonstrated in next chapters.
+    </li>
+</ol>
+<br/>
+This concludes the first chapter of the <a href="/mqarules/meas_qa" target="_blank">QA with Measurement series using
+    MQA</a>.<br/><br/>
+
+Thank you!<br/>
+
+
+<br/><br/><br/><br/>
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "layouts/mf.html" %}
+{% block title%}
+ICCAP | Python
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Use Python to process S Parameter in ICCAP</h3>
+    <h5>by Feng Gu[Keysight] on Nov 22, 2017</h5>
+    <hr>
+    <div align="right">
+        <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">
+            <img src="/static/blog/Apply+for+a+free+trial.jpg"/></a><br/></div>
+
+    Previously we illustrated how to use Python to calculate Vth using constant current method, this blog will introduce
+    how to manipulate S/Y/Z Parameters using NumPy array to obtain Q(Quality Factor) and L(Inductance) for inductor
+    modeling as the example.
+<br/><br/>
+    As shown below, we will have L as the Y1, and Q as Y2 versus Frequency.
+    <br/><img src="/static/blog/iccap_python_Q_L/9.png"/><br/><br/>
+
+    As we know, NumPy is THE fundamental package for scientific computing with Python, which has powerful N-dimensional
+    array object that is very useful for S Parameter manipulation or data transformation. ICCAP has Numpy integrated in
+    by default.
+    <br/><br/>
+
+    We will start the demo with a built-in inductor model in ICCAP’s example folder, as follows:<br/>
+    <ul>
+        <i>
+            $ICCAPHOME\examples\demo_features\1_BASIC_MODELING_EXAMPLES\32_Spiral_Inductor_Mdlg\SPIRAL_EXTRACT_MASTER_demodata.mdl</i>
+    </ul>
+    <br/>
+    The following screenshot shows the model got loaded into ICCAP Main GUI.
+
+    <br/><img src="/static/blog/iccap_python_Q_L/1.png"/><br/><br/>
+    We could view the Inductor’s Circuit representation as follows.
+    <br/><img src="/static/blog/iccap_python_Q_L/2.png"/><br/><br/>
+    Next, in order to take use of the built-in utility functions, we need to load the PY_DEPOTS.mdl as well, as shown
+    below, this file is located at $ICCAPHOME\examples\demo_features.
+    <br/><img src="/static/blog/iccap_python_Q_L/3.png"/><br/><br/>
+
+    It will show up in the Main window as a separate model icon.
+
+    <br/><img src="/static/blog/iccap_python_Q_L/4.png"/><br/><br/>
+    When we open this PY_DEPOTS model file, helpful information is displayed in the Status window, which tells us what
+    utilities functions are available.
+    <br/><img src="/static/blog/iccap_python_Q_L/5.png"/><br/><br/>
+    Now we have all those utility functions ready to interactive with Numpy.<br/><br/>
+    Let’s create a New Transform in the example Inductor model, let’s call it “Q_L_Calc”.
+
+    <br/><img src="/static/blog/iccap_python_Q_L/6.png"/><br/><br/>
+
+    Here is the code for copy-past:
+    <pre>
+##  load numpy module
+import numpy as np
+##  convert data to numpy 2D array
+MeaSimType, npFreq = trans2numpy("freq")
+MeaSimType, npS = trans2numpy("S_deemb")
+##  keep simulation data only
+npFreq = np.vsplit(npFreq, 2)[1]
+npS = np.vsplit(npS, 2)[1]
+##  convert to Y then calculate L and Q
+npY = s2y(npS)
+freq = []
+L = []
+Q = []
+for i in range(len(npFreq)):
+    freq.append([np.real(npFreq[i][0])])
+    L.append([np.imag(1/npY[i][0])/2.0/np.pi/np.real(npFreq[i][0])])
+    Q.append([np.imag(1/npY[i][0])/np.real(1/npY[i][0])])
+
+##  convert to array type then generate tranform for plot
+freq = np.array(freq)
+L = np.array(L)
+Q = np.array(Q)
+numpy2trans('outL', 'S', L)
+numpy2trans('outQ', 'S', Q)
+numpy2trans('outfreq', 'S', freq)
+## iccap_func('./LQ_PLOT', "Display Plot")
+
+
+</pre>
+
+    For now, we comment out Line 26, and Execute this “Q_L_Calc” Python code, we will see
+    <mark>outL</mark>
+    ,
+    <mark>outQ</mark>
+    and
+    <mark>outfreq</mark>
+    get created.
+    <br/><img src="/static/blog/iccap_python_Q_L/7.png"/><br/><br/>
+    On line 16 and 17:
+    <ul>
+        <i>
+            L = IMAG(Z11)/2*PI*Freq<br/>
+            Q = IMAG(Z11)/REAL(Z11)
+        </i>
+    </ul>
+    <br/>
+    In this example, the length of npFreq is 101, namely there are 101 frequency points in the sweep, np.real(npFreq[i])
+    give us each Freq point. Correspondingly, we have 101 S or Y parameters; however, each S or Y parameter is a 2x2
+    array, so we need to use npY[i][0] to get each Y11, as follows:
+    <ul>
+        <i>
+            npY[i][0] is Y11<br/>
+            npY[i][1] is Y12<br/>
+            npY[i][2] is Y21<br/>
+            npY[i][3] is Y22
+        </i>
+    </ul>
+
+    And, on line 4 and 5 we have used trans2numpy() function to transform ICCAP data array to NumPy arrays, then used
+    numpy2trans() function on line 23 -25 to convert NumPy arrays back to ICCAP Transform data structure.<br/><br/>
+    One more thing, please switch to Plots tab and create a New Plot called LQ_Plot, as shown below, which uses the
+    <mark>outL</mark>
+    ,
+    <mark>outQ</mark>
+    and
+    <mark>outfreq</mark>
+    as Y1, Y2 and X axes variables respectively.
+
+
+    <br/><img src="/static/blog/iccap_python_Q_L/8.png"/><br/><br/>
+
+    Uncomment line 26 to display the plot:
+    <br/><img src="/static/blog/iccap_python_Q_L/9.png"/><br/><br/>
+    Now, we have Q and L for further modeling tasks.<br/><br/>
+
+    <hr/>
+
+
+    Please contact us to download the IC-CAP model and Python files used in this example.
+    Thank you!<br/><br/>
+    Interested in IC-CAP Software? - Click <a href="http://www.keysight.com/find/mytrial.iccap.blg" target="_blank">here
+    to apply for a FREE 30-Day Evaluation</a>.
+    <br/><br/>
+    <br/><br/>
+
+    <br/><br/><br/><br/>
+</div>
+
+{% endblock %}

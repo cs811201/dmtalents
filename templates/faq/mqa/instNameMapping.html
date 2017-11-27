@@ -1,0 +1,54 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Device Instance Name Mapping</h2>
+<h3>MQA FAQ</h3>
+<hr>
+Oh yeah, we now have subckt models everywhere. <br/><br/>
+
+With subckt models, one thing that could break the simulation in MQA, is the device instance parameter names used in the MQA Rules and what's used the model files. They could be
+<font style="color:red">DIFFERENT!</font>
+<br/><br/>
+<em>
+    Note: MQA Rules are often treated as template, and can be reused for different foundry models, different
+    technologies, etc.
+</em>
+<br/><br/>
+Luckily, MQA provides an easy way to accomplish the mapping, as shown below. When we set up a model in MQA Lib Explorer window, we have the “Instance Parameters” section, highlighted in red.
+<br/><br/>
+By default, it would say things like “L = L”, and “W = W”, as shown below.
+
+
+<br/><img src="/static/faq/mqa/instNameMapping/1.jpg" border="1px"><br/><br/>
+
+And, MQA Rules by default use "L" and "W", but in case our model says “Lr” and “Wr” or whatever names got used for L and W, we need to establish the mapping here, so that later on MQA knows how to create the netlist with the correct names.
+<br/><br/>
+We can simply double-click on the parameters in the list, it would open a small window, as follow, for us to input the correct names for (1) Rule and (2) Model.
+
+For example, let’s change the one for Model to “Wr”, then click OK button.
+
+<br/><img src="/static/faq/mqa/instNameMapping/2.jpg" border="1px"><br/><br/>
+
+The list should now say “W = Wr”, and do the same for other parameters as necessary.
+<br/><img src="/static/faq/mqa/instNameMapping/3.jpg" border="1px"><br/><br/>
+
+Now, we are good to proceed normally to finish the rest of the QA projects with the rule and model.<br/><br/>
+
+More, sometimes when measurement data is involved, the instance parameter names from the measurement file may also be different from what's in the model or the Rule, Please:
+<ol>
+    <li>Firstly line up the Rule and the measurement, this is a case where we have to modify the rule if the names are
+        different,
+        to make
+        sure the Rule uses the same name as from the measurement; or simply let MQA creates a Rule automatically based on
+        a set of measurement data. Please refer to <a href="/mqafaq/meas1" target="_blank">this Note</a> for more
+        details.
+    </li>
+
+    <li>Secondly, correct the mapping explained in this application note.</li>
+</ol>
+<br/><br/>
+Thank you!
+
+
+<br/><br/><br/><br/>
+{% endblock %}

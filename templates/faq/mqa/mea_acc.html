@@ -1,0 +1,85 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>QA with Measurement - 2/4</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+This is part of <a href="/mqarules/meas_qa" target="_blank">a series of application
+    notes</a>, that talks about how to run MQA projects when measurement data is involved.
+<br/><br/>
+
+In the second chapter, we will see how to do accuracy check between model simulation and measurement. <br/><br/>
+
+Here is the output when we use the .mdm files downloaded from the first chapter, we can see model simulation as solid lines on the plot together with the measurement dots. And, RMS/MAX are calculated for each graph.
+
+<br/><img src="/static/faq/mqa/meas_acc/9.png" border="1px"><br/><br/>
+
+Please follow the steps explained below to reproduce the results.<br/><br/>
+
+Step 1. Create the MQA Rule file.
+<br/>
+<ul>
+    (1) Make a copy of the auto-created Rule “meaqarxxxx.rule” and rename it to “accuracy_check.rule”.<br/>
+    <em>Note: the numbers on the auto-created Rule file name are randomly generated, we would see a different number
+        every
+        time MQA creates a Rule.</em><br/><br/>
+    (2) Make a copy of the auto-created rule index file “DataView_NMOS.index” and rename it to “rule.index”.
+
+    <br/><img src="/static/faq/mqa/meas_acc/0.png" border="1px"><br/><br/>
+    (3) Edit the “rule.index”, and put “file = accuracy_check.rule” on line 2, as shown below.
+    <br/><img src="/static/faq/mqa/meas_acc/1.png" border="1px"><br/><br/>
+
+    (4) Edit the “accuracy_check.rule”, turn on “simulation=yes” on line 14, 37 and 60, as shown below.
+    <br/><img src="/static/faq/mqa/meas_acc/4.png" border="1px">
+    <br/><img src="/static/faq/mqa/meas_acc/5.png" border="1px">
+    <br/><img src="/static/faq/mqa/meas_acc/6.png" border="1px"><br/>
+
+</ul>
+<br/>
+Step 2, create a new QA Project in MQA Lib Explorer.<br/>
+<ul>
+    (1) Begin with an example BSIM4 model, which can be <a href="/mqafaq/meas/bsim4_model/download" target="_blank">downloaded
+    here</a>, this model is in Hspice format.<br/>
+
+    (2) Assign the “rule.index” file we just edited, as circled in red below.<br/>
+    <img src="/static/faq/mqa/meas_acc/2.png" border="1px"><br/><br/>
+    (3) And, turn to the “Measurement and ET” tab, enable the “Use measurement” checkbox and use the “Add” button to
+    pick
+    up all the .mdm files we downloaded from chapter one. And click “OK” button to finish the “Create QA Project”
+    process.
+    <br/><img src="/static/faq/mqa/meas_acc/3.png" border="1px"><br/><br/>
+
+    (4) We shall see the newly created “accuracy_check” project in Lib Explorer window. <br/>
+    Make sure at least one of the rules checkboxes are selected, and click the green triangle “Play” button as noted
+    Circle 1 below, it will run this project.
+    <br/><img src="/static/faq/mqa/meas_acc/7.png" border="1px"><br/><br/>
+    (5) When the project finishes, we will see the results, as shown below, we now have RMS between the model simulation
+    and measurement data.
+    <br/>
+    <em>
+        Note:
+        <ul>
+
+            a. MQA gives color coded RMS numbers, the range settings “pass/warning/failed” of colors can be found via
+            menu
+            “Options -> RMS -> Absolute/Relative RMS -> Setting…”.<br/>
+            b. The “Error Plot” at the bottom left, can be turned on/off or edited via menu “Options -> RMS -> Error
+            Plot”.
+
+
+        </ul>
+    </em>
+    <br/><img src="/static/faq/mqa/meas_acc/8.png" border="1px" width="850"><br/>
+</ul>
+
+<br/>
+This concludes the second chapter of the  <a href="/mqarules/meas_qa" target="_blank">QA with Measurement series using
+    MQA</a>.<br/><br/>
+
+Thank you!<br/>
+
+
+<br/><br/><br/><br/>
+
+{% endblock %}

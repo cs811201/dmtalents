@@ -241,7 +241,7 @@ def logout():
 
 
 @app.route('/mbpst')
-@login_required
+# @login_required
 def mbpst():
     recordPostHistory('/mbpst')
     return render_template('mbpst/Chap1/WhatIsMBPScript.html')
@@ -438,6 +438,15 @@ route_blog_iccap_ext_simulators = '/blog/iccap_ext_simulators'
 def blog_iccap_ext_simulators():
     recordPostHistory(route_blog_iccap_ext_simulators)
     return render_template('blog/post/iccap_ext_simulators.html')
+
+
+route_blog_iccap_python_q_l = '/blog/iccap_python_s_par'
+
+
+@app.route(route_blog_iccap_python_q_l)
+def blog_iccap_python_s_par():
+    recordPostHistory(route_blog_iccap_python_q_l)
+    return render_template('blog/post/iccap_python_Q_L.html')
 
 
 # MQA rules
@@ -1350,6 +1359,77 @@ def mqafaq_TightLoopWithMeasData():
     return render_template('/faq/mqa/TightLoopWithMeasData.html')
 
 
+route_mqafaq_instNameMapping = '/mqafaq/instNameMapping'
+
+
+@app.route(route_mqafaq_instNameMapping)
+@login_required
+def mqafaq_instNameMapping():
+    recordPostHistory(route_mqafaq_instNameMapping)
+    return render_template('/faq/mqa/instNameMapping.html')
+
+
+route_mqafaq_meas1 = '/mqafaq/meas1'
+
+
+@app.route(route_mqafaq_meas1)
+@login_required
+def mqafaq_meas1():
+    recordPostHistory(route_mqafaq_meas1)
+    return render_template('/faq/mqa/mea_qa.html')
+
+
+route_mqafaq_meas2 = '/mqafaq/meas2'
+
+
+@app.route(route_mqafaq_meas2)
+@login_required
+def mqafaq_meas2():
+    recordPostHistory(route_mqafaq_meas2)
+    return render_template('/faq/mqa/mea_acc.html')
+
+
+route_mqafaq_meas3 = '/mqafaq/meas3'
+
+
+@app.route(route_mqafaq_meas3)
+@login_required
+def mqafaq_meas3():
+    recordPostHistory(route_mqafaq_meas3)
+    return render_template('/faq/mqa/mea_idsat.html')
+
+
+route_mqafaq_meas4 = '/mqafaq/meas4'
+
+
+@app.route(route_mqafaq_meas4)
+@login_required
+def mqafaq_meas4():
+    recordPostHistory(route_mqafaq_meas4)
+    return render_template('/faq/mqa/mea_vth.html')
+
+
+route_mqafaq_meas_misc1 = '/mqafaq/meas_misc1'
+
+
+@app.route(route_mqafaq_meas_misc1)
+@login_required
+def mqafaq_meas_misc1():
+    recordPostHistory(route_mqafaq_meas_misc1)
+    return render_template('/faq/mqa/datablock.html')
+
+
+route_download_bsim4_model_meas = '/mqafaq/meas/bsim4_model/download'
+
+
+@app.route(route_download_bsim4_model_meas)
+@login_required
+def download_bsim4_model_meas():
+    recordPostHistory(route_download_bsim4_model_meas)
+    return send_file('static/faq/mqa/meas_acc/bsim4_model.l',
+                     attachment_filename='bsim4_model.l', mimetype='text/rule', as_attachment=True)
+
+
 #### ICCAP FAQ ######
 
 route_iccapfaq_saveInstToMDM = '/iccapfaq/saveInstToMDM'
@@ -1605,6 +1685,16 @@ route_mqarules_crss = '/mqarules/crss_ciss_coss'
 def mqarule_crss():
     recordPostHistory(route_mqarules_crss)
     return render_template('/mqarules/rules/crss.html')
+
+
+route_mqarules_meas = '/mqarules/meas_qa'
+
+
+@app.route(route_mqarules_meas)
+@login_required
+def mqarule_meas():
+    recordPostHistory(route_mqarules_meas)
+    return render_template('/mqarules/rules/meas_qa.html')
 
 
 #### Video Demos
@@ -2572,6 +2662,7 @@ def download_Mismatch_hsp_mos_rule():
     return send_file('static/mqarules/mismatch_hsp_mos/Mismatch_hsp_mos.rule',
                      attachment_filename='Mismatch_hsp_mos.rule', mimetype='text/rule', as_attachment=True)
 
+
 route_download_mismatch_hsp_mos_finfet_rule = '/mqarules/mismatch_hsp_mos_finfet/download'
 
 
@@ -2582,6 +2673,7 @@ def download_Mismatch_hsp_mos_finfet_rule():
     return send_file('static/mqarules/mismatch_hsp_mos_finfet/Mismatch_hsp_mos_finfet.rule',
                      attachment_filename='Mismatch_hsp_mos_finfet.rule', mimetype='text/rule', as_attachment=True)
 
+
 route_download_mismatch_hsp_model_lib = '/mqarules/mismatch_hsp_lib_finfet/download'
 
 
@@ -2591,7 +2683,6 @@ def download_Mismatch_hsp_mos_finfet_lib():
     recordPostHistory(route_download_mismatch_hsp_model_lib)
     return send_file('static/mqarules/mismatch_hsp_mos_finfet/AcceliconMis.lib',
                      attachment_filename='AcceliconMis.lib', mimetype='text/lib', as_attachment=True)
-
 
 
 route_download_mismatch_spe_mos_rule = '/mqarules/mismatch_spe_mos/download'
@@ -2625,6 +2716,17 @@ def download_noise_spe_example():
     recordPostHistory(route_download_noise_spe_example)
     return send_file('static/mqarules/fn_spe_finfet/noise_example.rule',
                      attachment_filename='noise_example.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_mea_qa_rule = '/mqafaq/mea_qa1/download'
+
+
+@app.route(route_download_mea_qa_rule)
+@login_required
+def download_meas_qa_rule():
+    recordPostHistory(route_download_mea_qa_rule)
+    return send_file('static/faq/mqa/meas_qa/meas_qa.rule', attachment_filename='meas_qa.rule', mimetype='text/rule',
+                     as_attachment=True)
 
 
 route_download_bsimcmg_model = '/mqarules/bsimcmg_model/download'
@@ -3143,6 +3245,17 @@ def download_mbpfaq_idvdvg_site12():
     recordPostHistory(route_download_mbpfaq_idvdvg_site12)
     return send_file('static/faq/mbp/site_die/idvdvg_site12.mdm',
                      attachment_filename='idvdvg_site12.mdm', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mqafab_mea_data_zip = '/mqafaq/meas_example_data/download'
+
+
+@login_required
+@app.route(route_download_mqafab_mea_data_zip)
+def download_mqafaq_mea_data():
+    recordPostHistory(route_download_mqafab_mea_data_zip)
+    return send_file('static/faq/mqa/meas_qa/example_mdm_data_files.zip',
+                     attachment_filename='example_mdm_data_files.zip', mimetype='application/zip', as_attachment=True)
 
 
 ### Upload a file

@@ -1,0 +1,48 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+QA with Measurement
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>QA with Measurement </h2>
+<hr>
+
+
+“Silicon, King of electronics”.  After all, model simulation should match measurement data.<br/><br/>
+
+Here, we put together a series of application notes, to talk about how to write MQA Rules when measurement data is involved, starting from simple measurement data plotting and QA, to model simulation and measurement accuracy check, further to obtain and verify device targets, such as Vth and Idsat, etc., from the original measurement.
+
+<br/><br/>
+As follows:
+<br/>
+<ol>
+    <li><a href="/mqafaq/meas1" target="_blank">Measurement QA - Plot and Validate Measurement data only (without model
+        simulation)</a></li>
+    <li><a href="/mqafaq/meas2" target="_blank">Accuracy Check - RMS: Model Simulation vs. Measurement</a></li>
+    <li><a href="/mqafaq/meas3" target="_blank">Extract Device Targets from Measurement 1 - Idsat</a></li>
+    <li><a href="/mqafaq/meas4" target="_blank">Extract Device Targets from Measurement 2 - Vth</a></li>
+
+    <hr/>
+
+    <a href="/mqafaq/meas_misc1" target="_blank">QA with Measurement - Misc 1 - How to fetch measurement info from
+        command line</a>
+
+</ol>
+
+An example output is shown here; however, please check more details from the above links.
+<br/><img src="/static/faq/mqa/meas_acc/8.png" border="1px" width="800"><br/>
+
+
+<br/>
+<br/>
+Thanks!
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}

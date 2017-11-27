@@ -1,0 +1,55 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>QA with Measurement - 4/4</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+This is part of <a href="/mqarules/meas_qa" target="_blank">a series of application
+    notes</a>, that talks about how to run MQA projects when measurement data is involved.
+<br/><br/>
+
+In the fourth chapter, we will talk about how to extract Vth from the measurement data, as well as comparing the simulated Vth from model.
+<br/><br/>
+As shown below. <br/>
+
+<img src="/static/faq/mqa/meas_vth/0.png" border="1px"><br/><br/>
+Because Vth is usually obtained from Ids_Vgs_Vbs curves, let’s start with editing the “Check ids_vgs_vbs_vds” rule, use the “Open the Rule” from the pop-up menu, as explained in the previous chapter.
+<br/>
+<img src="/static/faq/mqa/meas_vth/1.png" border="1px"><br/><br/>
+
+
+Add line 52 – 55 in the [Target] section, and correspondingly line 59 and 60 to the end of the Rule, the
+<mark>CompPlot()</mark> functions will enable us to get the model simulation and measurement comparison.<br/>
+
+
+<img src="/static/faq/mqa/meas_vth/2.png" border="1px"><br/><br/>
+
+The key function used here to obtain Vth is CalPage(), on line 52 and 53, we can find its detailed explanation in MQA’s user manual. Note that because we have different Vds bias conditions from the measurement data, we could actually get both Vtlin and Vtsat at the same time, in this case.
+<br/><br/>
+
+Save the Rule file, “Rerun” the highlighted Rule, as shown below.<br/>
+
+<img src="/static/faq/mqa/meas_vth/3.png" border="1px"><br/><br/>
+
+When the project finishes, we will have two new entries in the project result tree.<br/>
+(1)    Vtlin vs W @ L<br/>
+
+
+<img src="/static/faq/mqa/meas_vth/4.png" border="1px"><br/><br/>
+(2)    Vtsat vs W @ L<br/>
+<img src="/static/faq/mqa/meas_vth/5.png" border="1px"><br/><br/>
+
+
+Now that we know we could apply all kinds of functions in MQA rule, using variables/conditions from measurement as input, we can go ahead to get more device targets of interest, and plot/validate them.
+
+<br/><br/>
+This concludes the fourth chapter of the  <a href="/mqarules/meas_qa" target="_blank">QA with Measurement series using
+    MQA</a>.<br/><br/>
+
+Thank you!<br/>
+
+
+<br/><br/><br/><br/>
+
+{% endblock %}

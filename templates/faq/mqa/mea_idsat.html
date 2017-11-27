@@ -1,0 +1,70 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>QA with Measurement - 3/4</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+This is part of <a href="/mqarules/meas_qa" target="_blank">a series of application
+    notes</a>, that talks about how to run MQA projects when measurement data is involved.
+<br/><br/>
+
+In the third chapter, we will talk about how to extract device target from the measurement data, using Idsat as an example, as well as comparing the simulated Idsat from model.
+<br/><br/>
+As shown below, in the end, we will get the Idsat from the Ids_Vds_Vgs curves, extracted from both measurement and model simulation.
+
+<br/><img src="/static/faq/mqa/meas_idsat/4.png" border="1px"><br/><br/>
+
+Step 1, modify the “accuracy_check.rule” file.<br/>
+<ul>
+    (1) Right click on the “Check ids_vds_vgs_vbs” node, and do “Open the Rule” from the pop-up menu. This is a
+    short-cut to open a Rule in MQA’s built-in Rule Editor widnow.<br/>
+    <img src="/static/faq/mqa/meas_idsat/0.png" border="1px"><br/><br/>
+
+    (2) Add line 26 and 27, as highlighted below.<br/>
+    Here we use the
+    <mark>DataAt2D()</mark>
+    function to obtain Idsat, which is usually defined as the Drain current at Vds=Vdd and Vgs=Vgg.<br/>
+
+    <img src="/static/faq/mqa/meas_idsat/1.png" border="1px"><br/><br/>
+
+    And, append line 31, which can be copied from line 30, and then change the ID to 12, and Y-axis to Idsat, etc.
+    Because we add this
+    <mark>CompPlot()</mark>
+    function on line 31, we will get model simulation and measurement comparison.
+    <br/><br/>
+
+    We can find the detailed explanation of the
+    <mark>DataAt2D()</mark>
+    function in MQA’s user manual, as shown below. We can tell that on line 26, we have specified Vds=1.2 and Vgs=max,
+    the max will
+    be determined from measurement. <br/>
+    <img src="/static/faq/mqa/meas_idsat/5.png" border="1px"><br/><br/>
+
+</ul>
+<br/>
+Step 2, Rerun this rule.
+<ul>
+    We have the “Rerun” shortcut on the pop-up menu, too. It would only rerun the highlighted/selected Rule, but not all
+    the project. As shown below. Once the Rerun is finished, MQA will refresh the GUI/plots in a couple of seconds.
+    <br/>
+    <img src="/static/faq/mqa/meas_idsat/2.png" border="1px"><br/><br/>
+
+
+    Now, we shall have the newly introduced “Comp Idsat vs W @ L” plots, the RMS between model simulation and
+    measurement is auto calculated.<br/>
+    <img src="/static/faq/mqa/meas_idsat/3.png" border="1px" width="800"><br/><br/>
+
+</ul>
+
+
+<br/>
+This concludes the third chapter of the  <a href="/mqarules/meas_qa" target="_blank">QA with Measurement series using
+    MQA</a>.<br/><br/>
+
+Thank you!<br/>
+
+
+<br/><br/><br/><br/>
+
+{% endblock %}
