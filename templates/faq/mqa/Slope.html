@@ -1,0 +1,70 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Get the Slope from a Curve</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+We have previously demonstrated how to do it in <a href="/mbpfaq/linefit" target="_blank">MBP’s
+    Script</a> , as shown below. In this application note, we will demonstrate how to get a Slope from a curve in MQA’s Rule, so that we could achieve the same in MQA.
+
+<br/><img src="/static/faq/mbp/linefit/2.png"><br/><br/>
+
+It is to be done with one of MQA’s Built-in functions called
+<mark>CalCurve</mark>, and use it’s “Slope” keyword.<br/><br/>
+
+<em>
+    FYI,
+    <mark>CalCurve</mark>
+    is a general function to calculate something from a X-Y curve, by using different keywords which work
+    as selectors, one could switch to different algorithms and get different output. Some examples of the keywords are
+    like “MinY”, “MaxY”, “FindX”, “FindY”, and “Slope”, etc. For more keywords, please refer to MQA’s user manual.
+</em>
+
+<br/><br/>
+For example, in MQA Rule’s [Target] section, we could have the following statement:
+<ul>
+    :Slope = CalCurve(X, Y, "Slope")
+</ul>
+This function will now get the slope of the given X-Y curve using Least Square method.
+
+
+<br/><br/>
+
+Here is the example Rule for copy-paste:
+<pre>
+appliedmodel = binning,global,macro
+
+[Group:5: Title=Slope Example]
+
+[Label:5001:title=Check Slope of Ids vs. Vgs at Subthreshold]
+[Condition: 1]
+[loops
+: x=Vgs(start=0.1,stop=0.4, number=11)
+: p=Vbs(0)
+: p2=Vds(vd_lin)
+: p3=L(start=g_lmin,stop=g_lmax,num=11)
+: p4=W(g_wmax)
+: p5=T(tnom)
+]
+[Target
+:Ids= Ids
+:y0=ln(Ids)
+:Slope = CalCurve(Vgs,y0,"Slope")
+:y=Slope]
+[Check:  01:Ids vs. Vgs :Save2DData(p,x,Ids) : error: Display Ids_Vgs]
+[Check:  02:Log(Ids) vs. Vgs :Save2DData(p,x,y0) : error: Display Ids_Vgs]
+[Check:  03:SubVt Slope vs. L :Save2DData(p,p3,y) : error: Display the SubVt Slope]
+[Compare:12:Compare SubVt Slope : CompPlot(p,p3,y): error: TBD]
+
+
+</pre>
+
+The example output of subVt Slope vs. L is shown below, the numbers agree well with the output from MBP Script.
+<br/><img src="/static/faq/mqa/slope/slope.png" border="1px"><br/><br/>
+
+Thank you!
+<br/><br/><br/><br/>
+
+
+{% endblock %}

@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/datablock.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/instNameMapping.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/mea_acc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/mea_idsat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/mea_qa.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/mea_vth.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/mqarules/rules/meas_qa.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mqa/slope/slope.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/Slope.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/about.html" afterPath="$PROJECT_DIR$/templates/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blog/blog_index.html" afterPath="$PROJECT_DIR$/templates/blog/blog_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/base.html" afterPath="$PROJECT_DIR$/templates/layouts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mbpst/Chap1/WhatIsMBPScript.html" afterPath="$PROJECT_DIR$/templates/mbpst/Chap1/WhatIsMBPScript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules/mqarules_index.html" afterPath="$PROJECT_DIR$/templates/mqarules/mqarules_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mqarules/toc.html" afterPath="$PROJECT_DIR$/templates/mqarules/toc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/updateHisCore.html" afterPath="$PROJECT_DIR$/templates/updateHisCore.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +27,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="433" column="12" lean-forward="false" selection-start-line="433" selection-start-column="12" selection-end-line="433" selection-end-column="12" />
+            <state relative-caret-position="555">
+              <caret line="1118" column="1" lean-forward="false" selection-start-line="1118" selection-start-column="1" selection-end-line="1118" selection-end-column="1" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -52,8 +39,8 @@
       <file leaf-file-name="updateHisCore.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="115" lean-forward="false" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="115" />
+            <state relative-caret-position="238">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -69,11 +56,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iccap_python_Q_L.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="iccap_python_Q_L.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="118" column="21" lean-forward="true" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
+            <state relative-caret-position="358">
+              <caret line="113" column="71" lean-forward="false" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Slope.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/faq/mqa/Slope.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linefit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/faq/mbp/linefit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>route_mbpfaq_wleff</find>
       <find>script_import_export</find>
       <find>iccapfaq</find>
       <find>./_img</find>
@@ -120,8 +126,9 @@
       <find>qa1</find>
       <find>meas4</find>
       <find>bsim4</find>
-      <find>mqafaq</find>
       <find>blog</find>
+      <find>mqafaq</find>
+      <find>linefit</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/static/mbpst</replace>
@@ -153,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/js/bootstrap.js" />
         <option value="$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py" />
         <option value="$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html" />
         <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
@@ -200,16 +206,17 @@
         <option value="$PROJECT_DIR$/templates/faq/mqa/mea_vth.html" />
         <option value="$PROJECT_DIR$/templates/mqarules/rules/meas_qa.html" />
         <option value="$PROJECT_DIR$/templates/faq/mqa/datablock.html" />
-        <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
         <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
         <option value="$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html" />
+        <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/templates/faq/mqa/Slope.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="311" />
-    <option name="y" value="161" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="274" />
+    <option name="y" value="138" />
     <option name="width" value="1477" />
     <option name="height" value="1160" />
   </component>
@@ -231,8 +238,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,7 +256,14 @@
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="faq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="faq" type="462c0819:PsiDirectoryNode" />
+              <item name="mqa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
@@ -260,14 +274,21 @@
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="faq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
+              <item name="faq" type="462c0819:PsiDirectoryNode" />
+              <item name="mbp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="faq" type="462c0819:PsiDirectoryNode" />
+              <item name="mqa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
@@ -302,19 +323,19 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\dmtalents\static\faq\mqa\slope" />
+      <recent name="D:\projects\dmtalents\templates\faq\mqa" />
+      <recent name="D:\projects\dmtalents\templates\blog\post" />
+      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
+      <recent name="D:\projects\dmtalents\static\mqarules\crss" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\dmtalents\static\mqarules\misR" />
       <recent name="D:\projects\dmtalents\static\mbpst\scriptZip" />
       <recent name="D:\projects\dmtalents\templates\faq" />
       <recent name="D:\projects\dmtalents\static\faq\mqa\CheckNetlist" />
       <recent name="D:\projects\dmtalents\static\faq\mqa\compareMode" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\dmtalents\templates\blog\post" />
-      <recent name="D:\projects\dmtalents\templates\faq\mqa" />
-      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
-      <recent name="D:\projects\dmtalents\static\mqarules\crss" />
-      <recent name="D:\projects\dmtalents\static\mqarules\cxy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -560,13 +581,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484335625596</updated>
-    </task>
-    <task id="LOCAL-00003" summary="1/24/2017">
-      <created>1485280432873</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1485280432873</updated>
     </task>
     <task id="LOCAL-00004" summary="1/24/2017">
       <created>1485472921127</created>
@@ -904,7 +918,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509491381791</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="add iccap python s parameter , Q and L">
+      <created>1511823897284</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1511823897285</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -917,13 +938,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="311" y="161" width="1477" height="1160" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2117149" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19660679" sideWeight="0.5086906" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14228855" sideWeight="0.49130937" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14201763" sideWeight="0.49130937" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30734465" sideWeight="0.49689442" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.123046875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -988,7 +1009,8 @@
     <MESSAGE value="add link ICCAP to hspice and spectre" />
     <MESSAGE value="add link ICCAP to pspice, spice2/3/hpsice" />
     <MESSAGE value="add link mqa rule, cgs cgd continueity across zero vds" />
-    <option name="LAST_COMMIT_MESSAGE" value="add link mqa rule, cgs cgd continueity across zero vds" />
+    <MESSAGE value="add iccap python s parameter , Q and L" />
+    <option name="LAST_COMMIT_MESSAGE" value="add iccap python s parameter , Q and L" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1004,20 +1026,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/edit_post_entry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/viewerListFor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pageViewHis.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1288,7 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="54" column="14" lean-forward="false" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="65" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1304,7 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="51" column="0" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="51" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1312,7 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,15 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="115" lean-forward="false" selection-start-line="3" selection-start-column="115" selection-end-line="3" selection-end-column="115" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,20 +1335,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="113" column="71" lean-forward="false" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/faq/mbp/linefit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="433" column="12" lean-forward="false" selection-start-line="433" selection-start-column="12" selection-end-line="433" selection-end-column="12" />
+        <state relative-caret-position="555">
+          <caret line="1118" column="1" lean-forward="false" selection-start-line="1118" selection-start-column="1" selection-end-line="1118" selection-end-column="1" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html">
+    <entry file="file://$PROJECT_DIR$/templates/faq/mqa/Slope.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="118" column="21" lean-forward="true" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
+        <state relative-caret-position="952">
+          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
           <folding />
         </state>
       </provider>

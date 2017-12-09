@@ -1418,6 +1418,16 @@ def mqafaq_meas_misc1():
     recordPostHistory(route_mqafaq_meas_misc1)
     return render_template('/faq/mqa/datablock.html')
 
+route_mqafaq_slope = '/mqafaq/slope'
+
+
+@app.route(route_mqafaq_slope)
+@login_required
+def mqafaq_slope1():
+    recordPostHistory(route_mqafaq_slope)
+    return render_template('/faq/mqa/slope.html')
+
+
 
 route_download_bsim4_model_meas = '/mqafaq/meas/bsim4_model/download'
 
