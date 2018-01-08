@@ -1246,7 +1246,20 @@ def mbpfaq_meascond():
     return render_template('/faq/mbp/meascond.html')
 
 
+
+
+route_mbpfaq_java_options = '/mbpfaq/javaoptions'
+
+
+@app.route(route_mbpfaq_java_options)
+@login_required
+def mbpfaq_javaoptions():
+    recordPostHistory(route_mbpfaq_java_options)
+    return render_template('/faq/mbp/javaoptions.html')
+
+
 route_mbpfaq_site_die = '/mbpfaq/site_die'
+
 
 
 @app.route(route_mbpfaq_site_die)

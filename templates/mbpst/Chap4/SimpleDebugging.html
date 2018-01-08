@@ -1,33 +1,33 @@
 {% extends "mbpst/mbpst_index.html" %}
 {% block mbpstmain %}
 
-	<h2>Simple Debugging</h2>
-	<hr>
-	Here are some simple and useful ways to debug Data(be it IMV or DP), Plots and script programs in
-	MBP Script window.
-	<ol>
-		<li><a href="#print">Print out a variable.</a></li>
-		<li><a href="#table">Constantly show Data Table when creating an IMV or DP Target.</a></li>
-		<li><a href="#plot">For IMV or DP Plots, constantly preview it during creation.</a></li>
-		<li><a href="#slow">Slow or frozen MBP caused by exceeded IMV settings</a></li>
+<h2>Simple Debugging</h2>
+<hr>
+Here are some simple and useful ways to debug Data(be it IMV or DP), Plots and script programs in
+MBP Script window.
+<ol>
+    <li><a href="#print">Print out a variable.</a></li>
+    <li><a href="#table">Constantly show Data Table when creating an IMV or DP Target.</a></li>
+    <li><a href="#plot">For IMV or DP Plots, constantly preview it during creation.</a></li>
+    <li><a href="#slow">Slow or frozen MBP caused by exceeded IMV settings</a></li>
 
-	</ol>
-	<div style="width: 75%">
-		<h3>
-			<a name="print">Print out a variable</a>
-		</h3>
-		<hr>
-	</div>
-	We can directly use the Java built-in
-	<b>System.out.println("something:"+var);</b> function to print out a variable or variables in code.
-	For example, we see the example code from Chap3.12, where we print out a Vth value on line 15.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/1.png" border="1px">
-	<br> and the printed result is to be shown in MBP's Message window, as shown below:
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/2.png" border="1px">
+</ol>
+<div style="width: 75%">
+    <h3>
+        <a name="print">Print out a variable</a>
+    </h3>
+    <hr>
+</div>
+We can directly use the Java built-in
+<b>System.out.println("something:"+var);</b> function to print out a variable or variables in code.
+For example, we see the example code from Chap3.12, where we print out a Vth value on line 15.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/1.png" border="1px">
+<br> and the printed result is to be shown in MBP's Message window, as shown below:
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/2.png" border="1px">
 
-	<pre class="code">
+<pre class="code">
 String condition="select(w=max(w)).select(l=max(l)).select(vds=min(vds))";
 //get IV plots for W/L = 10/10 device, by condition.
 def pg = cmd.getPageGroup("ids_vgs_vbs");
@@ -40,93 +40,99 @@ System.out.println("Value of K1="+MBP.getParam("K1").getValue());
 
 </pre>
 
-	Also, watch out for the Error messages at the bottom of the Script Window, the editor will detect
-	syntax errors when we are typing, and there will also be red underlines in the code highlighting
-	where went wrong. MBP Script won't run until we fix all the errors.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/4.png" border="1px">
+Also, watch out for the Error messages at the bottom of the Script Window, the editor will detect
+syntax errors when we are typing, and there will also be red underlines in the code highlighting
+where went wrong. MBP Script won't run until we fix all the errors.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/4.png" border="1px">
 
-	<div style="width: 75%">
-		<h3>
-			<a name="table">Show Data Table</a>
-		</h3>
-		<hr>
-	</div>
-	When creating or verifying an IMV or DP target, it's recommended to constantly
-	<b>Show Data Table</b> to verify whether the Data contains the right data.
-	<br>
-	<br> Right click on a target and do
-	<b>Show Data Table</b> will open the Table, if a target is defined correctly, we should see the
-	expected columns and correct Target value. No matter this target is created via New -> IMV, or New
-	-> Data. For example, in Chap3.9, we created a Idsat normalized to max SA/SB target.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/3.png" border="1px">
-	<br> The correct definition will bring us the correct result. If we couldn't see the correct
-	Idsat_normMaxSAB, say if you see empty, usually it means something wrong with either the expression
-	or condition(restrictions). Sometimes, we couldn't even pop up the Table window, that indicates
-	definition error, too. Constantly review the Data Table after making changes.
-	<br>
-	<br> When create an IMV target by script, meaning via New -> Data, a good trick is to
-	<b>return</b> the DATA variable at key steps, we can employ
-	<b>return</b> as often as we like, then the
-	<b>Show Data Table</b> would always display the first encountered
-	<b>return</b> statement. As shown below, we added
-	<b>return</b> statements on line 2, 4, 6 and 8.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/7.png" border="1px">
-	<br> Now, when we do
-	<b>Show Data Table</b>, the line 2
-	<b>return</b> gives us the following table, which is the original Idsat table.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/6.png" border="1px">
-	<br> Below is the table we got if we comment out line 2, and return at line 4, we indeed just
-	get Idsat with max SA and SB. See? this gives us confidence step by step, and also helps to debug
-	at which step something may have gone wrong.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/8.png" border="1px">
-	<br> At last, we comment out all the
-	<b>return</b> statements before the final one.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/9.png" border="1px">
-	<br>
+<div style="width: 75%">
+    <h3>
+        <a name="table">Show Data Table</a>
+    </h3>
+    <hr>
+</div>
+When creating or verifying an IMV or DP target, it's recommended to constantly
+<b>Show Data Table</b> to verify whether the Data contains the right data.
+<br>
+<br> Right click on a target and do
+<b>Show Data Table</b> will open the Table, if a target is defined correctly, we should see the
+expected columns and correct Target value. No matter this target is created via New -> IMV, or New
+-> Data. For example, in Chap3.9, we created a Idsat normalized to max SA/SB target.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/3.png" border="1px">
+<br> The correct definition will bring us the correct result. If we couldn't see the correct
+Idsat_normMaxSAB, say if you see empty, usually it means something wrong with either the expression
+or condition(restrictions). Sometimes, we couldn't even pop up the Table window, that indicates
+definition error, too. Constantly review the Data Table after making changes.
+<br>
+<br> When create an IMV target by script, meaning via New -> Data, a good trick is to
+<b>return</b> the DATA variable at key steps, we can employ
+<b>return</b> as often as we like, then the
+<b>Show Data Table</b> would always display the first encountered
+<b>return</b> statement. As shown below, we added
+<b>return</b> statements on line 2, 4, 6 and 8.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/7.png" border="1px">
+<br> Now, when we do
+<b>Show Data Table</b>, the line 2
+<b>return</b> gives us the following table, which is the original Idsat table.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/6.png" border="1px">
+<br> Below is the table we got if we comment out line 2, and return at line 4, we indeed just
+get Idsat with max SA and SB. See? this gives us confidence step by step, and also helps to debug
+at which step something may have gone wrong.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/8.png" border="1px">
+<br> At last, we comment out all the
+<b>return</b> statements before the final one.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/9.png" border="1px">
+<br>
 
-	<div style="width: 75%">
-		<h3>
-			<a name="plot">Preview Plots</a>
-		</h3>
-		<hr>
-	</div>
-	When creating IMV or DP plots, we have to make sure the associated Target is well defined firstly,
-	by the above
-	<b>Show Data Table</b>. Once we got a good Data Table, we then go ahead to create plots/graphs
-	under it.
-	<br> If we couldn't see the plots(empty window, wrong Axis, etc), something was wrong.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/5.png" border="1px">
-	<br>
-	<br> Make sure we can preview correct plots here(then Save) before going back to MBP main
-	window for modeling work.
-	<br>
-	<div style="width: 75%">
-		<h3>
-			<a name="slow">Slow or Frozen</a>
-		</h3>
-		<hr>
-	</div>
-	Because MBP would process all the IMV targets definition/setting when loading data and model, it
-	could become significantly slow sometimes when the we put too many IMV targets in one project. By
-	increasing MBP's startup Java&trade; memory could solve the issue to some extend; however, it's
-	also recommended to keep the IMV settings light in one project, by moving IMVs we don't need to
-	other packages. And we see obvious speed-up by doing so.
-	<br>
-	<br> Here is how we can increase MBP's startup Java&trade; memory, we need to edit the file
-	<b>$MBPHOME/mbp</b>, as shown below, change the number after the
-	<b>-Xmx</b> option, it could be 512M initially, we've seen people tune it up to 1024M or 2048M if
-	our server's memory allows. Then, save the file and restart MBP.
-	<br>
-	<img src="/static/mbpst/Chap4/images/4.1/10.png" border="1px">
-	<br>
-	<br>
-	<br>
-	<br>
+<div style="width: 75%">
+    <h3>
+        <a name="plot">Preview Plots</a>
+    </h3>
+    <hr>
+</div>
+When creating IMV or DP plots, we have to make sure the associated Target is well defined firstly,
+by the above
+<b>Show Data Table</b>. Once we got a good Data Table, we then go ahead to create plots/graphs
+under it.
+<br> If we couldn't see the plots(empty window, wrong Axis, etc), something was wrong.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/5.png" border="1px">
+<br>
+<br> Make sure we can preview correct plots here(then Save) before going back to MBP main
+window for modeling work.
+<br>
+<div style="width: 75%">
+    <h3>
+        <a name="slow">Slow or Frozen</a>
+    </h3>
+    <hr>
+</div>
+
+A new solution(but not necessarily better) that doesn't require Administrative previlige on Linux, please <a href="/mbpfaq/javaoptions"
+                                                                               target="_blank">check it out</a>.<br/>
+<br/>
+
+Previously solution, as follows:<br/><br/>
+Because MBP would process all the IMV targets definition/setting when loading data and model, it
+could become significantly slow sometimes when the we put too many IMV targets in one project. By
+increasing MBP's startup Java&trade; memory could solve the issue to some extend; however, it's
+also recommended to keep the IMV settings light in one project, by moving IMVs we don't need to
+other packages. And we see obvious speed-up by doing so.
+<br>
+<br> Here is how we can increase MBP's startup Java&trade; memory, we need to edit the file
+<b>$MBPHOME/mbp</b>, as shown below, change the number after the
+<b>-Xmx</b> option, it could be 512M initially, we've seen people tune it up to 1024M or 2048M if
+our server's memory allows. Then, save the file and restart MBP.
+<br>
+<img src="/static/mbpst/Chap4/images/4.1/10.png" border="1px">
+<br>
+<br>
+<br>
+<br>
 {% endblock %}

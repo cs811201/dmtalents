@@ -1,0 +1,49 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Use _JAVA_OPTIONS to Assign Larger Java Memory</h2>
+<h3>MBP FAQ</h3>
+<hr>
+MBP and MQA are Java based programs, and they have a default Java Memory allocation, which is 512M. And quite often, we found 512M is not large enough and wanted to increase it to 1024M or 2048M.
+<br/><br/>
+
+<a href="/mbpst/chap4.1#slow" target="_blank">A note in MBP Script
+    Tutorial</a> explains briefly how to change the default Java memory settings for MBP and MQA; however, it requires to modify the start-up script file that often requires Administrative privilege on Linux, which may be inconvenient for regular users.
+<br/><br/>
+
+Now, we have another workaround to pass in a larger Java memory by using the global Java Virtual Machine(JVM) option called
+<mark>_JAVA_OPTIONS
+</mark>.
+When a JVM starts, namely when we start MBP or MQA program, it parses the value of _JAVA_OPTIONS as if the parameters were set at the command line at real time.  This can be done by a regular user without asking for IT's help, and we could set it once and forget about it.
+<br/><br/>
+
+The _JAVA_OPTIONS is an operating system environment variable.<br/><br/>
+
+For example, on Windows, we have the following:<br/>
+
+
+<img src="/static/faq/mbp/javaoptions/0.png"/><br/><br/>
+
+Then, when start MBP or MQA, we could see from the terminal window that a message saying “Picked up _JAVA_OTIONS: -Xmx1024M” .
+<br/>
+<img src="/static/faq/mbp/javaoptions/1.png"/><br/><br/>
+
+And, on Linux, similarly, we have:<br/>
+
+<img src="/static/faq/mbp/javaoptions/2.png"/><br/><br/>
+
+The options will be picked up by JVM once it’s correctly set.<br/>
+
+<img src="/static/faq/mbp/javaoptions/3.png"/><br/><br/>
+This option is actually for general purpose, we could use it to pass in many other Java Options when needed. <br/><br/>
+
+Thanks!
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
+
