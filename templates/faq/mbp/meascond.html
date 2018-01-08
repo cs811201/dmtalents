@@ -1,0 +1,41 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Use MeasCond to Put Similar Sweeps into Different Groups</h2>
+<h3>MBP FAQ</h3>
+<hr>
+Sometimes we have 2 measurement data files for the same device but with very similar bias sweeps, for example:
+<ul>
+    <li><a href="/mbpfaq/meascond1/download" target="_blank">Ids_vds_high_vgs</a></li>
+    <li><a href="/mbpfaq/meascond2/download">Ids_vds_low_vgs</a></li>
+    (Note: click on the files to download them.)
+</ul>
+
+<br/>
+Where they are both Ids_vds_vgs sweeps for the same W/L/T=10/10/25 devices, just the Vgs values are different in two files.
+<br/><br/>
+By default, MBP parses in measurement data files by telling the device fingerprint, such as W/L/T, and biasing pattern, namely whether it’s Ids_vds_vgs, or Ids_vgs_vbs, etc. Here comes the problem, the “low_vgs” and “high_vgs” are not recognized by MBP! When we try to load the two files at the same time, only one got loaded in and another one gets overwritten.
+<br/><br/>
+
+The workaround is to introduce another identifier, which is a keyword called
+<mark>MeasCond
+</mark>, so that we would be able to load these two files into MBP at the same time, and see them under “ids_vds_high_vgs” and “ids_vds_low_vgs” folders on the GUI, as shown below.
+<br/>
+<img src="/static/faq/mbp/meascond/2.png"/><br/><br/>
+
+Below is how we insert the keyword MeasCond into the .mdm files, under the ICCAP_VALUES section.<br/>
+<img src="/static/faq/mbp/meascond/1.png"/><br/><br/>
+
+We put the groups names in double quotes, and it’s up to user what names to use here.<br/>
+<img src="/static/faq/mbp/meascond/3.png"/><br/><br/>
+Now that we have two different MeasCond names in the two files, we can load them into MBP at the same time.
+
+<br/><br/>
+Thanks!
+<br/>
+<br/>
+<br/>
+<br/><br/>
+
+{% endblock %}
+

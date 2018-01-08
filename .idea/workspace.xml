@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4ca6bc7-6762-470b-91f4-9988ef02d735" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/faq/mqa/slope/slope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mqa/Slope.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/faq/mbp/meascond.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dm.db" afterPath="$PROJECT_DIR$/db/dm.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/updateHisCore.html" afterPath="$PROJECT_DIR$/templates/updateHisCore.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/faq/mqa/Slope.html" afterPath="$PROJECT_DIR$/templates/faq/mqa/slope.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,14 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__init__.py">
+      <file leaf-file-name="meascond.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/faq/mbp/meascond.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="1118" column="1" lean-forward="false" selection-start-line="1118" selection-start-column="1" selection-end-line="1118" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,49 +38,21 @@
       <file leaf-file-name="updateHisCore.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog_index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog/blog_index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="57" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iccap_python_Q_L.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="113" column="71" lean-forward="false" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slope.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/faq/mqa/Slope.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linefit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/faq/mbp/linefit.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="3227" column="61" lean-forward="false" selection-start-line="3227" selection-start-column="35" selection-end-line="3227" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,8 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>script_import_export</find>
-      <find>iccapfaq</find>
       <find>./_img</find>
       <find>LTSP</find>
       <find>viewerListFor</find>
@@ -129,6 +98,8 @@
       <find>blog</find>
       <find>mqafaq</find>
       <find>linefit</find>
+      <find>dashb</find>
+      <find>/mbpfaq</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/static/mbpst</replace>
@@ -160,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py" />
         <option value="$PROJECT_DIR$/templates/pyrfs/pyrfs_index.html" />
         <option value="$PROJECT_DIR$/templates/layouts/mf.html" />
         <option value="$PROJECT_DIR$/templates/search_result.html" />
@@ -193,7 +163,6 @@
         <option value="$PROJECT_DIR$/templates/mqarules/rules/crss.html" />
         <option value="$PROJECT_DIR$/static/mqarules/crss/crss_ciss_coss.rule" />
         <option value="$PROJECT_DIR$/templates/mqarules/rules/cgscgd.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/mqarules/mqarules_index.html" />
         <option value="$PROJECT_DIR$/templates/mbpst/Chap1/WhatIsMBPScript.html" />
         <option value="$PROJECT_DIR$/templates/layouts/base.html" />
@@ -208,16 +177,18 @@
         <option value="$PROJECT_DIR$/templates/faq/mqa/datablock.html" />
         <option value="$PROJECT_DIR$/templates/blog/blog_index.html" />
         <option value="$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mqa/Slope.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/updateHisCore.html" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/templates/faq/mqa/Slope.html" />
+        <option value="$PROJECT_DIR$/templates/faq/mbp/meascond.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="274" />
-    <option name="y" value="138" />
-    <option name="width" value="1477" />
+    <option name="x" value="520" />
+    <option name="y" value="33" />
+    <option name="width" value="1057" />
     <option name="height" value="1160" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -238,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -251,19 +221,6 @@
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
               <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
-              <item name="mqa" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
@@ -283,30 +240,11 @@
               <item name="faq" type="462c0819:PsiDirectoryNode" />
               <item name="mbp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="faq" type="462c0819:PsiDirectoryNode" />
-              <item name="mqa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mqarules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dmtalents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dmtalents" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="mqarules" type="462c0819:PsiDirectoryNode" />
-              <item name="rules" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,19 +261,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\dmtalents\static\faq\mqa\slope" />
-      <recent name="D:\projects\dmtalents\templates\faq\mqa" />
-      <recent name="D:\projects\dmtalents\templates\blog\post" />
-      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
-      <recent name="D:\projects\dmtalents\static\mqarules\crss" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\dmtalents\static\mqarules\misR" />
       <recent name="D:\projects\dmtalents\static\mbpst\scriptZip" />
       <recent name="D:\projects\dmtalents\templates\faq" />
       <recent name="D:\projects\dmtalents\static\faq\mqa\CheckNetlist" />
       <recent name="D:\projects\dmtalents\static\faq\mqa\compareMode" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\dmtalents\templates\faq\mbp" />
+      <recent name="D:\projects\dmtalents\static\faq\mqa\slope" />
+      <recent name="D:\projects\dmtalents\templates\faq\mqa" />
+      <recent name="D:\projects\dmtalents\templates\blog\post" />
+      <recent name="D:\projects\dmtalents\templates\mqarules\rules" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -581,13 +519,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484335625596</updated>
-    </task>
-    <task id="LOCAL-00004" summary="1/24/2017">
-      <created>1485472921127</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1485472921127</updated>
     </task>
     <task id="LOCAL-00005" summary="1/24/2017">
       <created>1485478471254</created>
@@ -925,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511823897285</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="add MQA FAQ - get Slope from a curve">
+      <created>1512778520088</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1512778520089</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -940,7 +878,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22014925" sideWeight="0.49600798" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19660679" sideWeight="0.5086906" order="7" side_tool="true" content_ui="tabs" />
@@ -1010,7 +948,8 @@
     <MESSAGE value="add link ICCAP to pspice, spice2/3/hpsice" />
     <MESSAGE value="add link mqa rule, cgs cgd continueity across zero vds" />
     <MESSAGE value="add iccap python s parameter , Q and L" />
-    <option name="LAST_COMMIT_MESSAGE" value="add iccap python s parameter , Q and L" />
+    <MESSAGE value="add MQA FAQ - get Slope from a curve" />
+    <option name="LAST_COMMIT_MESSAGE" value="add MQA FAQ - get Slope from a curve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1026,13 +965,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/pageViewHis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flask_movie/env/Lib/site-packages/flask/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -1205,13 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1331,23 +1256,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="57" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/blog/post/iccap_python_Q_L.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="1921">
           <caret line="113" column="71" lean-forward="false" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,24 +1270,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/faq/mqa/slope.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="60" lean-forward="false" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/updateHisCore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="1118" column="1" lean-forward="false" selection-start-line="1118" selection-start-column="1" selection-end-line="1118" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="3227" column="61" lean-forward="false" selection-start-line="3227" selection-start-column="35" selection-end-line="3227" selection-end-column="61" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/faq/mqa/Slope.html">
+    <entry file="file://$PROJECT_DIR$/templates/faq/mbp/meascond.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

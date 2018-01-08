@@ -1236,6 +1236,16 @@ def mbpfaq_unused_param():
     return render_template('/faq/mbp/unused_param.html')
 
 
+route_mbpfaq_meascond = '/mbpfaq/meascond'
+
+
+@app.route(route_mbpfaq_meascond)
+@login_required
+def mbpfaq_meascond():
+    recordPostHistory(route_mbpfaq_meascond)
+    return render_template('/faq/mbp/meascond.html')
+
+
 route_mbpfaq_site_die = '/mbpfaq/site_die'
 
 
@@ -1418,6 +1428,7 @@ def mqafaq_meas_misc1():
     recordPostHistory(route_mqafaq_meas_misc1)
     return render_template('/faq/mqa/datablock.html')
 
+
 route_mqafaq_slope = '/mqafaq/slope'
 
 
@@ -1426,7 +1437,6 @@ route_mqafaq_slope = '/mqafaq/slope'
 def mqafaq_slope1():
     recordPostHistory(route_mqafaq_slope)
     return render_template('/faq/mqa/slope.html')
-
 
 
 route_download_bsim4_model_meas = '/mqafaq/meas/bsim4_model/download'
@@ -3212,6 +3222,32 @@ def download_mbpfaq_weff_zip():
     recordPostHistory(route_download_mbpfaq_weff_zip)
     return send_file('static/faq/mbp/weff_leff/imv.imv.Weff_Leff.zip',
                      attachment_filename='imv.imv.Weff_Leff.zip', mimetype='application/zip', as_attachment=True)
+
+
+
+route_download_mbpfaq_meascond1 = '/mbpfaq/meascond1/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_meascond1)
+def download_mbpfaq_meascond1():
+    recordPostHistory(route_download_mbpfaq_meascond1)
+    return send_file('static/faq/mbp/meascond/nmos_ids_vds_high_vgs.mdm',
+                     attachment_filename='tnmos_ids_vds_high_vgs.mdm', mimetype='text/plain', as_attachment=True)
+
+
+
+
+route_download_mbpfaq_meascond2 = '/mbpfaq/meascond2/download'
+
+
+@login_required
+@app.route(route_download_mbpfaq_meascond2)
+def download_mbpfaq_meascond2():
+    recordPostHistory(route_download_mbpfaq_meascond2)
+    return send_file('static/faq/mbp/meascond/nmos_ids_vds_low_vgs.mdm',
+                     attachment_filename='tnmos_ids_vds_low_vgs.mdm', mimetype='text/plain', as_attachment=True)
+
 
 
 route_download_iccapfaq_ltspice3 = '/iccapfaq/ltspice3/download'
