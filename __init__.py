@@ -846,6 +846,13 @@ def mbpstchap3_23():
     return render_template('/mbpst/Chap3/GlobalVar.html')
 
 
+@app.route('/mbpst/chap3.24')
+@login_required
+def mbpstchap3_24():
+    recordPostHistory('/mbpst/chap3.24')
+    return render_template('/mbpst/Chap3/Vth_gm.html')
+
+
 @app.route('/mbpst/chap4.1')
 @login_required
 def mbpstchap4_1():
@@ -1246,8 +1253,6 @@ def mbpfaq_meascond():
     return render_template('/faq/mbp/meascond.html')
 
 
-
-
 route_mbpfaq_java_options = '/mbpfaq/javaoptions'
 
 
@@ -1259,7 +1264,6 @@ def mbpfaq_javaoptions():
 
 
 route_mbpfaq_site_die = '/mbpfaq/site_die'
-
 
 
 @app.route(route_mbpfaq_site_die)
@@ -1728,6 +1732,16 @@ route_mqarules_meas = '/mqarules/meas_qa'
 def mqarule_meas():
     recordPostHistory(route_mqarules_meas)
     return render_template('/mqarules/rules/meas_qa.html')
+
+
+route_mqarules_vtgm = '/mqarules/vtgm'
+
+
+@app.route(route_mqarules_vtgm)
+@login_required
+def mqarule_vtgm():
+    recordPostHistory(route_mqarules_vtgm)
+    return render_template('/mqarules/rules/vtgm.html')
 
 
 #### Video Demos
@@ -2603,9 +2617,78 @@ def userViewHistory(uid):
         userViewByCat_chart.add("", cateCounts)
         userViewByCat_graph = userViewByCat_chart.render_data_uri()
 
-        return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList,
-                               userView_graph=userView_graph, userViewByCat_graph=userViewByCat_graph)
+        # stackedLine for usage over time.
+        ### line_chart = pygal.StackedLine(fill=True)
+        ### line_chart.title = 'Browser usage evolution (in %)'
+        ### line_chart.x_labels = ma##p(str, range(2002, 2013))
+        ### line_chart.add('Firefox', [None, None, 0, 16.6, 25, 31, 36.4, 45.5, 46.3, 42.8, 37.1])
+        ### line_chart.add('Chrome', [None, None, None, None, None, None, 0, 3.9, 10.8, 23.8, 35.3])
+        ### line_chart.add('IE', [85.8, 84.6, 84.7, 74.5, 66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
+        ### line_chart.add('Others', [14.2, 15.4, 15.3, 8.9, 9, 10.4, 8.9, 5.8, 6.7, 6.8, 7.5])
+        ### line_chart.render()
+        # 1. get all history
+        # 2. get all dates
+        # 3. sort history by app category, get count by each category
+        # 4. loop by category, create a list A
+        # 4.1 loop by date, for each date, get the count for current category, create a list of counts
+        # 4.2 add the category + count list into the list A.
+        userViewOverTime_chart = pygal.StackedLine(fill=True, x_label_rotation=-30, height=500)
+        userViewOverTime_chart.title = 'View # Over Time by Category'
+        postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
+        # get how many Category
 
+
+        cateList = []
+        dateList = []
+        for v in postHis:
+            route = v.route
+            cateList.append(getCategory(getPostCategoryByRoute(route)))
+            dateList.append(str(v.date)[:10])
+
+        iz = Counter(cateList).items()  # category, count
+        cateNames = []
+        for ss in iz:
+            cateNames.append(ss[0])
+        # get all the dates from Start to Current
+        dateCounts = []
+        idates = Counter(dateList).items()  # date, count
+        datesForX = []
+        for dd in idates:
+            datesForX.append(dd[0])
+
+        datesForX.sort()
+        userViewOverTime_chart.x_labels=datesForX
+        # 4.1 loop by date, for each date, get the count for current category, create a list of counts
+        for cat in cateNames:
+            numListInEachCat = []
+            #loop by date, for each date, get the count for current category, create a list of counts
+            for dd in datesForX:
+                numListInEachCat.append(getNumberInACatOnADay(uid,cat,dd))
+
+            # 4.2 add the category + count list into the list A.
+            userViewOverTime_chart.add(cat, numListInEachCat)
+
+        userViewOverTime_graph = userViewOverTime_chart.render_data_uri()
+
+        return render_template('/viewerHis.html', uname=uname, viewList=vl, searchList=sList,
+                               userView_graph=userView_graph, userViewByCat_graph=userViewByCat_graph,
+                               userViewOverTime_graph=userViewOverTime_graph)
+
+
+def getNumberInACatOnADay(uid, category,date):
+    postHisOnADay = PostHistory.query.filter((PostHistory.user_id == uid )).all()
+    count = 0
+    for v in postHisOnADay:
+        route = v.route
+        cat=getCategory(getPostCategoryByRoute(route))
+        if (cat == category):
+            dd = str(v.date)[:10]
+            if dd == date:
+                count=count+1
+
+    if count == 0:
+        return None
+    return count
 
 ## download files, all routes must end with 'download' for data analysis
 route_download_ft_rule = '/mqarules/ft/ft_example/download'
@@ -3237,7 +3320,6 @@ def download_mbpfaq_weff_zip():
                      attachment_filename='imv.imv.Weff_Leff.zip', mimetype='application/zip', as_attachment=True)
 
 
-
 route_download_mbpfaq_meascond1 = '/mbpfaq/meascond1/download'
 
 
@@ -3249,8 +3331,6 @@ def download_mbpfaq_meascond1():
                      attachment_filename='tnmos_ids_vds_high_vgs.mdm', mimetype='text/plain', as_attachment=True)
 
 
-
-
 route_download_mbpfaq_meascond2 = '/mbpfaq/meascond2/download'
 
 
@@ -3260,7 +3340,6 @@ def download_mbpfaq_meascond2():
     recordPostHistory(route_download_mbpfaq_meascond2)
     return send_file('static/faq/mbp/meascond/nmos_ids_vds_low_vgs.mdm',
                      attachment_filename='tnmos_ids_vds_low_vgs.mdm', mimetype='text/plain', as_attachment=True)
-
 
 
 route_download_iccapfaq_ltspice3 = '/iccapfaq/ltspice3/download'
@@ -3315,6 +3394,28 @@ def download_mqafaq_mea_data():
     recordPostHistory(route_download_mqafab_mea_data_zip)
     return send_file('static/faq/mqa/meas_qa/example_mdm_data_files.zip',
                      attachment_filename='example_mdm_data_files.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_mqarule_vtgm = '/mqarules/vtgm/download'
+
+
+@login_required
+@app.route(route_download_mqafab_mea_data_zip)
+def download_mqarule_vtgm():
+    recordPostHistory(route_download_mqafab_mea_data_zip)
+    return send_file('static/faq/mqa/meas_qa/example_mdm_data_files.zip',
+                     attachment_filename='example_mdm_data_files.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_bsim4_7_model = '/mqarules/vtgm/model/download'
+
+
+@login_required
+@app.route(route_download_bsim4_7_model)
+def download_mqarule_vtgm_bsim4_7_model():
+    recordPostHistory(route_download_bsim4_7_model)
+    return send_file('static/mqarules/vtgm/bsim4.7.l',
+                     attachment_filename='bsim4.7.l', mimetype='text/plain', as_attachment=True)
 
 
 ### Upload a file

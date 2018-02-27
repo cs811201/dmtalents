@@ -72,11 +72,11 @@
 		The routine to calculate Vth_gm is as follows:<br>
 		<ol>
 			<li>Get derivative of Ids_Vgs curve, namely get Gm,</li>
-			<li>Find max Gm, and mark the corresponding Vgs as Vth</li>
-			<li>Determin the final returning Vth_gm by Vds:</li>
+			<li>Find max Gm, do a slope at that point from the Ids_Vgs curve, and mark the intercept of Vgs as Vth</li>
+			<li>Determine the final returning Vth_gm by Vds:</li>
 			<ol type="i">
-				<li>if Vds<0.5, then Vth_gm=Vth</li>
-				<li>if Vds>=0.5, Vth_gm=Vth+Vds/2</li>
+				<li>if Vds<0.5, then Vth_gm=Vth - Vds/2</li>
+				<li>if Vds>=0.5, Vth_gm=Vth</li>
 			</ol>
 		</ol>
 

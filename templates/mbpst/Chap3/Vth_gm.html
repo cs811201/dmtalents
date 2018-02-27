@@ -1,0 +1,91 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>Implement Vth_gm Algorithm in Script</h2>
+<hr>
+<br/>
+In this example, let’s go through how to get device’s Vth using Max gm method, so called Vth_gm, usually it conducted in the following way:
+<br/>
+<br/>
+We will firstly find the maximum point on the Gm_Vgs curve, and from that Vgs point do a slope, the intercept on X(Vgs) axis gives us the Vth, and in case of Vds<0.5V bias condition, we usually further deduct Vds/2 which becomes our final Vth_gm.
+<br/>
+
+
+<img src="/static/mbpst/Chap3/images/3.24/1.png" border="1px"><br/>
+<br/>
+
+Note that MBP Script comes with a built-in Vth_gm algorithm which does the same thing, as shown below. <br/>
+
+<img src="/static/mbpst/Chap3/images/3.24/2.png" border="1px"><br/><br/>
+
+Here, we will implement the Vth_gm algorithm from scratch, so we know exactly what’s been done in the process. <br/>
+In the Script window, let’s please create a new IMV->Data, and name it “vtgm”.<br/>
+
+<img src="/static/mbpst/Chap3/images/3.24/3.png" border="1px"><br/><br/>
+
+
+Double click on “vtgm” to open its script Editor, as shown below. <br/><br/>
+Line 1, we firstly get the original “ids_vgs_vbs” curve data. <br/>
+Line 2, we do a group by “vgs”, so that we will have “ids_vgs” curves ready for use, no matter how many W/L/T/Vbs/Vds may have.<br/>
+Line 3, do a <a href="/mbpst/chap3.6" target="_blank">TransSubToPoint() function </a>where the Vth_gm algorithm is implemented. It leads to the func2() that’s written down below. <br/><br/>
+In the func2() function, we are dealing with just one “ids_vgs” curve, we don’t need to know what curve it is, MBP will handle the loop for us; It loops through all W/L/T/Vbs/Vds, etc.<br/>
+Line 8 – 11, we retrieve the variables from “from” which is the data source. <br/>
+Line 12 we get the Max Gm value.<br/>
+Line 13, we get the Max Gm’s index on the Gm_Vgs curve, which is the same index as of the Ids_Vgs curve. <br/>
+Line 14, we get the Vgs value at that index. <br/>
+Line 15, we get the Ids value at that index.<br/>
+Line 16-19, we do the slope and return the X intercept which gives us Vth_gm. Done. <br/><br/>
+
+<img src="/static/mbpst/Chap3/images/3.24/4.png" border="1px"><br/><br/>
+
+We then create a few graphs for “vtgm”, such as “vtgm_L” and “vtgm_W”, as shown below. Please refer to <a href="/mbpst/chap2.1.2" target="_blank">Chapter 2.1.2</a> for how to create IMV Graphs.
+<br/>
+
+<img src="/static/mbpst/Chap3/images/3.24/5.png" border="1px"><br/><br/>
+
+We could see that our “vtgm” produces exact the same result as the built-in VTH_GM algorithm, as shown below.<br/>
+<img src="/static/mbpst/Chap3/images/3.24/6.png" border="1px"><br/><br/>
+
+
+Here is the code for copy-paste.
+
+<pre class="code">
+DATA load(sfunc select){
+	DATA m = select("ids_vgs_vbs");
+	m=m.group("vgs");
+	m = m.transSubToPoint(func2,"vth_gm");
+	return m;
+}
+
+void func2(POINT to,DATA from){
+	double[] vgs = from->"vgs";
+	double[] ids = from->"ids";
+	double[] gm = ids.derivative(vgs);
+	double vds = from ->"vds";
+	double maxGm = gm.max();
+	int idx = gm.indexOf(maxGm);
+	double vgatMaxGm = vgs[idx];
+	double idatMaxGm=ids[idx];
+	if(vds<0.5){
+		to->"vth_gm" = (vgatMaxGm - idatMaxGm/maxGm - vds/2);
+	}else{ //vds >= 0.5V
+		to->"vth_gm" = (vgatMaxGm - idatMaxGm/maxGm);
+	}
+}
+
+</pre>
+
+
+<br/>
+<br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}

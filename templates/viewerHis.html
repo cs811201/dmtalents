@@ -10,16 +10,26 @@ View History
     <br/>
     <h3>View History for {{ uname }}</h3>
     <hr/>
+    <h3>By Category Over Time</h3>
+
     <div>
-        <embed type="image/svg+xml" src={{userView_graph|safe}} style="max-width:800px"/>
+        <embed type="image/svg+xml" src={{userViewOverTime_graph|safe}} style="max-width:800px"/>
     </div>
     <hr/>
-    <h3>View History by Category</h3>
+    <h3>By Category</h3>
 
     <div>
         <embed type="image/svg+xml" src={{userViewByCat_graph|safe}} style="max-width:600px"/>
     </div>
+    <h3>By Post</h3>
+
     <hr/>
+    <div>
+        <embed type="image/svg+xml" src={{userView_graph|safe}} style="max-width:800px"/>
+    </div>
+
+    <hr/>
+
     <h4>Recent Views(up to 50)</h4>
     <table width="80%">
         <!--#title 0, route 1, date 2, category 3-->

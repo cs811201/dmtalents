@@ -1,0 +1,82 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: Vth_gm
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Implement Vth_gm algorithm in MQA Rule</h2>
+<h3>MQA Rules</h3>
+<hr>
+
+This application note examples how to get device’s Vth using Max gm method, so called Vth_gm, usually it conducted in the following way:
+<br/><br/>
+We will firstly find the maximum point on the Gm_Vgs curve, and from that Vgs point do a slope, the intercept on X(Vgs) axis gives us the Vth, and in case of Vds<0.5V bias condition, we usually deduct Vds/2.
+<br/><br/>
+As shown below.
+
+<br/><img src="/static/mqarules/vtgm/2.png" border="1px"><br/><br/>
+
+MQA has a built-in Vth_gm algorithm in CalPage() function, please refer to MQA user manual “Appendix -> built-n Functions -> Calculation Functions -> CalPage -> Vth_gm” for more details about the built-in algorithm, which does the same as illustrated above.
+<br/><br/>
+However, here we are going to do it from scratch in Rule, so that we know how exactly it’s achieved. <br/><br/>
+The output using the <a href="/mqarules/vtgm/model/download" target="_blank">attached sample BSIM4.7 model</a>  is as follows:
+
+<br/><img src="/static/mqarules/vtgm/1.png" border="1px"><br/><br/>
+
+The Vth_gm algorithm is implemented in the [Target] section of the Rule, as shown below. <br/><br/>
+
+Line 16, we do the d1() derivative function given X and Y data, so that we have gm. <br/>
+Line 17, we use the FindX() function to locate the X(Vgs) point by using the “Y=max” condition.<br/>
+Line 18, use the FindY() function to get the Ids value from the Ids_Vgs curve at the Max Gm point. <br/>
+Line 19, use the FindY() function to get the Max Gm on Gm_Vgs curve, this is needed to calculate the intercept on
+Lin 20. <br/>
+Line 20, finally, get the intercept from the slope; also, as we are under Vds=Vd_lin condition, 0.1V or 0.05V, we
+deduct Vds/2 in the expression. Done.<br/>
+
+<br/><img src="/static/mqarules/vtgm/3.png" border="1px"><br/><br/>
+
+
+Here is the example “vth_gm.rule” for copy-paste, or <a href="/mqarules/vtgm/download" target="_blank">download</a> .
+
+
+<pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 77:Title=Vth_GM Rule Example]
+
+[Label: 7701:title= Check Vth_gm vs. L]
+[Condition:1]
+[Loops
+: X0=Vgs(Start=0,stop=Vgg,step=0.01)
+: X=L(start=g_lmin,stop=g_lmax,num=11)
+: P=W(g_wmax)
+: P1=Vds(vd_lin)
+: P2=Vbs(0)
+: P3=T(tnom)]
+[Target
+: gm=d1(Vgs,Ids,2)
+: vgMaxGm = findX(vgs, gm,"Y=max")
+: idx =  findY(vgs, ids,"X=vgMaxGm")
+: maxGm = findY(vgs,gm,"X=vgMaxGm")
+: vth_gm = (vgMaxgm - idx/maxGm - Vds/2)
+: y=vth_gm
+]
+[Check:01:Plot Trend vth_gm vs. L:Save2dData(p,x,y):error:no check]
+[Compare:02:RMS of vth_gm vs. L:CompPlot(p,x,y): error: TBD]
+[Corner:03:Check corner of Vth vs. L:CompareTREND(x,y,"@TREND=-1"): error: TBD]
+
+
+</pre>
+
+Thanks!
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
