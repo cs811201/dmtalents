@@ -16,6 +16,10 @@
 
         {% elif func(item.category).startswith('ICCAP')  %}
         <font style="background-color:#2BD4CA; color:#FFFFFF">{{ func(item.category) }}</font>
+         {% elif func(item.category).startswith('WPE')  %}
+        <font style="background-color:#201699; color:#FFFFFF">{{ func(item.category) }}</font>
+        {% elif func(item.category).startswith('ALFNA')  %}
+        <font style="background-color:#7DBBC6; color:#FFFFFF">{{ func(item.category) }}</font>
         {% else %}
             {{ func(item.category) }}
         {% endif %}</h5>

@@ -1,0 +1,48 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Add User Probe Card Pin-to-Pad Mapping</h2>
+<h3>WPE FAQ</h3>
+<hr>
+
+This application note explains how to add a user defined probe card Pad to Pin mapping in WaferPro Express(WPE).<br/>
+<br/>
+Note, if we noticed “*** Switch Matrix control is Disabled.” In the Status window during launching WPE, don’t panic, it means we need to turn on the option.
+<br/>
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/0.png" alt="Image"/><br/><br/>
+To turn it on, please go to menu “Tools -> Options”, enable the “SW Matrix Control” checkbox.
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/1.png" alt="Image"/><br/><br/>
+
+Next, click the  <img src="/static/faq/wpe/switchmatrix_probecard/gpib.png"
+                      alt="Image"/> icon on the toolbar to open the “Hardware Connections” window, as shown below, and click on the “Matrix” entry in the “System hardware” section.
+
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/2.png" alt="Image"/><br/><br/>
+From the matrix driver dropdown list, we get to choose which matrix we have, this driver list is customizable via PEL or Python programming language.
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/3.png" alt="Image"/><br/><br/>
+After a driver is determined, we need to come to the “Probe Card Definition” tab, as shown below, by default, we may only see “DemoProbeCard” and “Pin=Pad” options here, they may have wrong Pad to Pin mapping, or wrong Pin numbers, so we must create another one.
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/4.png" alt="Image"/><br/><br/>
+We found that the GUI doesn’t allow us to edit the list, so to add a user defined, we need to work on the related configuration file, which are the “*.probe.card” files under $HOME/hpeesof/waferpro_version/instr directory.  Where $HOME is a system environment variable.
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/8.png" alt="Image"/>
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/5.png" alt="Image"/><br/><br/>
+
+The middle part of the *.probe.card files are displayed in WPE Hardware Connections window, so we can make a copy of the default “correspondance-DemoProbeCard.probe.card”, and rename it to “correspondance-myTestProbeCard.probe.card”, the leading “correspondance-“ and ending “.probe.card” are keywords, don’t remove or change them.
+<br/><br/>
+Here is how “correspondance-myTestProbeCard.probe.card” looks like where I have 16 Pins defined.
+
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/6.png" alt="Image"/><br/><br/>
+Finally, <em>restart WPE</em>, we will see “myTestProbeCard” shows up and ready for use.
+<br/><img src="/static/faq/wpe/switchmatrix_probecard/7.png" alt="Image"/><br/><br/>
+
+
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

@@ -196,7 +196,8 @@ def index():
     videoCt = videoPost.__len__()
 
     faqPost = Post.query.filter(
-        (Post.category == 'mqafaq') | (Post.category == 'mbpfaq') | (Post.category == 'iccapfaq')).all()
+        (Post.category == 'mqafaq') | (Post.category == 'mbpfaq') | (Post.category == 'iccapfaq') | (
+            Post.category == 'wpefaq')|(Post.category == 'alfnafaq')).all()
     faqCt = faqPost.__len__()
     g.__setattr__('dombp', True)
 
@@ -263,7 +264,8 @@ def request_login():
 def faq():
     recordPostHistory('/faq')
     results = Post.query.filter(
-        (Post.category == 'mbpfaq') | (Post.category == 'mqafaq') | (Post.category == 'iccapfaq')).order_by(
+        (Post.category == 'mbpfaq') | (Post.category == 'mqafaq') | (Post.category == 'iccapfaq') | (
+            Post.category == 'wpefaq') | (Post.category == 'alfnafaq')).order_by(
         desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/faq_list.html', slist=results, func=getCategory)
 
@@ -295,6 +297,28 @@ def iccapfaq():
     recordPostHistory(route_iccapfaq_list)
     results = Post.query.filter(Post.category == 'iccapfaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
     return render_template('faq/iccap/iccapfaqlist.html', slist=results, func=getCategory)
+
+
+route_wpefaq_list = "/wpefaq"
+
+
+@app.route(route_wpefaq_list)
+@login_required
+def wpefaq():
+    recordPostHistory(route_wpefaq_list)
+    results = Post.query.filter(Post.category == 'wpefaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
+    return render_template('faq/wpe/wpefaqlist.html', slist=results, func=getCategory)
+
+
+route_alfnafaq_list = "/alfnafaq"
+
+
+@app.route(route_alfnafaq_list)
+@login_required
+def alfnafaq():
+    recordPostHistory(route_alfnafaq_list)
+    results = Post.query.filter(Post.category == 'alfnafaq').order_by(desc(Post.create_date)).limit(displayUpto).all()
+    return render_template('faq/alfna/alfnafaqlist.html', slist=results, func=getCategory)
 
 
 # open blog to public
@@ -484,10 +508,10 @@ def add_post():
 
 
 ### Search Options ####
-searchOptions = {'isopen': 0, 'doiccap': 1, 'dombp': 1, 'domqa': 1, 'doblog': 1, 'dovideo': 1}
+searchOptions = {'isopen': 0, 'doiccap': 1, 'dombp': 1, 'domqa': 1, 'doblog': 1, 'dovideo': 1, 'dowpe': 1, 'doalfna': 1}
 
 
-def updateSearchOptions(isopen, doiccap, dombp, domqa, doblog, dovideo):
+def updateSearchOptions(isopen, doiccap, dombp, domqa, doblog, dovideo, dowpe, doalfna):
     global searchOptions
     searchOptions['isopen'] = 1 if isopen else 0
     searchOptions['doiccap'] = 1 if doiccap else 0
@@ -495,6 +519,8 @@ def updateSearchOptions(isopen, doiccap, dombp, domqa, doblog, dovideo):
     searchOptions['domqa'] = 1 if domqa else 0
     searchOptions['doblog'] = 1 if doblog else 0
     searchOptions['dovideo'] = 1 if dovideo else 0
+    searchOptions['dowpe'] = 1 if dowpe else 0
+    searchOptions['doalfna'] = 1 if doalfna else 0
 
     return searchOptions
 
@@ -525,14 +551,15 @@ def search():
     doalfna = False
     dovideo = False
     doblog = False
+
     if (request.form.get('iccap') != None):
         doiccap = True
+    if (request.form.get('wpe') != None):
+        dowpe = True
     if (request.form.get('mbp') != None):
         dombp = True
     if (request.form.get('mqa') != None):
         domqa = True
-    if (request.form.get('wpe') != None):
-        dowpe = True
     if (request.form.get('alfna') != None):
         doalfna = True
     if (request.form.get('video') != None):
@@ -546,7 +573,7 @@ def search():
         isOpen = True
 
     # searchOptions -> inject_Search_Options()
-    updateSearchOptions(isOpen, doiccap, dombp, domqa, doblog, dovideo)
+    updateSearchOptions(isOpen, doiccap, dombp, domqa, doblog, dovideo, dowpe, doalfna)
 
     qer = Post.query.whoosh_search(txt)
     if not doiccap:
@@ -556,9 +583,9 @@ def search():
     if not domqa:
         qer = qer.filter(Post.category != 'pyrfs').filter(Post.category != 'mqafaq').filter(Post.category != 'mqarules')
     if not doalfna:
-        qer = qer.filter((Post.category != 'alfna'))
+        qer = qer.filter((Post.category != 'alfnafaq'))
     if not dowpe:
-        qer = qer.filter((Post.category != 'wpe'))
+        qer = qer.filter((Post.category != 'wpefaq'))
     if not dovideo:
         qer = qer.filter((Post.category != 'video'))
     if not doblog:
@@ -574,6 +601,8 @@ def search():
     category += 'MQA  |  ' if searchOptions['domqa'] == 1 else ''
     category += 'Blog  |  ' if searchOptions['doblog'] == 1 else ''
     category += 'Video  |  ' if searchOptions['dovideo'] == 1 else ''
+    category += 'WPE  |  ' if searchOptions['dowpe'] == 1 else ''
+    category += 'ALFNA  |  ' if searchOptions['doalfna'] == 1 else ''
 
     return render_template('search_result.html', slist=results, searchfor=txt, myfunction=getCategory,
                            category=category)
@@ -1549,6 +1578,49 @@ def iccapfaq_link2pspice3():
     return render_template('/faq/iccap/link2pspice.html')
 
 
+### WPE FAQs ###
+
+route_wpefaq_probecard = '/wpefaq/add_probecard'
+
+
+@app.route(route_wpefaq_probecard)
+@login_required
+def wpefaq_addprobecard():
+    recordPostHistory(route_wpefaq_probecard)
+    return render_template('/faq/wpe/add_probecard.html')
+
+
+### ALFNA FAQs ###
+route_alfnafaq_40mhz = '/alfnafaq/40mhz'
+
+
+@app.route(route_alfnafaq_40mhz)
+@login_required
+def alfnafaq_40mhz():
+    recordPostHistory(route_alfnafaq_40mhz)
+    return render_template('/faq/alfna/40mhz.html')
+
+
+route_alfnafaq_system_noise_floor = '/alfnafaq/system_noise_floor'
+
+
+@app.route(route_alfnafaq_system_noise_floor)
+@login_required
+def alfnafaq_system_noise_floor():
+    recordPostHistory(route_alfnafaq_system_noise_floor)
+    return render_template('/faq/alfna/system_noise_floor.html')
+
+
+route_alfnafaq_rload_usage = '/alfnafaq/rload_usage'
+
+
+@app.route(route_alfnafaq_rload_usage)
+@login_required
+def alfnafaq_rload_usage():
+    recordPostHistory(route_alfnafaq_rload_usage)
+    return render_template('/faq/alfna/rload_usage.html')
+
+
 #### MQA Rules
 @app.route('/mqarules/ft')
 @login_required
@@ -2033,6 +2105,8 @@ def getPostCategoryByRoute(route):
             return 'mbpfaq'
         elif route == '/mqafaq':
             return 'mqafaq'
+        elif route == '/wpefaq':
+            return 'wpefaq'
         elif route == '/blog':
             return 'blog'
         elif route == '/iccapfaq':
@@ -2049,6 +2123,10 @@ def getCategory(txt):
         return "MBP Script Tutorial"
     elif txt == "mbpfaq":
         return "MBP FAQ"
+    elif txt == "wpefaq":
+        return "WPE FAQ"
+    elif txt == "alfnafaq":
+        return "ALFNA FAQ"
     elif txt == "video":
         return "Video Demos"
     elif txt == "mqarules":
@@ -2086,9 +2164,9 @@ def dashboard():
     mbp_ct = mbpPost.__len__()
     mqaPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mqarules')).all()
     mqa_ct = mqaPost.__len__()
-    wpePost = Post.query.filter((Post.category == 'wpe')).all()
+    wpePost = Post.query.filter((Post.category == 'wpefaq')).all()
     wpe_ct = wpePost.__len__()
-    alfnaPost = Post.query.filter((Post.category == 'alfna')).all()
+    alfnaPost = Post.query.filter((Post.category == 'alfnafaq')).all()
     alfna_ct = alfnaPost.__len__()
     videoPost = Post.query.filter((Post.category == 'video')).all()
     video_ct = videoPost.__len__()
@@ -2263,9 +2341,9 @@ def dashboard_chart_view():
     mbp_ct = mbpPost.__len__()
     mqaPost = Post.query.filter((Post.category == 'mqafaq') | (Post.category == 'mqarules')).all()
     mqa_ct = mqaPost.__len__()
-    wpePost = Post.query.filter((Post.category == 'wpe')).all()
+    wpePost = Post.query.filter((Post.category == 'wpefaq')).all()
     wpe_ct = wpePost.__len__()
-    alfnaPost = Post.query.filter((Post.category == 'alfna')).all()
+    alfnaPost = Post.query.filter((Post.category == 'alfnafaq')).all()
     alfna_ct = alfnaPost.__len__()
     videoPost = Post.query.filter((Post.category == 'video')).all()
     video_ct = videoPost.__len__()
@@ -2657,13 +2735,13 @@ def userViewHistory(uid):
             datesForX.append(dd[0])
 
         datesForX.sort()
-        userViewOverTime_chart.x_labels=datesForX
+        userViewOverTime_chart.x_labels = datesForX
         # 4.1 loop by date, for each date, get the count for current category, create a list of counts
         for cat in cateNames:
             numListInEachCat = []
-            #loop by date, for each date, get the count for current category, create a list of counts
+            # loop by date, for each date, get the count for current category, create a list of counts
             for dd in datesForX:
-                numListInEachCat.append(getNumberInACatOnADay(uid,cat,dd))
+                numListInEachCat.append(getNumberInACatOnADay(uid, cat, dd))
 
             # 4.2 add the category + count list into the list A.
             userViewOverTime_chart.add(cat, numListInEachCat)
@@ -2675,20 +2753,21 @@ def userViewHistory(uid):
                                userViewOverTime_graph=userViewOverTime_graph)
 
 
-def getNumberInACatOnADay(uid, category,date):
-    postHisOnADay = PostHistory.query.filter((PostHistory.user_id == uid )).all()
+def getNumberInACatOnADay(uid, category, date):
+    postHisOnADay = PostHistory.query.filter((PostHistory.user_id == uid)).all()
     count = 0
     for v in postHisOnADay:
         route = v.route
-        cat=getCategory(getPostCategoryByRoute(route))
+        cat = getCategory(getPostCategoryByRoute(route))
         if (cat == category):
             dd = str(v.date)[:10]
             if dd == date:
-                count=count+1
+                count = count + 1
 
     if count == 0:
         return None
     return count
+
 
 ## download files, all routes must end with 'download' for data analysis
 route_download_ft_rule = '/mqarules/ft/ft_example/download'

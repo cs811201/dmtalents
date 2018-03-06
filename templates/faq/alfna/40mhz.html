@@ -1,0 +1,41 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>40MHz Limitation</h2>
+<h3>ALFNA FAQ</h3>
+<hr>
+
+ALFNA’s High Freq Voltage LNA can measure 1/f noise up to 40MHz; however, this capability may be limited by device’s roll-off frequency. Below is the illustration of the small signal circuitry that highlights the parasitics which play a role in determining the roll-off frequency.
+
+<br/><br/>
+
+
+<br/><img src="/static/faq/alfna/40mhz/3.png" alt="Image"/><br/><br/>
+
+Looking at the circuitry from either Input Port or Output Port, the roll-off frequency is the minimum of the two.
+
+<br/><img src="/static/faq/alfna/40mhz/0.png" alt="Image"/><br/><br/>
+Where:
+
+<br/><img src="/static/faq/alfna/40mhz/1.png" alt="Image"/>
+
+<br/><img src="/static/faq/alfna/40mhz/2.png" alt="Image"/><br/><br/>
+
+Cin and Cout is parasitic capacitance of input and output port, respectively.<br/>
+rin and rout is equivalent input and output resistance, respectively.<br/><br/>
+When High Freq Voltage LNA is used, RLoad has impact on the roll-off frequency effectively.<br/><br/>
+Please refer to the <a href="/alfnafaq/rload_usage" target="_blank">FAQ for more details about how to set RLoad in a
+    proper way.</a> <br/><br/>
+
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

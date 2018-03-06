@@ -36,8 +36,9 @@
                 <label><input type="checkbox" name='mbp' id='mbp' value="mbp" checked>MBP</label>&nbsp;&nbsp;&nbsp;&nbsp;
                 <label><input type="checkbox" name='mqa' id='mqa' value="mqa" checked>MQA</label>&nbsp;&nbsp;&nbsp;&nbsp;
                 <label><input type="checkbox" name='video' id='video' value="video" checked>Video</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                <!--<label><input type="checkbox" name='wpe' value="wpe" disabled>WaferPro</label>&nbsp;&nbsp;&nbsp;&nbsp;-->
-                <!--<label><input type="checkbox" name='alfna' value="alfna" disabled>A-LFNA</label>-->
+                <label><input type="checkbox" name='wpe' id='wpe' value="wpe" checked>WPE</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input type="checkbox" name='alfna' id='alfna' value="alfna" checked>ALFNA</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
                 <button type="button" id='checkButton' name='checkButton' onclick="changeCheckboxStatus()">
                     Uncheck ALL
                 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,17 +49,6 @@
         </div>
 
 
-        <!--<div style="float:right;width=25%; clear:both">-->
-        <!--<label>Search in:</label>-->
-        <!--<select name="category">-->
-        <!--<option value="all">All</option>-->
-        <!--<option value="mbpst">MBP Script Tutorial</option>-->
-        <!--<option value="mbpfaq">MBP FAQ</option>-->
-        <!--<option value="mqarules">MQA Rules</option>-->
-        <!--<option value="mqafaq">MQA FAQ</option>-->
-        <!--<option value="blog">Blog</option>-->
-        <!--</select>-->
-        <!--</div>-->
 
     </form>
 
@@ -79,11 +69,15 @@ function uncheckAllSearchOptions(){
     var mbp=document.getElementById('mbp');
     var mqa=document.getElementById('mqa');
     var video=document.getElementById('video');
+    var wpe=document.getElementById('wpe');
+    var alfna=document.getElementById('alfna');
     blog.checked = false;
          iccap.checked = false;
          mbp.checked = false;
          mqa.checked = false;
          video.checked = false;
+         wpe.checked = false;
+         alfna.checked = false;
 }
 uncheckAllSearchOptions();
 if({{doiccap}}){
@@ -101,6 +95,13 @@ if({{doblog}}){
 if({{dovideo}}){
     document.getElementById('video').checked=true;
 }
+if({{dowpe}}){
+    document.getElementById('wpe').checked=true;
+}
+if({{doalfna}}){
+    document.getElementById('alfna').checked=true;
+}
+
 if({{isopen}}){
     openSearchBar();
 }else{
@@ -115,6 +116,8 @@ function changeCheckboxStatus(){
     var mbp=document.getElementById('mbp');
     var mqa=document.getElementById('mqa');
     var video=document.getElementById('video');
+    var wpe=document.getElementById('wpe');
+    var alfna=document.getElementById('alfna');
     var checkAll='Check All'
     var uncheckAll='Uncheck All'
 
@@ -124,6 +127,8 @@ function changeCheckboxStatus(){
         mbp.checked = true;
         mqa.checked = true;
         video.checked = true;
+        wpe.checked = true;
+        alfna.checked = true;
         checkButton.innerHTML=uncheckAll
     }else{
          blog.checked = false;
@@ -131,6 +136,8 @@ function changeCheckboxStatus(){
          mbp.checked = false;
          mqa.checked = false;
          video.checked = false;
+         wpe.checked = false;
+         alfna.checked = false;
          checkButton.innerHTML=checkAll
 
     }

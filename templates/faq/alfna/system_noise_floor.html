@@ -1,0 +1,42 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Understand System Noise Floor</h2>
+<h3>ALFNA FAQ</h3>
+<hr>
+ALFNA system’s LNA noise floor is stated as the following in the brochure, there are 3 voltage LNAs and 2 current LNAs, as follows, they are a major factor of the system’s overall noise floor; however, there are more to consider when we understand the validity of the measurement data.
+
+<br/>
+
+
+<br/><img src="/static/faq/alfna/system_noise_floor/2.png" alt="Image"/><br/><br/>
+
+In the RawData view of a measured 1/f curve, the software presents us the following additional info related to the measurement, as labeled on the graph, to help us understand the validity of the data.
+<br/>
+<ul>
+    1. the DUT’s noise data, the red is the raw measured data, which has a central yellow curve that is
+    post-processed data with smoothness.<br/>
+    2. VAMP voltage LNA amplifier’s input noise.<br/>
+    3. Thermal noise level of the RLoad.<br/>
+    4. SMU noise, such as a HRSMU of B1500A.<br/>
+    5. Roll-off frequency.<br/>
+</ul>
+
+<img src="/static/faq/alfna/system_noise_floor/1.png" alt="Image"/><br/><br/>
+The system’s noise floor is considered as the combination of 2, 3 and 4. <br/>
+<ul>
+    1. Any part of the DUT’s noise data that is lower than either one of the curves becomes invalid data;<br/>
+    2. and, DUT’s noise data after roll-off frequency is also invalid.
+</ul>
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
