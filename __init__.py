@@ -3772,6 +3772,17 @@ def pyrfs_chap2_d1():
     return render_template('pyrfs/chap02/format.html')
 
 
+route_pyrfs_chap2_d2 = '/pyrfs/chap2.d2'
+
+
+@app.route(route_pyrfs_chap2_d2)
+@login_required
+def pyrfs_chap2_d2():
+    recordPostHistory(route_pyrfs_chap2_d2)
+    return render_template('pyrfs/chap02/vdr_format.html')
+
+
+
 #########################
 if __name__ == '__main__':
     app.run()

@@ -1,0 +1,88 @@
+{% extends "pyrfs/pyrfs_index.html" %}
+{{ super() }}
+{% block pyrfsmain %}
+<h2>Conditions Unit Control</h2>
+<hr>
+<div overflow="scroll">
+    This example shows how to control each Condition’s display name(label) and unit separately.<br/><br/>
+    As shown below, in case we want to export W in um(column A) and L in nm(column B).
+
+    <br/><img src="/static/pyrfs/chap02/15_vdr_format/1.png"><br/><br/>
+
+    To do so, we will be needing to use vdr_format option when adding these conditions, as shown below on line 28 and 29
+    in the code. <br/><br/>
+    <code>
+        Vdr_format = “$.v*$.u” </code>
+    <br/>
+    will cause each Condition([W, L, T]) to perform the “value*unit” expression. <br/><br/>
+    <em>$.</em> Indicates the current Condition, and the accepted(built-in) properties are:
+    <ul>
+        $.u is for its unit<br/>
+        $.n is for its name<br/>
+        $.d is for display_name<br/>
+        $.v is for value
+
+    </ul>
+
+    <br/><img src="/static/pyrfs/chap02/15_vdr_format/2.png"><br/><br/>
+
+    We have to point out that one may wonder that the W.unit=1E6 is really not a unit, it is more like a scaling factor
+    used on line 29 as a workaround, still this is a pretty neat workaround to control each condition’s unit
+    or expression separately. <br/><br/>
+
+    For example, we could also convert Temperature from Celsius to Kelvin if we wish. <br/><br/>
+
+    PS: Note that the <em>display_name</em> are used automatically in the final output as we defined on line 15, 18 and
+    21.<br/><br/>
+
+    The complete example Python code is provided below for copy-paste:<br/>
+    <pre>
+import os
+
+import pyrfs as rfs
+
+this_file_path = os.path.dirname(__file__)
+project_path = os.path.join(this_file_path, "data", "001_qa", "qa_nchTT")
+config = {'result_dirs': project_path}
+dp = rfs.create_data_provider(rfs.MQA_DataProvider, config)
+
+dp.query(rule_group="02_Model_Scalability", rule="Rule_4001", check="Check_01")
+
+Idsat = dp.targets["idsat"]
+
+W = dp.conditions["w"]
+W.display_name = "Width(um)"
+W.unit=1E6
+L = dp.conditions["l"]
+L.display_name = "Length(nm)"
+L.unit=1E9
+T = dp.conditions["t"]
+T.display_name = "T"
+T.unit=1
+
+
+
+table = rfs.ReportTable(name="idsat_table_wlt_format_unit")
+rightLayout = rfs.RightLayout(table)
+rightLayout.add_constraint([W, L, T],
+                           vdr_format ="$.v*$.u"
+                           )
+
+rightLayout.add_constraint(Idsat)
+rfs.fill_in(table)
+rfs.save(report=table, out_dir=this_file_path)
+
+
+    </pre>
+    <br/><br/>
+
+    Thanks!
+    <br>
+
+    <br>
+
+    <br>
+    <br>
+
+</div>
+{% endblock %}

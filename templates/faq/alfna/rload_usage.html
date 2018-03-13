@@ -6,11 +6,17 @@
 <hr>
 
 
-When measuring 1/f noise using Voltage LNAs, RLoad has important impact on affecting the measurable signal, <a href="/alfnafaq/system_noise_floor" target="_blank">system noise floor</a> , and roll-off frequency.
+When measuring 1/f noise using Voltage LNAs, RLoad has important impact on affecting the measurable signal, <a
+        href="/alfnafaq/system_noise_floor" target="_blank">system noise floor</a> , and roll-off frequency.
 <br/><br/>
-Luckily ALFNA comes with 25 selections of RLoad ranging from 0 Ohm to 100M Ohm; however, we need to understand how to properly set it in the 1/f noise and RTN(Random Telegraph Noise) measurement.
+
+As shown below, when ALFNA measures current noise from the device, it gets translated to voltage noise by dragging that current through a load resistor(RLoad). With a larger load resistor, we get better resolution of the voltage noise. With a smaller load resistor, we get better bandwidth and less contamination from the thermal noise of the resistor.
 <br/><br/>
-On one hand, RLOAD defines the S/N ratio of RawData from noise floor. The measured raw noise data of DUT becomes larger by using larger value of RLOAD, but the thermal noise introduced by RLoad also becomes larger.
+So, it requires a good understanding of how to optimize RLoad value for 1/f noise measurement per device characterization and bias conditions.
+
+<br/><img src="/static/faq/alfna/rload_usage/1.png" alt="Image"/><br/><br/>
+
+On one hand, RLOAD defines the S/N ratio of RawData from noise floor. As explained at the beginning, the measured raw noise data of DUT becomes larger by using larger value of RLOAD, but the thermal noise introduced by RLoad also becomes larger.
 <br/>
 <ul>
     (1) If the DUT’s noise is much higher than ALFNA’s system noise floor, then we can set smaller RLoad to get higher
@@ -20,7 +26,8 @@ On one hand, RLOAD defines the S/N ratio of RawData from noise floor. The measur
 </ul>
 On the other hand, the device’s noise is depending on geometry size of Gate, so the RLoad should be set by considering this geometry size dependency.
 <br/><br/>
-In practice, we have to decide RLoad by trial-and-error, and luckily ALFNA allows us to sweep RLoad easily.<br/><br/>
+In practice, we have to decide RLoad by trial-and-error, and luckily ALFNA comes with 25 selections of RLoad ranging from 0 Ohm to 100M Ohm, and the software allows us to sweep RLoad easily.
+<br/><br/>
 The following test result shows the trade-off by sweeping RLoad in 3 different values, each is 10X larger than the previous one. As we can see from the Svd result, smaller RLoad gives us higher roll-off freq; however, it hits the system noise floor at the low freq section, by increasing the RLoad from 100 Ohm to 1K Ohm to 10K Ohm, we see the overall 1/f noise trace got better and better, and in the end, we got the most valid Sid result after all.
 <br/>
 <br/><img src="/static/faq/alfna/rload_usage/0.png" alt="Image"/><br/><br/>
