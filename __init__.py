@@ -1816,6 +1816,17 @@ def mqarule_vtgm():
     return render_template('/mqarules/rules/vtgm.html')
 
 
+route_mqarules_compdiff_a = '/mqarules/compdiff_a'
+
+
+@app.route(route_mqarules_compdiff_a)
+@login_required
+def mqarule_compdiff_a():
+    recordPostHistory(route_mqarules_compdiff_a)
+    return render_template('/mqarules/rules/compdiff_a.html')
+
+
+
 #### Video Demos
 route_video = '/video'
 
@@ -2999,6 +3010,18 @@ def download_crss_rule():
     recordPostHistory(route_download_crss_rule)
     return send_file('static/mqarules/crss/crss_ciss_coss.rule',
                      attachment_filename='crss_ciss_coss.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_compdiff_a_rule = '/mqarules/compdiff_a/rule/download'
+
+
+@app.route(route_download_compdiff_a_rule)
+@login_required
+def download_compdiff_a_rule():
+    recordPostHistory(route_download_compdiff_a_rule)
+    return send_file('static/mqarules/compdiff_a/compDiff_meas_within_corners.zip',
+                     attachment_filename='compDiff_meas_within_corners.zip', mimetype='application/zip', as_attachment=True)
+
 
 
 #### Script Zip files downloads

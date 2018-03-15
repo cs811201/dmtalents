@@ -1,0 +1,105 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: Cgs Cgd
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Check if Measurement Falls Outside Model Corners</h2>
+<h3>MQA Rules</h3>
+<hr>
+This application note introduces a function to help us check and report if measurement falls out of model corners(TT/SS/FF, etc.) This function would be quite useful where model corners are tight and it’s difficult to tell just visually.
+<br/><br/>
+<i>Download link for files to reproduce this example in MQA is provided at the end of this note, including example data,
+    model library and MQA Rule file.</i><br/><br/>
+It is going to use a built-in check function called
+<mark>CompDiff()
+</mark> newly introduced in MQA 2016 HF2, the result is shown below, it flags Warnings or Errors if any points of the measurement data were out of a user defined range or boundary.
+
+
+<br/><img src="/static/mqarules/compdiff_a/1.png" border="1px"><br/><br/>
+
+
+In the above screenshot, one point on the No.1 plot is flagged as a Warning, whereas a point on the No.2 plot is caught as an Error.
+<br/><br/>
+The syntax of the CompDiff() function for this application is as follows:
+<ul>
+    <em>CompDiff(p, x, y, "<font style='color:red'>RefRange</font>=FF, (FF+TT)/2, (SS+TT)/2, SS")</em>
+
+</ul>
+The key option RefRange has the following format:
+<ul>
+    <em><font style='color:red'>RefRange</font> = 1_err_min , 2_warn_min, 3_warn_max, 4_err_max</em><br/>
+    Which defines an error bar as follows:
+    <br/><img src="/static/mqarules/compdiff_a/4.png" border="1px"><br/><br/>
+
+</ul>
+So, the example here defines the warning boundary to be half way from TT up to FF, and half way from TT down to SS; and the error boundary is FF and SS.
+<br/>
+
+<br/><img src="/static/mqarules/compdiff_a/2.png" border="1px"><br/><br/>
+
+
+Please be noted that, in the RefRange option we can use either the corner’s original names(circled in red) from foundry model library, or use Alias names(circled in blue) which is editable in ModelInfo Setting, as shown above.
+<br/><br/>
+It’s recommended to use proper Alias names because (1) the original corner names often are very long but Alias names could be shorter, (2) the original corner names could be different from library to library; however, by assigning consistent Alias names we can keep our Rule unchanged.
+<br/><br/>
+Note, when we start to edit the Alias names, the <img src="/static/mqarules/compdiff_a/6.png"
+                                                      border="1px">  icon to the right will become available, we must click it to confirm the change, otherwise the change will be lost (even hit Enter on the keyboard has no effect). As shown below.
+<br/>
+
+
+<br/><img src="/static/mqarules/compdiff_a/5.png" border="1px"><br/><br/>
+
+<br/>
+
+Here is the complete rule for copy-paste.
+
+<pre>
+[Label:162619_1:title=Check Ids_Vgs_Vbs]
+ [Condition:devtype=1]
+[Option:datablock=Ids_Vgs_Vbs:simulation=yes]
+[Loops
+: x=Vgs
+: p=Vbs
+: p1=Vds
+: p2=W
+: p3=L
+: p4=T
+]
+[Target
+:y1=Ids
+]
+[Check  :01:kink of Ids:CheckKink2d(p,x,y1):error:Kink occurs]
+[Compare:11:Comp Ids:CompDiff(vgs,y1,"RefRange=FF,(FF+TT)/2,(SS+TT)/2,SS"):error:Meas out of corners]
+[Corner:20: Check Meas within Corners:CompDiff(vgs,y1,"RefRange=FF,(FF+TT)/2,(SS+TT)/2,SS"): error:Meas out of corners]
+
+
+</pre>
+<br/>
+Note, the CompDiff() function is implemented in both [Compare] and [Corner] check functions, which means we can create either a Compare or a Corner QA project.
+<br/>
+
+Here is the <a href="/mqarules/compdiff_a/rule/download" target="_blank">download link for this
+    example(compDiff_meas_within_corners.zip)</a>, please unzip it after downloading, it contains the following files for us to re-produce the result in MQA(version 2016.1 HF2 and above).
+<ul>
+    <li>data_W_10.0_L_1.0_T_25.0.mea, example data file for the warning</li>
+    <li>data_W_10.0_L_10.0_T_25.0.mea, example data file for the error</li>
+    <li>Hb3v3.lib, example BSIM3 model library with TT/SS/FF/SF/FS corners</li>
+    <li>test.rule, the MQA rule file.</li>
+    <li>rule.index, the Rule index file that calls/links the test.rule file.</li>
+
+
+</ul>
+
+<br/>
+Thanks!
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
