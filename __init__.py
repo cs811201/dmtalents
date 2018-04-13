@@ -197,7 +197,7 @@ def index():
 
     faqPost = Post.query.filter(
         (Post.category == 'mqafaq') | (Post.category == 'mbpfaq') | (Post.category == 'iccapfaq') | (
-            Post.category == 'wpefaq')|(Post.category == 'alfnafaq')).all()
+            Post.category == 'wpefaq') | (Post.category == 'alfnafaq')).all()
     faqCt = faqPost.__len__()
     g.__setattr__('dombp', True)
 
@@ -880,6 +880,13 @@ def mbpstchap3_23():
 def mbpstchap3_24():
     recordPostHistory('/mbpst/chap3.24')
     return render_template('/mbpst/Chap3/Vth_gm.html')
+
+
+@app.route('/mbpst/chap3.25')
+@login_required
+def mbpstchap3_25():
+    recordPostHistory('/mbpst/chap3.25')
+    return render_template('/mbpst/Chap3/IdealityFactor.html')
 
 
 @app.route('/mbpst/chap4.1')
@@ -1824,7 +1831,6 @@ route_mqarules_compdiff_a = '/mqarules/compdiff_a'
 def mqarule_compdiff_a():
     recordPostHistory(route_mqarules_compdiff_a)
     return render_template('/mqarules/rules/compdiff_a.html')
-
 
 
 #### Video Demos
@@ -3020,8 +3026,8 @@ route_download_compdiff_a_rule = '/mqarules/compdiff_a/rule/download'
 def download_compdiff_a_rule():
     recordPostHistory(route_download_compdiff_a_rule)
     return send_file('static/mqarules/compdiff_a/compDiff_meas_within_corners.zip',
-                     attachment_filename='compDiff_meas_within_corners.zip', mimetype='application/zip', as_attachment=True)
-
+                     attachment_filename='compDiff_meas_within_corners.zip', mimetype='application/zip',
+                     as_attachment=True)
 
 
 #### Script Zip files downloads
@@ -3502,11 +3508,11 @@ route_download_mqarule_vtgm = '/mqarules/vtgm/download'
 
 
 @login_required
-@app.route(route_download_mqafab_mea_data_zip)
+@app.route(route_download_mqarule_vtgm)
 def download_mqarule_vtgm():
-    recordPostHistory(route_download_mqafab_mea_data_zip)
-    return send_file('static/faq/mqa/meas_qa/example_mdm_data_files.zip',
-                     attachment_filename='example_mdm_data_files.zip', mimetype='application/zip', as_attachment=True)
+    recordPostHistory(route_download_mqarule_vtgm)
+    return send_file('static/mqarules/vtgm/vth_gm.rule',
+                     attachment_filename='vth_gm.rule', mimetype='text/plain', as_attachment=True)
 
 
 route_download_bsim4_7_model = '/mqarules/vtgm/model/download'
@@ -3518,6 +3524,40 @@ def download_mqarule_vtgm_bsim4_7_model():
     recordPostHistory(route_download_bsim4_7_model)
     return send_file('static/mqarules/vtgm/bsim4.7.l',
                      attachment_filename='bsim4.7.l', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mbpst_IF_model = '/mbpst/idealityfactor/npnmodel/download'
+
+
+@login_required
+@app.route(route_download_mbpst_IF_model)
+def download_mbpst_IF_model():
+    recordPostHistory(route_download_mbpst_IF_model)
+    return send_file('static/mbpst/Chap3/images/3.25/gp_model.l',
+                     attachment_filename='gp_model.l', mimetype='text/plain', as_attachment=True)
+
+
+route_download_mbpst_IF_data = '/mbpst/idealityfactor/data/download'
+
+
+@login_required
+@app.route(route_download_mbpst_IF_data)
+def download_mbpst_IF_data():
+    recordPostHistory(route_download_mbpst_IF_data)
+    return send_file('static/mbpst/Chap3/images/3.25/data_area_1.0_areab_1.0_areac_1.0_T_25.0.mea',
+                     attachment_filename='data_area_1.0_areab_1.0_areac_1.0_T_25.0.mea', mimetype='text/plain',
+                     as_attachment=True)
+
+
+route_download_mbpst_IF_zip = '/mbpst/idealityfactor/script/download'
+
+
+@login_required
+@app.route(route_download_mbpst_IF_zip)
+def download_mbpst_idealityfactor_script():
+    recordPostHistory(route_download_mbpst_IF_zip)
+    return send_file('static/mbpst/Chap3/images/3.25/mbp_script.zip',
+                     attachment_filename='mbp_script.zip', mimetype='application/zip', as_attachment=True)
 
 
 ### Upload a file
@@ -3803,7 +3843,6 @@ route_pyrfs_chap2_d2 = '/pyrfs/chap2.d2'
 def pyrfs_chap2_d2():
     recordPostHistory(route_pyrfs_chap2_d2)
     return render_template('pyrfs/chap02/vdr_format.html')
-
 
 
 #########################

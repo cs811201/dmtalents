@@ -1,0 +1,102 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>Ideality Factor</h2>
+<hr>
+This example shows how to analyze Ideality Factor for bipolar transistors in MBP.
+<br/><br/>
+According to <a href="https://en.wikipedia.org/wiki/Diode"
+                target="_blank">Wikipedia</a> , for pn junction diodes, the ideality factor
+<em>n</em> is known as the quality factor or sometimes emission coefficient. It typically varies from 1 to 2, and it’s set equal to 1 for the case of an “ideal” diode.
+
+<br/><br/>
+The ideality factor, <em>n</em>, is a useful figure-of-merit for bipolar transistors, for example,
+<em>n</em> is defined in the following formula in terms of collector current and base-emitter voltage.
+<br/><img src="/static/mbpst/Chap3/images/3.25/1.png" border="1px"><br/><br/>
+Where vt is the thermal voltage.
+<br/><img src="/static/mbpst/Chap3/images/3.25/2.png" border="1px"><br/><br/>
+And, K is the Boltzmann constant 1.38064852E−23, and  q is the magnitude of charge of an electron 1.6021766208E−19. And, T is temperature in Kelvin.
+<br/><br/>
+In this example, as the graph shows below, we have the Ic and Ib vs Vbe curves data as input, as well as the example gummel poon npn bjt model, download links are as follows.
+<br/>
+<ul>
+	<li><a href="/mbpst/idealityfactor/data/download" target="_blank">example data file</a> </li>
+	<li><a href="/mbpst/idealityfactor/npnmodel/download" target="_blank">example model file</a> </li>
+
+</ul>
+
+<img src="/static/mbpst/Chap3/images/3.25/3.png" border="1px"><br/><br/>
+
+We are going to apply the Ideality Factor(IF) equation in MBP Script, and eventually generate the IF vs Vbe plot. As shown below, we can tell that in the linear region, both the measurement’s and simulation’s IF are very close to 1.
+
+<br/><img src="/static/mbpst/Chap3/images/3.25/4.png" border="1px"><br/><br/>
+
+After start MBP GUI, please firstly switch to a “bjt -> gp” (hspice) project, as shown below.
+<br/><img src="/static/mbpst/Chap3/images/3.25/0.png" border="1px"><br/><br/>
+
+And, please open MBP Script window via menu “Scrip -> Script Project”.<br/><br/>
+
+Now, in the IMV tab, under imv.imv, let’s firstly create a “New -> Group”, name it IF.
+<br/><img src="/static/mbpst/Chap3/images/3.25/8.png" border="1px"><br/><br/>
+
+And, under IF, create a “New -> Data”, name it Ideality.<br/><br/>
+As shown below, the IF equation is implemented in the funcIF() trans function, on line 8 – 25.
+
+<br/><img src="/static/mbpst/Chap3/images/3.25/5.png" border="1px"><br/><br/>
+After the Ideality target is defined, we can create a “New -> Graph” under it, name it IF_Vbe, as shown below.
+<br/>Assign Vbe to X-axis and IdealityFactor to Y-axis.
+
+<br/><img src="/static/mbpst/Chap3/images/3.25/6.png" border="1px"><br/><br/>
+Save MBP Script, and go back to MBP main GUI, refresh or open the IMV Pages navigator panel, we shall see the IF_Vbe graphs.
+<br/><br/>
+When zoomed in, we can see that in the Vbe range of 0.2 to 0.6, this device’s collector current’s IF is nearly 1.
+
+<br/><img src="/static/mbpst/Chap3/images/3.25/7.png" border="1px"><br/><br/>
+
+
+Here is the code for copy-paste.<br/>
+We can also <a href="/mbpst/idealityfactor/script/download" target="_blank">download the entire MBP Scrip .zip file</a> for this example project(use the Load icon from MBP Script window to load it).
+
+<pre class="code">
+DATA load(sfunc select){
+	DATA m = select("IcIb_Vbe_Vbc");
+	m=m.group("Vbe");
+	m = m.transSubToPointArray(funcIF,"IdealityFactor");
+	return m;
+}
+void funcIF(POINT[] to, DATA from){
+
+	double[] vbe = from ->"Vbe";
+	double[] ic = from ->"ic";
+	for(int i=0; i< ic.length; i++){
+		ic[i]=Math.log(Math.abs(ic[i]));
+	}
+	double[] der = vbe.derivative(ic);
+
+	double temp = from ->"T";
+	double q = 1.60218e-19;
+	double k = 1.38066e-23;
+
+	for(int i=0; i< ic.length;i++){
+		to[i]->"IdealityFactor"=(der[i]*(q/(k*(temp+273))));
+	}
+}
+
+</pre>
+
+Similarly, we could also get the Ideality Factor for Ib, or Ie(=Ic+Ib).
+
+<br/>
+<br/>
+
+Thanks!
+
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
