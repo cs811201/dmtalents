@@ -1628,6 +1628,15 @@ def alfnafaq_rload_usage():
     return render_template('/faq/alfna/rload_usage.html')
 
 
+route_alfnafaq_setod = '/alfnafaq/setod'
+
+
+@app.route(route_alfnafaq_setod)
+@login_required
+def alfnafaq_setod():
+    recordPostHistory(route_alfnafaq_setod)
+    return render_template('/faq/alfna/setod.html')
+
 #### MQA Rules
 @app.route('/mqarules/ft')
 @login_required
@@ -2645,6 +2654,7 @@ def userViewHistory(uid):
 
     if flag:
         # print('uid', uid)
+
         uname = getUserNameById(uid)
         postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         vl = []
@@ -2729,6 +2739,7 @@ def userViewHistory(uid):
         # 4.2 add the category + count list into the list A.
         userViewOverTime_chart = pygal.StackedLine(fill=True, x_label_rotation=-30, height=500)
         userViewOverTime_chart.title = 'View # Over Time by Category'
+
         postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         # get how many Category
 
@@ -2740,25 +2751,29 @@ def userViewHistory(uid):
             cateList.append(getCategory(getPostCategoryByRoute(route)))
             dateList.append(str(v.date)[:10])
 
-        iz = Counter(cateList).items()  # category, count
-        cateNames = []
-        for ss in iz:
-            cateNames.append(ss[0])
+        # iz = Counter(cateList).items()  # category, count
+        cateNames = list(set(cateList))
+
+        # for ss in iz:
+        #     cateNames.append(ss[0])
         # get all the dates from Start to Current
-        dateCounts = []
-        idates = Counter(dateList).items()  # date, count
-        datesForX = []
-        for dd in idates:
-            datesForX.append(dd[0])
+        # dateCounts = []
+        # idates = Counter(dateList).items()  # date, count
+        datesForX = list(set(dateList))
+        # for dd in idates:
+        #     datesForX.append(dd[0])
 
         datesForX.sort()
         userViewOverTime_chart.x_labels = datesForX
+
         # 4.1 loop by date, for each date, get the count for current category, create a list of counts
+
         for cat in cateNames:
             numListInEachCat = []
             # loop by date, for each date, get the count for current category, create a list of counts
+
             for dd in datesForX:
-                numListInEachCat.append(getNumberInACatOnADay(uid, cat, dd))
+                numListInEachCat.append(getNumberInACatOnADay(postHis, cat, dd))
 
             # 4.2 add the category + count list into the list A.
             userViewOverTime_chart.add(cat, numListInEachCat)
@@ -2770,10 +2785,10 @@ def userViewHistory(uid):
                                userViewOverTime_graph=userViewOverTime_graph)
 
 
-def getNumberInACatOnADay(uid, category, date):
-    postHisOnADay = PostHistory.query.filter((PostHistory.user_id == uid)).all()
+def getNumberInACatOnADay(postHis, category, date):
+    # postHis = PostHistory.query.filter((PostHistory.user_id == uid)).all()
     count = 0
-    for v in postHisOnADay:
+    for v in postHis:
         route = v.route
         cat = getCategory(getPostCategoryByRoute(route))
         if (cat == category):

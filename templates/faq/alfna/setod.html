@@ -1,0 +1,81 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>SetOD and SetODvdlin</h2>
+<h3>ALFNA FAQ</h3>
+<hr>
+
+This application note explains what are SetOD_Vg and SetODvdlin_Vg built-in Setups for the 1/f noise and/or RTN measurement for FET devices, it applies to FET_3T, FET_4T, FET_5T and FET_6T, as shown below.
+<br/>
+
+
+<br/><img src="/static/faq/alfna/setod/7.png" alt="Image"/><br/><br/>
+
+The SetOD_Vg and SetODvdlin_Vg Setups are to sweep Vgs and determine the threshold voltage(Vth) of the DUT, then apply an Over Drive(OD) Vg shift based on the Vth value, which is to say that the 1/f noise and/or RTN is measured at Vgs = Vth + OD, where OD is user specified input, and at the same time Vds = Vds_Target and Vbs = Vbs_Target.
+
+<br/><br/>
+As shown below, the difference between the two Setups is that the SetODvdlin_Vg has an additional variable “Vds_Vdlin” used to determine Vth, it could be different from Vds_Target, whereas SetOD_Vg Setup will use the same Vds_Target to determine Vth as well as 1/f noise and/or RTN measurement.
+
+<br/><img src="/static/faq/alfna/setod/5.png" alt="Image"/><br/><br/>
+
+Note, please don’t get confused with Vgs_Start, Vgs_Stop and Vgs_Npts variables, they determine the Ids_Vgs DC sweep used to calculate the Vth, but they are not used for 1/f and/or RTN measurement. Similarly, Vds_Start, Vds_Stop and Vds_Npts are only used for the Ids_Vds DC sweep and are not used for 1/f and /or RTN measurement either.
+
+<br/><img src="/static/faq/alfna/setod/11.png" alt="Image"/><br/><br/>
+
+
+And, there are also two methods to calculate Vth, as shown below.
+<ul>
+    <li>Gm Max method</li>
+    <li>Constant Current method</li>
+</ul>
+
+<br/> We can switch between these two methods from the Configuration window, DC measurement tab.
+<br/><img src="/static/faq/alfna/setod/6.png" alt="Image"/><br/><br/>
+
+By default, ALFNA software uses the Gm Max method, it will firstly measure the Ids_Vgs sweep, find the max point on the gm curve, which is the first order derivative of the Ids_Vgs curve. Then, return the Vth per the equations illustrated in the graph below.
+
+<br/><img src="/static/faq/alfna/setod/4.png" alt="Image"/><br/><br/>
+
+When the Constant Current method is selected, ALFNA software will use the following method to determine Vth, as illustrated below.
+<br/><img src="/static/faq/alfna/setod/3.png" alt="Image"/><br/><br/>
+
+Before ALFNA 2018, there is only option to input Icon, no W/L scaling, so it won’t reflect device’s geometry. In ALFNA 2018, the Use scaling option is introduced, as shown below.
+
+
+<br/><img src="/static/faq/alfna/setod/1.png" alt="Image"/><br/><br/>
+
+The Use scaling option will take device’s W/L/NF into account that are defined in the Device Table in the Test Plan, as shown below. The scaling method will result in different Icon to intercept the Ids_Vgs curve when determining the Vth.
+
+<br/><img src="/static/faq/alfna/setod/2.png" alt="Image"/><br/><br/>
+
+
+
+For example, the above 3 DUTs with different W and L will lead to different reference Icon.<br/>
+<ul>
+    <li>Device 1: y=Icon*M*W/L = IuA*1*10u/10u = 1uA.</li>
+    <li>Device 2: y=1uA*1*5u/1.8u = 2.778uA</li>
+    <li>Device 3: y=1uA*1*2u/1.5u = 1.333uA</li>
+</ul>
+<br/>
+Below are the example Vth results when using different Icons in the Constant Current option for ALFNA’s test DUT.
+<br/>
+<ul>
+(1)	Icon =1e-7, vth = 1.093
+<br/><img src="/static/faq/alfna/setod/8.png" alt="Image"/><br/><br/>
+(2)	Icon = 1e-6, vth = 1.261
+<br/><img src="/static/faq/alfna/setod/9.png" alt="Image"/><br/><br/>
+(3)	Icon  = 1e-5, vth = 1.431
+<br/><img src="/static/faq/alfna/setod/10.png" alt="Image"/><br/><br/>
+</ul>
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
