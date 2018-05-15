@@ -1585,6 +1585,15 @@ def iccapfaq_link2pspice3():
     return render_template('/faq/iccap/link2pspice.html')
 
 
+
+route_iccapfaq_usersimfile = '/iccapfaq/usersimfile'
+
+
+@app.route(route_iccapfaq_usersimfile)
+@login_required
+def iccapfaq_usersimfile():
+    recordPostHistory(route_iccapfaq_usersimfile)
+    return render_template('/faq/iccap/usersimfile.html')
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'
@@ -1636,6 +1645,7 @@ route_alfnafaq_setod = '/alfnafaq/setod'
 def alfnafaq_setod():
     recordPostHistory(route_alfnafaq_setod)
     return render_template('/faq/alfna/setod.html')
+
 
 #### MQA Rules
 @app.route('/mqarules/ft')
@@ -2711,15 +2721,23 @@ def userViewHistory(uid):
         iz = Counter(cateList).items()  # category, count
 
         sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))
-        for ss in sortedIz:
-            cateNames.append(ss[0])
-            cateCounts.append(ss[1])
+        # for ss in sortedIz:
+        #     cateNames.append(ss[0])
+        #     cateCounts.append(ss[1])
 
-        userViewByCat_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
-                                        x_label_rotation=-30, height=500)
+        # userViewByCat_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
+        #                                 x_label_rotation=-30, height=500)
+        # userViewByCat_chart.title = 'View # by Category'
+        # userViewByCat_chart.x_labels = cateNames
+        # userViewByCat_chart.add("", cateCounts)
+        # userViewByCat_graph = userViewByCat_chart.render_data_uri()
+
+        userViewByCat_chart = pygal.Pie(style=style_userView, print_values=True, show_legend=True,
+                                        height=500)
         userViewByCat_chart.title = 'View # by Category'
-        userViewByCat_chart.x_labels = cateNames
-        userViewByCat_chart.add("", cateCounts)
+        for ss in sortedIz:
+            userViewByCat_chart.add(ss[0], ss[1])
+
         userViewByCat_graph = userViewByCat_chart.render_data_uri()
 
         # stackedLine for usage over time.
@@ -2740,7 +2758,7 @@ def userViewHistory(uid):
         userViewOverTime_chart = pygal.StackedLine(fill=True, x_label_rotation=-30, height=500)
         userViewOverTime_chart.title = 'View # Over Time by Category'
 
-        postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
+        #postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         # get how many Category
 
 
