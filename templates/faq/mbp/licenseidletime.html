@@ -1,0 +1,40 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>License Idle Time Options</h2>
+<h3>MBP FAQ</h3>
+<hr>
+
+As far as MBP's license is concerned, MBP comes with the feature to auto release(check in) licenses if one session of MBP is in idle for a certain period of time, so that another user can then open(check out) MBP as soon as a license is available.
+<br/><br/>
+As shown below, go to menu "Tool - Preferences", we can find the License Options.
+
+<br/><img src="/static/faq/mbp/licenseidletime/1.png"/><br/><br/>
+
+<ul>
+    <li>GUI License Idle Time(in minutes) is the core license.
+    </li>
+    <li>Normal License Idle Time(in minutes) refers to any advanced feature such as BSIMCMG, HiSIM_HV, etc that are not
+        included in
+        the core.
+    </li>
+
+</ul>
+
+<br/><br/>
+More, let's say we have MBP session A idled for a while and lost license, MBP session B took it. Then, when the session A user comes back, and clicks on MBP GUI, MBP(A) will try to obtain a license, if not available, MBP(A) will provide one last option to save the project before forcefully close it… anyhow, it's highly recommended that users to regularly save the work in MBP before he/she has to leave.
+
+
+<br/><br/>
+Thanks!
+
+
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

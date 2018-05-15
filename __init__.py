@@ -1308,6 +1308,14 @@ def mbpfaq_site_die():
     recordPostHistory(route_mbpfaq_site_die)
     return render_template('/faq/mbp/site_die.html')
 
+route_mbpfaq_idletime = '/mbpfaq/idletime'
+
+
+@app.route(route_mbpfaq_idletime)
+@login_required
+def mbpfaq_idletime():
+    recordPostHistory(route_mbpfaq_idletime)
+    return render_template('/faq/mbp/licenseidletime.html')
 
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
