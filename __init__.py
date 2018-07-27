@@ -1602,6 +1602,17 @@ route_iccapfaq_usersimfile = '/iccapfaq/usersimfile'
 def iccapfaq_usersimfile():
     recordPostHistory(route_iccapfaq_usersimfile)
     return render_template('/faq/iccap/usersimfile.html')
+
+
+route_iccapfaq_recentfiles = '/iccapfaq/recentfiles'
+
+
+@app.route(route_iccapfaq_recentfiles)
+@login_required
+def iccapfaq_recentfiles():
+    recordPostHistory(route_iccapfaq_recentfiles)
+    return render_template('/faq/iccap/recentfiles.html')
+
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'
@@ -1860,6 +1871,14 @@ def mqarule_compdiff_a():
     return render_template('/mqarules/rules/compdiff_a.html')
 
 
+route_mqarules_select = '/mqarules/select'
+
+
+@app.route(route_mqarules_select)
+@login_required
+def mqarule_select():
+    recordPostHistory(route_mqarules_select)
+    return render_template('/mqarules/rules/select.html')
 #### Video Demos
 route_video = '/video'
 
