@@ -1,0 +1,36 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Missing Search Tab in Help</h2>
+<h3>MQA FAQ</h3>
+<hr>
+This application note talks about an unnoticeable but very useful feature in MQA 2017’s user manual, the Search function.
+<br/><br/>
+We open the built-in user manual via menu “Help -> User Guide”.
+
+
+<br/><img src="/static/faq/mqa/helpfile/0.png" border="1px"><br/><br/>
+
+We will see the Search tab in the Help window, and we can effectively search for things like “RMS”, etc.
+<br/><img src="/static/faq/mqa/helpfile/2.png" border="1px"><br/><br/>
+
+Well, of course we take the Search function for granted; however, the reason you are guided to this note, is that this Search tab may be missing after you installed MQA 2017.
+<br/><br/>
+That’s most likely you have an older MQA version installed where the Search tab wasn’t enabled, and the help file cache didn’t get refreshed automatically.
+<br/><br/>
+So, to force the Help to be refreshed, let’s go to $HOME/AppData/Local/Keysight/Help on Windows, as shown below. We will see all(if installed) Keysight software’s Help folders, delete the old MQA folders and re-open the “Help -> User Guide” from MQA menu, it will be re-generated, and the Search tab should now show up.
+
+<br/><img src="/static/faq/mqa/helpfile/1.png" border="1px"><br/><br/>
+This trick also applies to:
+<ul>
+    <li>situations where the new version’s Help still shows old stuff, or missing(blank),</li>
+    <li>all other Keysight EESof software’s help contents, such as ADS, ICCAP and MBP.</li>
+</ul>
+clear the cache will help immediately.
+
+
+Thank you!
+<br/><br/><br/><br/>
+
+
+{% endblock %}

@@ -1511,6 +1511,17 @@ def download_bsim4_model_meas():
                      attachment_filename='bsim4_model.l', mimetype='text/rule', as_attachment=True)
 
 
+
+route_mqafaq_helpfile = '/mqafaq/helpfile'
+
+
+@app.route(route_mqafaq_helpfile)
+@login_required
+def mqafaq_helpfile():
+    recordPostHistory(route_mqafaq_helpfile)
+    return render_template('/faq/mqa/helpfile.html')
+
+
 #### ICCAP FAQ ######
 
 route_iccapfaq_saveInstToMDM = '/iccapfaq/saveInstToMDM'
