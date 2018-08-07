@@ -2108,6 +2108,14 @@ def videombp_sram():
     return render_template('/video/MBP_sram.html')
 
 
+route_video_MBP_recenter = '/video/MBP_recentering'
+@app.route(route_video_MBP_recenter)
+@login_required
+def videoMBP_recenter():
+    recordPostHistory(route_video_MBP_recenter)
+    return render_template('/video/MBP_ReCentering.html')
+
+
 ######################
 
 
