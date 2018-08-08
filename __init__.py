@@ -1624,6 +1624,17 @@ def iccapfaq_recentfiles():
     recordPostHistory(route_iccapfaq_recentfiles)
     return render_template('/faq/iccap/recentfiles.html')
 
+
+route_iccapfaq_lax_vm = '/iccapfaq/lax_vm'
+
+
+@app.route(route_iccapfaq_lax_vm)
+@login_required
+def iccapfaq_lax_vm():
+    recordPostHistory(route_iccapfaq_lax_vm)
+    return render_template('/faq/iccap/lax_vm.html')
+
+
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'

@@ -1,0 +1,39 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Specify a different Java version for Installation</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+Don’t be surprised if you found that there are many Java versions got installed on your laptop unknowingly.<br/>
+Windows system and many software may have installed Java as part of their installation. The problem is that different versions of Java may have gotten installed, and sometimes it could cause trouble.
+<br/><br/>
+I recently experienced the following problem when I tried to install ICCAP 2018 on Win7. The InstallAnywhere progressing bar showed up, as shown below, and it disappeared right after it reached 100% and nothing else happened afterwards, a few minutes later I realized that the installation just aborted.
+<br/><br/>
+<img src="/static/faq/iccap/lax_vm/1.jpg" alt="Image"/><br/><br/>
+
+
+Later I found out it’s due to InstallAnywhere was using a system default Java which may be corrupted.<br/><br/>
+The workaround is to specify a known good Java executable to carry out the ICCAP installation in terminal, as follows:
+<br/>
+<pre>
+    [iccap_installer] LAX_VM [path_to_java_executable]
+</pre>
+
+<br/>
+<img src="/static/faq/iccap/lax_vm/2.jpg" alt="Image"/><br/><br/>
+More, I learnt that this “LAX_VM” option can be applied to all Keysight EESof software installers, such as ICCAP, MBP, MQA or ADS.
+<br/><br/>
+Hope it solves your installation if it ran into similar problem, too. <br/>
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
