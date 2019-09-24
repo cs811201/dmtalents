@@ -1,0 +1,44 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Adjust Recent Opened File List</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+As shown below, ICCAP by default saves 5 recent opened model files in the Main window’s File menu.
+
+<br/><img src="/static/faq/iccap/recentfilelist/1.png"/><br/><br/>
+We can use an option called ICCAP_NUM_RECENT_FILES to adjust/increase the number of files, for example:
+<ul>
+    ICCAP_NUM_RECENT_FILES=10
+
+</ul>
+<br/>
+This option must be appended in the $HOME/hpeesof/config/iccap.cfg file, as shown below on line 2.
+<br/>
+Please manually create this directory/file, if it didn't exist.
+
+<br/><img src="/static/faq/iccap/recentfilelist/0.png"/><br/><br/>
+
+Then,  re-start ICCAP, and as we continue to open model files, we will eventually see up to 10 model files, as shown below. <br/>
+
+<br/><img src="/static/faq/iccap/recentfilelist/2.png"/><br/><br/>
+
+We can further tune up the number, say ICCAP_NUM_RECENT_FILES=20, but a long list may cause trouble for display, 10 to 15 usually sounds a good choice.
+<br/><br/>
+
+Furthermore, we can use another option called ICCAP_MAX_RECENT_CHARS to control the width of the menu pick(s) for recent files, the default width is 40 characters. For example, if we set ICCAP_MAX_RECENT_CHARS=80, we will see wider(more complete) file paths, as shown below.
+<br/><img src="/static/faq/iccap/recentfilelist/3.png"/><br/><br/>
+So, as we can see, ICCAP_NUM_RECENT_FILES and ICCAP_MAX_RECENT_CHARS often go together for a better view of history list.
+
+<br/><br/><br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Select Function
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Use Select Function in Rule</h2>
+<h3>MQA Rules</h3>
+<hr>
+
+MQA 2017 update 2.0 got released in July 2018, and it comes with a delightful new built-in function called Select. <br/>
+<br/>
+
+The new Select function allows us to process/manipulate data in Rule per user-defined conditions, where logical operators could be used, for example, we could select Ids where Vgs < Vth, and Vth is another target calculated early-on.  More syntax details can be found at the end of the note, or in MQA’s user manual.
+<br/><br/>
+
+A complete example demonstrated here is to calculate sub-threshold swing slope, as shown below, we demonstrated this in <a href="/mqafaq/slope" target="_blank">another FAQ where we hardcoded the Vgs lower and upper</a>. Now, we can use the Select function to dynamically determine Vgs lower and upper!
+
+<br/><img src="/static/faq/mbp/linefit/2.png"><br/><br/>
+
+The updated [Target] section of the Rule is as follows:
+<br/><img src="/static/mqarules/select/1.png" border="1px"/><br/><br/>
+
+The result is shown below in two steps. <br/><br/>
+Step 1, we show the log(Ids) vs Vgs where Vgs is now less than Vth_gm, we can tell that plot No. 1, 2, 3.. all have slightly different ending Vgs values because of the <em>Vgs < Vth_gm </em> condition, the Ids_Vgs curve is more like a straight line now for Slope calculation.
+
+<br/><img src="/static/mqarules/select/2.png" border="1px"/><br/><br/>
+
+Step 2. We plot the Slope vs L, and got the following plot, the result is aligned with our previous <example class=""></example>
+<br/><img src="/static/mqarules/select/3.png" border="1px"/><br/><br/>
+
+Here is the whole Rule for copy-paste:
+<pre>
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 77:Title=Select Function Example]
+
+[Label: 7701:title= Check Sub-threshold Slope vs. L]
+[Condition:1]
+[Loops
+: X0=Vgs(Start=0,stop=Vgg,step=0.01)
+: X=L(start=g_lmin,stop=g_lmax,num=11)
+: P=W(g_wmax)
+: P1=Vds(vd_lin)
+: P2=Vbs(0)
+: P3=T(tnom)]
+[Target
+: gm=d1(Vgs,Ids,2)
+: vgMaxGm = findX(vgs, gm,"Y=max")
+: idx =  findY(vgs, ids,"X=vgMaxGm")
+: maxGm = findY(vgs,gm,"X=vgMaxGm")
+: vth_gm = (vgMaxgm - idx/maxGm - Vds/2)
+: Ids2= Select(Ids, "Vgs < vth_gm")
+: y0=ln(Ids2)
+: Slope = CalCurve(Vgs,y0,"Slope")
+: y=Slope
+]
+[Check: 02:Log(Ids) vs. Vgs :Save2DData(p,x0,y0) : error: Display Ids_Vgs]
+[Check: 03:SubVt Slope vs. L :Save2DData(p,x,y) : error: Display the SubVt Slope]
+[Compare:12:Compare SubVt Slope : CompPlot(p,x,y): error: TBD]
+
+</pre>
+
+
+Here is a snapshot of the syntax details from MQA user manual:
+
+<br/><img src="/static/mqarules/select/4.png" border="1px"/><br/><br/>
+
+Thanks!
+
+<br/><br/><br/><br/>
+{% endblock %}

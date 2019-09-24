@@ -1,0 +1,57 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Use a Local Copy Config File to Maintain Links to Simulators</h2>
+<h3>ICCAP FAQ</h3>
+<hr>
+
+As explained <a href="/iccapfaq/link2ext"
+                target="_blank">here</a>, IC-CAP maintains a list of names for simulators that may be called. This list is configured with the configuration file $ICCAP_ROOT/iccap/lib/usersimulators, as shown below.
+<br/><img src="/static/faq/iccap/usersimfile/0.png"/><br/><br/>
+This application explains how to create a user local copy of this config file, it's needed when we don’t have the write permission to edit the one under the installation folder.
+<br/><br/>
+This application is demonstrated on Windows; however, the same method works on Linux, too.<br/><br/>
+First, let’s make a copy of “usersimulators” to user’s home directory, somewhere that we can edit.  For example: <em>C:\Users\shuancai\hpeesof\config\usersimulators</em>
+
+<br/><img src="/static/faq/iccap/usersimfile/2.png"/><br/><br/>
+
+In this example, we created line 43 as a copy of line 41, and name it “hspice2017” with the new path of hspice.exe.<br/>
+<br/>
+<em>Tip: we could create multi-entries in this file to link to different simulator versions, and use different names to
+    identify them.</em>
+
+<br/><img src="/static/faq/iccap/usersimfile/1.png"/><br/><br/>
+Next, we need to create another special config file named “iccap.cfg” to let ICCAP program to search for the user copy of “usersimulators” file. This “iccap.cfg” file must be placed under $HOME/hpeesof/config folder. Please manually create such a folder if it doesn’t exist.
+<br/><br/>
+Then, edit the “iccap.cfg” file, and introduce the following option in it, as shown below.
+<ul>
+    <em>USERSIMFILE=C:\Users\shuancai\hpeesof\config\usersimulators</em>
+</ul>
+
+<br/><img src="/static/faq/iccap/usersimfile/3.png"/><br/><br/>
+Save the above files, and then re-start ICCAP program.<br/><br/>
+From ICCAP/Main window, go to “Tools – Select Simulator”.
+
+<br/><img src="/static/faq/iccap/usersimfile/4.png"/><br/><br/>
+We shall now see “hspice2017” in the list, this confirms that ICCAP has picked up the user copy of “usersimulators” correctly.
+<br/><img src="/static/faq/iccap/usersimfile/5.png"/><br/><br/>
+Finally, as a way of verifying the simulation really works with HSPICE 2017, let’s open a built-in example model file, say “C:\Keysight\ICCAP_2018\examples\demo_features\6_SIMULATORS\7_hspice\1_diode_demo_hspice.mdl”.
+<br/><br/>
+Change the SIMULATOR variable to hspice2017, as highlighted below.
+
+<br/><img src="/static/faq/iccap/usersimfile/6.png"/><br/><br/>
+Next, open the Simulation Debugger window, and click on the Simulate button in DC/forward setup, we shall see the output file says the correct HSPICE version.
+<br/><img src="/static/faq/iccap/usersimfile/7.png"/><br/><br/>
+
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

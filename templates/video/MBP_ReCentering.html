@@ -1,0 +1,75 @@
+{% extends "video/video_index.html" %}
+{% block videomain %}
+
+<h2>MBP Demo</h2>
+
+<h3>Re-Centering Solution</h3>
+<hr>
+Hi everyone, this is CS. In this video I am going to demonstrate the Re-centering function in MBP 2017. <br/><br/>
+Let’s start with a new project, here I am using a BSIM4 model as an example; however, the Re-centering function applies to all supported models in MBP, such as BSIMCMG for FinFET.
+
+<br/><br/>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vNcfw5dEprk" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe><br/><br/>
+
+First, I am going to load an input file which defines the new specs. MBP 2017 supports 2 spec formats, one is .mea, another is csv file. The data file contains device information which we call Targets, such as Vtlin, Vtsat, Idlin and Idsat, etc.
+<br/><br/>
+
+One important thing for MBP to successfully simulate our targets, is that these targets need to be correctly defined in MBP’s Script settings properly. In this example, I have prepared a MBP Script .zip file, once loaded into MBP Script window, we can see these 4 targets under imv.dp.  and graphs defined under each target. In this example, Idlin and Idsat are normalized by channel width W.
+<br/><br/>
+
+Then, come back to the IMV pages tab, we shall see the targets and associated scaling graphs are available here. The scaling graphs help us visualize the model simulation, such as Idlin vs L,  Vtsat vs L at diff W, etc. This has been how we tune model against user specs  before we have the new Re-centering capability.
+<br/><br/>
+
+Now, From Extraction menu, open the new re-Centering function, it opens the Re-centering tab. We can click the “Import From DP” button, the Error Table is populated with data from the input file. We now see device targets, geometry, Vdd, Vgg, conditions, Target value, simulated value, error, and color-coded Pass/Fail status.
+<br/><br/>
+
+Often there are columns we don’t need to see, such as Vdd, Vgg we can click the second icon on the mini toolbar and uncheck the boxes in the column Display dialogue, now the table becomes more compact.
+<br/><br/>
+
+Now, click on a row in the table, the bottom half shows the available plots associated with that target. Click to open a graph, we can see colored error bars are shown on the graphs too to help gauge how far the simulation is away from the spec. we can tune model parameter to fit for the new spec, and the color will update accordingly per fail/pass criteria.
+When the tuning is considered done, we can export the error table to an csv/Excel output file by clicking on the third or fourth icon on the toolbar here. They save output in two formats, the 3rd icon saves output which looks as the GUI, one device condition one row. The 4th icon saves the output in a transposed way, one target one raw. Note that the output Excel files are color coded too.
+<br/><br/>
+
+More, we can use the search bar to search for a target in case we have a lot more targets defined and the list will be rather long.
+<br/><br/>
+
+Once we locate a target, we can select model parameters and run optimization. In re-centering mode, we only need to check the checkbox in the Error table, please don’t select points on graphs. The optimizer helps us to get to the new spec.
+<br/><br/>
+
+Click the Target Acceptance button on the top, it opens the Fail/Pass condition for each target, we can edit the numbers here, or find out if a target is using Relative or absolute error.
+<br/><br/>
+
+A few other tricks to help us select or deselect devices are:
+<ul>
+    1, we can use the empty box icon to deselect all rows in the error table.<br/>
+    2. we can right click in the error table, and do “All Targets of Device” to select all available targets with the
+    same device geometry, for example, when we do it on a 10/10 device, then all the targets with 10/10 device are
+    selected<br/>
+    3. we can then use the right blue arrow to display selected rows and hide other rows. Then, click the left blue
+    arrow to turn all the rows back on again.<br/>
+    4. on the other hand, the “All Devices of Target” option selects all the rows of that highlighted target.<br/>
+</ul>
+Alright, it’s time to take a look at the input data files.<br/><br/>
+
+The .mea file looks like this, device and targets names are described in the Data line, and followed by columns of numbers in the exact order, and each row is a new device and temperature condition.
+<br/><br/>
+
+The .csv file looks like this, it has 3 sections, the Instance section define device instance names, the name column also has variable unit information integrated, namely the variable name underscore its unit.  The constants section define the constants that’s to be used to calculate device targets, such as vgg and vdd, and, the Targets section lists the targets, column D, E, F, G are different devices.
+<br/><br/>
+
+Now, come back to the MBP Script window to review all the targets and graphs are defined, we need to create them correspondingly when we introduce any new target in the .mea or .csv input data file. And the target’s name from the input data file must match what’s define here in the script window.
+<br/><br/>
+
+
+By far, we’ve been using the Re-centering based on the .mea dp data, let’s take a look at what happens when we load the .csv file. Let’s first clear current data in MBP, via File – Data – Clear, then click the Load Data button to pick up the .csv file. We noticed that the data goes to the Target Table Tab of the Re-Centering panel, where we can review and make changes if necessary, then click the Apply button at the bottom. The information then got passed to the Error Table we’ve been working at, from here and on, everything is the same.
+<br/><br/>
+
+Alright, this concludes the demo of the new Re-centering function in MBP.
+<br/><br/>
+Thank you.
+
+
+{% endblock %}
