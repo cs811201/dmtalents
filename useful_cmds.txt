@@ -1,0 +1,28 @@
+
+!!!! if we have the following error:
+The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6494C6D6997C215E
+
+! then do the following to install the Key.
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6494C6D6997C215E
+
+
+!!! to create a soft link
+sudo ln -s  <source filepath>  <the new link>
+sudo ln -s ./python3.5 ./python
+
+!!!Sometimes we need to switch back to Python2 to do some configuration, but mainly running with Python3.5
+
+!!! renew https certificate
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+sudo certbot renew --dry-run
+!once --dry-run is successful, do 
+sudo certbot renew
+! 
+
+
+!!! based on Python 3.5.2, we need to install the following packages using pip
+!!! use "pip list" to find out existing packages with version numbers.
+pip install bcrypt flask-whooshalchemy flask-mail flask-security flask-sqlalchemy
+pip install flask pygal
+

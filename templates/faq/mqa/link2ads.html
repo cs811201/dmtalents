@@ -1,0 +1,97 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Link MQA to ADS simulator</h2>
+<h3>MQA FAQ</h3>
+<hr>
+<li>
+    <a href="#win">1. MQA and ADS are both installed on Windows</a>
+</li>
+<li>
+    <a href="#linux">2. MQA and ADS are both installed on Linux</a>
+</li>
+<li>
+    <a href="#tr">3. Troubleshoot</a>
+</li>
+<hr>
+
+<a name="win"></a><h4>1. MQA and ADS are both installed on Windows.</h4>
+
+1. Please open $MQAHOME/bin/runads.bat<br/><br/>
+Pay attention to the following 4 places, as labeled in the screenshot below.<br/>
+
+(1) Line 9, choose variable SIMARCH value properly per your Windows OS type, 32 bit or 64 bit.<br/>
+(2) Line 12, specify the correct path to your ADS installation. <br/>
+(3) Line 15, verify these PATH is correct, usually they are okay; however, if error reported at later steps, we need
+to come back here to append new directories for missing library files, this could vary from ADS versions. <br/>
+(4) Line 18, specify the correct license server, it can be found from ADS’s License Manger Window.<br/>
+<ul>
+    a. it could point to a local license file path, e.g. set LICFILE=C:\work\CS_license\ads_2018.lic<br/>
+    b. or, the port@server format, such as: set LICFILE=27001@10.129.8.1
+</ul>
+
+<img src="/static/faq/mqa/link2ads/1.png" border="1px"><br/><br/>
+Save the runads.bat file, and restart MQA GUI.<br/><br/>
+2. MQA main GUI, check MQA-ADS connection.<br/>
+
+Click on the last icon <img src="/static/faq/mqa/link2ads/2.png"
+                            border="1px"> on MBP toolbar, it open the Check SPICE dialog.<br/>
+<img src="/static/faq/mqa/link2ads/3.png" border="1px"><br/>
+Choose ADS in the dropdown list, and click on OK button. Now wait for it to report the result, it may take a few dozen seconds if the license server is slow.
+<br/><br/>
+Once we see the ADS: successful message, it means ADS connection is established correctly, and we can dismiss these dialogues, as shown below.
+
+<br/><img src="/static/faq/mqa/link2ads/4.png" border="1px"><br/><br/>
+
+
+<a name="linux"></a><h4>2. MQA and ADS are both installed on Linux.</h4>
+
+Overall, it is similar to what we do for Windows version(see above). <br/><br/>
+1. Please open and check these places in $MQAHOME/bin/runads.bat file on Linux.
+
+<br/><img src="/static/faq/mqa/link2ads/5.png" border="1px"><br/><br/>
+
+After proper edits, save this file, and re-start MQA.<br/><br/>
+If you don’t have write permission to the file in installation folder, then we can make a local copy.
+As follows:
+<ul>
+    (1) Copy $MQAHOME/bin/runads.bat to $HOME/runads.bat<br/>
+    (2) Edit $HOME/runads.bat<br/>
+    (3) Let MQA program use your local copy by changing the following option, it is a GUI option so we need to open MQA
+    GUI now, then go for menu “Options -> General”, and look for the SPICE – ADS field, as shown below.
+    <br/><img src="/static/faq/mqa/link2ads/6.png" border="1px"><br/><br/>
+    It accepts a file-path, let’s change it to your local copy, as shown below.
+    <br/><img src="/static/faq/mqa/link2ads/61.png" border="1px"><br/><br/>
+
+
+</ul>
+2. Now we have our MQA GUI opened, do the Check SPICE for ADS as we do for Windows version.
+<br/><img src="/static/faq/mqa/link2ads/7.png" border="1px"><br/><br/>
+
+<a name="tr"></a><h4>3. Troubleshoot</h4>
+
+If we see [ADS: not valid] message, as shown below.
+<br/><img src="/static/faq/mqa/link2ads/8.png" border="1px"><br/><br/>
+Then we need to check the edits in the runads.bat file, and during the Check SPICE process, MQA actually went to generate a test netlist file and tried to call ADS simulation, so by looking at the netlist file and ADS output file, we can usually figure out the problem.
+<ul>
+    1. Test netlist file is called qatsXXXXX.sp and is saved under $HOME/.mqa_set<br/>
+    2. ADS output file is called qatsXXXXX.lis and is also saved under $HOME/.mqa_set<br/>
+
+    Note: the mqa_set directory will be auto-created by MQA, on Linux it’s a hidden folder, so there is a leading
+    dot(.mqa_set)
+    ; however, on Windows, it’s plainly mqa_set.
+</ul>
+<br/>
+Please look for warning or error messages in the qatsXXXXX.lis files, if it is because:
+<ul>
+    1. ADS license error, then we need to check the ADS license setting in the runads.bat file.<br/>
+    2. missing a .so or .dll library file, then we check the PATH setting in the runads.bat file.<br/>
+</ul>
+<br/><br/>
+
+
+Thank you!
+
+
+<br/><br/><br/><br/><br/>
+{% endblock %}

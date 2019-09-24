@@ -1,0 +1,46 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Change default mb_set directory location</h2>
+<h3>MBP FAQ</h3>
+<hr>
+When MBP starts, it will create a few run-time configurations or setting files under $HOME/mb_set directory.<br/>
+For example, mine is C:\Users\shuancai\mb_set, as shown below.
+
+<br/><br/>
+<img src="/static/faq/mbp/mbsetpath/2.png"/><br/><br/>
+
+This directory will be automatically created the first time we start MBP, if it doesn't exist. <br/><br/>
+<em>Note: on Linux, it will be a hidden directory, namely $HOME/.mb_set.</em><br/><br/>
+
+And, there is one option called
+<mark>MBSETPATH
+</mark> that allows us to change this directory to a user specified location. This option needs to be added to the $MBPHOME/mbp.bat wrapper file. As highlighted below.
+<br/>
+
+<img src="/static/faq/mbp/mbsetpath/1.png"/><br/><br/>
+
+For example, here I set it to “C:\Users\shuancai\tmp”, an arbitrary path user specified.<br/>
+To pass in a variable to the Java program, we need the “-D” keyword to assign it, as follows:
+
+<br/>
+<ul>
+    <mark>-DMBSETPATH="C:\Users\shuancai\tmp"</mark>
+</ul>
+<br/>
+Once this change is saved, re-start MBP, we will start to see all the run-time files get saved under C:\Users\shuancai\tmp.
+
+
+<br/><br/>
+This option should work for both Windows and Linux.
+
+<br/><br/>
+
+Thanks!
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}
+

@@ -1,0 +1,69 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Remove unwanted variables from measurement for simulation</h2>
+<h3>MQA FAQ</h3>
+<hr>
+
+MQA 2017 update 2.0 supports to parse and plot the additional variables in .mdm data files, such as Lot, Wafer, Die, Block, and MeasCond, etc. As highlighted below in green.
+
+<br/><img src="/static/faq/mqa/nonInstanceParam/0.png" border="1px"><br/><br/>
+These variables are treated the same way as biases or device instance parameters such as W and L, and will be written in the [Loops] section in Rule.
+<br/><br/>
+When we do Measurement + Model simulation accuracy check, by default, these additional variables will be included into the netlist files created by MQA, and sometime some of those variables are not desired to be passed into the netlist.
+<br/><br/>
+So, we can use a new Rule option
+<mark>nonInstanceParam</mark> to exclude variables that we don’t want,  as shown below.
+<br/><br/>
+Syntax:
+<mark>nonInstanceParam=[a list of comma-separated variables]</mark><br/>
+<br/><img src="/static/faq/mqa/nonInstanceParam/rule.png" border="1px"><br/><br/>
+
+The example .mdm measurement file can be <a href="/mqarules/nonInstanceParam/mdm/download" target="_blank">download
+    here</a> , which contains two user defined variables VAR1 and VAR2.
+Here is the test Rule file(click <a href="/mqarules/nonInstanceParam/rule/download" target="_blank">here to
+    download</a>), which covers 3 cases:
+
+
+<br/><img src="/static/faq/mqa/nonInstanceParam/1.png" border="1px"><br/><br/>
+The netlist file of the 1st rule shows that VAR1 and VAR2 are still included even though we have removed them from the [Loops] section, which indicates removing from the [Loops] section has no real effects.
+<br/><img src="/static/faq/mqa/nonInstanceParam/removed.png" border="1px"><br/><br/>
+
+
+The 3rd Rule has VAR1 and VAR2 in the [Loops] section, and we see them in the netlist files too.<br/><br/>
+Only the 2nd Rule that has the nonInstanceParam=VAR1,VAR2 option specified successfully removed them from the netlist files for a proper model simulation, as shown below.
+<br/><br/>
+Please also manually remove VAR1 and VAR2, if they presented, from the [Loops] section from the auto-generated Rule.
+<br/><img src="/static/faq/mqa/nonInstanceParam/non.png" border="1px"><br/><br/>
+
+
+Here is the 2nd Rule for copy-paste:
+<pre>
+[Label:20181119_101839_2:title=Check id_vd_vg with nonInstanceParam]
+#DataFile:
+#  ids_vds_vgs_more_values.mdm
+[Condition:devtype=1]
+[Option:datablock=id_vd_vg:simulation=yes:<font style="color:red">nonInstanceParam=VAR1,VAR2</font> ]
+[Loops
+: x=vd
+: p=vg
+: p1=vs
+: p2=vb
+: p5=W
+: p6=L
+: p7=T
+]
+[Target
+:y1=id
+]
+[Check  :01:kink of id:CheckKink2d(p,x,y1):error:Kink occurs]
+[Compare:11:Comp id:CompPlot(p,x,y1):error:no check]
+
+</pre>
+
+<br/><br/>
+
+Thank you!
+
+<br/><br/><br/><br/>
+{% endblock %}
