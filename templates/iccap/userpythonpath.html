@@ -1,0 +1,77 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+User Python Path
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Specify User Python File Path</h3>
+    <h4>ICCAP Application Note</h4>
+    <hr>
+    When we program with Python in ICCAP, it’s recommended to re-use existing python codes or files.<br/><br/>
+    This application note explains a couple of ways to let ICCAP know where our external Python files are.<br/><br/>
+    One way to dynamically load external Python files is shown below:<br/>
+    <img src="/static/iccap/userpythonpath/0.png"><br/><br/>
+    We simply append the directory to sys.path(line 2 and 3) so that Python interpreter knows where to search for files.
+    Then, line 5 and 6 import the Python files, the format is the following:
+    <br/>
+    <ul>
+        Import
+        <mark>python_file_name</mark>
+        as
+        <mark>a_shorter_name</mark>
+    </ul>
+
+
+    Here is the code for copy-paste:
+    <pre>
+import sys, os
+WorkingDir = "C:\work\ICCap\USER_PYTHON"
+sys.path.append(WorkingDir)
+
+import iccap_util as p_until
+import iccap_vth as p_vth
+    </pre>
+    <br/>
+
+    Another way, ICCAP accepts one System Environment Variable called ICCAP_USER_PYTHON_PATH for us to specify a
+    directory.
+    Please set up this variable prior to starting ICCAP(both Windows and Linux), then all the .py files in that
+    directory will be picked up
+    when it is used.
+    <br/><br/>
+    <img src="/static/iccap/userpythonpath/1.png"><br/><br/>
+
+    Important note: The first time ICCAP loads an external python file(.py), the .py file got compiled to .pyc
+    file(binary), as shown below.<br/>
+    <img src="/static/iccap/userpythonpath/3.png"><br/><br/>
+    And, any changes made to those external .py files after their .pyc files were created won’t refresh(re-compile) the
+    .pyc
+    file, unless these .pyc files were deleted.<br/><br/>
+
+    Please refer to <a href="/iccap/python/reload" target="_blank">this note to see how to dynamically reload external
+    python files</a> in ICCAP.<br/>
+    <br>
+    <br>
+
+    Thank you!
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+
+</div>
+{% endblock %}

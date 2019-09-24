@@ -1,0 +1,106 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+User Python Path
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Derivative Function</h3>
+    <h4>ICCAP Application Note</h4>
+    <hr>
+    In Python, we have a few existing functions to calculate the derivatives of a given X[] and Y[]; however, their
+    results differ slightly because of different algorithm applied. <br/><br/>
+    And, ICCAP has a built-in derivative function derivative2() that has been used as standard for years, as shown
+    below, which uses a central differencing approximation method which is often more accurate than others.
+    <br> <br>
+
+    Its input are X and Y arrays with the same size, and the output is the derivative array that has the same size.
+    <br><img src="/static/iccap/derivative/1.png"><br/><br/>
+    So, our goal here is to find the matching Python derivative function, and then stick to it for modeling so that it
+    produces the identical result as ICCAP’s built-in PEL function derivative2():
+
+    <br/> <br/>
+
+
+    Here we compare numpy.diff() function and numpy.gradient() function, and it turns out the
+    <mark>numpy.gradient()</mark>
+    function
+    will generate the identical result as ICCAP’s built-in PEL function. <br/><br/>
+    Here is a quick test. <br/><br/>
+    In PEL, do the following:
+    <br/>
+    <img src="/static/iccap/derivative/2.png"><br/><br/>
+    The result is printed as follows in ICCAP’s status window:
+    <br/>
+    <img src="/static/iccap/derivative/3.png"><br/><br/>
+    Then, the Python implementation:
+    <br/>
+    <img src="/static/iccap/derivative/4.png"><br/><br/>
+    We see the same output!
+    <br/>
+    <img src="/static/iccap/derivative/5.png"><br/><br/>
+    Here is the code for copy-paste:
+    <pre>
+import numpy as np
+
+x=np.array([0,
+0.025,
+0.05,
+0.075,
+0.1,
+0.125,
+0.15,
+0.175,
+0.2,
+0.225,
+0.25])
+
+y=np.array([0.5E-14,
+1.8E-14,
+5.1E-14,
+1.23E-13,
+2.52E-13,
+4.58E-13,
+8.73E-13,
+1.612E-12,
+2.932E-12,
+5.418E-12,
+1.0036E-11])
+
+dVg = np.gradient(x)
+dId = np.gradient(y,edge_order=2)
+dydx = dId/dVg
+
+for d in dydx:
+    print d
+
+    </pre>
+    <br>
+    Note: The numpy.diff() function is using a forward difference appoximation method which can be subject to round-off
+    errors when the step size is small.
+
+
+    <br> <br>
+    <br>
+
+    Thank you!
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+
+</div>
+{% endblock %}

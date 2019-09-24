@@ -1,0 +1,178 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+IC-CAP App Notes
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>IC-CAP Application Notes</h3>
+    <hr>
+    <div overflow="scroll">
+
+
+        <h4>Python Notes</h4>
+        <ul>
+            <table>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/python/userpath" target="_blank">1. User Python Path</a></td>
+                    <td style="width:500px">Specify paths of external Python files</td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/python/reload" target="_blank">2. Reload External Python</a></td>
+                    <td style="width:500px">Dynamically reload external Python modules</td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/python/derivative" target="_blank">3. Derivative Function</a></td>
+                    <td style="width:500px">Give X array and Y array, return the first order derivative dy/dx</td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/python/virtualenv" target="_blank">*4. Activate virtualenv</a></td>
+                    <td style="width:500px">Activate a user Python virtualenv to incorporate more 3rd party Modules</td>
+
+                </tr>
+
+
+            </table>
+            <br/>
+            Note: items with a leading * sign are still placeholders, will be updated later on.
+        </ul>
+        <br/>
+        <h4>PEL Notes</h4>
+        <ul>
+            <table>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/whoami" target="_blank">1. WHOAMI</a></td>
+                    <td style="width:500px">Example usage of Query Functions</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/whois" target="_blank">*2. WHOIS</a></td>
+                    <td style="width:500px">Example usage of Query Functions</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/comma_ampersand" target="_blank">*3. Comma (,) or Ampersand (&) </a></td>
+                    <td style="width:500px">Usage of , and & signs in PRINT statement</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/startwith" target="_blank">*4. String Starts With...</a></td>
+                    <td style="width:500px">Find if a String starts or ends with some keywords</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/val" target="_blank">*5. VAL or VAL$</a></td>
+                    <td style="width:500px">Usage of VAL and VAL$</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/curModelName" target="_blank">*6. Current Model Name</a></td>
+                    <td style="width:500px">Get current model name</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/savemdm" target="_blank">*7. Save MDM Files</a></td>
+                    <td style="width:500px">Dump measurement data from all DUTs and Setups</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/pel/passvar" target="_blank">*8. Pass Variables</a></td>
+                    <td style="width:500px">Pass variables to other Transforms</td>
+                </tr>
+
+            </table>
+
+        </ul>
+        <br/>
+        <h4>Miscellaneous</h4>
+        <ul>
+            <table>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccap/misc/param_sync" target="_blank">*1. Parameters Sync-up</a></td>
+                    <td style="width:500px">Keep two or more model parameters sync-up during optimization</td>
+
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2ext" target="_blank">2. Link ICCAP to External Simulators</a></td>
+                    <td style="width:500px">Overall explanation for linking to external simulators</td>
+                </tr>
+
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2ltspice" target="_blank">3. Link ICCAP to LTSpice</a></td>
+                    <td style="width:500px">How to link ICCAP to LTSpiceIV</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2ads" target="_blank">4. Link ICCAP to ADS</a></td>
+                    <td style="width:500px">How to link ICCAP to ADS Simulator</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2pspice" target="_blank">5. Link ICCAP to PSpice</a></td>
+                    <td style="width:500px">How to link ICCAP to PSpice Simulator</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2spice3" target="_blank">6. Link ICCAP to Spice2/3, HPSpice</a></td>
+                    <td style="width:500px">How to link ICCAP to Built-in Spice2, Spice3 and HPSpice</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2hspice" target="_blank">7. Link ICCAP to HSPICE</a></td>
+                    <td style="width:500px">How to link ICCAP to HSPICE simulator</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/link2spectre" target="_blank">8. Link ICCAP to SPECTRE</a></td>
+                    <td style="width:500px">How to link ICCAP to HSPICE simulator</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/usersimfile" target="_blank">9. Local Copy for Links to Simulators</a></td>
+                    <td style="width:500px">Use a Local Copy Config File to Maintain Links to Simulators</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/recentfiles" target="_blank">10. Recent Opened File List</a></td>
+                    <td style="width:500px">Adjust the length of Recent Opened File list</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gainsboro">
+                    <td style="width:250px">
+                        <a href="/iccapfaq/lax_vm" target="_blank">11. Installer Java Version</a></td>
+                    <td style="width:500px">Specify a different Java version for Installation</td>
+                </tr>
+            </table>
+
+        </ul>
+
+
+        <br>
+        <br>
+
+        <br>
+
+        <br>
+        <br>
+        <br>
+
+        <br>
+
+        <br>
+
+    </div>
+
+</div>
+{% endblock %}

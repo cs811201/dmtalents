@@ -1,0 +1,66 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+WHOAMI
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>WHOAMI</h3>
+    <h4>ICCAP Application Note</h4>
+    <hr>
+    It is very useful for us to know a Macro or Transform’s path or name at run-time, so that we can do some dynamical
+    programming, also very good for logging purposes or troubleshooting.<br> <br>
+    ICCAP PEL comes with a few query function, let’s take a look at WHOAMI().<br> <br>
+    As the function’s name implies, it will return current function’s full name. For example:
+    <br><img src="/static/iccap/whoami/1.png"><br/><br/>
+
+    We can use it with or without any arguments.<br/><br/>
+
+    1. when no arguments are used, it returns current Macro or Transform’s full path, as shown above.<br/><br/>
+    It’s a good practice to insert such a print statement at the beginning of each Transform or Macro, so that we
+    could
+    see ICCAP runs what at run-time in the Status window, a technical to monitor our code.<br/><br/>
+    2. it supports the following 2 argument keywords, as shown below.
+    <ul>
+        (1) Type, reports it is a Macro or a Transform.<br/>
+        (2) PartName, returns only the name instead of the full path.
+    </ul>
+
+
+    <br><img src="/static/iccap/whoami/3.png"><br/><br/>
+
+    Here is the code for copy-paste:
+    <pre>
+print "running: " & whoami()
+
+print "Type: " & whoami("Type")
+
+print "Just name: " & whoami("PartName")
+
+    </pre>
+
+    <br> <br>
+
+    <br>
+
+    Thank you!
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+
+</div>
+{% endblock %}

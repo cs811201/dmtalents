@@ -1,0 +1,30 @@
+[common]
+appliedmodel = global, binning, macro
+[Group:11n:Title=Check Noise Simulation]
+
+[label:1101n:title=Check 1/f Noise]
+
+[Condition: 1] 
+[Option:sweeptype=ac]
+[loops
+: x  = Freq
+: p  = Vgs(Vgg)
+: p1 = Vds(Vdd)
+: p2 = L(g_lmin)
+: p4 = T(tmin, tnom, tmax)
+: P5 = NF(1)
+: P6 = NFIN(G_NFINmin,G_NFINmax)
+]
+[target:y1=out]
+[check:01:Check Sid vs. Freq:CheckDelta2d(p,x,y1,"Deltatype=1","VMin=10","@PlotInfo YSCALE=LOG XSCALE=LOG YLabel=Sid"):error:no noise occurs]
+[Corner:02:Check corner of Sid vs. Freq:CompareTREND(x,y1,"@PlotInfo YSCALE=LOG XSCALE=LOG"):error:TBD]
+
+[benchmark]
+
+@@xx_mn1 d g s b @@mm_LV_NMOS l=@L NF=@NF NFIN=@NFIN trise=@t-27
+vg g 0  vsource dc=@vgs
+vd d 0  vsource  dc=@vds
+vs s 0  vsource dc=0
+vb b 0  vsource dc=0
+FindNoise d 0 noise start=1 stop=10k dec=4 iprobe=vg oprobe=vd
+

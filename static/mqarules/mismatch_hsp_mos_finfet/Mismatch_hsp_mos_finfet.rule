@@ -1,0 +1,45 @@
+[common]
+appliedmodel = binning, global, macro
+montecarlo=yes
+
+[Group:MIS01:Title=Mismatch Model QA]
+
+[Label:MIS0101:title=Mismatch of dIdsat]
+[Condition:devtype=1]
+[Option:sweeptype=dc]
+[Loops
+: P1=Vgs
+: X=L(start=g_lmin,stop=g_lmax,num=3)
+: P=NFIN(1,2,4,8)
+: P2=Vds(Vdd) 
+: P3=Vbs(0)
+: P4=T(tnom)
+: P5=Vgg(Vgg)
+]
+[Target
+:Id1=i_vdprobe1
+:Id2=i_vdprobe2
+:dIdd=(Id1-Id2)/Id1
+]
+[Statistic:01:Mismatch:PrintStdDv(dIdd,"@YPercentScale=1", "@X=1e-6/sqrt(L*NFIN)"):error:data error]
+
+[benchmark]
+
+.temp @T
+vgswp    ext   0 0
+ruseless ext   0 1.0
+vds1     dext1 0  @Vds
+vdprobe1 dext1 d1 0
+evgs1    g1    0  ext 0 1
+vbs1     b1    0  @Vbs
+@@xx_MN1 d1 g1 0 b1 @@mm_LV_NMOS l=@L NFIN=@NFIN
+vds2     dext2 0  @Vds
+vdprobe2 dext2 d2 0
+evgs2    g2    0  ext 0 1
+vbs2    b2    0  @Vbs
+@@xx_MN2 d2 g2 0 b2 @@mm_LV_NMOS  l=@L NFIN=@NFIN
+.dc vgswp POI 1 @Vgg 
++ sweep monte=@MonteCarloNum
+.PROBE dc i_vdprobe1=i(vdprobe1)
+.PROBE dc i_vdprobe2=i(vdprobe2)
+.end

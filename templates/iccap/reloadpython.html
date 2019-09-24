@@ -1,0 +1,60 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+User Python Path
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h3>Dynamically Reload External Python Modules</h3>
+    <h4>ICCAP Application Note</h4>
+    <hr>
+    The first time ICCAP loads external python files(.py), those .py files got compiled to .pyc files(binary), as shown
+    below.
+    <br/><br/>
+    <img src="/static/iccap/userpythonpath/3.png"><br/><br/>
+    And, any changes made to those external .py files after their .pyc files were created won’t refresh(re-compile) the
+    .pyc files, unless these .pyc files were deleted.<br/><br/>
+    Luckily, Python comes with a built-in function called <mark>reload()</mark> which can help us  dynamically reload our external python
+    modules, as shown below, line 8 and 9 reload these two Python modules so that our Python code in ICCAP will always
+    reflect the latest external code.<br/><br/>
+    <img src="/static/iccap/reloadpython/1.png"><br/><br/>
+
+    Here is the code for copy-paste:
+    <pre>
+import sys, os
+WorkingDir = "C:\work\ICCap\USER_PYTHON"
+sys.path.append(WorkingDir)
+
+import iccap_util as p_until
+import iccap_vth as p_vth
+
+p_until= reload(p_until)
+p_vth = reload(p_vth)
+</pre>
+    <br/>
+
+
+    <br>
+    <br>
+
+    Thank you!
+
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+
+</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+[common]
+appliedmodel = binning, global, macro
+
+[Group: 77:Title=Vth_GM Rule Example]
+
+[Label: 7701:title= Check Vth_gm vs. L]
+[Condition:1]
+[Loops
+: X0=Vgs(Start=0,stop=Vgg,step=0.01)
+: X=L(start=g_lmin,stop=g_lmax,num=11)
+: P=W(g_wmax)
+: P1=Vds(vd_lin) 
+: P2=Vbs(0)
+: P3=T(tnom)]
+[Target
+: gm=d1(Vgs,Ids,2)
+: vgMaxGm = findX(vgs, gm,"Y=max")
+: idx =  findY(vgs, ids,"X=vgMaxGm")
+: maxGm = findY(vgs,gm,"X=vgMaxGm")
+: vth_gm = (vgMaxgm - idx/maxGm - Vds/2)
+: y=vth_gm
+]   
+[Check:01:Plot Trend vth_gm vs. L:Save2dData(p,x,y):error:no check]
+[Compare:02:RMS of vth_gm vs. L:CompPlot(p,x,y): error: TBD]
+[Corner:03:Check corner of Vth vs. L:CompareTREND(x,y,"@TREND=-1"): error: TBD]

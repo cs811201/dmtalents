@@ -1,0 +1,464 @@
+.param          
++mqa_ntox = 8.3e-9 mqa_ptox = 8.4e-9
+
+.SUBCKT nmacro D G S B 
++NFIN=4 L=1E-07 TFIN=1E-8 HFIN= 2.5E-8 T=25
+.param
++a1=AGAUSS(0,1,1)  a2=AGAUSS(0,1,2) 
++mqa_ntox_mis = '8e-9*a1' mqa_ptox_mis = '8e-9*a1'  
++mqa_u0='0.01*a2'
++       geo_fac='1/sqrt(L*NFIN*2*HFIN*1e12)'   
++       mqa_dntox='2E-4*geo_fac*mqa_ntox_mis'
++       mqa_dptox='2E-4*geo_fac*mqa_ptox_mis'
++       Du0='2E-4*geo_fac*mqa_u0'
+********************** 
+M0  D G S B nch L = L NFIN = NFIN DTEMP = 'T - 25'
+
+.model nch nmos
+*** Flag Parameter ***
++LEVEL = 72             BULKMOD = 0              ASYMMOD=0
++COREMOD = 0            GEOMOD = 0               RDSMOD = 0
++IGCMOD = 0             IGBMOD = 0               GIDLMOD = 0 
++IIMOD = 0              NQSMOD = 0               SHMOD = 0 
++RGATEMOD = 0           RGEOMOD = 0              CGEOMOD = 0
++CAPMOD = 0             VERSION = 107.0          CGEO1SW = 0
+
+*** Geometry Range Parameter ***
++LINT = 0               LL = 0                   LLN = 1
++DLC = 0                DLBIN = 0                LLC =0 
++DLCACC=0
+
+*** Process Parameter ***
++EOT = 1E-9             TOXP = 'mqa_ntox +mqa_dntox'            EOTBOX = 1.4E-7
++HFIN = 3E-8            FECH = 1                 DELTAW = 0
++FECHCV = 1             DELTAWCV = 0             NBODY = 1E22
++NBODYN1 = 0            NBODYN2 = 1.0e5
++NSD = 2E26             PHIG = 4.61              EPSROX = 3.9
++PHIGL = 0              PHIGN1 = 0               PHIGN2 = 1.0e5
++EPSRSUB = 11.9         EASUB = 4.05             NI0SUB = 1.1E16
++BG0SUB = 1.12          NC0SUB = 2.86e25         NGATE = 0
++Imin=1e-15
+
+*** Short Channel Effects ***
++CIT = 0.0              CDSC = 7e-3              CDSCD = 7e-3
++CDSCN1 = 0             CDSCN2 = 1.0e5           CDSCDN1 = 0                 
++CDSCDN2 = 1.0e5        CDSCDRN1 = 0             CDSCDRN2 = 1.0e5
++DVT1SS = 0.6           ETA0N1 = 0               ETA0N2 = 1.0e5
++TETA0 = 0.0            TETA0R = 0.0             DVTP0 = 0
++DVTP1 = 0
++CDSCDR = 7e-3          DVT0 = 0.0               DVT1 = 0.60
++PHIN = 0.05            ETA0 = 0.60              ETA0R = 0.60
++DSUB = 1.06            K1RSCE = 0               LPE0 = 5E-9
++DVTSHIFT = 0 
+
+*** Lateral non-uniform doping effect (IV-CV Vth shift) ***
++K0=0.0                 K01=0.0                  K0SI=1.0
++K0SI1=0.0              K1SI=1.0                 K1SI1=0.0
+
+*** Body Effect for MG Devices on Bulk Substrate (ex: FinFETs on BULK) ***
++PHIBE=0.7              K1=0.0                   K11=0.0
++K1SAT=0.0              K1SAT1=0.0
+
+*** Quantum Mechanical Effect ***
++QMFACTOR = 0           QMTCENIV = 0             QMTCENCV = 0
++QMTCENCVA=0.0
++AQMTCEN = 0            BQMTCEN = 12.0e-9        ETAQM = 0.54
++QM0 = 1.00e-3          PQM = 0.66               QM0ACC = 1.00e-3
++PQMACC = 0.66          
+
+*** Velocity Saturation Model ***
++VSAT = 8.5E4           AVSAT = 0                BVSAT = 100.0e-9
++VSATN1 = 0             VSATN2 = 1.0e5           VSAT1N1 = 0
++VSAT1N2 = 1.0e5        VSAT1RN1 = 0             VSAT1RN2 = 1.0e5
++VSAT1 = 8.5E4          AVSAT1 = 0               VSAT1R= 8.5E4
++BVSAT1 = 100.0e-9      DELTAVSAT = 1.0          KSATIV = 1.0 
++MEXP = 4               AMEXP = 0                BMEXP = 1.0 
++MEXPR = 4.0            AMEXPR = 0.0             BMEXPR = 1.0             
++PTWG = 0               APTWG = 0                
++BPTWG = 100.0e-9       AT = -1.56e-3            TMEXP = 0  
++TMEXPR = 0.0              
++PTWGT = 0.004          PTWGR=0.0
++PSAT=2.0               APSAT=0.0                BPSAT=1.0
++VSATCV= 8.5E4          AVSATCV=0.0              BVSATCV=100.0e-9
++DELTAVSATCV=1.0        PSATCV=2.0               APSATCV=0.0
++BPSATCV=1.0          
+
+*** Mobility Related Parameter ***
++U0 = 'Du0+ 0.03'              ETAMOB = 2.0             UP = 0
++U0N1 = 0               U0N2 = 1.0e5
++LPA = 1                UA = 0.3                 AUA = 0
++BUA = 100.0e-9         EU = 2.5                 UC=0.0
++AEU = 0                BEU = 100.0e-9           UD = 0.0                 
++AUD = 0                BUD = 50.0e-9            UCS = 1.0                
++UTE = 0.0              UTL = -1.5e-3            EMOBT=0.0             
++UA1 = 1.032e-3         UD1 = 0.0                UC1=0.056e-9
++UCSTE = -4.775E-3      CHARGEWF = 0
+
+*** Access Resistance Model ***
++RDSWMIN = 0            RDSW = 100.0             ARDSW = 0
++BRDSW = 100.0e-9       RSWMIN = 0               RSW = 50.0
++ARSW = 0               BRSW = 100.0e-9          RDWMIN = 0
++RDW = 50.0             ARDW = 0                 BRDW = 100.0e-9
++WR = 1                 PRT = 0.001              RSDR=0.0
++RSDRR=0.0              RDDR=0.0                 RDDRR=0.0
++PRSDR=1.0              PRDDR=1.0                PRWGS=0.0
++PRWGD=0.0              TRSDR=0.0                TRDDR=0.0
+
+*** DIBL Model ***
++PDIBL1 = 1.30          PDIBL2 = 2.0e-4         PDIBL1R=1.3 
++DROUT = 1.06           PVAG = 1.0             
+
+*** Channel Length Modulation Effect ***
++PCLM = 0.013           APCLM = 0                BPCLM = 100.0e-9       
++PCLMG = 0              PCLMCV = 0.013                    
+
+*** Non-saturation Effect ***
++A1=0.0                 A11=0.0                  A2=0.0
++A21=0.0
+
+*** Gate Electrode Resistance ***
++RGEXT = 0.0            RGFIN = 1.0E-3           RSHS = 0.0
++RSHD = 0.0             HEPI = 1E-8              TSILI = 1E-8
++RHOC = 1E-12           RHORSD = 1.0             
++CRATIO = 0.5           DELTAPRSD = 0            SDTERM = 0.0
++LSP = 6E-9             EPSRSP = 3.9
++TGATE = 3E-8           TMASK = 3E-8             ASILIEND = 0.0
++ARSDEND = 0.0          PRSDEND = 0.0            NSDE = 2E25
++RGEOA = 1.0            RGEOB = 0.0              RGEOC = 0.0
++RGEOD = 0.0            RGEOE = 0.0              CGEOA = 1.0
++CGEOB = 0.0            CGEOC = 0.0              CGEOD = 0.0
++CGEOE = 1.0
+
+*** Gate Current ***
++AIGBINV = 1            BIGBINV = 9.49e-4        CIGBINV = 6.00e-3
++EIGBINV = 1.1          NIGBINV = 3.0            AIGBACC = 1.36e-2
++BIGBACC = 1.71e-3      CIGBACC = 7.5e-2         NIGBACC = 1.0
++AIGC = 1.36e-2         BIGC = 1.71e-3           CIGC = 0.075
++DLCIGS = 0.0           AIGS = 1.36e-2
++BIGS = 1.71e-3         CIGS = 0.075             DLCIGD = 0.0
++AIGD = 1.36e-2         BIGD = 1.71e-3           CIGD = 0.075
++POXEDGE = 1.0          
++AGIDL = 6.055E-12      BGIDL = 0.3e9            CGIDL = 0.5 
++EGIDL = 0.2            PGIDL=1.0
++AGISL = 6.055E-12      BGISL = 0.3e9            CGISL = 0.5 
++EGISL = 0.2            PIGCD = 1.0                            
++AIGBINV1=0.0           AIGBACC1=0.0             AIGC1=0.0
++AIGS1=0.0              AIGD1=0.0                TOXREF=1.2E-9
++TOXG=1.2E-9            NTOX=1.0                         
+
+*** Impact Ionization Current ***
++ALPHA0 = 0             ALPHA1 = 0               BETA0 = 0.0
++BETAII0 = 0            BETAII1 = 0
++BETAII2 = 0.1          ESATII = 1.0e7           LII = 0.5E-9
++SII0 = 0.5             SII1 = 0.1               SII2 = 0.0
++SIID = 0.0
++ALPHA01=0.0            ALPHA11=0.0              ALPHAII0=0.0
++ALPHAII01=0.0          ALPHAII1=0.0             ALPHAII11=0.0 
+
+*** Accumulation Capacitance (CAPMOD=1) ***
++EOTACC = 1E-9          DELVFBACC = 0.0
+
+*** Fringe capacitance ***
++CFS = 2.5E-11          CFD = 2.5E-11            
+
+*** Overlap capacitance (CGEOMOD=0 and 2) ***
++CGSO = 0.0             CGDO = 0.0               CGSL = 0.0
++CGDL = 0.0             CKAPPAS = 0.6            CKAPPAD = 0.6
++CGBO = 0.0             CGBL = 0.0               CKAPPAB = 0.6
++CGBN=0.0 
+      
+
+*** Source/drain to substrate sidewall capacitance ***
++CSDESW = 0.6
+
+*** Junction current and capacitance ***
++CJS = 5E-4             CJD = 5E-4                CJSWS = 5E-10
++CJSWD = 5E-10          CJSWGS = 0.0              CJSWGD = 0.0
++PBS = 1                PBD = 1                   PBSWS = 1
++PBSWD = 1              PBSWGS = 1                PBSWGD = 1
++MJS = 0.5              MJD = 0.5                 MJSWS = 0.33
++MJSWD = 0.33           MJSWGS = 0.33             MJSWGD = 0.33
++SJS = 0.0              SJD = 0.0                 SJSWS = 0.0
++SJSWD = 0.0            SJSWGS = 0.0              SJSWGD = 0.0
++MJS2 = 0.125           MJD2 = 0.125              MJSWS2 = 0.083
++MJSWD2 = 0.083         MJSWGS2 = 0.083           MJSWGD2 = 0.083
++JSS = 1E-4             JSD = 1E-4                JSWS = 0                  
++JSWD = 0               JSWGS = 0                 JSWGD = 0                 
++NJS = 1                NJD = 1                   IJTHSFWD = 0.1            
++IJTHDFWD = 0.1         IJTHSREV = 0.1            IJTHDREV = 0.1            
++BVS = 10               BVD = 10                  XJBVS = 1                 
++XJBVD = 1
+
+*** Tunneling Component of Junction Current ***
++JTSS = 0               JTSD = 0                  JTSSWS = 0
++JTSSWD = 0             JTSSWGS = 0               JTSSWGD = 0 
++JTWEFF = 0             NJTS = 20                 NJTSD = 20 
++NJTSSW = 20            NJTSSWD = 20              NJTSSWG = 20
++NJTSSWGD = 20          VTSS = 10                 VTSD = 10 
++VTSSWS = 10            VTSSWD = 10               VTSSWGS = 10 
++VTSSWGD = 10           LINTIGEN = 1e-10              NTGEN = 1.0
++AIGEN = 0              BIGEN = 0 
+
+*** NQS Gate Resistance Model & NQS Charge Deficit Model ***
++XRCRG1 = 12            XRCRG2 = 1
+
+*** NQS Charge Segementation Model ***
++NSEG = 4
+
+*** Flicker Noise ***
++EF = 1                 EM = 4.1E7                NOIA = 6.25E39
++NOIB = 3.125E24        NOIC = 8.75E7            
+
+*** Thermal Noise ***
++NTNOI = 1
+
+*** Temperature Effects ***
++TNOM = 27              TBGASUB = 7.02E-4         TBGBSUB = 1.108E3
++KT1 = 0.0              KT1L = 0                  IIT = -0.5
++TII = 0.0              TGIDL = -0.003            IGT = 2.5
++TCJ = 0.0              TCJSW = 0.0               TCJSWG = 0.0
++TPB = 0.0              TPBSW = 0.0               TPBSWG = 0.0
++XTIS = 3               XTID = 3                  XTSS = 0.02
++XTSD = 0.02            XTSSWS = 0.02             XTSSWD = 0.02
++XTSSWGS = 0.02         XTSSWGD = 0.02            TNJTS = 0 
++TNJTSD = 0             TNJTSSW = 0               TNJTSSWD = 0 
++TNJTSSWG = 0           TNJTSSWGD = 0             TSS=0.0
+
+*** Self Heating ***
++RTH0 = 0.01            CTH0 = 1E-5               WTH0 = 0  
+
+*
+.ends
+
+
+
+.SUBCKT pmacro D G S B 
++NFIN=4 L=1E-07 TFIN=1E-8 HFIN= 2.5E-8 T=25
+.param
++a1=AGAUSS(0,1,3)  a2=AGAUSS(0,1,3) 
++mqa_ntox_mis = '8e-9*a1' mqa_ptox_mis = '8e-9*a1'  
++mqa_u0='0.01*a2'
++       geo_fac='1/sqrt(L*NFIN*1e12)'   
++       mqa_dntox='2E-4*geo_fac*mqa_ntox_mis'
++       mqa_dptox='2E-4*geo_fac*mqa_ptox_mis'
++       Du0='2E-4*geo_fac*mqa_u0'
+********************** 
+
+M0  D G S B pch L = L NFIN = NFIN DTEMP = 'T - 25'
+.model pch pmos
+*** Flag Parameter ***
++LEVEL = 72             BULKMOD = 0              ASYMMOD=0
++COREMOD = 0            GEOMOD = 0               RDSMOD = 0
++IGCMOD = 0             IGBMOD = 0               GIDLMOD = 0 
++IIMOD = 0              NQSMOD = 0               SHMOD = 0 
++RGATEMOD = 0           RGEOMOD = 0              CGEOMOD = 0
++CAPMOD = 0             VERSION = 107.0          CGEO1SW = 0
+
+*** Geometry Range Parameter ***
++LINT = 0               LL = 0                   LLN = 1
++DLC = 0                DLBIN = 0                LLC =0 
++DLCACC=0
+
+*** Process Parameter ***
++EOT = 1E-9             TOXP = ' mqa_ptox +mqa_dptox'             EOTBOX = 1.4E-7
++HFIN = 3E-8            FECH = 1                 DELTAW = 0
++FECHCV = 1             DELTAWCV = 0             NBODY = 1E22
++NBODYN1 = 0            NBODYN2 = 1.0e5
++NSD = 2E26             PHIG = 4.61              EPSROX = 3.9
++PHIGL = 0              PHIGN1 = 0               PHIGN2 = 1.0e5
++EPSRSUB = 11.9         EASUB = 4.05             NI0SUB = 1.1E16
++BG0SUB = 1.12          NC0SUB = 2.86e25         NGATE = 0
++Imin=1e-15
+
+*** Short Channel Effects ***
++CIT = 0.0              CDSC = 7e-3              CDSCD = 7e-3
++CDSCN1 = 0             CDSCN2 = 1.0e5           CDSCDN1 = 0                 
++CDSCDN2 = 1.0e5        CDSCDRN1 = 0             CDSCDRN2 = 1.0e5
++DVT1SS = 0.6           ETA0N1 = 0               ETA0N2 = 1.0e5
++TETA0 = 0.0            TETA0R = 0.0             DVTP0 = 0
++DVTP1 = 0
++CDSCDR = 7e-3          DVT0 = 0.0               DVT1 = 0.60
++PHIN = 0.05            ETA0 = 0.60              ETA0R = 0.60
++DSUB = 1.06            K1RSCE = 0               LPE0 = 5E-9
++DVTSHIFT = 0 
+
+*** Lateral non-uniform doping effect (IV-CV Vth shift) ***
++K0=0.0                 K01=0.0                  K0SI=1.0
++K0SI1=0.0              K1SI=1.0                 K1SI1=0.0
+
+*** Body Effect for MG Devices on Bulk Substrate (ex: FinFETs on BULK) ***
++PHIBE=0.7              K1=0.0                   K11=0.0
++K1SAT=0.0              K1SAT1=0.0
+
+*** Quantum Mechanical Effect ***
++QMFACTOR = 0           QMTCENIV = 0             QMTCENCV = 0
++QMTCENCVA=0.0
++AQMTCEN = 0            BQMTCEN = 12.0e-9        ETAQM = 0.54
++QM0 = 1.00e-3          PQM = 0.66               QM0ACC = 1.00e-3
++PQMACC = 0.66          
+
+*** Velocity Saturation Model ***
++VSAT = 8.5E4           AVSAT = 0                BVSAT = 100.0e-9
++VSATN1 = 0             VSATN2 = 1.0e5           VSAT1N1 = 0
++VSAT1N2 = 1.0e5        VSAT1RN1 = 0             VSAT1RN2 = 1.0e5
++VSAT1 = 8.5E4          AVSAT1 = 0               VSAT1R= 8.5E4
++BVSAT1 = 100.0e-9      DELTAVSAT = 1.0          KSATIV = 1.0 
++MEXP = 4               AMEXP = 0                BMEXP = 1.0  
++MEXPR = 4.0            AMEXPR = 0.0             BMEXPR = 1.0            
++PTWG = 0               APTWG = 0                
++BPTWG = 100.0e-9       AT = -1.56e-3            TMEXP = 0   
++TMEXPR = 0.0               
++PTWGT = 0.004          PTWGR=0.0
++PSAT=2.0               APSAT=0.0                BPSAT=1.0
++VSATCV= 8.5E4          AVSATCV=0.0              BVSATCV=100.0e-9
++DELTAVSATCV=1.0        PSATCV=2.0               APSATCV=0.0
++BPSATCV=1.0          
+
+*** Mobility Related Parameter ***
++U0 = 0.03              ETAMOB = 2.0             UP = 0
++U0N1 = 0               U0N2 = 1.0e5
++LPA = 1                UA = 0.3                 AUA = 0
++BUA = 100.0e-9         EU = 2.5                 UC=0.0
++AEU = 0                BEU = 100.0e-9           UD = 0.0                 
++AUD = 0                BUD = 50.0e-9            UCS = 1.0                
++UTE = 0.0              UTL = -1.5e-3            EMOBT=0.0             
++UA1 = 1.032e-3         UD1 = 0.0                UC1=0.056e-9
++UCSTE = -4.775E-3      CHARGEWF = 0
+
+*** Access Resistance Model ***
++RDSWMIN = 0            RDSW = 100.0             ARDSW = 0
++BRDSW = 100.0e-9       RSWMIN = 0               RSW = 50.0
++ARSW = 0               BRSW = 100.0e-9          RDWMIN = 0
++RDW = 50.0             ARDW = 0                 BRDW = 100.0e-9
++WR = 1                 PRT = 0.001              RSDR=0.0
++RSDRR=0.0              RDDR=0.0                 RDDRR=0.0
++PRSDR=1.0              PRDDR=1.0                PRWGS=0.0
++PRWGD=0.0              TRSDR=0.0                TRDDR=0.0
+
+*** DIBL Model ***
++PDIBL1 = 1.30          PDIBL2 = 2.0e-4         PDIBL1R=1.3 
++DROUT = 1.06           PVAG = 1.0             
+
+*** Channel Length Modulation Effect ***
++PCLM = 0.013           APCLM = 0                BPCLM = 100.0e-9       
++PCLMG = 0              PCLMCV = 0.013                    
+
+*** Non-saturation Effect ***
++A1=0.0                 A11=0.0                  A2=0.0
++A21=0.0
+
+*** Gate Electrode Resistance ***
++RGEXT = 0.0            RGFIN = 1.0E-3           RSHS = 0.0
++RSHD = 0.0             HEPI = 1E-8              TSILI = 1E-8
++RHOC = 1E-12           RHORSD = 1.0             
++CRATIO = 0.5           DELTAPRSD = 0            SDTERM = 0.0
++LSP = 6E-9             EPSRSP = 3.9
++TGATE = 3E-8           TMASK = 3E-8             ASILIEND = 0.0
++ARSDEND = 0.0          PRSDEND = 0.0            NSDE = 2E25
++RGEOA = 1.0            RGEOB = 0.0              RGEOC = 0.0
++RGEOD = 0.0            RGEOE = 0.0              CGEOA = 1.0
++CGEOB = 0.0            CGEOC = 0.0              CGEOD = 0.0
++CGEOE = 1.0
+
+*** Gate Current ***
++AIGBINV = 1            BIGBINV = 9.49e-4        CIGBINV = 6.00e-3
++EIGBINV = 1.1          NIGBINV = 3.0            AIGBACC = 1.36e-2
++BIGBACC = 1.71e-3      CIGBACC = 7.5e-2         NIGBACC = 1.0
++AIGC = 1.36e-2         BIGC = 1.71e-3           CIGC = 0.075
++DLCIGS = 0.0           AIGS = 1.36e-2
++BIGS = 1.71e-3         CIGS = 0.075             DLCIGD = 0.0
++AIGD = 1.36e-2         BIGD = 1.71e-3           CIGD = 0.075
++POXEDGE = 1.0          
++AGIDL = 6.055E-12      BGIDL = 0.3e9            CGIDL = 0.5 
++EGIDL = 0.2            PGIDL=1.0
++AGISL = 6.055E-12      BGISL = 0.3e9            CGISL = 0.5 
++EGISL = 0.2            PIGCD = 1.0                            
++AIGBINV1=0.0           AIGBACC1=0.0             AIGC1=0.0
++AIGS1=0.0              AIGD1=0.0                TOXREF=1.2E-9
++TOXG=1.2E-9            NTOX=1.0                         
+
+*** Impact Ionization Current ***
++ALPHA0 = 0             ALPHA1 = 0               BETA0 = 0.0
++BETAII0 = 0            BETAII1 = 0
++BETAII2 = 0.1          ESATII = 1.0e7           LII = 0.5E-9
++SII0 = 0.5             SII1 = 0.1               SII2 = 0.0
++SIID = 0.0
++ALPHA01=0.0            ALPHA11=0.0              ALPHAII0=0.0
++ALPHAII01=0.0          ALPHAII1=0.0             ALPHAII11=0.0 
+
+*** Accumulation Capacitance (CAPMOD=1) ***
++EOTACC = 1E-9          DELVFBACC = 0.0
+
+*** Fringe capacitance ***
++CFS = 2.5E-11          CFD = 2.5E-11            
+
+*** Overlap capacitance (CGEOMOD=0 and 2) ***
++CGSO = 0.0             CGDO = 0.0               CGSL = 0.0
++CGDL = 0.0             CKAPPAS = 0.6            CKAPPAD = 0.6
++CGBO = 0.0             CGBL = 0.0               CKAPPAB = 0.6
++CGBN=0.0 
+      
+
+*** Source/drain to substrate sidewall capacitance ***
++CSDESW = 0.6
+
+*** Junction current and capacitance ***
++CJS = 5E-4             CJD = 5E-4                CJSWS = 5E-10
++CJSWD = 5E-10          CJSWGS = 0.0              CJSWGD = 0.0
++PBS = 1                PBD = 1                   PBSWS = 1
++PBSWD = 1              PBSWGS = 1                PBSWGD = 1
++MJS = 0.5              MJD = 0.5                 MJSWS = 0.33
++MJSWD = 0.33           MJSWGS = 0.33             MJSWGD = 0.33
++SJS = 0.0              SJD = 0.0                 SJSWS = 0.0
++SJSWD = 0.0            SJSWGS = 0.0              SJSWGD = 0.0
++MJS2 = 0.125           MJD2 = 0.125              MJSWS2 = 0.083
++MJSWD2 = 0.083         MJSWGS2 = 0.083           MJSWGD2 = 0.083
++JSS = 1E-4             JSD = 1E-4                JSWS = 0                  
++JSWD = 0               JSWGS = 0                 JSWGD = 0                 
++NJS = 1                NJD = 1                   IJTHSFWD = 0.1            
++IJTHDFWD = 0.1         IJTHSREV = 0.1            IJTHDREV = 0.1            
++BVS = 10               BVD = 10                  XJBVS = 1                 
++XJBVD = 1
+
+*** Tunneling Component of Junction Current ***
++JTSS = 0               JTSD = 0                  JTSSWS = 0
++JTSSWD = 0             JTSSWGS = 0               JTSSWGD = 0 
++JTWEFF = 0             NJTS = 20                 NJTSD = 20 
++NJTSSW = 20            NJTSSWD = 20              NJTSSWG = 20
++NJTSSWGD = 20          VTSS = 10                 VTSD = 10 
++VTSSWS = 10            VTSSWD = 10               VTSSWGS = 10 
++VTSSWGD = 10           LINTIGEN = 1e-10              NTGEN = 1.0
++AIGEN = 0              BIGEN = 0 
+
+*** NQS Gate Resistance Model & NQS Charge Deficit Model ***
++XRCRG1 = 12            XRCRG2 = 1
+
+*** NQS Charge Segementation Model ***
++NSEG = 4
+
+*** Flicker Noise ***
++EF = 1                 EM = 4.1E7                NOIA = 6.25E39
++NOIB = 3.125E24        NOIC = 8.75E7            
+
+*** Thermal Noise ***
++NTNOI = 1
+
+*** Temperature Effects ***
++TNOM = 27              TBGASUB = 7.02E-4         TBGBSUB = 1.108E3
++KT1 = 0.0              KT1L = 0                  IIT = -0.5
++TII = 0.0              TGIDL = -0.003            IGT = 2.5
++TCJ = 0.0              TCJSW = 0.0               TCJSWG = 0.0
++TPB = 0.0              TPBSW = 0.0               TPBSWG = 0.0
++XTIS = 3               XTID = 3                  XTSS = 0.02
++XTSD = 0.02            XTSSWS = 0.02             XTSSWD = 0.02
++XTSSWGS = 0.02         XTSSWGD = 0.02            TNJTS = 0 
++TNJTSD = 0             TNJTSSW = 0               TNJTSSWD = 0 
++TNJTSSWG = 0           TNJTSSWGD = 0             TSS=0.0
+
+*** Self Heating ***
++RTH0 = 0.01            CTH0 = 1E-5               WTH0 = 0    
+*
+.ENDS
+
+* 
+
