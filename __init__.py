@@ -281,6 +281,17 @@ def mbpfaq():
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
 
+
+
+
+@app.route('/mqa')
+@login_required
+def mqa():
+    recordPostHistory('/mqa')
+    return render_template('mqa/agenda.html')
+
+
+
 @app.route('/mqafaq')
 @login_required
 def mqafaq():
@@ -572,6 +583,8 @@ route_blog_iccap_pyvisa_101 = '/blog/iccap_pyvisa_101'
 def blog_iccap_pyvisa_101():
     recordPostHistory(route_blog_iccap_pyvisa_101)
     return render_template('blog/post/pyvisa_01.html')
+
+
 
 
 route_blog_mqa_pyrfs = '/blog/mqa_pyrfs'
