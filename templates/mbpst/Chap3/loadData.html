@@ -1,0 +1,97 @@
+{% extends "mbpst/mbpst_index.html" %}
+{% block mbpstmain %}
+
+<h2>Load Data Files into MBP using Script</h2>
+<hr>
+This document demonstrates how to load multiple data files into MBP using MBP’s script efficiently.
+<br>
+<br>
+<u><em>
+    Scenario:
+</em></u><br><br>
+Often, we need to load different data files into MBP for modeling, such as different setups, temperatures, etc. There could be a ton.
+We know that when loading all the data files into MBP at once it would make our modeling work cumbersome: (1) it could slow MBP down by consuming a lot of memory,
+and (2) we would have to interact with a bunch of unnecessary data and mouse clicks.
+<br>
+<br>The best practice is just to load the right amount of data we needed for a task, then switch to another data set for another task.
+<br><br>
+<u><em>
+    Challenge:
+</em></u><br><br>
+Is there a way to better manage and automate the switch of data sets? Because the repeating data loading process could become cumbersome
+if we had to pick up files from different locations.
+<br><br>
+<u><em>
+    Solution:
+</em></u><br><br>
+
+MBP script provides useful APIs for us to do so. Some example code is provided, as follows. <br><br>
+In the following screenshot of MBP Script window, we created a few files under progloadData. <br><br>
+In the loadMyData script file, we use line 18 and 19 to load a String[] array of data file paths, which is collected by code line 7 – 14,
+given the directory from line 3.
+<br>
+
+<br><img src="/static/mbpst/Chap3/images/3.26/fast.png" border="1" ><br><br>
+To run the code, simply click the Play button on the toolbar, as shown below.
+
+<br><img src="/static/mbpst/Chap3/images/3.26/run.png" border="1px"><br><br>
+Note: we could further create custom menu items for executing custom functions, so that we can quickly run a piece of code in MBP main GUI
+without coming back to the Script window. We will discuss this in another post.
+<br><br>The source code is provided here for copy-paste:
+
+<pre class="code">
+cmd.clearData(); // clear existing data.
+
+String folder ="C:\\Users\\shuancai\\Desktop\\MBP_test\\data_load_test\\";
+
+//Find out all .mdm data file in the given directory
+//save their file paths in a list.
+ArrayList list = new ArrayList();
+File dir = new File(folder);
+File[] files =dir.listFiles();
+for(int i=0;i&#60;files.length;i++){
+	if(files[i].isFile() && files[i].getName().endsWith("mdm")){
+		list.add(files[i].getAbsolutePath());
+	}
+}
+//use MBP's internal function to load a String[] array of files
+import com.accelicon.modelbuilder.ModelBuilder;
+ModelBuilder.framework.loadData((String[])list.toArray(new String[0]););
+
+</pre>
+<br><br>
+On the other hand,  MBP script provides us another API, cmd.loadData(String file), to allow us load a single file;
+however, by calling this function multi-times, we can also load multi-files. The code is exampled below, see code line 18-20.
+
+<br><img src="/static/mbpst/Chap3/images/3.26/slow.png" border="1px"><br><br>
+
+After a few tests, we found that the cmd.loadData(String file) function somehow is slower than the framework.loadData(String[] filepaths) function if there are a lot of files to load. It could be caused by file I/O overhead, and the speed difference could be as bad as 10x slower. So, we recommend using the first method for better performance.
+
+<br><br>
+As for the timer function, it is shown below.
+
+<br><img src="/static/mbpst/Chap3/images/3.26/timer.png" border="1px"><br><br>
+
+Here is the code for copy-paste:
+<pre>
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+void printNow(){
+	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	Date date = new Date();
+	System.out.println(dateFormat.format(date));
+}
+</pre>
+
+<br>
+<br>
+Thank you!
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

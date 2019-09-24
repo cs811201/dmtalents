@@ -34,6 +34,7 @@ app.config['SECRET_KEY'] = 'super-secret007'
 app.config['SECURITY_REGISTERABLE'] = False
 app.config['SECURITY_TOKEN_MAX_AGE'] = 60 * 30
 app.config['SECURITY_TRACKABLE'] = True
+app.config['SECURITY_PASSWORD_HASH'] = 'plaintext'
 # app.config['SECURITY_PASSWORD_SALT'] = 'something_super_secret_802jfkj__fd!'
 
 # config to upload folder
@@ -242,7 +243,7 @@ def logout():
 
 
 @app.route('/mbpst')
-# @login_required
+@login_required
 def mbpst():
     recordPostHistory('/mbpst')
     return render_template('mbpst/Chap1/WhatIsMBPScript.html')
@@ -310,6 +311,151 @@ def wpefaq():
     return render_template('faq/wpe/wpefaqlist.html', slist=results, func=getCategory)
 
 
+### IC-CAP application notes ###
+route_iccap = "/iccap"
+
+
+@app.route(route_iccap)
+@login_required
+def iccap():
+    recordPostHistory(route_iccap)
+    return render_template('iccap/agenda.html')
+
+
+route_iccap_python_userpath = "/iccap/python/userpath"
+
+
+@app.route(route_iccap_python_userpath)
+@login_required
+def iccap_python_userpath():
+    recordPostHistory(route_iccap_python_userpath)
+    return render_template('iccap/userpythonpath.html')
+
+
+route_iccap_python_reload = "/iccap/python/reload"
+
+
+@app.route(route_iccap_python_reload)
+@login_required
+def iccap_python_reload():
+    recordPostHistory(route_iccap_python_reload)
+    return render_template('iccap/reloadpython.html')
+
+
+route_iccap_python_derivative = "/iccap/python/derivative"
+
+
+@app.route(route_iccap_python_derivative)
+@login_required
+def iccap_python_derivative():
+    recordPostHistory(route_iccap_python_derivative)
+    return render_template('iccap/derivative.html')
+
+
+route_iccap_python_virtualenv = "/iccap/python/virtualenv"
+
+
+@app.route(route_iccap_python_virtualenv)
+@login_required
+def iccap_python_virtualenv():
+    recordPostHistory(route_iccap_python_virtualenv)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_pel_whoami = "/iccap/pel/whoami"
+
+
+@app.route(route_iccap_pel_whoami)
+@login_required
+def iccap_pel_whoami():
+    recordPostHistory(route_iccap_pel_whoami)
+    return render_template('iccap/whoami.html')
+
+
+route_iccap_pel_whois = "/iccap/pel/whois"
+
+
+@app.route(route_iccap_pel_whois)
+@login_required
+def iccap_pel_whois():
+    recordPostHistory(route_iccap_pel_whois)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_pel_comma_ampersand = "/iccap/pel/comma_ampersand"
+
+
+@app.route(route_iccap_pel_comma_ampersand)
+@login_required
+def iccap_pel_comma_ampersand():
+    recordPostHistory(route_iccap_pel_comma_ampersand)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_pel_startwith = "/iccap/pel/startwith"
+
+
+@app.route(route_iccap_pel_startwith)
+@login_required
+def iccap_pel_startwith():
+    recordPostHistory(route_iccap_pel_startwith)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_pel_val = "/iccap/pel/val"
+
+
+@app.route(route_iccap_pel_val)
+@login_required
+def iccap_pel_val():
+    recordPostHistory(route_iccap_pel_val)
+    return render_template('iccap/tmp.html')
+
+
+
+
+
+route_iccap_pel_curModelName = "/iccap/pel/curModelName"
+
+
+@app.route(route_iccap_pel_curModelName)
+@login_required
+def iccap_pel_curModelName():
+    recordPostHistory(route_iccap_pel_curModelName)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_pel_savemdm = "/iccap/pel/savemdm"
+
+
+@app.route(route_iccap_pel_savemdm)
+@login_required
+def iccap_pel_savemdm():
+    recordPostHistory(route_iccap_pel_savemdm)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_pel_passvar = "/iccap/pel/passvar"
+
+
+@app.route(route_iccap_pel_passvar)
+@login_required
+def iccap_pel_passvar():
+    recordPostHistory(route_iccap_pel_passvar)
+    return render_template('iccap/tmp.html')
+
+
+route_iccap_misc_param_sync = "/iccap/misc/param_sync"
+
+
+@app.route(route_iccap_misc_param_sync)
+@login_required
+def iccap_misc_param_sync():
+    recordPostHistory(route_iccap_misc_param_sync)
+    return render_template('iccap/tmp.html')
+
+
+########## A-LFNA ############
 route_alfnafaq_list = "/alfnafaq"
 
 
@@ -889,6 +1035,13 @@ def mbpstchap3_25():
     return render_template('/mbpst/Chap3/IdealityFactor.html')
 
 
+@app.route('/mbpst/chap3.26')
+@login_required
+def mbpstchap3_26():
+    recordPostHistory('/mbpst/chap3.26')
+    return render_template('/mbpst/Chap3/loadData.html')
+
+
 @app.route('/mbpst/chap4.1')
 @login_required
 def mbpstchap4_1():
@@ -1309,6 +1462,26 @@ def mbpfaq_site_die():
     return render_template('/faq/mbp/site_die.html')
 
 
+route_mbpfaq_idletime = '/mbpfaq/idletime'
+
+
+@app.route(route_mbpfaq_idletime)
+@login_required
+def mbpfaq_idletime():
+    recordPostHistory(route_mbpfaq_idletime)
+    return render_template('/faq/mbp/licenseidletime.html')
+
+
+route_mbpfaq_mbsetpath = '/mbpfaq/mbsetpath'
+
+
+@app.route(route_mbpfaq_mbsetpath)
+@login_required
+def mbpfaq_mbsetpath():
+    recordPostHistory(route_mbpfaq_mbsetpath)
+    return render_template('/faq/mbp/mbsetpath.html')
+
+
 #### MQA FAQ
 @app.route('/mqafaq/synchroVdVg')
 @login_required
@@ -1503,6 +1676,37 @@ def download_bsim4_model_meas():
                      attachment_filename='bsim4_model.l', mimetype='text/rule', as_attachment=True)
 
 
+route_mqafaq_helpfile = '/mqafaq/helpfile'
+
+
+@app.route(route_mqafaq_helpfile)
+@login_required
+def mqafaq_helpfile():
+    recordPostHistory(route_mqafaq_helpfile)
+    return render_template('/faq/mqa/helpfile.html')
+
+
+route_mqafaq_nonInstanceParam = '/mqafaq/nonInstanceParam'
+
+
+@app.route(route_mqafaq_nonInstanceParam)
+@login_required
+def mqafaq_nonInstanceParam():
+    recordPostHistory(route_mqafaq_nonInstanceParam)
+    return render_template('/faq/mqa/nonInstanceParam.html')
+
+
+
+route_mqafaq_linkd2ads = '/mqafaq/link2ads'
+
+
+@app.route(route_mqafaq_linkd2ads)
+@login_required
+def mqafaq_linkd2ads():
+    recordPostHistory(route_mqafaq_linkd2ads)
+    return render_template('/faq/mqa/link2ads.html')
+
+
 #### ICCAP FAQ ######
 
 route_iccapfaq_saveInstToMDM = '/iccapfaq/saveInstToMDM'
@@ -1585,6 +1789,36 @@ def iccapfaq_link2pspice3():
     return render_template('/faq/iccap/link2pspice.html')
 
 
+route_iccapfaq_usersimfile = '/iccapfaq/usersimfile'
+
+
+@app.route(route_iccapfaq_usersimfile)
+@login_required
+def iccapfaq_usersimfile():
+    recordPostHistory(route_iccapfaq_usersimfile)
+    return render_template('/faq/iccap/usersimfile.html')
+
+
+route_iccapfaq_recentfiles = '/iccapfaq/recentfiles'
+
+
+@app.route(route_iccapfaq_recentfiles)
+@login_required
+def iccapfaq_recentfiles():
+    recordPostHistory(route_iccapfaq_recentfiles)
+    return render_template('/faq/iccap/recentfiles.html')
+
+
+route_iccapfaq_lax_vm = '/iccapfaq/lax_vm'
+
+
+@app.route(route_iccapfaq_lax_vm)
+@login_required
+def iccapfaq_lax_vm():
+    recordPostHistory(route_iccapfaq_lax_vm)
+    return render_template('/faq/iccap/lax_vm.html')
+
+
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'
@@ -1636,6 +1870,7 @@ route_alfnafaq_setod = '/alfnafaq/setod'
 def alfnafaq_setod():
     recordPostHistory(route_alfnafaq_setod)
     return render_template('/faq/alfna/setod.html')
+
 
 #### MQA Rules
 @app.route('/mqarules/ft')
@@ -1840,6 +2075,16 @@ route_mqarules_compdiff_a = '/mqarules/compdiff_a'
 def mqarule_compdiff_a():
     recordPostHistory(route_mqarules_compdiff_a)
     return render_template('/mqarules/rules/compdiff_a.html')
+
+
+route_mqarules_select = '/mqarules/select'
+
+
+@app.route(route_mqarules_select)
+@login_required
+def mqarule_select():
+    recordPostHistory(route_mqarules_select)
+    return render_template('/mqarules/rules/select.html')
 
 
 #### Video Demos
@@ -2058,6 +2303,16 @@ route_video_mbp_sram = '/video/mbp_sram'
 def videombp_sram():
     recordPostHistory(route_video_mbp_sram)
     return render_template('/video/MBP_sram.html')
+
+
+route_video_MBP_recenter = '/video/MBP_recentering'
+
+
+@app.route(route_video_MBP_recenter)
+@login_required
+def videoMBP_recenter():
+    recordPostHistory(route_video_MBP_recenter)
+    return render_template('/video/MBP_ReCentering.html')
 
 
 ######################
@@ -2711,15 +2966,23 @@ def userViewHistory(uid):
         iz = Counter(cateList).items()  # category, count
 
         sortedIz = reversed(sorted(iz, key=operator.itemgetter(1)))
-        for ss in sortedIz:
-            cateNames.append(ss[0])
-            cateCounts.append(ss[1])
+        # for ss in sortedIz:
+        #     cateNames.append(ss[0])
+        #     cateCounts.append(ss[1])
 
-        userViewByCat_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
-                                        x_label_rotation=-30, height=500)
+        # userViewByCat_chart = pygal.Bar(style=style_userView, print_values=True, show_legend=False,
+        #                                 x_label_rotation=-30, height=500)
+        # userViewByCat_chart.title = 'View # by Category'
+        # userViewByCat_chart.x_labels = cateNames
+        # userViewByCat_chart.add("", cateCounts)
+        # userViewByCat_graph = userViewByCat_chart.render_data_uri()
+
+        userViewByCat_chart = pygal.Pie(style=style_userView, print_values=True, show_legend=True,
+                                        height=500)
         userViewByCat_chart.title = 'View # by Category'
-        userViewByCat_chart.x_labels = cateNames
-        userViewByCat_chart.add("", cateCounts)
+        for ss in sortedIz:
+            userViewByCat_chart.add(ss[0], ss[1])
+
         userViewByCat_graph = userViewByCat_chart.render_data_uri()
 
         # stackedLine for usage over time.
@@ -2740,7 +3003,7 @@ def userViewHistory(uid):
         userViewOverTime_chart = pygal.StackedLine(fill=True, x_label_rotation=-30, height=500)
         userViewOverTime_chart.title = 'View # Over Time by Category'
 
-        postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
+        # postHis = PostHistory.query.filter(PostHistory.user_id == uid).order_by(desc(PostHistory.date)).all()
         # get how many Category
 
 
@@ -2921,6 +3184,29 @@ def download_Mismatch_spe_mos_rule():
     recordPostHistory(route_download_mismatch_spe_mos_rule)
     return send_file('static/mqarules/mismatch_spe_mos/mismatch_spe_mos.rule',
                      attachment_filename='mismatch_spe_mos.rule', mimetype='text/rule', as_attachment=True)
+
+
+route_download_nonInstanceParam_rule = '/mqarules/nonInstanceParam/rule/download'
+
+
+@app.route(route_download_nonInstanceParam_rule)
+@login_required
+def download_nonInstanceParam_rule():
+    recordPostHistory(route_download_nonInstanceParam_rule)
+    return send_file('static/faq/mqa/nonInstanceParam/test.rule', attachment_filename='test.rule',
+                     mimetype='text/rule', as_attachment=True)
+
+
+route_download_nonInstanceParam_mdm = '/mqarules/nonInstanceParam/mdm/download'
+
+
+@app.route(route_download_nonInstanceParam_mdm)
+@login_required
+def download_nonInstanceParam_mdm():
+    recordPostHistory(route_download_nonInstanceParam_mdm)
+    return send_file('static/faq/mqa/nonInstanceParam/ids_vds_vgs_more_values.mdm',
+                     attachment_filename='ids_vds_vgs_more_values.mdm', mimetype='text/plain',
+                     as_attachment=True)
 
 
 route_download_symm_rule = '/mqarules/symm/download'
