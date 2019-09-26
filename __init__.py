@@ -2099,6 +2099,15 @@ def mqarule_select():
     recordPostHistory(route_mqarules_select)
     return render_template('/mqarules/rules/select.html')
 
+route_mqarules_compdiff_b = '/mqarules/compdiff_b'
+
+
+@app.route(route_mqarules_compdiff_b)
+@login_required
+def mqarule_compdiff_b():
+    recordPostHistory(route_mqarules_compdiff_b)
+    return render_template('/mqarules/rules/compdiff_b.html')
+
 
 #### Video Demos
 route_video = '/video'
@@ -3341,6 +3350,17 @@ def download_compdiff_a_rule():
     recordPostHistory(route_download_compdiff_a_rule)
     return send_file('static/mqarules/compdiff_a/compDiff_meas_within_corners.zip',
                      attachment_filename='compDiff_meas_within_corners.zip', mimetype='application/zip',
+                     as_attachment=True)
+
+route_download_compdiff_b_rule = '/mqarules/compdiff_b/rule/download'
+
+
+@app.route(route_download_compdiff_b_rule)
+@login_required
+def download_compdiff_b_rule():
+    recordPostHistory(route_download_compdiff_b_rule)
+    return send_file('static/mqarules/compdiff_b/compDiff_demo2.zip',
+                     attachment_filename='compDiff_demo2.zip', mimetype='application/zip',
                      as_attachment=True)
 
 

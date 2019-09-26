@@ -1,0 +1,74 @@
+{% extends "mqarules/mqarules_index.html" %}
+{% block title%}
+Rule: CompDiff App 2
+{% endblock %}
+
+{% block mqarulesmain %}
+
+<h2>Check Differences(Vth, Idsat) b/t Models</h2>
+<h3>MQA Rules</h3>
+<hr>
+Usually, we look at RMS when comparing two model’s simulation and flag an error is the RMS is larger than a certain value; however, sometimes we just want to know whether a device’s target, say Vth or Idsat, of model A is larger or less than model B or not, or optionally by how much.
+<br/><br/>
+This application note provides example MQA rules to show us how it’s done in MQA, using CompDiff function which was introduced in MQA 2016 HF2. Download link of this example is provided in the end.
+<br/><br/>
+Below are the two output plots: <br/><br/>
+<ul>
+    1. Difference of Vtlin between model TT and model SS, vs channel Length(L) at various channel Width(W).<br/>
+    <br/><img src="/static/mqarules/compdiff_b/pvth.png"/> <br/>
+    We can tell that Vtlin of TT at all W are less than SS, and MQA reports OK.
+    <br/><br/>
+    2. Difference of Idsat between TT and SS, vs L at various W.
+    <br/><img src="/static/mqarules/compdiff_b/pIdsat.png"/> <br/>
+    We can tell that Idsat of TT at all W are larger than SS, and MQA reports OK.<br/><br/>
+    3. Here is another example where MQA reports errors.
+    <br/>
+    Because the bar is raised from 0 to 1E-3, we are now asking MQA to check that TT must be at least 1E-3 larger that
+    SS, so all the points where the diff is less than 1E-3 got reported as errors.
+    <br/><img src="/static/mqarules/compdiff_b/error.png"/> <br/>
+</ul>
+<br/><br/>
+Let’s take a look at the rule, as shown below.
+<br/><img src="/static/mqarules/compdiff_b/idsat.png"/> <br/>
+The code for copy-paste:<br/>
+<pre>
+[Compare: 03:Idsat M1 > M2: compDiff(L,y, "RefModel=Last","DiffType=Diff", "Min=0" ): error: Idsat of M1 is less than that of M2]
+
+</pre>
+On line 17 we used the CompDiff function
+<ul>
+    (1) The basic syntax for axis order is just as all other MQA functions: CompDiff(Z, X, Y)<br/>
+    (2) RefModel=Last, specify to use the last model in the model list when setting up this QA project, as highlighted
+    below. The keywords that RefModel accepts are: First, Mid, Last.<br/>
+    Or, equivalently we can use model index starting from 0, for example, to refer to the second model, we could specify
+    RefModel = 1.<br/>
+
+    (3) DiffType=Diff means the Diff is to be calculated in the fashion of Diff = IdsatM1 – IdsatM2<br/>
+    (4) Then by specifying Min=0, we ask the function to check all the Diff must be > 0, otherwise report error.<br/>
+</ul>
+The Vth rule is captured below, FYI:<br/><br/>
+<img src="/static/mqarules/compdiff_b/vth.png"/> <br/>
+Now, on line 31, we specify Max=0 to ask the function to check that all the Diff must be less than 0, namely off the Vt of Model1(M1) must be less than that of M2.
+<br/><br/>
+The code for copy-paste:
+<pre>
+[Compare:02:Vtlin of M1 < M2:compDiff(W,L,y, "RefModel=Last","DiffType=Diff", "Max=0"): error: Vtlin of M1 is larger than that of M2]
+</pre>
+Click <a href="/mqarules/compdiff_b/rule/download" target="_blank">here to download</a> the example files. <br/><br/>
+
+Thanks! <br/><br/>
+
+
+</ul>
+
+<br/>
+Thanks!
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+{% endblock %}
