@@ -2120,6 +2120,18 @@ def videoindex():
     return render_template('/video/video_index.html')
 
 
+route_video_mqaasm = '/video/mqa-asm-hemt'
+
+
+@app.route(route_video_mqaasm)
+@login_required
+def videomqaASM():
+    recordPostHistory(route_video_mqaasm)
+    return render_template('/video/MQA_ASM-HEMT.html')
+
+
+
+
 route_video_mqaHvsS = '/video/mqaHvsS'
 
 
@@ -3892,6 +3904,17 @@ def download_mbpst_idealityfactor_script():
     recordPostHistory(route_download_mbpst_IF_zip)
     return send_file('static/mbpst/Chap3/images/3.25/mbp_script.zip',
                      attachment_filename='mbp_script.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_mqa_asm_zip = '/video/mqa_asm-hemt/download'
+
+
+@login_required
+@app.route(route_download_mqa_asm_zip)
+def download_mqa_asm_hemt():
+    recordPostHistory(route_download_mqa_asm_zip)
+    return send_file('static/video/mqa_asm-hemt/asmhemt.zip',
+                     attachment_filename='asmhemt.zip', mimetype='application/zip', as_attachment=True)
 
 
 ### Upload a file
