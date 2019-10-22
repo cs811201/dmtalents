@@ -2130,6 +2130,15 @@ def videomqaASM():
     return render_template('/video/MQA_ASM-HEMT.html')
 
 
+route_video_mqa_np_mc = '/video/mqa_np_mc'
+
+
+@app.route(route_video_mqa_np_mc)
+@login_required
+def videomqa_np_mc():
+    recordPostHistory(route_video_mqa_np_mc)
+    return render_template('/video/MQA_NP_MC.html')
+
 
 
 route_video_mqaHvsS = '/video/mqaHvsS'
@@ -2328,6 +2337,30 @@ route_video_iccap_bjt_modeling = '/video/iccap_bjt_modeling'
 def videoiccap_bjt_modeling():
     recordPostHistory(route_video_iccap_bjt_modeling)
     return render_template('/video/ICCAP_bjt_modeling.html')
+
+route_video_iccap_cap_res_modeling = '/video/iccap_cap_res'
+
+
+@app.route(route_video_iccap_cap_res_modeling)
+def videoiccap_cap_res_modeling():
+    recordPostHistory(route_video_iccap_cap_res_modeling)
+    return render_template('/video/ICCAP_cap_res.html')
+
+route_video_iccap_ind_modeling = '/video/iccap_ind'
+
+
+@app.route(route_video_iccap_ind_modeling)
+def videoiccap_ind_modeling():
+    recordPostHistory(route_video_iccap_ind_modeling)
+    return render_template('/video/ICCAP_ind.html')
+
+route_video_iccap_check_spar_modeling = '/video/iccap_check_spar'
+
+
+@app.route(route_video_iccap_check_spar_modeling)
+def videoiccap_check_spar_modeling():
+    recordPostHistory(route_video_iccap_check_spar_modeling)
+    return render_template('/video/ICCAP_check_spar.html')
 
 
 route_video_mbp_sram = '/video/mbp_sram'
@@ -3915,6 +3948,16 @@ def download_mqa_asm_hemt():
     recordPostHistory(route_download_mqa_asm_zip)
     return send_file('static/video/mqa_asm-hemt/asmhemt.zip',
                      attachment_filename='asmhemt.zip', mimetype='application/zip', as_attachment=True)
+
+route_download_mqa_np_mc_zip = '/video/mqa_np_mc/download'
+
+
+@login_required
+@app.route(route_download_mqa_np_mc_zip)
+def download_mqa_np_mc():
+    recordPostHistory(route_download_mqa_np_mc_zip)
+    return send_file('static/video/mqa_np_mc/MonteCarlo_Corners.zip',
+                     attachment_filename='MonteCarlo_Corners.zip', mimetype='application/zip', as_attachment=True)
 
 
 ### Upload a file
