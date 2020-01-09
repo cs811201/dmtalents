@@ -1,0 +1,68 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>NWA Calibration</h3>
+<h4>Perform the NWA Calibration 1</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>PERFORMING THE NWA CALIBRATION</em><br/>
+After the ohmic losses of the DC biasing have been characterized, and the max. applicable RF signal power for the DUT has been identified, we are now ready to perform the NWA calibration.
+<br><img width="600" src="/static/iccap/NWA_Cal/1.png"><br/><br/>
+
+First of all, the applied GSG probe and its ISS Cal.Substrate must correspond. It is especially important that they stem from the same manufacturer.
+<br/><br/>
+The probe manufacturer provides the CalKit definitions for this combination of probes and Cal.Substrate, as shown above for Picoprobe and Formfactor/Cascade.
+When using the NWA user interface to perform the calibration, these CalKit definitions have to be entered into the NWA calibration program, by the method  'Create a NWA CalKit Definition'. Only when this has been done correctly, will the NWA calibration using these GSG probes be correct !
+See the Operating Manual of your NWA about the details for 'Defining a New CalKit'.
+<br/><br/>
+When using e.g. WinCal of FOrmfactor/Cascade Microtech for the NWA calibration, this user-performed cal.kit definition directly on the NWA GUI is not required.
+<br/>
+<hr/>
+<em>WHAT TO DO IN IC-CAP</em>
+<br/><br/>
+Define a 'Setup' with a frequency sweep under 'Inputs' and an S-parameter 'Output'.<br/>
+Optionally, add the DC bias 'Inputs' and 'Outputs'.<br/><br/>
+
+The next step is to define the NWA options under 'Instrument Options'. <br/>
+Let's consider a PNA network analyzer as an example:<br/>
+It is recommended to set <br/>
+<ul>
+    'Use PNA Calibration Settings' = Y,<br/>
+    In this case, you only need to enter the fields for<br/>
+    <li>'CalType' = H, and</li>
+    <li>'Cal/StateFileName' = C:\Users\UserName\mycal.cst<br/>
+        include the path to the file 'mycal.cst', and define also the file extension '.cst'
+    </li>
+</ul>
+
+All other InstrumentOptions fields are ignored by IC-CAP (due to 'Use PNA Calibration Settings'=Y).
+<br/><br/>
+On the NWA, adjust the RF power level to the one identified as described earlier,
+and set the IF Bandwidth to 10Hz ... 100Hz.
+<br/><br/>
+Next, click 'Calibrate' in the IC-CAP 'Setup'.
+IC-CAP transfers the requested frequency points to the NWA.
+<br/><br/>
+Then, a window appears with a note:
+<br><img src="/static/iccap/NWA_Cal/2.png"><br/>
+Hit [OK].<br/>
+Another window pops up:
+<br><img src="/static/iccap/NWA_Cal/3.png"><br/>
+<font color="red"> Do not click [OK] now.</font>
+<br/>
+->   Perform first the calibration on the NWA, either manually   or use WinCal or any other cal. software.<br/>
+->  When done, manually save your calibration to the Calset file location defined earlier in the IC-CAP instrument options. This user-performed, manual saving step is independent of using the NWA GUI or WinCal etc. and their cal.state savings.
+After all that, finally click [OK] in IC-CAP.<br/><br/>
+
+<font color="red"> After all that, finally click [OK] in IC-CAP.</font>
+
+
+<br/><br/>
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

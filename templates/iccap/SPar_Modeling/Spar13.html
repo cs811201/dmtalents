@@ -1,0 +1,94 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+<h3>S-Parameters for Modeling Engineers</h3>
+<h4>Device Modeling Based on S-Parameters</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>1st Example: S-Parameters of a PI Schematic with only Capacitors</em>
+<br><img width="700" src="/static/iccap/SPar_Modeling/3/1.png"><br/><br/>
+
+<li>For freq → 0, all capacitances behave like OPENs:</li>
+<ul>- Sxy=0 (no power transmission) <br/>
+    - Sxx = 1 (Device Port Impedance Z → infinite)<br/></ul>
+<li>For low frequencies, the dominating path for the RF power is across Cs, from Port1 → Port2 (because Cs is larger in
+    value than Cleakx):
+</li>
+<ul>- Sxy is represented by a half-circle, starting at Sxy=0, going towards Sxy=1 with increasing frequency.<br/>
+    - Sxx is represented by a half-circle, too, representing Cs, in series with the termination (Z0 = 50 Ohm) <br/>
+    at the opposite Port. It starts at Sxx=1, and goes towards Sxx=0 (the center of the Smith chart).<br/></ul>
+<li>Towards high frequencies, the leakage capacitances towards ground come into play:</li>
+<ul>the trace in Sxx now deviates from the previously targeted end point Z0, now towards Z = 0, at the very left of the
+    Smith chart.<br/>
+    Regarding Sxy, this increasing leakage explains that the Sxy trace does not reach Sxy = 1, but crosses the x-axis at
+    a lower value.<br/></ul>
+<li>At very high frequencies, the capacitor Cs is behaving more and more like a SHORT, but both parasitic capacitances
+    'Cleakx' are now also becoming more and more a SHORT, and therefore, the power goes from Port1 and also from Port2
+    directly to ground.
+</li>
+<ul>Sxy → 0: No power transmission any more between the ports for highest frequencies.<br/>
+    Sxx → -1 (Device Port Impedance Z → 0 Ohm)
+</ul>
+<hr/>
+<em>2nd Example: S-Parameters of a Simple Spiral Inductor Model</em>
+<br><img width="700" src="/static/iccap/SPar_Modeling/3/2.png"><br/><br/>
+<li>For low frequencies, the dominating path for the RF power is across RMAIN and LMAIN,<br/>
+    i.e. from Port1 → Port2. This can be seen for freq → 0 in
+</li>
+<ul>- Sxy ~ 1 (small losses at RMAIN, LMAIN is a SHORT)<br/>
+    - Sxx ~ 0, i.e. Z = 50 Ohm (of opposite Port2) + RMAIN.
+</ul>
+<li>With increasing frequency, both Sxx and Sxy represent well the RMAIN+LMAIN half-circle shape.</li>
+<li>For high frequencies, the end point of Sxx for the pure RMAIN & LMAIN circuit would be Sxx = 1, the very right side
+    of the Smith chart. But the curve continues further into the capacitive region of the Smith Chart, with a trend
+    towards Sxx = -1 (Z = 0 Ohm) for freq → infinite, what is related to the loss capacitances C10 and C20 towards
+    Ground.
+    The end point for Sxy is still Sxy = 0, but the curve now runs through the 3rd quadrant, due to the leakage path
+    represented by C10+R10 and C20+R20.
+</li>
+
+<br/>
+Notice: common Spice netlist notation:<br/>
+<ul>C10 means a capacitance between Spice Node 1 and Ground,<br/>
+    C20 a capacitance between Spice Node 2 and Ground.
+</ul>
+
+<hr/>
+<em>3rd Example: Directly Interpreting Transistor S-Parameter Traces</em>
+<br><img width="700" src="/static/iccap/SPar_Modeling/3/3.png"><br/>
+<br><img width="700" src="/static/iccap/SPar_Modeling/3/4.png"><br/><br/>
+<hr/>
+<em>4th Example: A Specific S22 Transistor Trace</em>
+<br><img width="700" src="/static/iccap/SPar_Modeling/3/5.png"><br/>
+
+For the schematic above, we can distiguish between two cases:
+<ul> C12 >> C20<br/>
+    and C12 << C20
+</ul>
+<br/>
+In the first case:<br/>
+<ul>
+    we have Ceff~ C12, and the influence of C20 can be neglected. The expected S22 curve will start for DC at 'infinite'
+    resistance, and lead towards 50 Ohm for higher frequencies (Port1 impedance Z0).<br/>
+    Yet for even higher frequencies, C20 will become more and more conductive and will make the power, so far going from
+    Port2 to Port1, more and more going directly to ground. Therefore, the path through C12 and into Z0 of Port1 will
+    become less and less 'attractive': The S22 curve will change its high frequency end target value, and will now tend
+    towards 0 Ohm for infinite frequency. Between both ranges, we expect a transitional trace of S22.
+</ul>
+
+Now to the case C12 << C20:<br/>
+<ul>
+    in this case, the 'easy' path for the signal, for all frequencies, will be from Port2 directly to Ground.
+    C12 and Z0 of Port1 will not be visible in the Smith Chart.
+</ul>
+<br/>
+Note: this behavior is very often found with the S22 of transistors !
+<br/><br/>
+
+IC-CAP Example File:<br/>
+<a href="/iccap/spar/basic/download" target="_blank">S-Parameters_Basic_Examples_Tutorial.mdl</a>
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

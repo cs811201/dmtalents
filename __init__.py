@@ -1832,6 +1832,116 @@ def iccapfaq_lax_vm():
     return render_template('/faq/iccap/lax_vm.html')
 
 
+
+route_iccap_spar11 = '/iccap-spar/1.1'
+
+
+@app.route(route_iccap_spar11)
+@login_required
+def iccap_spar11():
+    recordPostHistory(route_iccap_spar11)
+    return render_template('/iccap/SPar_Modeling/Spar11.html')
+
+route_iccap_spar12 = '/iccap-spar/1.2'
+
+
+@app.route(route_iccap_spar12)
+@login_required
+def iccap_spar12():
+    recordPostHistory(route_iccap_spar12)
+    return render_template('/iccap/SPar_Modeling/Spar12.html')
+
+route_iccap_spar13 = '/iccap-spar/1.3'
+
+
+@app.route(route_iccap_spar13)
+@login_required
+def iccap_spar13():
+    recordPostHistory(route_iccap_spar13)
+    return render_template('/iccap/SPar_Modeling/Spar13.html')
+
+route_iccap_spar14 = '/iccap-spar/1.4'
+
+
+@app.route(route_iccap_spar14)
+@login_required
+def iccap_spar14():
+    recordPostHistory(route_iccap_spar14)
+    return render_template('/iccap/SPar_Modeling/Spar14.html')
+
+route_iccap_spar15 = '/iccap-spar/1.5'
+
+
+@app.route(route_iccap_spar15)
+@login_required
+def iccap_spar15():
+    recordPostHistory(route_iccap_spar15)
+    return render_template('/iccap/SPar_Modeling/Spar15.html')
+
+
+
+route_iccap_nwacal1 = '/iccap-nwa-cal/1'
+
+
+@app.route(route_iccap_nwacal1)
+@login_required
+def iccap_nwacal1():
+    recordPostHistory(route_iccap_nwacal1)
+    return render_template('/iccap/NWA_Cal/nwaCal1.html')
+
+
+
+route_iccap_nwacal12 = '/iccap-nwa-cal/1.2'
+
+
+@app.route(route_iccap_nwacal12)
+@login_required
+def iccap_nwacal12():
+    recordPostHistory(route_iccap_nwacal12)
+    return render_template('/iccap/NWA_Cal/nwaCal1.2.html')
+
+route_iccap_nwacal2 = '/iccap-nwa-cal/2'
+
+
+@app.route(route_iccap_nwacal2)
+@login_required
+def iccap_nwacal2():
+    recordPostHistory(route_iccap_nwacal2)
+    return render_template('/iccap/NWA_Cal/nwaCal2.html')
+
+
+
+route_iccap_nwacal0 = '/iccap-nwa-cal/0'
+
+
+@app.route(route_iccap_nwacal0)
+@login_required
+def iccap_nwacal0():
+    recordPostHistory(route_iccap_nwacal0)
+    return render_template('/iccap/NWA_Cal/nwaCal0.html')
+
+
+
+route_iccap_nwacal4 = '/iccap-nwa-cal/4'
+
+
+@app.route(route_iccap_nwacal4)
+@login_required
+def iccap_nwacal4():
+    recordPostHistory(route_iccap_nwacal4)
+    return render_template('/iccap/NWA_Cal/nwaCal4.html')
+
+route_iccap_nwacal5 = '/iccap-nwa-cal/5'
+
+
+@app.route(route_iccap_nwacal5)
+@login_required
+def iccap_nwacal5():
+    recordPostHistory(route_iccap_nwacal5)
+    return render_template('/iccap/NWA_Cal/nwaCal5.html')
+
+
+
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'
@@ -3958,6 +4068,75 @@ def download_mqa_np_mc():
     recordPostHistory(route_download_mqa_np_mc_zip)
     return send_file('static/video/mqa_np_mc/MonteCarlo_Corners.zip',
                      attachment_filename='MonteCarlo_Corners.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_iccap_spar_basic = '/iccap/spar/basic/download'
+
+
+@login_required
+@app.route(route_download_iccap_spar_basic)
+def download_iccap_spar_basic():
+    recordPostHistory(route_download_iccap_spar_basic)
+    return send_file('static/iccap/SPar_Modeling/S-Parameters_Basic_Examples_Tutorial.mdl',
+                     attachment_filename='S-Parameters_Basic_Examples_Tutorial.mdl', mimetype='text/plain', as_attachment=True)
+
+
+
+
+route_download_iccap_nwacal1 = '/iccap/nwacal1/download'
+
+
+@login_required
+@app.route(route_download_iccap_nwacal1)
+def download_iccap_nwacal1():
+    recordPostHistory(route_download_iccap_nwacal1)
+    return send_file('static/iccap/NWA_Cal/CAL_VERIFY_2port__GSG.mdl',
+                     attachment_filename='CAL_VERIFY_2port__GSG.mdl', mimetype='text/plain', as_attachment=True)
+
+
+
+route_download_iccap_nwacal2 = '/iccap/nwacal2/download'
+
+
+@login_required
+@app.route(route_download_iccap_nwacal2)
+def download_iccap_nwacal2():
+    recordPostHistory(route_download_iccap_nwacal2)
+    return send_file('static/iccap/NWA_Cal/UTILITIES.mdl',
+                     attachment_filename='UTILITIES.mdl', mimetype='text/plain', as_attachment=True)
+
+
+route_download_iccap_nwacal3 = '/iccap/nwacal3/download'
+
+
+@login_required
+@app.route(route_download_iccap_nwacal3)
+def download_iccap_nwacal3():
+    recordPostHistory(route_download_iccap_nwacal3)
+    return send_file('static/iccap/NWA_Cal/_DemoData.zip',
+                     attachment_filename='_DemoData.zip', mimetype='application/zip', as_attachment=True)
+
+
+route_download_iccap_spar_appnote_1967= '/iccap/spar_appnote1967/download'
+
+
+@login_required
+@app.route(route_download_iccap_spar_appnote_1967)
+def download_iccap_spar_appnote_1967():
+    recordPostHistory(route_download_iccap_spar_appnote_1967)
+    return send_file('static/iccap/SPar_Modeling/S-Parameter_Techniques_AN95_historic_1967.pdf',
+                     attachment_filename='S-Parameter_Techniques_AN95_historic_1967.pdf', mimetype='application/pdf', as_attachment=True)
+
+route_download_iccap_spar_appnote_1997= '/iccap/spar_appnote1997/download'
+
+
+@login_required
+@app.route(route_download_iccap_spar_appnote_1997)
+def download_iccap_spar_appnote_1997():
+    recordPostHistory(route_download_iccap_spar_appnote_1997)
+    return send_file('static/iccap/SPar_Modeling/S-Parameter_Techniques_AN95_1997.pdf',
+                     attachment_filename='S-Parameter_Techniques_AN95_1997.pdf', mimetype='application/pdf', as_attachment=True)
+
 
 
 ### Upload a file

@@ -1,0 +1,51 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>NWA Calibration</h3>
+<h4>Perform the NWA Calibration 2</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>Troubleshooting for Entering Calkit Data into Network Analyzers</em>
+<br/><br/>
+A NOTE ABOUT THE 500 Ω  OR  5 Ω ENTRIES IN CALKIT DATA<br/>
+or:    What to do if the NWA does not allow to enter a calkit value<br/>
+<br><img src="/static/iccap/NWA_Cal/4.png"><br/>
+<br><img src="/static/iccap/NWA_Cal/5.png"><br/>
+<br>
+Let's consider the Cascade GSG probes example:<br><br>
+The Cascade LOAD represents a precisely trimmed 50 Ω DC characteristics, plus an inductance. In order to reflect this inductive performance at higher frequencies, it would be necessary to enter the value of that inductance into the NWA calkit definitions. However, some NWAs do not allow entering an inductance for a LOAD. However, they allow entering the characteristic impedance Z0, plus the delay time of a lossless delay line.
+
+<br><img src="/static/iccap/NWA_Cal/6.png"><br/>
+<ul>
+    <li>As depicted above, the S11 curve of a delay line of exactly Z0delayline = 50 Ω is completely in the center of
+        the Smith chart, with S11=0 for all frequencies.
+    </li>
+    <li>Delay lines with a characteristic impedances Z0delayline above 50 Ω look like an inductor in series with a
+        resistor of 50 Ω,
+    </li>
+    <li>and delay line impedances below Z0delayline = 50 Ω look like a capacitance in parallel with a resistor of 50
+        Ω.
+    </li>
+
+</ul>
+<br/>
+Therefore, since the Cascade LOAD behaves like a precisely trimmed resistor of 50 Ω in series with an inductor, a delay line with Z0delayline = 500 Ω (which is the max. entry allowed for most NWAs) is defined, plus the delay time, obtained from the lumped inductance by the following conversion formula:
+<br><img src="/static/iccap/NWA_Cal/7.png"><br/>
+
+On the other hand, in the Picoprobe example above, the LOAD behaves like a resistor of 50 Ω in parallel with a capacitor. Therefore, a delay line impedance of Z0delayline = 5 Ω (which corresponds to the min. entry allowed for most NWAs)  and a corresponding delay time is defined !
+<br/><hr/>
+<em>ABOUT THE NEGATIVE CAPACITANCE  OF THE OPEN CAL.STANDARD  IN  SEPARATION</em>
+<br/><br/>
+The goal of a calibration is to ensure later a correct measurement of the DUT, without any parasitics caused by the measurement cables etc. If the DUT was a 50 Ω coplanar line, it is expected that the power from port 1 is fed from the probe tip completely into this DUT. Now, a GSG probe in separation (OPEN) is also a 50 Ω line, yet cut off at the end of the probe tips.
+<br/><br/>
+When measuring this raised probe, the electro-magnetic field extends a bit over the OPEN end, into the air. This field distortion corresponds to a negative Spice capacitance value.
+<br><img width="650" src="/static/iccap/NWA_Cal/8.png"><br/>
+
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

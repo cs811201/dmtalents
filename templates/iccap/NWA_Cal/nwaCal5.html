@@ -1,0 +1,42 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>NWA Calibration</h3>
+<h4>Get CalKit Data from Measurements</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>HOW TO CALCULATE THE CALIBRATION STANDARDS FROM MEASUREMENTS</em><br/><br/>
+
+A best-practice method to verify the quality of a network analyzer calibration is to measure the SHORT, OPEN, LOAD and THRU calibration standards, right after the calibration, and to convert them into the values of Spice components, representing the corresponding calibration standard.
+<br/>
+This method can be applied to any kind of calibration like SOLT, LRRM etc.<br/><br/>
+
+First, the S-parameters of the-measured standards need to be converted into Y-parameters, from which the impedances of a PI schematic can easily be obtained, as shown here:
+<br><img src="/static/iccap/NWA_Cal/5/1.png"><br/><br/>
+
+<em>In details:</em><br/>
+The measured device is a passive component, therefore we can calculate first (to reduce possible measurement noise):
+<br/>
+<br><img src="/static/iccap/NWA_Cal/5/2.png"><br/>
+and obtain for the impedances ZPI of the PI schematic branches:<br/>
+<br><img src="/static/iccap/NWA_Cal/5/3.png"><br/>
+<br/>
+Notice:<br/>
+when you suspect problems with the calibration quality, it is often helpful to display these impedances in Real/Imaginary Impedance Plots, and to compare in these plots the traces with the expected, ideal ones of the cal. standards.
+<br/><br/>
+From these PI branch impedances, we can finally calculate the Spice component values of the calibration standards, and display them versus frequency, in comparison to the given, constant calibration standard definition value.
+<br/>
+<br><img src="/static/iccap/NWA_Cal/5/4.png"><br/>
+<br><img src="/static/iccap/NWA_Cal/5/5.png"><br/>
+<br><img src="/static/iccap/NWA_Cal/5/6.png"><br/>
+<br><img src="/static/iccap/NWA_Cal/5/7.png"><br/>
+
+<br/><br/>
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

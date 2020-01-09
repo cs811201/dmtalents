@@ -1,0 +1,138 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>S-Parameters for Modeling Engineers</h3>
+<h4>Interpreting S-Parameters</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<h4>Interpreting the S11 and S22 Parameters</h4>
+
+<br><img width="600" src="/static/iccap/SPar_Modeling/2/1.png"><br/><br/>
+
+
+<em>Interpreting S11 and S22 by Applying a Smith Chart</em>
+
+What makes Sxx-Parameters especially interesting for modeling, is that  S11 and S22 can be interpreted as complex input or output impedance of the Two-Port (don't forget: including the termination at the opposite side of the Two-Port with Z0 !!). That's why they are usually plotted in a Smith chart.
+
+
+<br><img width="600" src="/static/iccap/SPar_Modeling/2/2.png"><br/>
+
+
+<br/>
+Demo Movie: See AN-95-1A.mp4<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WU2JMAot5Do" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
+
+
+The Smith chart is a transformation of the Impedance Plane   Z   into the Reflection S-Parameter Sxx, following:
+<ul><br><img src="/static/iccap/SPar_Modeling/2/3.png"> with the system's reference impedance Z0,
+    usually Z0 = 50 Ohm.
+</ul>
+This means that the right half of the complex impedance plane   Z   is transformed into the area of a circle in the Sxx-domain, with radius  '1' .
+<br/>
+In order to get more familiar with interpreting the Smith chart, a green square is indicated above, in the complex impedance plane 'Z', with the corners 1 (0/0) Ohm, corner 2 (50/0) Ohm, corner 3 (50/j50) Ohm and corner 4 (0/j50) Ohm, and its equivalent shape in the Smith Chart with Z0=50 Ohm is drawn too.
+<br/>
+Watch the angel-preserving property of this transform (rectangles stay rectangles close to their origins). Also watch how the points 1 and 4, on the positive imaginary axis of the  Z  plane, are transformed into the Smith Chart,  and where  (50/j50) Ohm (point 3) is located in the Smith Chart.
+<br/>
+Also verify that the center of the Smith Chart represents Z0 (point 2).
+<br/><br/>
+
+NOTES:
+<ul>
+    <li>The magnitudes of S11 and S22 are always ≤1, i.e. inside the Smith Chart.</li>
+    Measurement results with Sxx outside the Smith Chart would mean measuring a power plant (negative resistance !).
+    Consider to re-calibrate your NWA.
+    <li>Remember that included in S-Parameters is the termination of the device at the opposite side of the two-port, by
+        Z0 !!
+    </li>
+</ul>
+<hr/>
+<em>The Different Regions of a Smith Chart</em>
+<br><img width="600" src="/static/iccap/SPar_Modeling/2/4.png"><br/><br/>
+From the value of Sxx Parameters in the Smith Chart, we can calculate the value of the input or output impedance of the device as:
+<ul>
+    Z = Z0 * (1+Sxx) / (1-Sxx)
+</ul>
+<br/>
+In details:
+<ul>
+    <li>resistors are frequency-independent. Therefore, their reflection coefficient is represented by a dot, for all
+        frequencies, on the x-axis, corresponding to their resistance value.<br/>
+        A resistor with 0 Ohm, connected between one Port and Ground, corresponds to Sxx = -1 (to the left of the Smith
+        Chart), one with 50 Ohm to Sxx = 0 lies in the center, and one with infinite Ohm to Sxx = +1 on the right of the
+        Smith Chart (green trace).
+    </li>
+    <li>a capacitor between Port1 and Ground behaves like an OPEN for freq → 0Hz: Sxx = +1,<br/>
+        and like a SHORT for freq → ∞: Sxx = -1
+    </li>
+    With increasing frequency, the trace of a capacitor is represented by a half-circle, turning clockwise with
+    frequency (blue trace).
+    <li>finally, an inductor between Port1 and Ground behaves like a SHORT for freq → 0Hz: Sxx = -1,
+        and like an OPEN for freq → ∞: Sxx = +1 <br/>
+        With increasing frequency, the trace of an inductor is represented by a half-circle, turning clockwise with
+        frequency (red trace).
+    </li>
+</ul>
+<br/><br/>
+As a general rule, note that the Sxx curves always turn to the right with increasing frequency.
+If not, there is either a NWA calibration problem, a measurement problem, or a de-embedding problem.
+<hr/>
+<em>Interpreting the S21 and S12 Parameters</em>
+<br><img width="600" src="/static/iccap/SPar_Modeling/2/5.png"><br/><br/>
+<em>Interpretation of the S21/S12 Real Part Value: Device Transmission Properties</em>
+<br><img width="600" src="/static/iccap/SPar_Modeling/2/6.png"><br/><br/>
+<em>As a rule of
+    thumb</em>: you may interpret the transfer Sxy Parameter values like percent of power transmission between the two ports.
+<hr/>
+<em>Interpreting S12 and S21 by Applying a Polar Plot</em>
+<br><img width="600" src="/static/iccap/SPar_Modeling/2/7.png"><br/><br/>
+<li>resistors are frequency-independent. Therefore, their transmission coefficient is represented by a dot, for all
+    frequencies (green trace).
+    A resistor with 0 Ohm, connected between Port1 and Port2, corresponds to Sxy = +1 (to the right of the Polar Plot),
+    and one with infinite Ohm is at Sxy = 0, in the center of the Polar Plot (no transmission).
+</li>
+<li>a capacitor between Port1 and Port2 behaves like an OPEN for freq →0Hz: S12=S21=0 (no transmission),
+    and like a SHORT for freq → ∞: S12=S21=1 (full power transmission).
+    With increasing frequency, the trace of a capacitor is represented by a half-circle, turning clockwise with
+    frequency (blue trace).
+</li>
+<li>finally, an inductor between Port1 and Port2 behaves like a SHORT for freq → 0Hz: S12=S21=1,
+    and like an OPEN for freq → ∞: S12=S21=0.
+    With increasing frequency, the trace of an inductor is represented by a half-circle, turning clockwise with
+    frequency (red trace).
+</li>
+<br/>
+<hr/>
+<em>S-Parameter Interpretation in a Nut Shell</em>
+<li>Sxx Parameters, displayed in a Smith Chart, can easily be interpreted as Input or Output Impedance of the
+    Two-Port.
+</li>
+<li>Sxy Parameters, displayed in a Polar Plot, can easily be interpreted as Transmitted Power between the ports.</li>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<li>The magnitude of Sxx Parameters is always <1.
+    Otherwise, it would be a negative resistance, and outside of the Smith Chart !
+</li>
+<li>Sxy Parameters for amplifying components have a magnitude >1,
+    (provided the component can amplify in a 50 Ohm system).
+</li>
+<li>With increasing frequency, from 0 -> infinite, all S-parameter curves turn clock-wise !</li>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<li>The start of the trace at fmin, extended down to freq=0, leads to the Spice schematic for DC</li>
+<li>and the end, at fmax, extended up to infinite frequency, leads to the Spice schematic for AC.</li>
+<li>For simple Spice schematics, the trace, in between fmin and fmax, is by first order a half-circle of the
+    corresponding Spice component.
+</li>
+
+<br/>
+<hr/>
+<em>Note:</em>
+See also the Keysight Video <a href="/video/iccap_check_spar" target="_blank">
+How to Accurately Measure and Validate S-Parameters for Transistor Modeling</a>.
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

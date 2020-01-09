@@ -1,0 +1,116 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>S-Parameters for Modeling Engineers</h3>
+<h4>From Classical TwoPort to S-Parameters</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+EXTENDING THE CLASSICAL TWO-PORT THEORY TO S-PARAMETERS
+<br><img width="700" src="/static/iccap/SPar_Modeling/1/1.png"><br/><br/>
+The classical, linear Two-Port Theory relates input and output currents and voltages by linear matrix operations.
+As depicted above, for the Z matrix, the two-port is stimulated by two current sources, and the voltages at the ports are measured each.
+<br/>
+For the Y matrix, voltage sources stimulate each of the ports, and the currents into the ports are measured.
+<br/>
+<br/>
+<em>Drawbacks of YZHA Matrix Theory for high frequency measurements:</em>
+<ul>
+    <li>to calculate the matrix parameters, the Two-Port's input and output needs to be connected to ideal OPENs and
+        SHORTs.
+    </li>
+    <li>at RF frequencies, OPENs and SHORTs are not ideal,
+        but correspond rather to inductances and capacitances.
+        The classical Two-Port Theorie, however, requires ideal OPENs and SHORTs.
+    </li>
+    <li>
+        additionally, the device may oscillate when such terminations would be available and applied.
+    </li>
+</ul>
+
+<em>S-Parameters</em>
+<ul>
+    <li>are obtained by imbedding the device, on both sides, into a well-defined 'characteristic impedance',</li>
+    <li>and by measuring the <font color="blue">reflected and transmitted power waves.</font></li>
+    <li>In practice, this also reduces the chance for oscillations drastically.</li>
+</ul>
+
+<em>S-Parameters are members of the LINEAR Two-Port Theory, too.</em>
+<ul>
+    <li>This means that when measuring nonlinear devices like diodes and transistors, it is absolutely important to make
+        sure that these nonlinear devices have been measured in small signal excitation. I.e. the applied RF signal
+        level has to be small enough to avoid any non-linearities, and that no harmonic frequencies are generated.
+    </li>
+</ul>
+
+<em>In other words:</em><br/>
+<i>only the stimulus frequency is allowed to be present in the device during the S-parameter measurements,
+    and no harmonics of this stimulating, fundamental frequency, at all.</i>
+<br/>
+<hr/>
+RF Energy (S-Parameters) and its Lightwave Analogy
+<br/><img width="700" src="/static/iccap/SPar_Modeling/1/2.png"><br/><br/>
+S-parameters are a mean to characterize an electronic device, in a well-defined environment (i.e. imbedded in the characteristic impedance Z0). To better understand this, we consider an example from optics, a lens. If your lens, at both sides, is in a well-defined environment, e.g. air, your optician can characterize its performance from measuring the reflection and throughput characteristics. If your lens would be put on water, and the other side remained in the air, such a measurement would be much more difficult. So, what is true for your spectacles, is true also for S-Parameters. They allow to characterize a circuit in a well-defined environment, the characteristic impedance Z0. This means that S-parameters relate traveling waves (power) to a Two-Port's reflection and transmission behavior.
+<br/>
+<br/><img width="700" src="/static/iccap/SPar_Modeling/1/3.png"><br/><br/>
+Notice:    When interested in a more detailed derivation of S-Parameters, from forth and back traveling waves, see the appendix at the bottom of this application note.
+<br/>
+<hr/>
+Measuring  S-Parameters:   Linear Network Analyzer (NWA)
+<br/><img width="700" src="/static/iccap/SPar_Modeling/1/4.png"><br/><br/>
+
+During a linear Two-Port S-Parameter measurement, the RF signal stimulation is applied first to Port 1 of the NWA, and reflection b1 and transmission b2 are measured both. Then, by a subsequent 2nd measurement, the RF signal is applied to Port 2, and reflection b2 and transmission b1 are measured.
+While measuring, you will see, on the NWA, the sequential on-switching of the Port 1 LED, followed by the Port 2 LED !
+<br/>
+Both measurement results are finally super-positioned into the resulting S-Parameter dataset.
+Note: due to the *linear* S-Parameter measurement, this super-positioning is possible.
+<br/>
+<hr/>
+S-Parameter Measurements by a NWA in Details ...
+<br/><img width="700" src="/static/iccap/SPar_Modeling/1/5.png"><br/><br/>
+The incident and reflected/transmitted signal, required for measuring transmitted and reflected signals,
+are separated by so-called directional couplers.
+<br/>
+<hr/>
+APPENDIX
+<br/><br/>
+A more Mathematical Introduction to S-Parameters:<br/>
+<font style="bold" size="3">S-Parameters Derived From Forward and Backward Traveling Electronic Waves</font>
+<br/><img width="700" src="/static/iccap/SPar_Modeling/1/6.png"><br/><br/>
+<em>Explanations:</em><br/>
+Both, the forward and the reverse traveling voltage waves, vto and vfrom, experience the characteristic impedance Z0, and the Ohmic law applies (see the top-most pair of formulas).
+<br/><br/>
+When forward and reverse traveling waves meet, voltages are added, and currents are subtracted (see time t=t2 in the sketch to the left). This explains the minus sign in the formula for the 'from' wave (see the top row formula).
+<br/><br/>
+A bit of re-arranging gives the next rows of formulas:<br/>
+the currents and voltages, divided by SQRT(Z0),  are replaced by so-called 'power waves', named 'a' and 'b'.
+<br/><br/>
+A bit further re-arranging the equations gives the definition of the waves 'a' and 'b'.
+<br/><br/>Their inter-relationship, finally, are the S-Parameters.
+<br/>
+<hr/>
+<em>A Bit of History:</em>
+<font style="bold" size="3">The Introduction of S-Parameters in the 1960ies</font>
+<br/><img width="600" src="/static/iccap/SPar_Modeling/1/7.png"><br/><br/>
+The commercial introduction of Network Analyzers to measure S-Parameters was in the 1960ies, mainly done by Hewlett-Packard Company in Santa Rosa, California.
+<br/>
+Publications appeared in the HP Customer Journal, and also by application notes.
+<br/>
+Above, on the right, are screenshots from the historic (and famous)  HP ApplicationNote 95-1.
+This application note had been updated in 1997, and is available at <a
+        href="https://literature.cdn.keysight.com/litweb/pdf/5989-9273EN.pdf?id=2458896" target="_blank">the website of
+    Keysight</a> (the successor of the HP Measurement Instruments Group). Also downloadable here, as follows:
+<ul>
+    <li>
+        <a href="/iccap/spar_appnote1967/download" target="_blank">[1967] Historical HP Application Note 95-1: S-Par Techniques for Faster, More
+            Accurate Network Design</a>
+
+    </li>
+    <li><a href="/iccap/spar_appnote1997/download" target="_blank">[1997] HP Application Note 95-1</a></li>
+</ul>
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

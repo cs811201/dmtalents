@@ -1,0 +1,127 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>NWA Calibration</h3>
+<h4>Identify the Maximum Applicable RF Power</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+
+The important step before starting the network analyzer calibration ...<br/><br/>
+<em>IDENTIFICATION OF THE MAXIMUM APPLICABLE RF POWER LEVEL</em><br/><br/>
+
+S-Parameters belong to the class of linear Two-Port parameters, what means, the device characterized by them always has the same performance, independently of the applied RF power.
+<br/>
+This is true for passive devices like resistors, capacitors, inductors, connectors, lines etc.<br/>
+However, non-linear devices like diodes and transistors, generate harmonic frequencies (signal compression) when the applied RF signal power exceeds a certain limit. In this case, S-parameter measurements have to be performed with RF power levels, for which these devices do not (yet) behave nonlinearly.
+
+
+<br><img  src="/static/iccap/NWA_Cal/0/1.png"><br/><br/>
+When the applied RF power becomes too big, the transistor output signal is no longer a sine function, i.e. the transistor behaves nonlinear: in addition to the stimulating NWA frequency, there are also harmonics present. But the NWA will only measure the fundamental frequency, and ignore the harmonics !
+<br/><br/>
+In this context, keep in mind that:<br/>
+<ul>
+    -> a typical RF signal level for modeling transistors is about -40dBm<br/>
+    i.e. the NWA port1 is set to -30dBm, plus additional ~10dB attenuation of cables and connectors.<br/>
+    -> -40dBm corresponds to a RMS voltage of ~2.2mV (in a 50 Ohm system),<br/>
+    what corresponds to ~3mV peak or ~6mV peak-peak !<br/>
+    -> small signal condition for a transistor is usually defined as 1/10 of the temperature voltage VT,<br/>
+    i.e. VT / 10 = 2.7 mV
+</ul>
+When harmonics occur, their energy is provided by both, the DC bias and the RF power of  the stimulating, fundamental frequency: the DC operating point is affected and thus, the DC bias current is affected.
+<br/><br/>
+We can use this shifted DC bias to identify the max. applicable RF signal for NWA measurements with a smart and simple best-practice method, using the DUT as a spectrum sensor as depicted below:
+<br><img  src="/static/iccap/NWA_Cal/0/2.png"><br/><br/>
+
+We measure the DC output characteristics of the transistor, thru the NWA and its internal or external Bias TEEs. This means, we measure the DC output characteristics, and let the NWA operate as an aggressor, a source of distortion to the DC measurement.
+<br/>
+As shown above, the NWA is not controlled by the DC measurement software. <br/>
+It operates in continuous sweep mode, i.e.  unsynchronized to the DC measurement.<br/>
+<hr/>
+<em>Step-by-step identification of the max. applicable RF power:</em>
+<br/><br/>
+
+<li>We perform a first DC measurement, with the NWA</li>
+<ul>
+    - set to its lowest possible RF signal level (e.g. -80dBm),<br/>
+    - its IF to a large value (e.g. 1kHz ... 10kHz) for fast frequency sweeping<br/>
+    - the frequency range as desired for the final S-parameter measurement<br/>
+    - and continuous trigger mode.<br/>
+    This DC measurement is saved and considered as the reference measurement.<br/>
+</ul>
+<li>Then, we increment the RF power to e.g. -30dBm, with the NWA still in continuous trigger mode, not controlled by the
+    measurement software. Another DC output measurement is performed, and its shape is compared to the previously made
+    reference measurement (y-axis in LOG mode).
+</li>
+<li>This RF power incrementing is continued with steps of +5dBm, until an effect in the lowest bias currents of the DC
+    measurement is observed. When this happens, i.e. when the operating point is shifted (ib and ic for bipolar, id for
+    MOS), harmonics do occur ! We then reduce the RF power a bit and know the max. allowed RF power for the NWA
+    S-parameter measurements of this particular device!
+</li>
+<br/><br/>
+The following sequence of measurement results for a MOS transistor describes this procedure:
+<br><img  src="/static/iccap/NWA_Cal/0/3.png"><br/><br/>
+
+The measurement results, above, compare a reference MOS id-vd curve (blue), performed with minimum RF power of the NWA (-80 dBm), to an id-vd curve (red) with increasing RF signal level, from -30 dBm to 0 dBm. Beginning with -20 dBm, we can observe an increasing distortion to the id-vd curve, happening in the low id range. This means that the applied RF power of the NWA has to be reduced, until the new (red) curve with a lower RF level matches the undistorted reference measurement (blue).
+<br/><br/>
+
+<em>NOTE:</em><br/>
+when you carefully watch the shape of the distortions shown above, you may realize that the distortion shape (with incrementing 'vd') looks like a saw-tooth distortion: a repetition of a large distortion, going down to a lower level, again and again. This is related to the continuous, free sweep mode of the NWA, un-triggered with the DC measurement:
+<br/>
+<ul>
+    <li>when the NWA frequency sweep happens to be at the lower frequencies, the (frequency-dependent) cable losses are
+        small, and thus, the RF distortion signal at the DUT is relatively large (the beginning of the saw-tooth-shaped
+        distortions).
+    </li>
+    <li>When the NWA freq. sweep is at its upper range, the cable losses are higher, and thus, the RF distortion signal
+        at the DUT is smaller: the end of the saw-tooth-shaped distortions.
+    </li>
+</ul>
+
+<hr/>
+<em>A Quick Detail: The Trace of the DC Bias Currents with too big RF Signal Level</em>
+<br/><br/>
+Example: Bipolar Transistor
+<br><img  src="/static/iccap/NWA_Cal/0/4.png"><br/><br/>
+The slide above visualizes the trace of the applied DC bias currents, versus time, affected by the overlaid, distorting NWA measurement.
+<br/>
+<ul>
+    <li>The applied NWA's RF signal is definitively too big.</li>
+    <li>The NWA sweeps its frequency from fmin to fmax, timely independent of the DC current measurements of the SMUs.
+    </li>
+    <li>For fmin, the DC bias currents are more affected (shifted) by the RF signal than for fmax, because of the
+        frequency-dependent cable losses (as explained above).
+    </li>
+    <li>As expected, the shift in bias currents happens when the NWA stimulates Port 1 (due to the amplification of the
+        transistor). It is negligible when the NWA performs the reverse measurement, stimulating Port 2.
+    </li>
+</ul>
+<br/>
+Coming back to the sequence of RF power tests, the maximum applicable RF power, for the specific MOS transistor,  is identified as -25dBm:
+<br/>
+<br><img  src="/static/iccap/NWA_Cal/0/5.png"><br/><br/>
+<hr/>
+<em>Best-Practice Recommendations for NWA S-Parameter Measurements</em><br/>
+<ul>
+    <li>For best resolution and best signal-to-noise ratio, set the NWA's IF Bandwidth to 100Hz or less.<br/>
+        This is usually preferred over measurement averaging.
+    </li>
+    <li>For transistors, the recommended Port2 power is larger than the one at Port1, identified as explained above, due
+        to the transistor amplification.<br/>
+        => Set it to transistor gain less 5 dB safety margin<br/>
+        For example:<br/>
+        typical Transistor Gain = 20 dB, identified max. Port1 power -25dBm<br/>
+        => set Port2 power to (-25+20 - 5)dBm = -10dBm
+    </li>
+</ul>
+<br/><br/>
+<hr/>
+<em>APPENDIX</em><br/><br/>
+The table below should provide a feeling for RF power levels and their corresponding voltage levels.
+<br><img  src="/static/iccap/NWA_Cal/0/6.png"><br/><br/>
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

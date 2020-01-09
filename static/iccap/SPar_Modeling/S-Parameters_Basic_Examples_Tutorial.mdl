@@ -1,0 +1,6054 @@
+LINK MODEL "Spar_Basic_Examples_Tutorial" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P215 C16 P259"
+element 0 "Name" "ErrMsg"
+element 0 "Value" ""
+element 1 "Name" "SIMULATOR"
+element 1 "Value" "spice3"
+element 2 "Name" "Params[0]"
+element 2 "Value" "RMAIN"
+element 3 "Name" "Params[1]"
+element 3 "Value" "LMAIN"
+element 4 "Name" "Params[2]"
+element 4 "Value" "C10"
+element 5 "Name" "Params[3]"
+element 5 "Value" "R10"
+element 6 "Name" "Params[4]"
+element 6 "Value" "C20"
+element 7 "Name" "Params[5]"
+element 7 "Value" "R20"
+element 8 "Name" "Params"
+element 8 "Value" "ICCAP_ARRAY[6]"
+element 9 "Name" "Mins[0]"
+element 9 "Value" "0.001"
+element 10 "Name" "Mins[1]"
+element 10 "Value" "2E-011"
+element 11 "Name" "Mins[2]"
+element 11 "Value" "1E-016"
+element 12 "Name" "Mins[3]"
+element 12 "Value" "0.01"
+element 13 "Name" "Mins[4]"
+element 13 "Value" "1E-016"
+element 14 "Name" "Mins[5]"
+element 14 "Value" "0.01"
+element 15 "Name" "Mins"
+element 15 "Value" "ICCAP_ARRAY[6]"
+element 16 "Name" "Inits[0]"
+element 16 "Value" "0.1"
+element 17 "Name" "Inits[1]"
+element 17 "Value" "2E-009"
+element 18 "Name" "Inits[2]"
+element 18 "Value" "1E-014"
+element 19 "Name" "Inits[3]"
+element 19 "Value" "1"
+element 20 "Name" "Inits[4]"
+element 20 "Value" "1E-014"
+element 21 "Name" "Inits[5]"
+element 21 "Value" "1"
+element 22 "Name" "Inits"
+element 22 "Value" "ICCAP_ARRAY[6]"
+element 23 "Name" "Maxs[0]"
+element 23 "Value" "10"
+element 24 "Name" "Maxs[1]"
+element 24 "Value" "2E-007"
+element 25 "Name" "Maxs[2]"
+element 25 "Value" "1E-012"
+element 26 "Name" "Maxs[3]"
+element 26 "Value" "100"
+element 27 "Name" "Maxs[4]"
+element 27 "Value" "1E-012"
+element 28 "Name" "Maxs[5]"
+element 28 "Value" "100"
+element 29 "Name" "Maxs"
+element 29 "Value" "ICCAP_ARRAY[6]"
+element 30 "Name" "txt_Schematic"
+element 30 "Value" "Schematic:
+*===================================
+*          __     __
+*   1 o---|__|---|__|---o 2
+*     |  RMAIN  LMAIN   |
+*    ---               ---
+*    --- C10           --- C20
+*     |                 |
+*     -                 -
+*    | |               | |
+*     - R10             - R20
+*     |                 |
+*    ---               ---
+*==================================="
+element 30 "Comment" "Variable for GUI 'TL_Notes_Top'"
+element 31 "Name" "txt_Help"
+element 31 "Value" "Tune RMAIN and LMAIN.
+And study also the effect of the parasitic 
+components 'C10', 'R10' and 'C20', 'R20'"
+element 32 "Name" "ICCAP_DEFAULT_SETUP_PAGE"
+element 32 "Value" "Extract / Optimize"
+element 33 "Name" "TWOPORT_C"
+element 33 "Value" "1m"
+element 34 "Name" "TWOPORT_L"
+element 34 "Value" "1m"
+element 35 "Name" ""
+element 35 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "TL_Notes_Top"
+element 0 "Value" "TL|OR=HO|<none>|#212LA_Schematic:#211LA_HelpMdlg|1|0"
+element 1 "Name" "TL_Notes_Top.LA_Schematic"
+element 1 "Value" "LA|BG=C40:CA=%#213txt_Schematic:FI=FF:FG=C6|<none>|<none>|0"
+element 2 "Name" "TL_Notes_Bottom"
+element 2 "Value" "TL|<none>|<none>|#18LA_Notes|1|1"
+element 3 "Name" "TL_Notes_Bottom.LA_Notes"
+element 3 "Value" "LA|BG=C61:CA=#3130Don't be confused with Autoscaling (in the Sxy, and *especially* in the S2Impedance Plot) !!!    Consider switching Autoscale off.|<none>|<none>|0"
+element 4 "Name" "TL_Notes_Top.LA_HelpMdlg"
+element 4 "Value" "LA|BG=C9:CA=%#18txt_Help:FI=DF:FG=C6|<none>|<none>|0"
+element 5 "Name" ""
+element 5 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+element 9 "Symbol" "Square" "A"
+element 9 "Measured" "Default" "A"
+element 9 "Simulated" "Default" "A"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "A"
+element 10 "On Black" "94" "A"
+element 10 "Symbol" "Square" "A"
+element 10 "Measured" "Default" "A"
+element 10 "Simulated" "Default" "A"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "A"
+element 11 "On Black" "81" "A"
+element 11 "Symbol" "Square" "A"
+element 11 "Measured" "Default" "A"
+element 11 "Simulated" "Default" "A"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "A"
+element 12 "On Black" "50" "A"
+element 12 "Symbol" "Square" "A"
+element 12 "Measured" "Default" "A"
+element 12 "Simulated" "Default" "A"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "A"
+element 13 "On Black" "115" "A"
+element 13 "Symbol" "Square" "A"
+element 13 "Measured" "Default" "A"
+element 13 "Simulated" "Default" "A"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "A"
+element 14 "On Black" "54" "A"
+element 14 "Symbol" "Square" "A"
+element 14 "Measured" "Default" "A"
+element 14 "Simulated" "Default" "A"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "A"
+element 15 "On Black" "106" "A"
+element 15 "Symbol" "Square" "A"
+element 15 "Measured" "Default" "A"
+element 15 "Simulated" "Default" "A"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "A"
+element 16 "On Black" "120" "A"
+element 16 "Symbol" "Square" "A"
+element 16 "Measured" "Default" "A"
+element 16 "Simulated" "Default" "A"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "A"
+element 17 "On Black" "87" "A"
+element 17 "Symbol" "Square" "A"
+element 17 "Measured" "Default" "A"
+element 17 "Simulated" "Default" "A"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "A"
+element 18 "On Black" "79" "A"
+element 18 "Symbol" "Square" "A"
+element 18 "Measured" "Default" "A"
+element 18 "Simulated" "Default" "A"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "A"
+element 19 "On Black" "81" "A"
+element 19 "Symbol" "Square" "A"
+element 19 "Measured" "Default" "A"
+element 19 "Simulated" "Default" "A"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "A"
+element 20 "On Black" "1" "A"
+element 20 "Symbol" "Circle" "A"
+element 20 "Measured" "Default" "A"
+element 20 "Simulated" "Dot Line" "A"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "A"
+element 21 "On Black" "2" "A"
+element 21 "Symbol" "Reverse Triangle" "A"
+element 21 "Measured" "Default" "A"
+element 21 "Simulated" "Dot Line" "A"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "A"
+element 22 "On Black" "6" "A"
+element 22 "Symbol" "Star" "A"
+element 22 "Measured" "Default" "A"
+element 22 "Simulated" "Dot Line" "A"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "A"
+element 23 "On Black" "3" "A"
+element 23 "Symbol" "Triangle" "A"
+element 23 "Measured" "Default" "A"
+element 23 "Simulated" "Dot Line" "A"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "A"
+element 24 "On Black" "88" "A"
+element 24 "Symbol" "Square" "A"
+element 24 "Measured" "Default" "A"
+element 24 "Simulated" "Dot Line" "A"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "A"
+element 25 "On Black" "4" "A"
+element 25 "Symbol" "Cross" "A"
+element 25 "Measured" "Default" "A"
+element 25 "Simulated" "Dot Line" "A"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "A"
+element 26 "On Black" "117" "A"
+element 26 "Symbol" "Circle" "A"
+element 26 "Measured" "Default" "A"
+element 26 "Simulated" "Dot Line" "A"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "A"
+element 27 "On Black" "40" "A"
+element 27 "Symbol" "Circle" "A"
+element 27 "Measured" "Default" "A"
+element 27 "Simulated" "Dot Line" "A"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "A"
+element 28 "On Black" "28" "A"
+element 28 "Symbol" "Circle" "A"
+element 28 "Measured" "Default" "A"
+element 28 "Simulated" "Dot Line" "A"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "A"
+element 29 "On Black" "114" "A"
+element 29 "Symbol" "Circle" "A"
+element 29 "Measured" "Default" "A"
+element 29 "Simulated" "Dot Line" "A"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "A"
+element 30 "On Black" "94" "A"
+element 30 "Symbol" "Circle" "A"
+element 30 "Measured" "Default" "A"
+element 30 "Simulated" "Dot Line" "A"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "A"
+element 31 "On Black" "81" "A"
+element 31 "Symbol" "Circle" "A"
+element 31 "Measured" "Default" "A"
+element 31 "Simulated" "Dot Line" "A"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "A"
+element 32 "On Black" "50" "A"
+element 32 "Symbol" "Circle" "A"
+element 32 "Measured" "Default" "A"
+element 32 "Simulated" "Dot Line" "A"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "A"
+element 33 "On Black" "115" "A"
+element 33 "Symbol" "Circle" "A"
+element 33 "Measured" "Default" "A"
+element 33 "Simulated" "Dot Line" "A"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "A"
+element 34 "On Black" "54" "A"
+element 34 "Symbol" "Circle" "A"
+element 34 "Measured" "Default" "A"
+element 34 "Simulated" "Dot Line" "A"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "A"
+element 35 "On Black" "106" "A"
+element 35 "Symbol" "Circle" "A"
+element 35 "Measured" "Default" "A"
+element 35 "Simulated" "Dot Line" "A"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "A"
+element 36 "On Black" "120" "A"
+element 36 "Symbol" "Circle" "A"
+element 36 "Measured" "Default" "A"
+element 36 "Simulated" "Dot Line" "A"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "A"
+element 37 "On Black" "87" "A"
+element 37 "Symbol" "Circle" "A"
+element 37 "Measured" "Default" "A"
+element 37 "Simulated" "Dot Line" "A"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "A"
+element 38 "On Black" "79" "A"
+element 38 "Symbol" "Circle" "A"
+element 38 "Measured" "Default" "A"
+element 38 "Simulated" "Dot Line" "A"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "A"
+element 39 "On Black" "81" "A"
+element 39 "Symbol" "Circle" "A"
+element 39 "Measured" "Default" "A"
+element 39 "Simulated" "Dot Line" "A"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "A"
+element 40 "On Black" "1" "A"
+element 40 "Symbol" "Triangle" "A"
+element 40 "Measured" "Default" "A"
+element 40 "Simulated" "Dot Dot Line" "A"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "A"
+element 41 "On Black" "2" "A"
+element 41 "Symbol" "Diamond" "A"
+element 41 "Measured" "Default" "A"
+element 41 "Simulated" "Dot Dot Line" "A"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "A"
+element 42 "On Black" "6" "A"
+element 42 "Symbol" "X" "A"
+element 42 "Measured" "Default" "A"
+element 42 "Simulated" "Dot Dot Line" "A"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "A"
+element 43 "On Black" "3" "A"
+element 43 "Symbol" "Reverse Triangle" "A"
+element 43 "Measured" "Default" "A"
+element 43 "Simulated" "Dot Dot Line" "A"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "A"
+element 44 "On Black" "88" "A"
+element 44 "Symbol" "Circle" "A"
+element 44 "Measured" "Default" "A"
+element 44 "Simulated" "Dot Dot Line" "A"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "A"
+element 45 "On Black" "4" "A"
+element 45 "Symbol" "Square" "A"
+element 45 "Measured" "Default" "A"
+element 45 "Simulated" "Dot Dot Line" "A"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "A"
+element 46 "On Black" "117" "A"
+element 46 "Symbol" "Triangle" "A"
+element 46 "Measured" "Default" "A"
+element 46 "Simulated" "Dot Dot Line" "A"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "A"
+element 47 "On Black" "40" "A"
+element 47 "Symbol" "Triangle" "A"
+element 47 "Measured" "Default" "A"
+element 47 "Simulated" "Dot Dot Line" "A"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "A"
+element 48 "On Black" "28" "A"
+element 48 "Symbol" "Triangle" "A"
+element 48 "Measured" "Default" "A"
+element 48 "Simulated" "Dot Dot Line" "A"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "A"
+element 49 "On Black" "114" "A"
+element 49 "Symbol" "Triangle" "A"
+element 49 "Measured" "Default" "A"
+element 49 "Simulated" "Dot Dot Line" "A"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "A"
+element 50 "On Black" "94" "A"
+element 50 "Symbol" "Triangle" "A"
+element 50 "Measured" "Default" "A"
+element 50 "Simulated" "Dot Dot Line" "A"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "A"
+element 51 "On Black" "81" "A"
+element 51 "Symbol" "Triangle" "A"
+element 51 "Measured" "Default" "A"
+element 51 "Simulated" "Dot Dot Line" "A"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "A"
+element 52 "On Black" "50" "A"
+element 52 "Symbol" "Triangle" "A"
+element 52 "Measured" "Default" "A"
+element 52 "Simulated" "Dot Dot Line" "A"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "A"
+element 53 "On Black" "115" "A"
+element 53 "Symbol" "Triangle" "A"
+element 53 "Measured" "Default" "A"
+element 53 "Simulated" "Dot Dot Line" "A"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "A"
+element 54 "On Black" "54" "A"
+element 54 "Symbol" "Triangle" "A"
+element 54 "Measured" "Default" "A"
+element 54 "Simulated" "Dot Dot Line" "A"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "A"
+element 55 "On Black" "106" "A"
+element 55 "Symbol" "Triangle" "A"
+element 55 "Measured" "Default" "A"
+element 55 "Simulated" "Dot Dot Line" "A"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "A"
+element 56 "On Black" "120" "A"
+element 56 "Symbol" "Triangle" "A"
+element 56 "Measured" "Default" "A"
+element 56 "Simulated" "Dot Dot Line" "A"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "A"
+element 57 "On Black" "87" "A"
+element 57 "Symbol" "Triangle" "A"
+element 57 "Measured" "Default" "A"
+element 57 "Simulated" "Dot Dot Line" "A"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "A"
+element 58 "On Black" "79" "A"
+element 58 "Symbol" "Triangle" "A"
+element 58 "Measured" "Default" "A"
+element 58 "Simulated" "Dot Dot Line" "A"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "A"
+element 59 "On Black" "81" "A"
+element 59 "Symbol" "Triangle" "A"
+element 59 "Measured" "Default" "A"
+element 59 "Simulated" "Dot Dot Line" "A"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "A"
+element 60 "On Black" "1" "A"
+element 60 "Symbol" "Reverse Triangle" "A"
+element 60 "Measured" "Default" "A"
+element 60 "Simulated" "Dashed Line" "A"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "A"
+element 61 "On Black" "2" "A"
+element 61 "Symbol" "Star" "A"
+element 61 "Measured" "Default" "A"
+element 61 "Simulated" "Dashed Line" "A"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "A"
+element 62 "On Black" "6" "A"
+element 62 "Symbol" "Cross" "A"
+element 62 "Measured" "Default" "A"
+element 62 "Simulated" "Dashed Line" "A"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "A"
+element 63 "On Black" "3" "A"
+element 63 "Symbol" "Diamond" "A"
+element 63 "Measured" "Default" "A"
+element 63 "Simulated" "Dashed Line" "A"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "A"
+element 64 "On Black" "88" "A"
+element 64 "Symbol" "Triangle" "A"
+element 64 "Measured" "Default" "A"
+element 64 "Simulated" "Dashed Line" "A"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "A"
+element 65 "On Black" "4" "A"
+element 65 "Symbol" "Circle" "A"
+element 65 "Measured" "Default" "A"
+element 65 "Simulated" "Dashed Line" "A"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "A"
+element 66 "On Black" "117" "A"
+element 66 "Symbol" "Reverse Triangle" "A"
+element 66 "Measured" "Default" "A"
+element 66 "Simulated" "Dashed Line" "A"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "A"
+element 67 "On Black" "40" "A"
+element 67 "Symbol" "Reverse Triangle" "A"
+element 67 "Measured" "Default" "A"
+element 67 "Simulated" "Dashed Line" "A"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "A"
+element 68 "On Black" "28" "A"
+element 68 "Symbol" "Reverse Triangle" "A"
+element 68 "Measured" "Default" "A"
+element 68 "Simulated" "Dashed Line" "A"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "A"
+element 69 "On Black" "114" "A"
+element 69 "Symbol" "Reverse Triangle" "A"
+element 69 "Measured" "Default" "A"
+element 69 "Simulated" "Dashed Line" "A"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "A"
+element 70 "On Black" "94" "A"
+element 70 "Symbol" "Reverse Triangle" "A"
+element 70 "Measured" "Default" "A"
+element 70 "Simulated" "Dashed Line" "A"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "A"
+element 71 "On Black" "81" "A"
+element 71 "Symbol" "Reverse Triangle" "A"
+element 71 "Measured" "Default" "A"
+element 71 "Simulated" "Dashed Line" "A"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "A"
+element 72 "On Black" "50" "A"
+element 72 "Symbol" "Reverse Triangle" "A"
+element 72 "Measured" "Default" "A"
+element 72 "Simulated" "Dashed Line" "A"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "A"
+element 73 "On Black" "115" "A"
+element 73 "Symbol" "Reverse Triangle" "A"
+element 73 "Measured" "Default" "A"
+element 73 "Simulated" "Dashed Line" "A"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "A"
+element 74 "On Black" "54" "A"
+element 74 "Symbol" "Reverse Triangle" "A"
+element 74 "Measured" "Default" "A"
+element 74 "Simulated" "Dashed Line" "A"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "A"
+element 75 "On Black" "106" "A"
+element 75 "Symbol" "Reverse Triangle" "A"
+element 75 "Measured" "Default" "A"
+element 75 "Simulated" "Dashed Line" "A"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "A"
+element 76 "On Black" "120" "A"
+element 76 "Symbol" "Reverse Triangle" "A"
+element 76 "Measured" "Default" "A"
+element 76 "Simulated" "Dashed Line" "A"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "A"
+element 77 "On Black" "87" "A"
+element 77 "Symbol" "Reverse Triangle" "A"
+element 77 "Measured" "Default" "A"
+element 77 "Simulated" "Dashed Line" "A"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "A"
+element 78 "On Black" "79" "A"
+element 78 "Symbol" "Reverse Triangle" "A"
+element 78 "Measured" "Default" "A"
+element 78 "Simulated" "Dashed Line" "A"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "A"
+element 79 "On Black" "81" "A"
+element 79 "Symbol" "Reverse Triangle" "A"
+element 79 "Measured" "Default" "A"
+element 79 "Simulated" "Dashed Line" "A"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "A"
+element 80 "On Black" "1" "A"
+element 80 "Symbol" "Diamond" "A"
+element 80 "Measured" "Default" "A"
+element 80 "Simulated" "Dot Dashed Line" "A"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "A"
+element 81 "On Black" "2" "A"
+element 81 "Symbol" "X" "A"
+element 81 "Measured" "Default" "A"
+element 81 "Simulated" "Dot Dashed Line" "A"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "A"
+element 82 "On Black" "6" "A"
+element 82 "Symbol" "Square" "A"
+element 82 "Measured" "Default" "A"
+element 82 "Simulated" "Dot Dashed Line" "A"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "A"
+element 83 "On Black" "3" "A"
+element 83 "Symbol" "Star" "A"
+element 83 "Measured" "Default" "A"
+element 83 "Simulated" "Dot Dashed Line" "A"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "A"
+element 84 "On Black" "88" "A"
+element 84 "Symbol" "Reverse Triangle" "A"
+element 84 "Measured" "Default" "A"
+element 84 "Simulated" "Dot Dashed Line" "A"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "A"
+element 85 "On Black" "4" "A"
+element 85 "Symbol" "Triangle" "A"
+element 85 "Measured" "Default" "A"
+element 85 "Simulated" "Dot Dashed Line" "A"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "A"
+element 86 "On Black" "117" "A"
+element 86 "Symbol" "Diamond" "A"
+element 86 "Measured" "Default" "A"
+element 86 "Simulated" "Dot Dashed Line" "A"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "A"
+element 87 "On Black" "40" "A"
+element 87 "Symbol" "Diamond" "A"
+element 87 "Measured" "Default" "A"
+element 87 "Simulated" "Dot Dashed Line" "A"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "A"
+element 88 "On Black" "28" "A"
+element 88 "Symbol" "Diamond" "A"
+element 88 "Measured" "Default" "A"
+element 88 "Simulated" "Dot Dashed Line" "A"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "A"
+element 89 "On Black" "114" "A"
+element 89 "Symbol" "Diamond" "A"
+element 89 "Measured" "Default" "A"
+element 89 "Simulated" "Dot Dashed Line" "A"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "A"
+element 90 "On Black" "94" "A"
+element 90 "Symbol" "Diamond" "A"
+element 90 "Measured" "Default" "A"
+element 90 "Simulated" "Dot Dashed Line" "A"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "A"
+element 91 "On Black" "81" "A"
+element 91 "Symbol" "Diamond" "A"
+element 91 "Measured" "Default" "A"
+element 91 "Simulated" "Dot Dashed Line" "A"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "A"
+element 92 "On Black" "50" "A"
+element 92 "Symbol" "Diamond" "A"
+element 92 "Measured" "Default" "A"
+element 92 "Simulated" "Dot Dashed Line" "A"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "A"
+element 93 "On Black" "115" "A"
+element 93 "Symbol" "Diamond" "A"
+element 93 "Measured" "Default" "A"
+element 93 "Simulated" "Dot Dashed Line" "A"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "A"
+element 94 "On Black" "54" "A"
+element 94 "Symbol" "Diamond" "A"
+element 94 "Measured" "Default" "A"
+element 94 "Simulated" "Dot Dashed Line" "A"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "A"
+element 95 "On Black" "106" "A"
+element 95 "Symbol" "Diamond" "A"
+element 95 "Measured" "Default" "A"
+element 95 "Simulated" "Dot Dashed Line" "A"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "A"
+element 96 "On Black" "120" "A"
+element 96 "Symbol" "Diamond" "A"
+element 96 "Measured" "Default" "A"
+element 96 "Simulated" "Dot Dashed Line" "A"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "A"
+element 97 "On Black" "87" "A"
+element 97 "Symbol" "Diamond" "A"
+element 97 "Measured" "Default" "A"
+element 97 "Simulated" "Dot Dashed Line" "A"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "A"
+element 98 "On Black" "79" "A"
+element 98 "Symbol" "Diamond" "A"
+element 98 "Measured" "Default" "A"
+element 98 "Simulated" "Dot Dashed Line" "A"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "A"
+element 99 "On Black" "81" "A"
+element 99 "Symbol" "Diamond" "A"
+element 99 "Measured" "Default" "A"
+element 99 "Simulated" "Dot Dashed Line" "A"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "A"
+element 100 "On Black" "1" "A"
+element 100 "Symbol" "Star" "A"
+element 100 "Measured" "Default" "A"
+element 100 "Simulated" "Long Dashed Line" "A"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "A"
+element 101 "On Black" "2" "A"
+element 101 "Symbol" "Cross" "A"
+element 101 "Measured" "Default" "A"
+element 101 "Simulated" "Long Dashed Line" "A"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "A"
+element 102 "On Black" "6" "A"
+element 102 "Symbol" "Circle" "A"
+element 102 "Measured" "Default" "A"
+element 102 "Simulated" "Long Dashed Line" "A"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "A"
+element 103 "On Black" "3" "A"
+element 103 "Symbol" "X" "A"
+element 103 "Measured" "Default" "A"
+element 103 "Simulated" "Long Dashed Line" "A"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "A"
+element 104 "On Black" "88" "A"
+element 104 "Symbol" "Diamond" "A"
+element 104 "Measured" "Default" "A"
+element 104 "Simulated" "Long Dashed Line" "A"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "A"
+element 105 "On Black" "4" "A"
+element 105 "Symbol" "Reverse Triangle" "A"
+element 105 "Measured" "Default" "A"
+element 105 "Simulated" "Long Dashed Line" "A"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "A"
+element 106 "On Black" "117" "A"
+element 106 "Symbol" "Star" "A"
+element 106 "Measured" "Default" "A"
+element 106 "Simulated" "Long Dashed Line" "A"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "A"
+element 107 "On Black" "40" "A"
+element 107 "Symbol" "Star" "A"
+element 107 "Measured" "Default" "A"
+element 107 "Simulated" "Long Dashed Line" "A"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "A"
+element 108 "On Black" "28" "A"
+element 108 "Symbol" "Star" "A"
+element 108 "Measured" "Default" "A"
+element 108 "Simulated" "Long Dashed Line" "A"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "A"
+element 109 "On Black" "114" "A"
+element 109 "Symbol" "Star" "A"
+element 109 "Measured" "Default" "A"
+element 109 "Simulated" "Long Dashed Line" "A"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "A"
+element 110 "On Black" "94" "A"
+element 110 "Symbol" "Star" "A"
+element 110 "Measured" "Default" "A"
+element 110 "Simulated" "Long Dashed Line" "A"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "A"
+element 111 "On Black" "81" "A"
+element 111 "Symbol" "Star" "A"
+element 111 "Measured" "Default" "A"
+element 111 "Simulated" "Long Dashed Line" "A"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "A"
+element 112 "On Black" "50" "A"
+element 112 "Symbol" "Star" "A"
+element 112 "Measured" "Default" "A"
+element 112 "Simulated" "Long Dashed Line" "A"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "A"
+element 113 "On Black" "115" "A"
+element 113 "Symbol" "Star" "A"
+element 113 "Measured" "Default" "A"
+element 113 "Simulated" "Long Dashed Line" "A"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "A"
+element 114 "On Black" "54" "A"
+element 114 "Symbol" "Star" "A"
+element 114 "Measured" "Default" "A"
+element 114 "Simulated" "Long Dashed Line" "A"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "A"
+element 115 "On Black" "106" "A"
+element 115 "Symbol" "Star" "A"
+element 115 "Measured" "Default" "A"
+element 115 "Simulated" "Long Dashed Line" "A"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "A"
+element 116 "On Black" "120" "A"
+element 116 "Symbol" "Star" "A"
+element 116 "Measured" "Default" "A"
+element 116 "Simulated" "Long Dashed Line" "A"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "A"
+element 117 "On Black" "87" "A"
+element 117 "Symbol" "Star" "A"
+element 117 "Measured" "Default" "A"
+element 117 "Simulated" "Long Dashed Line" "A"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "A"
+element 118 "On Black" "79" "A"
+element 118 "Symbol" "Star" "A"
+element 118 "Measured" "Default" "A"
+element 118 "Simulated" "Long Dashed Line" "A"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "A"
+element 119 "On Black" "81" "A"
+element 119 "Symbol" "Star" "A"
+element 119 "Measured" "Default" "A"
+element 119 "Simulated" "Long Dashed Line" "A"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "A"
+element 120 "On Black" "1" "A"
+element 120 "Symbol" "X" "A"
+element 120 "Measured" "Default" "A"
+element 120 "Simulated" "Long Dot Dashed Line" "A"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "A"
+element 121 "On Black" "2" "A"
+element 121 "Symbol" "Square" "A"
+element 121 "Measured" "Default" "A"
+element 121 "Simulated" "Long Dot Dashed Line" "A"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "A"
+element 122 "On Black" "6" "A"
+element 122 "Symbol" "Triangle" "A"
+element 122 "Measured" "Default" "A"
+element 122 "Simulated" "Long Dot Dashed Line" "A"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "A"
+element 123 "On Black" "3" "A"
+element 123 "Symbol" "Cross" "A"
+element 123 "Measured" "Default" "A"
+element 123 "Simulated" "Long Dot Dashed Line" "A"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "A"
+element 124 "On Black" "88" "A"
+element 124 "Symbol" "Star" "A"
+element 124 "Measured" "Default" "A"
+element 124 "Simulated" "Long Dot Dashed Line" "A"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "A"
+element 125 "On Black" "4" "A"
+element 125 "Symbol" "Diamond" "A"
+element 125 "Measured" "Default" "A"
+element 125 "Simulated" "Long Dot Dashed Line" "A"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "A"
+element 126 "On Black" "117" "A"
+element 126 "Symbol" "X" "A"
+element 126 "Measured" "Default" "A"
+element 126 "Simulated" "Long Dot Dashed Line" "A"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "A"
+element 127 "On Black" "40" "A"
+element 127 "Symbol" "X" "A"
+element 127 "Measured" "Default" "A"
+element 127 "Simulated" "Long Dot Dashed Line" "A"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "A"
+element 128 "On Black" "28" "A"
+element 128 "Symbol" "X" "A"
+element 128 "Measured" "Default" "A"
+element 128 "Simulated" "Long Dot Dashed Line" "A"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "A"
+element 129 "On Black" "114" "A"
+element 129 "Symbol" "X" "A"
+element 129 "Measured" "Default" "A"
+element 129 "Simulated" "Long Dot Dashed Line" "A"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "A"
+element 130 "On Black" "94" "A"
+element 130 "Symbol" "X" "A"
+element 130 "Measured" "Default" "A"
+element 130 "Simulated" "Long Dot Dashed Line" "A"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "A"
+element 131 "On Black" "81" "A"
+element 131 "Symbol" "X" "A"
+element 131 "Measured" "Default" "A"
+element 131 "Simulated" "Long Dot Dashed Line" "A"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "A"
+element 132 "On Black" "50" "A"
+element 132 "Symbol" "X" "A"
+element 132 "Measured" "Default" "A"
+element 132 "Simulated" "Long Dot Dashed Line" "A"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "A"
+element 133 "On Black" "115" "A"
+element 133 "Symbol" "X" "A"
+element 133 "Measured" "Default" "A"
+element 133 "Simulated" "Long Dot Dashed Line" "A"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "A"
+element 134 "On Black" "54" "A"
+element 134 "Symbol" "X" "A"
+element 134 "Measured" "Default" "A"
+element 134 "Simulated" "Long Dot Dashed Line" "A"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "A"
+element 135 "On Black" "106" "A"
+element 135 "Symbol" "X" "A"
+element 135 "Measured" "Default" "A"
+element 135 "Simulated" "Long Dot Dashed Line" "A"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "A"
+element 136 "On Black" "120" "A"
+element 136 "Symbol" "X" "A"
+element 136 "Measured" "Default" "A"
+element 136 "Simulated" "Long Dot Dashed Line" "A"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "A"
+element 137 "On Black" "87" "A"
+element 137 "Symbol" "X" "A"
+element 137 "Measured" "Default" "A"
+element 137 "Simulated" "Long Dot Dashed Line" "A"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "A"
+element 138 "On Black" "79" "A"
+element 138 "Symbol" "X" "A"
+element 138 "Measured" "Default" "A"
+element 138 "Simulated" "Long Dot Dashed Line" "A"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "A"
+element 139 "On Black" "81" "A"
+element 139 "Symbol" "X" "A"
+element 139 "Measured" "Default" "A"
+element 139 "Simulated" "Long Dot Dashed Line" "A"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "A"
+element 140 "On Black" "1" "A"
+element 140 "Symbol" "Cross" "A"
+element 140 "Measured" "Default" "A"
+element 140 "Simulated" "Solid Line" "A"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "A"
+element 141 "On Black" "2" "A"
+element 141 "Symbol" "Circle" "A"
+element 141 "Measured" "Default" "A"
+element 141 "Simulated" "Solid Line" "A"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "A"
+element 142 "On Black" "6" "A"
+element 142 "Symbol" "Reverse Triangle" "A"
+element 142 "Measured" "Default" "A"
+element 142 "Simulated" "Solid Line" "A"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "A"
+element 143 "On Black" "3" "A"
+element 143 "Symbol" "Square" "A"
+element 143 "Measured" "Default" "A"
+element 143 "Simulated" "Solid Line" "A"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "A"
+element 144 "On Black" "88" "A"
+element 144 "Symbol" "X" "A"
+element 144 "Measured" "Default" "A"
+element 144 "Simulated" "Solid Line" "A"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "A"
+element 145 "On Black" "4" "A"
+element 145 "Symbol" "Star" "A"
+element 145 "Measured" "Default" "A"
+element 145 "Simulated" "Solid Line" "A"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "A"
+element 146 "On Black" "117" "A"
+element 146 "Symbol" "Cross" "A"
+element 146 "Measured" "Default" "A"
+element 146 "Simulated" "Solid Line" "A"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "A"
+element 147 "On Black" "40" "A"
+element 147 "Symbol" "Cross" "A"
+element 147 "Measured" "Default" "A"
+element 147 "Simulated" "Solid Line" "A"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "A"
+element 148 "On Black" "28" "A"
+element 148 "Symbol" "Cross" "A"
+element 148 "Measured" "Default" "A"
+element 148 "Simulated" "Solid Line" "A"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "A"
+element 149 "On Black" "114" "A"
+element 149 "Symbol" "Cross" "A"
+element 149 "Measured" "Default" "A"
+element 149 "Simulated" "Solid Line" "A"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "A"
+element 150 "On Black" "94" "A"
+element 150 "Symbol" "Cross" "A"
+element 150 "Measured" "Default" "A"
+element 150 "Simulated" "Solid Line" "A"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "N"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ ! -----------------------------------------------
+ ! Version Nov. 2019
+ ! -----------------------------------------------
+ 
+ 
+ 
+ 
+ In this tutorial,
+ ===================================
+ the device is connected to Port1 and Port2 of a network analyzer,
+ and the Sxx (Smith Chart) and Sxy (Polar Plot) plots are shown,
+ together with the impedances of a PI schematic:
+ 
+  Port1    __      Port2
+   o---o--|__|--o---o
+       |   Z12  |
+       -        - 
+   Z10| |      | |Z20
+       -        -
+       |        |
+      ---      ---
+ 
+ 
+}
+}
+}
+LINK DUT "Resistor" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ .SUBCKT IdealResistor 1 2
+ 
+ 
+ *---device between Port1 and Port2
+ *   ==============================
+ 
+ *               __
+ * Port1 o--o---|__|---o--o Port2
+ *          |    Rs    |
+ *          -          -
+ * Rdummy10| |        | |Rdummy20
+ *          -          -
+ *          |          |
+ *         ---        ---
+ 
+ 
+ Rs 1  2 10
+ 
+ * add dummy resistors to ground to assist Spice with
+ *   returning a realistic result, not affected by rounding problems
+ *   of unconnected circuit branches (ideal isolators)
+ Rdummy10  1  0 1meg
+ Rdummy20  2  0 1meg
+ 
+ .ENDS
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P11 P100 P100 P100 P100 P100 P100 C13"
+param Rs " 10.00 "
+param Rdummy10 " 1.000MEG"
+param Rdummy20 " 1.000MEG"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "SparPlotTutorial" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "3.3703933380581 8176 11504"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C10 C10 C10"
+element 0 "Name" "TWOPORT_C"
+element 0 "Value" "1u"
+element 1 "Name" "TWOPORT_L"
+element 1 "Value" "1u"
+element 2 "Name" ""
+element 2 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "freq" "711.501"
+{
+View draw_ds 0 "B,175,0"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "F"
+element "Sweep Type" "LOG"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 10.00MEG"
+element "Stop" " 10.00G"
+element "# of Points" "10"
+element "Dec or Oct" "D"
+element "Total Pts" "31"
+}
+}
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+}
+LINK OUT "S" "711.501"
+{
+View block_edit 0 "0,0"
+View draw_ds 0 "B,-833,2112"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "S"
+element "Unit" ""
+element "Type" "S"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "Port 1" "1"
+element "Port 2" "2"
+element "AC Ground" "GROUND"
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 0.0908588 -0.000263066
+point 0 1 2 0.909041 0.000263066
+point 0 2 1 0.909041 0.000263066
+point 0 2 2 0.0908588 -0.000263066
+point 1 1 1 0.0908587 -0.000208961
+point 1 1 2 0.909041 0.000208961
+point 1 2 1 0.909041 0.000208961
+point 1 2 2 0.0908587 -0.000208961
+point 2 1 1 0.0908587 -0.000165984
+point 2 1 2 0.909041 0.000165984
+point 2 2 1 0.909041 0.000165984
+point 2 2 2 0.0908587 -0.000165984
+point 3 1 1 0.0908587 -0.000131845
+point 3 1 2 0.909041 0.000131845
+point 3 2 1 0.909041 0.000131845
+point 3 2 2 0.0908587 -0.000131845
+point 4 1 1 0.0908587 -0.000104729
+point 4 1 2 0.909041 0.000104729
+point 4 2 1 0.909041 0.000104729
+point 4 2 2 0.0908587 -0.000104729
+point 5 1 1 0.0908587 -8.31889E-005
+point 5 1 2 0.909041 8.31889E-005
+point 5 2 1 0.909041 8.31889E-005
+point 5 2 2 0.0908587 -8.31889E-005
+point 6 1 1 0.0908587 -6.60793E-005
+point 6 1 2 0.909041 6.60793E-005
+point 6 2 1 0.909041 6.60793E-005
+point 6 2 2 0.0908587 -6.60793E-005
+point 7 1 1 0.0908587 -5.24886E-005
+point 7 1 2 0.909041 5.24886E-005
+point 7 2 1 0.909041 5.24886E-005
+point 7 2 2 0.0908587 -5.24886E-005
+point 8 1 1 0.0908587 -4.16932E-005
+point 8 1 2 0.909041 4.16932E-005
+point 8 2 1 0.909041 4.16932E-005
+point 8 2 2 0.0908587 -4.16932E-005
+point 9 1 1 0.0908587 -3.31181E-005
+point 9 1 2 0.909041 3.31181E-005
+point 9 2 1 0.909041 3.31181E-005
+point 9 2 2 0.0908587 -3.31181E-005
+point 10 1 1 0.0908587 -2.63066E-005
+point 10 1 2 0.909041 2.63066E-005
+point 10 2 1 0.909041 2.63066E-005
+point 10 2 2 0.0908587 -2.63066E-005
+point 11 1 1 0.0908587 -2.08961E-005
+point 11 1 2 0.909041 2.08961E-005
+point 11 2 1 0.909041 2.08961E-005
+point 11 2 2 0.0908587 -2.08961E-005
+point 12 1 1 0.0908587 -1.65984E-005
+point 12 1 2 0.909041 1.65984E-005
+point 12 2 1 0.909041 1.65984E-005
+point 12 2 2 0.0908587 -1.65984E-005
+point 13 1 1 0.0908587 -1.31845E-005
+point 13 1 2 0.909041 1.31845E-005
+point 13 2 1 0.909041 1.31845E-005
+point 13 2 2 0.0908587 -1.31845E-005
+point 14 1 1 0.0908587 -1.04729E-005
+point 14 1 2 0.909041 1.04728E-005
+point 14 2 1 0.909041 1.04728E-005
+point 14 2 2 0.0908587 -1.04729E-005
+point 15 1 1 0.0908587 -8.3189E-006
+point 15 1 2 0.909041 8.31887E-006
+point 15 2 1 0.909041 8.31887E-006
+point 15 2 2 0.0908587 -8.3189E-006
+point 16 1 1 0.0908587 -6.60792E-006
+point 16 1 2 0.909041 6.60794E-006
+point 16 2 1 0.909041 6.60793E-006
+point 16 2 2 0.0908587 -6.60792E-006
+point 17 1 1 0.0908587 -5.24886E-006
+point 17 1 2 0.909041 5.24886E-006
+point 17 2 1 0.909041 5.24887E-006
+point 17 2 2 0.0908587 -5.24886E-006
+point 18 1 1 0.0908587 -4.16935E-006
+point 18 1 2 0.909041 4.16929E-006
+point 18 2 1 0.909041 4.16929E-006
+point 18 2 2 0.0908587 -4.16935E-006
+point 19 1 1 0.0908587 -3.3118E-006
+point 19 1 2 0.909041 3.31181E-006
+point 19 2 1 0.909041 3.31182E-006
+point 19 2 2 0.0908587 -3.3118E-006
+point 20 1 1 0.0908587 -2.63065E-006
+point 20 1 2 0.909041 2.63067E-006
+point 20 2 1 0.909041 2.63067E-006
+point 20 2 2 0.0908587 -2.63066E-006
+point 21 1 1 0.0908587 -2.08957E-006
+point 21 1 2 0.909041 2.08964E-006
+point 21 2 1 0.909041 2.08965E-006
+point 21 2 2 0.0908587 -2.08958E-006
+point 22 1 1 0.0908587 -1.65987E-006
+point 22 1 2 0.909041 1.6598E-006
+point 22 2 1 0.909041 1.65981E-006
+point 22 2 2 0.0908587 -1.65987E-006
+point 23 1 1 0.0908587 -1.31857E-006
+point 23 1 2 0.909041 1.31835E-006
+point 23 2 1 0.909041 1.31834E-006
+point 23 2 2 0.0908587 -1.31856E-006
+point 24 1 1 0.0908587 -1.04729E-006
+point 24 1 2 0.909041 1.0473E-006
+point 24 2 1 0.909041 1.04728E-006
+point 24 2 2 0.0908587 -1.04727E-006
+point 25 1 1 0.0908587 -8.31934E-007
+point 25 1 2 0.909041 8.31844E-007
+point 25 2 1 0.909041 8.31844E-007
+point 25 2 2 0.0908587 -8.31933E-007
+point 26 1 1 0.0908587 -6.60677E-007
+point 26 1 2 0.909041 6.60904E-007
+point 26 2 1 0.909041 6.60907E-007
+point 26 2 2 0.0908587 -6.60679E-007
+point 27 1 1 0.0908587 -5.24763E-007
+point 27 1 2 0.909041 5.24988E-007
+point 27 2 1 0.909041 5.25012E-007
+point 27 2 2 0.0908587 -5.24783E-007
+point 28 1 1 0.0908587 -4.17006E-007
+point 28 1 2 0.909041 4.16832E-007
+point 28 2 1 0.909041 4.16864E-007
+point 28 2 2 0.0908587 -4.17033E-007
+point 29 1 1 0.0908587 -3.31319E-007
+point 29 1 2 0.909041 3.31005E-007
+point 29 2 1 0.909041 3.31053E-007
+point 29 2 2 0.0908587 -3.31359E-007
+point 30 1 1 0.0908587 -2.63135E-007
+point 30 1 2 0.909041 2.63053E-007
+point 30 2 1 0.909041 2.62986E-007
+point 30 2 2 0.0908587 -2.6308E-007
+}
+}
+list XFORM "S_to_PI"
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ ! This tutorial setup is intended to make you familiar 
+ ! with the 2-Port S-Parameter Plots, 
+ ! and the corresponding Impedance Plots,
+ ! of an ideal resistor Rs between Port1 and Port2.
+ !       ==========================================
+ !               __
+ ! Port1 o--o---|__|---o--o Port2
+ !          |    Rs    |
+ !          -          -
+ ! Rdummy10| |        | |Rdummy20
+ !          -          -
+ !          |          |
+ !         ---        ---
+ ! See the tab 'Test Circuit'.
+ 
+ ! Note:
+ ! the added dummy resistors to ground assist Spice with
+ ! returning a realistic result, not affected by rounding problems
+ ! of unconnected circuit branches (ideal isolators). 
+ 
+ 
+ ! Note:
+ ! S-parameter simulations *include* the impedances Z0
+ ! at the opposite Port to Ground !!!
+ 
+ 
+ 
+ !  WHAT TO DO:
+ ! ==================
+ ! Execute Transform "TUNE_PARAMS".
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "TUNE_PARAMS" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  Params
+ GLOBAL_VAR  Mins
+ GLOBAL_VAR  Inits
+ GLOBAL_VAR  Maxs
+ GLOBAL_VAR  txt_Schematic
+ GLOBAL_VAR  txt_Help
+ 
+ 
+ !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ txt_Schematic="Schematic:
+ *=======================================================================
+ *               __ 
+ * Port1 o--o---|__|---o--o Port2
+ *          |    Rs    |
+ *          -          -
+ * Rdummy10| |        | |Rdummy20
+ *          -          -
+ *          |          |
+ *         ---        ---
+ *======================================================================="
+ 
+ txt_Help="added Rdummy resistors assist Spice with returning a realistic result, 
+ not affected by rounding problems of unconnected circuit branches."
+ 
+ 
+ 
+ !---initialize Variables
+ Params=""
+ Mins=""
+ Inits=""
+ Maxs=""
+ 
+ 
+ !---reset DUT Parameters, simulate and show Plot
+ ICCAP_FUNC("../DeviceParameterSet", "Reset")
+ ICCAP_FUNC(".", "Simulate")
+ ICCAP_FUNC("_MP_", "Display Plot")
+ 
+ 
+ !---set TUNER-----------------------------------------------------
+ !---get Param Names
+ N=0
+ ErrMsg=""
+ WHILE VAL$(ErrMsg)==""
+   ParamName=LOOKUP_TABLE_VAL("../DeviceParameterSet", "Param Name["&VAL$(N)&"]", ErrMsg)
+ !  PRINT ParamName
+   IF VAL$(ErrMsg)=="" THEN
+     DIMENSION_ARRAY("Params", N+1)
+     Params[N]=VAL$(ParamName)
+   END IF
+   N = N + 1
+ END WHILE
+ NrParams = N - 1
+ ErrMsg=""
+ 
+ 
+ !---set limits for tuner
+ DIMENSION_ARRAY("Mins" , NrParams)
+ DIMENSION_ARRAY("Inits", NrParams)
+ DIMENSION_ARRAY("Maxs" , NrParams)
+ FOR i=0 TO NrParams-1
+   !---get param value
+   ParamValue = LOOKUP_TABLE_VAL("../DeviceParameterSet", "Value["&VAL$(Params[i])&"]")
+   Inits[i]  = VAL(ParamValue)
+   Mins[i]   = Inits[i]//100
+   Maxs[i]   = Inits[i]*100
+ NEXT i
+ 
+ 
+ !---call TUNER
+ !                                1=log scale, 0=lin scale
+ !                                   1=immediate execution, 0=execute after slider release
+ !                                      program name to be executed
+ TUNER Params, Mins, Inits, Maxs, 1, 1, "aux1"
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_________________" "711.501"
+{
+}
+LINK XFORM "___aux___________" "711.501"
+{
+}
+LINK XFORM "S_to_PI" "711.501"
+{
+View block_edit 0 "800,19"
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ 
+ ! convert S-par into impedances of a PI schematic
+ !
+ ! port1    __      port2
+ !  o---o--|__|--o---o
+ !      |   Z12  |
+ !      -        - 
+ !  Z10| |      | |Z20
+ !      -        -
+ !      |        |
+ !     ---      ---
+ !
+ ! ==> For details about the returned data set format, 
+ !  see below, after the RETURN statement
+ 
+ 
+ 
+ COMPLEX Z.S.22[SIZEOF(S)]
+ 
+ IF MEAN(S.S.11)<>0 THEN 
+   YS = TwoPort(S.S, "S", "Y")
+   FOR i=0 TO SIZEOF(YS)-1
+     YxyS = 0.5*(YS.12[i] + YS.21[i])
+     IF YS.11[i]+YxyS <> 0 THEN Z.S.11[i] = (YS.11[i]+YxyS)^-1	!Z10.S
+     IF YxyS <>0 THEN Z.S.12[i] = -(YxyS)^-1			!Z12.S
+     IF YS.22[i]+YxyS <> 0 THEN Z.S.22[i] = (YS.22[i]+YxyS)^-1	!Z20.S
+   NEXT i
+ END IF
+ 
+ 
+ 
+ RETURN Z
+ 
+ ! Z.11  = Z10
+ ! Z.12  = Z12
+ ! Z.22  = Z20
+ 
+ 
+ ! port1    __      port2
+ !  o---o--|__|--o---o
+ !      |   Z12  |
+ !      -        - 
+ !  Z10| |      | |Z20
+ !      -        -
+ !      |        |
+ !     ---      ---
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 1E+006 -0.0202593
+point 0 1 2 10 -0.0318313
+point 0 2 1 0 0
+point 0 2 2 1E+006 -0.0222146
+point 1 1 1 1E+006 -0.00290956
+point 1 1 2 10 -0.0252845
+point 1 2 1 0 0
+point 1 2 2 1E+006 -0.00847683
+point 2 1 1 1E+006 -0.0110926
+point 2 1 2 10 -0.0200842
+point 2 2 1 0 0
+point 2 2 2 1E+006 -0.0180626
+point 3 1 1 1E+006 -0.0110996
+point 3 1 2 10 -0.0159534
+point 3 2 1 0 0
+point 3 2 2 1E+006 -0.0225526
+point 4 1 1 1E+006 -0.015979
+point 4 1 2 10 -0.0126723
+point 4 2 1 0 0
+point 4 2 2 1E+006 -0.0362196
+point 5 1 1 1E+006 -0.0188147
+point 5 1 2 10 -0.0100659
+point 5 2 1 0 0
+point 5 2 2 1E+006 -0.0286625
+point 6 1 1 1E+006 0.0357263
+point 6 1 2 10 -0.00799566
+point 6 2 1 0 0
+point 6 2 2 1E+006 0.0164491
+point 7 1 1 1E+006 -0.0184368
+point 7 1 2 10 -0.00635118
+point 7 2 1 0 0
+point 7 2 2 1E+006 0.00679486
+point 8 1 1 1E+006 0.00819408
+point 8 1 2 10 -0.00504492
+point 8 2 1 0 0
+point 8 2 2 1E+006 0.0204756
+point 9 1 1 1E+006 0.00147696
+point 9 1 2 10 -0.00400732
+point 9 2 1 0 0
+point 9 2 2 1E+006 0.021192
+point 10 1 1 1E+006 0.0102791
+point 10 1 2 10 -0.00318313
+point 10 2 1 0 0
+point 10 2 2 1E+006 -0.0603136
+point 11 1 1 1E+006 0.017947
+point 11 1 2 10 -0.00252845
+point 11 2 1 0 0
+point 11 2 2 1E+006 0.142178
+point 12 1 1 1E+006 0.145024
+point 12 1 2 10 -0.00200842
+point 12 2 1 0 0
+point 12 2 2 1E+006 0.0814573
+point 13 1 1 1E+006 -0.0350055
+point 13 1 2 10 -0.00159534
+point 13 2 1 0 0
+point 13 2 2 1E+006 -0.0538929
+point 14 1 1 1E+006 -0.286467
+point 14 1 2 10 -0.00126723
+point 14 2 1 0 0
+point 14 2 2 1E+006 -0.323321
+point 15 1 1 1E+006 -0.180824
+point 15 1 2 10 -0.00100659
+point 15 2 1 0 0
+point 15 2 2 1E+006 -0.311267
+point 16 1 1 1E+006 -0.0276255
+point 16 1 2 10 -0.000799566
+point 16 2 1 0 0
+point 16 2 2 1E+006 0.360451
+point 17 1 1 1E+006 0.326172
+point 17 1 2 10 -0.000635118
+point 17 2 1 0 0
+point 17 2 2 1E+006 -0.150831
+point 18 1 1 1E+006 -0.741064
+point 18 1 2 10 -0.000504492
+point 18 2 1 0 0
+point 18 2 2 1E+006 -0.412437
+point 19 1 1 1E+006 0.24565
+point 19 1 2 10 -0.000400732
+point 19 2 1 0 0
+point 19 2 2 1E+006 -0.000278261
+point 20 1 1 1E+006 0.346343
+point 20 1 2 10 -0.000318313
+point 20 2 1 0 0
+point 20 2 2 1E+006 -0.103497
+point 21 1 1 1E+006 1.18035
+point 21 1 2 10 -0.000252845
+point 21 2 1 0 0
+point 21 2 2 1E+006 0.21386
+point 22 1 1 1E+006 -0.351468
+point 22 1 2 10 -0.000200842
+point 22 2 1 0 0
+point 22 2 2 1E+006 -1.01735
+point 23 1 1 1E+006 -2.78331
+point 23 1 2 10 -0.000159534
+point 23 2 1 0 0
+point 23 2 2 1E+006 -1.71436
+point 24 1 1 1E+006 -0.847647
+point 24 1 2 10 -0.000126723
+point 24 2 1 0 0
+point 24 2 2 1E+006 1.08209
+point 25 1 1 1E+006 -0.932066
+point 25 1 2 10 -0.000100659
+point 25 2 1 0 0
+point 25 2 2 1E+006 -0.861835
+point 26 1 1 1E+006 2.40984
+point 26 1 2 10 -7.99566E-005
+point 26 2 1 0 0
+point 26 2 2 1E+006 2.14142
+point 27 1 1 1E+006 3.36568
+point 27 1 2 10 -6.35119E-005
+point 27 2 1 0 0
+point 27 2 2 1E+006 1.1735
+point 28 1 1 1E+006 -0.239927
+point 28 1 2 10 -5.04494E-005
+point 28 2 1 0 0
+point 28 2 2 1E+006 -3.18969
+point 29 1 1 1E+006 -0.907844
+point 29 1 2 10 -4.00735E-005
+point 29 2 1 0 0
+point 29 2 2 1E+006 -5.2901
+point 30 1 1 1E+006 -3.94837
+point 30 1 2 10 -3.18309E-005
+point 30 2 1 0 0
+point 30 2 2 1E+006 2.19019
+}
+}
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+member OUT "S"
+}
+LINK XFORM "aux1" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ ! this is the Transform called by the TUNER feature in 'TUNE_PARAMS'
+ 
+ ICCAP_FUNC(".", "Simulate")
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK PLOT "_MP_" "711.501"
+{
+View draw_ds 0 "B,0,0"
+View plot_window 0 "411,24,32851,22654,{S11:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S12:MAN|RI|RI: 0.000 , 0.000 , 1.000 ,4,5,4,5&S21:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S22:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z10:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z12:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z20:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&MAN|XY|AUTOMATIC::}"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "MULTI PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "# of Plots" "8"
+element "# of GUIs" "2"
+element "Orientation" "H"
+element "Plots Per Row" "4"
+element "Header" ""
+element "Footer" ""
+}
+HYPTABLE "Multi Table"
+{
+element "Plot 0" "S11"
+element "Plot 1" "S12"
+element "Plot 2" "S21"
+element "Plot 3" "S22"
+element "Plot 4" "Z10"
+element "Plot 5" "Z12"
+element "Plot 6" "Z20"
+element "Plot 7" ""
+}
+HYPTABLE "Multi GUI Table"
+{
+element "GUI 1" "../../TL_Notes_Top"
+element "GUI 1 Location" "U"
+element "GUI 2" "../../TL_Notes_Bottom"
+element "GUI 2 Location" "B"
+}
+PlotOptimizerOpt Enable 0
+}
+}
+LINK PLOT "S11" "711.501"
+{
+View draw_ds 0 "B,3230,0"
+View plot_window 0 "411,34,8568,8290"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S11"
+element "Footer" ""
+element "Smith Data 0" "S.S.11"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S12" "711.501"
+{
+View draw_ds 0 "B,5677,0"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S12"
+element "Footer" ""
+element "Polar Data 0" "S.S.12"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S22" "711.501"
+{
+View draw_ds 0 "B,0,7818"
+View plot_window 0 "411,34,8578,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S22"
+element "Footer" ""
+element "Smith Data 0" "S.S.22"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S21" "711.501"
+{
+View draw_ds 0 "B,2447,7818"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S21"
+element "Footer" ""
+element "Polar Data 0" "S.S.21"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "Z10" "711.501"
+{
+View draw_ds 0 "B,0,4236"
+View plot_window 0 "929,370,8991,8996"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z10"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.11!!Z10"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z12" "711.501"
+{
+View draw_ds 0 "B,2772,4236"
+View plot_window 0 "382,697,10629,8990,{MAN|XY| 700.0 , 820.0 ,6,4:-80.00 , 20.00 ,6,4: 0.000 , 1.000 ,4,5}"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z12"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.12!!Z12"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z20" "711.501"
+{
+View draw_ds 0 "B,5557,4236"
+View plot_window 0 "716,313,9005,8995"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z20"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.22!!Z20"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "_" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "Capacitance" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ .SUBCKT Capacitance 1 2
+ 
+ 
+ *---device between Port1 and Port2, 
+ *   plus leakage caps to ground at each port
+ *   ========================================
+ 
+ *               __
+ *   1 o---||---|__|---o 2
+ *     |   Cs    Rs    |
+ *    ---             ---
+ *    ---Cleak1       ---Cleak2
+ *     |               |
+ *    ---             ---
+ 
+ 
+ Cs  1 12 10p
+ Rs 12  2 10
+ 
+ Cleak1 1 0 0.1p
+ Cleak2 2 0 0.1p
+ 
+ .ENDS
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P11 P100 P100 P100 P100 P100 P100 C13"
+param Cs " 10.00p"
+param Rs " 10.00 "
+param Cleak1 " 100.0f"
+param Cleak2 " 100.0f"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "SparPlotTutorial" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "3.3703933380581 8176 11504"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "freq" "711.501"
+{
+View draw_ds 0 "B,175,0"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "F"
+element "Sweep Type" "LOG"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 10.00MEG"
+element "Stop" " 10.00G"
+element "# of Points" "10"
+element "Dec or Oct" "D"
+element "Total Pts" "31"
+}
+}
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+}
+LINK OUT "S" "711.501"
+{
+View block_edit 0 "0,0"
+View draw_ds 0 "B,-161,2112"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "S"
+element "Unit" ""
+element "Type" "S"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "Port 1" "1"
+element "Port 2" "2"
+element "AC Ground" "GROUND"
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 0.995639 -0.0631575
+point 0 1 2 0.0043611 0.0625292
+point 0 2 1 0.0043611 0.0625292
+point 0 2 2 0.995639 -0.0631575
+point 1 1 1 0.993107 -0.0792894
+point 1 1 2 0.00689255 0.0784984
+point 1 2 1 0.00689255 0.0784984
+point 1 2 2 0.993107 -0.0792894
+point 2 1 1 0.989124 -0.0993813
+point 2 1 2 0.0108758 0.0983855
+point 2 2 1 0.0108758 0.0983855
+point 2 2 2 0.989124 -0.0993813
+point 3 1 1 0.982882 -0.124249
+point 3 1 2 0.0171172 0.122996
+point 3 2 1 0.0171172 0.122996
+point 3 2 2 0.982882 -0.124249
+point 4 1 1 0.973165 -0.154727
+point 4 1 2 0.0268337 0.153149
+point 4 2 1 0.0268337 0.153149
+point 4 2 2 0.973165 -0.154727
+point 5 1 1 0.958191 -0.191503
+point 5 1 2 0.0418074 0.189516
+point 5 2 1 0.0418074 0.189516
+point 5 2 2 0.958191 -0.191503
+point 6 1 1 0.935471 -0.234811
+point 6 1 2 0.0645259 0.23231
+point 6 2 1 0.0645259 0.23231
+point 6 2 2 0.935471 -0.234811
+point 7 1 1 0.901802 -0.283899
+point 7 1 2 0.0981933 0.28075
+point 7 2 1 0.0981933 0.28075
+point 7 2 2 0.901802 -0.283899
+point 8 1 1 0.853607 -0.336304
+point 8 1 2 0.146385 0.33234
+point 8 2 1 0.146385 0.33234
+point 8 2 2 0.853607 -0.336304
+point 9 1 1 0.787939 -0.387182
+point 9 1 2 0.212049 0.382192
+point 9 2 1 0.212049 0.382192
+point 9 2 2 0.787939 -0.387182
+point 10 1 1 0.704224 -0.429338
+point 10 1 2 0.295756 0.423055
+point 10 2 1 0.295756 0.423055
+point 10 2 2 0.704224 -0.429338
+point 11 1 1 0.606115 -0.454791
+point 11 1 2 0.393853 0.446881
+point 11 2 1 0.393853 0.446881
+point 11 2 2 0.606115 -0.454791
+point 12 1 1 0.501858 -0.457883
+point 12 1 2 0.498092 0.447925
+point 12 2 1 0.498092 0.447925
+point 12 2 2 0.501858 -0.457883
+point 13 1 1 0.401981 -0.438158
+point 13 1 2 0.59794 0.425622
+point 13 2 1 0.59794 0.425622
+point 13 2 2 0.401981 -0.438158
+point 14 1 1 0.315364 -0.400651
+point 14 1 2 0.684512 0.384869
+point 14 2 1 0.684512 0.384869
+point 14 2 2 0.315364 -0.400651
+point 15 1 1 0.246488 -0.353311
+point 15 1 2 0.753315 0.333444
+point 15 2 1 0.753315 0.333444
+point 15 2 2 0.246488 -0.353311
+point 16 1 1 0.195389 -0.303771
+point 16 1 2 0.804298 0.278761
+point 16 2 1 0.804298 0.278761
+point 16 2 2 0.195389 -0.303771
+point 17 1 1 0.159376 -0.257477
+point 17 1 2 0.840129 0.225994
+point 17 2 1 0.840129 0.225994
+point 17 2 2 0.159376 -0.257477
+point 18 1 1 0.134867 -0.217455
+point 18 1 2 0.864348 0.177827
+point 18 2 1 0.864348 0.177827
+point 18 2 2 0.134867 -0.217455
+point 19 1 1 0.118524 -0.184929
+point 19 1 2 0.880231 0.135051
+point 19 2 1 0.880231 0.135051
+point 19 2 2 0.118524 -0.184929
+point 20 1 1 0.107681 -0.160074
+point 20 1 2 0.890347 0.0973041
+point 20 2 1 0.890347 0.0973041
+point 20 2 2 0.107681 -0.160074
+point 21 1 1 0.100364 -0.142601
+point 21 1 2 0.896513 0.0636235
+point 21 2 1 0.896513 0.0636235
+point 21 2 2 0.100364 -0.142601
+point 22 1 1 0.0951458 -0.132114
+point 22 1 2 0.899908 0.0327785
+point 22 2 1 0.899908 0.0327785
+point 22 2 2 0.0951458 -0.132114
+point 23 1 1 0.0909656 -0.128314
+point 23 1 2 0.901207 0.00343819
+point 23 2 1 0.901207 0.00343819
+point 23 2 2 0.0909656 -0.128314
+point 24 1 1 0.0869526 -0.131089
+point 24 1 2 0.90067 -0.0257605
+point 24 2 1 0.90067 -0.0257605
+point 24 2 2 0.0869526 -0.131089
+point 25 1 1 0.0822666 -0.140557
+point 25 1 2 0.898187 -0.0561928
+point 25 2 1 0.898187 -0.0561928
+point 25 2 2 0.0822666 -0.140557
+point 26 1 1 0.0759394 -0.157051
+point 26 1 2 0.893258 -0.0892344
+point 26 2 1 0.893258 -0.0892344
+point 26 2 2 0.0759394 -0.157051
+point 27 1 1 0.0667035 -0.181065
+point 27 1 2 0.884913 -0.126222
+point 27 2 1 0.884913 -0.126222
+point 27 2 2 0.0667035 -0.181065
+point 28 1 1 0.052801 -0.213112
+point 28 1 2 0.871587 -0.168343
+point 28 2 1 0.871587 -0.168343
+point 28 2 2 0.052801 -0.213112
+point 29 1 1 0.0317928 -0.253452
+point 29 1 2 0.850962 -0.216382
+point 29 2 1 0.850962 -0.216382
+point 29 2 2 0.0317928 -0.253452
+point 30 1 1 0.000447703 -0.301608
+point 30 1 2 0.819892 -0.270269
+point 30 2 1 0.819892 -0.270269
+point 30 2 2 0.000447714 -0.301608
+}
+}
+list XFORM "S_to_PI"
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ ! This tutorial setup is intended to make you familiar 
+ ! with the 2-Port S-Parameter Plots, 
+ ! and the corresponding Impedance Plots,
+ ! of a capacitor with simple capacitance parasitics at both ports to ground.
+ !               __
+ !   1 o---||---|__|---o 2
+ !     |   Cs    Rs    |
+ !    ---             ---
+ !    ---Cleak1       ---Cleak2
+ !     |               |
+ !    ---             ---
+ ! See the tab 'Test Circuit'.
+ 
+ 
+ 
+ ! Note:
+ ! S-parameter simulations *include* the impedances 
+ ! at the Port1 and Port2 to Ground !!!
+ 
+ 
+ 
+ !  WHAT TO DO:
+ ! ==================
+ ! Execute Transform "TUNE_PARAMS",
+ ! and study the effect of parasitic 'Cleak1' and 'Cleak2'.
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "TUNE_PARAMS" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  Params
+ GLOBAL_VAR  Mins
+ GLOBAL_VAR  Inits
+ GLOBAL_VAR  Maxs
+ GLOBAL_VAR  txt_Schematic
+ GLOBAL_VAR  txt_Help
+ 
+ 
+ !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ txt_Schematic="Schematic:
+ *===================================
+ *               __
+ *   1 o---||---|__|---o 2
+ *     |      Cs    Rs |
+ *    ---             ---
+ *    ---Cleak1       ---Cleak2
+ *     |               |
+ *    ---             ---
+ *==================================="
+ 
+ txt_Help="Tune Cs and Rs.
+ Study also the effect of parasitic 'Cleak1' and 'Cleak2'."
+ 
+ 
+ 
+ !---initialize Variables
+ Params=""
+ Mins=""
+ Inits=""
+ Maxs=""
+ 
+ 
+ !---reset DUT Parameters, simulate and show Plot
+ ICCAP_FUNC("../DeviceParameterSet", "Reset")
+ ICCAP_FUNC(".", "Simulate")
+ ICCAP_FUNC("_MP_", "Display Plot")
+ 
+ 
+ !---set TUNER-----------------------------------------------------
+ !---get Param Names
+ N=0
+ ErrMsg=""
+ WHILE VAL$(ErrMsg)==""
+   ParamName=LOOKUP_TABLE_VAL("../DeviceParameterSet", "Param Name["&VAL$(N)&"]", ErrMsg)
+ !  PRINT ParamName
+   IF VAL$(ErrMsg)=="" THEN
+     DIMENSION_ARRAY("Params", N+1)
+     Params[N]=VAL$(ParamName)
+   END IF
+   N = N + 1
+ END WHILE
+ NrParams = N - 1
+ ErrMsg=""
+ 
+ 
+ !---set limits for tuner
+ DIMENSION_ARRAY("Mins" , NrParams)
+ DIMENSION_ARRAY("Inits", NrParams)
+ DIMENSION_ARRAY("Maxs" , NrParams)
+ FOR i=0 TO NrParams-1
+   !---get param value
+   ParamValue = LOOKUP_TABLE_VAL("../DeviceParameterSet", "Value["&VAL$(Params[i])&"]")
+   Inits[i]  = VAL(ParamValue)
+   Mins[i]   = Inits[i]//100
+   Maxs[i]   = Inits[i]*100
+ NEXT i
+ 
+ 
+ !---call TUNER
+ !                                1=log scale, 0=lin scale
+ !                                   1=immediate execution, 0=execute after slider release
+ !                                      program name to be executed
+ TUNER Params, Mins, Inits, Maxs, 1, 1, "aux1"
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_________________" "711.501"
+{
+}
+LINK XFORM "___aux___________" "711.501"
+{
+}
+LINK XFORM "S_to_PI" "711.501"
+{
+View block_edit 0 "800,19"
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ 
+ ! convert S-par into impedances of a PI schematic
+ !
+ ! port1    __      port2
+ !  o---o--|__|--o---o
+ !      |   Z12  |
+ !      -        - 
+ !  Z10| |      | |Z20
+ !      -        -
+ !      |        |
+ !     ---      ---
+ !
+ ! ==> For details about the returned data set format, 
+ !  see below, after the RETURN statement
+ 
+ 
+ 
+ COMPLEX Z.S.22[SIZEOF(S)]
+ 
+ IF MEAN(S.S.11)<>0 THEN 
+   YS = TwoPort(S.S, "S", "Y")
+   FOR i=0 TO SIZEOF(YS)-1
+     YxyS = 0.5*(YS.12[i] + YS.21[i])
+     IF YS.11[i]+YxyS <> 0 THEN Z.S.11[i] = (YS.11[i]+YxyS)^-1	!Z10.S
+     IF YxyS <>0 THEN Z.S.12[i] = -(YxyS)^-1			!Z12.S
+     IF YS.22[i]+YxyS <> 0 THEN Z.S.22[i] = (YS.22[i]+YxyS)^-1	!Z20.S
+   NEXT i
+ END IF
+ 
+ 
+ 
+ RETURN Z
+ 
+ ! Z.11  = Z10
+ ! Z.12  = Z12
+ ! Z.22  = Z20
+ 
+ 
+ ! port1    __      port2
+ !  o---o--|__|--o---o
+ !      |   Z12  |
+ !      -        - 
+ !  Z10| |      | |Z20
+ !      -        -
+ !      |        |
+ !     ---      ---
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 0.000253333 -159155
+point 0 1 2 10 -1591.55
+point 0 2 1 0 0
+point 0 2 2 0.000253654 -159155
+point 1 1 1 0.00015977 -126421
+point 1 1 2 10 -1264.21
+point 1 2 1 0 0
+point 1 2 2 0.000159973 -126421
+point 2 1 1 0.000100882 -100420
+point 2 1 2 10 -1004.2
+point 2 2 1 0 0
+point 2 2 2 0.000100782 -100420
+point 3 1 1 6.36132E-005 -79766.4
+point 3 1 2 10 -797.664
+point 3 2 1 0 0
+point 3 2 2 6.37191E-005 -79766.4
+point 4 1 1 4.01454E-005 -63360.7
+point 4 1 2 10 -633.607
+point 4 2 1 0 0
+point 4 2 2 4.00991E-005 -63360.7
+point 5 1 1 2.53124E-005 -50329.2
+point 5 1 2 10 -503.292
+point 5 2 1 0 0
+point 5 2 2 2.53348E-005 -50329.2
+point 6 1 1 1.59726E-005 -39978
+point 6 1 2 10 -399.779
+point 6 2 1 0 0
+point 6 2 2 1.59936E-005 -39978
+point 7 1 1 1.00847E-005 -31755.6
+point 7 1 2 10 -317.556
+point 7 2 1 0 0
+point 7 2 2 1.00885E-005 -31755.6
+point 8 1 1 6.36077E-006 -25224.4
+point 8 1 2 10 -252.244
+point 8 2 1 0 0
+point 8 2 2 6.36901E-006 -25224.4
+point 9 1 1 4.01536E-006 -20036.4
+point 9 1 2 10 -200.364
+point 9 2 1 0 0
+point 9 2 2 4.02267E-006 -20036.4
+point 10 1 1 2.53276E-006 -15915.5
+point 10 1 2 10 -159.155
+point 10 2 1 0 0
+point 10 2 2 2.53466E-006 -15915.5
+point 11 1 1 1.59783E-006 -12642.1
+point 11 1 2 10 -126.421
+point 11 2 1 0 0
+point 11 2 2 1.60018E-006 -12642.1
+point 12 1 1 1.00816E-006 -10042
+point 12 1 2 10 -100.42
+point 12 2 1 0 0
+point 12 2 2 1.00949E-006 -10042
+point 13 1 1 6.36271E-007 -7976.65
+point 13 1 2 10 -79.7664
+point 13 2 1 0 0
+point 13 2 2 6.36712E-007 -7976.65
+point 14 1 1 4.01187E-007 -6336.06
+point 14 1 2 10 -63.3607
+point 14 2 1 0 0
+point 14 2 2 4.01501E-007 -6336.06
+point 15 1 1 2.5332E-007 -5032.92
+point 15 1 2 10 -50.3292
+point 15 2 1 0 0
+point 15 2 2 2.53232E-007 -5032.92
+point 16 1 1 1.59792E-007 -3997.79
+point 16 1 2 10 -39.9779
+point 16 2 1 0 0
+point 16 2 2 1.59931E-007 -3997.79
+point 17 1 1 1.00901E-007 -3175.56
+point 17 1 2 10 -31.7556
+point 17 2 1 0 0
+point 17 2 2 1.01093E-007 -3175.56
+point 18 1 1 6.36425E-008 -2522.44
+point 18 1 2 10 -25.2244
+point 18 2 1 0 0
+point 18 2 2 6.37198E-008 -2522.44
+point 19 1 1 4.01277E-008 -2003.64
+point 19 1 2 10 -20.0364
+point 19 2 1 0 0
+point 19 2 2 4.02113E-008 -2003.64
+point 20 1 1 2.53099E-008 -1591.55
+point 20 1 2 10 -15.9155
+point 20 2 1 0 0
+point 20 2 2 2.54067E-008 -1591.55
+point 21 1 1 1.60029E-008 -1264.21
+point 21 1 2 10 -12.6421
+point 21 2 1 0 0
+point 21 2 2 1.60138E-008 -1264.21
+point 22 1 1 1.00762E-008 -1004.2
+point 22 1 2 10 -10.042
+point 22 2 1 0 0
+point 22 2 2 1.009E-008 -1004.2
+point 23 1 1 6.35765E-009 -797.663
+point 23 1 2 10 -7.97664
+point 23 2 1 0 0
+point 23 2 2 6.37962E-009 -797.663
+point 24 1 1 4.01136E-009 -633.607
+point 24 1 2 10 -6.33607
+point 24 2 1 0 0
+point 24 2 2 4.01699E-009 -633.607
+point 25 1 1 2.53102E-009 -503.292
+point 25 1 2 10 -5.03292
+point 25 2 1 0 0
+point 25 2 2 2.53806E-009 -503.292
+point 26 1 1 1.59476E-009 -399.78
+point 26 1 2 10 -3.99779
+point 26 2 1 0 0
+point 26 2 2 1.5992E-009 -399.779
+point 27 1 1 1.00763E-009 -317.556
+point 27 1 2 10 -3.17556
+point 27 2 1 0 0
+point 27 2 2 1.00904E-009 -317.556
+point 28 1 1 6.39306E-010 -252.244
+point 28 1 2 10 -2.52244
+point 28 2 1 0 0
+point 28 2 2 6.34881E-010 -252.243
+point 29 1 1 4.01711E-010 -200.364
+point 29 1 2 10 -2.00364
+point 29 2 1 0 0
+point 29 2 2 4.01132E-010 -200.364
+point 30 1 1 2.53464E-010 -159.155
+point 30 1 2 10 -1.59155
+point 30 2 1 0 0
+point 30 2 2 2.53818E-010 -159.155
+}
+}
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+member OUT "S"
+}
+LINK XFORM "aux1" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ ! this is the Transform called by the TUNER feature in 'TUNE_PARAMS'
+ 
+ 
+ ICCAP_FUNC(".", "Simulate")
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK PLOT "_MP_" "711.501"
+{
+View draw_ds 0 "B,0,0"
+View plot_window 0 "421,37,28793,22724,{S11:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S12:MAN|RI|RI: 0.000 , 0.000 , 1.000 ,4,5,4,5&S21:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S22:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z10:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z12:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z20:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&MAN|XY|AUTOMATIC::}"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "MULTI PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "# of Plots" "8"
+element "# of GUIs" "2"
+element "Orientation" "H"
+element "Plots Per Row" "4"
+element "Header" ""
+element "Footer" ""
+}
+HYPTABLE "Multi Table"
+{
+element "Plot 0" "S11"
+element "Plot 1" "S12"
+element "Plot 2" "S21"
+element "Plot 3" "S22"
+element "Plot 4" "Z10"
+element "Plot 5" "Z12"
+element "Plot 6" "Z20"
+element "Plot 7" ""
+}
+HYPTABLE "Multi GUI Table"
+{
+element "GUI 1" "../../TL_Notes_Top"
+element "GUI 1 Location" "U"
+element "GUI 2" "../../TL_Notes_Bottom"
+element "GUI 2 Location" "B"
+}
+PlotOptimizerOpt Enable 0
+}
+}
+LINK PLOT "S11" "711.501"
+{
+View draw_ds 0 "B,3230,0"
+View plot_window 0 "411,34,8568,8290"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S11"
+element "Footer" ""
+element "Smith Data 0" "S.S.11"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S12" "711.501"
+{
+View draw_ds 0 "B,5677,0"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S12"
+element "Footer" ""
+element "Polar Data 0" "S.S.12"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S22" "711.501"
+{
+View draw_ds 0 "B,0,7818"
+View plot_window 0 "411,34,8578,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S22"
+element "Footer" ""
+element "Smith Data 0" "S.S.22"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S21" "711.501"
+{
+View draw_ds 0 "B,2447,7818"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S21"
+element "Footer" ""
+element "Polar Data 0" "S.S.21"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "Z10" "711.501"
+{
+View draw_ds 0 "B,0,4236"
+View plot_window 0 "929,370,8991,8996"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z10"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.11!!Z10"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z12" "711.501"
+{
+View draw_ds 0 "B,2772,4236"
+View plot_window 0 "382,697,10629,8990,{MAN|XY| 700.0 , 820.0 ,6,4:-80.00 , 20.00 ,6,4: 0.000 , 1.000 ,4,5}"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z12"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.12!!Z12"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z20" "711.501"
+{
+View draw_ds 0 "B,5557,4236"
+View plot_window 0 "716,313,9005,8995"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z20"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.22!!Z20"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "__" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "Spiral_Inductor" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ .SUBCKT Spiral_Inductor 1 2
+ 
+ 
+ *---device between Port1 and Port2, 
+ *   plus lossy leakage caps to ground at each port
+ *   ==============================================
+ *          __     __
+ *   1 o---|__|---|__|---o 2
+ *     |  RMAIN  LMAIN   |
+ *    ---               ---
+ *    --- C10           --- C20
+ *     |                 |
+ *     -                 -
+ *    | |               | |
+ *     - R10             - R20
+ *     |                 |
+ *    ---               ---
+ 
+ 
+ RMAIN  1 12 0.1
+ LMAIN 12  2 2n
+ 
+ C10  1 10 10f
+ R10 10  0 1
+ C20  2 20 10f
+ R20 20  0 1
+ 
+ .ENDS
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P11 P100 P100 P100 P100 P100 P100 C13"
+param RMAIN " 100.0m"
+param LMAIN " 2.000n"
+param C10 " 10.00f"
+param R10 " 1.000 "
+param C20 " 10.00f"
+param R20 " 1.000 "
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "SparPlotTutorial" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "3.3703933380581 8176 11504"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "freq" "711.501"
+{
+View draw_ds 0 "B,0,0"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "F"
+element "Sweep Type" "LOG"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 10.00MEG"
+element "Stop" " 10.00G"
+element "# of Points" "10"
+element "Dec or Oct" "D"
+element "Total Pts" "31"
+}
+}
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+}
+LINK OUT "S" "711.501"
+{
+View block_edit 0 "0,0"
+View draw_ds 0 "B,-3392,0"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "S"
+element "Unit" ""
+element "Type" "S"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "Port 1" "1"
+element "Port 2" "2"
+element "AC Ground" "GROUND"
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 0.00100057 0.00122239
+point 0 1 2 0.998999 -0.00128522
+point 0 2 1 0.998999 -0.00128522
+point 0 2 2 0.00100057 0.00122239
+point 1 1 1 0.00100149 0.00153905
+point 1 1 2 0.998999 -0.00161815
+point 1 2 1 0.998999 -0.00161815
+point 1 2 2 0.00100149 0.00153905
+point 2 1 1 0.00100295 0.00193766
+point 2 1 2 0.998997 -0.00203724
+point 2 2 1 0.998997 -0.00203724
+point 2 2 2 0.00100295 0.00193766
+point 3 1 1 0.00100526 0.00243946
+point 3 1 2 0.998995 -0.00256482
+point 3 2 1 0.998995 -0.00256482
+point 3 2 2 0.00100526 0.00243946
+point 4 1 1 0.00100893 0.00307116
+point 4 1 2 0.998991 -0.00322898
+point 4 2 1 0.998991 -0.00322898
+point 4 2 2 0.00100893 0.00307116
+point 5 1 1 0.00101473 0.00386639
+point 5 1 2 0.998985 -0.00406508
+point 5 2 1 0.998985 -0.00406508
+point 5 2 2 0.00101473 0.00386639
+point 6 1 1 0.00102394 0.0048675
+point 6 1 2 0.998976 -0.00511764
+point 6 2 1 0.998976 -0.00511764
+point 6 2 2 0.00102394 0.0048675
+point 7 1 1 0.00103852 0.00612777
+point 7 1 2 0.998961 -0.00644267
+point 7 2 1 0.998961 -0.00644267
+point 7 2 2 0.00103852 0.00612777
+point 8 1 1 0.00106164 0.00771426
+point 8 1 2 0.998938 -0.00811069
+point 8 2 1 0.998938 -0.00811069
+point 8 2 2 0.00106164 0.00771426
+point 9 1 1 0.00109827 0.00971134
+point 9 1 2 0.998902 -0.0102104
+point 9 2 1 0.998902 -0.0102104
+point 9 2 2 0.00109827 0.00971134
+point 10 1 1 0.00115632 0.0122252
+point 10 1 2 0.998843 -0.0128535
+point 10 2 1 0.998843 -0.0128535
+point 10 2 2 0.00115632 0.0122252
+point 11 1 1 0.00124832 0.0153892
+point 11 1 2 0.998751 -0.0161802
+point 11 2 1 0.998751 -0.0161802
+point 11 2 2 0.00124832 0.0153892
+point 12 1 1 0.00139409 0.019371
+point 12 1 2 0.998605 -0.0203668
+point 12 2 1 0.998605 -0.0203668
+point 12 2 2 0.00139409 0.019371
+point 13 1 1 0.00162504 0.024381
+point 13 1 2 0.998374 -0.0256346
+point 13 2 1 0.998374 -0.0256346
+point 13 2 2 0.00162504 0.024381
+point 14 1 1 0.00199086 0.0306826
+point 14 1 2 0.998008 -0.0322609
+point 14 2 1 0.998008 -0.0322609
+point 14 2 2 0.00199086 0.0306826
+point 15 1 1 0.00257013 0.0386047
+point 15 1 2 0.997428 -0.0405916
+point 15 2 1 0.997428 -0.0405916
+point 15 2 2 0.00257013 0.0386047
+point 16 1 1 0.00348689 0.0485557
+point 16 1 2 0.99651 -0.0510571
+point 16 2 1 0.99651 -0.0510571
+point 16 2 2 0.00348689 0.0485557
+point 17 1 1 0.00493659 0.061039
+point 17 1 2 0.995058 -0.0641881
+point 17 2 1 0.995058 -0.0641881
+point 17 2 2 0.00493659 0.061039
+point 18 1 1 0.007226 0.0766667
+point 18 1 2 0.992766 -0.0806311
+point 18 2 1 0.992766 -0.0806311
+point 18 2 2 0.007226 0.0766667
+point 19 1 1 0.010834 0.0961666
+point 19 1 2 0.989153 -0.101158
+point 19 2 1 0.989153 -0.101158
+point 19 2 2 0.010834 0.0961666
+point 20 1 1 0.0165016 0.120372
+point 20 1 2 0.983478 -0.126656
+point 20 2 1 0.983478 -0.126656
+point 20 2 2 0.0165016 0.120372
+point 21 1 1 0.0253586 0.150174
+point 21 1 2 0.97461 -0.158084
+point 21 2 1 0.97461 -0.158084
+point 21 2 2 0.0253586 0.150174
+point 22 1 1 0.0390896 0.186392
+point 22 1 2 0.96086 -0.19635
+point 22 2 1 0.96086 -0.19635
+point 22 2 2 0.0390896 0.186392
+point 23 1 1 0.0601144 0.229516
+point 23 1 2 0.939805 -0.242052
+point 23 2 1 0.939805 -0.242052
+point 23 2 2 0.0601144 0.229516
+point 24 1 1 0.0917039 0.279223
+point 24 1 2 0.908169 -0.295004
+point 24 2 1 0.908169 -0.295004
+point 24 2 2 0.0917039 0.279223
+point 25 1 1 0.137842 0.333645
+point 25 1 2 0.861957 -0.353512
+point 25 2 1 0.861957 -0.353512
+point 25 2 2 0.137842 0.333645
+point 26 1 1 0.202516 0.388483
+point 26 1 2 0.797165 -0.413492
+point 26 2 1 0.797165 -0.413492
+point 26 2 2 0.202516 0.388483
+point 27 1 1 0.288133 0.436468
+point 27 1 2 0.711361 -0.46795
+point 27 2 1 0.711361 -0.46795
+point 27 2 2 0.288133 0.436468
+point 28 1 1 0.39327 0.468106
+point 28 1 2 0.605929 -0.507734
+point 28 2 1 0.605929 -0.507734
+point 28 2 2 0.39327 0.468106
+point 29 1 1 0.511054 0.474405
+point 29 1 2 0.487677 -0.524282
+point 29 2 1 0.487677 -0.524282
+point 29 2 2 0.511054 0.474405
+point 30 1 1 0.630102 0.450694
+point 30 1 2 0.367887 -0.513461
+point 30 2 1 0.367887 -0.513461
+point 30 2 2 0.630102 0.450694
+}
+}
+list XFORM "S_to_PI"
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ ! This tutorial setup is intended to make you familiar 
+ ! with the 2-Port S-Parameter Plots, 
+ ! and the corresponding Impedance Plots,
+ ! of an inductor with lossy capacitance parasitics at both ports to ground.
+ !          __     __
+ !   1 o---|__|---|__|---o 2
+ !     |  RMAIN  LMAIN   |
+ !    ---               ---
+ !    --- C10           --- C20
+ !     |                 |
+ !     -                 -
+ !    | |               | |
+ !     - R10             - R20
+ !     |                 |
+ !    ---               ---
+ ! See the tab 'Test Circuit'.
+ 
+ 
+ 
+ ! Note:
+ ! S-parameter simulations *include* the impedances 
+ ! at the Port1 and Port2 to Ground !!!
+ 
+ 
+ 
+ !  WHAT TO DO:
+ ! ==================
+ ! Execute Transform "TUNE_PARAMS",
+ ! and study the effect of parasitic 'C10', 'R10' and 'C20', 'R20'.
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 100 1 1
+type COMMON
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+point 41 1 1 0 0
+point 42 1 1 0 0
+point 43 1 1 0 0
+point 44 1 1 0 0
+point 45 1 1 0 0
+point 46 1 1 0 0
+point 47 1 1 0 0
+point 48 1 1 0 0
+point 49 1 1 0 0
+point 50 1 1 0 0
+point 51 1 1 0 0
+point 52 1 1 0 0
+point 53 1 1 0 0
+point 54 1 1 0 0
+point 55 1 1 0 0
+point 56 1 1 0 0
+point 57 1 1 0 0
+point 58 1 1 0 0
+point 59 1 1 0 0
+point 60 1 1 0 0
+point 61 1 1 0 0
+point 62 1 1 0 0
+point 63 1 1 0 0
+point 64 1 1 0 0
+point 65 1 1 0 0
+point 66 1 1 0 0
+point 67 1 1 0 0
+point 68 1 1 0 0
+point 69 1 1 0 0
+point 70 1 1 0 0
+point 71 1 1 0 0
+point 72 1 1 0 0
+point 73 1 1 0 0
+point 74 1 1 0 0
+point 75 1 1 0 0
+point 76 1 1 0 0
+point 77 1 1 0 0
+point 78 1 1 0 0
+point 79 1 1 0 0
+point 80 1 1 0 0
+point 81 1 1 0 0
+point 82 1 1 0 0
+point 83 1 1 0 0
+point 84 1 1 0 0
+point 85 1 1 0 0
+point 86 1 1 0 0
+point 87 1 1 0 0
+point 88 1 1 0 0
+point 89 1 1 0 0
+point 90 1 1 0 0
+point 91 1 1 0 0
+point 92 1 1 0 0
+point 93 1 1 0 0
+point 94 1 1 0 0
+point 95 1 1 0 0
+point 96 1 1 0 0
+point 97 1 1 0 0
+point 98 1 1 0 0
+point 99 1 1 0 0
+}
+}
+}
+LINK XFORM "TUNE_PARAMS" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  Params
+ GLOBAL_VAR  Mins
+ GLOBAL_VAR  Inits
+ GLOBAL_VAR  Maxs
+ GLOBAL_VAR  txt_Schematic
+ GLOBAL_VAR  txt_Help
+ 
+ 
+ !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ txt_Schematic="Schematic:
+ *===================================
+ *          __     __
+ *   1 o---|__|---|__|---o 2
+ *     |  RMAIN  LMAIN   |
+ *    ---               ---
+ *    --- C10           --- C20
+ *     |                 |
+ *     -                 -
+ *    | |               | |
+ *     - R10             - R20
+ *     |                 |
+ *    ---               ---
+ *==================================="
+ 
+ txt_Help="Tune RMAIN and LMAIN.
+ And study also the effect of the parasitic 
+ components 'C10', 'R10' and 'C20', 'R20'"
+ 
+ 
+ 
+ !---initialize Variables
+ Params=""
+ Mins=""
+ Inits=""
+ Maxs=""
+ 
+ 
+ !---reset DUT Parameters, simulate and show Plot
+ ICCAP_FUNC("../DeviceParameterSet", "Reset")
+ ICCAP_FUNC(".", "Simulate")
+ ICCAP_FUNC("_MP_", "Display Plot")
+ 
+ 
+ !---set TUNER-----------------------------------------------------
+ !---get Param Names
+ N=0
+ ErrMsg=""
+ WHILE VAL$(ErrMsg)==""
+   ParamName=LOOKUP_TABLE_VAL("../DeviceParameterSet", "Param Name["&VAL$(N)&"]", ErrMsg)
+ !  PRINT ParamName
+   IF VAL$(ErrMsg)=="" THEN
+     DIMENSION_ARRAY("Params", N+1)
+     Params[N]=VAL$(ParamName)
+   END IF
+   N = N + 1
+ END WHILE
+ NrParams = N - 1
+ ErrMsg=""
+ 
+ 
+ !---set limits for tuner
+ DIMENSION_ARRAY("Mins" , NrParams)
+ DIMENSION_ARRAY("Inits", NrParams)
+ DIMENSION_ARRAY("Maxs" , NrParams)
+ FOR i=0 TO NrParams-1
+   !---get param value
+   ParamValue = LOOKUP_TABLE_VAL("../DeviceParameterSet", "Value["&VAL$(Params[i])&"]")
+   Inits[i]  = VAL(ParamValue)
+   Mins[i]   = Inits[i]//100
+   Maxs[i]   = Inits[i]*100
+ NEXT i
+ 
+ 
+ !---call TUNER
+ !                                1=log scale, 0=lin scale
+ !                                   1=immediate execution, 0=execute after slider release
+ !                                      program name to be executed
+ TUNER Params, Mins, Inits, Maxs, 1, 1, "aux1"
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_________________" "711.501"
+{
+}
+LINK XFORM "___aux___________" "711.501"
+{
+}
+LINK XFORM "S_to_PI" "711.501"
+{
+View block_edit 0 "800,19"
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ 
+ ! convert S-par into impedances of a PI schematic
+ !
+ ! port1    __      port2
+ !  o---o--|__|--o---o
+ !      |   Z12  |
+ !      -        - 
+ !  Z10| |      | |Z20
+ !      -        -
+ !      |        |
+ !     ---      ---
+ !
+ ! ==> For details about the returned data set format, 
+ !  see below, after the RETURN statement
+ 
+ 
+ 
+ COMPLEX Z.S.22[SIZEOF(S)]
+ 
+ IF MEAN(S.S.11)<>0 THEN 
+   YS = TwoPort(S.S, "S", "Y")
+   FOR i=0 TO SIZEOF(YS)-1
+     YxyS = 0.5*(YS.12[i] + YS.21[i])
+     IF YS.11[i]+YxyS <> 0 THEN Z.S.11[i] = (YS.11[i]+YxyS)^-1	!Z10.S
+     IF YxyS <>0 THEN Z.S.12[i] = -(YxyS)^-1			!Z12.S
+     IF YS.22[i]+YxyS <> 0 THEN Z.S.22[i] = (YS.22[i]+YxyS)^-1	!Z20.S
+   NEXT i
+ END IF
+ 
+ 
+ 
+ RETURN Z
+ 
+ ! Z.11  = Z10
+ ! Z.12  = Z12
+ ! Z.22  = Z20
+ 
+ 
+ ! port1    __      port2
+ !  o---o--|__|--o---o
+ !      |   Z12  |
+ !      -        - 
+ !  Z10| |      | |Z20
+ !      -        -
+ !      |        |
+ !     ---      ---
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 1.02479 -1.59156E+006
+point 0 1 2 0.1 0.125632
+point 0 2 1 0 0
+point 0 2 2 1.02591 -1.59156E+006
+point 1 1 1 1.01989 -1.26419E+006
+point 1 1 2 0.1 0.158176
+point 1 2 1 0 0
+point 1 2 2 1.01634 -1.26419E+006
+point 2 1 1 1.00982 -1.00419E+006
+point 2 1 2 0.1 0.199143
+point 2 2 1 0 0
+point 2 2 2 1.00982 -1.00419E+006
+point 3 1 1 1.00733 -797666
+point 3 1 2 0.1 0.250716
+point 3 2 1 0 0
+point 3 2 2 1.00648 -797666
+point 4 1 1 1.00368 -633605
+point 4 1 2 0.1 0.31564
+point 4 2 1 0 0
+point 4 2 2 1.00409 -633605
+point 5 1 1 1.00217 -503293
+point 5 1 2 0.1 0.397373
+point 5 2 1 0 0
+point 5 2 2 1.00254 -503293
+point 6 1 1 1.00165 -399783
+point 6 1 2 0.1 0.500268
+point 6 2 1 0 0
+point 6 2 2 1.00163 -399783
+point 7 1 1 1.00109 -317557
+point 7 1 2 0.1 0.629804
+point 7 2 1 0 0
+point 7 2 2 1.00101 -317557
+point 8 1 1 1.00061 -252246
+point 8 1 2 0.1 0.792879
+point 8 2 1 0 0
+point 8 2 2 1.00065 -252246
+point 9 1 1 1.00049 -200366
+point 9 1 2 0.1 0.998178
+point 9 2 1 0 0
+point 9 2 2 1.00042 -200366
+point 10 1 1 1.00026 -159157
+point 10 1 2 0.1 1.25663
+point 10 2 1 0 0
+point 10 2 2 1.00028 -159157
+point 11 1 1 1.00018 -126422
+point 11 1 2 0.1 1.58201
+point 11 2 1 0 0
+point 11 2 2 1.00017 -126422
+point 12 1 1 1.00009 -100419
+point 12 1 2 0.1 1.99163
+point 12 2 1 0 0
+point 12 2 2 1.00009 -100419
+point 13 1 1 1.0001 -79767.4
+point 13 1 2 0.1 2.50732
+point 13 2 1 0 0
+point 13 2 2 1.00009 -79767.4
+point 14 1 1 1.00001 -63359.8
+point 14 1 2 0.1 3.15653
+point 14 2 1 0 0
+point 14 2 2 1.00001 -63359.8
+point 15 1 1 1.00003 -50329.4
+point 15 1 2 0.1 3.97383
+point 15 2 1 0 0
+point 15 2 2 1.00003 -50329.4
+point 16 1 1 1.00002 -39978
+point 16 1 2 0.1 5.00276
+point 16 2 1 0 0
+point 16 2 2 1.00002 -39978
+point 17 1 1 1.00003 -31755.9
+point 17 1 2 0.1 6.2981
+point 17 2 1 0 0
+point 17 2 2 1.00003 -31755.9
+point 18 1 1 1.00002 -25224.5
+point 18 1 2 0.1 7.92884
+point 18 2 1 0 0
+point 18 2 2 1.00002 -25224.5
+point 19 1 1 0.999989 -20036.3
+point 19 1 2 0.1 9.98182
+point 19 2 1 0 0
+point 19 2 2 0.999989 -20036.3
+point 20 1 1 1.00001 -15915.6
+point 20 1 2 0.1 12.5664
+point 20 2 1 0 0
+point 20 2 2 1.00001 -15915.6
+point 21 1 1 0.999994 -12642.1
+point 21 1 2 0.1 15.8201
+point 21 2 1 0 0
+point 21 2 2 0.999994 -12642.1
+point 22 1 1 0.999985 -10041.9
+point 22 1 2 0.1 19.9164
+point 22 2 1 0 0
+point 22 2 2 0.999985 -10041.9
+point 23 1 1 0.999983 -7976.57
+point 23 1 2 0.1 25.0732
+point 23 2 1 0 0
+point 23 2 2 0.999983 -7976.57
+point 24 1 1 0.999988 -6336.03
+point 24 1 2 0.1 31.5653
+point 24 2 1 0 0
+point 24 2 2 0.999988 -6336.03
+point 25 1 1 0.999997 -5032.91
+point 25 1 2 0.1 39.7384
+point 25 2 1 0 0
+point 25 2 2 0.999997 -5032.91
+point 26 1 1 0.999998 -3997.79
+point 26 1 2 0.1 50.0276
+point 26 2 1 0 0
+point 26 2 2 0.999998 -3997.79
+point 27 1 1 0.999994 -3175.55
+point 27 1 2 0.1 62.981
+point 27 2 1 0 0
+point 27 2 2 0.999994 -3175.55
+point 28 1 1 0.999984 -2522.42
+point 28 1 2 0.1 79.2884
+point 28 2 1 0 0
+point 28 2 2 0.999984 -2522.42
+point 29 1 1 0.999996 -2003.64
+point 29 1 2 0.1 99.8182
+point 29 2 1 0 0
+point 29 2 2 0.999996 -2003.64
+point 30 1 1 1.00001 -1591.56
+point 30 1 2 0.1 125.664
+point 30 2 1 0 0
+point 30 2 2 1.00001 -1591.56
+}
+}
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+member OUT "S"
+}
+LINK XFORM "aux1" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ ! this is the Transform called by the TUNER feature in 'TUNE_PARAMS'
+ 
+ 
+ ICCAP_FUNC(".", "Simulate")
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK PLOT "_MP_" "711.501"
+{
+View draw_ds 0 "B,0,0"
+View plot_window 0 "421,52,32851,22195,{S11:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S12:MAN|RI|RI: 0.000 , 0.000 , 1.000 ,4,5,4,5&S21:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S22:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z10:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z12:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z20:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&MAN|XY|AUTOMATIC::}"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "MULTI PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "# of Plots" "8"
+element "# of GUIs" "2"
+element "Orientation" "H"
+element "Plots Per Row" "4"
+element "Header" ""
+element "Footer" ""
+}
+HYPTABLE "Multi Table"
+{
+element "Plot 0" "S11"
+element "Plot 1" "S12"
+element "Plot 2" "S21"
+element "Plot 3" "S22"
+element "Plot 4" "Z10"
+element "Plot 5" "Z12"
+element "Plot 6" "Z20"
+element "Plot 7" ""
+}
+HYPTABLE "Multi GUI Table"
+{
+element "GUI 1" "../../TL_Notes_Top"
+element "GUI 1 Location" "U"
+element "GUI 2" "../../TL_Notes_Bottom"
+element "GUI 2 Location" "B"
+}
+PlotOptimizerOpt Enable 0
+}
+}
+LINK PLOT "S11" "711.501"
+{
+View draw_ds 0 "B,3230,0"
+View plot_window 0 "411,34,8568,8290"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S11"
+element "Footer" ""
+element "Smith Data 0" "S.S.11"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S12" "711.501"
+{
+View draw_ds 0 "B,5677,0"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S12"
+element "Footer" ""
+element "Polar Data 0" "S.S.12"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S22" "711.501"
+{
+View draw_ds 0 "B,0,7818"
+View plot_window 0 "411,34,8578,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S22"
+element "Footer" ""
+element "Smith Data 0" "S.S.22"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S21" "711.501"
+{
+View draw_ds 0 "B,2447,7818"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S21"
+element "Footer" ""
+element "Polar Data 0" "S.S.21"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "Z10" "711.501"
+{
+View draw_ds 0 "B,0,4236"
+View plot_window 0 "929,370,8991,8996"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z10"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.11!!Z10"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z12" "711.501"
+{
+View draw_ds 0 "B,2772,4236"
+View plot_window 0 "382,697,10629,8990,{MAN|XY| 700.0 , 820.0 ,6,4:-80.00 , 20.00 ,6,4: 0.000 , 1.000 ,4,5}"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z12"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.12!!Z12"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z20" "711.501"
+{
+View draw_ds 0 "B,5557,4236"
+View plot_window 0 "716,313,9005,8995"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z20"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.22!!Z20"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "___" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "FET" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ .SUBCKT FET 1 2
+ 
+ 
+ 
+ * 1 o-o---||---o-----o----o-o 2
+ *     |   CGD  |     |    |
+ *    ---       -     |    |
+ *    ---CGS   / \    |    -
+ *     |       \_/GM ---  | |
+ *     -        |    ---   - RDS
+ *    | |       |     |CDS |
+ *     - RGS    |     |    |
+ *     |        |     |    |
+ *    ---      ---   ---  ---
+ 
+ CGS   1  10  1p
+ RGS  10   0  10
+ CGD   1   2  0.1p
+ CDS   2   0  1p
+ RDS   2   0  10k
+ GM   2 0 1 0 50m
+ 
+ 
+ .ENDS
+ 
+ * Linear Voltage-Controlled Current Sources
+ * General form:
+ * GXXXXXXX N+ N- NC+ NC- VALUE
+ * 
+ * Examples:
+ * G1 2 0 5 0  1E-3
+ * 
+ * N+ and N- are the positive and negative nodes, respectively. 
+ * 
+ * Current flow is from the positive node, through the source, 
+ * vto the negative node. 
+ * 
+ * NC+ and NC- are the positive and negative controlling nodes, respectively. 
+ * 
+ * VALUE is the transconductance (in mhos).
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+param CGS " 1.000p"
+param RGS " 10.00 "
+param CGD " 100.0f"
+param CDS " 1.000p"
+param RDS " 10.00K"
+param GM " 696.6m"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "SparPlotTutorial" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "0.93949326718639 2619 3206"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "freq" "711.501"
+{
+View draw_ds 0 "B,0,0"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "F"
+element "Sweep Type" "LOG"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 10.00MEG"
+element "Stop" " 10.00G"
+element "# of Points" "10"
+element "Dec or Oct" "D"
+element "Total Pts" "31"
+}
+}
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+}
+LINK OUT "S" "711.501"
+{
+View block_edit 0 "0,0"
+View draw_ds 0 "B,-4064,0"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "S"
+element "Unit" ""
+element "Type" "S"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "Port 1" "1"
+element "Port 2" "2"
+element "AC Ground" "GROUND"
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 0.99951 -0.0286785
+point 0 1 2 1.11139E-005 0.000625001
+point 0 2 1 -69.2922 1.23279
+point 0 2 2 0.989566 -0.0285017
+point 1 1 1 0.999223 -0.0360979
+point 1 1 2 1.76113E-005 0.000786689
+point 1 2 1 -69.2798 1.55173
+point 1 2 2 0.989284 -0.0358754
+point 2 1 1 0.998769 -0.0454322
+point 2 1 2 2.79044E-005 0.000990101
+point 2 2 1 -69.2601 1.95297
+point 2 2 2 0.988836 -0.0451523
+point 3 1 1 0.99805 -0.0571711
+point 3 1 2 4.42062E-005 0.0012459
+point 3 2 1 -69.2289 2.45758
+point 3 2 2 0.988127 -0.0568191
+point 4 1 1 0.996911 -0.071925
+point 4 1 2 7.00139E-005 0.00156738
+point 4 2 1 -69.1796 3.09178
+point 4 2 2 0.987005 -0.0714826
+point 5 1 1 0.99511 -0.0904504
+point 5 1 2 0.000110844 0.00197099
+point 5 2 1 -69.1016 3.88807
+point 5 2 2 0.985229 -0.0898948
+point 6 1 1 0.992262 -0.113675
+point 6 1 2 0.000175372 0.00247691
+point 6 2 1 -68.9782 4.88635
+point 6 2 2 0.982422 -0.112979
+point 7 1 1 0.98777 -0.142722
+point 7 1 2 0.000277189 0.00310945
+point 7 2 1 -68.7836 6.13478
+point 7 2 2 0.977994 -0.141851
+point 8 1 1 0.9807 -0.17891
+point 8 1 2 0.000437424 0.00389714
+point 8 2 1 -68.4774 7.69
+point 8 2 2 0.971024 -0.177824
+point 9 1 1 0.969618 -0.223721
+point 9 1 2 0.000688576 0.00487184
+point 9 2 1 -67.9973 9.61558
+point 9 2 2 0.9601 -0.222377
+point 10 1 1 0.952358 -0.278682
+point 10 1 2 0.00107973 0.00606587
+point 10 2 1 -67.2496 11.9767
+point 10 2 2 0.943085 -0.277034
+point 11 1 1 0.92574 -0.345081
+point 11 1 2 0.00168293 0.00750561
+point 11 2 1 -66.0966 14.8282
+point 11 2 2 0.916843 -0.343091
+point 12 1 1 0.885306 -0.423419
+point 12 1 2 0.00259906 0.00919876
+point 12 2 1 -64.3451 18.1903
+point 12 2 2 0.876982 -0.421077
+point 13 1 1 0.825281 -0.512472
+point 13 1 2 0.00395878 0.0111129
+point 13 2 1 -61.7451 22.0082
+point 13 2 2 0.817804 -0.509828
+point 14 1 1 0.739144 -0.607984
+point 14 1 2 0.00590934 0.0131455
+point 14 2 1 -58.0143 26.0953
+point 14 2 2 0.732875 -0.605205
+point 15 1 1 0.621363 -0.70141
+point 15 1 2 0.00857494 0.015095
+point 15 2 1 -52.9136 30.0783
+point 15 2 2 0.61673 -0.698857
+point 16 1 1 0.470512 -0.779849
+point 16 1 2 0.0119855 0.0166593
+point 16 2 1 -46.382 33.3946
+point 16 2 2 0.467941 -0.778158
+point 17 1 1 0.292699 -0.828703
+point 17 1 2 0.0159983 0.0174955
+point 17 2 1 -38.6857 35.4073
+point 17 2 2 0.292488 -0.828829
+point 18 1 1 0.102487 -0.837229
+point 18 1 2 0.0202764 0.0173458
+point 18 2 1 -30.4585 35.6456
+point 18 2 2 0.10466 -0.840413
+point 19 1 1 -0.081035 -0.803951
+point 19 1 2 0.0243764 0.0161603
+point 19 2 1 -22.5311 34.0391
+point 19 2 2 -0.0768332 -0.811605
+point 20 1 1 -0.241397 -0.737532
+point 20 1 2 0.0279092 0.0141169
+point 20 2 1 -15.6231 30.9563
+point 20 2 2 -0.235906 -0.751112
+point 21 1 1 -0.37002 -0.652298
+point 21 1 2 0.0306574 0.0115207
+point 21 2 1 -10.115 27.01
+point 21 2 2 -0.364327 -0.673238
+point 22 1 1 -0.466617 -0.562263
+point 22 1 2 0.032581 0.00866964
+point 22 2 1 -6.03206 22.7999
+point 22 2 2 -0.462138 -0.591968
+point 23 1 1 -0.536178 -0.477482
+point 23 1 2 0.0337448 0.00577737
+point 23 2 1 -3.17646 18.7562
+point 23 2 2 -0.53473 -0.517334
+point 24 1 1 -0.585581 -0.403411
+point 24 1 2 0.034239 0.00296725
+point 24 2 1 -1.27542 15.1151
+point 24 2 2 -0.589521 -0.454688
+point 25 1 1 -0.621426 -0.341879
+point 25 1 2 0.0341315 0.000309158
+point 25 2 1 -0.0742572 11.9666
+point 25 2 2 -0.633814 -0.405519
+point 26 1 1 -0.649094 -0.292338
+point 26 1 2 0.0334594 -0.00213393
+point 26 2 1 0.62773 9.31583
+point 26 2 2 -0.673735 -0.36851
+point 27 1 1 -0.672473 -0.25285
+point 27 1 2 0.0322534 -0.00427094
+point 27 2 1 0.977025 7.13049
+point 27 2 2 -0.713672 -0.340377
+point 28 1 1 -0.693898 -0.220811
+point 28 1 2 0.0305827 -0.0059776
+point 28 2 1 1.08092 5.36779
+point 28 2 2 -0.755764 -0.316696
+point 29 1 1 -0.714208 -0.193622
+point 29 1 2 0.0285928 -0.00713357
+point 29 2 1 1.02425 3.98368
+point 29 2 2 -0.799587 -0.29307
+point 30 1 1 -0.733067 -0.169346
+point 30 1 2 0.0265024 -0.0076877
+point 30 2 1 0.878818 2.93056
+point 30 2 2 -0.842589 -0.266552
+}
+}
+list XFORM "S_to_PI"
+list PLOT "S11"
+list PLOT "S12"
+list PLOT "S21"
+list PLOT "S22"
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! This example is about the S-Parameter performance of a FET transistor,
+ ! based on the following AC Spice schematic:
+ !
+ ! 1 o-o---||---o-----o----o-o 2
+ !     |   CGD  |     |    |
+ !    ---       -     |    |
+ !    ---CGS   / \    |    -
+ !     |       \_/GM ---  | |
+ !     -        |    ---   - RDS
+ !    | |       |     |CDS |
+ !     - RGS    |     |    |
+ !     |        |     |    |
+ !    ---      ---   ---  ---
+ ! See the tab 'Test Circuit'.
+ 
+ 
+ ! When TUNE_PARAMS is executed, the values of the AC schematic
+ ! capacitances, resistors and gm can be thought as values of a certain 
+ ! DC bias condition of the FET:
+ ! Tuning the parameters can be interpreted as if the DC bias condition
+ ! has changed, because all components of the FET PI schematic are 
+ ! in reality DC-bias-dependent.
+ !
+ ! In other words, you can study the effect of e.g. a varying CGS, CGD
+ ! or GM to the S-Parameters and the Impedance Plots of the PI schematic.
+ 
+ 
+ 
+ !  WHAT TO DO:
+ ! ==================
+ ! Execute Transform "TUNE_PARAMS".
+ 
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+ 
+ 
+}
+dataset
+{
+datasize COMMON 100 1 1
+type COMMON
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+point 41 1 1 0 0
+point 42 1 1 0 0
+point 43 1 1 0 0
+point 44 1 1 0 0
+point 45 1 1 0 0
+point 46 1 1 0 0
+point 47 1 1 0 0
+point 48 1 1 0 0
+point 49 1 1 0 0
+point 50 1 1 0 0
+point 51 1 1 0 0
+point 52 1 1 0 0
+point 53 1 1 0 0
+point 54 1 1 0 0
+point 55 1 1 0 0
+point 56 1 1 0 0
+point 57 1 1 0 0
+point 58 1 1 0 0
+point 59 1 1 0 0
+point 60 1 1 0 0
+point 61 1 1 0 0
+point 62 1 1 0 0
+point 63 1 1 0 0
+point 64 1 1 0 0
+point 65 1 1 0 0
+point 66 1 1 0 0
+point 67 1 1 0 0
+point 68 1 1 0 0
+point 69 1 1 0 0
+point 70 1 1 0 0
+point 71 1 1 0 0
+point 72 1 1 0 0
+point 73 1 1 0 0
+point 74 1 1 0 0
+point 75 1 1 0 0
+point 76 1 1 0 0
+point 77 1 1 0 0
+point 78 1 1 0 0
+point 79 1 1 0 0
+point 80 1 1 0 0
+point 81 1 1 0 0
+point 82 1 1 0 0
+point 83 1 1 0 0
+point 84 1 1 0 0
+point 85 1 1 0 0
+point 86 1 1 0 0
+point 87 1 1 0 0
+point 88 1 1 0 0
+point 89 1 1 0 0
+point 90 1 1 0 0
+point 91 1 1 0 0
+point 92 1 1 0 0
+point 93 1 1 0 0
+point 94 1 1 0 0
+point 95 1 1 0 0
+point 96 1 1 0 0
+point 97 1 1 0 0
+point 98 1 1 0 0
+point 99 1 1 0 0
+}
+}
+}
+LINK XFORM "TUNE_PARAMS" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  Params
+ GLOBAL_VAR  Mins
+ GLOBAL_VAR  Inits
+ GLOBAL_VAR  Maxs
+ GLOBAL_VAR  txt_Schematic
+ GLOBAL_VAR  txt_Help
+ 
+ 
+ !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ txt_Schematic="Schematic:
+ *===================================
+ *
+ * 1 o-o---||---o-----o----o-o 2
+ *     |   CGD  |     |    |
+ *    ---       -     |    |
+ *    ---CGS   / \    |    -
+ *     |       \_/GM ---  | |
+ *     -        |    ---   - RDS
+ *    | |       |     |CDS |
+ *     - RGS    |     |    |
+ *     |        |     |    |
+ *    ---      ---   ---  ---
+ 
+ *==================================="
+ 
+ txt_Help="At start-up, the values of the AC schematic capacitances, 
+ resistors and gm can be thought of a certain DC bias condition of the FET.
+ Tuning the parameters can be interpreted as if the DC bias condition
+ has changed, because all components of the FET PI schematic are 
+ in reality DC-bias-dependent.
+ 
+ In other words, you can study the effect of e.g. a varying CGS, CGD
+ or GM to the S-Parameters and the PI Schematic Impedance Plots."
+ 
+ 
+ 
+ !---initialize Variables
+ Params=""
+ Mins=""
+ Inits=""
+ Maxs=""
+ 
+ 
+ !---reset DUT Parameters, simulate and show Plot
+ ICCAP_FUNC("../DeviceParameterSet", "Reset")
+ ICCAP_FUNC(".", "Simulate")
+ ICCAP_FUNC("_MP_", "Display Plot")
+ 
+ 
+ !---set TUNER-----------------------------------------------------
+ !---get Param Names
+ N=0
+ ErrMsg=""
+ WHILE VAL$(ErrMsg)==""
+   ParamName=LOOKUP_TABLE_VAL("../DeviceParameterSet", "Param Name["&VAL$(N)&"]", ErrMsg)
+ !  PRINT ParamName
+   IF VAL$(ErrMsg)=="" THEN
+     DIMENSION_ARRAY("Params", N+1)
+     Params[N]=VAL$(ParamName)
+   END IF
+   N = N + 1
+ END WHILE
+ NrParams = N - 1
+ ErrMsg=""
+ 
+ 
+ !---set limits for tuner
+ DIMENSION_ARRAY("Mins" , NrParams)
+ DIMENSION_ARRAY("Inits", NrParams)
+ DIMENSION_ARRAY("Maxs" , NrParams)
+ FOR i=0 TO NrParams-1
+   !---get param value
+   ParamValue = LOOKUP_TABLE_VAL("../DeviceParameterSet", "Value["&VAL$(Params[i])&"]")
+   Inits[i]  = VAL(ParamValue)
+   Mins[i]   = Inits[i]//100
+   Maxs[i]   = Inits[i]*100
+ NEXT i
+ 
+ 
+ !---call TUNER
+ !                                1=log scale, 0=lin scale
+ !                                   1=immediate execution, 0=execute after slider release
+ !                                      program name to be executed
+ TUNER Params, Mins, Inits, Maxs, 1, 1, "aux1"
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 31 1 1
+type COMMON
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+}
+}
+}
+LINK XFORM "_________________" "711.501"
+{
+}
+LINK XFORM "___aux___________" "711.501"
+{
+}
+LINK XFORM "S_to_PI" "711.501"
+{
+View block_edit 0 "800,19"
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ 
+ !---calculate the complex impedances and the complex Gm
+ ! ===transistor inner PI schematic=================
+ !                 ___
+ ! P1 o-------o---|___|---o------o--o P2
+ !            |    Z12    |       |
+ !            -           -       -
+ !       Z10 | |        / | \    | | Z20
+ !            -         \ v /Gm   -
+ !            |           -       |
+ !            |           |       |
+ !           ---         ---     ---
+ 
+ Y = TWOPORT(S, "S", "Y")
+ 
+ Z_10 = (Y.11 + Y.12)^-1	!impedance  port1 -> GND
+ Y_10 =  Y.11 + Y.12		!admittance port1 -> GND
+ Z_12 = (-Y.12)^-1		!impedance  port1 -> port2
+ Gm_quasistat  = Y.21 - Y.12	!
+ Y_20 = Y.22 + Y.12		!admittance port2 -> GND
+ Z_20 = Y_20^-1                !impedance  port2 -Y GND
+ 
+ 
+ 
+ !---return impedances
+ COMPLEX PI_Imped.S.22[SIZEOF(Z_10)]
+ FOR i=0 TO SIZEOF(PI_Imped)-1
+   PI_Imped.S.11[i] = Z_10.S[i]
+   PI_Imped.S.12[i] = Z_12.S[i]
+   PI_Imped.S.21[i] = Gm_quasistat[i]
+   PI_Imped.S.22[i] = Z_20.S[i]
+ NEXT i
+ 
+ RETURN PI_Imped
+ !   PI_Imped.11 = Z_10     Impedance Port1 -> Ground
+ !   PI_Imped.12 = Z_12     Impedance Port1 -> Port2
+ !   PI_Imped.22 = Z_20     Impedance Port2 -> Ground
+ 
+}
+dataset
+{
+datasize SIMU 31 2 2
+type SIMU
+point 0 1 1 10.0177 -15915.5
+point 0 1 2 -0.000253403 -159155
+point 0 2 1 0.6966 1.10911E-009
+point 0 2 2 7169.57 -4504.77
+point 1 1 1 10.0111 -12642.1
+point 1 1 2 -0.000159923 -126421
+point 1 2 1 0.6966 8.81202E-010
+point 1 2 2 6151.23 -4865.66
+point 2 1 1 10.007 -10042
+point 2 1 2 -0.000100942 -100420
+point 2 2 1 0.6966 7.0022E-010
+point 2 2 2 5020.95 -4999.95
+point 3 1 1 10.0044 -7976.64
+point 3 1 2 -6.37269E-005 -79766.4
+point 3 2 1 0.6966 5.56527E-010
+point 3 2 2 3888.53 -4874.9
+point 4 1 1 10.0028 -6336.07
+point 4 1 2 -4.02458E-005 -63360.7
+point 4 2 1 0.6966 4.42471E-010
+point 4 2 2 2864.57 -4521.06
+point 5 1 1 10.0018 -5032.92
+point 5 1 2 -2.54303E-005 -50329.2
+point 5 2 1 0.6966 3.51978E-010
+point 5 2 2 2021.08 -4015.72
+point 6 1 1 10.0011 -3997.79
+point 6 1 2 -1.60823E-005 -39977.9
+point 6 2 1 0.6966 2.80229E-010
+point 6 2 2 1378 -3446.9
+point 7 1 1 10.0007 -3175.56
+point 7 1 2 -1.01842E-005 -31755.6
+point 7 2 1 0.6966 2.23403E-010
+point 7 2 2 916.042 -2884.66
+point 8 1 1 10.0004 -2522.44
+point 8 1 2 -6.46269E-006 -25224.4
+point 8 2 1 0.6966 1.78475E-010
+point 8 2 2 598.207 -2371.54
+point 9 1 1 10.0003 -2003.64
+point 9 1 2 -4.11458E-006 -20036.4
+point 9 2 1 0.6966 1.4305E-010
+point 9 2 2 385.964 -1926.31
+point 10 1 1 10.0002 -1591.55
+point 10 1 2 -2.63303E-006 -15915.5
+point 10 2 1 0.6966 1.15244E-010
+point 10 2 2 247.045 -1552.23
+point 11 1 1 10.0001 -1264.21
+point 11 1 2 -1.69823E-006 -12642.1
+point 11 2 1 0.6966 9.35749E-011
+point 11 2 2 157.309 -1244.33
+point 12 1 1 10.0001 -1004.2
+point 12 1 2 -1.10841E-006 -10042
+point 12 2 1 0.6966 7.68888E-011
+point 12 2 2 99.835 -994.174
+point 13 1 1 10 -797.664
+point 13 1 2 -7.36252E-007 -7976.64
+point 13 2 1 0.6966 6.42969E-011
+point 13 2 2 63.2246 -792.621
+point 14 1 1 10 -633.607
+point 14 1 2 -5.01435E-007 -6336.07
+point 14 2 1 0.6966 5.51286E-011
+point 14 2 2 39.9853 -631.074
+point 15 1 1 10 -503.292
+point 15 1 2 -3.53264E-007 -5032.92
+point 15 2 1 0.6966 4.88948E-011
+point 15 2 2 25.2663 -502.02
+point 16 1 1 10 -399.779
+point 16 1 2 -2.59759E-007 -3997.79
+point 16 2 1 0.6966 4.52624E-011
+point 16 2 2 15.9568 -399.141
+point 17 1 1 10 -317.556
+point 17 1 2 -2.00743E-007 -3175.56
+point 17 2 1 0.6966 4.40355E-011
+point 17 2 2 10.074 -317.236
+point 18 1 1 10 -252.244
+point 18 1 2 -1.6347E-007 -2522.44
+point 18 2 1 0.6966 4.51441E-011
+point 18 2 2 6.35864 -252.083
+point 19 1 1 10 -200.364
+point 19 1 2 -1.39897E-007 -2003.64
+point 19 2 1 0.6966 4.86376E-011
+point 19 2 2 4.01297 -200.284
+point 20 1 1 10 -159.155
+point 20 1 2 -1.24937E-007 -1591.55
+point 20 2 1 0.6966 5.46832E-011
+point 20 2 2 2.53239 -159.115
+point 21 1 1 10 -126.421
+point 21 1 2 -1.1536E-007 -1264.21
+point 21 2 1 0.6966 6.35653E-011
+point 21 2 2 1.59798 -126.401
+point 22 1 1 10 -100.42
+point 22 1 2 -1.09102E-007 -1004.2
+point 22 2 1 0.6966 7.56828E-011
+point 22 2 2 1.00832 -100.41
+point 23 1 1 10 -79.7664
+point 23 1 2 -1.04816E-007 -797.664
+point 23 2 1 0.6966 9.15353E-011
+point 23 2 2 0.636228 -79.7613
+point 24 1 1 10 -63.3607
+point 24 1 2 -1.01584E-007 -633.607
+point 24 2 1 0.6966 1.11684E-010
+point 24 2 2 0.401442 -63.3582
+point 25 1 1 10 -50.3292
+point 25 1 2 -9.87351E-008 -503.292
+point 25 2 1 0.6966 1.36658E-010
+point 25 2 2 0.253297 -50.3279
+point 26 1 1 10 -39.9779
+point 26 1 2 -9.57098E-008 -399.779
+point 26 2 1 0.6966 1.66771E-010
+point 26 2 2 0.159821 -39.9773
+point 27 1 1 10 -31.7556
+point 27 1 2 -9.19865E-008 -317.556
+point 27 2 1 0.6966 2.01785E-010
+point 27 2 2 0.100841 -31.7553
+point 28 1 1 10 -25.2244
+point 28 1 2 -8.70543E-008 -252.244
+point 28 2 1 0.6966 2.40411E-010
+point 28 2 2 0.0636265 -25.2242
+point 29 1 1 10 -20.0364
+point 29 1 2 -8.04596E-008 -200.364
+point 29 2 1 0.6966 2.79732E-010
+point 29 2 2 0.0401457 -20.0363
+point 30 1 1 10 -15.9155
+point 30 1 2 -7.1949E-008 -159.155
+point 30 2 1 0.6966 3.14911E-010
+point 30 2 2 0.0253302 -15.9155
+}
+}
+list PLOT "Z10"
+list PLOT "Z12"
+list PLOT "Z20"
+member OUT "S"
+}
+LINK XFORM "aux1" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ !PRINT "exec.Xfm '"&VAL$(WHOAMI(""))&"'..."
+ 
+ 
+ ! this is the Transform called by the TUNER feature in 'TUNE_PARAMS'
+ 
+ 
+ ICCAP_FUNC(".", "Simulate")
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK PLOT "_MP_" "711.501"
+{
+View draw_ds 0 "B,-5557,-4236"
+View plot_window 0 "421,12,29428,23607,{S11:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S12:MAN|RI|RI: 0.000 , 0.000 , 1.000 ,4,5,4,5&S21:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&S22:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z10:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z12:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&Z20:AUTO|RI|RI: 0.000 , 0.000 , 1.000 ,5,5,5,5&MAN|XY|AUTOMATIC::}"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "MULTI PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "# of Plots" "8"
+element "# of GUIs" "2"
+element "Orientation" "H"
+element "Plots Per Row" "4"
+element "Header" ""
+element "Footer" ""
+}
+HYPTABLE "Multi Table"
+{
+element "Plot 0" "S11"
+element "Plot 1" "S12"
+element "Plot 2" "S21"
+element "Plot 3" "S22"
+element "Plot 4" "Z10"
+element "Plot 5" "Z12"
+element "Plot 6" "Z20"
+element "Plot 7" ""
+}
+HYPTABLE "Multi GUI Table"
+{
+element "GUI 1" "../../TL_Notes_Top"
+element "GUI 1 Location" "U"
+element "GUI 2" "../../TL_Notes_Bottom"
+element "GUI 2 Location" "B"
+}
+PlotOptimizerOpt Enable 0
+}
+}
+LINK PLOT "S11" "711.501"
+{
+View draw_ds 0 "B,-2327,-4236"
+View plot_window 0 "411,34,8568,8290"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S11"
+element "Footer" ""
+element "Smith Data 0" "S.S.11"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S12" "711.501"
+{
+View draw_ds 0 "B,120,-4236"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S12"
+element "Footer" ""
+element "Polar Data 0" "S.S.12"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S22" "711.501"
+{
+View draw_ds 0 "B,-5557,3582"
+View plot_window 0 "411,34,8578,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "SMITH PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S22"
+element "Footer" ""
+element "Smith Data 0" "S.S.22"
+element "Smith Data 1" ""
+element "Smith Data 2" ""
+element "Smith Data 3" ""
+element "Smith Data 4" ""
+element "Smith Data 5" ""
+element "Smith Data 6" ""
+element "Smith Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "S21" "711.501"
+{
+View draw_ds 0 "B,-3110,3582"
+View plot_window 0 "827,33,8400,8289"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "POLAR PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "S21"
+element "Footer" ""
+element "Polar Data 0" "S.S.21"
+element "Polar Data 1" ""
+element "Polar Data 2" ""
+element "Polar Data 3" ""
+element "Polar Data 4" ""
+element "Polar Data 5" ""
+element "Polar Data 6" ""
+element "Polar Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "S"
+member SWEEP "freq"
+}
+LINK PLOT "Z10" "711.501"
+{
+View draw_ds 0 "B,-5557,0"
+View plot_window 0 "929,370,8991,8996"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z10"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.11!!Z10"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z12" "711.501"
+{
+View draw_ds 0 "B,-2785,0"
+View plot_window 0 "382,697,10613,8996,{AUTO|XY| 700.0 , 820.0 ,6,4:-80.00 , 20.00 ,6,4:AUTOMATIC}"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z12"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.12!!Z12"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+LINK PLOT "Z20" "711.501"
+{
+View draw_ds 0 "B,0,0"
+View plot_window 0 "716,313,8991,8996"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "N"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "Z20"
+element "Footer" ""
+element "RI Data 0" "S_to_PI.S.22!!Z20"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member XFORM "S_to_PI"
+member SWEEP "freq"
+}
+data "711.501"
+{
+}
+}
+}
+}

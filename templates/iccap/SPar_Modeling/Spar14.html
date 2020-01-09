@@ -1,0 +1,110 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+<h3>S-Parameters for Modeling Engineers</h3>
+<h4>How to Simulate S-Parameters</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>Keywords:</em>
+<li>Calculation of S-Parameters from AC Simulations</li>
+<li>The Influence of the Bias-TEEs</li>
+<li>Realization in IC-CAP</li>
+<br/>
+<hr/>
+<em>SIMULATING S-PARAMETERS WITHOUT DC BIASING</em>
+<br/>
+As depicted below, the set of S-Parameters of a TwoPort can be obtained from two AC simulations:<br/>
+<ul>
+    <li>a first one with stimulating the input of the TwoPort, and measuring the complex voltages at both ports
+        (magnitude and phase).
+    </li>
+    <li>and a second one with stimulation of the Output and the same voltage measurements.</li>
+</ul>
+
+Notice: this corresponds also to performing S-Parameter measurements applying a Network Analyzer (NWA).
+<br><img width="700" src="/static/iccap/SPar_Modeling/4/1.png"><br/><br/>
+
+<hr/>
+<em>SIMULATING S-PARAMETERS INCLUDING DC BIASING</em>
+<br/>
+The same procedure can be applied to S-parameter simulations of devices which require DC biasing (diodes, transistors). In this case, like for measurements, so-called Bias-TEEs need to be inserted into the S-parameter simulation circuit.
+<br/><br/>
+Keep in mind that, that in both cases, measurement and simulation, adding bias-TEEs means a resonance at a few 10 Hz (the L and C of the Bias-TEE), and that the phase shift of this resonance must be completely over at the lowest measured/simulated NWA frequency. In other words, what is measured or simulated including Bias-TEEs (for measurements: internal or external ones) for the applied frequency range, should definitively represent nothing but the S-parameter trace of the DUT alone, after the complete 360' phase shift  of the Bias-TEE.
+
+<br><img width="700" src="/static/iccap/SPar_Modeling/4/2.png"><br/><br/>
+
+<hr/>
+<em>HOW THE BIAS-TEEs MAY AFFECT S-PARAMETERS</em>
+<em>LOW END S-PARAMETER FREQUENCY RANG</em>
+<br><img width="700" src="/static/iccap/SPar_Modeling/4/3.png"><br/><br/>
+The simulation result of a Bias-TEE with C=10nF and L=10uH is depicted above:<br/>
+<ul>
+    <li>at the low end of the S-parameter frequency range (10MHz), the Bias-TEE resonance is not yet over !</li>
+    <li>therefore, the measured/simulated DUT characteristics at 10MHz will not start, as expected, at the very right of
+        the Smith chart (e.g. a MOS transistor), but rather where the Bias-TEE resonance currently ends ! (above the
+        very right)
+    </li>
+</ul>
+But also the<br>
+<em></em>
+<br/>HIGH-END FREQUENCY RANGE OF S-PARAMETER SIMULATIONS<br/>
+can be affected by the Bias-TEE circuit:
+<br><img width="700" src="/static/iccap/SPar_Modeling/4/4.png"><br/><br/>
+
+If you experience 'noisy' or discontinuous S-parameter simulations like depicted above, the Bias-TEE inductor and capacitor values are probably too big.
+<br/>
+<ul>
+    <li>The reasons for this effect are usually computer-specific rounding problems.<br/>
+        Explanation: If your circuit contains very small inductors/capacitors of fA or pH, and when there are additional
+        big capacitors present (IC-CAP default Bias-TEE C=100F) and inductors (Bias-TEE L=100H), numerical problems may
+        occur in the simulator solver matrix, where sums of these these big values together with the small capacitances
+        and inductances of the DUT may exist. And this leads to numerical rounding effects. To prevent this, set the
+        Bias-TEE capacitor and inductor values to lower values.
+    <li>Note: modern simulators offer ideal capacitor and inductor components, called e.g. like DCFEED or DCBLOCK as in
+        ADS. Using such components instead of a conventional Bias-TEE capacitor and inductor will prevent from such
+        problems.
+</ul>
+<br/>
+<em>In a Nut Shell:</em>
+<ul>
+    <li>for both, measurement and simulation, the Bias-TEE resonance must be completely over at the beginning of the
+        S-Parameter frequency measurement range.
+    </li>
+    <li>Therefore, especially for measurements, the specification of the minimum frequency is as important as the one of
+        the maximum frequency.
+    </li>
+    <li>For simulations, the values of the inductor and the capacitor of the Bias-TEE network should be as big as
+        possible. On the other hand, the values should not be too big, to prevent from convergence problems of the
+        simulator when the DUT itself exhibits very low capacitances (typically below 100 fF). Best-practice values are
+        for the Bias-TEE components are L=100 mH and C=100 mF.
+    </li>
+</ul>
+<br/>
+<hr/>
+<em>S-PARAMETER SIMULATIONS IN IC-CAP</em>
+<br><img width="500" src="/static/iccap/SPar_Modeling/4/5.png"><br/><br/>
+
+For Spice-like simulators, which by themselves cannot simulate S-parameters, IC-CAP adds the following circuit to the user-defined modeling netlist, and performs the simulation of the two netlists, altogether, by a single AC simulation:
+<br><img width="600" src="/static/iccap/SPar_Modeling/4/6.png"><br/>
+<br><img width="600" src="/static/iccap/SPar_Modeling/4/7.png"><br/><br/>
+
+The S-parameter calculation formulas, mentioned before, are the reason<br/>
+<ul>
+    <li>why IC-CAP has to insert the user-defined circuit (2-port DUT)</li>
+    <li>as a sucircuit</li>
+    <li>into a hyper-circuit</li>
+    <li>and to finally send this total circuit to the simulator.</li>
+    <li>The simulation result, the simulator output deck, includes the complex voltages that are required by IC-CAP to
+        calculate the S-parameters as described before.
+    </li>
+</ul>
+<br/>
+As depicted above, to speed-up simulations, IC-CAP puts these two schematics together into one big circuit.<br/><br/>
+This circuit structure is valid for all simulators supported by IC-CAP, only the syntax may be different.
+For ADS, however, these overhead netlists are not required, because ADS supports S-parameter simulations directly.
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

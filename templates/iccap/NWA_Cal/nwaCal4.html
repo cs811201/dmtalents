@@ -1,0 +1,98 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>NWA Calibration</h3>
+<h4>Verification of the NWA Calibration</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+
+<em>VERIFICATION OF THE NWA CALIBRATION</em><br/><br/>
+In order to verify the previously performed NWA calibration, and its calibration plane shift down to the GSG probe tips,  it is highly recommended to
+<br/>
+<ul>
+    <li>re-measure the calibration standards,</li>
+    <li>to model them corresponding to the CalKit definitions,</li>
+    <li>and to compare the resulting model parameter values with the original CalKit definitions.</li>
+</ul>
+
+This allows to detect<br/>
+<ul>
+    <li>issues with errors made when entering the CalKit data into the NWA,</li>
+    <li>issues with the mechanical performance of the probes and the cables,</li>
+    <li>or issues with the NWA performance itself.</li>
+</ul>
+
+<br><img  src="/static/iccap/NWA_Cal/4/1.png"><br/><br/>
+
+Depicted above is an example of a successful calibration verification for GSG probes, verified with re-measured and modeled OPEN and SHORT ISS Cal.Standards.
+<br/>
+On the top, the we have the OPEN verification, and on the bottom, the SHORT verification.<br/>
+In both cases, the S-parameters of the re-measured Cal.Standards are converted into their corresponding CalKit definitions (the OPEN S-parameters into a capacitance at each port, and the SHORT into an inductance at each port).
+<br/>
+The obtained values -as a function of frequency- represent a very good match to the original CalKit definitions.<br/>
+<br/>
+
+The verification results of the LOAD and the THRU are shown in the next slide.<br/>
+<br><img  src="/static/iccap/NWA_Cal/4/2.png"><br/><br/>
+
+The calibration verification is now applied to the re-measured LOAD and the THRU on the ISS Cal.Substrate. Like before, a very good agreement of the converted S-parameters to the original CalKit specifications is achieved.
+<br/>
+<br/>
+<u>Conclusions:</u><br/>
+Only if all the four, re-measured Calibration Standards exhibit an excellent fit compared to the Spice simulations of their electric property definitions, we can assume a correct calibration of the NWA.
+<br/>
+<hr/>
+<em>An Example of a Bad GSG Calibration Verification Result</em><br/>
+<br><img  src="/static/iccap/NWA_Cal/4/3.png"><br/><br/>
+
+Shown above is an example of a not so successful GSG probes  cal. verification<br/><br/>
+
+<u>Comments on the re-measured OPEN CalKit Standard:</u> <br/>
+
+the re-measured ISS  OPEN correctly turns backwards, as given by the OPEN Cal.Standard definition of a negative capacitance of  C0 = -9.7fF.
+<br/>
+However, the magnitudes of S11 and also S22 increase, for incrementing frequency, to values above 1, what corresponds to a negative resistance, what is physically incorrect.
+<br/>
+-> the calibration is invalid and has to be repeated.<br/><br/>
+
+<u>Comments on the re-measured SHORT CalKit Standard:</u><br/>
+here, the re-measured Port1 resistance is different from the one of Port2, and the Port2 resistance is even negative !
+<br/>
+Additionally, the Port1 and Port2 inductances are different (Phase of S11 and S22):<br/>
+at Port1, the inductance is ~20% too big (red trace), and at Port2 (blue trace), it is ~50% too small compared to the expected, simulated CalKit definition of 4.8pH (green curve).
+<br/>
+-> the calibration is invalid and has to be repeated.<br/>
+If the problem persists, there might be a problem with the mechanics of the GSG probes.<br/><br/>
+
+<u>Comments on the re-measured THRU CalKit Standard:</u><br/>
+<br><img src="/static/iccap/NWA_Cal/4/4.png"><br/><br/>
+
+The contact problem of the GSG probes, already detected with the SHORT verification before, is showing up again also for the THRU re-measurement.
+<br/>
+<ul>
+    <li>The phase delay of the THRU is first negative (low freq.) and then turns positive for higher frequencies, as
+        expected.
+    </li>
+    <li>In addition, there magnitude of both, S21 and S12, is considerably lower than the target value of '1'.</li>
+    The calibration is invalid. A mechanical problem with the GSG probe tip contacts is assumed.
+</ul>
+
+<hr/>
+<em>Weighting the Cal. Verification Measurements:</em><br/><br/>
+The importance weighting, i.e. the order of cal. verification challenges, is <br/>
+<ul>
+    <li>SHORT (most challenging),</li>
+    <li>OPEN,</li>
+    <li>THRU,</li>
+    <li>LOAD (least challenging).</li>
+</ul>
+
+<br/><br/>
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}
