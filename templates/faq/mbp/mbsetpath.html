@@ -31,12 +31,32 @@ To pass in a variable to the Java program, we need the “-D” keyword to assig
 Once this change is saved, re-start MBP, we will start to see all the run-time files get saved under C:\Users\shuancai\tmp.
 
 
-<br/><br/>
-This option should work for both Windows and Linux.
+<br/>
+<hr/>
+For Linux users, we modify the same $MBPHOME/mbp start-up wrapper file, and it’s recommended to specify it to a local environment variable, for example:
+<br/>
+<ul>
+    <em>-DMBSETPATH=$MBSETPATH</em><br/>
+</ul>
+<img src="/static/faq/mbp/mbsetpath/3.png"/><br/><br/>
 
+This way, each Linux user gets a chance to specify his/her own local directory to avoid global conflict.<br/>
+For example, if it’s bash environment, do:<br/>
+<ul>
+    export MBSETPATH=/home/user/desired_path
+</ul>
+<br/>
+If it’s csh or tcsh, do:<br/>
+<ul>setenv MBSETPATH /home/user/desired_path</ul>
+<br/>
+Then, re-start MBP from the same bash or csh environment (terminal window).
 <br/><br/>
-
 Thanks!
+
+
+<br/><br/>
+
+
 <br/>
 <br/>
 <br/>
