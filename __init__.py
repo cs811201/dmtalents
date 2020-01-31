@@ -281,15 +281,11 @@ def mbpfaq():
     return render_template('faq/mbp/mbpfaqlist.html', slist=results, func=getCategory)
 
 
-
-
-
 @app.route('/mqa')
 @login_required
 def mqa():
     recordPostHistory('/mqa')
     return render_template('mqa/agenda.html')
-
 
 
 @app.route('/mqafaq')
@@ -421,9 +417,6 @@ route_iccap_pel_val = "/iccap/pel/val"
 def iccap_pel_val():
     recordPostHistory(route_iccap_pel_val)
     return render_template('iccap/tmp.html')
-
-
-
 
 
 route_iccap_pel_curModelName = "/iccap/pel/curModelName"
@@ -583,8 +576,6 @@ route_blog_iccap_pyvisa_101 = '/blog/iccap_pyvisa_101'
 def blog_iccap_pyvisa_101():
     recordPostHistory(route_blog_iccap_pyvisa_101)
     return render_template('blog/post/pyvisa_01.html')
-
-
 
 
 route_blog_mqa_pyrfs = '/blog/mqa_pyrfs'
@@ -1709,7 +1700,6 @@ def mqafaq_nonInstanceParam():
     return render_template('/faq/mqa/nonInstanceParam.html')
 
 
-
 route_mqafaq_linkd2ads = '/mqafaq/link2ads'
 
 
@@ -1832,7 +1822,6 @@ def iccapfaq_lax_vm():
     return render_template('/faq/iccap/lax_vm.html')
 
 
-
 route_iccap_spar11 = '/iccap-spar/1.1'
 
 
@@ -1841,6 +1830,7 @@ route_iccap_spar11 = '/iccap-spar/1.1'
 def iccap_spar11():
     recordPostHistory(route_iccap_spar11)
     return render_template('/iccap/SPar_Modeling/Spar11.html')
+
 
 route_iccap_spar12 = '/iccap-spar/1.2'
 
@@ -1851,6 +1841,7 @@ def iccap_spar12():
     recordPostHistory(route_iccap_spar12)
     return render_template('/iccap/SPar_Modeling/Spar12.html')
 
+
 route_iccap_spar13 = '/iccap-spar/1.3'
 
 
@@ -1859,6 +1850,7 @@ route_iccap_spar13 = '/iccap-spar/1.3'
 def iccap_spar13():
     recordPostHistory(route_iccap_spar13)
     return render_template('/iccap/SPar_Modeling/Spar13.html')
+
 
 route_iccap_spar14 = '/iccap-spar/1.4'
 
@@ -1869,6 +1861,7 @@ def iccap_spar14():
     recordPostHistory(route_iccap_spar14)
     return render_template('/iccap/SPar_Modeling/Spar14.html')
 
+
 route_iccap_spar15 = '/iccap-spar/1.5'
 
 
@@ -1877,7 +1870,6 @@ route_iccap_spar15 = '/iccap-spar/1.5'
 def iccap_spar15():
     recordPostHistory(route_iccap_spar15)
     return render_template('/iccap/SPar_Modeling/Spar15.html')
-
 
 
 route_iccap_nwacal1 = '/iccap-nwa-cal/1'
@@ -1890,7 +1882,6 @@ def iccap_nwacal1():
     return render_template('/iccap/NWA_Cal/nwaCal1.html')
 
 
-
 route_iccap_nwacal12 = '/iccap-nwa-cal/1.2'
 
 
@@ -1900,6 +1891,7 @@ def iccap_nwacal12():
     recordPostHistory(route_iccap_nwacal12)
     return render_template('/iccap/NWA_Cal/nwaCal1.2.html')
 
+
 route_iccap_nwacal2 = '/iccap-nwa-cal/2'
 
 
@@ -1908,7 +1900,6 @@ route_iccap_nwacal2 = '/iccap-nwa-cal/2'
 def iccap_nwacal2():
     recordPostHistory(route_iccap_nwacal2)
     return render_template('/iccap/NWA_Cal/nwaCal2.html')
-
 
 
 route_iccap_nwacal0 = '/iccap-nwa-cal/0'
@@ -1921,7 +1912,6 @@ def iccap_nwacal0():
     return render_template('/iccap/NWA_Cal/nwaCal0.html')
 
 
-
 route_iccap_nwacal4 = '/iccap-nwa-cal/4'
 
 
@@ -1930,6 +1920,7 @@ route_iccap_nwacal4 = '/iccap-nwa-cal/4'
 def iccap_nwacal4():
     recordPostHistory(route_iccap_nwacal4)
     return render_template('/iccap/NWA_Cal/nwaCal4.html')
+
 
 route_iccap_nwacal5 = '/iccap-nwa-cal/5'
 
@@ -1940,6 +1931,35 @@ def iccap_nwacal5():
     recordPostHistory(route_iccap_nwacal5)
     return render_template('/iccap/NWA_Cal/nwaCal5.html')
 
+
+route_iccap_spice_spar1 = '/iccap-spice-spar/1'
+
+
+@app.route(route_iccap_spice_spar1)
+@login_required
+def iccap_spice_spar1():
+    recordPostHistory(route_iccap_spice_spar1)
+    return render_template('/iccap/SpiceSpar/Spice131.html')
+
+
+route_iccap_spice_spar2 = '/iccap-spice-spar/2'
+
+
+@app.route(route_iccap_spice_spar2)
+@login_required
+def iccap_spice_spar2():
+    recordPostHistory(route_iccap_spice_spar2)
+    return render_template('/iccap/SpiceSpar/Spice132.html')
+
+
+route_iccap_spice_spar3 = '/iccap-spice-spar/3'
+
+
+@app.route(route_iccap_spice_spar3)
+@login_required
+def iccap_spice_spar3():
+    recordPostHistory(route_iccap_spice_spar3)
+    return render_template('/iccap/SpiceSpar/Spice133.html')
 
 
 ### WPE FAQs ###
@@ -2209,6 +2229,7 @@ def mqarule_select():
     recordPostHistory(route_mqarules_select)
     return render_template('/mqarules/rules/select.html')
 
+
 route_mqarules_compdiff_b = '/mqarules/compdiff_b'
 
 
@@ -2248,7 +2269,6 @@ route_video_mqa_np_mc = '/video/mqa_np_mc'
 def videomqa_np_mc():
     recordPostHistory(route_video_mqa_np_mc)
     return render_template('/video/MQA_NP_MC.html')
-
 
 
 route_video_mqaHvsS = '/video/mqaHvsS'
@@ -2448,6 +2468,7 @@ def videoiccap_bjt_modeling():
     recordPostHistory(route_video_iccap_bjt_modeling)
     return render_template('/video/ICCAP_bjt_modeling.html')
 
+
 route_video_iccap_cap_res_modeling = '/video/iccap_cap_res'
 
 
@@ -2456,6 +2477,7 @@ def videoiccap_cap_res_modeling():
     recordPostHistory(route_video_iccap_cap_res_modeling)
     return render_template('/video/ICCAP_cap_res.html')
 
+
 route_video_iccap_ind_modeling = '/video/iccap_ind'
 
 
@@ -2463,6 +2485,7 @@ route_video_iccap_ind_modeling = '/video/iccap_ind'
 def videoiccap_ind_modeling():
     recordPostHistory(route_video_iccap_ind_modeling)
     return render_template('/video/ICCAP_ind.html')
+
 
 route_video_iccap_check_spar_modeling = '/video/iccap_check_spar'
 
@@ -3507,6 +3530,7 @@ def download_compdiff_a_rule():
                      attachment_filename='compDiff_meas_within_corners.zip', mimetype='application/zip',
                      as_attachment=True)
 
+
 route_download_compdiff_b_rule = '/mqarules/compdiff_b/rule/download'
 
 
@@ -4059,6 +4083,7 @@ def download_mqa_asm_hemt():
     return send_file('static/video/mqa_asm-hemt/asmhemt.zip',
                      attachment_filename='asmhemt.zip', mimetype='application/zip', as_attachment=True)
 
+
 route_download_mqa_np_mc_zip = '/video/mqa_np_mc/download'
 
 
@@ -4078,9 +4103,8 @@ route_download_iccap_spar_basic = '/iccap/spar/basic/download'
 def download_iccap_spar_basic():
     recordPostHistory(route_download_iccap_spar_basic)
     return send_file('static/iccap/SPar_Modeling/S-Parameters_Basic_Examples_Tutorial.mdl',
-                     attachment_filename='S-Parameters_Basic_Examples_Tutorial.mdl', mimetype='text/plain', as_attachment=True)
-
-
+                     attachment_filename='S-Parameters_Basic_Examples_Tutorial.mdl', mimetype='text/plain',
+                     as_attachment=True)
 
 
 route_download_iccap_nwacal1 = '/iccap/nwacal1/download'
@@ -4092,7 +4116,6 @@ def download_iccap_nwacal1():
     recordPostHistory(route_download_iccap_nwacal1)
     return send_file('static/iccap/NWA_Cal/CAL_VERIFY_2port__GSG.mdl',
                      attachment_filename='CAL_VERIFY_2port__GSG.mdl', mimetype='text/plain', as_attachment=True)
-
 
 
 route_download_iccap_nwacal2 = '/iccap/nwacal2/download'
@@ -4117,7 +4140,7 @@ def download_iccap_nwacal3():
                      attachment_filename='_DemoData.zip', mimetype='application/zip', as_attachment=True)
 
 
-route_download_iccap_spar_appnote_1967= '/iccap/spar_appnote1967/download'
+route_download_iccap_spar_appnote_1967 = '/iccap/spar_appnote1967/download'
 
 
 @login_required
@@ -4125,9 +4148,11 @@ route_download_iccap_spar_appnote_1967= '/iccap/spar_appnote1967/download'
 def download_iccap_spar_appnote_1967():
     recordPostHistory(route_download_iccap_spar_appnote_1967)
     return send_file('static/iccap/SPar_Modeling/S-Parameter_Techniques_AN95_historic_1967.pdf',
-                     attachment_filename='S-Parameter_Techniques_AN95_historic_1967.pdf', mimetype='application/pdf', as_attachment=True)
+                     attachment_filename='S-Parameter_Techniques_AN95_historic_1967.pdf', mimetype='application/pdf',
+                     as_attachment=True)
 
-route_download_iccap_spar_appnote_1997= '/iccap/spar_appnote1997/download'
+
+route_download_iccap_spar_appnote_1997 = '/iccap/spar_appnote1997/download'
 
 
 @login_required
@@ -4135,9 +4160,50 @@ route_download_iccap_spar_appnote_1997= '/iccap/spar_appnote1997/download'
 def download_iccap_spar_appnote_1997():
     recordPostHistory(route_download_iccap_spar_appnote_1997)
     return send_file('static/iccap/SPar_Modeling/S-Parameter_Techniques_AN95_1997.pdf',
-                     attachment_filename='S-Parameter_Techniques_AN95_1997.pdf', mimetype='application/pdf', as_attachment=True)
+                     attachment_filename='S-Parameter_Techniques_AN95_1997.pdf', mimetype='application/pdf',
+                     as_attachment=True)
 
 
+route_download_iccap_spice_spar_cap = '/iccap/spice_spar_cap/download'
+
+
+@login_required
+@app.route(route_download_iccap_spice_spar_cap)
+def download_iccap_spice_cap():
+    recordPostHistory(route_download_iccap_spice_spar_cap)
+    return send_file('static/iccap/SpiceSpar/Spar_to_Spice__Capacitor.mdl',
+                     attachment_filename='Spar_to_Spice__Capacitor.mdl', mimetype='text/plain', as_attachment=True)
+
+
+route_download_iccap_spice_spar_ind = '/iccap/spice_spar_ind/download'
+
+
+@login_required
+@app.route(route_download_iccap_spice_spar_ind)
+def download_iccap_spice_ind():
+    recordPostHistory(route_download_iccap_spice_spar_ind)
+    return send_file('static/iccap/SpiceSpar/Spar_to_Spice__Inductor.mdl',
+                     attachment_filename='Spar_to_Spice__Inductor.mdl', mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_spice_spar_imped = '/iccap/spice_spar_impedance/download'
+
+
+@login_required
+@app.route(route_download_iccap_spice_spar_imped)
+def download_iccap_spice_imped():
+    recordPostHistory(route_download_iccap_spice_spar_imped)
+    return send_file('static/iccap/SpiceSpar/Impedance_Plots_Tutorials.mdl',
+                     attachment_filename='Impedance_Plots_Tutorials.mdl', mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_spice_spar_skin = '/iccap/spice_spar_skin/download'
+
+
+@login_required
+@app.route(route_download_iccap_spice_spar_skin)
+def download_iccap_spice_skin():
+    recordPostHistory(route_download_iccap_spice_spar_skin)
+    return send_file('static/iccap/SpiceSpar/SkinEffect_Tutorial.mdl',
+                     attachment_filename='SkinEffect_Tutorial.mdl', mimetype='text/plain', as_attachment=True)
 
 ### Upload a file
 route_update_a_file = "/upload"

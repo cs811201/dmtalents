@@ -1,0 +1,100 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>Spice Interpretation of S-Parameters</h3>
+<h4>INTERPRETING S-PARAMETERS BY SPICE SCHEMATICS</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+S-Parameter Plots can directly be interpreted with respect to Spice schematics. This enables a direct inspection and quality assessment of a measurement result, just after it has been performed.
+<br/><br/>
+A very important pre-requisite, however, is verified S-Parameter measurements. Besides an accurate and verified network analyzer calibration (see the separate chapter), we also need accurate and verified de-embedding structures, on the same wafer as the device.
+<br/>
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/1.png"><br/><br/>
+
+It is strongly recommended to have all three dummies (OPEN, SHORT and THRU) available on the wafer, and to develop Spice models for each of them.
+<br/>
+With this modeling, we check:
+<ul>
+    <li>if there are really no series components hidden in the OPEN dummy,</li>
+    <li>no parallel components hidden in the SHORT,</li>
+    <li>and if the THRU (as a substitute of the later DUT), and de-embedded from both,
+        the OPEN and the SHORT, can be modeled by a simple, lossless delay line.
+    </li>
+</ul>
+<br/>
+For details, see the separate chapter.
+<br/><br/>
+Once this is done, the DUT measurement itself is de-embedded, and its S-Parameter plots are inspected:
+<br/>
+<ul>
+    <li>do the de-embedded trace turn clock-wise, also for high frequencies ?</li>
+    <li>or every de-embedding step, is there less phase ?</li>
+    <li>are the de-embedded traces physical, e.g. within the Smith Chart ?</li>
+</ul>
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/2.png"><br/><br/>
+
+In the example above, all de-embedded S-Parameter traces exhibit less phase, and represent the basic properties of an on-wafer capacitance: the Spice interpretation can be applied, as explained next.
+<br/>
+<hr/>
+<em>Spice Schematic Derived Directly From Verified S-Parameter Measurements</em>
+<br/><br/>
+1st Example: <font color="red">Capacitor</font> - 100MHz ... 10GHz
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/3.png"><br/><br/>
+
+
+Because the dominant component is between Port1 and Port2, we begin with the plots S_deemb.12 and S_deemb.21. For a passive device like here, they are identical.
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/4.png"><br/><br/>
+Then, inspecting the other plots S_deemb.11 & S_deemb.22:
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/5.png"><br/><br/>
+At a glance, and graphically:
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/6.png"><br/><br/>
+
+2nd Example: <font color="red">Inductor</font> - 50MHz ... 50GHz
+<br><img width="700" src="/static/iccap/SpiceSpar/131/7.png"><br/><br/>
+
+Like before, we begin with the plots S_deemb.12 and S_deemb.21, because the dominant component, the inductor, is between Port1 and Port2.
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/8.png"><br/><br/>
+Then, inspecting the other plots S_deemb.11 & S_deemb.22:
+
+<br><img width="700" src="/static/iccap/SpiceSpar/131/9.png"><br/><br/>
+At a glance, and graphically:
+<br><img width="700" src="/static/iccap/SpiceSpar/131/10.png"><br/><br/>
+IC-CAP Example Files can be downloaded here:<br/>
+<ul>
+    <li><a href="/iccap/spice_spar_cap/download" target="_blank">Spar_to_Spice__Capacitor.mdl</a></li>
+    <li><a href="/iccap/spice_spar_ind/download" target="_blank">Spar_to_Spice__Inductor.mdl</a></li>
+</ul>
+<br/>
+
+How-To-Use Video:
+<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ycO0OrRoKEI?rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/>
+<br/>
+<em>Conclusions:</em><br/>
+
+Inspecting S-Parameters with respect to an underlying Spice schematic
+<ul>
+    <li>gives first-order results</li>
+    <li>works well for low frequencies</li>
+</ul>
+<br/>
+But, a more detailed Spice schematic can be obtained when converting the S-Parameters further to Y- or Z-Parameters.
+<br/>
+See the next chapters.
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

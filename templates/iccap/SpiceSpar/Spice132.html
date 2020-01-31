@@ -1,0 +1,53 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>Spice Interpretation of S-Parameters</h3>
+<h4>CONVERTING VERIFIED S-PARAMETERS TO PI or TEE SCHEMATICS</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+
+In the previous chapter, it was shown that a raw Spice schematic can be developed directly from verified S-Parameter measurements. But such a quick Spice schematic is quite rough, and mainly valid for the lower part of the applied frequency range.
+For the development of a detailed Spice schematic, valid for the whole frequency range, the de-embedded and verified  S-Parameters are converted to Y- or Z-Parameters. This enables the interpretation of the measurement with respect to a TEE or a PI schematic.
+<br/><br/>
+Let's first recap a few basics:
+
+<br><img src="/static/iccap/SpiceSpar/132/1.png"><br/>
+
+The Z and Y matrices can easily be interpreted by <br/>
+<em>Important Basic Schematics for Custom RF Modeling: TEE and PI</em>
+
+<br><img width="700" src="/static/iccap/SpiceSpar/132/2.png"><br/><br/>
+In details, and solved for the calculation of the impedances of the TEE schematic:
+
+<br><img width="700" src="/static/iccap/SpiceSpar/132/3.png"><br/><br/>
+
+and for the impedances of the PI schematic:
+<br><img width="700" src="/static/iccap/SpiceSpar/132/4.png"><br/><br/>
+
+<em>TEE or PI: Which Schematic to Apply?</em>
+<br/>
+From the verified, de-embedded S-parameters,<br/>
+<ul>
+    <li>calculate the Y and Z matrix impedances,</li>
+    <li>interpret accordingly as PI or TEE schematic,</li>
+    <li>and test the physical behavior of their impedance plots
+    </li>
+</ul>
+<br/>
+Finally, select the PI or TEE schematic for which the three impedance plots behave physical.
+<br><img src="/static/iccap/SpiceSpar/132/5.png"><br/><br/>
+
+<hr/>
+<em>A Special Case: Transistor PI Schematic</em><br/><br/>
+
+To calculate the AC small-signal Spice schematic of transistors, what includes a voltage controlled current source gm, the following conversions apply:
+
+
+<br><img width="700" src="/static/iccap/SpiceSpar/132/6.png"><br/><br/>
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

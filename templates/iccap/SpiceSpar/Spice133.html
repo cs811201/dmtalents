@@ -1,0 +1,82 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>Spice Interpretation of S-Parameters</h3>
+<h4>DEVELOPING SPICE MODELS FROM IMPEDANCE PLOTS DIRECTLY</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+Once an underlying TEE or PI schematic has been selected for the development of a Spice model directly from measurements, the model can be accurately developed from the Impedance Plots.
+<br/><br/>
+However, this requires a bit of experience and understanding of Impedance Plots, as will be shown in this chapter.
+
+
+<br><img src="/static/iccap/SpiceSpar/133/1.png"><br/>
+<hr>
+<br><img src="/static/iccap/SpiceSpar/133/2.png"><br/>
+<hr>
+<br><img src="/static/iccap/SpiceSpar/133/3.png"><br/>
+<hr>
+<br><img src="/static/iccap/SpiceSpar/133/4.png"><br/>
+
+IC-CAP Example File:
+<ul><a href="/iccap/spice_spar_impedance/download" target="_blank">Impedance_Plots_Tutorials.mdl</a></ul>
+
+How-To-Use Video:
+<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QNk-zT5iqAc?rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr/>
+
+ADVANCED  EXAMPLES  FOR  EXPERTS
+<br/><br/>
+<em>Modeling Geometrically Large Devices</em>
+
+For geometrically large devices, the few lumped Spice components of a PI or TEE schematic may fail to represent distributed elements in the real, physical world.
+<br/><br/>
+For example, when the design application of the model is single-ended, 50% of the simple PI schematic's parasitics to ground are shorted when simulated, but in reality, in the measured device, only the very outer distributed parasitics to ground are shorted.
+In this case, consider a simple PI or TEE only as a first-order model, and improve it by converting the TEE or PI in a chain of TEE's or PI's, ad depicted below:
+<br><img src="/static/iccap/SpiceSpar/133/5.png"><br/>
+
+<br/>
+<em>Modeling Frequency-Dependent Losses</em>
+<br/>
+For frequencies above typically 35 GHz, frequency-dependent losses may show up and need to be modeled additionally to the previously presented methods with lumped Spice components.
+A smart method is to apply a special bridged TEE structure which maintains the characteristic impedance Z0, but adds frequency-dependent loss:
+
+<br><img src="/static/iccap/SpiceSpar/133/6.png"><br/>
+To better illustrate the behavior of this loss-adding circuit, let's simulate a lossless Spice delay line, featuring only the delay time TD and the characteristic impedance Z0, and add the Bridged TEE Schematic:
+<br><img src="/static/iccap/SpiceSpar/133/7.png"><img src="/static/iccap/SpiceSpar/133/8.png"><br/>
+
+<br/>
+<li>As expected, tuning the delay time TD affects only the phase of S21, with constant MAG(Sxy) = 1.</li>
+<li>Tuning Lskin (1st order effect) and Rskin (2nd order effect) provides the frequency-dependent loss: <br/>
+    the decrease of MAG(S21) with increasing frequency.
+</li>
+
+<br/><br/>
+IC-CAP Example File:
+<ul><a href="/iccap/spice_spar_skin/download" target="_blank">SkinEffect_Tutorial.mdl</a></ul>
+
+How-To-Use Video:
+<br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/939_0sEzEaM?rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr/>
+
+<em>Bridged TEE Structure Publications:</em>
+<br/>
+<li>H.Katzier: "Reliable SPICE Models for Lossy Coupled Transmission Lines", 2000 High-Performance System Design
+    Conference, Santa Clara, CA
+</li>
+<li>H.Katzier: "Elektrische Kabel und Leitungen", Leuze-Verlag Bad Saulgau 2015, ISBN 978-3-87480-284-0</li>
+<li>R. Unbehauen: "Über die Synthese von Dämpfungsentzerrern in Form eines überbrückten T-Gliedes", NTZ, Heft 12
+    S.729-737, 1966
+</li>
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

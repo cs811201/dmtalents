@@ -1,0 +1,2761 @@
+LINK MODEL "Impedance_Plots_Tutorial" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P204 C16 P259"
+element 0 "Name" "SIMULATOR"
+element 0 "Value" "hspicemodeads"
+element 1 "Name" "_________________________1"
+element 1 "Value" ""
+element 2 "Name" "Params[0]"
+element 2 "Value" "Cs"
+element 3 "Name" "Params[1]"
+element 3 "Value" "Rp"
+element 4 "Name" "Params[2]"
+element 4 "Value" "Cp"
+element 5 "Name" "Params"
+element 5 "Value" "ICCAP_ARRAY[3]"
+element 6 "Name" "Mins[0]"
+element 6 "Value" "1E-013"
+element 7 "Name" "Mins[1]"
+element 7 "Value" "1"
+element 8 "Name" "Mins[2]"
+element 8 "Value" "5E-014"
+element 9 "Name" "Mins"
+element 9 "Value" "ICCAP_ARRAY[3]"
+element 10 "Name" "Inits[0]"
+element 10 "Value" "1E-011"
+element 11 "Name" "Inits[1]"
+element 11 "Value" "100"
+element 12 "Name" "Inits[2]"
+element 12 "Value" "5E-012"
+element 13 "Name" "Inits"
+element 13 "Value" "ICCAP_ARRAY[3]"
+element 14 "Name" "Maxs[0]"
+element 14 "Value" "1E-009"
+element 15 "Name" "Maxs[1]"
+element 15 "Value" "10000"
+element 16 "Name" "Maxs[2]"
+element 16 "Value" "5E-010"
+element 17 "Name" "Maxs"
+element 17 "Value" "ICCAP_ARRAY[3]"
+element 18 "Name" "_________________________2"
+element 18 "Value" ""
+element 19 "Name" "txt_Schematic"
+element 19 "Value" "*Schematic:
+*===================================
+*              ----||----
+*             |    __Cp  |
+*  1 o---||---o---|__|---o 2
+*            Cs        Rp
+*==================================="
+element 19 "Comment" "Variable for GUI 'TL_Notes_Top'"
+element 20 "Name" "txt_Help"
+element 20 "Value" "Impedance Plot Explanations:
+freq -> 0: it's an OPEN: Z=-j*infinite
+
+freq -> infinite: Cs and Cp are SHORTs, Z=0
+
+freq in between: 
+   if Cs>>Cp: scaling with freq, 
+     a straight line bottom -> up to Z=Rp,
+     then turning to Z=0 by a half-circle
+   if Cs<<Cp: scaling with freq, 
+     a straight line bottom -> up to Z=Rp||Cp,
+"
+element 21 "Name" "ICCAP_DEFAULT_SETUP_PAGE"
+element 21 "Value" "Extract / Optimize"
+element 22 "Name" "_________________________3"
+element 22 "Value" ""
+element 23 "Name" "RI_GRAPH_SYMMETRY"
+element 23 "Value" "true"
+element 24 "Name" "_________________________4"
+element 24 "Value" ""
+element 25 "Name" ""
+element 25 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "TL_Notes_Top"
+element 0 "Value" "TL|OR=HO|<none>|#212LA_Schematic|1|0"
+element 1 "Name" "TL_Notes_Top.LA_Schematic"
+element 1 "Value" "LA|BG=C40:CA=%#213txt_Schematic:FI=FF:FG=C6|<none>|<none>|0"
+element 2 "Name" "TL_Notes_Bottom"
+element 2 "Value" "TL|<none>|<none>|#18LA_Notes|1|2"
+element 3 "Name" "TL_Notes_Bottom.LA_Notes"
+element 3 "Value" "LA|BG=C61:CA=#3127Don't be confused with Autoscaling in the Impedance Plot !!!\012Consider switching Autoscale off, and re-execute the Transform.|<none>|<none>|0"
+element 4 "Name" "TL_Notes_Right"
+element 4 "Value" "TL|<none>|<none>|#211LA_HelpMdlg|1|1"
+element 5 "Name" "TL_Notes_Right.LA_HelpMdlg"
+element 5 "Value" "LA|BG=C9:CA=%#18txt_Help:FI=DF:FG=C6|<none>|<none>|0"
+element 6 "Name" ""
+element 6 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+element 9 "Symbol" "Square" "A"
+element 9 "Measured" "Default" "A"
+element 9 "Simulated" "Default" "A"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "A"
+element 10 "On Black" "94" "A"
+element 10 "Symbol" "Square" "A"
+element 10 "Measured" "Default" "A"
+element 10 "Simulated" "Default" "A"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "A"
+element 11 "On Black" "81" "A"
+element 11 "Symbol" "Square" "A"
+element 11 "Measured" "Default" "A"
+element 11 "Simulated" "Default" "A"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "A"
+element 12 "On Black" "50" "A"
+element 12 "Symbol" "Square" "A"
+element 12 "Measured" "Default" "A"
+element 12 "Simulated" "Default" "A"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "A"
+element 13 "On Black" "115" "A"
+element 13 "Symbol" "Square" "A"
+element 13 "Measured" "Default" "A"
+element 13 "Simulated" "Default" "A"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "A"
+element 14 "On Black" "54" "A"
+element 14 "Symbol" "Square" "A"
+element 14 "Measured" "Default" "A"
+element 14 "Simulated" "Default" "A"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "A"
+element 15 "On Black" "106" "A"
+element 15 "Symbol" "Square" "A"
+element 15 "Measured" "Default" "A"
+element 15 "Simulated" "Default" "A"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "A"
+element 16 "On Black" "120" "A"
+element 16 "Symbol" "Square" "A"
+element 16 "Measured" "Default" "A"
+element 16 "Simulated" "Default" "A"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "A"
+element 17 "On Black" "87" "A"
+element 17 "Symbol" "Square" "A"
+element 17 "Measured" "Default" "A"
+element 17 "Simulated" "Default" "A"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "A"
+element 18 "On Black" "79" "A"
+element 18 "Symbol" "Square" "A"
+element 18 "Measured" "Default" "A"
+element 18 "Simulated" "Default" "A"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "A"
+element 19 "On Black" "81" "A"
+element 19 "Symbol" "Square" "A"
+element 19 "Measured" "Default" "A"
+element 19 "Simulated" "Default" "A"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "A"
+element 20 "On Black" "1" "A"
+element 20 "Symbol" "Circle" "A"
+element 20 "Measured" "Default" "A"
+element 20 "Simulated" "Dot Line" "A"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "A"
+element 21 "On Black" "2" "A"
+element 21 "Symbol" "Reverse Triangle" "A"
+element 21 "Measured" "Default" "A"
+element 21 "Simulated" "Dot Line" "A"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "A"
+element 22 "On Black" "6" "A"
+element 22 "Symbol" "Star" "A"
+element 22 "Measured" "Default" "A"
+element 22 "Simulated" "Dot Line" "A"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "A"
+element 23 "On Black" "3" "A"
+element 23 "Symbol" "Triangle" "A"
+element 23 "Measured" "Default" "A"
+element 23 "Simulated" "Dot Line" "A"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "A"
+element 24 "On Black" "88" "A"
+element 24 "Symbol" "Square" "A"
+element 24 "Measured" "Default" "A"
+element 24 "Simulated" "Dot Line" "A"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "A"
+element 25 "On Black" "4" "A"
+element 25 "Symbol" "Cross" "A"
+element 25 "Measured" "Default" "A"
+element 25 "Simulated" "Dot Line" "A"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "A"
+element 26 "On Black" "117" "A"
+element 26 "Symbol" "Circle" "A"
+element 26 "Measured" "Default" "A"
+element 26 "Simulated" "Dot Line" "A"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "A"
+element 27 "On Black" "40" "A"
+element 27 "Symbol" "Circle" "A"
+element 27 "Measured" "Default" "A"
+element 27 "Simulated" "Dot Line" "A"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "A"
+element 28 "On Black" "28" "A"
+element 28 "Symbol" "Circle" "A"
+element 28 "Measured" "Default" "A"
+element 28 "Simulated" "Dot Line" "A"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "A"
+element 29 "On Black" "114" "A"
+element 29 "Symbol" "Circle" "A"
+element 29 "Measured" "Default" "A"
+element 29 "Simulated" "Dot Line" "A"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "A"
+element 30 "On Black" "94" "A"
+element 30 "Symbol" "Circle" "A"
+element 30 "Measured" "Default" "A"
+element 30 "Simulated" "Dot Line" "A"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "A"
+element 31 "On Black" "81" "A"
+element 31 "Symbol" "Circle" "A"
+element 31 "Measured" "Default" "A"
+element 31 "Simulated" "Dot Line" "A"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "A"
+element 32 "On Black" "50" "A"
+element 32 "Symbol" "Circle" "A"
+element 32 "Measured" "Default" "A"
+element 32 "Simulated" "Dot Line" "A"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "A"
+element 33 "On Black" "115" "A"
+element 33 "Symbol" "Circle" "A"
+element 33 "Measured" "Default" "A"
+element 33 "Simulated" "Dot Line" "A"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "A"
+element 34 "On Black" "54" "A"
+element 34 "Symbol" "Circle" "A"
+element 34 "Measured" "Default" "A"
+element 34 "Simulated" "Dot Line" "A"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "A"
+element 35 "On Black" "106" "A"
+element 35 "Symbol" "Circle" "A"
+element 35 "Measured" "Default" "A"
+element 35 "Simulated" "Dot Line" "A"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "A"
+element 36 "On Black" "120" "A"
+element 36 "Symbol" "Circle" "A"
+element 36 "Measured" "Default" "A"
+element 36 "Simulated" "Dot Line" "A"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "A"
+element 37 "On Black" "87" "A"
+element 37 "Symbol" "Circle" "A"
+element 37 "Measured" "Default" "A"
+element 37 "Simulated" "Dot Line" "A"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "A"
+element 38 "On Black" "79" "A"
+element 38 "Symbol" "Circle" "A"
+element 38 "Measured" "Default" "A"
+element 38 "Simulated" "Dot Line" "A"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "A"
+element 39 "On Black" "81" "A"
+element 39 "Symbol" "Circle" "A"
+element 39 "Measured" "Default" "A"
+element 39 "Simulated" "Dot Line" "A"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "A"
+element 40 "On Black" "1" "A"
+element 40 "Symbol" "Triangle" "A"
+element 40 "Measured" "Default" "A"
+element 40 "Simulated" "Dot Dot Line" "A"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "A"
+element 41 "On Black" "2" "A"
+element 41 "Symbol" "Diamond" "A"
+element 41 "Measured" "Default" "A"
+element 41 "Simulated" "Dot Dot Line" "A"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "A"
+element 42 "On Black" "6" "A"
+element 42 "Symbol" "X" "A"
+element 42 "Measured" "Default" "A"
+element 42 "Simulated" "Dot Dot Line" "A"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "A"
+element 43 "On Black" "3" "A"
+element 43 "Symbol" "Reverse Triangle" "A"
+element 43 "Measured" "Default" "A"
+element 43 "Simulated" "Dot Dot Line" "A"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "A"
+element 44 "On Black" "88" "A"
+element 44 "Symbol" "Circle" "A"
+element 44 "Measured" "Default" "A"
+element 44 "Simulated" "Dot Dot Line" "A"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "A"
+element 45 "On Black" "4" "A"
+element 45 "Symbol" "Square" "A"
+element 45 "Measured" "Default" "A"
+element 45 "Simulated" "Dot Dot Line" "A"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "A"
+element 46 "On Black" "117" "A"
+element 46 "Symbol" "Triangle" "A"
+element 46 "Measured" "Default" "A"
+element 46 "Simulated" "Dot Dot Line" "A"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "A"
+element 47 "On Black" "40" "A"
+element 47 "Symbol" "Triangle" "A"
+element 47 "Measured" "Default" "A"
+element 47 "Simulated" "Dot Dot Line" "A"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "A"
+element 48 "On Black" "28" "A"
+element 48 "Symbol" "Triangle" "A"
+element 48 "Measured" "Default" "A"
+element 48 "Simulated" "Dot Dot Line" "A"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "A"
+element 49 "On Black" "114" "A"
+element 49 "Symbol" "Triangle" "A"
+element 49 "Measured" "Default" "A"
+element 49 "Simulated" "Dot Dot Line" "A"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "A"
+element 50 "On Black" "94" "A"
+element 50 "Symbol" "Triangle" "A"
+element 50 "Measured" "Default" "A"
+element 50 "Simulated" "Dot Dot Line" "A"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "A"
+element 51 "On Black" "81" "A"
+element 51 "Symbol" "Triangle" "A"
+element 51 "Measured" "Default" "A"
+element 51 "Simulated" "Dot Dot Line" "A"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "A"
+element 52 "On Black" "50" "A"
+element 52 "Symbol" "Triangle" "A"
+element 52 "Measured" "Default" "A"
+element 52 "Simulated" "Dot Dot Line" "A"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "A"
+element 53 "On Black" "115" "A"
+element 53 "Symbol" "Triangle" "A"
+element 53 "Measured" "Default" "A"
+element 53 "Simulated" "Dot Dot Line" "A"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "A"
+element 54 "On Black" "54" "A"
+element 54 "Symbol" "Triangle" "A"
+element 54 "Measured" "Default" "A"
+element 54 "Simulated" "Dot Dot Line" "A"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "A"
+element 55 "On Black" "106" "A"
+element 55 "Symbol" "Triangle" "A"
+element 55 "Measured" "Default" "A"
+element 55 "Simulated" "Dot Dot Line" "A"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "A"
+element 56 "On Black" "120" "A"
+element 56 "Symbol" "Triangle" "A"
+element 56 "Measured" "Default" "A"
+element 56 "Simulated" "Dot Dot Line" "A"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "A"
+element 57 "On Black" "87" "A"
+element 57 "Symbol" "Triangle" "A"
+element 57 "Measured" "Default" "A"
+element 57 "Simulated" "Dot Dot Line" "A"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "A"
+element 58 "On Black" "79" "A"
+element 58 "Symbol" "Triangle" "A"
+element 58 "Measured" "Default" "A"
+element 58 "Simulated" "Dot Dot Line" "A"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "A"
+element 59 "On Black" "81" "A"
+element 59 "Symbol" "Triangle" "A"
+element 59 "Measured" "Default" "A"
+element 59 "Simulated" "Dot Dot Line" "A"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "A"
+element 60 "On Black" "1" "A"
+element 60 "Symbol" "Reverse Triangle" "A"
+element 60 "Measured" "Default" "A"
+element 60 "Simulated" "Dashed Line" "A"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "A"
+element 61 "On Black" "2" "A"
+element 61 "Symbol" "Star" "A"
+element 61 "Measured" "Default" "A"
+element 61 "Simulated" "Dashed Line" "A"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "A"
+element 62 "On Black" "6" "A"
+element 62 "Symbol" "Cross" "A"
+element 62 "Measured" "Default" "A"
+element 62 "Simulated" "Dashed Line" "A"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "A"
+element 63 "On Black" "3" "A"
+element 63 "Symbol" "Diamond" "A"
+element 63 "Measured" "Default" "A"
+element 63 "Simulated" "Dashed Line" "A"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "A"
+element 64 "On Black" "88" "A"
+element 64 "Symbol" "Triangle" "A"
+element 64 "Measured" "Default" "A"
+element 64 "Simulated" "Dashed Line" "A"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "A"
+element 65 "On Black" "4" "A"
+element 65 "Symbol" "Circle" "A"
+element 65 "Measured" "Default" "A"
+element 65 "Simulated" "Dashed Line" "A"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "A"
+element 66 "On Black" "117" "A"
+element 66 "Symbol" "Reverse Triangle" "A"
+element 66 "Measured" "Default" "A"
+element 66 "Simulated" "Dashed Line" "A"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "A"
+element 67 "On Black" "40" "A"
+element 67 "Symbol" "Reverse Triangle" "A"
+element 67 "Measured" "Default" "A"
+element 67 "Simulated" "Dashed Line" "A"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "A"
+element 68 "On Black" "28" "A"
+element 68 "Symbol" "Reverse Triangle" "A"
+element 68 "Measured" "Default" "A"
+element 68 "Simulated" "Dashed Line" "A"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "A"
+element 69 "On Black" "114" "A"
+element 69 "Symbol" "Reverse Triangle" "A"
+element 69 "Measured" "Default" "A"
+element 69 "Simulated" "Dashed Line" "A"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "A"
+element 70 "On Black" "94" "A"
+element 70 "Symbol" "Reverse Triangle" "A"
+element 70 "Measured" "Default" "A"
+element 70 "Simulated" "Dashed Line" "A"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "A"
+element 71 "On Black" "81" "A"
+element 71 "Symbol" "Reverse Triangle" "A"
+element 71 "Measured" "Default" "A"
+element 71 "Simulated" "Dashed Line" "A"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "A"
+element 72 "On Black" "50" "A"
+element 72 "Symbol" "Reverse Triangle" "A"
+element 72 "Measured" "Default" "A"
+element 72 "Simulated" "Dashed Line" "A"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "A"
+element 73 "On Black" "115" "A"
+element 73 "Symbol" "Reverse Triangle" "A"
+element 73 "Measured" "Default" "A"
+element 73 "Simulated" "Dashed Line" "A"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "A"
+element 74 "On Black" "54" "A"
+element 74 "Symbol" "Reverse Triangle" "A"
+element 74 "Measured" "Default" "A"
+element 74 "Simulated" "Dashed Line" "A"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "A"
+element 75 "On Black" "106" "A"
+element 75 "Symbol" "Reverse Triangle" "A"
+element 75 "Measured" "Default" "A"
+element 75 "Simulated" "Dashed Line" "A"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "A"
+element 76 "On Black" "120" "A"
+element 76 "Symbol" "Reverse Triangle" "A"
+element 76 "Measured" "Default" "A"
+element 76 "Simulated" "Dashed Line" "A"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "A"
+element 77 "On Black" "87" "A"
+element 77 "Symbol" "Reverse Triangle" "A"
+element 77 "Measured" "Default" "A"
+element 77 "Simulated" "Dashed Line" "A"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "A"
+element 78 "On Black" "79" "A"
+element 78 "Symbol" "Reverse Triangle" "A"
+element 78 "Measured" "Default" "A"
+element 78 "Simulated" "Dashed Line" "A"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "A"
+element 79 "On Black" "81" "A"
+element 79 "Symbol" "Reverse Triangle" "A"
+element 79 "Measured" "Default" "A"
+element 79 "Simulated" "Dashed Line" "A"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "A"
+element 80 "On Black" "1" "A"
+element 80 "Symbol" "Diamond" "A"
+element 80 "Measured" "Default" "A"
+element 80 "Simulated" "Dot Dashed Line" "A"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "A"
+element 81 "On Black" "2" "A"
+element 81 "Symbol" "X" "A"
+element 81 "Measured" "Default" "A"
+element 81 "Simulated" "Dot Dashed Line" "A"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "A"
+element 82 "On Black" "6" "A"
+element 82 "Symbol" "Square" "A"
+element 82 "Measured" "Default" "A"
+element 82 "Simulated" "Dot Dashed Line" "A"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "A"
+element 83 "On Black" "3" "A"
+element 83 "Symbol" "Star" "A"
+element 83 "Measured" "Default" "A"
+element 83 "Simulated" "Dot Dashed Line" "A"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "A"
+element 84 "On Black" "88" "A"
+element 84 "Symbol" "Reverse Triangle" "A"
+element 84 "Measured" "Default" "A"
+element 84 "Simulated" "Dot Dashed Line" "A"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "A"
+element 85 "On Black" "4" "A"
+element 85 "Symbol" "Triangle" "A"
+element 85 "Measured" "Default" "A"
+element 85 "Simulated" "Dot Dashed Line" "A"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "A"
+element 86 "On Black" "117" "A"
+element 86 "Symbol" "Diamond" "A"
+element 86 "Measured" "Default" "A"
+element 86 "Simulated" "Dot Dashed Line" "A"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "A"
+element 87 "On Black" "40" "A"
+element 87 "Symbol" "Diamond" "A"
+element 87 "Measured" "Default" "A"
+element 87 "Simulated" "Dot Dashed Line" "A"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "A"
+element 88 "On Black" "28" "A"
+element 88 "Symbol" "Diamond" "A"
+element 88 "Measured" "Default" "A"
+element 88 "Simulated" "Dot Dashed Line" "A"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "A"
+element 89 "On Black" "114" "A"
+element 89 "Symbol" "Diamond" "A"
+element 89 "Measured" "Default" "A"
+element 89 "Simulated" "Dot Dashed Line" "A"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "A"
+element 90 "On Black" "94" "A"
+element 90 "Symbol" "Diamond" "A"
+element 90 "Measured" "Default" "A"
+element 90 "Simulated" "Dot Dashed Line" "A"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "A"
+element 91 "On Black" "81" "A"
+element 91 "Symbol" "Diamond" "A"
+element 91 "Measured" "Default" "A"
+element 91 "Simulated" "Dot Dashed Line" "A"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "A"
+element 92 "On Black" "50" "A"
+element 92 "Symbol" "Diamond" "A"
+element 92 "Measured" "Default" "A"
+element 92 "Simulated" "Dot Dashed Line" "A"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "A"
+element 93 "On Black" "115" "A"
+element 93 "Symbol" "Diamond" "A"
+element 93 "Measured" "Default" "A"
+element 93 "Simulated" "Dot Dashed Line" "A"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "A"
+element 94 "On Black" "54" "A"
+element 94 "Symbol" "Diamond" "A"
+element 94 "Measured" "Default" "A"
+element 94 "Simulated" "Dot Dashed Line" "A"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "A"
+element 95 "On Black" "106" "A"
+element 95 "Symbol" "Diamond" "A"
+element 95 "Measured" "Default" "A"
+element 95 "Simulated" "Dot Dashed Line" "A"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "A"
+element 96 "On Black" "120" "A"
+element 96 "Symbol" "Diamond" "A"
+element 96 "Measured" "Default" "A"
+element 96 "Simulated" "Dot Dashed Line" "A"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "A"
+element 97 "On Black" "87" "A"
+element 97 "Symbol" "Diamond" "A"
+element 97 "Measured" "Default" "A"
+element 97 "Simulated" "Dot Dashed Line" "A"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "A"
+element 98 "On Black" "79" "A"
+element 98 "Symbol" "Diamond" "A"
+element 98 "Measured" "Default" "A"
+element 98 "Simulated" "Dot Dashed Line" "A"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "A"
+element 99 "On Black" "81" "A"
+element 99 "Symbol" "Diamond" "A"
+element 99 "Measured" "Default" "A"
+element 99 "Simulated" "Dot Dashed Line" "A"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "A"
+element 100 "On Black" "1" "A"
+element 100 "Symbol" "Star" "A"
+element 100 "Measured" "Default" "A"
+element 100 "Simulated" "Long Dashed Line" "A"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "A"
+element 101 "On Black" "2" "A"
+element 101 "Symbol" "Cross" "A"
+element 101 "Measured" "Default" "A"
+element 101 "Simulated" "Long Dashed Line" "A"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "A"
+element 102 "On Black" "6" "A"
+element 102 "Symbol" "Circle" "A"
+element 102 "Measured" "Default" "A"
+element 102 "Simulated" "Long Dashed Line" "A"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "A"
+element 103 "On Black" "3" "A"
+element 103 "Symbol" "X" "A"
+element 103 "Measured" "Default" "A"
+element 103 "Simulated" "Long Dashed Line" "A"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "A"
+element 104 "On Black" "88" "A"
+element 104 "Symbol" "Diamond" "A"
+element 104 "Measured" "Default" "A"
+element 104 "Simulated" "Long Dashed Line" "A"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "A"
+element 105 "On Black" "4" "A"
+element 105 "Symbol" "Reverse Triangle" "A"
+element 105 "Measured" "Default" "A"
+element 105 "Simulated" "Long Dashed Line" "A"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "A"
+element 106 "On Black" "117" "A"
+element 106 "Symbol" "Star" "A"
+element 106 "Measured" "Default" "A"
+element 106 "Simulated" "Long Dashed Line" "A"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "A"
+element 107 "On Black" "40" "A"
+element 107 "Symbol" "Star" "A"
+element 107 "Measured" "Default" "A"
+element 107 "Simulated" "Long Dashed Line" "A"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "A"
+element 108 "On Black" "28" "A"
+element 108 "Symbol" "Star" "A"
+element 108 "Measured" "Default" "A"
+element 108 "Simulated" "Long Dashed Line" "A"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "A"
+element 109 "On Black" "114" "A"
+element 109 "Symbol" "Star" "A"
+element 109 "Measured" "Default" "A"
+element 109 "Simulated" "Long Dashed Line" "A"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "A"
+element 110 "On Black" "94" "A"
+element 110 "Symbol" "Star" "A"
+element 110 "Measured" "Default" "A"
+element 110 "Simulated" "Long Dashed Line" "A"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "A"
+element 111 "On Black" "81" "A"
+element 111 "Symbol" "Star" "A"
+element 111 "Measured" "Default" "A"
+element 111 "Simulated" "Long Dashed Line" "A"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "A"
+element 112 "On Black" "50" "A"
+element 112 "Symbol" "Star" "A"
+element 112 "Measured" "Default" "A"
+element 112 "Simulated" "Long Dashed Line" "A"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "A"
+element 113 "On Black" "115" "A"
+element 113 "Symbol" "Star" "A"
+element 113 "Measured" "Default" "A"
+element 113 "Simulated" "Long Dashed Line" "A"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "A"
+element 114 "On Black" "54" "A"
+element 114 "Symbol" "Star" "A"
+element 114 "Measured" "Default" "A"
+element 114 "Simulated" "Long Dashed Line" "A"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "A"
+element 115 "On Black" "106" "A"
+element 115 "Symbol" "Star" "A"
+element 115 "Measured" "Default" "A"
+element 115 "Simulated" "Long Dashed Line" "A"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "A"
+element 116 "On Black" "120" "A"
+element 116 "Symbol" "Star" "A"
+element 116 "Measured" "Default" "A"
+element 116 "Simulated" "Long Dashed Line" "A"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "A"
+element 117 "On Black" "87" "A"
+element 117 "Symbol" "Star" "A"
+element 117 "Measured" "Default" "A"
+element 117 "Simulated" "Long Dashed Line" "A"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "A"
+element 118 "On Black" "79" "A"
+element 118 "Symbol" "Star" "A"
+element 118 "Measured" "Default" "A"
+element 118 "Simulated" "Long Dashed Line" "A"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "A"
+element 119 "On Black" "81" "A"
+element 119 "Symbol" "Star" "A"
+element 119 "Measured" "Default" "A"
+element 119 "Simulated" "Long Dashed Line" "A"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "A"
+element 120 "On Black" "1" "A"
+element 120 "Symbol" "X" "A"
+element 120 "Measured" "Default" "A"
+element 120 "Simulated" "Long Dot Dashed Line" "A"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "A"
+element 121 "On Black" "2" "A"
+element 121 "Symbol" "Square" "A"
+element 121 "Measured" "Default" "A"
+element 121 "Simulated" "Long Dot Dashed Line" "A"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "A"
+element 122 "On Black" "6" "A"
+element 122 "Symbol" "Triangle" "A"
+element 122 "Measured" "Default" "A"
+element 122 "Simulated" "Long Dot Dashed Line" "A"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "A"
+element 123 "On Black" "3" "A"
+element 123 "Symbol" "Cross" "A"
+element 123 "Measured" "Default" "A"
+element 123 "Simulated" "Long Dot Dashed Line" "A"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "A"
+element 124 "On Black" "88" "A"
+element 124 "Symbol" "Star" "A"
+element 124 "Measured" "Default" "A"
+element 124 "Simulated" "Long Dot Dashed Line" "A"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "A"
+element 125 "On Black" "4" "A"
+element 125 "Symbol" "Diamond" "A"
+element 125 "Measured" "Default" "A"
+element 125 "Simulated" "Long Dot Dashed Line" "A"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "A"
+element 126 "On Black" "117" "A"
+element 126 "Symbol" "X" "A"
+element 126 "Measured" "Default" "A"
+element 126 "Simulated" "Long Dot Dashed Line" "A"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "A"
+element 127 "On Black" "40" "A"
+element 127 "Symbol" "X" "A"
+element 127 "Measured" "Default" "A"
+element 127 "Simulated" "Long Dot Dashed Line" "A"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "A"
+element 128 "On Black" "28" "A"
+element 128 "Symbol" "X" "A"
+element 128 "Measured" "Default" "A"
+element 128 "Simulated" "Long Dot Dashed Line" "A"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "A"
+element 129 "On Black" "114" "A"
+element 129 "Symbol" "X" "A"
+element 129 "Measured" "Default" "A"
+element 129 "Simulated" "Long Dot Dashed Line" "A"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "A"
+element 130 "On Black" "94" "A"
+element 130 "Symbol" "X" "A"
+element 130 "Measured" "Default" "A"
+element 130 "Simulated" "Long Dot Dashed Line" "A"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "A"
+element 131 "On Black" "81" "A"
+element 131 "Symbol" "X" "A"
+element 131 "Measured" "Default" "A"
+element 131 "Simulated" "Long Dot Dashed Line" "A"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "A"
+element 132 "On Black" "50" "A"
+element 132 "Symbol" "X" "A"
+element 132 "Measured" "Default" "A"
+element 132 "Simulated" "Long Dot Dashed Line" "A"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "A"
+element 133 "On Black" "115" "A"
+element 133 "Symbol" "X" "A"
+element 133 "Measured" "Default" "A"
+element 133 "Simulated" "Long Dot Dashed Line" "A"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "A"
+element 134 "On Black" "54" "A"
+element 134 "Symbol" "X" "A"
+element 134 "Measured" "Default" "A"
+element 134 "Simulated" "Long Dot Dashed Line" "A"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "A"
+element 135 "On Black" "106" "A"
+element 135 "Symbol" "X" "A"
+element 135 "Measured" "Default" "A"
+element 135 "Simulated" "Long Dot Dashed Line" "A"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "A"
+element 136 "On Black" "120" "A"
+element 136 "Symbol" "X" "A"
+element 136 "Measured" "Default" "A"
+element 136 "Simulated" "Long Dot Dashed Line" "A"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "A"
+element 137 "On Black" "87" "A"
+element 137 "Symbol" "X" "A"
+element 137 "Measured" "Default" "A"
+element 137 "Simulated" "Long Dot Dashed Line" "A"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "A"
+element 138 "On Black" "79" "A"
+element 138 "Symbol" "X" "A"
+element 138 "Measured" "Default" "A"
+element 138 "Simulated" "Long Dot Dashed Line" "A"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "A"
+element 139 "On Black" "81" "A"
+element 139 "Symbol" "X" "A"
+element 139 "Measured" "Default" "A"
+element 139 "Simulated" "Long Dot Dashed Line" "A"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "A"
+element 140 "On Black" "1" "A"
+element 140 "Symbol" "Cross" "A"
+element 140 "Measured" "Default" "A"
+element 140 "Simulated" "Solid Line" "A"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "A"
+element 141 "On Black" "2" "A"
+element 141 "Symbol" "Circle" "A"
+element 141 "Measured" "Default" "A"
+element 141 "Simulated" "Solid Line" "A"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "A"
+element 142 "On Black" "6" "A"
+element 142 "Symbol" "Reverse Triangle" "A"
+element 142 "Measured" "Default" "A"
+element 142 "Simulated" "Solid Line" "A"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "A"
+element 143 "On Black" "3" "A"
+element 143 "Symbol" "Square" "A"
+element 143 "Measured" "Default" "A"
+element 143 "Simulated" "Solid Line" "A"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "A"
+element 144 "On Black" "88" "A"
+element 144 "Symbol" "X" "A"
+element 144 "Measured" "Default" "A"
+element 144 "Simulated" "Solid Line" "A"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "A"
+element 145 "On Black" "4" "A"
+element 145 "Symbol" "Star" "A"
+element 145 "Measured" "Default" "A"
+element 145 "Simulated" "Solid Line" "A"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "A"
+element 146 "On Black" "117" "A"
+element 146 "Symbol" "Cross" "A"
+element 146 "Measured" "Default" "A"
+element 146 "Simulated" "Solid Line" "A"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "A"
+element 147 "On Black" "40" "A"
+element 147 "Symbol" "Cross" "A"
+element 147 "Measured" "Default" "A"
+element 147 "Simulated" "Solid Line" "A"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "A"
+element 148 "On Black" "28" "A"
+element 148 "Symbol" "Cross" "A"
+element 148 "Measured" "Default" "A"
+element 148 "Simulated" "Solid Line" "A"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "A"
+element 149 "On Black" "114" "A"
+element 149 "Symbol" "Cross" "A"
+element 149 "Measured" "Default" "A"
+element 149 "Simulated" "Solid Line" "A"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "A"
+element 150 "On Black" "94" "A"
+element 150 "Symbol" "Cross" "A"
+element 150 "Measured" "Default" "A"
+element 150 "Simulated" "Solid Line" "A"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "N"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ .SUBCKT Impedance 1 2
+ 
+ *Schematic:
+ *===================================
+ *              ----||----
+ *             |    __Cp  |
+ *  1 o---||---o---|__|---o 2
+ *            Cs        Rp
+ *===================================
+ *ModelCards:
+ *===================================
+ Cs  1 12 10p
+ Rp 12  2 100
+ Cp 12  2  5p
+ *===================================
+ 
+ .ENDS
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P11 P100 P100 P100 P100 P100 P100 C13"
+param Cs " 83.95p"
+param Rp " 50.12 "
+param Cp " 14.65p"
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ ! -----------------------------------------------
+ ! Version Jan. 2020
+ ! -----------------------------------------------
+ 
+ This file should assist you with becoming familiar 
+ with interpreting Impedance plots.
+ 
+ Being able to interpret these plots is is an important technique 
+ to quickly develop schematics for electronic devices, 
+ based on verified impedance measurements. 
+ 
+ Typical applications are the modeling of passive components.
+ 
+ For S-Parameters:
+ =======================
+ An inspection of the S-parameter plots, converted to the impedances
+ of a PI schematic, will lead to a model composed 
+ by several lumped components like R, L and C.
+ 
+ 
+ 
+ In this tutorial,
+ the Impedance Plot is obtained from impedance simulations directly.
+ ===================================================================
+ 
+ It corresponds to what you would also get directly from
+ an LCRZ meter measurement by IC-CAP,
+ with the device connected between High and Low connection of 
+ the Impedance Analyzer (unused pins are grounded),
+ and setting the corresponding IC-CAP Setup Output to Mode 'X', 
+ and its selection 'Z/Y' set to 'Z'.
+ 
+ 
+}
+}
+}
+LINK DUT "________________________________" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "1" ""
+connpair "2" ""
+}
+}
+}
+}
+LINK DUT "Impedance_Plot_Tutorials" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C10 C10 C10"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P15 P100 P100 P100 P100 P100 P100 P100"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "1" ""
+connpair "2" ""
+}
+}
+}
+LINK DAT "SELECT_SPICE_SCHEMATIC" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "0.93927179305457 4241 3205"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 P165 C10 C10"
+element 0 "Name" "CV_FREQ"
+element 0 "Value" " 10.00MEG"
+element 1 "Name" "PlotAutoScale"
+element 1 "Value" "0"
+element 2 "Name" "____________1"
+element 2 "Value" ""
+element 3 "Name" ""
+element 3 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "TL_AutoScale"
+element 0 "Value" "TL|<none>|<none>|#212CB_AutoScale|0|0"
+element 1 "Name" "TL_AutoScale.CB_AutoScale"
+element 1 "Value" "CB|CA=#214Plot AutoScale:TS=%PlotAutoScale|TC=#14_MP_&#19Autoscale|<none>|0"
+element 2 "Name" ""
+element 2 "Value" ""
+}
+LINK SWEEP "dummy" "711.501"
+{
+View draw_ds 0 "B,0,-352"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "1"
+element "- Node" "2"
+element "Unit" "CM"
+element "Compliance" " 1.000m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 3.000 "
+}
+}
+}
+LINK SWEEP "freq" "711.501"
+{
+View draw_ds 0 "B,-2183,-2112"
+View block_edit 0 "0,0"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "P"
+element "Sweep Type" "LOG"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "Param Name" "CV_FREQ"
+element "Unit" "CM"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 10.00MEG"
+element "Stop" " 1.000G"
+element "# of Points" "10"
+element "Dec or Oct" "D"
+element "Total Pts" "21"
+}
+}
+list PLOT "_Z_"
+}
+LINK OUT "Z" "711.501"
+{
+View draw_ds 0 "B,-2008,0"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "X"
+element "Unit" "CM"
+element "Type" "S"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "1"
+element "Low Node" "2"
+element "Z / Y" "Z"
+}
+dataset
+{
+datasize SIMU 21 1 1
+type SIMU
+point 0 1 1 50.0122 -191.9
+point 1 1 1 49.9501 -153.5
+point 2 1 1 49.8521 -123.27
+point 3 1 1 49.6974 -99.5968
+point 4 1 1 49.4543 -81.2103
+point 5 1 1 49.0737 -67.1153
+point 6 1 1 48.4825 -56.53
+point 7 1 1 47.5741 -48.8312
+point 8 1 1 46.202 -43.5004
+point 9 1 1 44.1826 -40.0631
+point 10 1 1 41.3201 -38.0265
+point 11 1 1 37.4724 -36.8288
+point 12 1 1 32.6532 -35.8435
+point 13 1 1 27.1246 -34.4762
+point 14 1 1 21.3858 -32.3364
+point 15 1 1 16.0155 -29.3659
+point 16 1 1 11.4561 -25.8081
+point 17 1 1 7.89424 -22.0402
+point 18 1 1 5.28833 -18.4022
+point 19 1 1 3.47191 -15.1129
+point 20 1 1 2.2481 -12.2698
+}
+}
+list PLOT "_Z_"
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ ! This tutorial Setup is intended to make you familiar 
+ ! with understanding Impedance Plots, 
+ ! and their interpretation versus Spice netlists.
+ 
+ 
+ 
+ !  WHAT TO DO:
+ ! ==================
+ ! Select a Spice schematic, 
+ ! e.g. Cs_Rs  (a capacitor 'Cs' in series with a resistor 'Rs'),
+ ! and execute the corresponding Transform.
+ 
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "___________________1" "711.501"
+{
+}
+LINK XFORM "_____C_R__________________" "711.501"
+{
+}
+LINK XFORM "Cs" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *             
+ *  1 o---||---o 2
+ *        Cs   
+ *===================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cs  1  2 10p
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: it's an OPEN: Z=-j*infinite
+ 
+ freq -> infinite: it's a SHORT: Z=0
+ 
+ freq in between: scaling with freq, a straight line bottom -> up, along the y-axis"
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Cs_Rs" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *              __
+ *  1 o---||---|__|---o 2
+ *        Cs    Rs
+ *===================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cs  1 12 10p
+ Rs 12  2 10
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: it's an OPEN: Z=-j*infinite
+ 
+ freq -> infinite: Cs is a SHORT, Z=Rs
+ 
+ freq in between: scaling with freq, a straight line bottom -> up to Z=Rs"
+ 
+ 
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Cs__Rp_Cp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *              ----||----
+ *             |    __Cp  |
+ *  1 o---||---o---|__|---o 2
+ *        Cs        Rp
+ *==================================="
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cs  1 12 10p
+ Rp 12  2 100
+ Cp 12  2  5p
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: it's an OPEN: Z=-j*infinite
+ 
+ freq -> infinite: Cs and Cp are SHORTs, Z=0
+ 
+ freq in between: 
+    if Cs>>Cp: scaling with freq, 
+      a straight line bottom -> up to Z=Rp,
+      then turning to Z=0 by a half-circle
+    if Cs<<Cp: scaling with freq, 
+      a straight line bottom -> up to Z=Rp||Cp,
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Cs__Rs_RpCp_Cp2" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *=======================================================
+ *                        Cp2
+ *                     ---||---
+ *                    |   __   |
+ *              --||--o--|__|--o
+ *             |  Cp  __   Rp  |
+ *  1 o---||---o-----|__|------o---o 2
+ *            Cs        Rs
+ *  Note: this is a typical metal<>silicon capacitance
+ *=======================================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cs    1  12  2p
+ Rs   12   2  2k
+ Cp   12 122  .5p
+ Rp  122   2  1k
+ Cp2 122   2  .1p
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Cs is an OPEN:  Z=-j*infinite
+ 
+ freq -> infinite: Cs is a SHORT, Cp is a SHORT, Cp2 shorts Rp: Z=0
+ 
+ freq in between: 
+ > For low freq, a straight line bottom -> up (with increasing freq), end-point Z=Rs.
+ > With increasing freq, before Z=Rs is reached, Cp becomes conductive: 
+   new end point: Z=Rs||Rp (usually: Z~Rs since Rs<Rp)
+ > And, still with increasing freq, before Z=Rs||Rp is reached, 
+   Cp2 shorts Rp: final end point for freq -> infinite: Z=0
+ 
+ Tutorial suggestion: 
+ *  begin with Cp=1f, Cp2=1f, and tune Cs & Rs.
+ *  Then, study the effect of Cp together with Rp: 
+    deviation of straght line with end point Z=Rs to curve with new end point Z=Rs||Rp
+ *  Finally increase Cp2 (impedance trace -> Z=0 for freq -> infinite)
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Cp_Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *         ---||---
+ *        |   Cp   |
+ *  1 o---o        o---o 2
+ *        |   __Rp |
+ *         --|__|--
+ *===================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cp  1  2 10p
+ Rp  1  2 1k
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Cp is an OPEN, Z=Rp
+ 
+ freq -> infinite: Cp shorts Rp (Z=0)
+ 
+ freq in between: a half-circle turning from Rp clock-wise (with increasing freq) to Z=0
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Rs__Cp_Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *==========================================
+ *                   __Rp
+ *                --|__|--
+ *         __    |        |
+ *  1 o---|__|---o---||---o---o 2
+ *         Rs        Cp
+ *==========================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Rs  1 12 10
+ Cp 12  2  1p
+ Rp 12  2  1k
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Cp is an OPEN: Z=Rp+Rs is at the right x-axis
+ 
+ freq -> infinite: Cp shorts Rp: Z=Rs
+ 
+ freq in between: a half-circle turning from Rs+Rp clock-wise 
+  (with increasing freq) to Z=Rs
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_____R_L___________________" "711.501"
+{
+}
+LINK XFORM "Ls" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *                
+ *  1 o---\/\/---o 2
+ *         Ls  
+ *===================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Ls  1  2 10n
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: it's a SHORT: Z=0
+ 
+ freq -> infinite: it's an OPEN : Z=j*infinite
+ 
+ freq in between: with increasing freq, a straight line bottom -> up
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Ls_Rs" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *                __
+ *  1 o---\/\/---|__|---o 2
+ *        Ls      Rs
+ *===================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Ls  1 12 10n
+ Rs 12  2 10
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Ls is a SHORT: Z=Rs
+ 
+ freq -> infinite: Ls is an OPEN, Z=j*infinite
+ 
+ freq in between: with increasing freq, a straight line bottom -> up,
+    from Z=Rs to j*infinite
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Ls__Lp_Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *========================================================================
+ *                --\/\/--
+ *               |   Lp   |
+ *  1 o---\/\/---o        o---o 2
+ *         Ls    |   __Rp |
+ *                --|__|--
+ *
+ * Note: this schematic is typical for spiral inductors incl. skin effect
+ *========================================================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Ls  1 12 2n
+ Lp 12  2 5n
+ Rp 12  2 5
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Lp and Ls are both SHORTs: Z=0
+ 
+ freq -> infinite: LS is an OPEN, and Lp too: Z=j*infinite
+ freq in between: for typically Lp > Ls: first Lp becomes an OPEN, 
+    while Ls is still a SHORT: half-circle from Z=0 to Z=Rp.
+    With higher freq, Ls becomes an OPEN too: new end point: Z=Rp+j*infinite
+ 
+ Tutorial suggestion: 
+ *  begin with Ls=1p, and tune Lp and Rp.
+ *  Then, continue with tuning Ls
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Lp_Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *===================================
+ *         --\/\/--
+ *        |   Lp   |
+ *  1 o---o        o---o 2
+ *        |   __Rp |
+ *         --|__|--
+ *===================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Lp  1  2 10n
+ Rp  1  2 1k
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Lp is a SHORT: Z=0
+ 
+ freq -> infinite: Lp is an OPEN, Z=Rp
+ 
+ freq in between: a half-circle turningclock-wise (with increasing freq)  
+    from Z=0 to Z=Rp
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Rs__Lp_Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *=================================================
+ *                --\/\/--
+ *         __    |   Lp   |
+ *  1 o---|__|---o        o---o 2
+ *         Rs    |   __Rp |
+ *                --|__|--
+ *
+ * Note: this schematic is typical for skin effect
+ *=================================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Rs  1 12 10
+ Lp 12  2 10n
+ Rp 12  2 1k
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Lp shorts Rp: Z=Rs
+ 
+ freq -> infinite: Lp is an OPEN: Z=Rs+Rp
+ 
+ freq in between: a half-circle turning from Rs clock-wise (with increasing freq) to Z=Rs+Rp
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_____R_L_C_________________" "711.501"
+{
+}
+LINK XFORM "Cs__Ls" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *=====================================
+ *
+ *  1 o---||---o---/\/\---o 2
+ *        Cs        Ls
+ *=====================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cs   1 12  10p
+ Ls  12  2  10n
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Cs is an OPEN: Z=-j*infinite
+ 
+ freq -> infinite: Ls is an OPEN: Z=j*infinite
+ 
+ freq in between: with increasing freq, a straight line bottom -> up 
+    from Z=-j*infinite to Z=0 (resonance).
+    Then, the inductive part begins to become an OPEN: 
+    the trace crosses the x-axis and continues 
+    as a straight line to Z=j*infinite
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Cs__Ls__Rs" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *==============================================
+ *         __
+ *  1 o---|__|---o---||---o---/\/\---o 2
+ *         Rs        Cs        Ls
+ *==============================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Rs   1  11  1
+ Cs  11  22  10p
+ Ls  22   2  10n
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Cs is an OPEN: Z=-j*infinite
+ 
+ freq -> infinite: Ls is an OPEN: Z=j*infinite
+ 
+ freq in between: resonance: Z=Rs
+    with increasing freq, a straight line bottom -> up from Z=-j*infinite, 
+    towards Z=Rs (resonance), and the further up to Z=j*infinite
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Cp__Lp__Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *==================================================
+ *             __Rp
+ *         ---|__|---
+ *        |    Lp    |
+ *  1 o---o---/\/\---o---o 2
+ *        |    Cp    |
+ *         ----||----
+ *==================================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Cp  1  2  10p
+ Lp  1  2  100n
+ Rp  1  2  100
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Lp is a SHORT, Z=0
+ 
+ resonance: the x-axis is crossed at Rp
+ 
+ freq -> infinite: Cp is a SHORT, Z=Rp
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Rs__Cs__Lp_Rp" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  txt_Schematic   !---set GUI 'TL_Notes_Top', referred to in the Plot _MP_
+ GLOBAL_VAR  txt_Help        !---set GUI 'TL_Notes_Right', referred to in the Plot _MP_
+ 
+ 
+ 
+ 
+ 
+ !---define graphical netlist
+ txt_Schematic="*Schematic:
+ *==================================================
+ *                             __Rp
+ *                         ---|__|---
+ *         __             |          |
+ *  1 o---|__|---o---||---o---/\/\---o---o 2
+ *         Rs        Cs        Lp
+ *==================================================
+ "
+ 
+ 
+ !---set Netlist in tab 'Circuit'
+ txt_Netlist=".SUBCKT Impedance 1 2
+ 
+ "&VAL$(txt_Schematic)&"
+ *ModelCards:
+ *===================================
+ Rs   1  11  1
+ Cs  11  22  10p
+ Lp  22   2  10n
+ Rp  22   2  1k
+ *===================================
+ 
+ .ENDS
+ "
+ ICCAP_FUNC("../../Circuit", "STFV", "Text", VAL$(txt_Netlist))	
+ 
+ 
+ !---text for Help
+ txt_Help="Impedance Plot Explanations:
+ freq -> 0: Cs is an OPEN: Z=-j*infinite
+ 
+ freq -> infinite: Cs is a SHORT, Lp is an OPEN: Z=Rs+Rp
+ 
+ freq in between: 
+    at low freq, a straight line bottom -> up, from Z=-j*infinite, 
+       to Z=Rs (Rs-Cs dominate, Lp is a SHORT)
+    Then, at resonance, we cross the x-axis at Z=Rs. 
+    With further increasing freq, Lp opens more and more,
+    and the end point (Cs=SHORT) becomes Z=Rs+Rp.
+ 
+    Note: From resonance (Z=Rs) to infinite freq (Z=Rs+Rp), 
+      it's a half-circle, because Rp is in parallel to Lp.
+ "
+ 
+ 
+ !---set up and perform parameter tuning
+ ICCAP_FUNC("tuning", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "___________________2" "711.501"
+{
+}
+LINK XFORM "___________________3" "711.501"
+{
+}
+LINK XFORM "tuning" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ GLOBAL_VAR  Params
+ GLOBAL_VAR  Mins
+ GLOBAL_VAR  Inits
+ GLOBAL_VAR  Maxs
+ 
+ 
+ !---this Program is called by the different Spice Schematics Transforms
+ 
+ 
+ !---initialize Tuner Variables
+ Params=""
+ Mins=""
+ Inits=""
+ Maxs=""
+ 
+ 
+ !---reset ModelParameters, simulate and show Plot
+ ICCAP_FUNC("../../ParameterSet", "Reset")
+ ICCAP_FUNC(".", "Simulate")
+ ICCAP_FUNC("_MP_", "Display Plot")
+ 
+ 
+ !---set TUNER-----------------------------------------------------
+ !---get ModelParameter Names
+ N=0
+ ErrMsg=""
+ WHILE VAL$(ErrMsg)==""
+   ParamName=LOOKUP_TABLE_VAL("../../ParameterSet", "Param Name["&VAL$(N)&"]", ErrMsg)
+ !  PRINT ParamName
+   IF VAL$(ErrMsg)=="" THEN
+     DIMENSION_ARRAY("Params", N+1)
+     Params[N]=VAL$(ParamName)
+   END IF
+   N = N + 1
+ END WHILE
+ NrParams = N - 1
+ ErrMsg=""
+ 
+ 
+ !---set limits for Tuner
+ DIMENSION_ARRAY("Mins" , NrParams)
+ DIMENSION_ARRAY("Inits", NrParams)
+ DIMENSION_ARRAY("Maxs" , NrParams)
+ FOR i=0 TO NrParams-1
+   !---get ModelParameter Value and set Tuner arrays
+   ParamValue = LOOKUP_TABLE_VAL("../../ParameterSet", "Value["&VAL$(Params[i])&"]")
+   Inits[i]  = VAL(ParamValue)
+   Mins[i]   = Inits[i]//100
+   Maxs[i]   = Inits[i]*100
+ NEXT i
+ 
+ 
+ !---call TUNER
+ !                                1=log scale, 0=lin scale
+ !                                   1=immediate execution, 0=execute after slider release
+ !                                      program name to be executed
+ TUNER Params, Mins, Inits, Maxs, 1, 1, "aux"
+}
+dataset
+{
+datasize COMMON 21 1 1
+type COMMON
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+}
+}
+}
+LINK XFORM "aux" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ ! this Program, called by the TUNER statement in Transform 'tuning', 
+ ! defines the Tuner action
+ 
+ 
+ 
+ !---simulate this Setup
+ ICCAP_FUNC(".", "Simulate")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK PLOT "_MP_" "711.501"
+{
+View draw_ds 0 "B,0,0"
+View plot_window 0 "425,205,31382,18768,{_Z_:AUTO|RI|RI: 900.0 ,-400.0 , 300.0 ,6,5,6,5}"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "MULTI PLOT"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "# of Plots" "1"
+element "# of GUIs" "3"
+element "Orientation" "H"
+element "Plots Per Row" "0"
+element "Header" ""
+element "Footer" ""
+}
+HYPTABLE "Multi Table"
+{
+element "Plot 0" "_Z_"
+}
+HYPTABLE "Multi GUI Table"
+{
+element "GUI 1" "../../TL_Notes_Top"
+element "GUI 1 Location" "U"
+element "GUI 2" "../../TL_Notes_Right"
+element "GUI 2 Location" "R"
+element "GUI 3" "../../TL_Notes_Bottom"
+element "GUI 3 Location" "B"
+}
+PlotOptimizerOpt Enable 0
+}
+}
+LINK PLOT "_Z_" "711.501"
+{
+View draw_ds 0 "B,1517,3372"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line with Symbols" "N"
+element 0 "Transform Result" "Solid Line" "A"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "RI GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "Sweep Data" "freq"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "IMPEDANCE PLOT"
+element "Footer" ""
+element "RI Data 0" "Z"
+element "RI Data 1" ""
+element "RI Data 2" ""
+element "RI Data 3" ""
+element "RI Data 4" ""
+element "RI Data 5" ""
+element "RI Data 6" ""
+element "RI Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "Z"
+member SWEEP "freq"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+}
+}
+}
+}
