@@ -1,0 +1,4876 @@
+LINK MODEL "Netlist_Dynamic_Node_Connections" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 C15 C10"
+element 0 "Name" "SIMULATOR"
+element 0 "Value" "spmodeads"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+element 9 "Symbol" "Square" "A"
+element 9 "Measured" "Default" "A"
+element 9 "Simulated" "Default" "A"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "A"
+element 10 "On Black" "94" "A"
+element 10 "Symbol" "Square" "A"
+element 10 "Measured" "Default" "A"
+element 10 "Simulated" "Default" "A"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "A"
+element 11 "On Black" "81" "A"
+element 11 "Symbol" "Square" "A"
+element 11 "Measured" "Default" "A"
+element 11 "Simulated" "Default" "A"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "A"
+element 12 "On Black" "50" "A"
+element 12 "Symbol" "Square" "A"
+element 12 "Measured" "Default" "A"
+element 12 "Simulated" "Default" "A"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "A"
+element 13 "On Black" "115" "A"
+element 13 "Symbol" "Square" "A"
+element 13 "Measured" "Default" "A"
+element 13 "Simulated" "Default" "A"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "A"
+element 14 "On Black" "54" "A"
+element 14 "Symbol" "Square" "A"
+element 14 "Measured" "Default" "A"
+element 14 "Simulated" "Default" "A"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "A"
+element 15 "On Black" "106" "A"
+element 15 "Symbol" "Square" "A"
+element 15 "Measured" "Default" "A"
+element 15 "Simulated" "Default" "A"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "A"
+element 16 "On Black" "120" "A"
+element 16 "Symbol" "Square" "A"
+element 16 "Measured" "Default" "A"
+element 16 "Simulated" "Default" "A"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "A"
+element 17 "On Black" "87" "A"
+element 17 "Symbol" "Square" "A"
+element 17 "Measured" "Default" "A"
+element 17 "Simulated" "Default" "A"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "A"
+element 18 "On Black" "79" "A"
+element 18 "Symbol" "Square" "A"
+element 18 "Measured" "Default" "A"
+element 18 "Simulated" "Default" "A"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "A"
+element 19 "On Black" "81" "A"
+element 19 "Symbol" "Square" "A"
+element 19 "Measured" "Default" "A"
+element 19 "Simulated" "Default" "A"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "A"
+element 20 "On Black" "1" "A"
+element 20 "Symbol" "Circle" "A"
+element 20 "Measured" "Default" "A"
+element 20 "Simulated" "Dot Line" "A"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "A"
+element 21 "On Black" "2" "A"
+element 21 "Symbol" "Reverse Triangle" "A"
+element 21 "Measured" "Default" "A"
+element 21 "Simulated" "Dot Line" "A"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "A"
+element 22 "On Black" "6" "A"
+element 22 "Symbol" "Star" "A"
+element 22 "Measured" "Default" "A"
+element 22 "Simulated" "Dot Line" "A"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "A"
+element 23 "On Black" "3" "A"
+element 23 "Symbol" "Triangle" "A"
+element 23 "Measured" "Default" "A"
+element 23 "Simulated" "Dot Line" "A"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "A"
+element 24 "On Black" "88" "A"
+element 24 "Symbol" "Square" "A"
+element 24 "Measured" "Default" "A"
+element 24 "Simulated" "Dot Line" "A"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "A"
+element 25 "On Black" "4" "A"
+element 25 "Symbol" "Cross" "A"
+element 25 "Measured" "Default" "A"
+element 25 "Simulated" "Dot Line" "A"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "A"
+element 26 "On Black" "117" "A"
+element 26 "Symbol" "Circle" "A"
+element 26 "Measured" "Default" "A"
+element 26 "Simulated" "Dot Line" "A"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "A"
+element 27 "On Black" "40" "A"
+element 27 "Symbol" "Circle" "A"
+element 27 "Measured" "Default" "A"
+element 27 "Simulated" "Dot Line" "A"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "A"
+element 28 "On Black" "28" "A"
+element 28 "Symbol" "Circle" "A"
+element 28 "Measured" "Default" "A"
+element 28 "Simulated" "Dot Line" "A"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "A"
+element 29 "On Black" "114" "A"
+element 29 "Symbol" "Circle" "A"
+element 29 "Measured" "Default" "A"
+element 29 "Simulated" "Dot Line" "A"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "A"
+element 30 "On Black" "94" "A"
+element 30 "Symbol" "Circle" "A"
+element 30 "Measured" "Default" "A"
+element 30 "Simulated" "Dot Line" "A"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "A"
+element 31 "On Black" "81" "A"
+element 31 "Symbol" "Circle" "A"
+element 31 "Measured" "Default" "A"
+element 31 "Simulated" "Dot Line" "A"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "A"
+element 32 "On Black" "50" "A"
+element 32 "Symbol" "Circle" "A"
+element 32 "Measured" "Default" "A"
+element 32 "Simulated" "Dot Line" "A"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "A"
+element 33 "On Black" "115" "A"
+element 33 "Symbol" "Circle" "A"
+element 33 "Measured" "Default" "A"
+element 33 "Simulated" "Dot Line" "A"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "A"
+element 34 "On Black" "54" "A"
+element 34 "Symbol" "Circle" "A"
+element 34 "Measured" "Default" "A"
+element 34 "Simulated" "Dot Line" "A"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "A"
+element 35 "On Black" "106" "A"
+element 35 "Symbol" "Circle" "A"
+element 35 "Measured" "Default" "A"
+element 35 "Simulated" "Dot Line" "A"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "A"
+element 36 "On Black" "120" "A"
+element 36 "Symbol" "Circle" "A"
+element 36 "Measured" "Default" "A"
+element 36 "Simulated" "Dot Line" "A"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "A"
+element 37 "On Black" "87" "A"
+element 37 "Symbol" "Circle" "A"
+element 37 "Measured" "Default" "A"
+element 37 "Simulated" "Dot Line" "A"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "A"
+element 38 "On Black" "79" "A"
+element 38 "Symbol" "Circle" "A"
+element 38 "Measured" "Default" "A"
+element 38 "Simulated" "Dot Line" "A"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "A"
+element 39 "On Black" "81" "A"
+element 39 "Symbol" "Circle" "A"
+element 39 "Measured" "Default" "A"
+element 39 "Simulated" "Dot Line" "A"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "A"
+element 40 "On Black" "1" "A"
+element 40 "Symbol" "Triangle" "A"
+element 40 "Measured" "Default" "A"
+element 40 "Simulated" "Dot Dot Line" "A"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "A"
+element 41 "On Black" "2" "A"
+element 41 "Symbol" "Diamond" "A"
+element 41 "Measured" "Default" "A"
+element 41 "Simulated" "Dot Dot Line" "A"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "A"
+element 42 "On Black" "6" "A"
+element 42 "Symbol" "X" "A"
+element 42 "Measured" "Default" "A"
+element 42 "Simulated" "Dot Dot Line" "A"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "A"
+element 43 "On Black" "3" "A"
+element 43 "Symbol" "Reverse Triangle" "A"
+element 43 "Measured" "Default" "A"
+element 43 "Simulated" "Dot Dot Line" "A"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "A"
+element 44 "On Black" "88" "A"
+element 44 "Symbol" "Circle" "A"
+element 44 "Measured" "Default" "A"
+element 44 "Simulated" "Dot Dot Line" "A"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "A"
+element 45 "On Black" "4" "A"
+element 45 "Symbol" "Square" "A"
+element 45 "Measured" "Default" "A"
+element 45 "Simulated" "Dot Dot Line" "A"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "A"
+element 46 "On Black" "117" "A"
+element 46 "Symbol" "Triangle" "A"
+element 46 "Measured" "Default" "A"
+element 46 "Simulated" "Dot Dot Line" "A"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "A"
+element 47 "On Black" "40" "A"
+element 47 "Symbol" "Triangle" "A"
+element 47 "Measured" "Default" "A"
+element 47 "Simulated" "Dot Dot Line" "A"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "A"
+element 48 "On Black" "28" "A"
+element 48 "Symbol" "Triangle" "A"
+element 48 "Measured" "Default" "A"
+element 48 "Simulated" "Dot Dot Line" "A"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "A"
+element 49 "On Black" "114" "A"
+element 49 "Symbol" "Triangle" "A"
+element 49 "Measured" "Default" "A"
+element 49 "Simulated" "Dot Dot Line" "A"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "A"
+element 50 "On Black" "94" "A"
+element 50 "Symbol" "Triangle" "A"
+element 50 "Measured" "Default" "A"
+element 50 "Simulated" "Dot Dot Line" "A"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "A"
+element 51 "On Black" "81" "A"
+element 51 "Symbol" "Triangle" "A"
+element 51 "Measured" "Default" "A"
+element 51 "Simulated" "Dot Dot Line" "A"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "A"
+element 52 "On Black" "50" "A"
+element 52 "Symbol" "Triangle" "A"
+element 52 "Measured" "Default" "A"
+element 52 "Simulated" "Dot Dot Line" "A"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "A"
+element 53 "On Black" "115" "A"
+element 53 "Symbol" "Triangle" "A"
+element 53 "Measured" "Default" "A"
+element 53 "Simulated" "Dot Dot Line" "A"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "A"
+element 54 "On Black" "54" "A"
+element 54 "Symbol" "Triangle" "A"
+element 54 "Measured" "Default" "A"
+element 54 "Simulated" "Dot Dot Line" "A"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "A"
+element 55 "On Black" "106" "A"
+element 55 "Symbol" "Triangle" "A"
+element 55 "Measured" "Default" "A"
+element 55 "Simulated" "Dot Dot Line" "A"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "A"
+element 56 "On Black" "120" "A"
+element 56 "Symbol" "Triangle" "A"
+element 56 "Measured" "Default" "A"
+element 56 "Simulated" "Dot Dot Line" "A"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "A"
+element 57 "On Black" "87" "A"
+element 57 "Symbol" "Triangle" "A"
+element 57 "Measured" "Default" "A"
+element 57 "Simulated" "Dot Dot Line" "A"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "A"
+element 58 "On Black" "79" "A"
+element 58 "Symbol" "Triangle" "A"
+element 58 "Measured" "Default" "A"
+element 58 "Simulated" "Dot Dot Line" "A"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "A"
+element 59 "On Black" "81" "A"
+element 59 "Symbol" "Triangle" "A"
+element 59 "Measured" "Default" "A"
+element 59 "Simulated" "Dot Dot Line" "A"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "A"
+element 60 "On Black" "1" "A"
+element 60 "Symbol" "Reverse Triangle" "A"
+element 60 "Measured" "Default" "A"
+element 60 "Simulated" "Dashed Line" "A"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "A"
+element 61 "On Black" "2" "A"
+element 61 "Symbol" "Star" "A"
+element 61 "Measured" "Default" "A"
+element 61 "Simulated" "Dashed Line" "A"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "A"
+element 62 "On Black" "6" "A"
+element 62 "Symbol" "Cross" "A"
+element 62 "Measured" "Default" "A"
+element 62 "Simulated" "Dashed Line" "A"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "A"
+element 63 "On Black" "3" "A"
+element 63 "Symbol" "Diamond" "A"
+element 63 "Measured" "Default" "A"
+element 63 "Simulated" "Dashed Line" "A"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "A"
+element 64 "On Black" "88" "A"
+element 64 "Symbol" "Triangle" "A"
+element 64 "Measured" "Default" "A"
+element 64 "Simulated" "Dashed Line" "A"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "A"
+element 65 "On Black" "4" "A"
+element 65 "Symbol" "Circle" "A"
+element 65 "Measured" "Default" "A"
+element 65 "Simulated" "Dashed Line" "A"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "A"
+element 66 "On Black" "117" "A"
+element 66 "Symbol" "Reverse Triangle" "A"
+element 66 "Measured" "Default" "A"
+element 66 "Simulated" "Dashed Line" "A"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "A"
+element 67 "On Black" "40" "A"
+element 67 "Symbol" "Reverse Triangle" "A"
+element 67 "Measured" "Default" "A"
+element 67 "Simulated" "Dashed Line" "A"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "A"
+element 68 "On Black" "28" "A"
+element 68 "Symbol" "Reverse Triangle" "A"
+element 68 "Measured" "Default" "A"
+element 68 "Simulated" "Dashed Line" "A"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "A"
+element 69 "On Black" "114" "A"
+element 69 "Symbol" "Reverse Triangle" "A"
+element 69 "Measured" "Default" "A"
+element 69 "Simulated" "Dashed Line" "A"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "A"
+element 70 "On Black" "94" "A"
+element 70 "Symbol" "Reverse Triangle" "A"
+element 70 "Measured" "Default" "A"
+element 70 "Simulated" "Dashed Line" "A"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "A"
+element 71 "On Black" "81" "A"
+element 71 "Symbol" "Reverse Triangle" "A"
+element 71 "Measured" "Default" "A"
+element 71 "Simulated" "Dashed Line" "A"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "A"
+element 72 "On Black" "50" "A"
+element 72 "Symbol" "Reverse Triangle" "A"
+element 72 "Measured" "Default" "A"
+element 72 "Simulated" "Dashed Line" "A"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "A"
+element 73 "On Black" "115" "A"
+element 73 "Symbol" "Reverse Triangle" "A"
+element 73 "Measured" "Default" "A"
+element 73 "Simulated" "Dashed Line" "A"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "A"
+element 74 "On Black" "54" "A"
+element 74 "Symbol" "Reverse Triangle" "A"
+element 74 "Measured" "Default" "A"
+element 74 "Simulated" "Dashed Line" "A"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "A"
+element 75 "On Black" "106" "A"
+element 75 "Symbol" "Reverse Triangle" "A"
+element 75 "Measured" "Default" "A"
+element 75 "Simulated" "Dashed Line" "A"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "A"
+element 76 "On Black" "120" "A"
+element 76 "Symbol" "Reverse Triangle" "A"
+element 76 "Measured" "Default" "A"
+element 76 "Simulated" "Dashed Line" "A"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "A"
+element 77 "On Black" "87" "A"
+element 77 "Symbol" "Reverse Triangle" "A"
+element 77 "Measured" "Default" "A"
+element 77 "Simulated" "Dashed Line" "A"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "A"
+element 78 "On Black" "79" "A"
+element 78 "Symbol" "Reverse Triangle" "A"
+element 78 "Measured" "Default" "A"
+element 78 "Simulated" "Dashed Line" "A"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "A"
+element 79 "On Black" "81" "A"
+element 79 "Symbol" "Reverse Triangle" "A"
+element 79 "Measured" "Default" "A"
+element 79 "Simulated" "Dashed Line" "A"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "A"
+element 80 "On Black" "1" "A"
+element 80 "Symbol" "Diamond" "A"
+element 80 "Measured" "Default" "A"
+element 80 "Simulated" "Dot Dashed Line" "A"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "A"
+element 81 "On Black" "2" "A"
+element 81 "Symbol" "X" "A"
+element 81 "Measured" "Default" "A"
+element 81 "Simulated" "Dot Dashed Line" "A"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "A"
+element 82 "On Black" "6" "A"
+element 82 "Symbol" "Square" "A"
+element 82 "Measured" "Default" "A"
+element 82 "Simulated" "Dot Dashed Line" "A"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "A"
+element 83 "On Black" "3" "A"
+element 83 "Symbol" "Star" "A"
+element 83 "Measured" "Default" "A"
+element 83 "Simulated" "Dot Dashed Line" "A"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "A"
+element 84 "On Black" "88" "A"
+element 84 "Symbol" "Reverse Triangle" "A"
+element 84 "Measured" "Default" "A"
+element 84 "Simulated" "Dot Dashed Line" "A"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "A"
+element 85 "On Black" "4" "A"
+element 85 "Symbol" "Triangle" "A"
+element 85 "Measured" "Default" "A"
+element 85 "Simulated" "Dot Dashed Line" "A"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "A"
+element 86 "On Black" "117" "A"
+element 86 "Symbol" "Diamond" "A"
+element 86 "Measured" "Default" "A"
+element 86 "Simulated" "Dot Dashed Line" "A"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "A"
+element 87 "On Black" "40" "A"
+element 87 "Symbol" "Diamond" "A"
+element 87 "Measured" "Default" "A"
+element 87 "Simulated" "Dot Dashed Line" "A"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "A"
+element 88 "On Black" "28" "A"
+element 88 "Symbol" "Diamond" "A"
+element 88 "Measured" "Default" "A"
+element 88 "Simulated" "Dot Dashed Line" "A"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "A"
+element 89 "On Black" "114" "A"
+element 89 "Symbol" "Diamond" "A"
+element 89 "Measured" "Default" "A"
+element 89 "Simulated" "Dot Dashed Line" "A"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "A"
+element 90 "On Black" "94" "A"
+element 90 "Symbol" "Diamond" "A"
+element 90 "Measured" "Default" "A"
+element 90 "Simulated" "Dot Dashed Line" "A"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "A"
+element 91 "On Black" "81" "A"
+element 91 "Symbol" "Diamond" "A"
+element 91 "Measured" "Default" "A"
+element 91 "Simulated" "Dot Dashed Line" "A"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "A"
+element 92 "On Black" "50" "A"
+element 92 "Symbol" "Diamond" "A"
+element 92 "Measured" "Default" "A"
+element 92 "Simulated" "Dot Dashed Line" "A"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "A"
+element 93 "On Black" "115" "A"
+element 93 "Symbol" "Diamond" "A"
+element 93 "Measured" "Default" "A"
+element 93 "Simulated" "Dot Dashed Line" "A"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "A"
+element 94 "On Black" "54" "A"
+element 94 "Symbol" "Diamond" "A"
+element 94 "Measured" "Default" "A"
+element 94 "Simulated" "Dot Dashed Line" "A"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "A"
+element 95 "On Black" "106" "A"
+element 95 "Symbol" "Diamond" "A"
+element 95 "Measured" "Default" "A"
+element 95 "Simulated" "Dot Dashed Line" "A"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "A"
+element 96 "On Black" "120" "A"
+element 96 "Symbol" "Diamond" "A"
+element 96 "Measured" "Default" "A"
+element 96 "Simulated" "Dot Dashed Line" "A"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "A"
+element 97 "On Black" "87" "A"
+element 97 "Symbol" "Diamond" "A"
+element 97 "Measured" "Default" "A"
+element 97 "Simulated" "Dot Dashed Line" "A"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "A"
+element 98 "On Black" "79" "A"
+element 98 "Symbol" "Diamond" "A"
+element 98 "Measured" "Default" "A"
+element 98 "Simulated" "Dot Dashed Line" "A"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "A"
+element 99 "On Black" "81" "A"
+element 99 "Symbol" "Diamond" "A"
+element 99 "Measured" "Default" "A"
+element 99 "Simulated" "Dot Dashed Line" "A"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "A"
+element 100 "On Black" "1" "A"
+element 100 "Symbol" "Star" "A"
+element 100 "Measured" "Default" "A"
+element 100 "Simulated" "Long Dashed Line" "A"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "A"
+element 101 "On Black" "2" "A"
+element 101 "Symbol" "Cross" "A"
+element 101 "Measured" "Default" "A"
+element 101 "Simulated" "Long Dashed Line" "A"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "A"
+element 102 "On Black" "6" "A"
+element 102 "Symbol" "Circle" "A"
+element 102 "Measured" "Default" "A"
+element 102 "Simulated" "Long Dashed Line" "A"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "A"
+element 103 "On Black" "3" "A"
+element 103 "Symbol" "X" "A"
+element 103 "Measured" "Default" "A"
+element 103 "Simulated" "Long Dashed Line" "A"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "A"
+element 104 "On Black" "88" "A"
+element 104 "Symbol" "Diamond" "A"
+element 104 "Measured" "Default" "A"
+element 104 "Simulated" "Long Dashed Line" "A"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "A"
+element 105 "On Black" "4" "A"
+element 105 "Symbol" "Reverse Triangle" "A"
+element 105 "Measured" "Default" "A"
+element 105 "Simulated" "Long Dashed Line" "A"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "A"
+element 106 "On Black" "117" "A"
+element 106 "Symbol" "Star" "A"
+element 106 "Measured" "Default" "A"
+element 106 "Simulated" "Long Dashed Line" "A"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "A"
+element 107 "On Black" "40" "A"
+element 107 "Symbol" "Star" "A"
+element 107 "Measured" "Default" "A"
+element 107 "Simulated" "Long Dashed Line" "A"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "A"
+element 108 "On Black" "28" "A"
+element 108 "Symbol" "Star" "A"
+element 108 "Measured" "Default" "A"
+element 108 "Simulated" "Long Dashed Line" "A"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "A"
+element 109 "On Black" "114" "A"
+element 109 "Symbol" "Star" "A"
+element 109 "Measured" "Default" "A"
+element 109 "Simulated" "Long Dashed Line" "A"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "A"
+element 110 "On Black" "94" "A"
+element 110 "Symbol" "Star" "A"
+element 110 "Measured" "Default" "A"
+element 110 "Simulated" "Long Dashed Line" "A"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "A"
+element 111 "On Black" "81" "A"
+element 111 "Symbol" "Star" "A"
+element 111 "Measured" "Default" "A"
+element 111 "Simulated" "Long Dashed Line" "A"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "A"
+element 112 "On Black" "50" "A"
+element 112 "Symbol" "Star" "A"
+element 112 "Measured" "Default" "A"
+element 112 "Simulated" "Long Dashed Line" "A"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "A"
+element 113 "On Black" "115" "A"
+element 113 "Symbol" "Star" "A"
+element 113 "Measured" "Default" "A"
+element 113 "Simulated" "Long Dashed Line" "A"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "A"
+element 114 "On Black" "54" "A"
+element 114 "Symbol" "Star" "A"
+element 114 "Measured" "Default" "A"
+element 114 "Simulated" "Long Dashed Line" "A"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "A"
+element 115 "On Black" "106" "A"
+element 115 "Symbol" "Star" "A"
+element 115 "Measured" "Default" "A"
+element 115 "Simulated" "Long Dashed Line" "A"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "A"
+element 116 "On Black" "120" "A"
+element 116 "Symbol" "Star" "A"
+element 116 "Measured" "Default" "A"
+element 116 "Simulated" "Long Dashed Line" "A"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "A"
+element 117 "On Black" "87" "A"
+element 117 "Symbol" "Star" "A"
+element 117 "Measured" "Default" "A"
+element 117 "Simulated" "Long Dashed Line" "A"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "A"
+element 118 "On Black" "79" "A"
+element 118 "Symbol" "Star" "A"
+element 118 "Measured" "Default" "A"
+element 118 "Simulated" "Long Dashed Line" "A"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "A"
+element 119 "On Black" "81" "A"
+element 119 "Symbol" "Star" "A"
+element 119 "Measured" "Default" "A"
+element 119 "Simulated" "Long Dashed Line" "A"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "A"
+element 120 "On Black" "1" "A"
+element 120 "Symbol" "X" "A"
+element 120 "Measured" "Default" "A"
+element 120 "Simulated" "Long Dot Dashed Line" "A"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "A"
+element 121 "On Black" "2" "A"
+element 121 "Symbol" "Square" "A"
+element 121 "Measured" "Default" "A"
+element 121 "Simulated" "Long Dot Dashed Line" "A"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "A"
+element 122 "On Black" "6" "A"
+element 122 "Symbol" "Triangle" "A"
+element 122 "Measured" "Default" "A"
+element 122 "Simulated" "Long Dot Dashed Line" "A"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "A"
+element 123 "On Black" "3" "A"
+element 123 "Symbol" "Cross" "A"
+element 123 "Measured" "Default" "A"
+element 123 "Simulated" "Long Dot Dashed Line" "A"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "A"
+element 124 "On Black" "88" "A"
+element 124 "Symbol" "Star" "A"
+element 124 "Measured" "Default" "A"
+element 124 "Simulated" "Long Dot Dashed Line" "A"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "A"
+element 125 "On Black" "4" "A"
+element 125 "Symbol" "Diamond" "A"
+element 125 "Measured" "Default" "A"
+element 125 "Simulated" "Long Dot Dashed Line" "A"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "A"
+element 126 "On Black" "117" "A"
+element 126 "Symbol" "X" "A"
+element 126 "Measured" "Default" "A"
+element 126 "Simulated" "Long Dot Dashed Line" "A"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "A"
+element 127 "On Black" "40" "A"
+element 127 "Symbol" "X" "A"
+element 127 "Measured" "Default" "A"
+element 127 "Simulated" "Long Dot Dashed Line" "A"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "A"
+element 128 "On Black" "28" "A"
+element 128 "Symbol" "X" "A"
+element 128 "Measured" "Default" "A"
+element 128 "Simulated" "Long Dot Dashed Line" "A"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "A"
+element 129 "On Black" "114" "A"
+element 129 "Symbol" "X" "A"
+element 129 "Measured" "Default" "A"
+element 129 "Simulated" "Long Dot Dashed Line" "A"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "A"
+element 130 "On Black" "94" "A"
+element 130 "Symbol" "X" "A"
+element 130 "Measured" "Default" "A"
+element 130 "Simulated" "Long Dot Dashed Line" "A"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "A"
+element 131 "On Black" "81" "A"
+element 131 "Symbol" "X" "A"
+element 131 "Measured" "Default" "A"
+element 131 "Simulated" "Long Dot Dashed Line" "A"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "A"
+element 132 "On Black" "50" "A"
+element 132 "Symbol" "X" "A"
+element 132 "Measured" "Default" "A"
+element 132 "Simulated" "Long Dot Dashed Line" "A"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "A"
+element 133 "On Black" "115" "A"
+element 133 "Symbol" "X" "A"
+element 133 "Measured" "Default" "A"
+element 133 "Simulated" "Long Dot Dashed Line" "A"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "A"
+element 134 "On Black" "54" "A"
+element 134 "Symbol" "X" "A"
+element 134 "Measured" "Default" "A"
+element 134 "Simulated" "Long Dot Dashed Line" "A"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "A"
+element 135 "On Black" "106" "A"
+element 135 "Symbol" "X" "A"
+element 135 "Measured" "Default" "A"
+element 135 "Simulated" "Long Dot Dashed Line" "A"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "A"
+element 136 "On Black" "120" "A"
+element 136 "Symbol" "X" "A"
+element 136 "Measured" "Default" "A"
+element 136 "Simulated" "Long Dot Dashed Line" "A"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "A"
+element 137 "On Black" "87" "A"
+element 137 "Symbol" "X" "A"
+element 137 "Measured" "Default" "A"
+element 137 "Simulated" "Long Dot Dashed Line" "A"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "A"
+element 138 "On Black" "79" "A"
+element 138 "Symbol" "X" "A"
+element 138 "Measured" "Default" "A"
+element 138 "Simulated" "Long Dot Dashed Line" "A"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "A"
+element 139 "On Black" "81" "A"
+element 139 "Symbol" "X" "A"
+element 139 "Measured" "Default" "A"
+element 139 "Simulated" "Long Dot Dashed Line" "A"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "A"
+element 140 "On Black" "1" "A"
+element 140 "Symbol" "Cross" "A"
+element 140 "Measured" "Default" "A"
+element 140 "Simulated" "Solid Line" "A"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "A"
+element 141 "On Black" "2" "A"
+element 141 "Symbol" "Circle" "A"
+element 141 "Measured" "Default" "A"
+element 141 "Simulated" "Solid Line" "A"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "A"
+element 142 "On Black" "6" "A"
+element 142 "Symbol" "Reverse Triangle" "A"
+element 142 "Measured" "Default" "A"
+element 142 "Simulated" "Solid Line" "A"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "A"
+element 143 "On Black" "3" "A"
+element 143 "Symbol" "Square" "A"
+element 143 "Measured" "Default" "A"
+element 143 "Simulated" "Solid Line" "A"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "A"
+element 144 "On Black" "88" "A"
+element 144 "Symbol" "X" "A"
+element 144 "Measured" "Default" "A"
+element 144 "Simulated" "Solid Line" "A"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "A"
+element 145 "On Black" "4" "A"
+element 145 "Symbol" "Star" "A"
+element 145 "Measured" "Default" "A"
+element 145 "Simulated" "Solid Line" "A"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "A"
+element 146 "On Black" "117" "A"
+element 146 "Symbol" "Cross" "A"
+element 146 "Measured" "Default" "A"
+element 146 "Simulated" "Solid Line" "A"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "A"
+element 147 "On Black" "40" "A"
+element 147 "Symbol" "Cross" "A"
+element 147 "Measured" "Default" "A"
+element 147 "Simulated" "Solid Line" "A"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "A"
+element 148 "On Black" "28" "A"
+element 148 "Symbol" "Cross" "A"
+element 148 "Measured" "Default" "A"
+element 148 "Simulated" "Solid Line" "A"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "A"
+element 149 "On Black" "114" "A"
+element 149 "Symbol" "Cross" "A"
+element 149 "Measured" "Default" "A"
+element 149 "Simulated" "Solid Line" "A"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "A"
+element 150 "On Black" "94" "A"
+element 150 "Symbol" "Cross" "A"
+element 150 "Measured" "Default" "A"
+element 150 "Simulated" "Solid Line" "A"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ ***  SPECTRE  ***
+ *****************************************************************************
+ 
+ subckt MOSTEST  (D  G  S  B  D_S_B  D_S)
+ 
+ parameters W=.4u L=.28u
+  
+ #echo M1 $VAR(Connection="D  G  S  B") MAIN W=W L=L 
+ 
+ * model card 
+ model MAIN bsim3v3 \
+ VERSION = 3.3  \
+ BINUNIT = 1  \
+ MOBMOD = 1  \
+ CAPMOD = 2  \
+ NOIMOD = 1  \
+ PARAMCHK = 1  \
+ TNOM = 25  \
+ NCH = 1.7E+017  \
+ XJ = 1.5E-007  \
+ NGATE = 0  \
+ RSH = 0  \
+ VTH0 = 0.7  \
+ K1 = 0.53  \
+ K2 = -0.013  \
+ K3 = 0  \
+ K3B = 0  \
+ W0 = 2.5E-006  \
+ NLX = 1.74E-007  \
+ DVT0 = 2.2  \
+ DVT1 = 0.53  \
+ DVT0W = 0  \
+ DVT1W = 5.3E+006  \
+ DVT2W = -0.032  \
+ ETA0 = 0  \
+ ETAB = 0  \
+ DSUB = 0.56  \
+ U0 = 670  \
+ UA = 1E-009  \
+ UB = 1E-019  \
+ UC = -4.65E-011  \
+ VSAT = 8E+004  \
+ A0 = 1  \
+ AGS = 0  \
+ B0 = 0  \
+ B1 = 0  \
+ KETA = -0.047  \
+ A1 = 0  \
+ A2 = 1  \
+ RDSW = 0  \
+ PRWB = 0  \
+ PRWG = 0  \
+ WR = 1  \
+ WINT = 0  \
+ WL = 0  \
+ WLN = 1  \
+ WW = 0  \
+ WWN = 1  \
+ WWL = 0  \
+ DWG = 0  \
+ DWB = 0  \
+ LINT = 5E-008  \
+ LL = 0  \
+ LLN = 1  \
+ LW = 0  \
+ LWN = 1  \
+ LWL = 0  \
+ VOFF = -0.08  \
+ NFACTOR = 1  \
+ CIT = 0  \
+ CDSC = 0.00024  \
+ CDSCB = 0  \
+ CDSCD = 0  \
+ PCLM = 1.3  \
+ PDIBLC1 = 0.39  \
+ PDIBLC2 = 0.0086  \
+ PDIBLCB = 0  \
+ DROUT = 0.56  \
+ PSCBE1 = 4.24E+008  \
+ PSCBE2 = 1E-005  \
+ PVAG = 0  \
+ VBM = -3  \
+ ALPHA0 = 0  \
+ ALPHA1 = 0  \
+ BETA0 = 30  \
+ JS = 0.0001  \
+ JSW = 1E-012  \
+ NJ = 1  \
+ IJTH = 0.1  \
+ CJ = 0.0005  \
+ MJ = 0.5  \
+ PB = 1  \
+ CJSW = 5E-010  \
+ MJSW = 0.33  \
+ PBSW = 1  \
+ CJSWG = 5E-010  \
+ MJSWG = 0.33  \
+ PBSWG = 1  \
+ CGDO = 0  \
+ CGSO = 0  \
+ CGBO = 0  \
+ CGSL = 0  \
+ CGDL = 0  \
+ CKAPPA = 0.6  \
+ CF = 0  \
+ NOFF = 1  \
+ VOFFCV = 0  \
+ ACDE = 1  \
+ MOIN = 15  \
+ DLC = 5E-008  \
+ DWC = 0  \
+ LLC = 0  \
+ LWC = 0  \
+ LWLC = 0  \
+ WLC = 0  \
+ WWC = 0  \
+ WWLC = 0  \
+ CLC = 1E-007  \
+ CLE = 0.6  \
+ ELM = 2  \
+ XPART = 0.5  \
+ KT1 = -0.11  \
+ KT1L = 0  \
+ KT2 = 0.022  \
+ UTE = -1.5  \
+ UA1 = 4.31E-009  \
+ UB1 = -7.6E-018  \
+ UC1 = -5.6E-011  \
+ AT = 3.3E+004  \
+ PRT = 0  \
+ XTI = 3  \
+ TPB = 0  \
+ TPBSW = 0  \
+ TPBSWG = 0  \
+ TCJ = 0  \
+ TCJSW = 0  \
+ TCJSWG = 0  \
+ AF = 1  \
+ EF = 1  \
+ KF = 1E-017  \
+ EM = 4.1E+007  \
+ NOIA = 1E+020  \
+ NOIB = 5E+004  \
+ NOIC = -1.4E-012  \
+ LINTNOI = 0 
+ 
+ 
+ ends
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P29 C14 P100 P100 P100 P100 P100 C13"
+param MAIN.VERSION " 3.300 "
+param MAIN.BINUNIT " 1.000 "
+param MAIN.MOBMOD " 1.000 "
+param MAIN.CAPMOD " 2.000 "
+param MAIN.NOIMOD " 1.000 "
+param MAIN.PARAMCHK " 1.000 "
+param MAIN.TNOM " 25.00 "
+param MAIN.NCH " 1.700E+017"
+param MAIN.XJ " 150.0n"
+param MAIN.NGATE " 0.000 "
+param MAIN.RSH " 0.000 "
+param MAIN.VTH0 " 700.0m"
+param MAIN.K1 " 530.0m"
+param MAIN.K2 "-13.00m"
+param MAIN.K3 " 0.000 "
+param MAIN.K3B " 0.000 "
+param MAIN.W0 " 2.500u"
+param MAIN.NLX " 174.0n"
+param MAIN.DVT0 " 2.200 "
+param MAIN.DVT1 " 530.0m"
+param MAIN.DVT0W " 0.000 "
+param MAIN.DVT1W " 5.300MEG"
+param MAIN.DVT2W "-32.00m"
+param MAIN.ETA0 " 0.000 "
+param MAIN.ETAB " 0.000 "
+param MAIN.DSUB " 560.0m"
+param MAIN.U0 " 670.0 "
+param MAIN.UA " 1.000n"
+param MAIN.UB " 1.000E-019"
+param MAIN.UC "-46.50p"
+param MAIN.VSAT " 80.00K"
+param MAIN.A0 " 1.000 "
+param MAIN.AGS " 0.000 "
+param MAIN.B0 " 0.000 "
+param MAIN.B1 " 0.000 "
+param MAIN.KETA "-47.00m"
+param MAIN.A1 " 0.000 "
+param MAIN.A2 " 1.000 "
+param MAIN.RDSW " 0.000 "
+param MAIN.PRWB " 0.000 "
+param MAIN.PRWG " 0.000 "
+param MAIN.WR " 1.000 "
+param MAIN.WINT " 0.000 "
+param MAIN.WL " 0.000 "
+param MAIN.WLN " 1.000 "
+param MAIN.WW " 0.000 "
+param MAIN.WWN " 1.000 "
+param MAIN.WWL " 0.000 "
+param MAIN.DWG " 0.000 "
+param MAIN.DWB " 0.000 "
+param MAIN.LINT " 50.00n"
+param MAIN.LL " 0.000 "
+param MAIN.LLN " 1.000 "
+param MAIN.LW " 0.000 "
+param MAIN.LWN " 1.000 "
+param MAIN.LWL " 0.000 "
+param MAIN.VOFF "-80.00m"
+param MAIN.NFACTOR " 1.000 "
+param MAIN.CIT " 0.000 "
+param MAIN.CDSC " 240.0u"
+param MAIN.CDSCB " 0.000 "
+param MAIN.CDSCD " 0.000 "
+param MAIN.PCLM " 1.300 "
+param MAIN.PDIBLC1 " 390.0m"
+param MAIN.PDIBLC2 " 8.600m"
+param MAIN.PDIBLCB " 0.000 "
+param MAIN.DROUT " 560.0m"
+param MAIN.PSCBE1 " 424.0MEG"
+param MAIN.PSCBE2 " 10.00u"
+param MAIN.PVAG " 0.000 "
+param MAIN.VBM "-3.000 "
+param MAIN.ALPHA0 " 0.000 "
+param MAIN.ALPHA1 " 0.000 "
+param MAIN.BETA0 " 30.00 "
+param MAIN.JS " 100.0u"
+param MAIN.JSW " 1.000p"
+param MAIN.NJ " 1.000 "
+param MAIN.IJTH " 100.0m"
+param MAIN.CJ " 500.0u"
+param MAIN.MJ " 500.0m"
+param MAIN.PB " 1.000 "
+param MAIN.CJSW " 500.0p"
+param MAIN.MJSW " 330.0m"
+param MAIN.PBSW " 1.000 "
+param MAIN.CJSWG " 500.0p"
+param MAIN.MJSWG " 330.0m"
+param MAIN.PBSWG " 1.000 "
+param MAIN.CGDO " 0.000 "
+param MAIN.CGSO " 0.000 "
+param MAIN.CGBO " 0.000 "
+param MAIN.CGSL " 0.000 "
+param MAIN.CGDL " 0.000 "
+param MAIN.CKAPPA " 600.0m"
+param MAIN.CF " 0.000 "
+param MAIN.NOFF " 1.000 "
+param MAIN.VOFFCV " 0.000 "
+param MAIN.ACDE " 1.000 "
+param MAIN.MOIN " 15.00 "
+param MAIN.DLC " 50.00n"
+param MAIN.DWC " 0.000 "
+param MAIN.LLC " 0.000 "
+param MAIN.LWC " 0.000 "
+param MAIN.LWLC " 0.000 "
+param MAIN.WLC " 0.000 "
+param MAIN.WWC " 0.000 "
+param MAIN.WWLC " 0.000 "
+param MAIN.CLC " 100.0n"
+param MAIN.CLE " 600.0m"
+param MAIN.ELM " 2.000 "
+param MAIN.XPART " 500.0m"
+param MAIN.KT1 "-110.0m"
+param MAIN.KT1L " 0.000 "
+param MAIN.KT2 " 22.00m"
+param MAIN.UTE "-1.500 "
+param MAIN.UA1 " 4.310n"
+param MAIN.UB1 "-7.600a"
+param MAIN.UC1 "-56.00p"
+param MAIN.AT " 33.00K"
+param MAIN.PRT " 0.000 "
+param MAIN.XTI " 3.000 "
+param MAIN.TPB " 0.000 "
+param MAIN.TPBSW " 0.000 "
+param MAIN.TPBSWG " 0.000 "
+param MAIN.TCJ " 0.000 "
+param MAIN.TCJSW " 0.000 "
+param MAIN.TCJSWG " 0.000 "
+param MAIN.AF " 1.000 "
+param MAIN.EF " 1.000 "
+param MAIN.KF " 10.00a"
+param MAIN.EM " 41.00MEG"
+param MAIN.NOIA " 1.000E+020"
+param MAIN.NOIB " 50.00K"
+param MAIN.NOIC "-1.400p"
+param MAIN.LINTNOI " 0.000 "
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ July 2010,   Francois Paolini, ST,
+              Franz Sischka, Agilent Technologies Germany
+ 
+ 
+ Analoguous to the $MVAR() and $DPAR() feature, a new $VAR() netlist utility
+ has been added to IC-CAP 2010, allowing to dynamically replace parts of a netlist 
+ with the contents of a Variable
+ 
+ Note: the line hosting such a $VAR() needs to be excluded from automatic netlist parsing
+ by a #echo  -- like when using $MPAR() and $DPAR().
+ 
+ 
+ The syntax is e.g.
+ 
+    $VAR(Connection="1 2 3 4")
+ 
+ This means that when hitting 'Simulate' in a Setup,
+ IC-CAP will search the Variables hierarchy (Setup -> DUT -> Model)
+ starting from the current Setup (with the Simulate button pressed) 
+ for a Variable called e.g. 'Connection', 
+ and replace $VAR() by the string contents of this found Variable 'Connection'.
+ When it cannot find it, it will take whatever is specified as connections inside the $VAR() statement.
+ Therefore, this acts as the 'default' setting.
+ 
+ 
+ Application examples:
+ ---------------------
+ - no need to have a separate DUT for every MOS CV curve 
+   Note: Was required in earlier IC-CAP versions due to different node connections
+ - like in this ModelFile, you can even combine DC and CV Setups within a single DUT
+ 
+ 
+ IMPORTANT CAVEAT:
+ ==================
+ - However, when using the $VAR() statement in a sub-circuit call of a TestCircuit(DUT),
+   and because of the required #echo statement, the IC-CAP Netlist Parser will be confused,
+   because it is forced to ignore important information about the netlist structure.
+   I.e. in this case, the parser can not work well with #echo, because IC-CAP doesn’t know 
+   about the circuit defined in the Model/Circuit level. 
+ - The same is true when using only a Model (and no Sub-Circuit) in the Model/Circuit tab,
+   and when applying $VAR() statement inside the model instance line of the netlist.
+ 
+}
+}
+}
+LINK MACRO "WHAT2DO" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ - check the netlist in tab 'Circuit'.
+ - check the presence/non-presence of the Variable 'Connection' in the Setup Variables
+   in which you are hitting 'Simulate'.
+ 
+}
+}
+}
+LINK MACRO "________________" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+
+}
+}
+}
+LINK MACRO "Explanations" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ Below some explications about the netlist of this ModelFile:
+ ===============================================================
+ 
+ 
+ 
+ subckt MOSTEST  (D  G  S  B  D_S_B  D_S)
+ * NOTE: in the subckt call above, we need to specify all nodes we are going to refer to later
+ *       applying the $VAR() statement
+ 
+  
+ #echo M1 $VAR(Connection="D  G  S  B") MAIN W=W L=L 
+ * - #echo is needed to satisfy the IC-CAP netlist parser
+ * - the $VAR(Connection="D  G  S  B") keyword works like this:
+ *     > if there is no Variable 'Connection' in the Variables search path of the actual Setup (to be simulated),
+ *       the string chain D  G  S  B  will be sent to the simulator.
+ *     > if a Variable 'Connection' is found, their string value will be used.
+ *   Note: you can apply any Variable name in $VAR().
+ 
+ 
+ * model card 
+ model MAIN bsim3v3 \
+ VERSION = 3.3  \
+ TNOM = 25  \
+ VTH0 = 0.7  \
+ U0 = 670  
+ 
+ 
+ ends
+}
+}
+}
+LINK DUT "SEE_FIRST_UNDER_MACROS" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+param W " 400.0n"
+param L " 280.0n"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+connpair "D_S_B" ""
+connpair "D_S" ""
+}
+}
+}
+}
+LINK DUT "_________________________________0" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+param W " 400.0n"
+param L " 280.0n"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+connpair "D_S_B" ""
+connpair "D_S" ""
+}
+}
+}
+}
+LINK DUT "_________________________________1" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+param W " 400.0n"
+param L " 280.0n"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+connpair "D_S_B" ""
+connpair "D_S" ""
+}
+}
+}
+}
+LINK DUT "DC_and_CV_in_one_DUT" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C15 C15"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P15 P100 P100 P100 P100 P100 P100 C13"
+param W " 400.0n"
+param L " 280.0n"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+connpair "D_S_B" ""
+connpair "D_S" ""
+}
+}
+}
+LINK DAT "idvd" "711.501"
+{
+View in_out 0 "1.9323169740431 8558 3271"
+View plot 0 "1.200389794472 5420 4096"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C15 P461"
+element 0 "Name" "!Connection"
+element 0 "Value" "not required here, we use the default of the netlist !!!"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vd" "711.501"
+{
+View draw_ds 0 "B,1404,166"
+View block_edit 0 "12896,291"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "D"
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 0.000 "
+element "Stop" " 2.000 "
+element "# of Points" "26"
+element "Step Size" " 80.00m"
+}
+}
+list PLOT "id_vd"
+}
+LINK SWEEP "vb" "711.501"
+{
+View draw_ds 0 "B,7500,178"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "B"
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vs" "711.501"
+{
+View draw_ds 0 "B,5516,180"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "S"
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vg" "711.501"
+{
+View draw_ds 0 "B,3473,178"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "2"
+element "Start" " 200.0m"
+element "Stop" " 2.000 "
+element "# of Points" "10"
+element "Step Size" " 200.0m"
+}
+}
+}
+LINK OUT "id" "711.501"
+{
+View draw_ds 0 "B,1404,3082"
+View block_edit 0 "13798,300"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "I"
+element "Unit" ""
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "To Node" "D"
+element "From Node" "GROUND"
+}
+dataset
+{
+datasize BOTH 260 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+point 41 1 1 0 0
+point 42 1 1 0 0
+point 43 1 1 0 0
+point 44 1 1 0 0
+point 45 1 1 0 0
+point 46 1 1 0 0
+point 47 1 1 0 0
+point 48 1 1 0 0
+point 49 1 1 0 0
+point 50 1 1 0 0
+point 51 1 1 0 0
+point 52 1 1 0 0
+point 53 1 1 0 0
+point 54 1 1 0 0
+point 55 1 1 0 0
+point 56 1 1 0 0
+point 57 1 1 0 0
+point 58 1 1 0 0
+point 59 1 1 0 0
+point 60 1 1 0 0
+point 61 1 1 0 0
+point 62 1 1 0 0
+point 63 1 1 0 0
+point 64 1 1 0 0
+point 65 1 1 0 0
+point 66 1 1 0 0
+point 67 1 1 0 0
+point 68 1 1 0 0
+point 69 1 1 0 0
+point 70 1 1 0 0
+point 71 1 1 0 0
+point 72 1 1 0 0
+point 73 1 1 0 0
+point 74 1 1 0 0
+point 75 1 1 0 0
+point 76 1 1 0 0
+point 77 1 1 0 0
+point 78 1 1 0 0
+point 79 1 1 0 0
+point 80 1 1 0 0
+point 81 1 1 0 0
+point 82 1 1 0 0
+point 83 1 1 0 0
+point 84 1 1 0 0
+point 85 1 1 0 0
+point 86 1 1 0 0
+point 87 1 1 0 0
+point 88 1 1 0 0
+point 89 1 1 0 0
+point 90 1 1 0 0
+point 91 1 1 0 0
+point 92 1 1 0 0
+point 93 1 1 0 0
+point 94 1 1 0 0
+point 95 1 1 0 0
+point 96 1 1 0 0
+point 97 1 1 0 0
+point 98 1 1 0 0
+point 99 1 1 0 0
+point 100 1 1 0 0
+point 101 1 1 0 0
+point 102 1 1 0 0
+point 103 1 1 0 0
+point 104 1 1 0 0
+point 105 1 1 0 0
+point 106 1 1 0 0
+point 107 1 1 0 0
+point 108 1 1 0 0
+point 109 1 1 0 0
+point 110 1 1 0 0
+point 111 1 1 0 0
+point 112 1 1 0 0
+point 113 1 1 0 0
+point 114 1 1 0 0
+point 115 1 1 0 0
+point 116 1 1 0 0
+point 117 1 1 0 0
+point 118 1 1 0 0
+point 119 1 1 0 0
+point 120 1 1 0 0
+point 121 1 1 0 0
+point 122 1 1 0 0
+point 123 1 1 0 0
+point 124 1 1 0 0
+point 125 1 1 0 0
+point 126 1 1 0 0
+point 127 1 1 0 0
+point 128 1 1 0 0
+point 129 1 1 0 0
+point 130 1 1 0 0
+point 131 1 1 0 0
+point 132 1 1 0 0
+point 133 1 1 0 0
+point 134 1 1 0 0
+point 135 1 1 0 0
+point 136 1 1 0 0
+point 137 1 1 0 0
+point 138 1 1 0 0
+point 139 1 1 0 0
+point 140 1 1 0 0
+point 141 1 1 0 0
+point 142 1 1 0 0
+point 143 1 1 0 0
+point 144 1 1 0 0
+point 145 1 1 0 0
+point 146 1 1 0 0
+point 147 1 1 0 0
+point 148 1 1 0 0
+point 149 1 1 0 0
+point 150 1 1 0 0
+point 151 1 1 0 0
+point 152 1 1 0 0
+point 153 1 1 0 0
+point 154 1 1 0 0
+point 155 1 1 0 0
+point 156 1 1 0 0
+point 157 1 1 0 0
+point 158 1 1 0 0
+point 159 1 1 0 0
+point 160 1 1 0 0
+point 161 1 1 0 0
+point 162 1 1 0 0
+point 163 1 1 0 0
+point 164 1 1 0 0
+point 165 1 1 0 0
+point 166 1 1 0 0
+point 167 1 1 0 0
+point 168 1 1 0 0
+point 169 1 1 0 0
+point 170 1 1 0 0
+point 171 1 1 0 0
+point 172 1 1 0 0
+point 173 1 1 0 0
+point 174 1 1 0 0
+point 175 1 1 0 0
+point 176 1 1 0 0
+point 177 1 1 0 0
+point 178 1 1 0 0
+point 179 1 1 0 0
+point 180 1 1 0 0
+point 181 1 1 0 0
+point 182 1 1 0 0
+point 183 1 1 0 0
+point 184 1 1 0 0
+point 185 1 1 0 0
+point 186 1 1 0 0
+point 187 1 1 0 0
+point 188 1 1 0 0
+point 189 1 1 0 0
+point 190 1 1 0 0
+point 191 1 1 0 0
+point 192 1 1 0 0
+point 193 1 1 0 0
+point 194 1 1 0 0
+point 195 1 1 0 0
+point 196 1 1 0 0
+point 197 1 1 0 0
+point 198 1 1 0 0
+point 199 1 1 0 0
+point 200 1 1 0 0
+point 201 1 1 0 0
+point 202 1 1 0 0
+point 203 1 1 0 0
+point 204 1 1 0 0
+point 205 1 1 0 0
+point 206 1 1 0 0
+point 207 1 1 0 0
+point 208 1 1 0 0
+point 209 1 1 0 0
+point 210 1 1 0 0
+point 211 1 1 0 0
+point 212 1 1 0 0
+point 213 1 1 0 0
+point 214 1 1 0 0
+point 215 1 1 0 0
+point 216 1 1 0 0
+point 217 1 1 0 0
+point 218 1 1 0 0
+point 219 1 1 0 0
+point 220 1 1 0 0
+point 221 1 1 0 0
+point 222 1 1 0 0
+point 223 1 1 0 0
+point 224 1 1 0 0
+point 225 1 1 0 0
+point 226 1 1 0 0
+point 227 1 1 0 0
+point 228 1 1 0 0
+point 229 1 1 0 0
+point 230 1 1 0 0
+point 231 1 1 0 0
+point 232 1 1 0 0
+point 233 1 1 0 0
+point 234 1 1 0 0
+point 235 1 1 0 0
+point 236 1 1 0 0
+point 237 1 1 0 0
+point 238 1 1 0 0
+point 239 1 1 0 0
+point 240 1 1 0 0
+point 241 1 1 0 0
+point 242 1 1 0 0
+point 243 1 1 0 0
+point 244 1 1 0 0
+point 245 1 1 0 0
+point 246 1 1 0 0
+point 247 1 1 0 0
+point 248 1 1 0 0
+point 249 1 1 0 0
+point 250 1 1 0 0
+point 251 1 1 0 0
+point 252 1 1 0 0
+point 253 1 1 0 0
+point 254 1 1 0 0
+point 255 1 1 0 0
+point 256 1 1 0 0
+point 257 1 1 0 0
+point 258 1 1 0 0
+point 259 1 1 0 0
+type SIMU
+point 0 1 1 0 0
+point 1 1 1 7.17031E-011 0
+point 2 1 1 8.30519E-011 0
+point 3 1 1 9.28371E-011 0
+point 4 1 1 1.02422E-010 0
+point 5 1 1 1.1195E-010 0
+point 6 1 1 1.21456E-010 0
+point 7 1 1 1.30951E-010 0
+point 8 1 1 1.40441E-010 0
+point 9 1 1 1.49928E-010 0
+point 10 1 1 1.59415E-010 0
+point 11 1 1 1.68901E-010 0
+point 12 1 1 1.78388E-010 0
+point 13 1 1 1.87875E-010 0
+point 14 1 1 1.97364E-010 0
+point 15 1 1 2.06854E-010 0
+point 16 1 1 2.16345E-010 0
+point 17 1 1 2.25838E-010 0
+point 18 1 1 2.35333E-010 0
+point 19 1 1 2.44829E-010 0
+point 20 1 1 2.54326E-010 0
+point 21 1 1 2.63826E-010 0
+point 22 1 1 2.73327E-010 0
+point 23 1 1 2.8283E-010 0
+point 24 1 1 2.92335E-010 0
+point 25 1 1 3.01841E-010 0
+point 26 1 1 0 0
+point 27 1 1 6.95474E-009 0
+point 28 1 1 8.05123E-009 0
+point 29 1 1 8.99225E-009 0
+point 30 1 1 9.91342E-009 0
+point 31 1 1 1.08289E-008 0
+point 32 1 1 1.17422E-008 0
+point 33 1 1 1.26544E-008 0
+point 34 1 1 1.35661E-008 0
+point 35 1 1 1.44775E-008 0
+point 36 1 1 1.53888E-008 0
+point 37 1 1 1.63001E-008 0
+point 38 1 1 1.72114E-008 0
+point 39 1 1 1.81228E-008 0
+point 40 1 1 1.90342E-008 0
+point 41 1 1 1.99458E-008 0
+point 42 1 1 2.08575E-008 0
+point 43 1 1 2.17693E-008 0
+point 44 1 1 2.26813E-008 0
+point 45 1 1 2.35934E-008 0
+point 46 1 1 2.45056E-008 0
+point 47 1 1 2.5418E-008 0
+point 48 1 1 2.63306E-008 0
+point 49 1 1 2.72433E-008 0
+point 50 1 1 2.81562E-008 0
+point 51 1 1 2.90693E-008 0
+point 52 1 1 0 0
+point 53 1 1 3.8879E-007 0
+point 54 1 1 4.59152E-007 0
+point 55 1 1 5.10186E-007 0
+point 56 1 1 5.58957E-007 0
+point 57 1 1 6.07069E-007 0
+point 58 1 1 6.54905E-007 0
+point 59 1 1 7.02601E-007 0
+point 60 1 1 7.50216E-007 0
+point 61 1 1 7.97784E-007 0
+point 62 1 1 8.45321E-007 0
+point 63 1 1 8.92838E-007 0
+point 64 1 1 9.40343E-007 0
+point 65 1 1 9.8784E-007 0
+point 66 1 1 1.03533E-006 0
+point 67 1 1 1.08282E-006 0
+point 68 1 1 1.13031E-006 0
+point 69 1 1 1.1778E-006 0
+point 70 1 1 1.22529E-006 0
+point 71 1 1 1.27279E-006 0
+point 72 1 1 1.32028E-006 0
+point 73 1 1 1.36779E-006 0
+point 74 1 1 1.41529E-006 0
+point 75 1 1 1.4628E-006 0
+point 76 1 1 1.51032E-006 0
+point 77 1 1 1.55784E-006 0
+point 78 1 1 0 0
+point 79 1 1 3.41916E-006 0
+point 80 1 1 4.82652E-006 0
+point 81 1 1 5.44149E-006 0
+point 82 1 1 5.89297E-006 0
+point 83 1 1 6.30066E-006 0
+point 84 1 1 6.69031E-006 0
+point 85 1 1 7.07069E-006 0
+point 86 1 1 7.44568E-006 0
+point 87 1 1 7.81723E-006 0
+point 88 1 1 8.18648E-006 0
+point 89 1 1 8.55409E-006 0
+point 90 1 1 8.92051E-006 0
+point 91 1 1 9.28604E-006 0
+point 92 1 1 9.65088E-006 0
+point 93 1 1 1.00152E-005 0
+point 94 1 1 1.0379E-005 0
+point 95 1 1 1.07425E-005 0
+point 96 1 1 1.11058E-005 0
+point 97 1 1 1.14688E-005 0
+point 98 1 1 1.18316E-005 0
+point 99 1 1 1.21942E-005 0
+point 100 1 1 1.25567E-005 0
+point 101 1 1 1.2919E-005 0
+point 102 1 1 1.32813E-005 0
+point 103 1 1 1.36435E-005 0
+point 104 1 1 0 0
+point 105 1 1 7.55367E-006 0
+point 106 1 1 1.18128E-005 0
+point 107 1 1 1.40463E-005 0
+point 108 1 1 1.5344E-005 0
+point 109 1 1 1.63251E-005 0
+point 110 1 1 1.71838E-005 0
+point 111 1 1 1.79837E-005 0
+point 112 1 1 1.87509E-005 0
+point 113 1 1 1.94982E-005 0
+point 114 1 1 2.02323E-005 0
+point 115 1 1 2.09573E-005 0
+point 116 1 1 2.16758E-005 0
+point 117 1 1 2.23895E-005 0
+point 118 1 1 2.30994E-005 0
+point 119 1 1 2.38065E-005 0
+point 120 1 1 2.45112E-005 0
+point 121 1 1 2.52141E-005 0
+point 122 1 1 2.59154E-005 0
+point 123 1 1 2.66155E-005 0
+point 124 1 1 2.73146E-005 0
+point 125 1 1 2.80127E-005 0
+point 126 1 1 2.871E-005 0
+point 127 1 1 2.94067E-005 0
+point 128 1 1 3.01029E-005 0
+point 129 1 1 3.07985E-005 0
+point 130 1 1 0 0
+point 131 1 1 1.15883E-005 0
+point 132 1 1 1.8837E-005 0
+point 133 1 1 2.32198E-005 0
+point 134 1 1 2.58022E-005 0
+point 135 1 1 2.75126E-005 0
+point 136 1 1 2.8865E-005 0
+point 137 1 1 3.00536E-005 0
+point 138 1 1 3.11558E-005 0
+point 139 1 1 3.22071E-005 0
+point 140 1 1 3.3226E-005 0
+point 141 1 1 3.42231E-005 0
+point 142 1 1 3.52046E-005 0
+point 143 1 1 3.61749E-005 0
+point 144 1 1 3.71366E-005 0
+point 145 1 1 3.80917E-005 0
+point 146 1 1 3.90416E-005 0
+point 147 1 1 3.99873E-005 0
+point 148 1 1 4.09297E-005 0
+point 149 1 1 4.18692E-005 0
+point 150 1 1 4.28064E-005 0
+point 151 1 1 4.37416E-005 0
+point 152 1 1 4.46751E-005 0
+point 153 1 1 4.56072E-005 0
+point 154 1 1 4.65381E-005 0
+point 155 1 1 4.74678E-005 0
+point 156 1 1 0 0
+point 157 1 1 1.55301E-005 0
+point 158 1 1 2.57562E-005 0
+point 159 1 1 3.24171E-005 0
+point 160 1 1 3.65954E-005 0
+point 161 1 1 3.92294E-005 0
+point 162 1 1 4.11301E-005 0
+point 163 1 1 4.27003E-005 0
+point 164 1 1 4.41032E-005 0
+point 165 1 1 4.54114E-005 0
+point 166 1 1 4.66609E-005 0
+point 167 1 1 4.78717E-005 0
+point 168 1 1 4.90557E-005 0
+point 169 1 1 5.02203E-005 0
+point 170 1 1 5.13705E-005 0
+point 171 1 1 5.25096E-005 0
+point 172 1 1 5.36401E-005 0
+point 173 1 1 5.47637E-005 0
+point 174 1 1 5.58818E-005 0
+point 175 1 1 5.69953E-005 0
+point 176 1 1 5.81049E-005 0
+point 177 1 1 5.92114E-005 0
+point 178 1 1 6.03152E-005 0
+point 179 1 1 6.14167E-005 0
+point 180 1 1 6.25162E-005 0
+point 181 1 1 6.3614E-005 0
+point 182 1 1 0 0
+point 183 1 1 1.93957E-005 0
+point 184 1 1 3.25731E-005 0
+point 185 1 1 4.15391E-005 0
+point 186 1 1 4.74688E-005 0
+point 187 1 1 5.12129E-005 0
+point 188 1 1 5.37372E-005 0
+point 189 1 1 5.56988E-005 0
+point 190 1 1 5.73851E-005 0
+point 191 1 1 5.89205E-005 0
+point 192 1 1 6.03652E-005 0
+point 193 1 1 6.17514E-005 0
+point 194 1 1 6.30975E-005 0
+point 195 1 1 6.44152E-005 0
+point 196 1 1 6.57119E-005 0
+point 197 1 1 6.69928E-005 0
+point 198 1 1 6.82613E-005 0
+point 199 1 1 6.95201E-005 0
+point 200 1 1 7.0771E-005 0
+point 201 1 1 7.20155E-005 0
+point 202 1 1 7.32548E-005 0
+point 203 1 1 7.44895E-005 0
+point 204 1 1 7.57206E-005 0
+point 205 1 1 7.69485E-005 0
+point 206 1 1 7.81736E-005 0
+point 207 1 1 7.93963E-005 0
+point 208 1 1 0 0
+point 209 1 1 2.31873E-005 0
+point 210 1 1 3.92832E-005 0
+point 211 1 1 5.05525E-005 0
+point 212 1 1 5.82992E-005 0
+point 213 1 1 6.33014E-005 0
+point 214 1 1 6.65345E-005 0
+point 215 1 1 6.89084E-005 0
+point 216 1 1 7.08711E-005 0
+point 217 1 1 7.26152E-005 0
+point 218 1 1 7.42313E-005 0
+point 219 1 1 7.57664E-005 0
+point 220 1 1 7.7247E-005 0
+point 221 1 1 7.86894E-005 0
+point 222 1 1 8.01039E-005 0
+point 223 1 1 8.14974E-005 0
+point 224 1 1 8.28749E-005 0
+point 225 1 1 8.42396E-005 0
+point 226 1 1 8.55942E-005 0
+point 227 1 1 8.69406E-005 0
+point 228 1 1 8.82802E-005 0
+point 229 1 1 8.96141E-005 0
+point 230 1 1 9.09432E-005 0
+point 231 1 1 9.22683E-005 0
+point 232 1 1 9.35899E-005 0
+point 233 1 1 9.49086E-005 0
+point 234 1 1 0 0
+point 235 1 1 2.69056E-005 0
+point 236 1 1 4.58838E-005 0
+point 237 1 1 5.9444E-005 0
+point 238 1 1 6.90319E-005 0
+point 239 1 1 7.53976E-005 0
+point 240 1 1 7.94274E-005 0
+point 241 1 1 8.22426E-005 0
+point 242 1 1 8.44819E-005 0
+point 243 1 1 8.64236E-005 0
+point 244 1 1 8.81949E-005 0
+point 245 1 1 8.98604E-005 0
+point 246 1 1 9.1456E-005 0
+point 247 1 1 9.3003E-005 0
+point 248 1 1 9.4515E-005 0
+point 249 1 1 9.60008E-005 0
+point 250 1 1 9.74666E-005 0
+point 251 1 1 9.89168E-005 0
+point 252 1 1 0.000100355 0
+point 253 1 1 0.000101782 0
+point 254 1 1 0.000103202 0
+point 255 1 1 0.000104614 0
+point 256 1 1 0.000106021 0
+point 257 1 1 0.000107423 0
+point 258 1 1 0.000108821 0
+point 259 1 1 0.000110215 0
+}
+}
+list PLOT "id_vd"
+}
+LINK PLOT "id_vd" "711.501"
+{
+View plot_window 0 "762,400,13293,10089"
+View draw_ds 0 "B,1649,0"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vd"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" ""
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "id.m"
+element "Y Data 1" "id.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "id"
+member SWEEP "vd"
+}
+data "711.501"
+{
+}
+}
+LINK DAT "c_g_dsb" "711.501"
+{
+View in_out 0 "1.6204999909684 7177 3066"
+View plot 0 "1.1397058823529 2122 3890"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 P142 P209 C10"
+element 0 "Name" "Connection"
+element 0 "Value" "D_S_B  G  D_S_B  D_S_B"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "v_dsb_g" "711.501"
+{
+View draw_ds 0 "B,1595,166"
+View block_edit 0 "0,0"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "D_S_B"
+element "- Node" "G"
+element "Unit" "CM"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" "-1.000 "
+element "Stop" " 1.000 "
+element "# of Points" "26"
+element "Step Size" " 80.00m"
+}
+}
+list PLOT "cgg"
+}
+LINK OUT "c_dsb_g" "711.501"
+{
+View block_edit 0 "0,-1"
+View draw_ds 0 "B,3902,359"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "D_S_B"
+element "Low Node" "G"
+}
+dataset
+{
+datasize BOTH 26 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+type SIMU
+point 0 1 1 1.66351E-016 0
+point 1 1 1 1.66368E-016 0
+point 2 1 1 1.66162E-016 0
+point 3 1 1 1.64472E-016 0
+point 4 1 1 1.54029E-016 0
+point 5 1 1 1.13115E-016 0
+point 6 1 1 6.13991E-017 0
+point 7 1 1 4.42222E-017 0
+point 8 1 1 4.23119E-017 0
+point 9 1 1 4.34E-017 0
+point 10 1 1 4.51294E-017 0
+point 11 1 1 4.717E-017 0
+point 12 1 1 4.95238E-017 0
+point 13 1 1 5.2262E-017 0
+point 14 1 1 5.54937E-017 0
+point 15 1 1 5.93749E-017 0
+point 16 1 1 6.41325E-017 0
+point 17 1 1 7.01007E-017 0
+point 18 1 1 7.77713E-017 0
+point 19 1 1 8.78253E-017 0
+point 20 1 1 1.00995E-016 0
+point 21 1 1 1.17311E-016 0
+point 22 1 1 1.34533E-016 0
+point 23 1 1 1.48431E-016 0
+point 24 1 1 1.56945E-016 0
+point 25 1 1 1.61356E-016 0
+}
+}
+list PLOT "cgg"
+}
+LINK PLOT "cgg" "711.501"
+{
+View draw_ds 0 "B,0,0"
+View plot_window 0 "130,402,13514,10127"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "v_dsb_g"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" ""
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "c_dsb_g.M"
+element "Y Data 1" "c_dsb_g.S"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 0
+}
+member OUT "c_dsb_g"
+member SWEEP "v_dsb_g"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4275.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "High Res" "No"
+element 0 "Meas Freq (KHz)" "1000"
+element 0 "Init Command" ""
+}
+}
+}
+}
+LINK DUT "_________________________________2" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+param W " 400.0n"
+param L " 280.0n"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+connpair "D_S_B" ""
+connpair "D_S" ""
+}
+}
+}
+}
+LINK DUT "MOS_CV" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C15 C15"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P15 P100 P100 P100 P100 P100 P100 C13"
+param W " 400.0n"
+param L " 280.0n"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+connpair "D_S_B" ""
+connpair "D_S" ""
+}
+}
+}
+LINK DAT "c_b_d" "711.501"
+{
+View in_out 0 "3.9614981665794 17545 7496"
+View plot 0 "1.233893101363 5571 4178"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 P495 C10"
+element 0 "Name" "!Connection"
+element 0 "Value" "not required here, we use the default of the netlist !!!"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vbd" "711.501"
+{
+View draw_ds 0 "B,3334,166"
+View block_edit 0 "0,38"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "B"
+element "- Node" "D"
+element "Unit" "CM"
+element "Compliance" " 10.00m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" "-2.000 "
+element "Stop" " 200.0m"
+element "# of Points" "23"
+element "Step Size" " 100.0m"
+}
+}
+list PLOT "_cbd_"
+}
+LINK SWEEP "vs" "711.501"
+{
+View draw_ds 0 "B,5422,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "S"
+element "- Node" "GROUND"
+element "Unit" "SMU3"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vg" "711.501"
+{
+View draw_ds 0 "B,7556,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "GROUND"
+element "Unit" "SMU2"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK OUT "cbd" "711.501"
+{
+View draw_ds 0 "B,9690,166"
+View block_edit 0 "0,73"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "B"
+element "Low Node" "D"
+}
+dataset
+{
+datasize BOTH 23 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+type SIMU
+point 0 1 1 7.02759E-031 0
+point 1 1 1 1.05953E-030 0
+point 2 1 1 1.60482E-030 0
+point 3 1 1 2.44108E-030 0
+point 4 1 1 3.76216E-030 0
+point 5 1 1 5.87766E-030 0
+point 6 1 1 9.26018E-030 0
+point 7 1 1 1.47639E-029 0
+point 8 1 1 2.38789E-029 0
+point 9 1 1 3.91841E-029 0
+point 10 1 1 6.52685E-029 0
+point 11 1 1 1.10577E-028 0
+point 12 1 1 1.90869E-028 0
+point 13 1 1 3.3624E-028 0
+point 14 1 1 6.06005E-028 0
+point 15 1 1 1.12036E-027 0
+point 16 1 1 2.13179E-027 0
+point 17 1 1 4.19196E-027 0
+point 18 1 1 8.56279E-027 0
+point 19 1 1 1.82906E-026 0
+point 20 1 1 4.12161E-026 0
+point 21 1 1 7.58037E-026 0
+point 22 1 1 1.29942E-025 0
+}
+}
+list PLOT "_cbd_"
+}
+LINK PLOT "_cbd_" "711.501"
+{
+View plot_window 0 "565,543,11156,10133,{AUTO|XY|-1.000n, 1.000n,4,5: 0.000 , 3.000p,6,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 0 "B,0,5"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vbd"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "CBD"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "cbd.m"
+element "Y Data 1" "cbd.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "cbd"
+member SWEEP "vbd"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentE5270.4000.17" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Enable HRSMU1 Range Manager" "No"
+element 0 "HRSMU1 A/D converter" "R"
+element 0 "HRSMU1 In/Out Range" "0/11"
+element 0 "Enable MPSMU2 Range Manager" "No"
+element 0 "MPSMU2 A/D converter" "R"
+element 0 "MPSMU2 In/Out Range" "0/11"
+element 0 "Enable MPSMU3 Range Manager" "No"
+element 0 "MPSMU3 A/D converter" "R"
+element 0 "MPSMU3 In/Out Range" "0/11"
+element 0 "Enable MPSMU4 Range Manager" "No"
+element 0 "MPSMU4 A/D converter" "R"
+element 0 "MPSMU4 In/Out Range" "0/11"
+element 0 "Enable MPSMU5 Range Manager" "No"
+element 0 "MPSMU5 A/D converter" "R"
+element 0 "MPSMU5 In/Out Range" "0/11"
+element 0 "Enable MPSMU6 Range Manager" "No"
+element 0 "MPSMU6 A/D converter" "R"
+element 0 "MPSMU6 In/Out Range" "0/11"
+element 0 "Enable MPSMU7 Range Manager" "No"
+element 0 "MPSMU7 A/D converter" "R"
+element 0 "MPSMU7 In/Out Range" "0/11"
+element 0 "Enable MPSMU8 Range Manager" "No"
+element 0 "MPSMU8 A/D converter" "R"
+element 0 "MPSMU8 In/Out Range" "0/11"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4142.4000.24" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Range" "0"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "Yes"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Module Control" ""
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+View par_var_table 0 " C15"
+element 0 "Hold Time" " 20.00m"
+element 0 "Delay Time" " 20.00m"
+element 0 "Meas Freq" " 10.00K"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "0"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentB1500.4000.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "CMU Meas Freq" " 1.000MEG"
+element 0 "CMU Osc Level" " 10.00m"
+element 0 "CMU Avr. Factor (Integ Time = L)" "16"
+element 0 "Correction ON" "Yes"
+element 0 "Sampling Mode" "No"
+element 0 "Sampling Output Mode" "Sim"
+element 0 "Sequential Sampling Unit" ""
+element 0 "Base Hold Time" " 0.000 "
+element 0 "Bias Hold Time" " 0.000 "
+element 0 "Binary Search Measurement" "No"
+element 0 "Binary Search Source Control Mode" "0,1,1"
+element 0 "Binary Search Condition" "0,0.001"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period (common)" " 10.00m"
+element 0 "Pulse 2 Unit" ""
+element 0 "Pulse 2 Base" " 0.000 "
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4275.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "High Res" "No"
+element 0 "Meas Freq (KHz)" "1000"
+element 0 "Init Command" ""
+}
+TABLE "HP4145.4000.25" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Init Command" ""
+}
+TABLE "HP4280.7.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 3.000m"
+element 0 "Delay Time" " 3.000m"
+element 0 "Meas Speed" "S"
+element 0 "Sig Level(10,30) " "10"
+element 0 "High Res" "No"
+element 0 "Conn Mode" "10"
+element 0 "Init Command" ""
+}
+}
+}
+LINK DAT "c_b_s" "711.501"
+{
+View in_out 0 "3.6172860455908 16020 6845"
+View plot 0 "1.0750354358611 2122 3648"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 P514 C10"
+element 0 "Name" "!Connection"
+element 0 "Value" "not required here, we use the default of the netlist !!!"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vbs" "711.501"
+{
+View draw_ds 0 "B,3052,166"
+View block_edit 0 "0,38"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "B"
+element "- Node" "S"
+element "Unit" "CM"
+element "Compliance" " 10.00m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" "-2.000 "
+element "Stop" " 200.0m"
+element "# of Points" "23"
+element "Step Size" " 100.0m"
+}
+}
+list PLOT "_cbs_"
+}
+LINK SWEEP "vg" "711.501"
+{
+View draw_ds 0 "B,5140,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "GROUND"
+element "Unit" "SMU2"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vd" "711.501"
+{
+View draw_ds 0 "B,7274,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "D"
+element "- Node" "GROUND"
+element "Unit" "SMU1"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK OUT "cbs" "711.501"
+{
+View draw_ds 0 "B,9408,166"
+View block_edit 0 "0,93"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "B"
+element "Low Node" "S"
+}
+dataset
+{
+datasize BOTH 23 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+type SIMU
+point 0 1 1 7.06331E-031 0
+point 1 1 1 1.05863E-030 0
+point 2 1 1 1.60082E-030 0
+point 3 1 1 2.44361E-030 0
+point 4 1 1 3.76767E-030 0
+point 5 1 1 5.87159E-030 0
+point 6 1 1 9.25562E-030 0
+point 7 1 1 1.47701E-029 0
+point 8 1 1 2.38835E-029 0
+point 9 1 1 3.91756E-029 0
+point 10 1 1 6.52629E-029 0
+point 11 1 1 1.10576E-028 0
+point 12 1 1 1.9086E-028 0
+point 13 1 1 3.36246E-028 0
+point 14 1 1 6.06005E-028 0
+point 15 1 1 1.12036E-027 0
+point 16 1 1 2.13179E-027 0
+point 17 1 1 4.19195E-027 0
+point 18 1 1 8.56279E-027 0
+point 19 1 1 1.82906E-026 0
+point 20 1 1 4.12161E-026 0
+point 21 1 1 7.58037E-026 0
+point 22 1 1 1.29942E-025 0
+}
+}
+list PLOT "_cbs_"
+}
+LINK PLOT "_cbs_" "711.501"
+{
+View plot_window 0 "633,13,9911,9000,{AUTO|XY|-1.000n, 1.000n,4,5: 0.000 , 3.000p,6,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 0 "B,0,0"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vbs"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "CBS"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "cbs.m"
+element "Y Data 1" "cbs.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "cbs"
+member SWEEP "vbs"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentE5270.4000.17" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Enable HRSMU1 Range Manager" "No"
+element 0 "HRSMU1 A/D converter" "R"
+element 0 "HRSMU1 In/Out Range" "0/11"
+element 0 "Enable MPSMU2 Range Manager" "No"
+element 0 "MPSMU2 A/D converter" "R"
+element 0 "MPSMU2 In/Out Range" "0/11"
+element 0 "Enable MPSMU3 Range Manager" "No"
+element 0 "MPSMU3 A/D converter" "R"
+element 0 "MPSMU3 In/Out Range" "0/11"
+element 0 "Enable MPSMU4 Range Manager" "No"
+element 0 "MPSMU4 A/D converter" "R"
+element 0 "MPSMU4 In/Out Range" "0/11"
+element 0 "Enable MPSMU5 Range Manager" "No"
+element 0 "MPSMU5 A/D converter" "R"
+element 0 "MPSMU5 In/Out Range" "0/11"
+element 0 "Enable MPSMU6 Range Manager" "No"
+element 0 "MPSMU6 A/D converter" "R"
+element 0 "MPSMU6 In/Out Range" "0/11"
+element 0 "Enable MPSMU7 Range Manager" "No"
+element 0 "MPSMU7 A/D converter" "R"
+element 0 "MPSMU7 In/Out Range" "0/11"
+element 0 "Enable MPSMU8 Range Manager" "No"
+element 0 "MPSMU8 A/D converter" "R"
+element 0 "MPSMU8 In/Out Range" "0/11"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4142.4000.24" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Range" "0"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "Yes"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Module Control" ""
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+View par_var_table 0 " C15"
+element 0 "Hold Time" " 20.00m"
+element 0 "Delay Time" " 20.00m"
+element 0 "Meas Freq" " 10.00K"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "0"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentB1500.4000.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "CMU Meas Freq" " 1.000MEG"
+element 0 "CMU Osc Level" " 10.00m"
+element 0 "CMU Avr. Factor (Integ Time = L)" "16"
+element 0 "Correction ON" "Yes"
+element 0 "Sampling Mode" "No"
+element 0 "Sampling Output Mode" "Sim"
+element 0 "Sequential Sampling Unit" ""
+element 0 "Base Hold Time" " 0.000 "
+element 0 "Bias Hold Time" " 0.000 "
+element 0 "Binary Search Measurement" "No"
+element 0 "Binary Search Source Control Mode" "0,1,1"
+element 0 "Binary Search Condition" "0,0.001"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period (common)" " 10.00m"
+element 0 "Pulse 2 Unit" ""
+element 0 "Pulse 2 Base" " 0.000 "
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4275.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "High Res" "No"
+element 0 "Meas Freq (KHz)" "1000"
+element 0 "Init Command" ""
+}
+TABLE "HP4145.4000.25" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Init Command" ""
+}
+TABLE "HP4280.7.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 3.000m"
+element 0 "Delay Time" " 3.000m"
+element 0 "Meas Speed" "S"
+element 0 "Sig Level(10,30) " "10"
+element 0 "High Res" "No"
+element 0 "Conn Mode" "10"
+element 0 "Init Command" ""
+}
+}
+}
+LINK DAT "c_g_b" "711.501"
+{
+View in_out 0 "1.8212279402467 8066 3214"
+View plot 0 "1.0852232459249 2122 3682"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 P479 C10"
+element 0 "Name" "!Connection"
+element 0 "Value" "not required here, we use the default of the netlist !!!"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vgb" "711.501"
+{
+View draw_ds 0 "B,166,166"
+View block_edit 0 "0,38"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "B"
+element "Unit" "CM"
+element "Compliance" " 10.00m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" "-2.000 "
+element "Stop" " 200.0m"
+element "# of Points" "23"
+element "Step Size" " 100.0m"
+}
+}
+list PLOT "_cox_"
+}
+LINK SWEEP "vs" "711.501"
+{
+View draw_ds 0 "B,2254,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "S"
+element "- Node" "GROUND"
+element "Unit" "SMU3"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vd" "711.501"
+{
+View draw_ds 0 "B,4388,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "D"
+element "- Node" "GROUND"
+element "Unit" "SMU1"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK OUT "cox" "711.501"
+{
+View draw_ds 0 "B,6522,166"
+View block_edit 0 "0,77"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "G"
+element "Low Node" "B"
+}
+dataset
+{
+datasize BOTH 23 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+type SIMU
+point 0 1 1 3.31766E-016 0
+point 1 1 1 3.30456E-016 0
+point 2 1 1 3.28949E-016 0
+point 3 1 1 3.27226E-016 0
+point 4 1 1 3.25266E-016 0
+point 5 1 1 3.23047E-016 0
+point 6 1 1 3.20547E-016 0
+point 7 1 1 3.17741E-016 0
+point 8 1 1 3.14444E-016 0
+point 9 1 1 3.10433E-016 0
+point 10 1 1 3.05335E-016 0
+point 11 1 1 2.97983E-016 0
+point 12 1 1 2.85196E-016 0
+point 13 1 1 2.60301E-016 0
+point 14 1 1 2.21006E-016 0
+point 15 1 1 1.81142E-016 0
+point 16 1 1 1.50997E-016 0
+point 17 1 1 1.30027E-016 0
+point 18 1 1 1.15175E-016 0
+point 19 1 1 1.04203E-016 0
+point 20 1 1 9.5761E-017 0
+point 21 1 1 8.90414E-017 0
+point 22 1 1 8.35434E-017 0
+}
+}
+list PLOT "_cox_"
+}
+LINK PLOT "_cox_" "711.501"
+{
+View plot_window 0 "564,15,11156,10133,{AUTO|XY|-1.000n, 1.000n,4,5: 0.000 , 3.000p,6,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 0 "B,-2663,847"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vgb"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "COX"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "cox.m"
+element "Y Data 1" "cox.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "cox"
+member SWEEP "vgb"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentE5270.4000.17" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Enable HRSMU1 Range Manager" "No"
+element 0 "HRSMU1 A/D converter" "R"
+element 0 "HRSMU1 In/Out Range" "0/11"
+element 0 "Enable MPSMU2 Range Manager" "No"
+element 0 "MPSMU2 A/D converter" "R"
+element 0 "MPSMU2 In/Out Range" "0/11"
+element 0 "Enable MPSMU3 Range Manager" "No"
+element 0 "MPSMU3 A/D converter" "R"
+element 0 "MPSMU3 In/Out Range" "0/11"
+element 0 "Enable MPSMU4 Range Manager" "No"
+element 0 "MPSMU4 A/D converter" "R"
+element 0 "MPSMU4 In/Out Range" "0/11"
+element 0 "Enable MPSMU5 Range Manager" "No"
+element 0 "MPSMU5 A/D converter" "R"
+element 0 "MPSMU5 In/Out Range" "0/11"
+element 0 "Enable MPSMU6 Range Manager" "No"
+element 0 "MPSMU6 A/D converter" "R"
+element 0 "MPSMU6 In/Out Range" "0/11"
+element 0 "Enable MPSMU7 Range Manager" "No"
+element 0 "MPSMU7 A/D converter" "R"
+element 0 "MPSMU7 In/Out Range" "0/11"
+element 0 "Enable MPSMU8 Range Manager" "No"
+element 0 "MPSMU8 A/D converter" "R"
+element 0 "MPSMU8 In/Out Range" "0/11"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4142.4000.24" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Range" "0"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "Yes"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Module Control" ""
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+View par_var_table 0 " C15"
+element 0 "Hold Time" " 20.00m"
+element 0 "Delay Time" " 20.00m"
+element 0 "Meas Freq" " 10.00K"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "0"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentB1500.4000.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "CMU Meas Freq" " 1.000MEG"
+element 0 "CMU Osc Level" " 10.00m"
+element 0 "CMU Avr. Factor (Integ Time = L)" "16"
+element 0 "Correction ON" "Yes"
+element 0 "Sampling Mode" "No"
+element 0 "Sampling Output Mode" "Sim"
+element 0 "Sequential Sampling Unit" ""
+element 0 "Base Hold Time" " 0.000 "
+element 0 "Bias Hold Time" " 0.000 "
+element 0 "Binary Search Measurement" "No"
+element 0 "Binary Search Source Control Mode" "0,1,1"
+element 0 "Binary Search Condition" "0,0.001"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period (common)" " 10.00m"
+element 0 "Pulse 2 Unit" ""
+element 0 "Pulse 2 Base" " 0.000 "
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4275.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "High Res" "No"
+element 0 "Meas Freq (KHz)" "1000"
+element 0 "Init Command" ""
+}
+TABLE "HP4145.4000.25" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Init Command" ""
+}
+TABLE "HP4280.7.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 3.000m"
+element 0 "Delay Time" " 3.000m"
+element 0 "Meas Speed" "S"
+element 0 "Sig Level(10,30) " "10"
+element 0 "High Res" "No"
+element 0 "Conn Mode" "10"
+element 0 "Init Command" ""
+}
+}
+}
+LINK DAT "c_g_ds" "711.501"
+{
+View in_out 0 "1.7869077509438 6024 3382"
+View plot 0 "2.1757618710135 2122 4060"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 P397 C10"
+element 0 "Name" "Connection"
+element 0 "Value" "D_S  G  D_S  B"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vg_ds" "711.501"
+{
+View draw_ds 0 "B,166,166"
+View block_edit 0 "0,38"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "D_S"
+element "Unit" "CM"
+element "Compliance" " 10.00m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" "-2.000 "
+element "Stop" " 2.000 "
+element "# of Points" "41"
+element "Step Size" " 100.0m"
+}
+}
+list PLOT "_cg_ds_"
+}
+LINK SWEEP "vb" "711.501"
+{
+View draw_ds 0 "B,2254,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "B"
+element "- Node" "GROUND"
+element "Unit" "SMU4"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK OUT "cg_ds" "711.501"
+{
+View draw_ds 0 "B,4388,166"
+View block_edit 0 "0,93"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "G"
+element "Low Node" "D_S"
+}
+dataset
+{
+datasize BOTH 41 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+type SIMU
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 9.86076E-032 0
+point 12 1 1 1.08468E-030 0
+point 13 1 1 1.13399E-029 0
+point 14 1 1 1.19821E-028 0
+point 15 1 1 1.26574E-027 0
+point 16 1 1 1.33706E-026 0
+point 17 1 1 1.4124E-025 0
+point 18 1 1 1.49198E-024 0
+point 19 1 1 1.57604E-023 0
+point 20 1 1 1.66484E-022 0
+point 21 1 1 1.75863E-021 0
+point 22 1 1 1.85753E-020 0
+point 23 1 1 1.96008E-019 0
+point 24 1 1 2.04737E-018 0
+point 25 1 1 1.93424E-017 0
+point 26 1 1 9.656E-017 0
+point 27 1 1 1.55222E-016 0
+point 28 1 1 1.64693E-016 0
+point 29 1 1 1.6565E-016 0
+point 30 1 1 1.65741E-016 0
+point 31 1 1 1.6575E-016 0
+point 32 1 1 1.65751E-016 0
+point 33 1 1 1.65751E-016 0
+point 34 1 1 1.65751E-016 0
+point 35 1 1 1.65751E-016 0
+point 36 1 1 1.65751E-016 0
+point 37 1 1 1.65751E-016 0
+point 38 1 1 1.65751E-016 0
+point 39 1 1 1.65751E-016 0
+point 40 1 1 1.65751E-016 0
+}
+}
+list PLOT "_cg_ds_"
+}
+LINK PLOT "_cg_ds_" "711.501"
+{
+View plot_window 0 "811,426,11150,10127"
+View draw_ds 0 "B,0,0"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vg_ds"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "C_G_DS"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "cg_ds.m"
+element "Y Data 1" "cg_ds.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "cg_ds"
+member SWEEP "vg_ds"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentE5270.4000.17" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Enable HRSMU1 Range Manager" "No"
+element 0 "HRSMU1 A/D converter" "R"
+element 0 "HRSMU1 In/Out Range" "0/11"
+element 0 "Enable MPSMU2 Range Manager" "No"
+element 0 "MPSMU2 A/D converter" "R"
+element 0 "MPSMU2 In/Out Range" "0/11"
+element 0 "Enable MPSMU3 Range Manager" "No"
+element 0 "MPSMU3 A/D converter" "R"
+element 0 "MPSMU3 In/Out Range" "0/11"
+element 0 "Enable MPSMU4 Range Manager" "No"
+element 0 "MPSMU4 A/D converter" "R"
+element 0 "MPSMU4 In/Out Range" "0/11"
+element 0 "Enable MPSMU5 Range Manager" "No"
+element 0 "MPSMU5 A/D converter" "R"
+element 0 "MPSMU5 In/Out Range" "0/11"
+element 0 "Enable MPSMU6 Range Manager" "No"
+element 0 "MPSMU6 A/D converter" "R"
+element 0 "MPSMU6 In/Out Range" "0/11"
+element 0 "Enable MPSMU7 Range Manager" "No"
+element 0 "MPSMU7 A/D converter" "R"
+element 0 "MPSMU7 In/Out Range" "0/11"
+element 0 "Enable MPSMU8 Range Manager" "No"
+element 0 "MPSMU8 A/D converter" "R"
+element 0 "MPSMU8 In/Out Range" "0/11"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4142.4000.24" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Range" "0"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "Yes"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Module Control" ""
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+View par_var_table 0 " C15"
+element 0 "Hold Time" " 20.00m"
+element 0 "Delay Time" " 20.00m"
+element 0 "Meas Freq" " 10.00K"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "0"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentB1500.4000.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "CMU Meas Freq" " 1.000MEG"
+element 0 "CMU Osc Level" " 10.00m"
+element 0 "CMU Avr. Factor (Integ Time = L)" "16"
+element 0 "Correction ON" "Yes"
+element 0 "Sampling Mode" "No"
+element 0 "Sampling Output Mode" "Sim"
+element 0 "Sequential Sampling Unit" ""
+element 0 "Base Hold Time" " 0.000 "
+element 0 "Bias Hold Time" " 0.000 "
+element 0 "Binary Search Measurement" "No"
+element 0 "Binary Search Source Control Mode" "0,1,1"
+element 0 "Binary Search Condition" "0,0.001"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period (common)" " 10.00m"
+element 0 "Pulse 2 Unit" ""
+element 0 "Pulse 2 Base" " 0.000 "
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4275.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "High Res" "No"
+element 0 "Meas Freq (KHz)" "1000"
+element 0 "Init Command" ""
+}
+TABLE "HP4145.4000.25" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Init Command" ""
+}
+TABLE "HP4280.7.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 3.000m"
+element 0 "Delay Time" " 3.000m"
+element 0 "Meas Speed" "S"
+element 0 "Sig Level(10,30) " "10"
+element 0 "High Res" "No"
+element 0 "Conn Mode" "10"
+element 0 "Init Command" ""
+}
+}
+}
+LINK DAT "c_g_dsb" "711.501"
+{
+View in_out 0 "1.0901175918065 4828 3406"
+View plot 0 "1.159417080085 2122 3926"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 P397 C10"
+element 0 "Name" "Connection"
+element 0 "Value" "D_S_B  G  D_S_B  D_S_B"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vg_dsb" "711.501"
+{
+View draw_ds 0 "B,166,166"
+View block_edit 0 "0,38"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "D_S_B"
+element "Unit" "CM"
+element "Compliance" " 10.00m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" "-2.000 "
+element "Stop" " 2.000 "
+element "# of Points" "41"
+element "Step Size" " 100.0m"
+}
+}
+list PLOT "_cg_dsb_"
+}
+LINK OUT "cg_dsb" "711.501"
+{
+View draw_ds 0 "B,3012,226"
+View block_edit 0 "0,93"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "G"
+element "Low Node" "D_S_B"
+}
+dataset
+{
+datasize BOTH 41 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+type SIMU
+point 0 1 1 1.65751E-016 0
+point 1 1 1 1.65751E-016 0
+point 2 1 1 1.65751E-016 0
+point 3 1 1 1.65751E-016 0
+point 4 1 1 1.65751E-016 0
+point 5 1 1 1.65751E-016 0
+point 6 1 1 1.65646E-016 0
+point 7 1 1 1.6542E-016 0
+point 8 1 1 1.6494E-016 0
+point 9 1 1 1.63873E-016 0
+point 10 1 1 1.61356E-016 0
+point 11 1 1 1.55282E-016 0
+point 12 1 1 1.42126E-016 0
+point 13 1 1 1.21686E-016 0
+point 14 1 1 1.00995E-016 0
+point 15 1 1 8.50455E-017 0
+point 16 1 1 7.3685E-017 0
+point 17 1 1 6.54949E-017 0
+point 18 1 1 5.93749E-017 0
+point 19 1 1 5.4632E-017 0
+point 20 1 1 5.0839E-017 0
+point 21 1 1 4.7727E-017 0
+point 22 1 1 4.51294E-017 0
+point 23 1 1 4.30367E-017 0
+point 24 1 1 4.25268E-017 0
+point 25 1 1 5.42315E-017 0
+point 26 1 1 1.13115E-016 0
+point 27 1 1 1.58447E-016 0
+point 28 1 1 1.65699E-016 0
+point 29 1 1 1.66354E-016 0
+point 30 1 1 1.66351E-016 0
+point 31 1 1 1.66295E-016 0
+point 32 1 1 1.66242E-016 0
+point 33 1 1 1.66196E-016 0
+point 34 1 1 1.66157E-016 0
+point 35 1 1 1.66122E-016 0
+point 36 1 1 1.66091E-016 0
+point 37 1 1 1.66064E-016 0
+point 38 1 1 1.66041E-016 0
+point 39 1 1 1.66019E-016 0
+point 40 1 1 1.66001E-016 0
+}
+}
+list PLOT "_cg_dsb_"
+}
+LINK PLOT "_cg_dsb_" "711.501"
+{
+View plot_window 0 "633,13,9915,8998"
+View draw_ds 0 "B,0,0"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vg_dsb"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "C_G_DSB"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "cg_dsb.m"
+element "Y Data 1" "cg_dsb.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "cg_dsb"
+member SWEEP "vg_dsb"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+View par_var_table 0 " C15"
+element 0 "Hold Time" " 20.00m"
+element 0 "Delay Time" " 20.00m"
+element 0 "Meas Freq" " 10.00K"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "0"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4275.4000.17" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "High Res" "No"
+element 0 "Meas Freq (KHz)" "1000"
+element 0 "Init Command" ""
+}
+TABLE "HP4280.7.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 3.000m"
+element 0 "Delay Time" " 3.000m"
+element 0 "Meas Speed" "S"
+element 0 "Sig Level(10,30) " "10"
+element 0 "High Res" "No"
+element 0 "Conn Mode" "10"
+element 0 "Init Command" ""
+}
+}
+}
+LINK DAT "cgd_vg_vd" "711.501"
+{
+View in_out 0 "1.6941025306791 7278 5827"
+View plot 0 "1.0872165131113 2122 3682"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C15 P397 C10"
+element 0 "Name" "!Connection"
+element 0 "Value" "not required here, we use the default of the netlist !!!"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vg" "711.501"
+{
+View draw_ds 0 "B,3436,199"
+View block_edit 0 "0,38"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "GROUND"
+element "Unit" "CM"
+element "Compliance" " 10.00m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "2"
+element "Start" " 0.000 "
+element "Stop" " 1.800 "
+element "# of Points" "7"
+element "Step Size" " 300.0m"
+}
+}
+}
+LINK SWEEP "vd" "711.501"
+{
+View block_edit 0 "0,0"
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "D"
+element "- Node" "GROUND"
+element "Unit" "SMU1"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 0.000 "
+element "Stop" " 1.800 "
+element "# of Points" "7"
+element "Step Size" " 300.0m"
+}
+}
+list PLOT "_cgd_"
+}
+LINK SWEEP "vs" "711.501"
+{
+View draw_ds 0 "B,204,3562"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "S"
+element "- Node" "GROUND"
+element "Unit" "SMU3"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vb" "711.501"
+{
+View draw_ds 0 "B,2462,3563"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "B"
+element "- Node" "GROUND"
+element "Unit" "SMU4"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK OUT "cdg" "711.501"
+{
+View draw_ds 0 "B,5734,978"
+View block_edit 0 "0,93"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "C"
+element "Unit" "CM"
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "High Node" "D"
+element "Low Node" "G"
+}
+dataset
+{
+datasize BOTH 49 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+point 41 1 1 0 0
+point 42 1 1 0 0
+point 43 1 1 0 0
+point 44 1 1 0 0
+point 45 1 1 0 0
+point 46 1 1 0 0
+point 47 1 1 0 0
+point 48 1 1 0 0
+type SIMU
+point 0 1 1 1.38932E-025 0
+point 1 1 1 7.702E-029 0
+point 2 1 1 6.24009E-030 0
+point 3 1 1 -1.93735E-030 0
+point 4 1 1 -4.03243E-030 0
+point 5 1 1 -4.79977E-030 0
+point 6 1 1 -5.14555E-030 0
+point 7 1 1 9.81945E-022 0
+point 8 1 1 5.41103E-025 0
+point 9 1 1 4.0839E-026 0
+point 10 1 1 -1.6959E-026 0
+point 11 1 1 -3.17677E-026 0
+point 12 1 1 -3.71921E-026 0
+point 13 1 1 -3.9637E-026 0
+point 14 1 1 5.655E-018 0
+point 15 1 1 3.2809E-021 0
+point 16 1 1 2.74387E-022 0
+point 17 1 1 -7.19918E-023 0
+point 18 1 1 -1.60628E-022 0
+point 19 1 1 -1.93065E-022 0
+point 20 1 1 -2.0767E-022 0
+point 21 1 1 1.30183E-016 0
+point 22 1 1 9.3247E-019 0
+point 23 1 1 8.61507E-020 0
+point 24 1 1 1.92223E-020 0
+point 25 1 1 4.3955E-021 0
+point 26 1 1 -6.24642E-022 0
+point 27 1 1 -2.77464E-021 0
+point 28 1 1 1.47394E-016 0
+point 29 1 1 1.24335E-017 0
+point 30 1 1 5.52078E-019 0
+point 31 1 1 1.05791E-019 0
+point 32 1 1 3.30297E-020 0
+point 33 1 1 1.18973E-020 0
+point 34 1 1 3.64314E-021 0
+point 35 1 1 1.52353E-016 0
+point 36 1 1 6.03775E-017 0
+point 37 1 1 2.71225E-018 0
+point 38 1 1 3.46804E-019 0
+point 39 1 1 9.5115E-020 0
+point 40 1 1 3.55646E-020 0
+point 41 1 1 1.48677E-020 0
+point 42 1 1 1.54761E-016 0
+point 43 1 1 9.9117E-017 0
+point 44 1 1 1.3565E-017 0
+point 45 1 1 1.09976E-018 0
+point 46 1 1 2.36201E-019 0
+point 47 1 1 8.06351E-020 0
+point 48 1 1 3.40357E-020 0
+}
+}
+list PLOT "_cgd_"
+}
+LINK PLOT "_cgd_" "711.501"
+{
+View plot_window 0 "633,13,9911,9000,{AUTO|XY|-1.000n, 1.000n,4,5: 0.000 , 3.000p,6,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 0 "B,-2629,13"
+TABLE "Plot Options" "711.501"
+{
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "A"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "A"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vd"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "CGD"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "cdg.m"
+element "Y Data 1" "cdg.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "cdg"
+member SWEEP "vd"
+}
+data "711.501"
+{
+TABLE "AgilentE4980.4000.18" "711.501"
+{
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Meas Freq" " 1.000MEG"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "1"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "AgilentE5270.4000.17" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Enable HRSMU1 Range Manager" "No"
+element 0 "HRSMU1 A/D converter" "R"
+element 0 "HRSMU1 In/Out Range" "0/11"
+element 0 "Enable MPSMU2 Range Manager" "No"
+element 0 "MPSMU2 A/D converter" "R"
+element 0 "MPSMU2 In/Out Range" "0/11"
+element 0 "Enable MPSMU3 Range Manager" "No"
+element 0 "MPSMU3 A/D converter" "R"
+element 0 "MPSMU3 In/Out Range" "0/11"
+element 0 "Enable MPSMU4 Range Manager" "No"
+element 0 "MPSMU4 A/D converter" "R"
+element 0 "MPSMU4 In/Out Range" "0/11"
+element 0 "Enable MPSMU5 Range Manager" "No"
+element 0 "MPSMU5 A/D converter" "R"
+element 0 "MPSMU5 In/Out Range" "0/11"
+element 0 "Enable MPSMU6 Range Manager" "No"
+element 0 "MPSMU6 A/D converter" "R"
+element 0 "MPSMU6 In/Out Range" "0/11"
+element 0 "Enable MPSMU7 Range Manager" "No"
+element 0 "MPSMU7 A/D converter" "R"
+element 0 "MPSMU7 In/Out Range" "0/11"
+element 0 "Enable MPSMU8 Range Manager" "No"
+element 0 "MPSMU8 A/D converter" "R"
+element 0 "MPSMU8 In/Out Range" "0/11"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4142.4000.24" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Range" "0"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "Yes"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Module Control" ""
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4284.4000.17" "711.501"
+{
+View par_var_table 0 " C15"
+element 0 "Hold Time" " 20.00m"
+element 0 "Delay Time" " 20.00m"
+element 0 "Meas Freq" " 10.00K"
+element 0 "Integ Time" "M"
+element 0 "Osc Level" " 10.00m"
+element 0 "Osc Mode [V,I]" "V"
+element 0 "Averaging [1-256]" "1"
+element 0 "Cable Length" "0"
+element 0 "Delay for Timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4145.4000.25" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Init Command" ""
+}
+TABLE "HP4280.7.18" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 3.000m"
+element 0 "Delay Time" " 3.000m"
+element 0 "Meas Speed" "S"
+element 0 "Sig Level(10,30) " "10"
+element 0 "High Res" "No"
+element 0 "Conn Mode" "10"
+element 0 "Init Command" ""
+}
+}
+}
+}
+}

@@ -1,0 +1,104 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>Spice Interpretation of S-Parameters</h3>
+<h4>HANDLING UNPHYSICAL PI OR TEE IMPEDANCES</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+This chapter covers the case, when neither a PI, nor a TEE schematic provide physically correct impedances.
+In other words: where the impedances cannot be interpreted by Spice components with realistic parameter values.
+Examples are:
+<ul>
+    <li>PI or TEE schematics with additional, external components</li>
+    <li>PI or TEE need to be enhanced by additional inner nodes.</li>
+</ul>
+<br/>
+<em>PI or TEE Structures Overlaid by Additional, External Components.</em>
+<br/><br/>
+In the case of an assumed PI schematic, and if no physical Spice representation can be found for its branch impedances, an overlaying TEE can be assumed, like depicted here:
+
+<br><img src="/static/iccap/SpiceSpar/134/1.png"><br/><br/>
+If this overlay assumption is true, then, by tuning and simultaneously stripping-off these external components, the resulting impedance traces of the inner PI components ZP1Gnd, ZP1P2 and ZP2Gnd should become physical.
+<br/>
+Here a quick example of the PEL code for off-stripping external TEE components:
+<pre>
+!===strip-off external series parasitic Rx and Lx, around the inner PI schematic,
+!     from measured S_deemb
+!---convert to Zpar
+Z = TWOPORT(S_deemb.M, "S", "Z")
+
+!---subtract external series resistors and inductors from measured data
+FOR i=0 TO SIZEOF(Z)-1
+   Z.M.11[i]=Z.M.11[i]-(R1_ext + j*2*PI*freq[i]*L1_ext)
+   Z.M.22[i]=Z.M.22[i]-(R2_ext + j*2*PI*freq[i]*L2_ext)
+NEXT i
+
+!---convert further to Ypar and inner-PI schematic
+Y_inner = TWOPORT(Z, "Z", "Y")
+...
+...
+</pre>
+<br/>
+For an assumed inner TEE, test an outer PI overlay accordingly.
+<br/><br/>
+IMPORTANT NOTE:<br/>
+Do NOT confuse this off-stripping modeling method with the de-embedding of measurement contact impedances!
+
+<br/>
+<hr/>
+<em>Spiral Inductor Modeling Challenges</em>
+<br/><br/>
+While resistor or capacitor modeling is usually achieved well with applying a PI schematic, the inductor modeling is often a bit more challenging, due to the physical size of the component.
+<br/>
+And, most often, the challenge is the PI schematic impedance ZP1P2 between both ports.<br/>
+Two examples will propose solutions to assist with modeling these impedance plots.<br/>
+<hr/>
+<em>Substrate Coupling (Eddy Current)</em>
+<br><br/>
+<table>
+    <tr>
+        <td rowspan="2"><img src="/static/iccap/SpiceSpar/134/2.png"></td>
+        <td>When ZP1P2 of the assumed PI schematic extends, for higher frequencies, into the negative ohmic range of the
+            impedance plot, as shown on the left, it could be due to Eddy Current Coupling into the wafer
+            substrate.<br/><br/>
+
+            This can be modeled with a cross-coupling between the to-ground-impedances ZP1Gnd and ZP2Gnd, as depicted
+            below, in green:
+        </td>
+    </tr>
+    <tr>
+        <td><img src="/static/iccap/SpiceSpar/134/3.png"></td>
+
+    </tr>
+
+</table>
+
+<br>
+Another possibility is <br/>
+<em>Coupling Against Metal 1</em><br/><br/>
+<table>
+    <tr>
+        <td rowspan="2"><img src="/static/iccap/SpiceSpar/134/4.png"></td>
+        <td>Quite often, this effect is even more extending into the negative ohmic range of the impedance plot, and may
+            even lead to bending the curve downwards, with increasing frequency: a contradiction to the standard PI or
+            TEE impedance modeling procedure, as described in the previous chapter.<br/><br/>
+
+            A modeling proposal is as shown below, in green:
+
+        </td>
+    </tr>
+    <tr>
+        <td><img src="/static/iccap/SpiceSpar/134/5.png"></td>
+
+    </tr>
+
+</table>
+
+<br>
+
+
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Controlling the IC-CAP netlist Parser</h2>
+<h3>ICCAP FAQ</h3>
+<br/>
+<mark>by Franz Sischka (<a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a>)</mark>
+<hr>
+<em>Purpose of the IC-CAP Netlist Parser</em>
+<br/>
+
+<br/><img src="/static/faq/iccap/netlist_parser/1.png" alt="Image"/><br/><br/>
+The modeling netlist concept of IC-CAP consists of two tabs: 'Circuit' and 'Model Parameters'.<br/>
+While 'Circuit' contains the user-defined netlist, with the model parameter values set to default (switched off), tab 'Model Parameters' represents a list, populated by the model parameters and their current, fitted values *.
+<br/><br/>
+The main purpose of the IC-CAP netlist parser is therefore simply to populate the list in tab 'Model Parameters'. It is not to perform a simulator-dependent syntax check !
+<br/><br/>
+
+* Note: for a simulation, IC-CAP transfers the values of tab 'Model Parameters' into the netlist of 'Circuit', and sends this updated netlist to the simulator.
+<br/>
+<hr/>
+
+<em>USER-CONTROLLED NETLIST PARSING</em><br/><br/>
+
+While this automatic parsing works fine for standard netlists, a more sophisticated, user-controlled parsing is required in some cases.
+<br/>
+This is provided by the keyword<br/>
+<ul>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+    <font color="blue">#echo .....</font><br/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+</ul>
+entered like a pre-fix to a line in the Circuit before the model/element.<br/>
+If defined, the IC-CAP Netlist Parser sends this line directly to the simulator, without parsing/syntax checking.<br/>
+<br/>
+
+The drawback of using this  #echo  statement, however, is that due to non-parsing, the parameter will not appear in the Model Parameter table, and is therefore not available for parameter extractions or tunings/optimizations !
+<br/><br/>
+
+Therefore, an additional feature is available, which allows the user to define parameters which will appear in tab 'Model Parameter'. This is the statement
+<br/>
+<ul>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+    <font color="blue">$mpar(ParamName=ParamDefaultValue)</font><br/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+
+
+</ul>
+<br/>
+where  ParamName  defines the name appearing in tab 'Model Parameters' (can be different from the netlist), and  ParamDefaultValue  defines the default value assignment (before modeling/tuning).
+<br/><br/>
+
+In other words: <br/>
+the #echo prefix, together with $mpar( ), enables user-defined circuit parsing in IC-CAP !!!<br/><br/>
+
+Example: <br/>
+The example above, converted completely to user-defined parsing, looks like this:
+
+
+<br/><img src="/static/faq/iccap/netlist_parser/2.png" alt="Image"/><br/><br/>
+
+As mentioned, when simulating or when exporting the fitted model to an ASCII file, the #echo is omitted, and the parser keywords are substituted with the value of the model parameter.
+<br/><br/>
+
+
+To export a parameter to a DUT Test Circuit, $mpar  has to be replaced by  $dpar:<br/>
+<ul>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+    <font color="blue">$dpar(ParamName=ParamDefaultValue)</font><br/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+</ul>
+<hr/>
+<em>FURTHER USER-DEFINED PARSER CONTROL COMMANDS</em>
+
+The IC-CAP Parser-Control Keyword <br/>
+<ul>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+    <font color="blue">$VAR(VariableName="Default Value if Variable does not exist")</font><br/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+
+</ul>
+allows to link the contents of a (user-defined) Model Variable to a netlist.<br/><br/>
+
+As an example, let's consider adding some model validity information to the netlist.<br/>
+Conventionally, this would look like:
+
+<br/><img src="/static/faq/iccap/netlist_parser/3.png" alt="Image"/><br/><br/>
+
+But this is static ! <br/>
+To make it dynamic, apply $var( ) as follows:
+
+<br/><img src="/static/faq/iccap/netlist_parser/4.png" alt="Image"/><br/><br/>
+Notice: $var() links to tab 'Modle Variables' (User-defined Variables)!<br/>
+Do not confuse with the tab "Model Parameters" (netlist-defined from tab 'Circuit')<br/><br/>
+When the final model is exported from IC-CAP (File/Export Data/Extracted Deck), the netlist becomes:<br/>
+<pre>
+****************************************************
+* this model has been created on Feb.6, 2020
+* by Max Smith
+* and is valid for DC biasings between -10V and +1V
+****************************************************
+.SUBCKT Diode_Modeling 1 2
+
+*instances
+RS 1 12 4.691
+Diode 12 2  myDiode
+
+*model card
+.MODEL myDiode D  IS = 1E-016  N = 1  CJO = 1E-015  M = 0.5  VJ = 0.7
+
+.ENDS
+
+
+</pre>
+
+Further applications for $var( ) are: <br/>
+<ul>
+    <li>dynamic node setting (very useful for e.g. MOS CV modeling)<br/>
+        see IC-CAP example file <a href="/iccap/netlist_parser_example/download" target="_blank">"Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl"</a>
+    </li>
+    <li>dynamic link to library components<br/>
+        see chapter 'Using Libraries' in this Blog
+    </li>
+</ul>
+<hr/>
+Finally, the IC-CAP Parser-Control Keyword<br/>
+<ul>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+    <font color="blue">include</font> <br/>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br/>
+</ul>
+<br/>
+allows to add external netlists to the netlist defined in tab 'Circuit'.<br/>
+Useful for e.g. linking to external library files, which are too long for the IC-CAP 'Circuit' tab.<br/>
+Here an example:
+
+<br/><img src="/static/faq/iccap/netlist_parser/5.png" alt="Image"/><br/><br/>
+Notice: in most cases, to satisfy the IC-CAP parser, a preceding #echo is required when using 'include'.
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

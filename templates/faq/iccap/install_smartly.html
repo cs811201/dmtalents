@@ -1,0 +1,184 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>Install IC-CAP Smartly on Windows</h2>
+<h3>ICCAP FAQ</h3>
+<br/>
+<mark>by Franz Sischka (<a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a>), and Reint Lange</mark>
+<hr>
+Note:  on Windows, only 64-bit Operating Systems supported!<br/><br/>
+After IC-CAP gets successfully installed and licensed, we can see the following IC-CAP Main windows.
+<br/>
+<br/><img src="/static/faq/iccap/install_smartly/1.png" alt="Image"/><br/><br/>
+
+Step 1. Preparation<br/><br/>
+First of all, create a good Directory Structure
+<ul>
+    <li>for your code downloads,</li>
+    <li>licenses,</li>
+    <li>IC-CAP and</li>
+    <li>ADS</li>
+    <li>your own data files</li>
+</ul>
+
+<br/><img width="500" src="/static/faq/iccap/install_smartly/2.png" alt="Image"/><br/>
+<hr/>
+Step 2. Setup License Server<br/>
+(Skip if you have IT admin to take care of the license server setting for you.)<br/>
+Download the License server from Keysight official website to your PC ...<br/>
+<li>www.keysight.com/find/eesof-iccap-latest-downloads</li>
+
+<br/><img src="/static/faq/iccap/install_smartly/3.png" alt="Image"/><br/><br/>
+
+<br/><img src="/static/faq/iccap/install_smartly/4.png" alt="Image"/><br/><br/>
+and install it into directory<br/>
+<li>C:\A_ICCAP\_Licenses</li>
+<br/><br/>
+When done, save your license file into this directory too.<br/>
+<hr/>
+Step 3, download IC-CAP installer<br/><br/>
+Come back to the following website:<br/>
+<li>www.keysight.com/find/eesof-iccap-latest-downloads</li>
+<br/>
+
+
+<br/><img src="/static/faq/iccap/install_smartly/5.png" alt="Image"/><br/><br/>
+Make sure the Windows radio button is selected, and then click the red Download button to start the downloading process.
+And install it into directory: <br/>
+<li>C:\A_ICCAP\ICCAP_2020</li>
+
+<br/><img src="/static/faq/iccap/install_smartly/6.png" alt="Image"/><br/><br/>
+Best Practice: name your IC-CAP executables(Install) directory after year and version, e.g. ICCAP_2020,
+or ICCAP_2020_Update2 when it’s a version with updates.<br/><br/>
+Next, name your IC-CAP user directory after year and version, as shown below.
+
+<br/><img src="/static/faq/iccap/install_smartly/7.png" alt="Image"/><br/><br/>
+Next, point the License Tools directory to which we had already installed the licenses in Step 2.
+<br/><img src="/static/faq/iccap/install_smartly/8.png" alt="Image"/><br/><br/>
+Verify all, before clicking 'Install'.
+<br/><img src="/static/faq/iccap/install_smartly/9.png" alt="Image"/><br/><br/>
+Now we have ICCAP successfully installed.
+<br/><img src="/static/faq/iccap/install_smartly/10.png" alt="Image"/><br/>
+<hr/>
+
+Step 4. Download and install Keysight ADS<br/><br/>
+The purpose is to use ADS as the simulator in ICCAP, please refer to other application notes if you wish to use other simulators(such as Hspice or Spectre, etc.) for model simulation in ICCAP.
+<br/><br/>
+In the same way, use the following link to download ADS from the Keysight website, and install it as follows:<br/>
+<li>www.keysight.com/find/eesof-ads-latest-downloads</li>
+
+<br/><img src="/static/faq/iccap/install_smartly/11.png" alt="Image"/><br/><br/>
+<hr/>
+Step 5. Link to ADS simulator<br/><br/>
+Enable the link from IC-CAP to ADS, by setting the Windows Environmental Variable 'ADS_DIR':
+
+<br/><img src="/static/faq/iccap/install_smartly/12.png" alt="Image"/><br/><br/>
+<hr/>
+Step 6. Start IC-CAP<br/><br/>
+Besides ICCAP’s main window, while ICCAP is starting itself we shall see the Status window reporting “… license granted.”. Then IC-CAP is ready to work, as shown below.
+
+<br/><img src="/static/faq/iccap/install_smartly/13.png" alt="Image"/><br/><br/>
+<hr/>
+Step 7. Tune up IC-CAP with a Few Best Practice Customization Settings<br/><br/>
+7.1. IC-CAP System Variables Setup<br/>
+A set of variables controlling IC-CAP from a best-practice point of view.<br/>
+Best Practice: <br/>
+copy best-practice System Variables from $ICCAP_ROOT/examples/demo_features/SystemVariables.vat
+
+<br/><img src="/static/faq/iccap/install_smartly/14.png" alt="Image"/><br/><br/>
+
+7.2.  Customize IC-CAP Graphics<br/>
+Go to Tools -> Plot Options window, use the recommended options shown as below.
+
+<br/><img src="/static/faq/iccap/install_smartly/15.png" alt="Image"/><br/><br/>
+7.3 IC-CAP Editor Preferences
+<br/><img src="/static/faq/iccap/install_smartly/16.png" alt="Image"/><br/><br/>
+
+7.4 Useful Configuration<br/>
+Define a few config. variables, to activate the IC-CAP GUI pages, and to enhance the list of recently used model files.
+
+<br/><img width="500" src="/static/faq/iccap/install_smartly/17.png" alt="Image"/><br/><br/>
+
+
+Copy-paste the above 3 lines into the new file iccap.cfg, please refer to this link to see detailed explanation for the above options.
+<br/>
+Note: When saving this file, make sure that Windows does not add a .txt file name extension!
+<br/>
+<hr/>
+Step 8. Test the link between IC-CAP to ADS.<br/>
+For more info, please refer to this <a href="/link2ads" target="_blank">application note</a>.<br/>
+<em>About ADS-under-ICCAP Licensing</em><br/>
+When called from IC-CAP, the hpeesofsim.exe  (ADS)  gets a license from IC-CAP for simulations of:<br/>
+<ul>
+    > DC<br/>
+    > CV<br/>
+    > Spar<br/>
+    > 1/f Noise<br/>
+    > Harmonic Balance(HB)<br/>
+    > Verilog-A<br/>
+</ul>
+This license also enables the use of ADS in Spectre and HSpice netlist syntax !
+
+<br/><img src="/static/faq/iccap/install_smartly/18.png" alt="Image"/><br/><br/>
+Once open the "1_diode_demo_ADS.mdl" model window, follow the following 5 steps to run ADS simulation marked in the next two screenshots.
+<br/>When we get newly generated simulation curve on the IV plot, then the linkage is successfully established.
+<br/><img src="/static/faq/iccap/install_smartly/19.png" alt="Image"/><br/>
+<br/><img src="/static/faq/iccap/install_smartly/20.png" alt="Image"/><br/><br/>
+<hr/>
+Step 9. Linking to Instruments<br/><br/>
+Get an 82357B USB/GPIB interface High-Speed USB 2.0 cable, as shown below.<br/>
+<li>
+    https://www.keysight.com/en/pd-851808-pn-82357B/usb-gpib-interface-high-speed-usb-20?nid=-32516.426029.00&cc=GB&lc=eng
+</li>
+
+<br/><img src="/static/faq/iccap/install_smartly/21.png" alt="Image"/><br/><br/>
+And, download and install Keysight IO Libraries Suite<br/>
+<li>https://www.keysight.com/en/pd-1985909/io-libraries-suite?nid=-33330.977662.00&cc=GB&lc=eng</li>
+
+<br/><img src="/static/faq/iccap/install_smartly/22.png" alt="Image"/><br/><br/>
+install it into the default directory presented during the installation process.<br/>
+During installation, answer  all questions with the default answer.<br/>
+When the driver software is installed, plug-in your USB-GPIB interface.<br/>
+<ul>
+    <li>It will first display the Fail LED,</li>
+    <li>then all LEDs,</li>
+    <li>and finally the Green Ready LED only.</li>
+</ul>
+<br/><img width="550" src="/static/faq/iccap/install_smartly/23.png" alt="Image"/><br/><br/>
+Activate the GPIB Interface in IC-CAP<br/>
+In IC-CAP's Hardware Window, add the interface as gpib0  (all small characters)
+
+<br/><img src="/static/faq/iccap/install_smartly/24.png" alt="Image"/><br/><br/>
+<hr/>
+Step 10. Last but not least<br/>
+<em>Getting Started with IC-CAP</em><br/>
+
+<br/><img src="/static/faq/iccap/install_smartly/25.png" alt="Image"/><br/><br/>
+Where to find more examples:
+<br/><img src="/static/faq/iccap/install_smartly/26.png" alt="Image"/><br/><br/>
+For expert, if you want to auto-load a ModelFile when starting IC-CAP.
+<br/><img src="/static/faq/iccap/install_smartly/27.png" alt="Image"/><br/><br/>
+If you want to IC-CAP and auto load a ModelFile and also to auto-execute a Macro within this ModelFile
+(which could then activate other features), enter into field "Target' above the following: <br/>
+<pre>
+C:\A_ICCAP\ICCAP_2020/bin/iccap.exe \Path\ModelFileName -x /modelname/macroname
+</pre>
+
+Note: the above “-x macro” is used to specify the Macro, and it's optional.
+
+
+<br/><br/>
+Good Luck!
+
+
+<br/><br/>
+Thanks!
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+{% endblock %}

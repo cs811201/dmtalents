@@ -1821,6 +1821,25 @@ def iccapfaq_lax_vm():
     recordPostHistory(route_iccapfaq_lax_vm)
     return render_template('/faq/iccap/lax_vm.html')
 
+route_iccapfaq_install_smartly = '/iccapfaq/install_smartly'
+
+
+@app.route(route_iccapfaq_install_smartly)
+@login_required
+def iccapfaq_install_smartly():
+    recordPostHistory(route_iccapfaq_install_smartly)
+    return render_template('/faq/iccap/install_smartly.html')
+
+route_iccapfaq_netlist_parser = '/iccapfaq/netlist_parser'
+
+
+@app.route(route_iccapfaq_netlist_parser)
+@login_required
+def iccapfaq_netlist_parser():
+    recordPostHistory(route_iccapfaq_netlist_parser)
+    return render_template('/faq/iccap/netlist_parser.html')
+
+
 
 route_iccap_spar11 = '/iccap-spar/1.1'
 
@@ -1961,6 +1980,23 @@ def iccap_spice_spar3():
     recordPostHistory(route_iccap_spice_spar3)
     return render_template('/iccap/SpiceSpar/Spice133.html')
 
+route_iccap_spice_spar4 = '/iccap-spice-spar/4'
+
+
+@app.route(route_iccap_spice_spar4)
+@login_required
+def iccap_spice_spar4():
+    recordPostHistory(route_iccap_spice_spar4)
+    return render_template('/iccap/SpiceSpar/Spice134.html')
+
+route_iccap_spice_spar5 = '/iccap-spice-spar/5'
+
+
+@app.route(route_iccap_spice_spar5)
+@login_required
+def iccap_spice_spar5():
+    recordPostHistory(route_iccap_spice_spar5)
+    return render_template('/iccap/SpiceSpar/Spice135.html')
 
 ### WPE FAQs ###
 
@@ -4204,6 +4240,17 @@ def download_iccap_spice_skin():
     recordPostHistory(route_download_iccap_spice_spar_skin)
     return send_file('static/iccap/SpiceSpar/SkinEffect_Tutorial.mdl',
                      attachment_filename='SkinEffect_Tutorial.mdl', mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_netlist_parser_example = '/iccap/netlist_parser_example/download'
+
+
+@login_required
+@app.route(route_download_iccap_netlist_parser_example)
+def download_netlist_parser_example():
+    recordPostHistory(route_download_iccap_netlist_parser_example)
+    return send_file('static/faq/iccap/netlist_parser/Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl',
+                     attachment_filename='Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl', mimetype='text/plain', as_attachment=True)
+
 
 ### Upload a file
 route_update_a_file = "/upload"
