@@ -1,0 +1,40 @@
+{% extends "faq/faq_index.html" %}
+{% block faqmain %}
+
+<h2>E5250A Switch Connection</h2>
+<h3>WPE FAQ</h3>
+<hr>
+
+This application note explains how to connect tri-ax cables from SMUs through the E5250A switch matrix to probe card in WaferPro Express(WPE).
+<br/><br/>
+Below is the E5250A Switch images, front and rear:
+<br/><img src="/static/faq/wpe/e5250_conn/0.png" alt="Image"/><br/>
+
+<br/>
+Here is how the connection chain goes, as illustrated below, the limit we have with E5250A is that the built-in WPE driver doesn’t support Kelvin connection, so it’s Force only measurement, this feature limit is documented in E5250A driver’s Readme; however, WPE does support to use B2200 or K707 switches for Kelvin connection.
+<br/><img src="/static/faq/wpe/e5250_conn/mappings.png" width="910" alt="Image"/><br/>
+
+
+A: we connect the Forces of SMUs from DC meter(be it 4156C or B1500A) to the <u>same
+    numbered</u> Input ports of E5250A, because the default Matrix Definition table in WPE’s
+hardware configuration window by default assigns the <u>same
+    numbered</u> mapping. It can be edited by tapping into the corresponding config file; however, the 1:1 mapping
+is most straightforward so not recommended to make changes here.
+<br/><br/>
+B: based on which SMUs we connected, in WPE’s Routine Editor window, we assign the Units to Nodes(Ports), say SMU1 = N1, SMU4 = N2.
+<br/><br/>
+C: in WPE main window, device table, we specify N1= 1 or 4 for different Pads of the probe card, now we completed the chain:
+<ul>
+    <li>For Device_5: SMU1 -> Port 1 -> N1 -> Pad1, and SMU4 -> Port 4 -> N2 -> Pad3</li>
+    <li>For Device_6: SMU1 -> Port 1 -> N1 -> Pad4, and SMU4 -> Port 4 -> N2 -> Pad7</li>
+</ul>
+<br/>
+In the whole process, all the cabling is one-time job, no need changing once connected; B and C can then be edited in WPE GUI dynamically per our layout’s pad assignment.
+
+
+<br/><br/>
+Thanks!
+
+
+
+{% endblock %}

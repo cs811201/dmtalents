@@ -1,0 +1,102 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>Linking to a Model Library</h3>
+<h4>Basics of Linking Libraries</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>IC-CAP Example File</em><br/>
+<ul>
+    <li><a href="/iccap/link_lib_example_mos/download" target="_blank">Linking_external_Library__Example_MOS.mdl</a>
+    </li>
+</ul>
+<br/>
+<em>How-To-Use Video:</em><br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IXVM9TKaK9Q?rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/><br/>
+This ModelFile explains how to link different library styles to IC-CAP. <br/>
+The simulator is Spectre  (or ADS in Spectre netlist mode:   SIMULATOR=spmodeads)
+
+<br><img src="/static/iccap/LinkLib/1/1.png"><br/><br/>
+
+<em>Overview of the IC-CAP Model File</em><br/>
+After loading the file, open first Tab 'Macros':
+
+<br><img src="/static/iccap/LinkLib/1/2.png"><br/><br/>
+
+The file hosts an all-in-one demo:<br/>
+As marked in blue, 4 examples of different library styles are presented in section 'Library_Examples':<br/>
+<ul>
+    <li>1. a library, which starts with a line 'library', and then hosts subcircuits per device</li>
+    <li>2a. a library consisting of subcircuits only</li>
+    <li>2b. a library consisting of subcircuits, and parameterizing, i.e. hosting also lines with keyword 'parameters'
+        <br/>
+        (typical for scaling library models)
+    </li>
+    <li>3. a library of model cards only<br/>
+        (typical for libraries of commercial, packaged devices)
+    </li>
+</ul>
+<br/>
+Each library example hosts 3 NMOS transistor cells:<br/>
+<ul>
+    <li>the first two are default library components (cells),</li>
+    <li>while the 3rd has been modified by the user to access model parameters by IC-CAP:<br/>
+        Application: fine-tune a library component to match changes in the manufacturing process.<br/>
+        For details, see further below.
+    </li>
+</ul>
+<br/>
+And, for being called by IC-CAP, each example requires a special netlist in the IC-CAP tab 'Circuit'.
+They are given by the Macros marked in red.
+<hr/>
+<br/>
+<em>Explanations for Using the Library Link Examples</em><br/>
+
+Step 1:<br/>
+<ul>
+    <li>Create a directory e.g. C:/tmp/libraries</li>
+    <li>Copy-paste the library examples (the contents of the Macros located in group 'Library_Examples')
+        to this directory, with names like
+    </li>
+    1. "C:/tmp/libraries/test_NMOS_library.scs"<br/>
+    2a. "C:/tmp/libraries/test_NMOS_subckts_only.scs"<br/>
+    2b. "C:/tmp/libraries/test_NMOS_subckts_only__parameterized.scs"<br/>
+    3. "C:/tmp/libraries/test_NMOS_modelcards_only.scs"<br/>
+    Note: the name and the path must match the 'include' statement in IC-CAP's Tab 'Circuit' !!!<br/>
+</ul>
+
+<br/>
+Step 2:<br/>
+<ul>
+    <li>Then, copy-paste from the Macros, located in group 'Circuit_Examples',<br/>
+        the netlist for the type of library you wish to test, into Tab 'Circuit'.<br/>
+        - go to Setup DC___/foutput, display the Plot, hit 'Clear Simulated Data' and hit 'Simulate'.
+    </li>
+    <li>Change the linked library cell (subcircuit) in Tab 'Circuit', and hit 'Simulate'.<br/>
+        The plotted data will change, accordingly to the selected library cell.
+    </li>
+</ul>
+
+<br><img src="/static/iccap/LinkLib/1/3.png"><br/><br/>
+Notes:<br/>
+if you wish to test the tuning parameter values, e.g. for fine-tuning an existing library,
+do so in the IC-CAP Tab 'Model Parameters' (*NOT* in Tab 'Circuit' !!!),   and hit 'Simulate'.
+But make sure that the parameters for which you change the value are manipulated for the currently selected transistor cell:
+<ul>
+    <li>in the provided library examples, it is cell (subcircuit) 'my_NMOS3', as depicted below:</li>
+</ul>
+<em>Fine Tuning Model Parameter Values in Library Cells</em>
+<br><img src="/static/iccap/LinkLib/1/4.png"><br/><br/>
+
+<br/><br/>
+
+Thank you!
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

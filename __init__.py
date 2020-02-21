@@ -287,6 +287,12 @@ def mqa():
     recordPostHistory('/mqa')
     return render_template('mqa/agenda.html')
 
+@app.route('/mbp')
+@login_required
+def mbp():
+    recordPostHistory('/mbp')
+    return render_template('mbp/agenda.html')
+
 
 @app.route('/mqafaq')
 @login_required
@@ -1998,6 +2004,24 @@ def iccap_spice_spar5():
     recordPostHistory(route_iccap_spice_spar5)
     return render_template('/iccap/SpiceSpar/Spice135.html')
 
+route_iccap_link_lib1 = '/iccap-link-lib/1'
+
+
+@app.route(route_iccap_link_lib1)
+@login_required
+def iccap_link_lib1():
+    recordPostHistory(route_iccap_link_lib1)
+    return render_template('/iccap/LinkLib/linkLib1.html')
+
+route_iccap_link_lib2 = '/iccap-link-lib/2'
+
+
+@app.route(route_iccap_link_lib2)
+@login_required
+def iccap_link_lib2():
+    recordPostHistory(route_iccap_link_lib2)
+    return render_template('/iccap/LinkLib/linkLib2.html')
+
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'
@@ -2008,6 +2032,15 @@ route_wpefaq_probecard = '/wpefaq/add_probecard'
 def wpefaq_addprobecard():
     recordPostHistory(route_wpefaq_probecard)
     return render_template('/faq/wpe/add_probecard.html')
+
+route_wpefaq_e5250conn = '/wpefaq/e5250conn'
+
+
+@app.route(route_wpefaq_e5250conn)
+@login_required
+def wpefaq_e5250conn():
+    recordPostHistory(route_wpefaq_e5250conn)
+    return render_template('/faq/wpe/e5250conn.html')
 
 
 ### ALFNA FAQs ###
@@ -4250,6 +4283,29 @@ def download_netlist_parser_example():
     recordPostHistory(route_download_iccap_netlist_parser_example)
     return send_file('static/faq/iccap/netlist_parser/Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl',
                      attachment_filename='Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl', mimetype='text/plain', as_attachment=True)
+
+
+route_download_iccap_link_lib_example_MOS = '/iccap/link_lib_example_mos/download'
+
+
+@login_required
+@app.route(route_download_iccap_link_lib_example_MOS)
+def download_iccap_link_lib_example_mos():
+    recordPostHistory(route_download_iccap_link_lib_example_MOS)
+    return send_file('static/iccap/LinkLib/Linking_external_Library__Example_MOS.mdl',
+                     attachment_filename='Linking_external_Library__Example_MOS.mdl', mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_link_lib_example_MOS_incl = '/iccap/link_lib_example_mos_incl/download'
+
+
+@login_required
+@app.route(route_download_iccap_link_lib_example_MOS_incl)
+def download_iccap_link_lib_example_mos_incl():
+    recordPostHistory(route_download_iccap_link_lib_example_MOS_incl)
+    return send_file('static/iccap/LinkLib/Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl',
+                     attachment_filename='Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl', mimetype='text/plain', as_attachment=True)
+
+
 
 
 ### Upload a file

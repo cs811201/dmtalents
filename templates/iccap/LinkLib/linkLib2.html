@@ -1,0 +1,47 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>Linking to a Model Library</h3>
+<h4>USING LIBRARIES in IC-CAP</h4>
+
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+<em>IC-CAP Example File</em><br/>
+<ul>
+    <li><a href="/iccap/link_lib_example_mos_incl/download" target="_blank">Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl</a>
+    </li>
+</ul>
+<br/>
+<em>How-To-Use Video:</em><br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2bYL2AEOmno?rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/><br/>
+This ModelFile hosts a simple example of how to program a library inspection feature in IC-CAP.
+<br/><br/>
+After loading and opening the example file in IC-CAP, have first a look to Tab 'Macros'.
+<br><img src="/static/iccap/LinkLib/2/1.png"><br/><br/>
+
+The link to the library is defined in Tab 'Circuit':
+<br><img src="/static/iccap/LinkLib/2/2.png"><br/><br/>
+The location and name of the NMOS library example is linked by the line    #echo  include ...<br/><br/>
+
+To link to the user-selected library cell, we make use of the IC-CAP Netlist Parser Control feature $VAR(), which enables to link the contents of a user-defined Variable, here 'Library_CellName', directly into the netlist.
+<br/><br/>
+
+Note: like before, the line starts with the IC-CAP keyword  #echo, which switches-off the automatic netlist parsing of IC-CAP for this particular line (because we apply in this line non-standard parser features).
+<br/><br/>
+The 'Library_CellName' is set by a user interface (GUI), defined in Setup 'Inspect_Library', and Transform 'SELECT_LIBRARY_CELL', as depicted below:
+
+
+<br><img src="/static/iccap/LinkLib/2/3.png"><br/><br/>
+
+For more details about the programming, see the detailed READMEs and comments in the IC-CAP ModelFile.
+<br/><br/>
+
+Thank you!
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

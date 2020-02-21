@@ -1,0 +1,3571 @@
+LINK MODEL "Linking_Library_NMOS_incl_SelectionGUI" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P260 P521 C37"
+element 0 "Name" "SIMULATOR"
+element 0 "Value" "spmodeads"
+element 1 "Name" "TEMP"
+element 1 "Value" "27.00"
+element 2 "Name" "TNOM"
+element 2 "Value" "27"
+element 3 "Name" "ICCAP_DEFAULT_SETUP_PAGE"
+element 3 "Value" "Extract / Optimize"
+element 4 "Name" "SIM_USE_UPPER_CASE_PARAMS"
+element 4 "Value" "yes"
+element 5 "Name" "___________________________1"
+element 5 "Value" ""
+element 6 "Name" "Library_CellName"
+element 6 "Value" "my_NMOS3"
+element 7 "Name" "___________________________2"
+element 7 "Value" ""
+element 8 "Name" "ErrMsg"
+element 8 "Value" ""
+element 9 "Name" "tmpVar"
+element 9 "Value" "************************************************************"
+element 10 "Name" "___________________________3"
+element 10 "Value" ""
+element 11 "Name" ""
+element 11 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "N"
+element 9 "On Black" "114" "N"
+element 9 "Symbol" "" "N"
+element 9 "Measured" "Default" "N"
+element 9 "Simulated" "Default" "N"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "N"
+element 10 "On Black" "94" "N"
+element 10 "Symbol" "" "N"
+element 10 "Measured" "Default" "N"
+element 10 "Simulated" "Default" "N"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "N"
+element 11 "On Black" "81" "N"
+element 11 "Symbol" "" "N"
+element 11 "Measured" "Default" "N"
+element 11 "Simulated" "Default" "N"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "N"
+element 12 "On Black" "50" "N"
+element 12 "Symbol" "" "N"
+element 12 "Measured" "Default" "N"
+element 12 "Simulated" "Default" "N"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "N"
+element 13 "On Black" "115" "N"
+element 13 "Symbol" "" "N"
+element 13 "Measured" "Default" "N"
+element 13 "Simulated" "Default" "N"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "N"
+element 14 "On Black" "54" "N"
+element 14 "Symbol" "" "N"
+element 14 "Measured" "Default" "N"
+element 14 "Simulated" "Default" "N"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "N"
+element 15 "On Black" "106" "N"
+element 15 "Symbol" "" "N"
+element 15 "Measured" "Default" "N"
+element 15 "Simulated" "Default" "N"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "N"
+element 16 "On Black" "120" "N"
+element 16 "Symbol" "" "N"
+element 16 "Measured" "Default" "N"
+element 16 "Simulated" "Default" "N"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "N"
+element 17 "On Black" "87" "N"
+element 17 "Symbol" "" "N"
+element 17 "Measured" "Default" "N"
+element 17 "Simulated" "Default" "N"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "N"
+element 18 "On Black" "79" "N"
+element 18 "Symbol" "" "N"
+element 18 "Measured" "Default" "N"
+element 18 "Simulated" "Default" "N"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "N"
+element 19 "On Black" "81" "N"
+element 19 "Symbol" "" "N"
+element 19 "Measured" "Default" "N"
+element 19 "Simulated" "Default" "N"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "N"
+element 20 "On Black" "1" "N"
+element 20 "Symbol" "Circle" "N"
+element 20 "Measured" "Default" "N"
+element 20 "Simulated" "Dot Line" "N"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "N"
+element 21 "On Black" "0" "N"
+element 21 "Symbol" "Reverse Triangle" "N"
+element 21 "Measured" "Default" "N"
+element 21 "Simulated" "Dot Line" "N"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "N"
+element 22 "On Black" "6" "N"
+element 22 "Symbol" "Star" "N"
+element 22 "Measured" "Default" "N"
+element 22 "Simulated" "Dot Line" "N"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "N"
+element 23 "On Black" "3" "N"
+element 23 "Symbol" "Triangle" "N"
+element 23 "Measured" "Default" "N"
+element 23 "Simulated" "Dot Line" "N"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "N"
+element 24 "On Black" "88" "N"
+element 24 "Symbol" "" "N"
+element 24 "Measured" "Default" "N"
+element 24 "Simulated" "Dot Line" "N"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "N"
+element 25 "On Black" "4" "N"
+element 25 "Symbol" "Cross" "N"
+element 25 "Measured" "Default" "N"
+element 25 "Simulated" "Dot Line" "N"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "N"
+element 26 "On Black" "117" "N"
+element 26 "Symbol" "Circle" "N"
+element 26 "Measured" "Default" "N"
+element 26 "Simulated" "Dot Line" "N"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "N"
+element 27 "On Black" "40" "N"
+element 27 "Symbol" "Circle" "N"
+element 27 "Measured" "Default" "N"
+element 27 "Simulated" "Dot Line" "N"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "N"
+element 28 "On Black" "28" "N"
+element 28 "Symbol" "Circle" "N"
+element 28 "Measured" "Default" "N"
+element 28 "Simulated" "Dot Line" "N"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "N"
+element 29 "On Black" "114" "N"
+element 29 "Symbol" "Circle" "N"
+element 29 "Measured" "Default" "N"
+element 29 "Simulated" "Dot Line" "N"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "N"
+element 30 "On Black" "94" "N"
+element 30 "Symbol" "Circle" "N"
+element 30 "Measured" "Default" "N"
+element 30 "Simulated" "Dot Line" "N"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "N"
+element 31 "On Black" "81" "N"
+element 31 "Symbol" "Circle" "N"
+element 31 "Measured" "Default" "N"
+element 31 "Simulated" "Dot Line" "N"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "N"
+element 32 "On Black" "50" "N"
+element 32 "Symbol" "Circle" "N"
+element 32 "Measured" "Default" "N"
+element 32 "Simulated" "Dot Line" "N"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "N"
+element 33 "On Black" "115" "N"
+element 33 "Symbol" "Circle" "N"
+element 33 "Measured" "Default" "N"
+element 33 "Simulated" "Dot Line" "N"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "N"
+element 34 "On Black" "54" "N"
+element 34 "Symbol" "Circle" "N"
+element 34 "Measured" "Default" "N"
+element 34 "Simulated" "Dot Line" "N"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "N"
+element 35 "On Black" "106" "N"
+element 35 "Symbol" "Circle" "N"
+element 35 "Measured" "Default" "N"
+element 35 "Simulated" "Dot Line" "N"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "N"
+element 36 "On Black" "120" "N"
+element 36 "Symbol" "Circle" "N"
+element 36 "Measured" "Default" "N"
+element 36 "Simulated" "Dot Line" "N"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "N"
+element 37 "On Black" "87" "N"
+element 37 "Symbol" "Circle" "N"
+element 37 "Measured" "Default" "N"
+element 37 "Simulated" "Dot Line" "N"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "N"
+element 38 "On Black" "79" "N"
+element 38 "Symbol" "Circle" "N"
+element 38 "Measured" "Default" "N"
+element 38 "Simulated" "Dot Line" "N"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "N"
+element 39 "On Black" "81" "N"
+element 39 "Symbol" "Circle" "N"
+element 39 "Measured" "Default" "N"
+element 39 "Simulated" "Dot Line" "N"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "N"
+element 40 "On Black" "1" "N"
+element 40 "Symbol" "Triangle" "N"
+element 40 "Measured" "Default" "N"
+element 40 "Simulated" "Dot Dot Line" "N"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "N"
+element 41 "On Black" "0" "N"
+element 41 "Symbol" "Diamond" "N"
+element 41 "Measured" "Default" "N"
+element 41 "Simulated" "Dot Dot Line" "N"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "N"
+element 42 "On Black" "6" "N"
+element 42 "Symbol" "X" "N"
+element 42 "Measured" "Default" "N"
+element 42 "Simulated" "Dot Dot Line" "N"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "N"
+element 43 "On Black" "3" "N"
+element 43 "Symbol" "Reverse Triangle" "N"
+element 43 "Measured" "Default" "N"
+element 43 "Simulated" "Dot Dot Line" "N"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "N"
+element 44 "On Black" "88" "N"
+element 44 "Symbol" "Circle" "N"
+element 44 "Measured" "Default" "N"
+element 44 "Simulated" "Dot Dot Line" "N"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "N"
+element 45 "On Black" "4" "N"
+element 45 "Symbol" "" "N"
+element 45 "Measured" "Default" "N"
+element 45 "Simulated" "Dot Dot Line" "N"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "N"
+element 46 "On Black" "117" "N"
+element 46 "Symbol" "Triangle" "N"
+element 46 "Measured" "Default" "N"
+element 46 "Simulated" "Dot Dot Line" "N"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "N"
+element 47 "On Black" "40" "N"
+element 47 "Symbol" "Triangle" "N"
+element 47 "Measured" "Default" "N"
+element 47 "Simulated" "Dot Dot Line" "N"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "N"
+element 48 "On Black" "28" "N"
+element 48 "Symbol" "Triangle" "N"
+element 48 "Measured" "Default" "N"
+element 48 "Simulated" "Dot Dot Line" "N"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "N"
+element 49 "On Black" "114" "N"
+element 49 "Symbol" "Triangle" "N"
+element 49 "Measured" "Default" "N"
+element 49 "Simulated" "Dot Dot Line" "N"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "N"
+element 50 "On Black" "94" "N"
+element 50 "Symbol" "Triangle" "N"
+element 50 "Measured" "Default" "N"
+element 50 "Simulated" "Dot Dot Line" "N"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "N"
+element 51 "On Black" "81" "N"
+element 51 "Symbol" "Triangle" "N"
+element 51 "Measured" "Default" "N"
+element 51 "Simulated" "Dot Dot Line" "N"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "N"
+element 52 "On Black" "50" "N"
+element 52 "Symbol" "Triangle" "N"
+element 52 "Measured" "Default" "N"
+element 52 "Simulated" "Dot Dot Line" "N"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "N"
+element 53 "On Black" "115" "N"
+element 53 "Symbol" "Triangle" "N"
+element 53 "Measured" "Default" "N"
+element 53 "Simulated" "Dot Dot Line" "N"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "N"
+element 54 "On Black" "54" "N"
+element 54 "Symbol" "Triangle" "N"
+element 54 "Measured" "Default" "N"
+element 54 "Simulated" "Dot Dot Line" "N"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "N"
+element 55 "On Black" "106" "N"
+element 55 "Symbol" "Triangle" "N"
+element 55 "Measured" "Default" "N"
+element 55 "Simulated" "Dot Dot Line" "N"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "N"
+element 56 "On Black" "120" "N"
+element 56 "Symbol" "Triangle" "N"
+element 56 "Measured" "Default" "N"
+element 56 "Simulated" "Dot Dot Line" "N"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "N"
+element 57 "On Black" "87" "N"
+element 57 "Symbol" "Triangle" "N"
+element 57 "Measured" "Default" "N"
+element 57 "Simulated" "Dot Dot Line" "N"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "N"
+element 58 "On Black" "79" "N"
+element 58 "Symbol" "Triangle" "N"
+element 58 "Measured" "Default" "N"
+element 58 "Simulated" "Dot Dot Line" "N"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "N"
+element 59 "On Black" "81" "N"
+element 59 "Symbol" "Triangle" "N"
+element 59 "Measured" "Default" "N"
+element 59 "Simulated" "Dot Dot Line" "N"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "N"
+element 60 "On Black" "1" "N"
+element 60 "Symbol" "Reverse Triangle" "N"
+element 60 "Measured" "Default" "N"
+element 60 "Simulated" "Dashed Line" "N"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "N"
+element 61 "On Black" "0" "N"
+element 61 "Symbol" "Star" "N"
+element 61 "Measured" "Default" "N"
+element 61 "Simulated" "Dashed Line" "N"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "N"
+element 62 "On Black" "6" "N"
+element 62 "Symbol" "Cross" "N"
+element 62 "Measured" "Default" "N"
+element 62 "Simulated" "Dashed Line" "N"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "N"
+element 63 "On Black" "3" "N"
+element 63 "Symbol" "Diamond" "N"
+element 63 "Measured" "Default" "N"
+element 63 "Simulated" "Dashed Line" "N"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "N"
+element 64 "On Black" "88" "N"
+element 64 "Symbol" "Triangle" "N"
+element 64 "Measured" "Default" "N"
+element 64 "Simulated" "Dashed Line" "N"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "N"
+element 65 "On Black" "4" "N"
+element 65 "Symbol" "Circle" "N"
+element 65 "Measured" "Default" "N"
+element 65 "Simulated" "Dashed Line" "N"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "N"
+element 66 "On Black" "117" "N"
+element 66 "Symbol" "Reverse Triangle" "N"
+element 66 "Measured" "Default" "N"
+element 66 "Simulated" "Dashed Line" "N"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "N"
+element 67 "On Black" "40" "N"
+element 67 "Symbol" "Reverse Triangle" "N"
+element 67 "Measured" "Default" "N"
+element 67 "Simulated" "Dashed Line" "N"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "N"
+element 68 "On Black" "28" "N"
+element 68 "Symbol" "Reverse Triangle" "N"
+element 68 "Measured" "Default" "N"
+element 68 "Simulated" "Dashed Line" "N"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "N"
+element 69 "On Black" "114" "N"
+element 69 "Symbol" "Reverse Triangle" "N"
+element 69 "Measured" "Default" "N"
+element 69 "Simulated" "Dashed Line" "N"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "N"
+element 70 "On Black" "94" "N"
+element 70 "Symbol" "Reverse Triangle" "N"
+element 70 "Measured" "Default" "N"
+element 70 "Simulated" "Dashed Line" "N"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "N"
+element 71 "On Black" "81" "N"
+element 71 "Symbol" "Reverse Triangle" "N"
+element 71 "Measured" "Default" "N"
+element 71 "Simulated" "Dashed Line" "N"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "N"
+element 72 "On Black" "50" "N"
+element 72 "Symbol" "Reverse Triangle" "N"
+element 72 "Measured" "Default" "N"
+element 72 "Simulated" "Dashed Line" "N"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "N"
+element 73 "On Black" "115" "N"
+element 73 "Symbol" "Reverse Triangle" "N"
+element 73 "Measured" "Default" "N"
+element 73 "Simulated" "Dashed Line" "N"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "N"
+element 74 "On Black" "54" "N"
+element 74 "Symbol" "Reverse Triangle" "N"
+element 74 "Measured" "Default" "N"
+element 74 "Simulated" "Dashed Line" "N"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "N"
+element 75 "On Black" "106" "N"
+element 75 "Symbol" "Reverse Triangle" "N"
+element 75 "Measured" "Default" "N"
+element 75 "Simulated" "Dashed Line" "N"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "N"
+element 76 "On Black" "120" "N"
+element 76 "Symbol" "Reverse Triangle" "N"
+element 76 "Measured" "Default" "N"
+element 76 "Simulated" "Dashed Line" "N"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "N"
+element 77 "On Black" "87" "N"
+element 77 "Symbol" "Reverse Triangle" "N"
+element 77 "Measured" "Default" "N"
+element 77 "Simulated" "Dashed Line" "N"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "N"
+element 78 "On Black" "79" "N"
+element 78 "Symbol" "Reverse Triangle" "N"
+element 78 "Measured" "Default" "N"
+element 78 "Simulated" "Dashed Line" "N"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "N"
+element 79 "On Black" "81" "N"
+element 79 "Symbol" "Reverse Triangle" "N"
+element 79 "Measured" "Default" "N"
+element 79 "Simulated" "Dashed Line" "N"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "N"
+element 80 "On Black" "1" "N"
+element 80 "Symbol" "Diamond" "N"
+element 80 "Measured" "Default" "N"
+element 80 "Simulated" "Dot Dashed Line" "N"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "N"
+element 81 "On Black" "0" "N"
+element 81 "Symbol" "X" "N"
+element 81 "Measured" "Default" "N"
+element 81 "Simulated" "Dot Dashed Line" "N"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "N"
+element 82 "On Black" "6" "N"
+element 82 "Symbol" "" "N"
+element 82 "Measured" "Default" "N"
+element 82 "Simulated" "Dot Dashed Line" "N"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "N"
+element 83 "On Black" "3" "N"
+element 83 "Symbol" "Star" "N"
+element 83 "Measured" "Default" "N"
+element 83 "Simulated" "Dot Dashed Line" "N"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "N"
+element 84 "On Black" "88" "N"
+element 84 "Symbol" "Reverse Triangle" "N"
+element 84 "Measured" "Default" "N"
+element 84 "Simulated" "Dot Dashed Line" "N"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "N"
+element 85 "On Black" "4" "N"
+element 85 "Symbol" "Triangle" "N"
+element 85 "Measured" "Default" "N"
+element 85 "Simulated" "Dot Dashed Line" "N"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "N"
+element 86 "On Black" "117" "N"
+element 86 "Symbol" "Diamond" "N"
+element 86 "Measured" "Default" "N"
+element 86 "Simulated" "Dot Dashed Line" "N"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "N"
+element 87 "On Black" "40" "N"
+element 87 "Symbol" "Diamond" "N"
+element 87 "Measured" "Default" "N"
+element 87 "Simulated" "Dot Dashed Line" "N"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "N"
+element 88 "On Black" "28" "N"
+element 88 "Symbol" "Diamond" "N"
+element 88 "Measured" "Default" "N"
+element 88 "Simulated" "Dot Dashed Line" "N"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "N"
+element 89 "On Black" "114" "N"
+element 89 "Symbol" "Diamond" "N"
+element 89 "Measured" "Default" "N"
+element 89 "Simulated" "Dot Dashed Line" "N"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "N"
+element 90 "On Black" "94" "N"
+element 90 "Symbol" "Diamond" "N"
+element 90 "Measured" "Default" "N"
+element 90 "Simulated" "Dot Dashed Line" "N"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "N"
+element 91 "On Black" "81" "N"
+element 91 "Symbol" "Diamond" "N"
+element 91 "Measured" "Default" "N"
+element 91 "Simulated" "Dot Dashed Line" "N"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "N"
+element 92 "On Black" "50" "N"
+element 92 "Symbol" "Diamond" "N"
+element 92 "Measured" "Default" "N"
+element 92 "Simulated" "Dot Dashed Line" "N"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "N"
+element 93 "On Black" "115" "N"
+element 93 "Symbol" "Diamond" "N"
+element 93 "Measured" "Default" "N"
+element 93 "Simulated" "Dot Dashed Line" "N"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "N"
+element 94 "On Black" "54" "N"
+element 94 "Symbol" "Diamond" "N"
+element 94 "Measured" "Default" "N"
+element 94 "Simulated" "Dot Dashed Line" "N"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "N"
+element 95 "On Black" "106" "N"
+element 95 "Symbol" "Diamond" "N"
+element 95 "Measured" "Default" "N"
+element 95 "Simulated" "Dot Dashed Line" "N"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "N"
+element 96 "On Black" "120" "N"
+element 96 "Symbol" "Diamond" "N"
+element 96 "Measured" "Default" "N"
+element 96 "Simulated" "Dot Dashed Line" "N"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "N"
+element 97 "On Black" "87" "N"
+element 97 "Symbol" "Diamond" "N"
+element 97 "Measured" "Default" "N"
+element 97 "Simulated" "Dot Dashed Line" "N"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "N"
+element 98 "On Black" "79" "N"
+element 98 "Symbol" "Diamond" "N"
+element 98 "Measured" "Default" "N"
+element 98 "Simulated" "Dot Dashed Line" "N"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "N"
+element 99 "On Black" "81" "N"
+element 99 "Symbol" "Diamond" "N"
+element 99 "Measured" "Default" "N"
+element 99 "Simulated" "Dot Dashed Line" "N"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "N"
+element 100 "On Black" "1" "N"
+element 100 "Symbol" "Star" "N"
+element 100 "Measured" "Default" "N"
+element 100 "Simulated" "Long Dashed Line" "N"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "N"
+element 101 "On Black" "0" "N"
+element 101 "Symbol" "Cross" "N"
+element 101 "Measured" "Default" "N"
+element 101 "Simulated" "Long Dashed Line" "N"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "N"
+element 102 "On Black" "6" "N"
+element 102 "Symbol" "Circle" "N"
+element 102 "Measured" "Default" "N"
+element 102 "Simulated" "Long Dashed Line" "N"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "N"
+element 103 "On Black" "3" "N"
+element 103 "Symbol" "X" "N"
+element 103 "Measured" "Default" "N"
+element 103 "Simulated" "Long Dashed Line" "N"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "N"
+element 104 "On Black" "88" "N"
+element 104 "Symbol" "Diamond" "N"
+element 104 "Measured" "Default" "N"
+element 104 "Simulated" "Long Dashed Line" "N"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "N"
+element 105 "On Black" "4" "N"
+element 105 "Symbol" "Reverse Triangle" "N"
+element 105 "Measured" "Default" "N"
+element 105 "Simulated" "Long Dashed Line" "N"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "N"
+element 106 "On Black" "117" "N"
+element 106 "Symbol" "Star" "N"
+element 106 "Measured" "Default" "N"
+element 106 "Simulated" "Long Dashed Line" "N"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "N"
+element 107 "On Black" "40" "N"
+element 107 "Symbol" "Star" "N"
+element 107 "Measured" "Default" "N"
+element 107 "Simulated" "Long Dashed Line" "N"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "N"
+element 108 "On Black" "28" "N"
+element 108 "Symbol" "Star" "N"
+element 108 "Measured" "Default" "N"
+element 108 "Simulated" "Long Dashed Line" "N"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "N"
+element 109 "On Black" "114" "N"
+element 109 "Symbol" "Star" "N"
+element 109 "Measured" "Default" "N"
+element 109 "Simulated" "Long Dashed Line" "N"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "N"
+element 110 "On Black" "94" "N"
+element 110 "Symbol" "Star" "N"
+element 110 "Measured" "Default" "N"
+element 110 "Simulated" "Long Dashed Line" "N"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "N"
+element 111 "On Black" "81" "N"
+element 111 "Symbol" "Star" "N"
+element 111 "Measured" "Default" "N"
+element 111 "Simulated" "Long Dashed Line" "N"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "N"
+element 112 "On Black" "50" "N"
+element 112 "Symbol" "Star" "N"
+element 112 "Measured" "Default" "N"
+element 112 "Simulated" "Long Dashed Line" "N"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "N"
+element 113 "On Black" "115" "N"
+element 113 "Symbol" "Star" "N"
+element 113 "Measured" "Default" "N"
+element 113 "Simulated" "Long Dashed Line" "N"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "N"
+element 114 "On Black" "54" "N"
+element 114 "Symbol" "Star" "N"
+element 114 "Measured" "Default" "N"
+element 114 "Simulated" "Long Dashed Line" "N"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "N"
+element 115 "On Black" "106" "N"
+element 115 "Symbol" "Star" "N"
+element 115 "Measured" "Default" "N"
+element 115 "Simulated" "Long Dashed Line" "N"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "N"
+element 116 "On Black" "120" "N"
+element 116 "Symbol" "Star" "N"
+element 116 "Measured" "Default" "N"
+element 116 "Simulated" "Long Dashed Line" "N"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "N"
+element 117 "On Black" "87" "N"
+element 117 "Symbol" "Star" "N"
+element 117 "Measured" "Default" "N"
+element 117 "Simulated" "Long Dashed Line" "N"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "N"
+element 118 "On Black" "79" "N"
+element 118 "Symbol" "Star" "N"
+element 118 "Measured" "Default" "N"
+element 118 "Simulated" "Long Dashed Line" "N"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "N"
+element 119 "On Black" "81" "N"
+element 119 "Symbol" "Star" "N"
+element 119 "Measured" "Default" "N"
+element 119 "Simulated" "Long Dashed Line" "N"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "N"
+element 120 "On Black" "1" "N"
+element 120 "Symbol" "X" "N"
+element 120 "Measured" "Default" "N"
+element 120 "Simulated" "Long Dot Dashed Line" "N"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "N"
+element 121 "On Black" "0" "N"
+element 121 "Symbol" "" "N"
+element 121 "Measured" "Default" "N"
+element 121 "Simulated" "Long Dot Dashed Line" "N"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "N"
+element 122 "On Black" "6" "N"
+element 122 "Symbol" "Triangle" "N"
+element 122 "Measured" "Default" "N"
+element 122 "Simulated" "Long Dot Dashed Line" "N"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "N"
+element 123 "On Black" "3" "N"
+element 123 "Symbol" "Cross" "N"
+element 123 "Measured" "Default" "N"
+element 123 "Simulated" "Long Dot Dashed Line" "N"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "N"
+element 124 "On Black" "88" "N"
+element 124 "Symbol" "Star" "N"
+element 124 "Measured" "Default" "N"
+element 124 "Simulated" "Long Dot Dashed Line" "N"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "N"
+element 125 "On Black" "4" "N"
+element 125 "Symbol" "Diamond" "N"
+element 125 "Measured" "Default" "N"
+element 125 "Simulated" "Long Dot Dashed Line" "N"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "N"
+element 126 "On Black" "117" "N"
+element 126 "Symbol" "X" "N"
+element 126 "Measured" "Default" "N"
+element 126 "Simulated" "Long Dot Dashed Line" "N"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "N"
+element 127 "On Black" "40" "N"
+element 127 "Symbol" "X" "N"
+element 127 "Measured" "Default" "N"
+element 127 "Simulated" "Long Dot Dashed Line" "N"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "N"
+element 128 "On Black" "28" "N"
+element 128 "Symbol" "X" "N"
+element 128 "Measured" "Default" "N"
+element 128 "Simulated" "Long Dot Dashed Line" "N"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "N"
+element 129 "On Black" "114" "N"
+element 129 "Symbol" "X" "N"
+element 129 "Measured" "Default" "N"
+element 129 "Simulated" "Long Dot Dashed Line" "N"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "N"
+element 130 "On Black" "94" "N"
+element 130 "Symbol" "X" "N"
+element 130 "Measured" "Default" "N"
+element 130 "Simulated" "Long Dot Dashed Line" "N"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "N"
+element 131 "On Black" "81" "N"
+element 131 "Symbol" "X" "N"
+element 131 "Measured" "Default" "N"
+element 131 "Simulated" "Long Dot Dashed Line" "N"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "N"
+element 132 "On Black" "50" "N"
+element 132 "Symbol" "X" "N"
+element 132 "Measured" "Default" "N"
+element 132 "Simulated" "Long Dot Dashed Line" "N"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "N"
+element 133 "On Black" "115" "N"
+element 133 "Symbol" "X" "N"
+element 133 "Measured" "Default" "N"
+element 133 "Simulated" "Long Dot Dashed Line" "N"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "N"
+element 134 "On Black" "54" "N"
+element 134 "Symbol" "X" "N"
+element 134 "Measured" "Default" "N"
+element 134 "Simulated" "Long Dot Dashed Line" "N"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "N"
+element 135 "On Black" "106" "N"
+element 135 "Symbol" "X" "N"
+element 135 "Measured" "Default" "N"
+element 135 "Simulated" "Long Dot Dashed Line" "N"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "N"
+element 136 "On Black" "120" "N"
+element 136 "Symbol" "X" "N"
+element 136 "Measured" "Default" "N"
+element 136 "Simulated" "Long Dot Dashed Line" "N"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "N"
+element 137 "On Black" "87" "N"
+element 137 "Symbol" "X" "N"
+element 137 "Measured" "Default" "N"
+element 137 "Simulated" "Long Dot Dashed Line" "N"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "N"
+element 138 "On Black" "79" "N"
+element 138 "Symbol" "X" "N"
+element 138 "Measured" "Default" "N"
+element 138 "Simulated" "Long Dot Dashed Line" "N"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "N"
+element 139 "On Black" "81" "N"
+element 139 "Symbol" "X" "N"
+element 139 "Measured" "Default" "N"
+element 139 "Simulated" "Long Dot Dashed Line" "N"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "N"
+element 140 "On Black" "1" "N"
+element 140 "Symbol" "Cross" "N"
+element 140 "Measured" "Default" "N"
+element 140 "Simulated" "Solid Line" "N"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "N"
+element 141 "On Black" "0" "N"
+element 141 "Symbol" "Circle" "N"
+element 141 "Measured" "Default" "N"
+element 141 "Simulated" "Solid Line" "N"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "N"
+element 142 "On Black" "6" "N"
+element 142 "Symbol" "Reverse Triangle" "N"
+element 142 "Measured" "Default" "N"
+element 142 "Simulated" "Solid Line" "N"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "N"
+element 143 "On Black" "3" "N"
+element 143 "Symbol" "" "N"
+element 143 "Measured" "Default" "N"
+element 143 "Simulated" "Solid Line" "N"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "N"
+element 144 "On Black" "88" "N"
+element 144 "Symbol" "X" "N"
+element 144 "Measured" "Default" "N"
+element 144 "Simulated" "Solid Line" "N"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "N"
+element 145 "On Black" "4" "N"
+element 145 "Symbol" "Star" "N"
+element 145 "Measured" "Default" "N"
+element 145 "Simulated" "Solid Line" "N"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "N"
+element 146 "On Black" "117" "N"
+element 146 "Symbol" "Cross" "N"
+element 146 "Measured" "Default" "N"
+element 146 "Simulated" "Solid Line" "N"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "N"
+element 147 "On Black" "40" "N"
+element 147 "Symbol" "Cross" "N"
+element 147 "Measured" "Default" "N"
+element 147 "Simulated" "Solid Line" "N"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "N"
+element 148 "On Black" "28" "N"
+element 148 "Symbol" "Cross" "N"
+element 148 "Measured" "Default" "N"
+element 148 "Simulated" "Solid Line" "N"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "N"
+element 149 "On Black" "114" "N"
+element 149 "Symbol" "Cross" "N"
+element 149 "Measured" "Default" "N"
+element 149 "Simulated" "Solid Line" "N"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "N"
+element 150 "On Black" "94" "N"
+element 150 "Symbol" "Cross" "N"
+element 150 "Measured" "Default" "N"
+element 150 "Simulated" "Solid Line" "N"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line" "N"
+element 0 "Transform Result" "Solid Line with Symbols" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "N"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+ 
+ * ------------------ *
+ * Simulator: Spectre *
+ * ------------------ *
+ 
+ 
+ * ---------------------------------------------
+ * Example of a Link to a Library of SubCircuits
+ * ---------------------------------------------
+ 
+ 
+ 
+ *---define link to library
+ #echo include "C:/tmp/libraries/test_NMOS_SubcktsLibrary.scs"
+ 
+ 
+ subckt Linking_Library(D G S B)
+ 
+ *---call subcircuit inside of library
+ *                    subckt to be linked dynamically (=ModelVariable 'Library_CellName')
+ *                    |
+ #echo nmos (D G S B) $VAR(Library_CellName="")
+ *                                          |
+ *                                          default name if ModelVariable 'Library_CellName' would not exist
+ 
+ 
+ ends 
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P11 P100 C3 C7 P100 P100 P100 C13"
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ 
+ Status:   Feb.2020
+ 
+ 
+ 
+ franz.sischka@sisconsult.de
+}
+}
+}
+LINK MACRO "HOW_TO_USE" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ ! This ModelFile links IC-CAP to a library.
+ ! The simulator is Spectre  (or ADS in Spectre netlist mode:   SIMULATOR=spmodeads)
+ 
+ ! The provided example library consists of 5 NMOS subcircuit cells,
+ ! see Macro 'SubCircuits'.
+ 
+ 
+ ! WHAT TO DO:
+ ! ===========
+ ! First of all:
+ ! - on your computer, create a directory e.g. C:/tmp/libraries
+ ! - copy the library example (contents of Macro 'SubCircuits') to this directory, 
+ !   with a name like 
+ !    "C:/tmp/libraries/test_NMOS_SubcktsLibrary.scs"
+ !   Note: this name and the path must match the 'include' statement in Tab 'Circuit' !!!
+ ! - go to Setup 'INITIALIZE/Inspect_Library', and execute Transform 'SELECT_LIBRARY_CELL'.
+ 
+}
+}
+}
+LINK MACRO "______________________1" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+
+}
+}
+}
+LINK MACRO "__LibraryExample___" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ !---copy the examples below into the library file defined in Tab 'Circuit'------------
+ !=====================================================================================
+}
+}
+}
+LINK MACRO "SubCircuits" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ !---copy the example below into the library file defined in Tab 'Circuit'------------
+ !====================================================================================
+ 
+ * ---------------------------------------------------------------
+ * Simplified Basic Example of a Library consisting of SubCircuits
+ * ---------------------------------------------------------------
+ 
+ 
+ 
+ 
+ simulator   lang=spectre    insensitive=yes
+ 
+ 
+ 
+ *---now follows a collection of sub-circuits
+ *---you can apply 'inline subckt'  or simply 'subckt'
+ ************************************************************
+ inline subckt my_NMOS1 (d g s b)
+ 
+ *---instance
+ q1 (d g s b) my_NMOS  w=2u  l=1u
+ 
+ *---model card  (if you want to access parameter values from IC-CAP,
+ *               set their value to global parameter names 
+ *               defined in IC-CAP's Tab 'Circuit'
+ model  my_NMOS  bsim3v3  type=n  
+ +tnom=27     tox=7.5E-9
+ +vth0=0.7    u0=670      ua=20n
+ 
+ ends my_NMOS1
+ ************************************************************
+ 
+ inline subckt my_NMOS2 (d g s b)
+ 
+ *---instance
+ q1 (d g s b) my_NMOS  w=1u  l=1u
+ 
+ *---model card  (if you want to access parameter values from IC-CAP,
+ *               set their value to global parameter names 
+ *               defined in IC-CAP's Tab 'Circuit'
+ model  my_NMOS  bsim3v3  type=n  
+ +tnom=27    tox=7.5E-9
+ +vth0=0.65  u0=650
+ 
+ ends my_NMOS2
+ ************************************************************
+ 
+ inline subckt my_NMOS3 (d g s b)
+ 
+ *---instance
+ q1 (d g s b) my_NMOS  w=3u  l=2u
+ 
+ *---model card  (if you want to access parameter values from IC-CAP,
+ *               set their value to global parameter names 
+ *               defined in IC-CAP's Tab 'Circuit'
+ model  my_NMOS  bsim3v3  type=n  
+ +tnom=27     tox=7.5E-9
+ +vth0=0.6    u0=660      ua=40n
+ 
+ ends my_NMOS3
+ ************************************************************
+ 
+ inline subckt my_NMOS4 (d g s b)
+ 
+ *---instance
+ q1 (d g s b) my_NMOS  w=4u  l=2u
+ 
+ *---model card  (if you want to access parameter values from IC-CAP,
+ *               set their value to global parameter names 
+ *               defined in IC-CAP's Tab 'Circuit'
+ model  my_NMOS  bsim3v3  type=n  
+ +tnom=27     tox=7.5E-9
+ +vth0=0.64   u0=640      ua=20n
+ 
+ ends my_NMOS4
+ ************************************************************
+ 
+ inline subckt my_NMOS5 (d g s b)
+ 
+ *---instance
+ q1 (d g s b) my_NMOS  w=1u  l=0.5u
+ *---model card  (if you want to access parameter values from IC-CAP,
+ *               set their value to global parameter names 
+ *               defined in IC-CAP's Tab 'Circuit'
+ model  my_NMOS  bsim3v3  type=n  
+ +tnom=27     tox=7.5E-9
+ +vth0=0.65   u0=650      ua=25n
+ 
+ ends my_NMOS5
+ ************************************************************
+}
+}
+}
+LINK DUT "INITIALIZE" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P22 C12 P100 P100 P100 P100 P100 C13"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+}
+}
+}
+LINK DAT "Inspect_Library" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 C19 P359 C10"
+element 0 "Name" "Path2Library"
+element 0 "Value" "/cygdrive/c/tmp/libraries/test_NMOS_SubcktsLibrary.scs"
+element 1 "Name" "LibrarySubCkts[0]"
+element 1 "Value" "my_NMOS1"
+element 2 "Name" "LibrarySubCkts[1]"
+element 2 "Value" "my_NMOS2"
+element 3 "Name" "LibrarySubCkts[2]"
+element 3 "Value" "my_NMOS3"
+element 4 "Name" "LibrarySubCkts[3]"
+element 4 "Value" "my_NMOS4"
+element 5 "Name" "LibrarySubCkts[4]"
+element 5 "Value" "my_NMOS5"
+element 6 "Name" "LibrarySubCkts"
+element 6 "Value" "ICCAP_ARRAY[5]"
+element 7 "Name" "LibrarySubCkts_sel"
+element 7 "Value" "2"
+element 8 "Name" "ImportedLine"
+element 8 "Value" "#echo include "C:/tmp/libraries/test_NMOS_SubcktsLibrary.scs""
+element 9 "Name" "_____________________1"
+element 9 "Value" ""
+element 10 "Name" "gui_xPos"
+element 10 "Value" "1179"
+element 10 "Comment" "GUI position in screen"
+element 11 "Name" "gui_yPos"
+element 11 "Value" "428"
+element 12 "Name" "_____________________2"
+element 12 "Value" ""
+element 13 "Name" ""
+element 13 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "TL_LibraryCells.LI_SubCkts"
+element 0 "Value" "LI|CA=#226Select Library Subckt Cell:IT=%#214LibrarySubCkts:SX=%#218LibrarySubCkts_sel:SY=SS|LS=#218gui_SetLibCellName&#17Execute|<none>|0"
+element 1 "Name" "TL_LibraryCells"
+element 1 "Value" "TL|LX=%#18gui_xPos:LY=%#18gui_yPos|<none>|#210LI_SubCkts:#15PB_OK|1|0"
+element 2 "Name" "TL_LibraryCells.PB_OK"
+element 2 "Value" "PB|CA=#19OK, Done!:TO=FW&FH|AC=#217./TL_LibraryCells&#231Destroy GUI,Select Library Cell|<none>|0"
+element 3 "Name" ""
+element 3 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,-160,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! This Setup hosts the management of the Library Inspection.
+ ! ==========================================================
+ 
+ ! - read first Macro 'HOW_TO_USE'
+ ! - then, execute 'SELECT_LIBRARY_CELL'.
+ 
+ ! What will happen:
+ ! - a GUI opens, displaying the identified subcircuit cells 
+ !    of the library referred to in tab 'Circuit'.
+ ! - the ModelVariable 'Library_CellName' is set to the
+ !    user-selected library cell 
+ ! - a DC simulation is performed (Setup DC___/foutput)
+ ! - and the result is displayed by a Plot of the same Setup.
+ 
+ 
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "SELECT_LIBRARY_CELL" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ ! This Program
+ ! - identifies the path and name of the Library, 
+ !   as defined in Tab 'Circuit'
+ ! - opens the library 
+ !   and identifies the available Subcircuit Cells in the Library
+ ! - opens a GUI, and the user selects the Subcircuit Cell 
+ !   to be applied for simulations within this IC-CAP Model project.
+ !   Note: the Tab for GUIs is to the right of Teb 'Plots'.
+ !         If you don't see this Tab, go to
+ !         ICCAP_Main/Tools/Options/View_GUI_Pages
+ 
+ 
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  LibrarySubCkts_sel
+ 
+ 
+ 
+ ErrMsg = ""
+ LibrarySubCkts_sel=-1   !to unselect the GUI List
+ 
+ 
+ !---identify DirFileName of Library, defined in Tab 'Circuit'
+ ICCAP_FUNC("Find_Path_to_Library", "Execute")
+ 
+ 
+ !---identify subcircuits
+ ICCAP_FUNC("Identify_SubCkts", "Execute")
+ IF VAL$(ErrMsg)<>"" THEN
+   GET_STRING VAL$(ErrMsg)&"   [OK]", dummy
+   RETURN_VALUE -1
+ END IF
+ 
+ 
+ !---display GUI
+ ICCAP_FUNC("./TL_LibraryCells", "Display Modeless GUI", "Select Library Cell")
+ 
+ 
+ !---clear data
+ ICCAP_FUNC("../../DC_______/foutput", "Clear Data/Simulated")
+ 
+ 
+ 
+ RETURN_VALUE 2
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 2 0
+}
+}
+}
+LINK XFORM "______________________1" "711.501"
+{
+}
+LINK XFORM "___aux________________" "711.501"
+{
+}
+LINK XFORM "Find_Path_to_Library" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ GLOBAL_VAR  Path2Library
+ GLOBAL_VAR  tmpVar
+ GLOBAL_VAR  ImportedLine
+ 
+ 
+ ! This Program loads the netlist fromTab 'Circuit', 
+ ! finds keyword '#echo include',
+ ! identifies and saves the Path2Library 
+ 
+ 
+ Path2Library = ""
+ 
+ !---import the netlist from Tab 'Circuit'
+ CircuitText = LOOKUP_TABLE_VAL("../../Circuit", "Text")	!"Text" is the keyword to get all the Macro PEL code into the Variable 'x'
+ 
+ 
+ !---save the netlist to file tmp.txt in current home directory
+ dummy = SYSTEM("rm tmp.txt")
+ PRINTER IS "tmp.txt"
+ PRINT CircuitText
+ PRINTER IS CRT
+ 
+ !---open the file
+ FileID = USERC_open("tmp.txt", "r")
+ IF FileID == -1 THEN
+   GET_STRING " FILE  NOT  FOUND !!!",dummy
+   RETURN_VALUE 0
+ END IF
+ 
+ !---read line-by-line
+ RetVal=1
+ WHILE RetVal>=0
+   ImportedLine=""
+   RetVal = USERC_readstr(FileID, 0, "%[^\r\n]", ImportedLine)
+ !  GET_STRING  "the read line is                         [OK]", ImportedLine, dummy
+ 
+   IF VAL$(ImportedLine)<>"" THEN  
+     dummy=CUTSTR(VAL$(ImportedLine), tmpVar)
+     IF VAL$(tmpVar[0])=="#echo" ANDALSO VAL$(tmpVar[1])=="include" THEN
+       Path2Library=TRIM$(VAL$(tmpVar[2]), '"')
+       Path2Library = SYS_PATH$(VAL$(Path2Library))
+       BREAK
+     END IF
+   END IF
+   RetVal=1 ! even if last RetVal was negative, there may just be a blank line
+   WHILE RetVal>=0 AND VAL$(ImportedLine)<>CHR$(10)
+      RetVal=USERC_readstr(FileID, 0, "%1[\n\r]", ImportedLine)
+   END WHILE
+      
+ END WHILE
+ 
+ !---close the file
+ dummy = USERC_close(FileID)
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Identify_SubCkts" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ !  This Program identifies all available Subcircuit Cells in the Library
+ 
+ 
+ GLOBAL_VAR  Path2Library
+ GLOBAL_VAR  tmpVar
+ GLOBAL_VAR  LibrarySubCkts
+ GLOBAL_VAR  LibrarySubCkts_sel
+ GLOBAL_VAR  Library_CellName
+ GLOBAL_VAR  ErrMsg
+ 
+ 
+ ErrMsg = ""
+ 
+ 
+ !---check, if Library file exists
+ FileID = USERC_open(VAL$(Path2Library), "r")
+ IF FileID == -1 THEN
+   ErrMsg = "ERROR:  Library file (as defined in Tab 'Circuit') not found  !!!"
+   RETURN_VALUE -2
+ END IF
+ 
+ 
+ !---check, if 'subckt' is included in Library at all
+ IF SYSTEM$("cat "&VAL$(Path2Library)&" | grep subckt")=="" THEN 
+   ErrMsg = "ERROR: no 'subckt' found in "&VAL$(Path2Library)
+   RETURN_VALUE -1
+ END IF
+ 
+ 
+ !---initialize Variable LibrarySubCkts
+ DIMENSION_ARRAY(LibrarySubCkts, 0)
+ 
+ 
+ !---open Library file
+ FileID = USERC_open(VAL$(Path2Library), "r")
+ 
+ !---find all subckts in Library
+ Finished=0
+ LOOP 
+   tmpVar = ""
+   WHILE VAL$(tmpVar)<>"subckt"
+     dummy = USERC_readstr(FileID, 0, "%s", tmpVar)
+     IF dummy==-1 THEN
+       Finished=1
+       BREAK 
+     END IF
+   END WHILE
+   EXIT IF Finished==1
+   !---read next string after found 'subckt'
+   dummy = USERC_readstr(FileID, 0, "%s", tmpVar)
+ 
+   !---add found subcircuit to Variable LibrarySubCkts
+   dummy=ARRAY_INSERT_AT(LibrarySubCkts, VAL$(tmpVar))
+ END LOOP
+ 
+ 
+ 
+ !---close Library file
+ dummy = USERC_close(FileID)
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_SetLibCellName" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ GLOBAL_VAR  LibrarySubCkts
+ GLOBAL_VAR  LibrarySubCkts_sel
+ GLOBAL_VAR  Library_CellName
+ 
+ 
+ ! This Transform is called from the GUI
+ 
+ 
+ IF VAL(LibrarySubCkts_sel)<0 THEN RETURN_VALUE -1
+ 
+ !---save the user's library cell selection
+ Library_CellName = VAL$(LibrarySubCkts[LibrarySubCkts_sel])
+ 
+ 
+ !---simulate and show the plot result of the user-selected library cell
+ ICCAP_FUNC("../../DC_______/foutput", "Display Plots")
+ ICCAP_FUNC("../../DC_______/foutput", "Simulate")
+ 
+ 
+ 
+ 
+ RETURN_VALUE 2
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 2 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "______________________________1" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+}
+}
+}
+}
+LINK DUT "DC_______" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C15 C15 C10"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P11 C15 C9 C9 P169 C9 C9 C13"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+connpair "D" ""
+connpair "G" ""
+connpair "S" ""
+connpair "B" ""
+}
+}
+}
+LINK DAT "foutput" "711.501"
+{
+View in_out 0 "3.1774826579043 13925 10844"
+View plot 0 "1.3044012785837 4564 3135"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C15 P165 P251"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "vd" "711.501"
+{
+View draw_ds 0 "B,6613,166"
+View block_edit 0 "0,491"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "D"
+element "- Node" "GROUND"
+element "Unit" "SMU1"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "1"
+element "Start" " 0.000 "
+element "Stop" " 3.000 "
+element "# of Points" "151"
+element "Step Size" " 20.00m"
+}
+}
+list PLOT "id_vd"
+}
+LINK SWEEP "vg" "711.501"
+{
+View draw_ds 0 "B,5273,2854"
+View block_edit 0 "0,491"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "LIN"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "G"
+element "- Node" "GROUND"
+element "Unit" "SMU2"
+element "Compliance" " 100.0m"
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Sweep Order" "2"
+element "Start" " 1.000 "
+element "Stop" " 3.000 "
+element "# of Points" "5"
+element "Step Size" " 500.0m"
+}
+}
+}
+LINK SWEEP "vs" "711.501"
+{
+View draw_ds 0 "B,5273,5542"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "S"
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK SWEEP "vb" "711.501"
+{
+View draw_ds 0 "B,5272,7438"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" "B"
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK OUT "id" "711.501"
+{
+View draw_ds 0 "B,5271,9334"
+View block_edit 0 "0,506"
+data
+{
+HYPTABLE "Edit Output Info"
+{
+element "Mode" "I"
+element "Unit" ""
+element "Type" "B"
+}
+HYPTABLE "Edit Out Mode Def"
+{
+element "To Node" "D"
+element "From Node" "GROUND"
+}
+dataset
+{
+datasize BOTH 755 1 1
+type MEAS
+point 0 1 1 0 0
+point 1 1 1 0 0
+point 2 1 1 0 0
+point 3 1 1 0 0
+point 4 1 1 0 0
+point 5 1 1 0 0
+point 6 1 1 0 0
+point 7 1 1 0 0
+point 8 1 1 0 0
+point 9 1 1 0 0
+point 10 1 1 0 0
+point 11 1 1 0 0
+point 12 1 1 0 0
+point 13 1 1 0 0
+point 14 1 1 0 0
+point 15 1 1 0 0
+point 16 1 1 0 0
+point 17 1 1 0 0
+point 18 1 1 0 0
+point 19 1 1 0 0
+point 20 1 1 0 0
+point 21 1 1 0 0
+point 22 1 1 0 0
+point 23 1 1 0 0
+point 24 1 1 0 0
+point 25 1 1 0 0
+point 26 1 1 0 0
+point 27 1 1 0 0
+point 28 1 1 0 0
+point 29 1 1 0 0
+point 30 1 1 0 0
+point 31 1 1 0 0
+point 32 1 1 0 0
+point 33 1 1 0 0
+point 34 1 1 0 0
+point 35 1 1 0 0
+point 36 1 1 0 0
+point 37 1 1 0 0
+point 38 1 1 0 0
+point 39 1 1 0 0
+point 40 1 1 0 0
+point 41 1 1 0 0
+point 42 1 1 0 0
+point 43 1 1 0 0
+point 44 1 1 0 0
+point 45 1 1 0 0
+point 46 1 1 0 0
+point 47 1 1 0 0
+point 48 1 1 0 0
+point 49 1 1 0 0
+point 50 1 1 0 0
+point 51 1 1 0 0
+point 52 1 1 0 0
+point 53 1 1 0 0
+point 54 1 1 0 0
+point 55 1 1 0 0
+point 56 1 1 0 0
+point 57 1 1 0 0
+point 58 1 1 0 0
+point 59 1 1 0 0
+point 60 1 1 0 0
+point 61 1 1 0 0
+point 62 1 1 0 0
+point 63 1 1 0 0
+point 64 1 1 0 0
+point 65 1 1 0 0
+point 66 1 1 0 0
+point 67 1 1 0 0
+point 68 1 1 0 0
+point 69 1 1 0 0
+point 70 1 1 0 0
+point 71 1 1 0 0
+point 72 1 1 0 0
+point 73 1 1 0 0
+point 74 1 1 0 0
+point 75 1 1 0 0
+point 76 1 1 0 0
+point 77 1 1 0 0
+point 78 1 1 0 0
+point 79 1 1 0 0
+point 80 1 1 0 0
+point 81 1 1 0 0
+point 82 1 1 0 0
+point 83 1 1 0 0
+point 84 1 1 0 0
+point 85 1 1 0 0
+point 86 1 1 0 0
+point 87 1 1 0 0
+point 88 1 1 0 0
+point 89 1 1 0 0
+point 90 1 1 0 0
+point 91 1 1 0 0
+point 92 1 1 0 0
+point 93 1 1 0 0
+point 94 1 1 0 0
+point 95 1 1 0 0
+point 96 1 1 0 0
+point 97 1 1 0 0
+point 98 1 1 0 0
+point 99 1 1 0 0
+point 100 1 1 0 0
+point 101 1 1 0 0
+point 102 1 1 0 0
+point 103 1 1 0 0
+point 104 1 1 0 0
+point 105 1 1 0 0
+point 106 1 1 0 0
+point 107 1 1 0 0
+point 108 1 1 0 0
+point 109 1 1 0 0
+point 110 1 1 0 0
+point 111 1 1 0 0
+point 112 1 1 0 0
+point 113 1 1 0 0
+point 114 1 1 0 0
+point 115 1 1 0 0
+point 116 1 1 0 0
+point 117 1 1 0 0
+point 118 1 1 0 0
+point 119 1 1 0 0
+point 120 1 1 0 0
+point 121 1 1 0 0
+point 122 1 1 0 0
+point 123 1 1 0 0
+point 124 1 1 0 0
+point 125 1 1 0 0
+point 126 1 1 0 0
+point 127 1 1 0 0
+point 128 1 1 0 0
+point 129 1 1 0 0
+point 130 1 1 0 0
+point 131 1 1 0 0
+point 132 1 1 0 0
+point 133 1 1 0 0
+point 134 1 1 0 0
+point 135 1 1 0 0
+point 136 1 1 0 0
+point 137 1 1 0 0
+point 138 1 1 0 0
+point 139 1 1 0 0
+point 140 1 1 0 0
+point 141 1 1 0 0
+point 142 1 1 0 0
+point 143 1 1 0 0
+point 144 1 1 0 0
+point 145 1 1 0 0
+point 146 1 1 0 0
+point 147 1 1 0 0
+point 148 1 1 0 0
+point 149 1 1 0 0
+point 150 1 1 0 0
+point 151 1 1 0 0
+point 152 1 1 0 0
+point 153 1 1 0 0
+point 154 1 1 0 0
+point 155 1 1 0 0
+point 156 1 1 0 0
+point 157 1 1 0 0
+point 158 1 1 0 0
+point 159 1 1 0 0
+point 160 1 1 0 0
+point 161 1 1 0 0
+point 162 1 1 0 0
+point 163 1 1 0 0
+point 164 1 1 0 0
+point 165 1 1 0 0
+point 166 1 1 0 0
+point 167 1 1 0 0
+point 168 1 1 0 0
+point 169 1 1 0 0
+point 170 1 1 0 0
+point 171 1 1 0 0
+point 172 1 1 0 0
+point 173 1 1 0 0
+point 174 1 1 0 0
+point 175 1 1 0 0
+point 176 1 1 0 0
+point 177 1 1 0 0
+point 178 1 1 0 0
+point 179 1 1 0 0
+point 180 1 1 0 0
+point 181 1 1 0 0
+point 182 1 1 0 0
+point 183 1 1 0 0
+point 184 1 1 0 0
+point 185 1 1 0 0
+point 186 1 1 0 0
+point 187 1 1 0 0
+point 188 1 1 0 0
+point 189 1 1 0 0
+point 190 1 1 0 0
+point 191 1 1 0 0
+point 192 1 1 0 0
+point 193 1 1 0 0
+point 194 1 1 0 0
+point 195 1 1 0 0
+point 196 1 1 0 0
+point 197 1 1 0 0
+point 198 1 1 0 0
+point 199 1 1 0 0
+point 200 1 1 0 0
+point 201 1 1 0 0
+point 202 1 1 0 0
+point 203 1 1 0 0
+point 204 1 1 0 0
+point 205 1 1 0 0
+point 206 1 1 0 0
+point 207 1 1 0 0
+point 208 1 1 0 0
+point 209 1 1 0 0
+point 210 1 1 0 0
+point 211 1 1 0 0
+point 212 1 1 0 0
+point 213 1 1 0 0
+point 214 1 1 0 0
+point 215 1 1 0 0
+point 216 1 1 0 0
+point 217 1 1 0 0
+point 218 1 1 0 0
+point 219 1 1 0 0
+point 220 1 1 0 0
+point 221 1 1 0 0
+point 222 1 1 0 0
+point 223 1 1 0 0
+point 224 1 1 0 0
+point 225 1 1 0 0
+point 226 1 1 0 0
+point 227 1 1 0 0
+point 228 1 1 0 0
+point 229 1 1 0 0
+point 230 1 1 0 0
+point 231 1 1 0 0
+point 232 1 1 0 0
+point 233 1 1 0 0
+point 234 1 1 0 0
+point 235 1 1 0 0
+point 236 1 1 0 0
+point 237 1 1 0 0
+point 238 1 1 0 0
+point 239 1 1 0 0
+point 240 1 1 0 0
+point 241 1 1 0 0
+point 242 1 1 0 0
+point 243 1 1 0 0
+point 244 1 1 0 0
+point 245 1 1 0 0
+point 246 1 1 0 0
+point 247 1 1 0 0
+point 248 1 1 0 0
+point 249 1 1 0 0
+point 250 1 1 0 0
+point 251 1 1 0 0
+point 252 1 1 0 0
+point 253 1 1 0 0
+point 254 1 1 0 0
+point 255 1 1 0 0
+point 256 1 1 0 0
+point 257 1 1 0 0
+point 258 1 1 0 0
+point 259 1 1 0 0
+point 260 1 1 0 0
+point 261 1 1 0 0
+point 262 1 1 0 0
+point 263 1 1 0 0
+point 264 1 1 0 0
+point 265 1 1 0 0
+point 266 1 1 0 0
+point 267 1 1 0 0
+point 268 1 1 0 0
+point 269 1 1 0 0
+point 270 1 1 0 0
+point 271 1 1 0 0
+point 272 1 1 0 0
+point 273 1 1 0 0
+point 274 1 1 0 0
+point 275 1 1 0 0
+point 276 1 1 0 0
+point 277 1 1 0 0
+point 278 1 1 0 0
+point 279 1 1 0 0
+point 280 1 1 0 0
+point 281 1 1 0 0
+point 282 1 1 0 0
+point 283 1 1 0 0
+point 284 1 1 0 0
+point 285 1 1 0 0
+point 286 1 1 0 0
+point 287 1 1 0 0
+point 288 1 1 0 0
+point 289 1 1 0 0
+point 290 1 1 0 0
+point 291 1 1 0 0
+point 292 1 1 0 0
+point 293 1 1 0 0
+point 294 1 1 0 0
+point 295 1 1 0 0
+point 296 1 1 0 0
+point 297 1 1 0 0
+point 298 1 1 0 0
+point 299 1 1 0 0
+point 300 1 1 0 0
+point 301 1 1 0 0
+point 302 1 1 0 0
+point 303 1 1 0 0
+point 304 1 1 0 0
+point 305 1 1 0 0
+point 306 1 1 0 0
+point 307 1 1 0 0
+point 308 1 1 0 0
+point 309 1 1 0 0
+point 310 1 1 0 0
+point 311 1 1 0 0
+point 312 1 1 0 0
+point 313 1 1 0 0
+point 314 1 1 0 0
+point 315 1 1 0 0
+point 316 1 1 0 0
+point 317 1 1 0 0
+point 318 1 1 0 0
+point 319 1 1 0 0
+point 320 1 1 0 0
+point 321 1 1 0 0
+point 322 1 1 0 0
+point 323 1 1 0 0
+point 324 1 1 0 0
+point 325 1 1 0 0
+point 326 1 1 0 0
+point 327 1 1 0 0
+point 328 1 1 0 0
+point 329 1 1 0 0
+point 330 1 1 0 0
+point 331 1 1 0 0
+point 332 1 1 0 0
+point 333 1 1 0 0
+point 334 1 1 0 0
+point 335 1 1 0 0
+point 336 1 1 0 0
+point 337 1 1 0 0
+point 338 1 1 0 0
+point 339 1 1 0 0
+point 340 1 1 0 0
+point 341 1 1 0 0
+point 342 1 1 0 0
+point 343 1 1 0 0
+point 344 1 1 0 0
+point 345 1 1 0 0
+point 346 1 1 0 0
+point 347 1 1 0 0
+point 348 1 1 0 0
+point 349 1 1 0 0
+point 350 1 1 0 0
+point 351 1 1 0 0
+point 352 1 1 0 0
+point 353 1 1 0 0
+point 354 1 1 0 0
+point 355 1 1 0 0
+point 356 1 1 0 0
+point 357 1 1 0 0
+point 358 1 1 0 0
+point 359 1 1 0 0
+point 360 1 1 0 0
+point 361 1 1 0 0
+point 362 1 1 0 0
+point 363 1 1 0 0
+point 364 1 1 0 0
+point 365 1 1 0 0
+point 366 1 1 0 0
+point 367 1 1 0 0
+point 368 1 1 0 0
+point 369 1 1 0 0
+point 370 1 1 0 0
+point 371 1 1 0 0
+point 372 1 1 0 0
+point 373 1 1 0 0
+point 374 1 1 0 0
+point 375 1 1 0 0
+point 376 1 1 0 0
+point 377 1 1 0 0
+point 378 1 1 0 0
+point 379 1 1 0 0
+point 380 1 1 0 0
+point 381 1 1 0 0
+point 382 1 1 0 0
+point 383 1 1 0 0
+point 384 1 1 0 0
+point 385 1 1 0 0
+point 386 1 1 0 0
+point 387 1 1 0 0
+point 388 1 1 0 0
+point 389 1 1 0 0
+point 390 1 1 0 0
+point 391 1 1 0 0
+point 392 1 1 0 0
+point 393 1 1 0 0
+point 394 1 1 0 0
+point 395 1 1 0 0
+point 396 1 1 0 0
+point 397 1 1 0 0
+point 398 1 1 0 0
+point 399 1 1 0 0
+point 400 1 1 0 0
+point 401 1 1 0 0
+point 402 1 1 0 0
+point 403 1 1 0 0
+point 404 1 1 0 0
+point 405 1 1 0 0
+point 406 1 1 0 0
+point 407 1 1 0 0
+point 408 1 1 0 0
+point 409 1 1 0 0
+point 410 1 1 0 0
+point 411 1 1 0 0
+point 412 1 1 0 0
+point 413 1 1 0 0
+point 414 1 1 0 0
+point 415 1 1 0 0
+point 416 1 1 0 0
+point 417 1 1 0 0
+point 418 1 1 0 0
+point 419 1 1 0 0
+point 420 1 1 0 0
+point 421 1 1 0 0
+point 422 1 1 0 0
+point 423 1 1 0 0
+point 424 1 1 0 0
+point 425 1 1 0 0
+point 426 1 1 0 0
+point 427 1 1 0 0
+point 428 1 1 0 0
+point 429 1 1 0 0
+point 430 1 1 0 0
+point 431 1 1 0 0
+point 432 1 1 0 0
+point 433 1 1 0 0
+point 434 1 1 0 0
+point 435 1 1 0 0
+point 436 1 1 0 0
+point 437 1 1 0 0
+point 438 1 1 0 0
+point 439 1 1 0 0
+point 440 1 1 0 0
+point 441 1 1 0 0
+point 442 1 1 0 0
+point 443 1 1 0 0
+point 444 1 1 0 0
+point 445 1 1 0 0
+point 446 1 1 0 0
+point 447 1 1 0 0
+point 448 1 1 0 0
+point 449 1 1 0 0
+point 450 1 1 0 0
+point 451 1 1 0 0
+point 452 1 1 0 0
+point 453 1 1 0 0
+point 454 1 1 0 0
+point 455 1 1 0 0
+point 456 1 1 0 0
+point 457 1 1 0 0
+point 458 1 1 0 0
+point 459 1 1 0 0
+point 460 1 1 0 0
+point 461 1 1 0 0
+point 462 1 1 0 0
+point 463 1 1 0 0
+point 464 1 1 0 0
+point 465 1 1 0 0
+point 466 1 1 0 0
+point 467 1 1 0 0
+point 468 1 1 0 0
+point 469 1 1 0 0
+point 470 1 1 0 0
+point 471 1 1 0 0
+point 472 1 1 0 0
+point 473 1 1 0 0
+point 474 1 1 0 0
+point 475 1 1 0 0
+point 476 1 1 0 0
+point 477 1 1 0 0
+point 478 1 1 0 0
+point 479 1 1 0 0
+point 480 1 1 0 0
+point 481 1 1 0 0
+point 482 1 1 0 0
+point 483 1 1 0 0
+point 484 1 1 0 0
+point 485 1 1 0 0
+point 486 1 1 0 0
+point 487 1 1 0 0
+point 488 1 1 0 0
+point 489 1 1 0 0
+point 490 1 1 0 0
+point 491 1 1 0 0
+point 492 1 1 0 0
+point 493 1 1 0 0
+point 494 1 1 0 0
+point 495 1 1 0 0
+point 496 1 1 0 0
+point 497 1 1 0 0
+point 498 1 1 0 0
+point 499 1 1 0 0
+point 500 1 1 0 0
+point 501 1 1 0 0
+point 502 1 1 0 0
+point 503 1 1 0 0
+point 504 1 1 0 0
+point 505 1 1 0 0
+point 506 1 1 0 0
+point 507 1 1 0 0
+point 508 1 1 0 0
+point 509 1 1 0 0
+point 510 1 1 0 0
+point 511 1 1 0 0
+point 512 1 1 0 0
+point 513 1 1 0 0
+point 514 1 1 0 0
+point 515 1 1 0 0
+point 516 1 1 0 0
+point 517 1 1 0 0
+point 518 1 1 0 0
+point 519 1 1 0 0
+point 520 1 1 0 0
+point 521 1 1 0 0
+point 522 1 1 0 0
+point 523 1 1 0 0
+point 524 1 1 0 0
+point 525 1 1 0 0
+point 526 1 1 0 0
+point 527 1 1 0 0
+point 528 1 1 0 0
+point 529 1 1 0 0
+point 530 1 1 0 0
+point 531 1 1 0 0
+point 532 1 1 0 0
+point 533 1 1 0 0
+point 534 1 1 0 0
+point 535 1 1 0 0
+point 536 1 1 0 0
+point 537 1 1 0 0
+point 538 1 1 0 0
+point 539 1 1 0 0
+point 540 1 1 0 0
+point 541 1 1 0 0
+point 542 1 1 0 0
+point 543 1 1 0 0
+point 544 1 1 0 0
+point 545 1 1 0 0
+point 546 1 1 0 0
+point 547 1 1 0 0
+point 548 1 1 0 0
+point 549 1 1 0 0
+point 550 1 1 0 0
+point 551 1 1 0 0
+point 552 1 1 0 0
+point 553 1 1 0 0
+point 554 1 1 0 0
+point 555 1 1 0 0
+point 556 1 1 0 0
+point 557 1 1 0 0
+point 558 1 1 0 0
+point 559 1 1 0 0
+point 560 1 1 0 0
+point 561 1 1 0 0
+point 562 1 1 0 0
+point 563 1 1 0 0
+point 564 1 1 0 0
+point 565 1 1 0 0
+point 566 1 1 0 0
+point 567 1 1 0 0
+point 568 1 1 0 0
+point 569 1 1 0 0
+point 570 1 1 0 0
+point 571 1 1 0 0
+point 572 1 1 0 0
+point 573 1 1 0 0
+point 574 1 1 0 0
+point 575 1 1 0 0
+point 576 1 1 0 0
+point 577 1 1 0 0
+point 578 1 1 0 0
+point 579 1 1 0 0
+point 580 1 1 0 0
+point 581 1 1 0 0
+point 582 1 1 0 0
+point 583 1 1 0 0
+point 584 1 1 0 0
+point 585 1 1 0 0
+point 586 1 1 0 0
+point 587 1 1 0 0
+point 588 1 1 0 0
+point 589 1 1 0 0
+point 590 1 1 0 0
+point 591 1 1 0 0
+point 592 1 1 0 0
+point 593 1 1 0 0
+point 594 1 1 0 0
+point 595 1 1 0 0
+point 596 1 1 0 0
+point 597 1 1 0 0
+point 598 1 1 0 0
+point 599 1 1 0 0
+point 600 1 1 0 0
+point 601 1 1 0 0
+point 602 1 1 0 0
+point 603 1 1 0 0
+point 604 1 1 0 0
+point 605 1 1 0 0
+point 606 1 1 0 0
+point 607 1 1 0 0
+point 608 1 1 0 0
+point 609 1 1 0 0
+point 610 1 1 0 0
+point 611 1 1 0 0
+point 612 1 1 0 0
+point 613 1 1 0 0
+point 614 1 1 0 0
+point 615 1 1 0 0
+point 616 1 1 0 0
+point 617 1 1 0 0
+point 618 1 1 0 0
+point 619 1 1 0 0
+point 620 1 1 0 0
+point 621 1 1 0 0
+point 622 1 1 0 0
+point 623 1 1 0 0
+point 624 1 1 0 0
+point 625 1 1 0 0
+point 626 1 1 0 0
+point 627 1 1 0 0
+point 628 1 1 0 0
+point 629 1 1 0 0
+point 630 1 1 0 0
+point 631 1 1 0 0
+point 632 1 1 0 0
+point 633 1 1 0 0
+point 634 1 1 0 0
+point 635 1 1 0 0
+point 636 1 1 0 0
+point 637 1 1 0 0
+point 638 1 1 0 0
+point 639 1 1 0 0
+point 640 1 1 0 0
+point 641 1 1 0 0
+point 642 1 1 0 0
+point 643 1 1 0 0
+point 644 1 1 0 0
+point 645 1 1 0 0
+point 646 1 1 0 0
+point 647 1 1 0 0
+point 648 1 1 0 0
+point 649 1 1 0 0
+point 650 1 1 0 0
+point 651 1 1 0 0
+point 652 1 1 0 0
+point 653 1 1 0 0
+point 654 1 1 0 0
+point 655 1 1 0 0
+point 656 1 1 0 0
+point 657 1 1 0 0
+point 658 1 1 0 0
+point 659 1 1 0 0
+point 660 1 1 0 0
+point 661 1 1 0 0
+point 662 1 1 0 0
+point 663 1 1 0 0
+point 664 1 1 0 0
+point 665 1 1 0 0
+point 666 1 1 0 0
+point 667 1 1 0 0
+point 668 1 1 0 0
+point 669 1 1 0 0
+point 670 1 1 0 0
+point 671 1 1 0 0
+point 672 1 1 0 0
+point 673 1 1 0 0
+point 674 1 1 0 0
+point 675 1 1 0 0
+point 676 1 1 0 0
+point 677 1 1 0 0
+point 678 1 1 0 0
+point 679 1 1 0 0
+point 680 1 1 0 0
+point 681 1 1 0 0
+point 682 1 1 0 0
+point 683 1 1 0 0
+point 684 1 1 0 0
+point 685 1 1 0 0
+point 686 1 1 0 0
+point 687 1 1 0 0
+point 688 1 1 0 0
+point 689 1 1 0 0
+point 690 1 1 0 0
+point 691 1 1 0 0
+point 692 1 1 0 0
+point 693 1 1 0 0
+point 694 1 1 0 0
+point 695 1 1 0 0
+point 696 1 1 0 0
+point 697 1 1 0 0
+point 698 1 1 0 0
+point 699 1 1 0 0
+point 700 1 1 0 0
+point 701 1 1 0 0
+point 702 1 1 0 0
+point 703 1 1 0 0
+point 704 1 1 0 0
+point 705 1 1 0 0
+point 706 1 1 0 0
+point 707 1 1 0 0
+point 708 1 1 0 0
+point 709 1 1 0 0
+point 710 1 1 0 0
+point 711 1 1 0 0
+point 712 1 1 0 0
+point 713 1 1 0 0
+point 714 1 1 0 0
+point 715 1 1 0 0
+point 716 1 1 0 0
+point 717 1 1 0 0
+point 718 1 1 0 0
+point 719 1 1 0 0
+point 720 1 1 0 0
+point 721 1 1 0 0
+point 722 1 1 0 0
+point 723 1 1 0 0
+point 724 1 1 0 0
+point 725 1 1 0 0
+point 726 1 1 0 0
+point 727 1 1 0 0
+point 728 1 1 0 0
+point 729 1 1 0 0
+point 730 1 1 0 0
+point 731 1 1 0 0
+point 732 1 1 0 0
+point 733 1 1 0 0
+point 734 1 1 0 0
+point 735 1 1 0 0
+point 736 1 1 0 0
+point 737 1 1 0 0
+point 738 1 1 0 0
+point 739 1 1 0 0
+point 740 1 1 0 0
+point 741 1 1 0 0
+point 742 1 1 0 0
+point 743 1 1 0 0
+point 744 1 1 0 0
+point 745 1 1 0 0
+point 746 1 1 0 0
+point 747 1 1 0 0
+point 748 1 1 0 0
+point 749 1 1 0 0
+point 750 1 1 0 0
+point 751 1 1 0 0
+point 752 1 1 0 0
+point 753 1 1 0 0
+point 754 1 1 0 0
+type SIMU
+point 0 1 1 -0 0
+point 1 1 1 2.17338E-007 0
+point 2 1 1 4.12778E-007 0
+point 3 1 1 5.86426E-007 0
+point 4 1 1 7.38435E-007 0
+point 5 1 1 8.69035E-007 0
+point 6 1 1 9.78595E-007 0
+point 7 1 1 1.06772E-006 0
+point 8 1 1 1.13743E-006 0
+point 9 1 1 1.18936E-006 0
+point 10 1 1 1.22596E-006 0
+point 11 1 1 1.25043E-006 0
+point 12 1 1 1.26619E-006 0
+point 13 1 1 1.27622E-006 0
+point 14 1 1 1.2827E-006 0
+point 15 1 1 1.28703E-006 0
+point 16 1 1 1.29006E-006 0
+point 17 1 1 1.29228E-006 0
+point 18 1 1 1.29397E-006 0
+point 19 1 1 1.29533E-006 0
+point 20 1 1 1.29646E-006 0
+point 21 1 1 1.29742E-006 0
+point 22 1 1 1.29826E-006 0
+point 23 1 1 1.29902E-006 0
+point 24 1 1 1.29972E-006 0
+point 25 1 1 1.30036E-006 0
+point 26 1 1 1.30097E-006 0
+point 27 1 1 1.30154E-006 0
+point 28 1 1 1.30209E-006 0
+point 29 1 1 1.30262E-006 0
+point 30 1 1 1.30313E-006 0
+point 31 1 1 1.30363E-006 0
+point 32 1 1 1.30412E-006 0
+point 33 1 1 1.3046E-006 0
+point 34 1 1 1.30506E-006 0
+point 35 1 1 1.30553E-006 0
+point 36 1 1 1.30598E-006 0
+point 37 1 1 1.30643E-006 0
+point 38 1 1 1.30687E-006 0
+point 39 1 1 1.30731E-006 0
+point 40 1 1 1.30775E-006 0
+point 41 1 1 1.30818E-006 0
+point 42 1 1 1.30861E-006 0
+point 43 1 1 1.30903E-006 0
+point 44 1 1 1.30946E-006 0
+point 45 1 1 1.30988E-006 0
+point 46 1 1 1.3103E-006 0
+point 47 1 1 1.31071E-006 0
+point 48 1 1 1.31113E-006 0
+point 49 1 1 1.31154E-006 0
+point 50 1 1 1.31195E-006 0
+point 51 1 1 1.31236E-006 0
+point 52 1 1 1.31277E-006 0
+point 53 1 1 1.31318E-006 0
+point 54 1 1 1.31358E-006 0
+point 55 1 1 1.31399E-006 0
+point 56 1 1 1.31439E-006 0
+point 57 1 1 1.3148E-006 0
+point 58 1 1 1.3152E-006 0
+point 59 1 1 1.3156E-006 0
+point 60 1 1 1.316E-006 0
+point 61 1 1 1.3164E-006 0
+point 62 1 1 1.3168E-006 0
+point 63 1 1 1.3172E-006 0
+point 64 1 1 1.3176E-006 0
+point 65 1 1 1.31799E-006 0
+point 66 1 1 1.31839E-006 0
+point 67 1 1 1.31879E-006 0
+point 68 1 1 1.31918E-006 0
+point 69 1 1 1.31958E-006 0
+point 70 1 1 1.31997E-006 0
+point 71 1 1 1.32036E-006 0
+point 72 1 1 1.32076E-006 0
+point 73 1 1 1.32115E-006 0
+point 74 1 1 1.32154E-006 0
+point 75 1 1 1.32194E-006 0
+point 76 1 1 1.32233E-006 0
+point 77 1 1 1.32272E-006 0
+point 78 1 1 1.32311E-006 0
+point 79 1 1 1.3235E-006 0
+point 80 1 1 1.32389E-006 0
+point 81 1 1 1.32428E-006 0
+point 82 1 1 1.32467E-006 0
+point 83 1 1 1.32506E-006 0
+point 84 1 1 1.32545E-006 0
+point 85 1 1 1.32584E-006 0
+point 86 1 1 1.32623E-006 0
+point 87 1 1 1.32662E-006 0
+point 88 1 1 1.32701E-006 0
+point 89 1 1 1.3274E-006 0
+point 90 1 1 1.32779E-006 0
+point 91 1 1 1.32817E-006 0
+point 92 1 1 1.32856E-006 0
+point 93 1 1 1.32895E-006 0
+point 94 1 1 1.32934E-006 0
+point 95 1 1 1.32973E-006 0
+point 96 1 1 1.33011E-006 0
+point 97 1 1 1.3305E-006 0
+point 98 1 1 1.33089E-006 0
+point 99 1 1 1.33128E-006 0
+point 100 1 1 1.33167E-006 0
+point 101 1 1 1.33205E-006 0
+point 102 1 1 1.33244E-006 0
+point 103 1 1 1.33283E-006 0
+point 104 1 1 1.33322E-006 0
+point 105 1 1 1.33361E-006 0
+point 106 1 1 1.334E-006 0
+point 107 1 1 1.33439E-006 0
+point 108 1 1 1.33478E-006 0
+point 109 1 1 1.33517E-006 0
+point 110 1 1 1.33556E-006 0
+point 111 1 1 1.33595E-006 0
+point 112 1 1 1.33635E-006 0
+point 113 1 1 1.33674E-006 0
+point 114 1 1 1.33714E-006 0
+point 115 1 1 1.33753E-006 0
+point 116 1 1 1.33793E-006 0
+point 117 1 1 1.33833E-006 0
+point 118 1 1 1.33873E-006 0
+point 119 1 1 1.33913E-006 0
+point 120 1 1 1.33954E-006 0
+point 121 1 1 1.33994E-006 0
+point 122 1 1 1.34035E-006 0
+point 123 1 1 1.34076E-006 0
+point 124 1 1 1.34117E-006 0
+point 125 1 1 1.34159E-006 0
+point 126 1 1 1.342E-006 0
+point 127 1 1 1.34242E-006 0
+point 128 1 1 1.34285E-006 0
+point 129 1 1 1.34328E-006 0
+point 130 1 1 1.34371E-006 0
+point 131 1 1 1.34414E-006 0
+point 132 1 1 1.34458E-006 0
+point 133 1 1 1.34502E-006 0
+point 134 1 1 1.34547E-006 0
+point 135 1 1 1.34592E-006 0
+point 136 1 1 1.34638E-006 0
+point 137 1 1 1.34685E-006 0
+point 138 1 1 1.34731E-006 0
+point 139 1 1 1.34779E-006 0
+point 140 1 1 1.34827E-006 0
+point 141 1 1 1.34876E-006 0
+point 142 1 1 1.34926E-006 0
+point 143 1 1 1.34976E-006 0
+point 144 1 1 1.35027E-006 0
+point 145 1 1 1.35079E-006 0
+point 146 1 1 1.35132E-006 0
+point 147 1 1 1.35186E-006 0
+point 148 1 1 1.35241E-006 0
+point 149 1 1 1.35297E-006 0
+point 150 1 1 1.35353E-006 0
+point 151 1 1 -0 0
+point 152 1 1 5.23566E-007 0
+point 153 1 1 1.02745E-006 0
+point 154 1 1 1.51166E-006 0
+point 155 1 1 1.97623E-006 0
+point 156 1 1 2.42118E-006 0
+point 157 1 1 2.84654E-006 0
+point 158 1 1 3.25232E-006 0
+point 159 1 1 3.63857E-006 0
+point 160 1 1 4.0053E-006 0
+point 161 1 1 4.35255E-006 0
+point 162 1 1 4.68036E-006 0
+point 163 1 1 4.98876E-006 0
+point 164 1 1 5.27781E-006 0
+point 165 1 1 5.54754E-006 0
+point 166 1 1 5.79805E-006 0
+point 167 1 1 6.02939E-006 0
+point 168 1 1 6.24169E-006 0
+point 169 1 1 6.43507E-006 0
+point 170 1 1 6.60971E-006 0
+point 171 1 1 6.76587E-006 0
+point 172 1 1 6.90386E-006 0
+point 173 1 1 7.02414E-006 0
+point 174 1 1 7.12733E-006 0
+point 175 1 1 7.21429E-006 0
+point 176 1 1 7.28613E-006 0
+point 177 1 1 7.34425E-006 0
+point 178 1 1 7.39036E-006 0
+point 179 1 1 7.42633E-006 0
+point 180 1 1 7.45407E-006 0
+point 181 1 1 7.47537E-006 0
+point 182 1 1 7.49179E-006 0
+point 183 1 1 7.50458E-006 0
+point 184 1 1 7.51471E-006 0
+point 185 1 1 7.5229E-006 0
+point 186 1 1 7.52965E-006 0
+point 187 1 1 7.53536E-006 0
+point 188 1 1 7.54027E-006 0
+point 189 1 1 7.54459E-006 0
+point 190 1 1 7.54845E-006 0
+point 191 1 1 7.55196E-006 0
+point 192 1 1 7.55518E-006 0
+point 193 1 1 7.55819E-006 0
+point 194 1 1 7.56101E-006 0
+point 195 1 1 7.56369E-006 0
+point 196 1 1 7.56624E-006 0
+point 197 1 1 7.56869E-006 0
+point 198 1 1 7.57105E-006 0
+point 199 1 1 7.57334E-006 0
+point 200 1 1 7.57556E-006 0
+point 201 1 1 7.57773E-006 0
+point 202 1 1 7.57985E-006 0
+point 203 1 1 7.58193E-006 0
+point 204 1 1 7.58396E-006 0
+point 205 1 1 7.58597E-006 0
+point 206 1 1 7.58794E-006 0
+point 207 1 1 7.58988E-006 0
+point 208 1 1 7.5918E-006 0
+point 209 1 1 7.5937E-006 0
+point 210 1 1 7.59557E-006 0
+point 211 1 1 7.59743E-006 0
+point 212 1 1 7.59926E-006 0
+point 213 1 1 7.60108E-006 0
+point 214 1 1 7.60289E-006 0
+point 215 1 1 7.60467E-006 0
+point 216 1 1 7.60645E-006 0
+point 217 1 1 7.60821E-006 0
+point 218 1 1 7.60996E-006 0
+point 219 1 1 7.6117E-006 0
+point 220 1 1 7.61342E-006 0
+point 221 1 1 7.61514E-006 0
+point 222 1 1 7.61685E-006 0
+point 223 1 1 7.61854E-006 0
+point 224 1 1 7.62023E-006 0
+point 225 1 1 7.62191E-006 0
+point 226 1 1 7.62358E-006 0
+point 227 1 1 7.62525E-006 0
+point 228 1 1 7.6269E-006 0
+point 229 1 1 7.62855E-006 0
+point 230 1 1 7.6302E-006 0
+point 231 1 1 7.63183E-006 0
+point 232 1 1 7.63346E-006 0
+point 233 1 1 7.63508E-006 0
+point 234 1 1 7.6367E-006 0
+point 235 1 1 7.63831E-006 0
+point 236 1 1 7.63992E-006 0
+point 237 1 1 7.64152E-006 0
+point 238 1 1 7.64312E-006 0
+point 239 1 1 7.64471E-006 0
+point 240 1 1 7.6463E-006 0
+point 241 1 1 7.64788E-006 0
+point 242 1 1 7.64946E-006 0
+point 243 1 1 7.65103E-006 0
+point 244 1 1 7.6526E-006 0
+point 245 1 1 7.65416E-006 0
+point 246 1 1 7.65572E-006 0
+point 247 1 1 7.65728E-006 0
+point 248 1 1 7.65884E-006 0
+point 249 1 1 7.66039E-006 0
+point 250 1 1 7.66193E-006 0
+point 251 1 1 7.66348E-006 0
+point 252 1 1 7.66502E-006 0
+point 253 1 1 7.66655E-006 0
+point 254 1 1 7.66809E-006 0
+point 255 1 1 7.66962E-006 0
+point 256 1 1 7.67115E-006 0
+point 257 1 1 7.67268E-006 0
+point 258 1 1 7.6742E-006 0
+point 259 1 1 7.67572E-006 0
+point 260 1 1 7.67724E-006 0
+point 261 1 1 7.67876E-006 0
+point 262 1 1 7.68028E-006 0
+point 263 1 1 7.68179E-006 0
+point 264 1 1 7.6833E-006 0
+point 265 1 1 7.68481E-006 0
+point 266 1 1 7.68632E-006 0
+point 267 1 1 7.68783E-006 0
+point 268 1 1 7.68934E-006 0
+point 269 1 1 7.69085E-006 0
+point 270 1 1 7.69236E-006 0
+point 271 1 1 7.69387E-006 0
+point 272 1 1 7.69537E-006 0
+point 273 1 1 7.69688E-006 0
+point 274 1 1 7.69839E-006 0
+point 275 1 1 7.69991E-006 0
+point 276 1 1 7.70142E-006 0
+point 277 1 1 7.70293E-006 0
+point 278 1 1 7.70445E-006 0
+point 279 1 1 7.70598E-006 0
+point 280 1 1 7.7075E-006 0
+point 281 1 1 7.70903E-006 0
+point 282 1 1 7.71057E-006 0
+point 283 1 1 7.71211E-006 0
+point 284 1 1 7.71365E-006 0
+point 285 1 1 7.71521E-006 0
+point 286 1 1 7.71677E-006 0
+point 287 1 1 7.71834E-006 0
+point 288 1 1 7.71992E-006 0
+point 289 1 1 7.72151E-006 0
+point 290 1 1 7.72311E-006 0
+point 291 1 1 7.72472E-006 0
+point 292 1 1 7.72634E-006 0
+point 293 1 1 7.72798E-006 0
+point 294 1 1 7.72964E-006 0
+point 295 1 1 7.73131E-006 0
+point 296 1 1 7.733E-006 0
+point 297 1 1 7.7347E-006 0
+point 298 1 1 7.73643E-006 0
+point 299 1 1 7.73818E-006 0
+point 300 1 1 7.73996E-006 0
+point 301 1 1 7.74175E-006 0
+point 302 1 1 -0 0
+point 303 1 1 7.24419E-007 0
+point 304 1 1 1.43202E-006 0
+point 305 1 1 2.1228E-006 0
+point 306 1 1 2.7968E-006 0
+point 307 1 1 3.45401E-006 0
+point 308 1 1 4.09445E-006 0
+point 309 1 1 4.71815E-006 0
+point 310 1 1 5.3251E-006 0
+point 311 1 1 5.91533E-006 0
+point 312 1 1 6.48886E-006 0
+point 313 1 1 7.04569E-006 0
+point 314 1 1 7.58584E-006 0
+point 315 1 1 8.10932E-006 0
+point 316 1 1 8.61616E-006 0
+point 317 1 1 9.10637E-006 0
+point 318 1 1 9.57996E-006 0
+point 319 1 1 1.0037E-005 0
+point 320 1 1 1.04774E-005 0
+point 321 1 1 1.09012E-005 0
+point 322 1 1 1.13085E-005 0
+point 323 1 1 1.16993E-005 0
+point 324 1 1 1.20736E-005 0
+point 325 1 1 1.24314E-005 0
+point 326 1 1 1.27728E-005 0
+point 327 1 1 1.30977E-005 0
+point 328 1 1 1.34063E-005 0
+point 329 1 1 1.36985E-005 0
+point 330 1 1 1.39744E-005 0
+point 331 1 1 1.42341E-005 0
+point 332 1 1 1.44775E-005 0
+point 333 1 1 1.47049E-005 0
+point 334 1 1 1.49162E-005 0
+point 335 1 1 1.51116E-005 0
+point 336 1 1 1.52913E-005 0
+point 337 1 1 1.54554E-005 0
+point 338 1 1 1.56042E-005 0
+point 339 1 1 1.57379E-005 0
+point 340 1 1 1.5857E-005 0
+point 341 1 1 1.5962E-005 0
+point 342 1 1 1.60535E-005 0
+point 343 1 1 1.61323E-005 0
+point 344 1 1 1.61993E-005 0
+point 345 1 1 1.62557E-005 0
+point 346 1 1 1.63026E-005 0
+point 347 1 1 1.63413E-005 0
+point 348 1 1 1.63731E-005 0
+point 349 1 1 1.63992E-005 0
+point 350 1 1 1.64208E-005 0
+point 351 1 1 1.64386E-005 0
+point 352 1 1 1.64536E-005 0
+point 353 1 1 1.64663E-005 0
+point 354 1 1 1.64773E-005 0
+point 355 1 1 1.64868E-005 0
+point 356 1 1 1.64952E-005 0
+point 357 1 1 1.65028E-005 0
+point 358 1 1 1.65097E-005 0
+point 359 1 1 1.65161E-005 0
+point 360 1 1 1.65219E-005 0
+point 361 1 1 1.65274E-005 0
+point 362 1 1 1.65326E-005 0
+point 363 1 1 1.65376E-005 0
+point 364 1 1 1.65423E-005 0
+point 365 1 1 1.65468E-005 0
+point 366 1 1 1.65512E-005 0
+point 367 1 1 1.65555E-005 0
+point 368 1 1 1.65596E-005 0
+point 369 1 1 1.65636E-005 0
+point 370 1 1 1.65675E-005 0
+point 371 1 1 1.65714E-005 0
+point 372 1 1 1.65752E-005 0
+point 373 1 1 1.65789E-005 0
+point 374 1 1 1.65825E-005 0
+point 375 1 1 1.65861E-005 0
+point 376 1 1 1.65896E-005 0
+point 377 1 1 1.65931E-005 0
+point 378 1 1 1.65965E-005 0
+point 379 1 1 1.65999E-005 0
+point 380 1 1 1.66033E-005 0
+point 381 1 1 1.66066E-005 0
+point 382 1 1 1.66099E-005 0
+point 383 1 1 1.66132E-005 0
+point 384 1 1 1.66164E-005 0
+point 385 1 1 1.66196E-005 0
+point 386 1 1 1.66228E-005 0
+point 387 1 1 1.6626E-005 0
+point 388 1 1 1.66291E-005 0
+point 389 1 1 1.66322E-005 0
+point 390 1 1 1.66353E-005 0
+point 391 1 1 1.66384E-005 0
+point 392 1 1 1.66414E-005 0
+point 393 1 1 1.66444E-005 0
+point 394 1 1 1.66474E-005 0
+point 395 1 1 1.66504E-005 0
+point 396 1 1 1.66534E-005 0
+point 397 1 1 1.66564E-005 0
+point 398 1 1 1.66593E-005 0
+point 399 1 1 1.66622E-005 0
+point 400 1 1 1.66652E-005 0
+point 401 1 1 1.66681E-005 0
+point 402 1 1 1.66709E-005 0
+point 403 1 1 1.66738E-005 0
+point 404 1 1 1.66767E-005 0
+point 405 1 1 1.66795E-005 0
+point 406 1 1 1.66824E-005 0
+point 407 1 1 1.66852E-005 0
+point 408 1 1 1.6688E-005 0
+point 409 1 1 1.66908E-005 0
+point 410 1 1 1.66936E-005 0
+point 411 1 1 1.66964E-005 0
+point 412 1 1 1.66991E-005 0
+point 413 1 1 1.67019E-005 0
+point 414 1 1 1.67046E-005 0
+point 415 1 1 1.67074E-005 0
+point 416 1 1 1.67101E-005 0
+point 417 1 1 1.67128E-005 0
+point 418 1 1 1.67156E-005 0
+point 419 1 1 1.67183E-005 0
+point 420 1 1 1.6721E-005 0
+point 421 1 1 1.67237E-005 0
+point 422 1 1 1.67263E-005 0
+point 423 1 1 1.6729E-005 0
+point 424 1 1 1.67317E-005 0
+point 425 1 1 1.67343E-005 0
+point 426 1 1 1.6737E-005 0
+point 427 1 1 1.67396E-005 0
+point 428 1 1 1.67423E-005 0
+point 429 1 1 1.67449E-005 0
+point 430 1 1 1.67476E-005 0
+point 431 1 1 1.67502E-005 0
+point 432 1 1 1.67528E-005 0
+point 433 1 1 1.67554E-005 0
+point 434 1 1 1.67581E-005 0
+point 435 1 1 1.67607E-005 0
+point 436 1 1 1.67633E-005 0
+point 437 1 1 1.67659E-005 0
+point 438 1 1 1.67685E-005 0
+point 439 1 1 1.67711E-005 0
+point 440 1 1 1.67737E-005 0
+point 441 1 1 1.67763E-005 0
+point 442 1 1 1.67789E-005 0
+point 443 1 1 1.67815E-005 0
+point 444 1 1 1.67842E-005 0
+point 445 1 1 1.67868E-005 0
+point 446 1 1 1.67894E-005 0
+point 447 1 1 1.6792E-005 0
+point 448 1 1 1.67947E-005 0
+point 449 1 1 1.67973E-005 0
+point 450 1 1 1.68E-005 0
+point 451 1 1 1.68027E-005 0
+point 452 1 1 1.68053E-005 0
+point 453 1 1 -0 0
+point 454 1 1 8.66238E-007 0
+point 455 1 1 1.71791E-006 0
+point 456 1 1 2.55501E-006 0
+point 457 1 1 3.37756E-006 0
+point 458 1 1 4.18558E-006 0
+point 459 1 1 4.97906E-006 0
+point 460 1 1 5.75802E-006 0
+point 461 1 1 6.52246E-006 0
+point 462 1 1 7.27241E-006 0
+point 463 1 1 8.00786E-006 0
+point 464 1 1 8.72884E-006 0
+point 465 1 1 9.43534E-006 0
+point 466 1 1 1.01274E-005 0
+point 467 1 1 1.0805E-005 0
+point 468 1 1 1.14681E-005 0
+point 469 1 1 1.21169E-005 0
+point 470 1 1 1.27512E-005 0
+point 471 1 1 1.33711E-005 0
+point 472 1 1 1.39766E-005 0
+point 473 1 1 1.45677E-005 0
+point 474 1 1 1.51444E-005 0
+point 475 1 1 1.57068E-005 0
+point 476 1 1 1.62548E-005 0
+point 477 1 1 1.67884E-005 0
+point 478 1 1 1.73078E-005 0
+point 479 1 1 1.78128E-005 0
+point 480 1 1 1.83035E-005 0
+point 481 1 1 1.87799E-005 0
+point 482 1 1 1.9242E-005 0
+point 483 1 1 1.96899E-005 0
+point 484 1 1 2.01235E-005 0
+point 485 1 1 2.05429E-005 0
+point 486 1 1 2.0948E-005 0
+point 487 1 1 2.13389E-005 0
+point 488 1 1 2.17156E-005 0
+point 489 1 1 2.20782E-005 0
+point 490 1 1 2.24266E-005 0
+point 491 1 1 2.27608E-005 0
+point 492 1 1 2.3081E-005 0
+point 493 1 1 2.3387E-005 0
+point 494 1 1 2.3679E-005 0
+point 495 1 1 2.3957E-005 0
+point 496 1 1 2.42209E-005 0
+point 497 1 1 2.4471E-005 0
+point 498 1 1 2.47071E-005 0
+point 499 1 1 2.49295E-005 0
+point 500 1 1 2.51381E-005 0
+point 501 1 1 2.5333E-005 0
+point 502 1 1 2.55144E-005 0
+point 503 1 1 2.56824E-005 0
+point 504 1 1 2.58372E-005 0
+point 505 1 1 2.5979E-005 0
+point 506 1 1 2.6108E-005 0
+point 507 1 1 2.62246E-005 0
+point 508 1 1 2.63291E-005 0
+point 509 1 1 2.64222E-005 0
+point 510 1 1 2.65043E-005 0
+point 511 1 1 2.65761E-005 0
+point 512 1 1 2.66385E-005 0
+point 513 1 1 2.66922E-005 0
+point 514 1 1 2.67382E-005 0
+point 515 1 1 2.67775E-005 0
+point 516 1 1 2.68109E-005 0
+point 517 1 1 2.68394E-005 0
+point 518 1 1 2.68638E-005 0
+point 519 1 1 2.68847E-005 0
+point 520 1 1 2.69029E-005 0
+point 521 1 1 2.69187E-005 0
+point 522 1 1 2.69328E-005 0
+point 523 1 1 2.69453E-005 0
+point 524 1 1 2.69565E-005 0
+point 525 1 1 2.69668E-005 0
+point 526 1 1 2.69763E-005 0
+point 527 1 1 2.69851E-005 0
+point 528 1 1 2.69933E-005 0
+point 529 1 1 2.7001E-005 0
+point 530 1 1 2.70083E-005 0
+point 531 1 1 2.70153E-005 0
+point 532 1 1 2.7022E-005 0
+point 533 1 1 2.70285E-005 0
+point 534 1 1 2.70347E-005 0
+point 535 1 1 2.70408E-005 0
+point 536 1 1 2.70467E-005 0
+point 537 1 1 2.70524E-005 0
+point 538 1 1 2.7058E-005 0
+point 539 1 1 2.70635E-005 0
+point 540 1 1 2.70689E-005 0
+point 541 1 1 2.70742E-005 0
+point 542 1 1 2.70794E-005 0
+point 543 1 1 2.70845E-005 0
+point 544 1 1 2.70895E-005 0
+point 545 1 1 2.70945E-005 0
+point 546 1 1 2.70994E-005 0
+point 547 1 1 2.71043E-005 0
+point 548 1 1 2.71091E-005 0
+point 549 1 1 2.71138E-005 0
+point 550 1 1 2.71185E-005 0
+point 551 1 1 2.71232E-005 0
+point 552 1 1 2.71278E-005 0
+point 553 1 1 2.71323E-005 0
+point 554 1 1 2.71369E-005 0
+point 555 1 1 2.71413E-005 0
+point 556 1 1 2.71458E-005 0
+point 557 1 1 2.71502E-005 0
+point 558 1 1 2.71546E-005 0
+point 559 1 1 2.7159E-005 0
+point 560 1 1 2.71633E-005 0
+point 561 1 1 2.71676E-005 0
+point 562 1 1 2.71718E-005 0
+point 563 1 1 2.71761E-005 0
+point 564 1 1 2.71803E-005 0
+point 565 1 1 2.71845E-005 0
+point 566 1 1 2.71887E-005 0
+point 567 1 1 2.71928E-005 0
+point 568 1 1 2.71969E-005 0
+point 569 1 1 2.7201E-005 0
+point 570 1 1 2.72051E-005 0
+point 571 1 1 2.72091E-005 0
+point 572 1 1 2.72132E-005 0
+point 573 1 1 2.72172E-005 0
+point 574 1 1 2.72212E-005 0
+point 575 1 1 2.72252E-005 0
+point 576 1 1 2.72291E-005 0
+point 577 1 1 2.72331E-005 0
+point 578 1 1 2.7237E-005 0
+point 579 1 1 2.72409E-005 0
+point 580 1 1 2.72448E-005 0
+point 581 1 1 2.72487E-005 0
+point 582 1 1 2.72525E-005 0
+point 583 1 1 2.72564E-005 0
+point 584 1 1 2.72602E-005 0
+point 585 1 1 2.7264E-005 0
+point 586 1 1 2.72678E-005 0
+point 587 1 1 2.72716E-005 0
+point 588 1 1 2.72754E-005 0
+point 589 1 1 2.72791E-005 0
+point 590 1 1 2.72829E-005 0
+point 591 1 1 2.72866E-005 0
+point 592 1 1 2.72904E-005 0
+point 593 1 1 2.72941E-005 0
+point 594 1 1 2.72978E-005 0
+point 595 1 1 2.73015E-005 0
+point 596 1 1 2.73052E-005 0
+point 597 1 1 2.73088E-005 0
+point 598 1 1 2.73125E-005 0
+point 599 1 1 2.73162E-005 0
+point 600 1 1 2.73198E-005 0
+point 601 1 1 2.73235E-005 0
+point 602 1 1 2.73271E-005 0
+point 603 1 1 2.73307E-005 0
+point 604 1 1 -0 0
+point 605 1 1 9.71507E-007 0
+point 606 1 1 1.93019E-006 0
+point 607 1 1 2.87607E-006 0
+point 608 1 1 3.80914E-006 0
+point 609 1 1 4.72941E-006 0
+point 610 1 1 5.63689E-006 0
+point 611 1 1 6.53159E-006 0
+point 612 1 1 7.41351E-006 0
+point 613 1 1 8.28267E-006 0
+point 614 1 1 9.13907E-006 0
+point 615 1 1 9.98272E-006 0
+point 616 1 1 1.08136E-005 0
+point 617 1 1 1.16318E-005 0
+point 618 1 1 1.24372E-005 0
+point 619 1 1 1.32299E-005 0
+point 620 1 1 1.40099E-005 0
+point 621 1 1 1.47772E-005 0
+point 622 1 1 1.55318E-005 0
+point 623 1 1 1.62738E-005 0
+point 624 1 1 1.7003E-005 0
+point 625 1 1 1.77195E-005 0
+point 626 1 1 1.84234E-005 0
+point 627 1 1 1.91146E-005 0
+point 628 1 1 1.97932E-005 0
+point 629 1 1 2.04592E-005 0
+point 630 1 1 2.11124E-005 0
+point 631 1 1 2.17531E-005 0
+point 632 1 1 2.23812E-005 0
+point 633 1 1 2.29966E-005 0
+point 634 1 1 2.35994E-005 0
+point 635 1 1 2.41897E-005 0
+point 636 1 1 2.47673E-005 0
+point 637 1 1 2.53324E-005 0
+point 638 1 1 2.58849E-005 0
+point 639 1 1 2.64248E-005 0
+point 640 1 1 2.69522E-005 0
+point 641 1 1 2.7467E-005 0
+point 642 1 1 2.79693E-005 0
+point 643 1 1 2.84591E-005 0
+point 644 1 1 2.89364E-005 0
+point 645 1 1 2.94011E-005 0
+point 646 1 1 2.98534E-005 0
+point 647 1 1 3.02931E-005 0
+point 648 1 1 3.07204E-005 0
+point 649 1 1 3.11352E-005 0
+point 650 1 1 3.15376E-005 0
+point 651 1 1 3.19275E-005 0
+point 652 1 1 3.2305E-005 0
+point 653 1 1 3.267E-005 0
+point 654 1 1 3.30227E-005 0
+point 655 1 1 3.3363E-005 0
+point 656 1 1 3.36909E-005 0
+point 657 1 1 3.40065E-005 0
+point 658 1 1 3.43097E-005 0
+point 659 1 1 3.46006E-005 0
+point 660 1 1 3.48792E-005 0
+point 661 1 1 3.51456E-005 0
+point 662 1 1 3.53998E-005 0
+point 663 1 1 3.56418E-005 0
+point 664 1 1 3.58716E-005 0
+point 665 1 1 3.60894E-005 0
+point 666 1 1 3.62951E-005 0
+point 667 1 1 3.64889E-005 0
+point 668 1 1 3.66709E-005 0
+point 669 1 1 3.6841E-005 0
+point 670 1 1 3.69996E-005 0
+point 671 1 1 3.71467E-005 0
+point 672 1 1 3.72825E-005 0
+point 673 1 1 3.74072E-005 0
+point 674 1 1 3.75212E-005 0
+point 675 1 1 3.76247E-005 0
+point 676 1 1 3.77181E-005 0
+point 677 1 1 3.78019E-005 0
+point 678 1 1 3.78765E-005 0
+point 679 1 1 3.79427E-005 0
+point 680 1 1 3.8001E-005 0
+point 681 1 1 3.80522E-005 0
+point 682 1 1 3.80969E-005 0
+point 683 1 1 3.81358E-005 0
+point 684 1 1 3.81698E-005 0
+point 685 1 1 3.81995E-005 0
+point 686 1 1 3.82255E-005 0
+point 687 1 1 3.82484E-005 0
+point 688 1 1 3.82687E-005 0
+point 689 1 1 3.82867E-005 0
+point 690 1 1 3.8303E-005 0
+point 691 1 1 3.83177E-005 0
+point 692 1 1 3.83312E-005 0
+point 693 1 1 3.83436E-005 0
+point 694 1 1 3.83552E-005 0
+point 695 1 1 3.83659E-005 0
+point 696 1 1 3.83761E-005 0
+point 697 1 1 3.83857E-005 0
+point 698 1 1 3.83949E-005 0
+point 699 1 1 3.84036E-005 0
+point 700 1 1 3.84121E-005 0
+point 701 1 1 3.84202E-005 0
+point 702 1 1 3.84281E-005 0
+point 703 1 1 3.84357E-005 0
+point 704 1 1 3.84431E-005 0
+point 705 1 1 3.84504E-005 0
+point 706 1 1 3.84575E-005 0
+point 707 1 1 3.84644E-005 0
+point 708 1 1 3.84713E-005 0
+point 709 1 1 3.8478E-005 0
+point 710 1 1 3.84846E-005 0
+point 711 1 1 3.8491E-005 0
+point 712 1 1 3.84974E-005 0
+point 713 1 1 3.85038E-005 0
+point 714 1 1 3.851E-005 0
+point 715 1 1 3.85161E-005 0
+point 716 1 1 3.85222E-005 0
+point 717 1 1 3.85282E-005 0
+point 718 1 1 3.85342E-005 0
+point 719 1 1 3.85401E-005 0
+point 720 1 1 3.85459E-005 0
+point 721 1 1 3.85517E-005 0
+point 722 1 1 3.85575E-005 0
+point 723 1 1 3.85632E-005 0
+point 724 1 1 3.85688E-005 0
+point 725 1 1 3.85744E-005 0
+point 726 1 1 3.858E-005 0
+point 727 1 1 3.85855E-005 0
+point 728 1 1 3.8591E-005 0
+point 729 1 1 3.85964E-005 0
+point 730 1 1 3.86018E-005 0
+point 731 1 1 3.86072E-005 0
+point 732 1 1 3.86126E-005 0
+point 733 1 1 3.86179E-005 0
+point 734 1 1 3.86231E-005 0
+point 735 1 1 3.86284E-005 0
+point 736 1 1 3.86336E-005 0
+point 737 1 1 3.86388E-005 0
+point 738 1 1 3.86439E-005 0
+point 739 1 1 3.86491E-005 0
+point 740 1 1 3.86542E-005 0
+point 741 1 1 3.86593E-005 0
+point 742 1 1 3.86643E-005 0
+point 743 1 1 3.86693E-005 0
+point 744 1 1 3.86743E-005 0
+point 745 1 1 3.86793E-005 0
+point 746 1 1 3.86843E-005 0
+point 747 1 1 3.86892E-005 0
+point 748 1 1 3.86941E-005 0
+point 749 1 1 3.8699E-005 0
+point 750 1 1 3.87039E-005 0
+point 751 1 1 3.87087E-005 0
+point 752 1 1 3.87136E-005 0
+point 753 1 1 3.87184E-005 0
+point 754 1 1 3.87232E-005 0
+}
+}
+list PLOT "id_vd"
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! This Setup is used to perform a DC simulation 
+ ! of the user-selected library cell,
+ ! and to display the result by a Plot.
+ ! ==========================================================
+ 
+ 
+ ! For more details, see Macro 'HOW_TO_USE' 
+ ! and Transform 'README' in Setup 'Inspect_Library'.
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK PLOT "id_vd" "711.501"
+{
+View plot_window 0 "614,310,17807,13617,{AUTO|XY| 11.00 , 16.00 ,5,5: 0.000 , 340.0m,6,5: 0.000 , 1.000 ,4,5}"
+View draw_ds 0 "B,305,27"
+TABLE "Plot Options" "711.501"
+{
+}
+data
+{
+HYPTABLE "Edit plot Info"
+{
+element "Report Type" "XY GRAPH"
+}
+HYPTABLE "Edit Plot Def"
+{
+element "X Data" "vd"
+element "# of Traces" "8"
+element "Curve Data" ""
+element "Header" "id-vd of currently linked Library Cell"
+element "Footer" ""
+element "X Axis Type" "LINEAR"
+element "Y Axis Type" "LINEAR"
+element "Y2 Axis Type" "LINEAR"
+element "Y2 Data" ""
+element "Y Data 0" "!id.m"
+element "Y Data 1" "id.s"
+element "Y Data 2" ""
+element "Y Data 3" ""
+element "Y Data 4" ""
+element "Y Data 5" ""
+element "Y Data 6" ""
+element "Y Data 7" ""
+}
+PlotOptimizerOpt Enable 1
+}
+member OUT "id"
+member SWEEP "vd"
+}
+data "711.501"
+{
+TABLE "AgilentE5270.4000.17" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "No"
+element 0 "Range Manager Mode" "1"
+element 0 "Range Manager Setting" "90"
+element 0 "Enable HRSMU1 Range Manager" "No"
+element 0 "HRSMU1 A/D converter" "R"
+element 0 "HRSMU1 In/Out Range" "0/11"
+element 0 "Enable MPSMU2 Range Manager" "No"
+element 0 "MPSMU2 A/D converter" "R"
+element 0 "MPSMU2 In/Out Range" "0/11"
+element 0 "Enable MPSMU3 Range Manager" "No"
+element 0 "MPSMU3 A/D converter" "R"
+element 0 "MPSMU3 In/Out Range" "0/11"
+element 0 "Enable MPSMU4 Range Manager" "No"
+element 0 "MPSMU4 A/D converter" "R"
+element 0 "MPSMU4 In/Out Range" "0/11"
+element 0 "Enable MPSMU5 Range Manager" "No"
+element 0 "MPSMU5 A/D converter" "R"
+element 0 "MPSMU5 In/Out Range" "0/11"
+element 0 "Enable MPSMU6 Range Manager" "No"
+element 0 "MPSMU6 A/D converter" "R"
+element 0 "MPSMU6 In/Out Range" "0/11"
+element 0 "Enable MPSMU7 Range Manager" "No"
+element 0 "MPSMU7 A/D converter" "R"
+element 0 "MPSMU7 In/Out Range" "0/11"
+element 0 "Enable MPSMU8 Range Manager" "No"
+element 0 "MPSMU8 A/D converter" "R"
+element 0 "MPSMU8 In/Out Range" "0/11"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Disable Self-cal" "No"
+element 0 "Output I/O Port (ERC Command)" ""
+element 0 "Output I/O Port (ERM Command)" ""
+element 0 "Format Parameter (FMT Command)" "4"
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+TABLE "HP4145.4000.25" "711.501"
+{
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Init Command" ""
+}
+TABLE "HP4142.4000.24" "711.501"
+{
+View par_var_table 0 "V530 C18 C10"
+element 0 "Use User Sweep" "No"
+element 0 "Hold Time" " 0.000 "
+element 0 "Delay Time" " 0.000 "
+element 0 "Integ Time" "S"
+element 0 "Range" "0"
+element 0 "Power Compliance" " 0.000 "
+element 0 "SMU Filters ON" "Yes"
+element 0 "Pulse Unit" ""
+element 0 "Pulse Base" " 0.000 "
+element 0 "Pulse Width" " 1.000m"
+element 0 "Pulse Period" " 10.00m"
+element 0 "Module Control" ""
+element 0 "Delay for timeouts" " 0.000 "
+element 0 "Init Command" ""
+}
+}
+}
+}
+}
