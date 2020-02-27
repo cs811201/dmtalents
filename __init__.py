@@ -287,6 +287,7 @@ def mqa():
     recordPostHistory('/mqa')
     return render_template('mqa/agenda.html')
 
+
 @app.route('/mbp')
 @login_required
 def mbp():
@@ -636,6 +637,18 @@ def blog_iccap_python_s_par():
 def mqarules():
     recordPostHistory('/mqarules')
     return render_template('mqarules/mqarules_index.html', func=getCategory)
+
+
+# MQA Python PostProcess
+
+route_mqa_python_postprocess = '/mqa_python_postprocess'
+
+
+@app.route(route_mqa_python_postprocess)
+@login_required
+def mqa_python_pp():
+    recordPostHistory(route_mqa_python_postprocess)
+    return render_template('mqa/python_pp/python_pp_index.html')
 
 
 @app.route('/add_post', methods=['GET', 'POST'])
@@ -1827,6 +1840,7 @@ def iccapfaq_lax_vm():
     recordPostHistory(route_iccapfaq_lax_vm)
     return render_template('/faq/iccap/lax_vm.html')
 
+
 route_iccapfaq_install_smartly = '/iccapfaq/install_smartly'
 
 
@@ -1836,6 +1850,7 @@ def iccapfaq_install_smartly():
     recordPostHistory(route_iccapfaq_install_smartly)
     return render_template('/faq/iccap/install_smartly.html')
 
+
 route_iccapfaq_netlist_parser = '/iccapfaq/netlist_parser'
 
 
@@ -1844,7 +1859,6 @@ route_iccapfaq_netlist_parser = '/iccapfaq/netlist_parser'
 def iccapfaq_netlist_parser():
     recordPostHistory(route_iccapfaq_netlist_parser)
     return render_template('/faq/iccap/netlist_parser.html')
-
 
 
 route_iccap_spar11 = '/iccap-spar/1.1'
@@ -1986,6 +2000,7 @@ def iccap_spice_spar3():
     recordPostHistory(route_iccap_spice_spar3)
     return render_template('/iccap/SpiceSpar/Spice133.html')
 
+
 route_iccap_spice_spar4 = '/iccap-spice-spar/4'
 
 
@@ -1994,6 +2009,7 @@ route_iccap_spice_spar4 = '/iccap-spice-spar/4'
 def iccap_spice_spar4():
     recordPostHistory(route_iccap_spice_spar4)
     return render_template('/iccap/SpiceSpar/Spice134.html')
+
 
 route_iccap_spice_spar5 = '/iccap-spice-spar/5'
 
@@ -2004,6 +2020,7 @@ def iccap_spice_spar5():
     recordPostHistory(route_iccap_spice_spar5)
     return render_template('/iccap/SpiceSpar/Spice135.html')
 
+
 route_iccap_link_lib1 = '/iccap-link-lib/1'
 
 
@@ -2013,6 +2030,7 @@ def iccap_link_lib1():
     recordPostHistory(route_iccap_link_lib1)
     return render_template('/iccap/LinkLib/linkLib1.html')
 
+
 route_iccap_link_lib2 = '/iccap-link-lib/2'
 
 
@@ -2021,6 +2039,7 @@ route_iccap_link_lib2 = '/iccap-link-lib/2'
 def iccap_link_lib2():
     recordPostHistory(route_iccap_link_lib2)
     return render_template('/iccap/LinkLib/linkLib2.html')
+
 
 ### WPE FAQs ###
 
@@ -2032,6 +2051,7 @@ route_wpefaq_probecard = '/wpefaq/add_probecard'
 def wpefaq_addprobecard():
     recordPostHistory(route_wpefaq_probecard)
     return render_template('/faq/wpe/add_probecard.html')
+
 
 route_wpefaq_e5250conn = '/wpefaq/e5250conn'
 
@@ -3612,6 +3632,99 @@ def download_compdiff_b_rule():
                      as_attachment=True)
 
 
+### MQA python post process chapters ###
+route_mqa_ppp_chap1 = '/mqa/ppp/1'
+
+
+@app.route(route_mqa_ppp_chap1)
+@login_required
+def mqa_ppp_chap1():
+    recordPostHistory(route_mqa_ppp_chap1)
+    return render_template('mqa/python_pp/chap1_overview.html')
+
+
+route_mqa_ppp_chap2 = '/mqa/ppp/2'
+
+
+@app.route(route_mqa_ppp_chap2)
+@login_required
+def mqa_ppp_chap2():
+    recordPostHistory(route_mqa_ppp_chap2)
+    return render_template('mqa/python_pp/chap2_gui.html')
+
+
+route_mqa_ppp_chap3 = '/mqa/ppp/3'
+
+
+@app.route(route_mqa_ppp_chap3)
+@login_required
+def mqa_ppp_chap3():
+    recordPostHistory(route_mqa_ppp_chap3)
+    return render_template('mqa/python_pp/chap3_cmd.html')
+
+
+route_mqa_ppp_chap4 = '/mqa/ppp/4'
+
+
+@app.route(route_mqa_ppp_chap4)
+@login_required
+def mqa_ppp_chap4():
+    recordPostHistory(route_mqa_ppp_chap4)
+    return render_template('mqa/python_pp/chap4_vth.html')
+
+
+route_mqa_ppp_chap5 = '/mqa/ppp/5'
+
+
+@app.route(route_mqa_ppp_chap5)
+@login_required
+def mqa_ppp_chap5():
+    recordPostHistory(route_mqa_ppp_chap5)
+    return render_template('mqa/python_pp/chap5_finfet.html')
+
+
+route_mqa_ppp_download_1 = '/mqa/ppp/iv/download'
+
+
+@app.route(route_mqa_ppp_download_1)
+@login_required
+def mqa_ppp_download_1():
+    recordPostHistory(route_mqa_ppp_download_1)
+    return send_file('static/mqa_ppp/IV_Targets_basic.py',
+                     attachment_filename='IV_Targets_basic.py', mimetype='text/plain', as_attachment=True)
+
+
+route_mqa_ppp_download_2 = '/mqa/ppp/y/download'
+
+
+@app.route(route_mqa_ppp_download_2)
+@login_required
+def mqa_ppp_download_2():
+    recordPostHistory(route_mqa_ppp_download_2)
+    return send_file('static/mqa_ppp/IV_Targets_more.py',
+                     attachment_filename='IV_Targets_more.py', mimetype='text/plain', as_attachment=True)
+
+
+route_mqa_ppp_download_3 = '/mqa/ppp/IV_Sweep/download'
+
+
+@app.route(route_mqa_ppp_download_3)
+@login_required
+def mqa_ppp_download_3():
+    recordPostHistory(route_mqa_ppp_download_3)
+    return send_file('static/mqa_ppp/IV_Sweeps.zip',
+                     attachment_filename='IV_Sweeps.zip', mimetype='application/zip', as_attachment=True)
+
+route_mqa_ppp_download_4 = '/mqa/ppp/Freq_Sweep/download'
+
+
+@app.route(route_mqa_ppp_download_4)
+@login_required
+def mqa_ppp_download_4():
+    recordPostHistory(route_mqa_ppp_download_4)
+    return send_file('static/mqa_ppp/Freq_Sweeps.zip',
+                     attachment_filename='Freq_Sweeps.zip', mimetype='application/zip', as_attachment=True)
+
 #### Script Zip files downloads
 
 route_download_scriptZip_01 = '/scriptZip/01_ModelParameter/download'
@@ -4254,6 +4367,7 @@ def download_iccap_spice_ind():
     return send_file('static/iccap/SpiceSpar/Spar_to_Spice__Inductor.mdl',
                      attachment_filename='Spar_to_Spice__Inductor.mdl', mimetype='text/plain', as_attachment=True)
 
+
 route_download_iccap_spice_spar_imped = '/iccap/spice_spar_impedance/download'
 
 
@@ -4263,6 +4377,7 @@ def download_iccap_spice_imped():
     recordPostHistory(route_download_iccap_spice_spar_imped)
     return send_file('static/iccap/SpiceSpar/Impedance_Plots_Tutorials.mdl',
                      attachment_filename='Impedance_Plots_Tutorials.mdl', mimetype='text/plain', as_attachment=True)
+
 
 route_download_iccap_spice_spar_skin = '/iccap/spice_spar_skin/download'
 
@@ -4274,6 +4389,7 @@ def download_iccap_spice_skin():
     return send_file('static/iccap/SpiceSpar/SkinEffect_Tutorial.mdl',
                      attachment_filename='SkinEffect_Tutorial.mdl', mimetype='text/plain', as_attachment=True)
 
+
 route_download_iccap_netlist_parser_example = '/iccap/netlist_parser_example/download'
 
 
@@ -4282,7 +4398,8 @@ route_download_iccap_netlist_parser_example = '/iccap/netlist_parser_example/dow
 def download_netlist_parser_example():
     recordPostHistory(route_download_iccap_netlist_parser_example)
     return send_file('static/faq/iccap/netlist_parser/Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl',
-                     attachment_filename='Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl', mimetype='text/plain', as_attachment=True)
+                     attachment_filename='Netlist_Dynamic_Node_Connections_using_DollarVAR.mdl', mimetype='text/plain',
+                     as_attachment=True)
 
 
 route_download_iccap_link_lib_example_MOS = '/iccap/link_lib_example_mos/download'
@@ -4293,7 +4410,9 @@ route_download_iccap_link_lib_example_MOS = '/iccap/link_lib_example_mos/downloa
 def download_iccap_link_lib_example_mos():
     recordPostHistory(route_download_iccap_link_lib_example_MOS)
     return send_file('static/iccap/LinkLib/Linking_external_Library__Example_MOS.mdl',
-                     attachment_filename='Linking_external_Library__Example_MOS.mdl', mimetype='text/plain', as_attachment=True)
+                     attachment_filename='Linking_external_Library__Example_MOS.mdl', mimetype='text/plain',
+                     as_attachment=True)
+
 
 route_download_iccap_link_lib_example_MOS_incl = '/iccap/link_lib_example_mos_incl/download'
 
@@ -4303,9 +4422,8 @@ route_download_iccap_link_lib_example_MOS_incl = '/iccap/link_lib_example_mos_in
 def download_iccap_link_lib_example_mos_incl():
     recordPostHistory(route_download_iccap_link_lib_example_MOS_incl)
     return send_file('static/iccap/LinkLib/Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl',
-                     attachment_filename='Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl', mimetype='text/plain', as_attachment=True)
-
-
+                     attachment_filename='Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl',
+                     mimetype='text/plain', as_attachment=True)
 
 
 ### Upload a file

@@ -1,0 +1,48 @@
+{% extends "mqa/python_pp/python_pp_index.html" %}
+{% block python_pp%}
+
+<h2>MQA Python Post Process</h2>
+<h3>Run in Command Line</h3>
+<hr/>
+
+The basic usage of the command line is the following:
+<br/><br/>
+<pre>
+mpython your_scripts.py
+</pre>
+<br/>
+where “mpython” is an MQA built-in command, as soon as the python code is done, we can run it within a terminal.<br/>
+<br/>
+Note: To be able to run the command in terminals, please firstly make sure we have $MQA_HOME/bin and $MQA_HOME/tools/python/bin added to $PATH environment variable, where $MQA_HOME is where MQA is installeld, as shown below:
+
+<br/><img src="/static/mqa_ppp/9.png" style="border:1px solid lightgray"/><br/><br/>
+
+Then, enter the directory where the .py file resides and run the “mpython” command with the .py file name, as follows:
+
+<br/><img src="/static/mqa_ppp/10.png" style="border:1px solid lightgray"/><br/><br/>
+...
+<br/><img src="/static/mqa_ppp/11.png" style="border:1px solid lightgray"/><br/><br/>
+Once it's done, the new post process results are saved to user designated directory <font
+        color="red">givendir</font>, which is done the following code in this example, that saves each target's result in a subfolder of that target's name.
+<br/>
+<pre>
+def saveWithDirAndTitle(pb, newTargetName, title, yLog=False):
+    dir = newTargetName + "/" + title
+    yscale = "Linear"
+    if yLog:
+        yscale = "Log"
+    pb.save(<font color="red">givendir=dir</font> , Title=title, YLabel=newTargetName, YScale=yscale)
+</pre>
+
+
+For more API and usage details, please refer to MQA’s user manual, as shown below:
+<br/><img src="/static/mqa_ppp/12.png" style="border:1px solid lightgray"/><br/><br/>
+
+
+Thanks!
+
+
+<br/><br/><br/><br/><br/><br/>
+
+
+{% endblock %}

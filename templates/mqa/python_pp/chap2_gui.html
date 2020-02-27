@@ -1,0 +1,58 @@
+{% extends "mqa/python_pp/python_pp_index.html" %}
+{% block python_pp%}
+
+<h2>MQA Python Post Process</h2>
+<h3>GUI Operation</h3>
+<hr/>
+<h4>Steps via GUI Operations</h4>
+<h5>1. Open MQA GUI</h5>
+<h5>2. Go to menu "Utilities -> Post Process"</h5>
+<br/><img src="/static/mqa_ppp/2.png" style="border:1px solid lightgray"/><br/><br/>
+
+3.    In the Post-process Toolkit window, as shown below.<br/>
+<ul>
+    (1) specify the “Source Folder” to be the IV_Sweeps example folder;<br/>
+    (2) specify the “Working Folder” to be a newly created directory.
+</ul>
+
+<br/><img src="/static/mqa_ppp/3.png" style="border:1px solid lightgray"/><br/><br/>
+
+4.    Now, copy the contents of “IV_Targets_basic.py” entirely to the Script area in the above window, as shown below:
+
+<br/><img src="/static/mqa_ppp/4.png" style="border:1px solid lightgray"/><br/><br/>
+And, make sure the path is correct, this app note is made out of a Windows MQA; however, it should work equally well on Linux provided proper Linux path.
+<br/>
+srcpath = r"C:\\Users\\shuancai\\Desktop\\MQA_test\\Python_Test\\IV_Sweeps"
+<br/><br/>
+5.    Now, click the <img
+        src="/static/mqa_ppp/run.png"/> button to run the python code.
+<br/>It may take 20 some seconds to finish, and MQA GUI may seem frozen during the execution.
+In MQA’s Log window, at the bottom, we will see “Execute Script Done” when it’s finished.
+<br/><img src="/static/mqa_ppp/5.png" style="border:1px solid lightgray"/><br/><br/>
+
+6.    As soon as the python code is finished, we will see that the new results are generated in the specified “Working Folder”, as shown below, each target and its plots are saved in a separate sub-folder.
+<br/>
+The python code is also saved as “postprocess.py” as a backup.
+<br/><img src="/static/mqa_ppp/6.png" style="border:1px solid lightgray"/><br/><br/>
+
+7.    Now, come back to the Post-process Toolkit window, and click on the “View Results” button at the lower right.
+<br/>l
+Note: if the Post-process Toolkit window disappears, simply go to menu “Utilities  Post Process” again to bring it back, all the info are saved.
+
+<br/><img src="/static/mqa_ppp/7.png" style="border:1px solid lightgray"/><br/><br/>
+Then, the new results are loaded in MQA main GUI, we can now navigate through them, and export to reports if necessary.
+<br/><img src="/static/mqa_ppp/8.png" style="border:1px solid lightgray"/><br/><br/>
+8.    Similarly, we can load the “IV_Targets_more.py” into the Post-process Toolkit window and play with “Freq_Sweeps” results for CV and S/Y-Parameters plots.
+<br/>
+Note: right now MQA GUI has a 300 lines of code limit, the IV_Targets_more.py example happens to exceed this limit, so let’s run it with the command line approach, please read on. Command line execution doesn’t have such limit.
+<br/><br/>
+Please proceed to the next chapter!
+<br/><br/>
+
+Thanks!
+
+
+<br/><br/><br/><br/><br/><br/>
+
+
+{% endblock %}

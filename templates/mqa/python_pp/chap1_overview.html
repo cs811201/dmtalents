@@ -1,0 +1,76 @@
+{% extends "mqa/python_pp/python_pp_index.html" %}
+{% block python_pp%}
+
+<h2>MQA Python Post Process</h2>
+<h3>Overview</h3>
+<hr/>
+This series of application notes demonstrate how to use the example python code provided here to generate additional device targets from existing MQA's results,
+such as IdVg and IdVd curves, which could be either measurement or simulation.<br/><br/>
+Note: <u>this function is supported only in MQA 2020 version and above.</u>
+<br/><br/>
+The case study shows that by using Python Post-process, we can largely save simulation/execution time while have a lot more targets coverage.
+
+<br/><img src="/static/mqa_ppp/1.png" style="border:1px solid lightgray"/><br/><br/>
+
+
+Example files attached/included can be downloaded here, they will be used in the next chapters:
+<ul>
+    1. <a href="/mqa/ppp/IV_Sweep/download" target="_blank">IV_Sweeps</a> , a directory, that contains the IdVg and IdVd results.<br/>
+    2. <a href="/mqa/ppp/Freq_Sweep/download" target="_blank">Freq_Sweeps</a> , a directory that contains S and Y parameter results.<br/>
+    3. <a href="/mqa/ppp/iv/download" target="_blank">IV_Targets_basic.py</a> , a python file, a basic version.<br/>
+    4. <a href="/mqa/ppp/y/download" target="_blank">IV_Targers_more.py</a> , another python file, contains more targets extraction such as
+    CV and S/Y-Parameters.<br/>
+</ul>
+Note: please unzip the files, and put them to a local directory where you have write permission. The example directory used in this app note is the following:
+<br/>
+<ul>
+    <em>C:\Users\shuancai\Desktop\MQA_test\Python_Test\</em>
+</ul>
+<br/>
+The device targets extracted in the example are the following:
+<br/><br/>
+
+Targets from <font color="red">Ids_Vds_Vgs</font> curves:
+<ul>
+    1. <font color="red">Idsat</font>: device,vds=vdd,vgs=vdd, vbs<br/>
+    2. <font color="red">Idsat/w</font>: Idsat normalized by W<br/>
+    2. <font color="red">Idlin</font>: device,vds=vdlin,vgs=vdd,vbs<br/>
+    3. <font color="red">Ioff</font>: device,vds=vdd,vgs=0,vbs<br/>
+    4. <font color="red">Vtlin</font>: device, Icon, vbs, Vdlin<br/>
+    5. <font color="red">Vtsat</font>: device, Icon, vbs, Vdd<br/>
+    6. <font color="red">DIBL</font>: Vtlin - Vtsat<br/>
+    7. <font color="red">Gm</font>: derivative of IdVg<br/>
+    8. <font color="red">Gm2</font>: second order derivative of IdVg<br/>
+</ul>
+<br/>
+Targets from <font color="blue">Ids_Vds_Vgs</font> curves:
+<ul>
+    1. <font color="blue">Idhigh</font>: device,vds=vdd/2,vgs=vdd,vbs<br/>
+    2. <font color="blue">Idlow</font>: device,vds=vdd,vgs=vdd/2,vbs<br/>
+    3. <font color="blue">Ideff</font>: (Idhigh+Idlow)/2<br/>
+    4. <font color="blue">Gds</font>: derivative of IdVd<br/>
+    5. <font color="blue">Gds2</font>: second order derivative of IdVd<br/>
+</ul>
+<br/>
+Target obtained from both <font color="red">IdVg</font> and <font color="blue">IdVd</font> curves.
+<ul>
+    1. <font color="orange">SelfGain</font> = Gm / Gds, it’s obtained from both IdVg and IdVd.<br/>
+</ul>
+<br/>
+Targets from <font color="purple">Y-parameter</font> data:
+<ul>
+    1. <font color="purple">S11/S12/S21/S22</font> Parameters<br/>
+    2. <font color="purple">Cgg</font> = Y11.imag() / (2 * pi * freq)<br/>
+    3. <font color="purple">Cgs</font> = (Y11.imag() + Y12.imag()) / (2 * pi * freq)<br/>
+    4. <font color="purple">Cgd</font> = -Y12.imag() / (2 * pi * freq)<br/>
+    5. <font color="purple">Cgb</font> = Cgg - Cgs – Cgd<br/>
+    6. <font color="purple">Cout</font> = Y22.imag() / (2 * pi * freq)<br/>
+    7. <font color="purple">H11/H12/H21/H22</font> Parameters<br/>
+    8. <font color="purple">Ft</font><br/>
+    9. <font color="purple">Fmax</font><br/>
+</ul>
+
+
+Next, we will firstly go through the steps via GUI operations, then the command line execution.
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layouts/mf.html" %}
+
+{% block title %}
+MQA Python PostProcess
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <div style="float:left; width: 15%; height:1200px; margin-right:5px;border-right-width:1px;border-right-style:solid; border-right-color: #D3D3D3">
+        {% include 'mqa/python_pp/toc.html' %}
+    </div>
+    <div style="float:center; height:1400px; overflow: auto">
+        {% block python_pp%}
+        {% endblock %}
+        <br/><br/>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

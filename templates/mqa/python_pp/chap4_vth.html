@@ -1,0 +1,90 @@
+{% extends "mqa/python_pp/python_pp_index.html" %}
+{% block python_pp%}
+
+<h2>MQA Python Post Process</h2>
+<h3>Vth Examples</h3>
+<hr/>
+
+As soon as we get IdVg curves, we can apply Vth algorithm to calculate Vth for various device geometry and bias conditions in MQA’s python post processing.
+<br/><br/>
+A generic max Gm method to obtain Vth is used in this application note, illustrated below:
+<br/>
+<img src="/static/mbpst/Chap5/images/5.1/2.2.png"><br/><br/>
+
+Here, we are going to apply a python function decorator <font
+        color="blue">@mqawrapper_loop</font>  built-in in MQA’s python post module, it handles all internal loops dynamically so that users only need to implement a high level algorithm without worrying  looping through all W/L/T/Bias conditions.
+<br/><br/>
+The code is shown here:<br/>
+<pre>
+<font color="blue">@mqawrapper_loop</font>
+def calVtgm(ids, vgs):
+    vds = <font color="red">mqagetvalue("Vds")</font>
+    if vds is None:
+        print("We can not get value with Vds !")
+        return None
+    gm = derivativePlain(ids, vgs)
+    maxGm = max(gm)
+    idx = gm.index(maxGm)
+
+    vgatMaxGm = vgs[idx]
+
+    idatMaxGm = ids[idx]
+
+    vth = None
+    if (vds < 0.5):
+        vth = (vgatMaxGm - idatMaxGm / maxGm - vds / 2)
+    else:
+        # vds >= 0.5V
+        vth = (vgatMaxGm - idatMaxGm / maxGm)
+    # print("Vth", vth)
+    return vth
+
+
+</pre>
+
+
+Attention, we also used another built-in function <font
+        color="red">mqagetvalue(var_name)</font> to fetch related variable by providing that variable’s name, say “Vds”, it can be any variable that’s included in current data.
+<br/><br/>
+And, we need to know that the <font color="red">mqagetvalue(var_name)</font> function:<br/>
+<ul>
+    1. Must be used within the <font color="blue">@mqawrapper_loop</font> decorated function.<br/>
+    2. It can dynamically fetch the proper value of a variable under all conditions.<br/>
+</ul>
+
+<br/><br/>
+
+Now, let’s see how the <b>calVtgm()</b> function is called:<br/>
+<pre>
+def getTargetsFromIdVg():
+    print("Working on Ids_Vgs_Vbs curves.")
+    srcdir = r"C:\\Users\\shuancai\\Desktop\\MQA_test\\Python_Test\\IV_Sweeps"
+    prjs = loadmqaresult(srcdir)
+    r = prjs[0]
+
+    ids = MqaTarget()
+    ids = r.searchtag("Ids", ruleid="5001")
+
+    vth = <b>calVtgm(ids, "Vgs")</b>  # Max Gm method
+    #vth = calVthcon(ids, "Vgs")  # Vth_con method
+    vtlin = vth.select("Vds == " + Vdlin)
+    vtsat = vth.select("Vds == " + Vdd)
+    dibl = vtlin - vtsat
+    createScalingPlots(vtlin, "Vtlin")
+    createScalingPlots(vtsat, "Vtsat")
+    createScalingPlots(dibl, "DIBL")
+
+
+</pre>
+
+<br/>
+<hr/>
+On the other hand, please feel free to check out the example <b>calVthcon()</b> function in IV_Targets_more.py, where
+<font color="red">mqagetvalue(var_name)</font>  is used to fetch W, L, M, etc.
+<br/>
+<br/><img src="/static/mqa_ppp/vthcon.png" style="border:0px solid lightgray"/><br/><br/>
+<br/><br/>
+<br/><br/>
+Thank you!
+
+{% endblock %}
