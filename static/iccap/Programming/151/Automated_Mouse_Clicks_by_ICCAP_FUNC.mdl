@@ -1,0 +1,4098 @@
+LINK MODEL "Automated_Mouseclicks_by_ICCAP_FUNC" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 C30 C15 C10"
+element 0 "Name" "ICCAP_DEFAULT_SETUP_PAGE"
+element 0 "Value" "Extract / Optimize"
+element 1 "Name" ""
+element 1 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "toto"
+element 0 "Value" "TL|<none>|<none>|#15bidon|1|0"
+element 1 "Name" "toto.bidon"
+element 1 "Value" "TL|<none>|<none>|<none>|0"
+element 2 "Name" "demo"
+element 2 "Value" "TL|<none>|<none>|#219Array_of_CheckBoxes|0|1"
+element 3 "Name" "demo.Array_of_CheckBoxes"
+element 3 "Value" "TL|<none>|<none>|#210CheckBox_1|0"
+element 4 "Name" "demo.Array_of_CheckBoxes.CheckBox_1"
+element 4 "Value" "CB|CA=#214this is a demo:SF=%available:TS=%selected|<none>|<none>|0"
+element 5 "Name" "myGUItable"
+element 5 "Value" "TL|<none>|<none>|#212myPushButton|1|2"
+element 6 "Name" "myGUItable.myPushButton"
+element 6 "Value" "PB|CA=#19myCaption|<none>|<none>|0"
+element 7 "Name" ""
+element 7 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+element 9 "Symbol" "Square" "A"
+element 9 "Measured" "Default" "A"
+element 9 "Simulated" "Default" "A"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "A"
+element 10 "On Black" "94" "A"
+element 10 "Symbol" "Square" "A"
+element 10 "Measured" "Default" "A"
+element 10 "Simulated" "Default" "A"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "A"
+element 11 "On Black" "81" "A"
+element 11 "Symbol" "Square" "A"
+element 11 "Measured" "Default" "A"
+element 11 "Simulated" "Default" "A"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "A"
+element 12 "On Black" "50" "A"
+element 12 "Symbol" "Square" "A"
+element 12 "Measured" "Default" "A"
+element 12 "Simulated" "Default" "A"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "A"
+element 13 "On Black" "115" "A"
+element 13 "Symbol" "Square" "A"
+element 13 "Measured" "Default" "A"
+element 13 "Simulated" "Default" "A"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "A"
+element 14 "On Black" "54" "A"
+element 14 "Symbol" "Square" "A"
+element 14 "Measured" "Default" "A"
+element 14 "Simulated" "Default" "A"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "A"
+element 15 "On Black" "106" "A"
+element 15 "Symbol" "Square" "A"
+element 15 "Measured" "Default" "A"
+element 15 "Simulated" "Default" "A"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "A"
+element 16 "On Black" "120" "A"
+element 16 "Symbol" "Square" "A"
+element 16 "Measured" "Default" "A"
+element 16 "Simulated" "Default" "A"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "A"
+element 17 "On Black" "87" "A"
+element 17 "Symbol" "Square" "A"
+element 17 "Measured" "Default" "A"
+element 17 "Simulated" "Default" "A"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "A"
+element 18 "On Black" "79" "A"
+element 18 "Symbol" "Square" "A"
+element 18 "Measured" "Default" "A"
+element 18 "Simulated" "Default" "A"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "A"
+element 19 "On Black" "81" "A"
+element 19 "Symbol" "Square" "A"
+element 19 "Measured" "Default" "A"
+element 19 "Simulated" "Default" "A"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "A"
+element 20 "On Black" "1" "A"
+element 20 "Symbol" "Circle" "A"
+element 20 "Measured" "Default" "A"
+element 20 "Simulated" "Dot Line" "A"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "A"
+element 21 "On Black" "2" "A"
+element 21 "Symbol" "Reverse Triangle" "A"
+element 21 "Measured" "Default" "A"
+element 21 "Simulated" "Dot Line" "A"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "A"
+element 22 "On Black" "6" "A"
+element 22 "Symbol" "Star" "A"
+element 22 "Measured" "Default" "A"
+element 22 "Simulated" "Dot Line" "A"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "A"
+element 23 "On Black" "3" "A"
+element 23 "Symbol" "Triangle" "A"
+element 23 "Measured" "Default" "A"
+element 23 "Simulated" "Dot Line" "A"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "A"
+element 24 "On Black" "88" "A"
+element 24 "Symbol" "Square" "A"
+element 24 "Measured" "Default" "A"
+element 24 "Simulated" "Dot Line" "A"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "A"
+element 25 "On Black" "4" "A"
+element 25 "Symbol" "Cross" "A"
+element 25 "Measured" "Default" "A"
+element 25 "Simulated" "Dot Line" "A"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "A"
+element 26 "On Black" "117" "A"
+element 26 "Symbol" "Circle" "A"
+element 26 "Measured" "Default" "A"
+element 26 "Simulated" "Dot Line" "A"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "A"
+element 27 "On Black" "40" "A"
+element 27 "Symbol" "Circle" "A"
+element 27 "Measured" "Default" "A"
+element 27 "Simulated" "Dot Line" "A"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "A"
+element 28 "On Black" "28" "A"
+element 28 "Symbol" "Circle" "A"
+element 28 "Measured" "Default" "A"
+element 28 "Simulated" "Dot Line" "A"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "A"
+element 29 "On Black" "114" "A"
+element 29 "Symbol" "Circle" "A"
+element 29 "Measured" "Default" "A"
+element 29 "Simulated" "Dot Line" "A"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "A"
+element 30 "On Black" "94" "A"
+element 30 "Symbol" "Circle" "A"
+element 30 "Measured" "Default" "A"
+element 30 "Simulated" "Dot Line" "A"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "A"
+element 31 "On Black" "81" "A"
+element 31 "Symbol" "Circle" "A"
+element 31 "Measured" "Default" "A"
+element 31 "Simulated" "Dot Line" "A"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "A"
+element 32 "On Black" "50" "A"
+element 32 "Symbol" "Circle" "A"
+element 32 "Measured" "Default" "A"
+element 32 "Simulated" "Dot Line" "A"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "A"
+element 33 "On Black" "115" "A"
+element 33 "Symbol" "Circle" "A"
+element 33 "Measured" "Default" "A"
+element 33 "Simulated" "Dot Line" "A"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "A"
+element 34 "On Black" "54" "A"
+element 34 "Symbol" "Circle" "A"
+element 34 "Measured" "Default" "A"
+element 34 "Simulated" "Dot Line" "A"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "A"
+element 35 "On Black" "106" "A"
+element 35 "Symbol" "Circle" "A"
+element 35 "Measured" "Default" "A"
+element 35 "Simulated" "Dot Line" "A"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "A"
+element 36 "On Black" "120" "A"
+element 36 "Symbol" "Circle" "A"
+element 36 "Measured" "Default" "A"
+element 36 "Simulated" "Dot Line" "A"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "A"
+element 37 "On Black" "87" "A"
+element 37 "Symbol" "Circle" "A"
+element 37 "Measured" "Default" "A"
+element 37 "Simulated" "Dot Line" "A"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "A"
+element 38 "On Black" "79" "A"
+element 38 "Symbol" "Circle" "A"
+element 38 "Measured" "Default" "A"
+element 38 "Simulated" "Dot Line" "A"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "A"
+element 39 "On Black" "81" "A"
+element 39 "Symbol" "Circle" "A"
+element 39 "Measured" "Default" "A"
+element 39 "Simulated" "Dot Line" "A"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "A"
+element 40 "On Black" "1" "A"
+element 40 "Symbol" "Triangle" "A"
+element 40 "Measured" "Default" "A"
+element 40 "Simulated" "Dot Dot Line" "A"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "A"
+element 41 "On Black" "2" "A"
+element 41 "Symbol" "Diamond" "A"
+element 41 "Measured" "Default" "A"
+element 41 "Simulated" "Dot Dot Line" "A"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "A"
+element 42 "On Black" "6" "A"
+element 42 "Symbol" "X" "A"
+element 42 "Measured" "Default" "A"
+element 42 "Simulated" "Dot Dot Line" "A"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "A"
+element 43 "On Black" "3" "A"
+element 43 "Symbol" "Reverse Triangle" "A"
+element 43 "Measured" "Default" "A"
+element 43 "Simulated" "Dot Dot Line" "A"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "A"
+element 44 "On Black" "88" "A"
+element 44 "Symbol" "Circle" "A"
+element 44 "Measured" "Default" "A"
+element 44 "Simulated" "Dot Dot Line" "A"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "A"
+element 45 "On Black" "4" "A"
+element 45 "Symbol" "Square" "A"
+element 45 "Measured" "Default" "A"
+element 45 "Simulated" "Dot Dot Line" "A"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "A"
+element 46 "On Black" "117" "A"
+element 46 "Symbol" "Triangle" "A"
+element 46 "Measured" "Default" "A"
+element 46 "Simulated" "Dot Dot Line" "A"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "A"
+element 47 "On Black" "40" "A"
+element 47 "Symbol" "Triangle" "A"
+element 47 "Measured" "Default" "A"
+element 47 "Simulated" "Dot Dot Line" "A"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "A"
+element 48 "On Black" "28" "A"
+element 48 "Symbol" "Triangle" "A"
+element 48 "Measured" "Default" "A"
+element 48 "Simulated" "Dot Dot Line" "A"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "A"
+element 49 "On Black" "114" "A"
+element 49 "Symbol" "Triangle" "A"
+element 49 "Measured" "Default" "A"
+element 49 "Simulated" "Dot Dot Line" "A"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "A"
+element 50 "On Black" "94" "A"
+element 50 "Symbol" "Triangle" "A"
+element 50 "Measured" "Default" "A"
+element 50 "Simulated" "Dot Dot Line" "A"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "A"
+element 51 "On Black" "81" "A"
+element 51 "Symbol" "Triangle" "A"
+element 51 "Measured" "Default" "A"
+element 51 "Simulated" "Dot Dot Line" "A"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "A"
+element 52 "On Black" "50" "A"
+element 52 "Symbol" "Triangle" "A"
+element 52 "Measured" "Default" "A"
+element 52 "Simulated" "Dot Dot Line" "A"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "A"
+element 53 "On Black" "115" "A"
+element 53 "Symbol" "Triangle" "A"
+element 53 "Measured" "Default" "A"
+element 53 "Simulated" "Dot Dot Line" "A"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "A"
+element 54 "On Black" "54" "A"
+element 54 "Symbol" "Triangle" "A"
+element 54 "Measured" "Default" "A"
+element 54 "Simulated" "Dot Dot Line" "A"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "A"
+element 55 "On Black" "106" "A"
+element 55 "Symbol" "Triangle" "A"
+element 55 "Measured" "Default" "A"
+element 55 "Simulated" "Dot Dot Line" "A"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "A"
+element 56 "On Black" "120" "A"
+element 56 "Symbol" "Triangle" "A"
+element 56 "Measured" "Default" "A"
+element 56 "Simulated" "Dot Dot Line" "A"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "A"
+element 57 "On Black" "87" "A"
+element 57 "Symbol" "Triangle" "A"
+element 57 "Measured" "Default" "A"
+element 57 "Simulated" "Dot Dot Line" "A"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "A"
+element 58 "On Black" "79" "A"
+element 58 "Symbol" "Triangle" "A"
+element 58 "Measured" "Default" "A"
+element 58 "Simulated" "Dot Dot Line" "A"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "A"
+element 59 "On Black" "81" "A"
+element 59 "Symbol" "Triangle" "A"
+element 59 "Measured" "Default" "A"
+element 59 "Simulated" "Dot Dot Line" "A"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "A"
+element 60 "On Black" "1" "A"
+element 60 "Symbol" "Reverse Triangle" "A"
+element 60 "Measured" "Default" "A"
+element 60 "Simulated" "Dashed Line" "A"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "A"
+element 61 "On Black" "2" "A"
+element 61 "Symbol" "Star" "A"
+element 61 "Measured" "Default" "A"
+element 61 "Simulated" "Dashed Line" "A"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "A"
+element 62 "On Black" "6" "A"
+element 62 "Symbol" "Cross" "A"
+element 62 "Measured" "Default" "A"
+element 62 "Simulated" "Dashed Line" "A"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "A"
+element 63 "On Black" "3" "A"
+element 63 "Symbol" "Diamond" "A"
+element 63 "Measured" "Default" "A"
+element 63 "Simulated" "Dashed Line" "A"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "A"
+element 64 "On Black" "88" "A"
+element 64 "Symbol" "Triangle" "A"
+element 64 "Measured" "Default" "A"
+element 64 "Simulated" "Dashed Line" "A"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "A"
+element 65 "On Black" "4" "A"
+element 65 "Symbol" "Circle" "A"
+element 65 "Measured" "Default" "A"
+element 65 "Simulated" "Dashed Line" "A"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "A"
+element 66 "On Black" "117" "A"
+element 66 "Symbol" "Reverse Triangle" "A"
+element 66 "Measured" "Default" "A"
+element 66 "Simulated" "Dashed Line" "A"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "A"
+element 67 "On Black" "40" "A"
+element 67 "Symbol" "Reverse Triangle" "A"
+element 67 "Measured" "Default" "A"
+element 67 "Simulated" "Dashed Line" "A"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "A"
+element 68 "On Black" "28" "A"
+element 68 "Symbol" "Reverse Triangle" "A"
+element 68 "Measured" "Default" "A"
+element 68 "Simulated" "Dashed Line" "A"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "A"
+element 69 "On Black" "114" "A"
+element 69 "Symbol" "Reverse Triangle" "A"
+element 69 "Measured" "Default" "A"
+element 69 "Simulated" "Dashed Line" "A"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "A"
+element 70 "On Black" "94" "A"
+element 70 "Symbol" "Reverse Triangle" "A"
+element 70 "Measured" "Default" "A"
+element 70 "Simulated" "Dashed Line" "A"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "A"
+element 71 "On Black" "81" "A"
+element 71 "Symbol" "Reverse Triangle" "A"
+element 71 "Measured" "Default" "A"
+element 71 "Simulated" "Dashed Line" "A"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "A"
+element 72 "On Black" "50" "A"
+element 72 "Symbol" "Reverse Triangle" "A"
+element 72 "Measured" "Default" "A"
+element 72 "Simulated" "Dashed Line" "A"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "A"
+element 73 "On Black" "115" "A"
+element 73 "Symbol" "Reverse Triangle" "A"
+element 73 "Measured" "Default" "A"
+element 73 "Simulated" "Dashed Line" "A"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "A"
+element 74 "On Black" "54" "A"
+element 74 "Symbol" "Reverse Triangle" "A"
+element 74 "Measured" "Default" "A"
+element 74 "Simulated" "Dashed Line" "A"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "A"
+element 75 "On Black" "106" "A"
+element 75 "Symbol" "Reverse Triangle" "A"
+element 75 "Measured" "Default" "A"
+element 75 "Simulated" "Dashed Line" "A"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "A"
+element 76 "On Black" "120" "A"
+element 76 "Symbol" "Reverse Triangle" "A"
+element 76 "Measured" "Default" "A"
+element 76 "Simulated" "Dashed Line" "A"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "A"
+element 77 "On Black" "87" "A"
+element 77 "Symbol" "Reverse Triangle" "A"
+element 77 "Measured" "Default" "A"
+element 77 "Simulated" "Dashed Line" "A"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "A"
+element 78 "On Black" "79" "A"
+element 78 "Symbol" "Reverse Triangle" "A"
+element 78 "Measured" "Default" "A"
+element 78 "Simulated" "Dashed Line" "A"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "A"
+element 79 "On Black" "81" "A"
+element 79 "Symbol" "Reverse Triangle" "A"
+element 79 "Measured" "Default" "A"
+element 79 "Simulated" "Dashed Line" "A"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "A"
+element 80 "On Black" "1" "A"
+element 80 "Symbol" "Diamond" "A"
+element 80 "Measured" "Default" "A"
+element 80 "Simulated" "Dot Dashed Line" "A"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "A"
+element 81 "On Black" "2" "A"
+element 81 "Symbol" "X" "A"
+element 81 "Measured" "Default" "A"
+element 81 "Simulated" "Dot Dashed Line" "A"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "A"
+element 82 "On Black" "6" "A"
+element 82 "Symbol" "Square" "A"
+element 82 "Measured" "Default" "A"
+element 82 "Simulated" "Dot Dashed Line" "A"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "A"
+element 83 "On Black" "3" "A"
+element 83 "Symbol" "Star" "A"
+element 83 "Measured" "Default" "A"
+element 83 "Simulated" "Dot Dashed Line" "A"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "A"
+element 84 "On Black" "88" "A"
+element 84 "Symbol" "Reverse Triangle" "A"
+element 84 "Measured" "Default" "A"
+element 84 "Simulated" "Dot Dashed Line" "A"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "A"
+element 85 "On Black" "4" "A"
+element 85 "Symbol" "Triangle" "A"
+element 85 "Measured" "Default" "A"
+element 85 "Simulated" "Dot Dashed Line" "A"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "A"
+element 86 "On Black" "117" "A"
+element 86 "Symbol" "Diamond" "A"
+element 86 "Measured" "Default" "A"
+element 86 "Simulated" "Dot Dashed Line" "A"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "A"
+element 87 "On Black" "40" "A"
+element 87 "Symbol" "Diamond" "A"
+element 87 "Measured" "Default" "A"
+element 87 "Simulated" "Dot Dashed Line" "A"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "A"
+element 88 "On Black" "28" "A"
+element 88 "Symbol" "Diamond" "A"
+element 88 "Measured" "Default" "A"
+element 88 "Simulated" "Dot Dashed Line" "A"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "A"
+element 89 "On Black" "114" "A"
+element 89 "Symbol" "Diamond" "A"
+element 89 "Measured" "Default" "A"
+element 89 "Simulated" "Dot Dashed Line" "A"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "A"
+element 90 "On Black" "94" "A"
+element 90 "Symbol" "Diamond" "A"
+element 90 "Measured" "Default" "A"
+element 90 "Simulated" "Dot Dashed Line" "A"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "A"
+element 91 "On Black" "81" "A"
+element 91 "Symbol" "Diamond" "A"
+element 91 "Measured" "Default" "A"
+element 91 "Simulated" "Dot Dashed Line" "A"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "A"
+element 92 "On Black" "50" "A"
+element 92 "Symbol" "Diamond" "A"
+element 92 "Measured" "Default" "A"
+element 92 "Simulated" "Dot Dashed Line" "A"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "A"
+element 93 "On Black" "115" "A"
+element 93 "Symbol" "Diamond" "A"
+element 93 "Measured" "Default" "A"
+element 93 "Simulated" "Dot Dashed Line" "A"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "A"
+element 94 "On Black" "54" "A"
+element 94 "Symbol" "Diamond" "A"
+element 94 "Measured" "Default" "A"
+element 94 "Simulated" "Dot Dashed Line" "A"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "A"
+element 95 "On Black" "106" "A"
+element 95 "Symbol" "Diamond" "A"
+element 95 "Measured" "Default" "A"
+element 95 "Simulated" "Dot Dashed Line" "A"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "A"
+element 96 "On Black" "120" "A"
+element 96 "Symbol" "Diamond" "A"
+element 96 "Measured" "Default" "A"
+element 96 "Simulated" "Dot Dashed Line" "A"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "A"
+element 97 "On Black" "87" "A"
+element 97 "Symbol" "Diamond" "A"
+element 97 "Measured" "Default" "A"
+element 97 "Simulated" "Dot Dashed Line" "A"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "A"
+element 98 "On Black" "79" "A"
+element 98 "Symbol" "Diamond" "A"
+element 98 "Measured" "Default" "A"
+element 98 "Simulated" "Dot Dashed Line" "A"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "A"
+element 99 "On Black" "81" "A"
+element 99 "Symbol" "Diamond" "A"
+element 99 "Measured" "Default" "A"
+element 99 "Simulated" "Dot Dashed Line" "A"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "A"
+element 100 "On Black" "1" "A"
+element 100 "Symbol" "Star" "A"
+element 100 "Measured" "Default" "A"
+element 100 "Simulated" "Long Dashed Line" "A"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "A"
+element 101 "On Black" "2" "A"
+element 101 "Symbol" "Cross" "A"
+element 101 "Measured" "Default" "A"
+element 101 "Simulated" "Long Dashed Line" "A"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "A"
+element 102 "On Black" "6" "A"
+element 102 "Symbol" "Circle" "A"
+element 102 "Measured" "Default" "A"
+element 102 "Simulated" "Long Dashed Line" "A"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "A"
+element 103 "On Black" "3" "A"
+element 103 "Symbol" "X" "A"
+element 103 "Measured" "Default" "A"
+element 103 "Simulated" "Long Dashed Line" "A"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "A"
+element 104 "On Black" "88" "A"
+element 104 "Symbol" "Diamond" "A"
+element 104 "Measured" "Default" "A"
+element 104 "Simulated" "Long Dashed Line" "A"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "A"
+element 105 "On Black" "4" "A"
+element 105 "Symbol" "Reverse Triangle" "A"
+element 105 "Measured" "Default" "A"
+element 105 "Simulated" "Long Dashed Line" "A"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "A"
+element 106 "On Black" "117" "A"
+element 106 "Symbol" "Star" "A"
+element 106 "Measured" "Default" "A"
+element 106 "Simulated" "Long Dashed Line" "A"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "A"
+element 107 "On Black" "40" "A"
+element 107 "Symbol" "Star" "A"
+element 107 "Measured" "Default" "A"
+element 107 "Simulated" "Long Dashed Line" "A"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "A"
+element 108 "On Black" "28" "A"
+element 108 "Symbol" "Star" "A"
+element 108 "Measured" "Default" "A"
+element 108 "Simulated" "Long Dashed Line" "A"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "A"
+element 109 "On Black" "114" "A"
+element 109 "Symbol" "Star" "A"
+element 109 "Measured" "Default" "A"
+element 109 "Simulated" "Long Dashed Line" "A"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "A"
+element 110 "On Black" "94" "A"
+element 110 "Symbol" "Star" "A"
+element 110 "Measured" "Default" "A"
+element 110 "Simulated" "Long Dashed Line" "A"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "A"
+element 111 "On Black" "81" "A"
+element 111 "Symbol" "Star" "A"
+element 111 "Measured" "Default" "A"
+element 111 "Simulated" "Long Dashed Line" "A"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "A"
+element 112 "On Black" "50" "A"
+element 112 "Symbol" "Star" "A"
+element 112 "Measured" "Default" "A"
+element 112 "Simulated" "Long Dashed Line" "A"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "A"
+element 113 "On Black" "115" "A"
+element 113 "Symbol" "Star" "A"
+element 113 "Measured" "Default" "A"
+element 113 "Simulated" "Long Dashed Line" "A"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "A"
+element 114 "On Black" "54" "A"
+element 114 "Symbol" "Star" "A"
+element 114 "Measured" "Default" "A"
+element 114 "Simulated" "Long Dashed Line" "A"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "A"
+element 115 "On Black" "106" "A"
+element 115 "Symbol" "Star" "A"
+element 115 "Measured" "Default" "A"
+element 115 "Simulated" "Long Dashed Line" "A"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "A"
+element 116 "On Black" "120" "A"
+element 116 "Symbol" "Star" "A"
+element 116 "Measured" "Default" "A"
+element 116 "Simulated" "Long Dashed Line" "A"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "A"
+element 117 "On Black" "87" "A"
+element 117 "Symbol" "Star" "A"
+element 117 "Measured" "Default" "A"
+element 117 "Simulated" "Long Dashed Line" "A"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "A"
+element 118 "On Black" "79" "A"
+element 118 "Symbol" "Star" "A"
+element 118 "Measured" "Default" "A"
+element 118 "Simulated" "Long Dashed Line" "A"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "A"
+element 119 "On Black" "81" "A"
+element 119 "Symbol" "Star" "A"
+element 119 "Measured" "Default" "A"
+element 119 "Simulated" "Long Dashed Line" "A"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "A"
+element 120 "On Black" "1" "A"
+element 120 "Symbol" "X" "A"
+element 120 "Measured" "Default" "A"
+element 120 "Simulated" "Long Dot Dashed Line" "A"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "A"
+element 121 "On Black" "2" "A"
+element 121 "Symbol" "Square" "A"
+element 121 "Measured" "Default" "A"
+element 121 "Simulated" "Long Dot Dashed Line" "A"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "A"
+element 122 "On Black" "6" "A"
+element 122 "Symbol" "Triangle" "A"
+element 122 "Measured" "Default" "A"
+element 122 "Simulated" "Long Dot Dashed Line" "A"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "A"
+element 123 "On Black" "3" "A"
+element 123 "Symbol" "Cross" "A"
+element 123 "Measured" "Default" "A"
+element 123 "Simulated" "Long Dot Dashed Line" "A"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "A"
+element 124 "On Black" "88" "A"
+element 124 "Symbol" "Star" "A"
+element 124 "Measured" "Default" "A"
+element 124 "Simulated" "Long Dot Dashed Line" "A"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "A"
+element 125 "On Black" "4" "A"
+element 125 "Symbol" "Diamond" "A"
+element 125 "Measured" "Default" "A"
+element 125 "Simulated" "Long Dot Dashed Line" "A"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "A"
+element 126 "On Black" "117" "A"
+element 126 "Symbol" "X" "A"
+element 126 "Measured" "Default" "A"
+element 126 "Simulated" "Long Dot Dashed Line" "A"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "A"
+element 127 "On Black" "40" "A"
+element 127 "Symbol" "X" "A"
+element 127 "Measured" "Default" "A"
+element 127 "Simulated" "Long Dot Dashed Line" "A"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "A"
+element 128 "On Black" "28" "A"
+element 128 "Symbol" "X" "A"
+element 128 "Measured" "Default" "A"
+element 128 "Simulated" "Long Dot Dashed Line" "A"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "A"
+element 129 "On Black" "114" "A"
+element 129 "Symbol" "X" "A"
+element 129 "Measured" "Default" "A"
+element 129 "Simulated" "Long Dot Dashed Line" "A"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "A"
+element 130 "On Black" "94" "A"
+element 130 "Symbol" "X" "A"
+element 130 "Measured" "Default" "A"
+element 130 "Simulated" "Long Dot Dashed Line" "A"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "A"
+element 131 "On Black" "81" "A"
+element 131 "Symbol" "X" "A"
+element 131 "Measured" "Default" "A"
+element 131 "Simulated" "Long Dot Dashed Line" "A"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "A"
+element 132 "On Black" "50" "A"
+element 132 "Symbol" "X" "A"
+element 132 "Measured" "Default" "A"
+element 132 "Simulated" "Long Dot Dashed Line" "A"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "A"
+element 133 "On Black" "115" "A"
+element 133 "Symbol" "X" "A"
+element 133 "Measured" "Default" "A"
+element 133 "Simulated" "Long Dot Dashed Line" "A"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "A"
+element 134 "On Black" "54" "A"
+element 134 "Symbol" "X" "A"
+element 134 "Measured" "Default" "A"
+element 134 "Simulated" "Long Dot Dashed Line" "A"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "A"
+element 135 "On Black" "106" "A"
+element 135 "Symbol" "X" "A"
+element 135 "Measured" "Default" "A"
+element 135 "Simulated" "Long Dot Dashed Line" "A"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "A"
+element 136 "On Black" "120" "A"
+element 136 "Symbol" "X" "A"
+element 136 "Measured" "Default" "A"
+element 136 "Simulated" "Long Dot Dashed Line" "A"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "A"
+element 137 "On Black" "87" "A"
+element 137 "Symbol" "X" "A"
+element 137 "Measured" "Default" "A"
+element 137 "Simulated" "Long Dot Dashed Line" "A"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "A"
+element 138 "On Black" "79" "A"
+element 138 "Symbol" "X" "A"
+element 138 "Measured" "Default" "A"
+element 138 "Simulated" "Long Dot Dashed Line" "A"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "A"
+element 139 "On Black" "81" "A"
+element 139 "Symbol" "X" "A"
+element 139 "Measured" "Default" "A"
+element 139 "Simulated" "Long Dot Dashed Line" "A"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "A"
+element 140 "On Black" "1" "A"
+element 140 "Symbol" "Cross" "A"
+element 140 "Measured" "Default" "A"
+element 140 "Simulated" "Solid Line" "A"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "A"
+element 141 "On Black" "2" "A"
+element 141 "Symbol" "Circle" "A"
+element 141 "Measured" "Default" "A"
+element 141 "Simulated" "Solid Line" "A"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "A"
+element 142 "On Black" "6" "A"
+element 142 "Symbol" "Reverse Triangle" "A"
+element 142 "Measured" "Default" "A"
+element 142 "Simulated" "Solid Line" "A"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "A"
+element 143 "On Black" "3" "A"
+element 143 "Symbol" "Square" "A"
+element 143 "Measured" "Default" "A"
+element 143 "Simulated" "Solid Line" "A"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "A"
+element 144 "On Black" "88" "A"
+element 144 "Symbol" "X" "A"
+element 144 "Measured" "Default" "A"
+element 144 "Simulated" "Solid Line" "A"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "A"
+element 145 "On Black" "4" "A"
+element 145 "Symbol" "Star" "A"
+element 145 "Measured" "Default" "A"
+element 145 "Simulated" "Solid Line" "A"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "A"
+element 146 "On Black" "117" "A"
+element 146 "Symbol" "Cross" "A"
+element 146 "Measured" "Default" "A"
+element 146 "Simulated" "Solid Line" "A"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "A"
+element 147 "On Black" "40" "A"
+element 147 "Symbol" "Cross" "A"
+element 147 "Measured" "Default" "A"
+element 147 "Simulated" "Solid Line" "A"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "A"
+element 148 "On Black" "28" "A"
+element 148 "Symbol" "Cross" "A"
+element 148 "Measured" "Default" "A"
+element 148 "Simulated" "Solid Line" "A"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "A"
+element 149 "On Black" "114" "A"
+element 149 "Symbol" "Cross" "A"
+element 149 "Measured" "Default" "A"
+element 149 "Simulated" "Solid Line" "A"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "A"
+element 150 "On Black" "94" "A"
+element 150 "Symbol" "Cross" "A"
+element 150 "Measured" "Default" "A"
+element 150 "Simulated" "Solid Line" "A"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Symbols Only" "N"
+element 0 "Simulated Trace" "Solid Line" "N"
+element 0 "Transform Result" "Solid Line" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "N"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ ! This Modelfile provides demos on how to access action items in IC-CAP
+ ! applying ICCAP_FUNC()
+ 
+ 
+ Status:   March 2020
+}
+}
+}
+LINK DUT "READ_ME_FIRST" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ ** test
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "README" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "1.2451275690999 2122 4250"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! This Modelfile provides demos on how to access action items in IC-CAP
+ ! applying ICCAP_FUNC()
+ !
+ ! Simply Copy-Paste the corresponding lines of code
+ ! into your own Macro/Transform
+ 
+ !------------------------------------------------------------------------
+ 
+ 
+ NOTES:
+ ------------------------------------------
+ ICCAP_FUNC() and Ambiguous Object Names 
+ ------------------------------------------
+ 
+ Due to IC-CAP's hierarchical structure,
+ it is strongly adviced to name objects 
+ on the same hierarchy level differently.
+ 
+ For example, naming a Transform the same as a Plot is disadviced.
+ Better:
+   - Transform Name:  calc_gm
+   - Plot Name:       gm
+ 
+ !----
+ 
+ While using IC-CAP manually, naming objects the same is usually OK.
+ However, it becomes a real problem when applying ICCAP_FUNC():
+ it may happen that ICCAP_FUNC() should open a Plot, 
+ but ICCAP_FUNC() finds a Transform with the same name as the Plot first.
+ And so, you will get an error, because a Plot cannot be executed!
+ 
+ For example, suppose you have a Transform and a Plot called 'xyz'. 
+ Programming and then executing 
+     ICCAP_FUNC("xyz", "Display Plot") 
+ does not work, and you will get an error like:
+ ICCAP_FUNC: 'Display Plot' is not a valid action for 'xyz'.
+ 
+ To eliminate confusion in such cases, include an optional 
+ Object Type when specifying the name of the object:
+     ICCAP_FUNC("Plot xyz", "Display Plot") 
+ and it will work despite a Transform 'xyz' exists !
+ 
+ Valid object names:   Input, Output, Transform, Plot, Macro
+ !==========================================================
+ 
+ 
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "______________________________1" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "ICCAP_MAIN" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "MAIN_WINDOW" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !LOAD A MODEL FILE INTO ICCAP/Main
+ !---------------------------------
+ ICCAP_FUNC("/", "Read Model", "MyModelName.mdl")
+ 
+ 
+ !CHANGE WORKING DIRECTORY
+ !------------------------
+ working_directory=SYSTEM$("pwd")			  !returns current location of directory pointer
+ ICCAP_FUNC("/", "Change Directory", "/tmp") 		  !change to directory /tmp
+ ICCAP_FUNC("/", "Change Directory", VAL$(working_directory))  !change back to previous working directory
+ 
+ 
+ !EXIT ICCAP
+ !----------
+ ICCAP_FUNC("/", "Exit")   !you will be asked if you really want to exit and to save open files
+ ICCAP_FUNC("/", "Exit!")  ! THIS IS THE KILLER COMMAND !!!!!!!!!!!
+ 
+ 
+ !CLOSE ICCAP MAIN WINDOW
+ !---------------------------
+ ICCAP_FUNC("/", "Close")
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "STATUS_WINDOW" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! bring status window to top level
+ !---------------------------------
+ ICCAP_FUNC("/", "Status Window") 	
+ 
+ 
+ ! clear status window outputs
+ !---------------------------------
+ ICCAP_FUNC("/", "Clear Status Output")	
+ 
+ 
+ ! clear status window errors
+ !---------------------------------
+ ICCAP_FUNC("/", "Clear Status Errors")	
+ 
+ ICCAP_FUNC("IC-CAP", "Open Output Log", "filename")
+ ICCAP_FUNC("IC-CAP", "Close Output Log")
+ ICCAP_FUNC("IC-CAP", "Open Error Log", "filename")
+ ICCAP_FUNC("IC-CAP", "Close Error Log")
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "HARDWARE_WINDOW" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 P158 C10 C10"
+element 0 "Name" "ActString"
+element 0 "Value" "}"
+element 1 "Name" "Interface"
+element 1 "Value" "ICCAP_ARRAY[0]"
+element 2 "Name" ""
+element 2 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !OPEN HARDWARE WINDOW
+ !------------------------------
+ ICCAP_FUNC("IC-CAP", "Open Hardware")
+ 
+ 
+ !CLOSE HARDWARE WINDOW
+ !------------------------------
+ ICCAP_FUNC("Hardware", "Close Hardware")
+ 
+ 
+ !----------------------------------------------------------------------
+ 
+ !ADD INTERFACE FILE
+ !------------------------------
+ ICCAP_FUNC("Hardware", "Add Interface File", "gpib0")
+ 
+ 
+ !DELETE INTERFACE FILE  (requires that the list of active instruments is empty)
+ !--------------------------------------------------------------------------------
+ ICCAP_FUNC("Hardware", "Delete Interface File", "gpib0")
+ 
+ 
+ 
+ !AUTOMATICALLY ADD INSTRUMENTS CONNECTED TO THE GPIB TO THE ACTIVE LIST 
+ ! (Perform a 'Rebuild')
+ !-----------------------------------------------------------------------------------------
+ ICCAP_FUNC("Hardware", "Rebuild Active List")
+ 
+ 
+ !INDIVIDUALLY ADD INSTRUMENT to default HPIB Interface (7), with address 16
+ !-------------------------------------------------------------------------------------
+ ICCAP_FUNC("Hardware", "Add Active Instr", "HP4145.7.16")
+ 
+ 
+ 
+ !CHECK IF A SPECIFIC INSTRUMENT IS PRESENT IN THE HARDWARE WINDOW
+ !------------------------------------------------------------------
+ !Prerequisites: read/write permissions in act. working directory
+ ICCAP_FUNC("Hardware", "Save As", "test.hdw")
+ instrument="4071"
+ check = SYSTEM$("cat test.hdw | grep "&VAL$(instrument))
+ dummy=SYSTEM("rm -f test.hdw")
+ PRINT check
+ IF VAL$(check)=="" THEN 
+   GET_STRING "Instrument "&VAL$(instrument)&" is not activated in Hardware Window !!!",dummy
+ ELSE
+   GET_STRING "Instrument  "&VAL$(instrument)&" is activated in Hardware Window",dummy
+ END IF
+ 
+ 
+ !##########################################################################
+ 
+ !DELETE INSTRUMENT
+ !-----------------------------------
+ ICCAP_FUNC("Hardware", "Delete Active Instr", "HP4145.7.16")
+ 
+ 
+ !DELETE ALL INSTRUMENTS
+ !-----------------------------------
+ ICCAP_FUNC("Hardware", "Clear Active List")
+ 
+ 
+ !##########################################################################
+ 
+ 
+ 
+ !WRITE HARDWARE WINDOW  SETTINGS TO FILE
+ !------------------------------------------
+ ICCAP_FUNC("Hardware", "Save As", "test.hdw")
+ 
+ 
+ !READ HARDWARE WINDOW FROM FILE
+ !------------------------------------
+ ICCAP_FUNC("Hardware", "Open", "test.hdw")
+ 
+ 
+ !##########################################################################
+ 
+ 
+ !ACTIVATE SCREEN DEBUGGER WHEN COMMUNICATING WITH INSTRUMENTS
+ !--------------------------------------------------------------------
+ !In order to get more infos during running IC-CAP, you may switch the screen debugger on.
+ !Check menu pick /tools/options/screen debug
+ ICCAP_FUNC("/", "Screen Debug On")
+ ICCAP_FUNC("/", "Debug Off")
+ 
+ 
+ 
+ 
+ !---------------------------------------------------------------------------------------------------------
+ !SETTING GENERAL INSTRUMENT TIMEOUT
+ !--------------------------------------------
+ ICCAP_FUNC("Hardware/HPIBAnalyzer", "Set Timeout")
+ !or just satisfy the window using
+ ICCAP_FUNC("Hardware/HPIBAnalyzer", "Set Timeout", "100", "ok")
+ !NOTE: seems when reopening the Hardware/Tools/Settings/Timeout,
+ !	it is reset to 0sec again.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ !####################################################################################
+ 
+ !COMMUNICATING WITH INSTRUMENTS BY PEL
+ !------------------------------------------------------------------------------------------
+ ! You can communicate with Instruments by applying the Send/Receive functions of
+ ! the Hardware window PullDown Tools/Send/Receive/xxx
+ ! For an example, see demo_features\2_MEAS_INSTRUMENTS\2user_def_meas_instr_drv\HPIB_control_by_ICCAP_FUNC.mdl
+ !
+ ! Since IC-CAP_1994, it is recommended to rather apply the simple PEL HPIB_xxx commands as shown below:
+ 
+ Example:
+ =========
+ Note: add a ModelVariable IDN
+ Then add a Program with the following lines:
+ 
+ hpib_num=HPIB_open("gpib0") 		! for Windows-PC
+ !hpib_num=HPIB_open("/dev/gpib0") 	! for Linux
+ 
+ status=HPIB_write(hpib_num,  instr_addr,"*IDN?\n")
+ status=HPIB_readstr(hpib_num,instr_addr,"%s\n", "IDN")
+ 
+ dummy=HPIB_close(hpib_num)
+ 
+ 
+ ! For a complete demo of the HPIB_xxx commands, see example file  
+ ! demo_features\2_MEAS_INSTRUMENTS\2user_def_meas_instr_drv\HPIB_xxxx_PEL_commands.mdl
+ 
+ 
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "__" "711.501"
+{
+}
+LINK XFORM "DELETE_ALL_INSTR" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ GLOBAL_VAR  ActString
+ GLOBAL_VAR  Interface
+ 
+ 
+ !DELETE GPIB INTERFACES & ALL INSTRUMENTS
+ !---------------------------------------------------
+ !==> Required ModelVariables: ActString, Interface
+ 
+ !---first, the Instrument List needs to be empty
+ ICCAP_FUNC("Hardware", "Clear Active List")
+ 
+ !--define a temp. dirfilename
+ dirfilename="tmp.hdw"
+ 
+ !---write Hardware window to file
+ ICCAP_FUNC("Hardware", "Save As", VAL$(dirfilename))
+ 
+ !---open file for reading
+ r_stream = USERC_open(VAL$(dirfilename),"r")
+ 
+ !---find Keyword 'dev_file_list'
+ Keyword="dev_file_list"
+ ActString=""
+ WHILE VAL$(ActString)<>VAL$(Keyword)
+   dummy = USERC_readstr(r_stream,0,"%s",ActString)
+ END WHILE
+ 
+ !skip line with '{'
+ dummy = USERC_readstr(r_stream,0,"%s",ActString)
+ 
+ !read all until line with '}'
+ DIMENSION_ARRAY("Interface", 0)
+ i=0
+ WHILE VAL$(ActString)<>"}"
+   dummy = USERC_readstr(r_stream,0,"%s",ActString)
+   IF VAL$(ActString) <>"}" THEN
+     Interface="ICCAP_ARRAY["&VAL$(SIZE(Interface)+1)&"]"
+     Interface[i]=ActString
+     i = i + 1
+   END IF
+ END WHILE
+ 
+ !---close file
+ dummy = USERC_close(r_stream)
+ 
+ !---delete Interfaces
+ i=0
+ WHILE i < SIZE(Interface)
+   ICCAP_FUNC("Hardware", "Delete Interface File",VAL$(Interface[i]))
+ i = i + 1
+ END WHILE
+ 
+ DIMENSION_ARRAY("Interface", 0)
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "SIMULATION_DEBUGGER" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !SIMULATION DEBUGGER
+ !--------------------
+ ICCAP_FUNC("IC-CAP", "Simulation Debugger")
+ ICCAP_FUNC("Simulation Debugger", "Close")
+ 
+ ICCAP_FUNC("Simulation Debugger", "Save Input File", "filename")
+ ICCAP_FUNC("Simulation Debugger", "Save Command File", "filename")
+ ICCAP_FUNC("Simulation Debugger", "Save Output File", "filename")
+ ICCAP_FUNC("Simulation Debugger", "Manual Simulate")
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "______________________________1__1" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "MODEL_Tabs" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Model" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !OPEN A MODEL FILE
+ !-------------------
+ ICCAP_FUNC("/Modelname", "Edit")
+ 
+ 
+ 
+ !CLOSE A MODEL FILE
+ !--------------------
+ ICCAP_FUNC("/Modelname", "Close All")
+ 
+ 
+ 
+ !SAVE MODEL FILE
+ !---------------
+ ICCAP_FUNC("/myModelName", "Save As", "/tmp/tmp.mdl")	    ! the file saving is done without asking for overwrite-permisssion
+ ICCAP_FUNC("/myModelName", "Save As No Data", "/tmp/tmp.mdl")   ! the file saving without data is done without asking for overwrite-permisssion
+ 
+ 
+ 
+ !READ MODELFILE FROM DISK
+ !------------------------
+ ICCAP_FUNC("/", "Open Model")
+ ICCAP_FUNC("/", "Open Model", "path2model/modelname.mdl")
+ 
+ 
+ 
+ !READ MODELFILE AND KEEP ACTUAL MODEL NAME
+ !---------------------------------------------
+ ICCAP_FUNC("/myModelName", "Open", "/tmp/tmp.mdl")   
+ or
+ ICCAP_FUNC("/myModelName", "Read From File", "/tmp/tmp.mdl")
+ 
+ 
+ 
+ !CREATE A NEW MODEL ICON
+ !--------------------------------
+ ICCAP_FUNC("/", "New Model", "modelname")   
+ 
+ 
+ 
+ !COPY MODEL
+ !-------------------------
+ ICCAP_FUNC("/myModelName", "Copy", "/demo")  
+ 
+ 
+ !DELETE MODEL
+ !-------------------------
+ ICCAP_FUNC("/myModelName", "Delete")  
+ 
+ 
+ !RENAME MODEL
+ !-------------------------
+ ICCAP_FUNC("/oldname", "Rename", "newname")  
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Circuit" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !TAB  'CIRCUIT '
+ !----------------
+ !write:
+ ICCAP_FUNC("/myModelName/Circuit", "Save As", "test.cir")
+ 
+ !read:
+ ICCAP_FUNC("/myModelName/Circuit", "Open", "test.cir")
+ 
+ 
+ !NOTE: when reading a new Circuit, execute also a Parsing:
+ ICCAP_FUNC("/myModelName/Circuit", "Parse")
+ 
+ 
+ 
+ 
+ 
+ !SAVE CIRCUIT AND EXTRACTED MODEL PARAMETERS  (MODEL CARD)
+ !-------------------------------------------------------------------------
+ ICCAP_FUNC("/myModelName", "SaveExtractedDeck", "/tmp/tmp.txt")
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Model_Parameters" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ !MODEL  PARAMETERS
+ !-----------------
+ ICCAP_FUNC("/myModelName/ParameterSet", "Reset")
+ 
+ ICCAP_FUNC("/myModelName/ParameterSet", "Memory Store")
+ 
+ ICCAP_FUNC("/myModelName/ParameterSet", "Memory Recall")
+ 
+ ICCAP_FUNC("/myModelName/ParameterSet", "Open", "DirFileName.mps")
+ 
+ ICCAP_FUNC("/myModelName/ParameterSet", "ReadOnlyValues", "DirFileName.mps")
+ 
+ 
+ ICCAP_FUNC("/myModelName/ParameterSet", "Save As", "DirFileName.mps")
+ 
+ 
+ ! copy from one to another loaded ModelFile
+ ICCAP_FUNC("/vbic_extract/ParameterSet", "Copy", "/vbic_meas/ParameterSet")
+ 
+ 
+ 
+ 
+ !SAVE EXTRACTED MODEL PARAMETERS IN MDIF FORMAT
+ !---------------------------------------------------
+ ICCAP_FUNC("/myModelName", "WriteModelMDIF")
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Model_Variables" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ 
+ !---save Model/Dut/Setup Variables to a .vat file
+ ICCAP_FUNC("modelname/Variables", "Save As", "myVariables.vat")
+ 
+ 
+ !---load Model/Dut/Setup Variables from a .vat file
+ ICCAP_FUNC("modelname/Variables", "Open", "myVariables.vat")
+ 
+ 
+ 
+ 
+ !COPY VARIABLES IS NOT SUPPORTED, USE "Save AS" AND "Open" INSTEAD
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Macros" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ !CREATE A NEW MACRO 
+ !--------------------------------
+ ICCAP_FUNC("/", "New Model", "modelname")   
+ 
+ 
+ 
+ !READ MACROFILE FROM DISK
+ !-----------------------
+ ICCAP_FUNC(".", "Open Macro")
+ ICCAP_FUNC(".", "Open Macro", "/path2macrofile/macrofile.mac")
+ 
+ 
+ 
+ !OPEN MACRO AND KEEP ACTUAL MACRO NAME
+ !---------------------------------------------
+ ICCAP_FUNC("/myModelName/myMacro", "Open", "/tmp/tmp.mac")   
+ or
+ ICCAP_FUNC("/myModelName/myMacro", "Read From File", "/tmp/tmp.mac")
+ 
+ 
+ 
+ ! A MACRO CAN CALL ANOTHER MACRO
+ !-------------------------------
+ ICCAP_FUNC("/myModelName/myMacro", "Execute")
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "DUT_Tabs" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Dut" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !SAVE DUT
+ !--------
+ ICCAP_FUNC("/model/dut", "Save As", "/tmp/tmp.dut")   
+ ICCAP_FUNC("/model/dut", "Save As No Data", "/tmp/tmp.dut")   
+ 
+ 
+ 
+ !CREATE A NEW DUT
+ !--------------------------------
+ ICCAP_FUNC("/model", "New DUT", "DUTname")   
+ 
+ 
+ !READ DUTFILE FROM DISK
+ !-----------------------
+ ICCAP_FUNC("/model", "Open DUT")
+ ICCAP_FUNC("/model", "Open DUT", "/path2dutfile/dutfile.mac")
+ 
+ 
+ !READ DUTFILE AND KEEP ACTUAL DUT NAME
+ !-------------------------------------
+ ICCAP_FUNC("/model/dut", "Open", "/tmp/tmp.dut")   
+ or
+ ICCAP_FUNC("/model/dut", "Read From File", "/tmp/tmp.mac")
+ 
+ 
+ 
+ !COPY DUT
+ !----------
+ !                 from                   to
+ ICCAP_FUNC("/model1/dut1", "Copy", "/modelA/dutA")
+ 
+ 
+ !RENAME DUT
+ !-------------------------
+ ICCAP_FUNC("/model/oldname", "Rename", "newname")  
+ 
+ 
+ !DELETE DUT
+ !-------------------------
+ ICCAP_FUNC("/model/dut", "Delete")  
+ 
+ 
+ 
+ 
+ 
+ !CLOSE ALL DUT PLOTS
+ !--------------------
+ ICCAP_FUNC("/modelname/dutname", "Close All")
+ 
+ 
+ 
+ 
+ ! User Interface related Issues
+ ! ==================================
+ 
+ !OPENING A DUT ON THE DUTs/Setups TREE
+ !-------------------------------------
+ ICCAP_FUNC("/mymodel/mydut", "Open Branch") 
+ 
+ 
+ 
+ !CLOSING A DUT ON THE DUTs/Setups TREE
+ !-------------------------------------
+ ICCAP_FUNC("/mymodel/mydut", "Close Branch") 
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "TestCircuit" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !save a DUT's TestCircuit
+ ICCAP_FUNC("DUT1/TestCircuit", "Save As")
+ 
+ 
+ 
+ !in a Transform, copy a DUT TestCircuit from DUT1 into DUT2
+ !ICCAP_FUNC("../../DUT1/TestCircuit", "Copy", "../../DUT2/TestCircuit")
+ 
+ 
+ 
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Dut_Parameters" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !DUT PARAMETERS   (keyword 'DeviceParameterSet')
+ 
+ 
+ 
+ !DUT PARAMETERS
+ !--------------------
+ ICCAP_FUNC("/myModelName/myDUTname/DeviceParameterSet", "Reset")   
+ ICCAP_FUNC("/myModelName/myDUTname/DeviceParameterSet", "Save As", "/tmp/tmp")   
+ ICCAP_FUNC("/myModelName/myDUTname/DeviceParameterSet", "Open", "/tmp/tmp")   
+ ICCAP_FUNC("/myModelName/myDUTname/DeviceParameterSet", "ReadOnlyValues", "/tmp/tmp") 
+ 
+ 
+ !in a Transform, copy a DUT parameter list from DUT1 into DUT2
+ ICCAP_FUNC("../../DUT1/DeviceParameterSet", "Copy", "../../DUT2/DeviceParameterSet")
+ 
+ !store DUT parameters and recall them
+ ICCAP_FUNC("/myModelName/myDUTname/DeviceParameterSet", "Memory Store")
+ ICCAP_FUNC("/myModelName/myDUTname/DeviceParameterSet", "Memory Recall")
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Dut_Variables" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !DUT VARIABLES   (keyword 'Variables')
+ 
+ 
+ 
+ !---save Model/Dut/Setup Variables to a .vat file
+ ICCAP_FUNC("modelname/dutname/Variables", "Save As")
+ 
+ 
+ !---load Model/Dut/Setup Variables from a .vat file
+ ICCAP_FUNC("modelname/dutname/Variables", "Open")
+ 
+ !COPY VARIABLES IS NOT SUPPORTED, USE "Save AS" AND "Open" INSTEAD
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "SETUP" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Setup" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ !SAVE SETUP
+ !--------
+ ICCAP_FUNC("/model/dut/setup", "Save As", "/tmp/tmp.set")   
+ ICCAP_FUNC("/model/dut/setup", "Save As No Data", "/tmp/tmp.set")   
+ 
+ 
+ 
+ !CREATE A NEW SETUP
+ !--------------------------------
+ ICCAP_FUNC("/model/dut", "New Setup", "Setupname")   
+ 
+ 
+ !READ SETUPFILE FROM DISK
+ !------------------------
+ ICCAP_FUNC("/model/dut", "Open Setup")
+ ICCAP_FUNC("/model/dut", "Open Setup", "/path2setupfile/setupfile.set")
+ 
+ 
+ !READ SETUPFILE AND KEEP ACTUAL SETUP NAME
+ !-----------------------------------------
+ ICCAP_FUNC("/model/dut/setup", "Open", "/tmp/tmp.set")   
+ or
+ ICCAP_FUNC("/model/dut/setup", "Read From File", "/tmp/tmp.set")
+ 
+ 
+ !COPY SETUP
+ !----------
+ ICCAP_FUNC("/model1/dut1/setup1", "Copy", "/modelA/dutA/setupA")  ! modelA/dutA must exist before
+ 
+ 
+ !DELETE SETUP
+ !-------------------------
+ ICCAP_FUNC("/model/dut/setup", "Delete")  
+ 
+ 
+ 
+ !RENAME SETUP
+ !-------------------------
+ ICCAP_FUNC("/model/dut/oldname", "Rename", "newname")  
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Inputs_Outputs" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! ACCESSING TABLE ENTRIES FOR INPUTS AND OUTPUTS:
+ !------------------------------------------------
+ !ICCAP_FUNC("which_Input/Output", "SetTableFieldValue", "Field2change", "a_string")
+ ICCAP_FUNC("va", "SetTableFieldValue", "Sweep Type", "CON")
+ 
+ !==================================================================================
+ 
+ !SAVE INPUTS, OUTPUTS
+ !------------------------
+ ICCAP_FUNC("/model/dut/setup/input", "Save As", "/tmp/tmp.inp")   
+ 
+ 
+ !CREATE A NEW INPUT, OUTPUT
+ !--------------------------------
+ ICCAP_FUNC("/model/dut/setup", "New Input", "Inputname")   
+ 
+ 
+ !READ INPUTFILE FROM DISK
+ !------------------------
+ ICCAP_FUNC("/model/dut/setup", "Open Input")
+ ICCAP_FUNC("/model/dut/setup", "Open Input", "/path2inputfile/inputfile.inp")
+ 
+ 
+ !READ INPUTFILE AND KEEP ACTUAL INPUT NAME
+ !-----------------------------------------
+ ICCAP_FUNC("/model/dut/setup/input", "Open", "/tmp/tmp.inp")   
+ or
+ ICCAP_FUNC("/model/dut/setup/input", "Read From File", "/tmp/tmp.inp")
+ 
+ 
+ !COPY INPUT
+ !----------
+ ICCAP_FUNC("/model1/dut1/setup1/input1", "Copy", "/modelA/dutA/setupA/inputA")  ! modelA/dutA/setupA/inputA must exist before
+ 
+ 
+ !DELETE INPUT
+ !----------
+ ICCAP_FUNC("/model1/dut1/setup1/input1", "Delete")
+ 
+ 
+ ! DELETE ALL INPUTS AND OUTPUTS OF A SETUP
+ !------------------------------------------
+ ICCAP_FUNC(".", "Import Delete")
+ 
+ 
+ !RENAME INPUT/OUTPUT
+ !-------------------------
+ ICCAP_FUNC("/model/dut/setupname/oldname", "Rename", "newname")  
+ 
+ 
+ !OPEN THE INPUT/OUTPUT EDITOR
+ !---------------------------------
+ ICCAP_FUNC(<InputName><OutputName>, "Edit")
+ 
+ ! This will bring up the standard dialog you get when 
+ ! double-clicking on an Input/Output (or Plot).
+ ! It will be modal and once the user presses OK or Cancel 
+ ! control will return to your PEL Progam.
+ 
+ ! NOTE: there is no feedback from an ICCAP_FUNC, so figuring out exactly 
+ ! what the user did with that EDIT dialog is a bit challenging.  
+ ! You must call ICCAP_FINC_CHILDREN and look for the 'item name' you called 
+ ! the EDIT on.  
+ ! If it is not found, then the user changed its name.
+ ! In this case, the *last* item found will be the edited item.  
+ ! This is because when the user hit OK the item will be last 
+ ! in the list regardless.  
+ ! If the user hit 'Cancel', it will still be in its original location 
+ ! in the list.
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Import_Export" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !############################################################################################################
+ ! IMPORT & EXPORT OF .mdm FILES   -  DATA MANAGEMENT
+ !############################################################################################################
+ 
+ 
+ !EXPORT  OF  SETUP  DATA
+ !-----------------------
+ filename="/tmp/tmp.mdm"
+ ICCAP_FUNC("/modelname/dutname/setupname", "Export Data Simulated", filename)
+ ICCAP_FUNC("/modelname/dutname/setupname", "Export Data Measured", filename)     
+ !Note: when omitting the 3rd argument (filename), then IC-CAP opens the filer window and the user can select a mdm file manually
+ 
+ !##################################################################################
+ 
+ !CREATE INPUTS AND OUTPUTS OF A SETUP ACCORDING TO A .mdm FILE HEADER INFORMATION
+ ! but *without* loading the data.
+ ! -> Interesting feature when a subsequent PEL Program changes sweep orders, 
+ ! selects sub-data etc. and only after that really needs loading the data 
+ ! using 'Import Data'.
+ !--------------------------------------------------------------------------------
+ ICCAP_FUNC("/modelname/dutname/setupname", "Import Create Header Only", filename)
+ !Note: when omitting the 3rd argument (filename), then IC-CAP opens the filer window and the user can select a mdm file manually
+ 
+ 
+ !CREATE INPUTS AND OUTPUTS OF A SETUP ACCORDING TO A .mdm FILE HEADER INFORMATION AND LOAD ALL THE MDM DATA (AS MEASURED DATA)
+ !--------------------------------------------------------------------------------------------------------------------------------
+ ICCAP_FUNC("/modelname/dutname/setupname", "Import Create", filename)
+ !Note: when omitting the 3rd argument (filename), then IC-CAP opens the filer window and the user can select a mdm file manually
+ 
+ 
+ 
+ ! IMPORT DATA AS MEASURED DATA
+ !-------------------------------
+ ICCAP_FUNC("/modelname/dutname/setupname", "Import Measured Data", filename)		     
+ or
+ ICCAP_FUNC("/modelname/dutname/setupname", "Import Data", filename)		     
+ !Note: when omitting the 3rd argument (filename), then IC-CAP opens the filer window and the user can select a mdm file manually
+ 
+ 
+ ! IMPORT DATA AS SIMULATED DATA
+ !-------------------------------
+ ICCAP_FUNC("/modelname/dutname/setupname", "Import Simulated Data", filename)		     
+ !Note: when omitting the 3rd argument (filename), then IC-CAP opens the filer window and the user can select a mdm file manually
+ 
+ 
+ !######################################################################
+ 
+ !OPEN THE GUI FOR IMPORTING .mdm FILES TO ALL SETUPS IN A *MODEL*
+ ! provides a nice Header Preview GUI !!!
+ !-----------------------------------------------------------------
+ ICCAP_FUNC("/modelname", "Import Data") 
+ 
+ 
+ !OPEN THE GUI FOR IMPORTING .mdm FILES TO ALL SETUPS IN A *DUT*
+ ! provides a nice Header Preview GUI !!!
+ !---------------------------------------------------------------
+ ICCAP_FUNC("/modelname/dutname", "Import Data") 
+ 
+ 
+ 
+ !######################################################################
+ 
+ ! DELETE ALL INPUTS AND OUTPUTS OF A SETUP
+ ICCAP_FUNC(".", "Import Delete")
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Instrument_Options" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! SETTING TABLE ENTRIES FOR INSTRUMENT OPTIONS:
+ !------------------------------------------------
+ ICCAP_FUNC("OutputName", "SetInstrumentOptionValue", "InstrOptionFieldName", StringValue)
+ !Note: The OutputName specifies which Instrument you want to access with the command.
+ 
+ !==================================================================================0
+ 
+ 
+ 
+ !SAVE INSTRUMENT OPTIONS
+ !------------------------------
+ ICCAP_FUNC("/bjt_meas/CAL_OPEN_VERIFY/verify/InstrumentOptions", "Write to File",VAL$(tmp_dir)&"/tmp.iot")  
+ 
+ 
+ !READ INSTRUMENT OPTIONS
+ !------------------------------
+ ICCAP_FUNC("/bjt_meas/CAL_OPEN_VERIFY/verify/InstrumentOptions", "Read from File",VAL$(tmp_dir)&"/tmp.iot")  
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Setup_Variables" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !SETUP VARIABLES   (keyword 'Variables')
+ 
+ 
+ !---save Model/Dut/Setup Variables to a .vat file
+ ICCAP_FUNC("/modelname/dutname/setupname/Variables", "Save As")
+ 
+ !---load Model/Dut/Setup Variables from a .vat file
+ ICCAP_FUNC("/modelname/dutname/setupname/Variables", "Open")
+ 
+ 
+ 
+ !NOTE:  COPY VARIABLES IS NOT SUPPORTED, USE "Save AS" AND "Open" INSTEAD
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Transforms" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !Open a separate PEL Editor Window:
+ !-----------------------------------
+ ICCAP_FUNC("myProgramName", "Edit")
+ 
+ 
+ 
+ 
+ !EXECUTE A TRANSFORM
+ !----------------------
+ ICCAP_FUNC("/model/dut/setup/transform", "Execute")
+ 
+ 
+ 
+ !SAVE TRANSFORM
+ !------------------------
+ ICCAP_FUNC("/model/dut/setup/transform", "Save As", "/tmp/tmp.xfm")   
+ 
+ 
+ 
+ !CREATE A NEW TRANSFORM
+ !--------------------------------
+ ICCAP_FUNC("/model/dut/setup", "New Transform", "Transformname")   
+ 
+ 
+ 
+ !READ TRANSFORM FILE FROM DISK
+ !-----------------------------
+ ICCAP_FUNC("/model/dut/setup.", "Open Transform")
+ ICCAP_FUNC("/model/dut/setup", "Open Transform", "/path2transformfile/transformfile.xfm")
+ 
+ 
+ 
+ !READ TRANSFORM FILE AND KEEP ACTUAL TRANSFORM NAME
+ !--------------------------------------------------
+ ICCAP_FUNC("/model/dut/setup/transform", "Open", "/tmp/tmp.xfm")   
+ or
+ ICCAP_FUNC("/model/dut/setup/transform", "Read From File", "/tmp/tmp.xfm")
+ 
+ 
+ 
+ !COPY TRANSFORM
+ !----------------
+ ICCAP_FUNC("/model1/dut1/setup1/transform1", "Copy", "/modelA/dutA/setupA/transformA")  ! modelA/dutA/setupA/transformA must exist before
+ 
+ 
+ !DELETE TRANSFORM
+ !----------------
+ ICCAP_FUNC("/model1/dut1/setup1/transform1", "Delete")
+ 
+ 
+ 
+ !RENAME TRANSFORM
+ !-------------------------
+ ICCAP_FUNC("/model/dut/setupname/oldname", "Rename", "newname")  
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Tuning" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Optimizer" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! The examples below cover the Optimizer located under Tab 'Transforms'
+ ! #####################################################################
+ 
+ 
+ 
+ 
+ !---Open a separate Optimizer Window:
+ ICCAP_FUNC("myOptimName", "Edit")
+ 
+ ======================================
+ 
+ 
+ !---autoset the parameter limite
+ ICCAP_FUNC("OptimName", "Auto Set Min Max")
+ 
+ 
+ !---apply tuning
+ ICCAP_FUNC("OptimName", "Tune Fast")
+ ICCAP_FUNC("OptimName", "Tune Slow")
+ 
+ 
+ !---undo optimization
+ ICCAP_FUNC("OptimName", "Undo Optim")
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "PlotOptimizer" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ !---open PlotOptimizer window from a Plot
+ ICCAP_FUNC(VAL$(Path2Plot_or_MultiPlot), "Open PlotOptimizer")
+ 
+ 
+ !---ACCESS TUNE_FAST AND TUNE_SLOW
+ ICCAP_FUNC("/modelname/dutname/setupname/optimname", "Tune Fast")
+ ICCAP_FUNC("/modelname/dutname/setupname/optimname", "Tune Slow")
+ 
+ 
+ !---open the Model-level PlotOptimizer
+ ICCAP_FUNC("/modelname", "Open PlotOptimizer")
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "Plots" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !DISPLAY A PLOT
+ !-----------
+ ICCAP_FUNC("plotname", "Display Plot")
+ 
+ 
+ !DISPLAY ALL PLOTS OF A SETUP
+ !-------------------------
+ ICCAP_FUNC("setupname", "Display Plots")
+ 
+ 
+ !CLOSE A PLOT
+ !------------
+ ICCAP_FUNC("plotname", "Close")
+ 
+ 
+ !CREATE A NEW PLOT 
+ !--------------------------------
+ ICCAP_FUNC("/model/dut/setup", "New Plot", "Plotname")   
+ 
+ 
+ !COPY PLOT
+ !----------
+ ICCAP_FUNC("/model1/dut1/setup1/plot1", "Copy", "/modelA/dutA/setupA/plotA")
+ 
+ 
+ !DELETE PLOT 
+ !-------------------------------------
+ ICCAP_FUNC("/model1/dut1/setup1/plot1", "Delete")
+ 
+ 
+ !RENAME PLOT
+ !-----------
+ ICCAP_FUNC("/model/dut/setupname/oldname", "Rename", "newname")  
+ 
+ 
+ 
+ !REPLOT (UPDATE) A PLOT
+ !------------------------------
+ ICCAP_FUNC("myPlot", "Replot")
+ ICCAP_FUNC("myPlot", "Redisplay")
+ 
+ 
+ 
+ 
+ ! ##########################################################
+ 
+ !CLOSE ALL PLOTS OF A SETUP
+ !--------------------------------------------
+ ICCAP_FUNC("/model/dut/setup", "Close All")
+ 
+ 
+ !CLOSE ALL PLOTS OF A DUT
+ !--------------------------------------------
+ ICCAP_FUNC("/model/dut", "Close All")
+ 
+ 
+ !CLOSE ALL PLOTS OF A MODEL *INCLUDING THE MODEL WINDOW*
+ !--------------------------------------------
+ ICCAP_FUNC("/model", "Close All")
+ 
+ 
+ ! If you want to close all plots in a Model window,
+ ! but do not want to close the Model window as well,
+ ! define a SetupVariable called 'duts'
+ ! and in a Setup, write a Transform 'Close_Plots' like this:
+ !-------------------------------------------------------------
+ GLOBAL_VAR  DutNames
+ 
+ ICCAP_FIND_CHILDREN "../..", "DUT", DutNames
+ i=0
+ WHILE i<SIZEOF(DutNames)
+   ICCAP_FUNC("../../"&VAL$(DutNames[i]), "Close All")
+   i = i + 1
+ END WHILE
+ 
+ 
+ 
+ !=======================================================================================
+ 
+ !SAVE PLOT in IC-CAP format
+ !---------------------------
+ ICCAP_FUNC("/model/dut/setup/plot", "Save As")   				! gives a file browser
+ ICCAP_FUNC("/model/dut/setup/plot", "Save As", "/tmp/tmp.plt")   		! saves the specified plot file 
+ 
+ 
+ 
+ 
+ !READ FROM FILE AND KEEP CURRENT PLOT NAME
+ !------------------------------------------
+ ICCAP_FUNC("/model/dut/setup/plot", "Open")				! gives a file browser
+ ICCAP_FUNC("/model/dut/setup/plot", "Open", "/tmp/tmp.plt")			! loads the specified plot file   
+ or
+ ICCAP_FUNC("/model/dut/setup/plot", "Read From File", "/tmp/tmp.plt")
+ 
+ 
+ 
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "__" "711.501"
+{
+}
+LINK XFORM "Scale_a_Plot" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !############################################################################################################
+ ! scale plot from PEL:
+ !############################################################################################################
+ xmin=.3
+ xmax=1.3
+ xdiv=5
+ xtic=2   !tics per division
+ 
+ ymin=1f
+ ymax=1m
+ ydiv="AUTOMATIC"
+ ytic="AUTOMATIC"
+ 
+ y2min=-.1
+ y2max=.1
+ y2div="AUTOMATIC"
+ y2tic="AUTOMATIC"
+ ICCAP_FUNC("plotname", "Scale Plot", xmin, xmax, xdiv, xtic, ymin, ymax, ydiv, ytic, y2min, y2max, y2div, y2tic)
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "Open_PlotEditor" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ !OPEN THE PLOT EDITOR
+ !---------------------------------
+ ICCAP_FUNC(<PlotName>, "Edit")
+ 
+ ! This will bring up the standard dialog you get when 
+ ! double-clicking on a Plot (or an Input or Output).
+ ! It will be modal and once the user presses [OK] or [Cancel]
+ ! control will return to your PEL Progam.
+ 
+ ! NOTE: there is no feedback from an ICCAP_FUNC, so figuring out exactly 
+ ! what the user did with that EDIT dialog is a bit challenging.  
+ ! You must call ICCAP_FINC_CHILDREN and look for the 'item name' you called 
+ ! the EDIT on.  
+ ! If it is not found, then the user changed its name.
+ ! In this case, the *last* item found will be the edited item.  
+ ! This is because when the user hit [OK] the item will be last 
+ ! in the list regardless.  
+ ! If the user hit 'Cancel', it will still be in its original location 
+ ! in the list.
+ 
+ 
+ ! Finally, if the user hits OK while editing a PLOT definition, 
+ ! all Plots depending on that definition are closed and all 
+ ! graphs on MultiPlots go blank.  
+ ! You will have to reopen any such Plots or refresh any such MultiPlots 
+ ! from PEL after an Edit.  
+ ! If the user changed the name of the Plot, then you'll have to update 
+ ! the MultiPlot definition with the new name in order to get it to refresh.
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "Plot_Optionis" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! Quick setting of Lin/Log scaling, *before* opening a Plot
+ !--------------------------------------------------------
+ ICCAP_FUNC("myPlot", "Y Axis", "Log" )      'Log' only !!!
+ ICCAP_FUNC("myPlot", "Y Axis", "Lin" )      'Lin' only !!!
+ 
+ 
+ 
+ 
+ !---switch off/on title
+ ICCAP_FUNC("plotname", "Title On")
+ ICCAP_FUNC("plotname", "Title Off")
+ 
+ 
+ !---exchange black plot background (only toggle is supported)
+ ICCAP_FUNC("plotname", "Exchange Black-White")
+ 
+ 
+ !---switch off/on Header
+ ICCAP_FUNC("plotname", "Header Off")
+ ICCAP_FUNC("plotname", "Header On")
+ 
+ 
+ !---switch off/on Footer
+ ICCAP_FUNC("plotname", "Footer Off")
+ ICCAP_FUNC("plotname", "Footer On")
+ 
+ 
+ !---switch off autoscaling and keep actual scaling 
+ ICCAP_FUNC("plotname", "Set Scale")
+ 
+ 
+ !---switch off/on autoscaling
+ ICCAP_FUNC("plotname", "Autoscale Off")
+ ICCAP_FUNC("plotname", "Autoscale On")
+ 
+ 
+ !---switch off/on color
+ ICCAP_FUNC("plotname", "Color On")
+ ICCAP_FUNC("plotname", "Color Off")	
+ 
+ !---bring the Plot into a defined state, specified in PlotOptions
+ ICCAP_FUNC("log_ia_va", "Reset to Saved Options")
+ 
+ !---copy to variables
+ ICCAP_FUNC("plotname", "Copy to Variables")
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "Dump_Plots" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !SAVE PLOT IN A HPGL FILE
+ !---------------------------
+ ICCAP_FUNC("/myModelName/myDut/mySetup/myPlot", "Display Plot")
+ ICCAP_FUNC("/myModelName/myDut/mySetup/myPlot", "Dump to Plotter", "cat > /tmp/tmp.hgl")
+ 
+ 
+ !SAVE PLOT WITH A SPECIFIED PIXEL RESOLUTION
+ !--------------------------------------------------
+ !---for the plot to be dumped into the file,
+ !   specify here the width in pixels, height in pixels and dpi (pixels or dots per inch)
+ ImageWidth = 800
+ ImageHeight= 800
+ ImageDpi   = 200
+ ICCAP_FUNC(VAL$(fullpath2plot), "Create Image", "C:/tmp/myPlot.png", ImageWidth, ImageHeight, ImageDpi)
+ 
+ NOTE: the pre-ICCAP2009 command was:
+ ICCAP_FUNC(VAL$(fullpath2plot), "Save Image",   "C:/tmp/myPlot.xwd")     !replace the filename extension with the desired image format .bmp, .gif, .png  etc.
+ 
+ 
+ 
+ !SAVE DATA BEHIND PLOT IN A ascii FILE
+ !---------------------------
+ ICCAP_FUNC("/myModelName/myDut/mySetup/myPlot", "Display Plot")
+ ICCAP_FUNC("/myModelName/myDut/mySetup/myPlot", "Send to Printer", "cat > /tmp/tmp.txt")
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "______________________________1__1__1" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "etc" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Clear_Data" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !data of a whole model, a whole dut or of an individual setup 
+ ! can be cleared following:
+ 
+ ICCAP_FUNC("/model/dut/setup", "Clear Data/Measured")
+ ICCAP_FUNC("/model/dut/setup", "Clear Data/Simulated")
+ ICCAP_FUNC("/model/dut/setup", "Clear Data/Both")
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+LINK DAT "GUIs" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,166,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "EXAMPLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !============================================================================
+ !NOTE:
+ !THE PATH TO THE MAIN GUI ITEM IS PER "/", 
+ !THE PATH DOWN THE GUI ITEMS IS PER "."
+ !============================================================================
+ 
+ 
+ !OPEN AND CLOSE GUIS FROM A PEL PROGRAM
+ !===============================================================
+ 
+ !DISPLAY A GUI
+ !===========
+ ! IMPORTANT NOTE:
+ ! when different GUIs are opened at the same time, 
+ ! make sure they have individual WindowTitles.
+ ! If not, the updating of the contents of the GUIs may not work 
+ ! (e.g. updating of Parameter/Variable values etc.)
+ 
+ ! NOTE: there are modal and modeless GUIs available
+ !	- modeless GUI: the PEL program will continue with the GUI open
+ !	- modal GUI   : the PEL program will halt until the opened GUI is destroyed/closed
+ 
+ !display a GUI with a title in the window frame
+ !-------------------------------------------
+ ICCAP_FUNC("./myGUI", "Display Modeless GUI", "WindowTitle")
+ ICCAP_FUNC("./myGUI", "Display Modal GUI", "WindowTitle")
+ 
+ 
+ 
+ !display without a title in the window frame
+ !-------------------------------------------
+ ICCAP_FUNC("./myGUI", "Display Single Modeless GUI")
+ ICCAP_FUNC("./myGUI", "Display Single Modal GUI")
+ 
+ 
+ !---------------------------------------------------------
+ 
+ 
+ 
+ !DESTROY A GUI
+ !==============
+ !GUIs with a title in the window frame
+ ICCAP_FUNC("./myGUI", "Destroy GUI", "WindowTitle")
+ 
+ 
+ 
+ !GUIs without a title in the window frame
+ ICCAP_FUNC("./myGUI", "Destroy Single GUI")
+ 
+ 
+ 
+ !COPY GUIs
+ !=============
+ ! you can also copy (parts) of a GUI:
+ ! to copy into a new GUI top-level-item /mymodel/myGUI.newgui
+ ! ICCAP_FUNC("/mymodel/myGUI.subgui", "Copy", "/mymodel/newgui") 
+ 
+ ! to copy into the hierarchy of an existing GUI 
+  ICCAP_FUNC("/mymodel/myGUI.subgui", "Copy", "/mymodel/myGUI.subgui.newGUI") 
+ 
+ 
+ 
+ !You can also destroy a GUI from within a GUI
+ !============================================
+ !In the GUI, define a Push Button, with the callback 
+ !Button Pressed:                      ./NAME_OF_THE_GUI
+ !and the Button-Pressed Function:     Destroy Single GUI
+ !
+ !if the GUI had no "WindowTitle" name,
+ !Button Pressed:                      ./NAME_OF_THE_GUI
+ !and the Button-Pressed Function:     Destroy GUI,WindowTitle      (no blanks !!!)
+ !
+ !NOTE:	this destroy-button will only work, 
+ !	if the GUI has been opened by an ICCAP_FUNC 
+ !	in a PEL. It does not work if the GUI
+ !	was opened manually from the GUI tab (!)
+ 
+ 
+ 
+ 
+ 
+ !save all GUIs on the Model level
+ !NOTE: GUIs can only be saved completely, per Model, DUT or Setup GUI
+ !--------------------------------
+ ICCAP_FUNC("/Model/GUIItems", "Save As")
+ 
+ !load a .gui file on the Model level
+ !-----------------------------------
+ ICCAP_FUNC("/Model/GUIItems", "Open")
+ 
+ 
+ 
+ 
+ 
+ !save all Setup GUIs
+ !NOTE: GUIs can only be saved completely, per Model, DUT or Setup GUI
+ !-------------------
+ ICCAP_FUNC("/Model/DUT/Setup/GUIItems", "Save As")
+ 
+ 
+ !load a .gui file on the Setup level
+ !-----------------------------------
+ ICCAP_FUNC("/Model/DUT/Setup/GUIItems", "Open")
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+}

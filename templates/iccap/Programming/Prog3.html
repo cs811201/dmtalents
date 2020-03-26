@@ -1,0 +1,169 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>COPY-PASTE PROGRAMMING EXAMPLES</h3>
+<h4>Managing IC-CAP Variables</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+IC-CAP features two kinds of Variables:<br/>
+<ul>
+    <li>SYSTEM VARIABLES:<br/>
+        are IC-CAP built-in Variables with a defined functionality,<br/>
+        for example: to customize IC-CAP
+    </li>
+    <li>USER VARIABLES</li>
+</ul>
+<br><img src="/static/iccap/Programming/153/1.png"><br/><br/>
+
+A Variable can be:
+<ul>
+    <li>a Number</li>
+    <ul>
+        - integer<br/>
+        - real<br/>
+        - complex &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.
+        myNumber = 3 + j * 4<br/>
+        - engineering format &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. 1p, 1f, 1n, 1m, 1k, 1MEG, 1G, 1T etc.
+    </ul>
+    <li>a String or a String Chain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. "Hello", "Hello World !" etc.</li>
+    <li>an Array of Strings and/or Numbers &nbsp;&nbsp;&nbsp;&nbsp; ICCAP_ARRAY[ ]</li>
+</ul>
+<br><img src="/static/iccap/Programming/153/2.png"><br/><br/>
+The challenge with Variables is IC-CAP's support of so-called engineering numbers,
+i.e. units like
+
+<br><img src="/static/iccap/Programming/153/3.png"><br/><br/>
+because, basically, these engineering numbers are 'strings', which are converted by IC-CAP internally to scientific format , on-the-fly.
+<br/><br/>
+Note: simulators also support the engineering number format, and this is the reason for IC-CAP's support.
+<hr/>
+So, let us focus on user-defined Variables, and begin with:
+<h4>WHAT IS A STRING ?</h4>
+
+
+<br><img src="/static/iccap/Programming/153/4.png"><br/><br/>
+Example of a string:<br/>
+<ul>myString = "This is an example of a string, just 4 you"</ul>
+<br/>
+but a String can also look like a number:<br/>
+<ul>myString = "4711"</ul>
+
+<u>As a general rule: Strings are always enclosed by quotes !</u>
+<br/><br/>
+HANDLING  STRINGS:
+<ul>
+    <li>convert a number into a string: my_string = <font size="3">VAL$</font>(my_number)</li>
+
+    <li>convert a string into a number my_number = <font size="3">VAL</font>(my_string)</li>
+</ul>
+
+<br><img src="/static/iccap/Programming/153/5.png"><br/><br/>
+Best-Practice Recommendation:
+<ul>
+    <li>applying VAL$() and VAL() is strongly recommended when the referred Variable is defined outside the Program,
+        i.e. in one of the Tabs 'Model/DUT/Setup Variables'.
+    </li>
+    <li>As long as it's a variable within the Program, VAL$() and VAL() are not required.</li>
+</ul>
+Notice: in old Programs, you may find  b = VAL(VAL$(a))   -   replace it by a simple VAL(a).
+
+<br/><br/>
+<h4>STRING MANIPULATIONS:</h4>
+
+<font size="3">Concatenate Strings applying '<font color="blue">&</font>':</font>
+<ul>
+    my_string1 = "<font color="purple">MyFirstString</font>"
+    <br/>
+    my_string2 = "<font color="green">MySecondString</font>"
+</ul>
+<br/>
+The command
+<ul>
+    my_total_string = VAL$(my_string1) <font color="blue">&</font> "<font color="red">xxxyyy</font>" <font color="blue">&</font>
+    VAL$(my_string2)
+</ul>
+
+sets my_total_string to:   <font color="purple">MyFirstString</font><font color="red">xxxyyy</font><font color="green">MySecondString</font>
+<br/><br/>
+<h4>More String Manipulations:</h4>
+<li>x = <font color="blue">STRLEN(x)</font> where x is a string.</li><br/>
+This function returns the number of characters in the string.
+<br/><br/>
+<li>y = <font color="blue">SUBSTR$</font>(x, start [,stop]) where x is a string, and start and stop (optional) are
+    numbers.
+</li>
+<li>This function takes the substring of a string, from 'start' to 'stop', with 1 referring to the first character in
+    the string. If 'stop' is omitted, SUBSTR$ will return the string from the 'start' position to the end of the string.
+</li>
+<br/>
+<li>SubStringLocation = <font color="blue">STRPOS</font>(x, substr)</li><br/>
+returns the position index of the first occurrence of substr found in string x.
+
+<br/><br/>
+More Examples can be found in<br/>
+IC-CAP Example File: <a href="/iccap/prog_3/download" target="_blank">Handling_ICCAP_ARRAY__COMPLEX__and__STRINGS.mdl</a>
+
+<br><img src="/static/iccap/Programming/153/6.png"><br/><br/>
+<h4>USER-DEFINED DATA ARRAYS:</h4>
+<br><img src="/static/iccap/Programming/153/7.png"><br/><br/>
+ICCAP_ARRAYs can host numbers, strings, or any combination.<br/><br/>
+
+Copy-Paste Examples can be found in<br/>
+IC-CAP Example File:    <a href="" target="_blank">Handling_ICCAP_ARRAY__COMPLEX__and__STRINGS.mdl</a>
+
+
+<br><img src="/static/iccap/Programming/153/8.png"><br/><br/>
+
+<font size="3">USER-DEFINED COMPLEX STATEMENTS:</font> <br/>
+For the use within a Program, data sets of numbers can be defined applying the command
+
+<font color="blue" size="3">COMPLEX VarName[DataSize]</font><br/>
+<br/>
+It can only hold (complex) numbers, no strings !<br/><br/>
+Notice:<br/>
+If you need an array of strings, apply ICCAP_ARRAY to set the dimension of an existing Variable, as explained in the previous section.
+<br/><br/>
+<font size="3">Examples:</font><br/>
+<table>
+    <tr>
+        <td>
+            <font color="blue" size="3">COMPLEX tmp.B[10]</font></td>
+        <td> &nbsp;&nbsp;&nbsp;&nbsp;data set with 10 items of complex numbers,
+            of type B (Both, Measured and Simulated data)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <font color="blue" size="3">
+                COMPLEX tmp.M[10]</font></td>
+        <td> &nbsp;&nbsp;&nbsp;&nbsp;data set with 10 items of complex numbers, of type M (Measured data only)</td>
+    </tr>
+    <tr>
+        <td>
+            <font color="blue" size="3">
+                COMPLEX tmp.S[10]</font></td>
+        <td> &nbsp;&nbsp;&nbsp;&nbsp;data set with 10 items of complex numbers, of type S (Simulated data only)</td>
+    </tr>
+    <tr>
+        <td>
+            <font color="blue" size="3">
+                COMPLEX tmp.B.22[10]</font></td>
+        <td> &nbsp;&nbsp;&nbsp;&nbsp;data set with 10 items of 2x2 dimensional complex numbers, of type B</td>
+    </tr>
+</table>
+<br/><br/>
+
+Copy-Paste Examples for manipulating data sets of type COMPLEX can be found in<br/>
+IC-CAP Example File:    <a href="/iccap/prog_3/download" target="_blank"> Handling_ICCAP_ARRAY__COMPLEX__and__STRINGS.mdl</a>
+
+<br><img src="/static/iccap/Programming/153/9.png"><br/><br/>
+
+
+<br/><br/>
+
+Thanks!
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

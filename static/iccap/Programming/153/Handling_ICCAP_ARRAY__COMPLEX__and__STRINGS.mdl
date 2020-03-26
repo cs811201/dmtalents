@@ -1,0 +1,4617 @@
+LINK MODEL "ICCAP_ARRAY__COMPLEX__and__STRINGS" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P263 P311 C10"
+element 0 "Name" "ICCAP_DEFAULT_SETUP_PAGE"
+element 0 "Value" "Extract / Optimize"
+element 1 "Name" "XFORM_LIST_COLS"
+element 1 "Value" "20"
+element 2 "Name" "_______________________"
+element 2 "Value" ""
+element 3 "Name" ""
+element 3 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+element 9 "Symbol" "Square" "A"
+element 9 "Measured" "Default" "A"
+element 9 "Simulated" "Default" "A"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "A"
+element 10 "On Black" "94" "A"
+element 10 "Symbol" "Square" "A"
+element 10 "Measured" "Default" "A"
+element 10 "Simulated" "Default" "A"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "A"
+element 11 "On Black" "81" "A"
+element 11 "Symbol" "Square" "A"
+element 11 "Measured" "Default" "A"
+element 11 "Simulated" "Default" "A"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "A"
+element 12 "On Black" "50" "A"
+element 12 "Symbol" "Square" "A"
+element 12 "Measured" "Default" "A"
+element 12 "Simulated" "Default" "A"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "A"
+element 13 "On Black" "115" "A"
+element 13 "Symbol" "Square" "A"
+element 13 "Measured" "Default" "A"
+element 13 "Simulated" "Default" "A"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "A"
+element 14 "On Black" "54" "A"
+element 14 "Symbol" "Square" "A"
+element 14 "Measured" "Default" "A"
+element 14 "Simulated" "Default" "A"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "A"
+element 15 "On Black" "106" "A"
+element 15 "Symbol" "Square" "A"
+element 15 "Measured" "Default" "A"
+element 15 "Simulated" "Default" "A"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "A"
+element 16 "On Black" "120" "A"
+element 16 "Symbol" "Square" "A"
+element 16 "Measured" "Default" "A"
+element 16 "Simulated" "Default" "A"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "A"
+element 17 "On Black" "87" "A"
+element 17 "Symbol" "Square" "A"
+element 17 "Measured" "Default" "A"
+element 17 "Simulated" "Default" "A"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "A"
+element 18 "On Black" "79" "A"
+element 18 "Symbol" "Square" "A"
+element 18 "Measured" "Default" "A"
+element 18 "Simulated" "Default" "A"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "A"
+element 19 "On Black" "81" "A"
+element 19 "Symbol" "Square" "A"
+element 19 "Measured" "Default" "A"
+element 19 "Simulated" "Default" "A"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "A"
+element 20 "On Black" "1" "A"
+element 20 "Symbol" "Circle" "A"
+element 20 "Measured" "Default" "A"
+element 20 "Simulated" "Dot Line" "A"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "A"
+element 21 "On Black" "2" "A"
+element 21 "Symbol" "Reverse Triangle" "A"
+element 21 "Measured" "Default" "A"
+element 21 "Simulated" "Dot Line" "A"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "A"
+element 22 "On Black" "6" "A"
+element 22 "Symbol" "Star" "A"
+element 22 "Measured" "Default" "A"
+element 22 "Simulated" "Dot Line" "A"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "A"
+element 23 "On Black" "3" "A"
+element 23 "Symbol" "Triangle" "A"
+element 23 "Measured" "Default" "A"
+element 23 "Simulated" "Dot Line" "A"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "A"
+element 24 "On Black" "88" "A"
+element 24 "Symbol" "Square" "A"
+element 24 "Measured" "Default" "A"
+element 24 "Simulated" "Dot Line" "A"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "A"
+element 25 "On Black" "4" "A"
+element 25 "Symbol" "Cross" "A"
+element 25 "Measured" "Default" "A"
+element 25 "Simulated" "Dot Line" "A"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "A"
+element 26 "On Black" "117" "A"
+element 26 "Symbol" "Circle" "A"
+element 26 "Measured" "Default" "A"
+element 26 "Simulated" "Dot Line" "A"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "A"
+element 27 "On Black" "40" "A"
+element 27 "Symbol" "Circle" "A"
+element 27 "Measured" "Default" "A"
+element 27 "Simulated" "Dot Line" "A"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "A"
+element 28 "On Black" "28" "A"
+element 28 "Symbol" "Circle" "A"
+element 28 "Measured" "Default" "A"
+element 28 "Simulated" "Dot Line" "A"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "A"
+element 29 "On Black" "114" "A"
+element 29 "Symbol" "Circle" "A"
+element 29 "Measured" "Default" "A"
+element 29 "Simulated" "Dot Line" "A"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "A"
+element 30 "On Black" "94" "A"
+element 30 "Symbol" "Circle" "A"
+element 30 "Measured" "Default" "A"
+element 30 "Simulated" "Dot Line" "A"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "A"
+element 31 "On Black" "81" "A"
+element 31 "Symbol" "Circle" "A"
+element 31 "Measured" "Default" "A"
+element 31 "Simulated" "Dot Line" "A"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "A"
+element 32 "On Black" "50" "A"
+element 32 "Symbol" "Circle" "A"
+element 32 "Measured" "Default" "A"
+element 32 "Simulated" "Dot Line" "A"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "A"
+element 33 "On Black" "115" "A"
+element 33 "Symbol" "Circle" "A"
+element 33 "Measured" "Default" "A"
+element 33 "Simulated" "Dot Line" "A"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "A"
+element 34 "On Black" "54" "A"
+element 34 "Symbol" "Circle" "A"
+element 34 "Measured" "Default" "A"
+element 34 "Simulated" "Dot Line" "A"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "A"
+element 35 "On Black" "106" "A"
+element 35 "Symbol" "Circle" "A"
+element 35 "Measured" "Default" "A"
+element 35 "Simulated" "Dot Line" "A"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "A"
+element 36 "On Black" "120" "A"
+element 36 "Symbol" "Circle" "A"
+element 36 "Measured" "Default" "A"
+element 36 "Simulated" "Dot Line" "A"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "A"
+element 37 "On Black" "87" "A"
+element 37 "Symbol" "Circle" "A"
+element 37 "Measured" "Default" "A"
+element 37 "Simulated" "Dot Line" "A"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "A"
+element 38 "On Black" "79" "A"
+element 38 "Symbol" "Circle" "A"
+element 38 "Measured" "Default" "A"
+element 38 "Simulated" "Dot Line" "A"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "A"
+element 39 "On Black" "81" "A"
+element 39 "Symbol" "Circle" "A"
+element 39 "Measured" "Default" "A"
+element 39 "Simulated" "Dot Line" "A"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "A"
+element 40 "On Black" "1" "A"
+element 40 "Symbol" "Triangle" "A"
+element 40 "Measured" "Default" "A"
+element 40 "Simulated" "Dot Dot Line" "A"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "A"
+element 41 "On Black" "2" "A"
+element 41 "Symbol" "Diamond" "A"
+element 41 "Measured" "Default" "A"
+element 41 "Simulated" "Dot Dot Line" "A"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "A"
+element 42 "On Black" "6" "A"
+element 42 "Symbol" "X" "A"
+element 42 "Measured" "Default" "A"
+element 42 "Simulated" "Dot Dot Line" "A"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "A"
+element 43 "On Black" "3" "A"
+element 43 "Symbol" "Reverse Triangle" "A"
+element 43 "Measured" "Default" "A"
+element 43 "Simulated" "Dot Dot Line" "A"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "A"
+element 44 "On Black" "88" "A"
+element 44 "Symbol" "Circle" "A"
+element 44 "Measured" "Default" "A"
+element 44 "Simulated" "Dot Dot Line" "A"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "A"
+element 45 "On Black" "4" "A"
+element 45 "Symbol" "Square" "A"
+element 45 "Measured" "Default" "A"
+element 45 "Simulated" "Dot Dot Line" "A"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "A"
+element 46 "On Black" "117" "A"
+element 46 "Symbol" "Triangle" "A"
+element 46 "Measured" "Default" "A"
+element 46 "Simulated" "Dot Dot Line" "A"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "A"
+element 47 "On Black" "40" "A"
+element 47 "Symbol" "Triangle" "A"
+element 47 "Measured" "Default" "A"
+element 47 "Simulated" "Dot Dot Line" "A"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "A"
+element 48 "On Black" "28" "A"
+element 48 "Symbol" "Triangle" "A"
+element 48 "Measured" "Default" "A"
+element 48 "Simulated" "Dot Dot Line" "A"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "A"
+element 49 "On Black" "114" "A"
+element 49 "Symbol" "Triangle" "A"
+element 49 "Measured" "Default" "A"
+element 49 "Simulated" "Dot Dot Line" "A"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "A"
+element 50 "On Black" "94" "A"
+element 50 "Symbol" "Triangle" "A"
+element 50 "Measured" "Default" "A"
+element 50 "Simulated" "Dot Dot Line" "A"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "A"
+element 51 "On Black" "81" "A"
+element 51 "Symbol" "Triangle" "A"
+element 51 "Measured" "Default" "A"
+element 51 "Simulated" "Dot Dot Line" "A"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "A"
+element 52 "On Black" "50" "A"
+element 52 "Symbol" "Triangle" "A"
+element 52 "Measured" "Default" "A"
+element 52 "Simulated" "Dot Dot Line" "A"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "A"
+element 53 "On Black" "115" "A"
+element 53 "Symbol" "Triangle" "A"
+element 53 "Measured" "Default" "A"
+element 53 "Simulated" "Dot Dot Line" "A"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "A"
+element 54 "On Black" "54" "A"
+element 54 "Symbol" "Triangle" "A"
+element 54 "Measured" "Default" "A"
+element 54 "Simulated" "Dot Dot Line" "A"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "A"
+element 55 "On Black" "106" "A"
+element 55 "Symbol" "Triangle" "A"
+element 55 "Measured" "Default" "A"
+element 55 "Simulated" "Dot Dot Line" "A"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "A"
+element 56 "On Black" "120" "A"
+element 56 "Symbol" "Triangle" "A"
+element 56 "Measured" "Default" "A"
+element 56 "Simulated" "Dot Dot Line" "A"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "A"
+element 57 "On Black" "87" "A"
+element 57 "Symbol" "Triangle" "A"
+element 57 "Measured" "Default" "A"
+element 57 "Simulated" "Dot Dot Line" "A"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "A"
+element 58 "On Black" "79" "A"
+element 58 "Symbol" "Triangle" "A"
+element 58 "Measured" "Default" "A"
+element 58 "Simulated" "Dot Dot Line" "A"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "A"
+element 59 "On Black" "81" "A"
+element 59 "Symbol" "Triangle" "A"
+element 59 "Measured" "Default" "A"
+element 59 "Simulated" "Dot Dot Line" "A"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "A"
+element 60 "On Black" "1" "A"
+element 60 "Symbol" "Reverse Triangle" "A"
+element 60 "Measured" "Default" "A"
+element 60 "Simulated" "Dashed Line" "A"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "A"
+element 61 "On Black" "2" "A"
+element 61 "Symbol" "Star" "A"
+element 61 "Measured" "Default" "A"
+element 61 "Simulated" "Dashed Line" "A"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "A"
+element 62 "On Black" "6" "A"
+element 62 "Symbol" "Cross" "A"
+element 62 "Measured" "Default" "A"
+element 62 "Simulated" "Dashed Line" "A"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "A"
+element 63 "On Black" "3" "A"
+element 63 "Symbol" "Diamond" "A"
+element 63 "Measured" "Default" "A"
+element 63 "Simulated" "Dashed Line" "A"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "A"
+element 64 "On Black" "88" "A"
+element 64 "Symbol" "Triangle" "A"
+element 64 "Measured" "Default" "A"
+element 64 "Simulated" "Dashed Line" "A"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "A"
+element 65 "On Black" "4" "A"
+element 65 "Symbol" "Circle" "A"
+element 65 "Measured" "Default" "A"
+element 65 "Simulated" "Dashed Line" "A"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "A"
+element 66 "On Black" "117" "A"
+element 66 "Symbol" "Reverse Triangle" "A"
+element 66 "Measured" "Default" "A"
+element 66 "Simulated" "Dashed Line" "A"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "A"
+element 67 "On Black" "40" "A"
+element 67 "Symbol" "Reverse Triangle" "A"
+element 67 "Measured" "Default" "A"
+element 67 "Simulated" "Dashed Line" "A"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "A"
+element 68 "On Black" "28" "A"
+element 68 "Symbol" "Reverse Triangle" "A"
+element 68 "Measured" "Default" "A"
+element 68 "Simulated" "Dashed Line" "A"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "A"
+element 69 "On Black" "114" "A"
+element 69 "Symbol" "Reverse Triangle" "A"
+element 69 "Measured" "Default" "A"
+element 69 "Simulated" "Dashed Line" "A"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "A"
+element 70 "On Black" "94" "A"
+element 70 "Symbol" "Reverse Triangle" "A"
+element 70 "Measured" "Default" "A"
+element 70 "Simulated" "Dashed Line" "A"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "A"
+element 71 "On Black" "81" "A"
+element 71 "Symbol" "Reverse Triangle" "A"
+element 71 "Measured" "Default" "A"
+element 71 "Simulated" "Dashed Line" "A"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "A"
+element 72 "On Black" "50" "A"
+element 72 "Symbol" "Reverse Triangle" "A"
+element 72 "Measured" "Default" "A"
+element 72 "Simulated" "Dashed Line" "A"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "A"
+element 73 "On Black" "115" "A"
+element 73 "Symbol" "Reverse Triangle" "A"
+element 73 "Measured" "Default" "A"
+element 73 "Simulated" "Dashed Line" "A"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "A"
+element 74 "On Black" "54" "A"
+element 74 "Symbol" "Reverse Triangle" "A"
+element 74 "Measured" "Default" "A"
+element 74 "Simulated" "Dashed Line" "A"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "A"
+element 75 "On Black" "106" "A"
+element 75 "Symbol" "Reverse Triangle" "A"
+element 75 "Measured" "Default" "A"
+element 75 "Simulated" "Dashed Line" "A"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "A"
+element 76 "On Black" "120" "A"
+element 76 "Symbol" "Reverse Triangle" "A"
+element 76 "Measured" "Default" "A"
+element 76 "Simulated" "Dashed Line" "A"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "A"
+element 77 "On Black" "87" "A"
+element 77 "Symbol" "Reverse Triangle" "A"
+element 77 "Measured" "Default" "A"
+element 77 "Simulated" "Dashed Line" "A"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "A"
+element 78 "On Black" "79" "A"
+element 78 "Symbol" "Reverse Triangle" "A"
+element 78 "Measured" "Default" "A"
+element 78 "Simulated" "Dashed Line" "A"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "A"
+element 79 "On Black" "81" "A"
+element 79 "Symbol" "Reverse Triangle" "A"
+element 79 "Measured" "Default" "A"
+element 79 "Simulated" "Dashed Line" "A"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "A"
+element 80 "On Black" "1" "A"
+element 80 "Symbol" "Diamond" "A"
+element 80 "Measured" "Default" "A"
+element 80 "Simulated" "Dot Dashed Line" "A"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "A"
+element 81 "On Black" "2" "A"
+element 81 "Symbol" "X" "A"
+element 81 "Measured" "Default" "A"
+element 81 "Simulated" "Dot Dashed Line" "A"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "A"
+element 82 "On Black" "6" "A"
+element 82 "Symbol" "Square" "A"
+element 82 "Measured" "Default" "A"
+element 82 "Simulated" "Dot Dashed Line" "A"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "A"
+element 83 "On Black" "3" "A"
+element 83 "Symbol" "Star" "A"
+element 83 "Measured" "Default" "A"
+element 83 "Simulated" "Dot Dashed Line" "A"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "A"
+element 84 "On Black" "88" "A"
+element 84 "Symbol" "Reverse Triangle" "A"
+element 84 "Measured" "Default" "A"
+element 84 "Simulated" "Dot Dashed Line" "A"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "A"
+element 85 "On Black" "4" "A"
+element 85 "Symbol" "Triangle" "A"
+element 85 "Measured" "Default" "A"
+element 85 "Simulated" "Dot Dashed Line" "A"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "A"
+element 86 "On Black" "117" "A"
+element 86 "Symbol" "Diamond" "A"
+element 86 "Measured" "Default" "A"
+element 86 "Simulated" "Dot Dashed Line" "A"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "A"
+element 87 "On Black" "40" "A"
+element 87 "Symbol" "Diamond" "A"
+element 87 "Measured" "Default" "A"
+element 87 "Simulated" "Dot Dashed Line" "A"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "A"
+element 88 "On Black" "28" "A"
+element 88 "Symbol" "Diamond" "A"
+element 88 "Measured" "Default" "A"
+element 88 "Simulated" "Dot Dashed Line" "A"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "A"
+element 89 "On Black" "114" "A"
+element 89 "Symbol" "Diamond" "A"
+element 89 "Measured" "Default" "A"
+element 89 "Simulated" "Dot Dashed Line" "A"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "A"
+element 90 "On Black" "94" "A"
+element 90 "Symbol" "Diamond" "A"
+element 90 "Measured" "Default" "A"
+element 90 "Simulated" "Dot Dashed Line" "A"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "A"
+element 91 "On Black" "81" "A"
+element 91 "Symbol" "Diamond" "A"
+element 91 "Measured" "Default" "A"
+element 91 "Simulated" "Dot Dashed Line" "A"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "A"
+element 92 "On Black" "50" "A"
+element 92 "Symbol" "Diamond" "A"
+element 92 "Measured" "Default" "A"
+element 92 "Simulated" "Dot Dashed Line" "A"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "A"
+element 93 "On Black" "115" "A"
+element 93 "Symbol" "Diamond" "A"
+element 93 "Measured" "Default" "A"
+element 93 "Simulated" "Dot Dashed Line" "A"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "A"
+element 94 "On Black" "54" "A"
+element 94 "Symbol" "Diamond" "A"
+element 94 "Measured" "Default" "A"
+element 94 "Simulated" "Dot Dashed Line" "A"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "A"
+element 95 "On Black" "106" "A"
+element 95 "Symbol" "Diamond" "A"
+element 95 "Measured" "Default" "A"
+element 95 "Simulated" "Dot Dashed Line" "A"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "A"
+element 96 "On Black" "120" "A"
+element 96 "Symbol" "Diamond" "A"
+element 96 "Measured" "Default" "A"
+element 96 "Simulated" "Dot Dashed Line" "A"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "A"
+element 97 "On Black" "87" "A"
+element 97 "Symbol" "Diamond" "A"
+element 97 "Measured" "Default" "A"
+element 97 "Simulated" "Dot Dashed Line" "A"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "A"
+element 98 "On Black" "79" "A"
+element 98 "Symbol" "Diamond" "A"
+element 98 "Measured" "Default" "A"
+element 98 "Simulated" "Dot Dashed Line" "A"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "A"
+element 99 "On Black" "81" "A"
+element 99 "Symbol" "Diamond" "A"
+element 99 "Measured" "Default" "A"
+element 99 "Simulated" "Dot Dashed Line" "A"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "A"
+element 100 "On Black" "1" "A"
+element 100 "Symbol" "Star" "A"
+element 100 "Measured" "Default" "A"
+element 100 "Simulated" "Long Dashed Line" "A"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "A"
+element 101 "On Black" "2" "A"
+element 101 "Symbol" "Cross" "A"
+element 101 "Measured" "Default" "A"
+element 101 "Simulated" "Long Dashed Line" "A"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "A"
+element 102 "On Black" "6" "A"
+element 102 "Symbol" "Circle" "A"
+element 102 "Measured" "Default" "A"
+element 102 "Simulated" "Long Dashed Line" "A"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "A"
+element 103 "On Black" "3" "A"
+element 103 "Symbol" "X" "A"
+element 103 "Measured" "Default" "A"
+element 103 "Simulated" "Long Dashed Line" "A"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "A"
+element 104 "On Black" "88" "A"
+element 104 "Symbol" "Diamond" "A"
+element 104 "Measured" "Default" "A"
+element 104 "Simulated" "Long Dashed Line" "A"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "A"
+element 105 "On Black" "4" "A"
+element 105 "Symbol" "Reverse Triangle" "A"
+element 105 "Measured" "Default" "A"
+element 105 "Simulated" "Long Dashed Line" "A"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "A"
+element 106 "On Black" "117" "A"
+element 106 "Symbol" "Star" "A"
+element 106 "Measured" "Default" "A"
+element 106 "Simulated" "Long Dashed Line" "A"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "A"
+element 107 "On Black" "40" "A"
+element 107 "Symbol" "Star" "A"
+element 107 "Measured" "Default" "A"
+element 107 "Simulated" "Long Dashed Line" "A"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "A"
+element 108 "On Black" "28" "A"
+element 108 "Symbol" "Star" "A"
+element 108 "Measured" "Default" "A"
+element 108 "Simulated" "Long Dashed Line" "A"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "A"
+element 109 "On Black" "114" "A"
+element 109 "Symbol" "Star" "A"
+element 109 "Measured" "Default" "A"
+element 109 "Simulated" "Long Dashed Line" "A"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "A"
+element 110 "On Black" "94" "A"
+element 110 "Symbol" "Star" "A"
+element 110 "Measured" "Default" "A"
+element 110 "Simulated" "Long Dashed Line" "A"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "A"
+element 111 "On Black" "81" "A"
+element 111 "Symbol" "Star" "A"
+element 111 "Measured" "Default" "A"
+element 111 "Simulated" "Long Dashed Line" "A"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "A"
+element 112 "On Black" "50" "A"
+element 112 "Symbol" "Star" "A"
+element 112 "Measured" "Default" "A"
+element 112 "Simulated" "Long Dashed Line" "A"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "A"
+element 113 "On Black" "115" "A"
+element 113 "Symbol" "Star" "A"
+element 113 "Measured" "Default" "A"
+element 113 "Simulated" "Long Dashed Line" "A"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "A"
+element 114 "On Black" "54" "A"
+element 114 "Symbol" "Star" "A"
+element 114 "Measured" "Default" "A"
+element 114 "Simulated" "Long Dashed Line" "A"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "A"
+element 115 "On Black" "106" "A"
+element 115 "Symbol" "Star" "A"
+element 115 "Measured" "Default" "A"
+element 115 "Simulated" "Long Dashed Line" "A"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "A"
+element 116 "On Black" "120" "A"
+element 116 "Symbol" "Star" "A"
+element 116 "Measured" "Default" "A"
+element 116 "Simulated" "Long Dashed Line" "A"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "A"
+element 117 "On Black" "87" "A"
+element 117 "Symbol" "Star" "A"
+element 117 "Measured" "Default" "A"
+element 117 "Simulated" "Long Dashed Line" "A"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "A"
+element 118 "On Black" "79" "A"
+element 118 "Symbol" "Star" "A"
+element 118 "Measured" "Default" "A"
+element 118 "Simulated" "Long Dashed Line" "A"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "A"
+element 119 "On Black" "81" "A"
+element 119 "Symbol" "Star" "A"
+element 119 "Measured" "Default" "A"
+element 119 "Simulated" "Long Dashed Line" "A"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "A"
+element 120 "On Black" "1" "A"
+element 120 "Symbol" "X" "A"
+element 120 "Measured" "Default" "A"
+element 120 "Simulated" "Long Dot Dashed Line" "A"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "A"
+element 121 "On Black" "2" "A"
+element 121 "Symbol" "Square" "A"
+element 121 "Measured" "Default" "A"
+element 121 "Simulated" "Long Dot Dashed Line" "A"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "A"
+element 122 "On Black" "6" "A"
+element 122 "Symbol" "Triangle" "A"
+element 122 "Measured" "Default" "A"
+element 122 "Simulated" "Long Dot Dashed Line" "A"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "A"
+element 123 "On Black" "3" "A"
+element 123 "Symbol" "Cross" "A"
+element 123 "Measured" "Default" "A"
+element 123 "Simulated" "Long Dot Dashed Line" "A"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "A"
+element 124 "On Black" "88" "A"
+element 124 "Symbol" "Star" "A"
+element 124 "Measured" "Default" "A"
+element 124 "Simulated" "Long Dot Dashed Line" "A"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "A"
+element 125 "On Black" "4" "A"
+element 125 "Symbol" "Diamond" "A"
+element 125 "Measured" "Default" "A"
+element 125 "Simulated" "Long Dot Dashed Line" "A"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "A"
+element 126 "On Black" "117" "A"
+element 126 "Symbol" "X" "A"
+element 126 "Measured" "Default" "A"
+element 126 "Simulated" "Long Dot Dashed Line" "A"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "A"
+element 127 "On Black" "40" "A"
+element 127 "Symbol" "X" "A"
+element 127 "Measured" "Default" "A"
+element 127 "Simulated" "Long Dot Dashed Line" "A"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "A"
+element 128 "On Black" "28" "A"
+element 128 "Symbol" "X" "A"
+element 128 "Measured" "Default" "A"
+element 128 "Simulated" "Long Dot Dashed Line" "A"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "A"
+element 129 "On Black" "114" "A"
+element 129 "Symbol" "X" "A"
+element 129 "Measured" "Default" "A"
+element 129 "Simulated" "Long Dot Dashed Line" "A"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "A"
+element 130 "On Black" "94" "A"
+element 130 "Symbol" "X" "A"
+element 130 "Measured" "Default" "A"
+element 130 "Simulated" "Long Dot Dashed Line" "A"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "A"
+element 131 "On Black" "81" "A"
+element 131 "Symbol" "X" "A"
+element 131 "Measured" "Default" "A"
+element 131 "Simulated" "Long Dot Dashed Line" "A"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "A"
+element 132 "On Black" "50" "A"
+element 132 "Symbol" "X" "A"
+element 132 "Measured" "Default" "A"
+element 132 "Simulated" "Long Dot Dashed Line" "A"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "A"
+element 133 "On Black" "115" "A"
+element 133 "Symbol" "X" "A"
+element 133 "Measured" "Default" "A"
+element 133 "Simulated" "Long Dot Dashed Line" "A"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "A"
+element 134 "On Black" "54" "A"
+element 134 "Symbol" "X" "A"
+element 134 "Measured" "Default" "A"
+element 134 "Simulated" "Long Dot Dashed Line" "A"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "A"
+element 135 "On Black" "106" "A"
+element 135 "Symbol" "X" "A"
+element 135 "Measured" "Default" "A"
+element 135 "Simulated" "Long Dot Dashed Line" "A"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "A"
+element 136 "On Black" "120" "A"
+element 136 "Symbol" "X" "A"
+element 136 "Measured" "Default" "A"
+element 136 "Simulated" "Long Dot Dashed Line" "A"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "A"
+element 137 "On Black" "87" "A"
+element 137 "Symbol" "X" "A"
+element 137 "Measured" "Default" "A"
+element 137 "Simulated" "Long Dot Dashed Line" "A"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "A"
+element 138 "On Black" "79" "A"
+element 138 "Symbol" "X" "A"
+element 138 "Measured" "Default" "A"
+element 138 "Simulated" "Long Dot Dashed Line" "A"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "A"
+element 139 "On Black" "81" "A"
+element 139 "Symbol" "X" "A"
+element 139 "Measured" "Default" "A"
+element 139 "Simulated" "Long Dot Dashed Line" "A"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "A"
+element 140 "On Black" "1" "A"
+element 140 "Symbol" "Cross" "A"
+element 140 "Measured" "Default" "A"
+element 140 "Simulated" "Solid Line" "A"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "A"
+element 141 "On Black" "2" "A"
+element 141 "Symbol" "Circle" "A"
+element 141 "Measured" "Default" "A"
+element 141 "Simulated" "Solid Line" "A"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "A"
+element 142 "On Black" "6" "A"
+element 142 "Symbol" "Reverse Triangle" "A"
+element 142 "Measured" "Default" "A"
+element 142 "Simulated" "Solid Line" "A"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "A"
+element 143 "On Black" "3" "A"
+element 143 "Symbol" "Square" "A"
+element 143 "Measured" "Default" "A"
+element 143 "Simulated" "Solid Line" "A"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "A"
+element 144 "On Black" "88" "A"
+element 144 "Symbol" "X" "A"
+element 144 "Measured" "Default" "A"
+element 144 "Simulated" "Solid Line" "A"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "A"
+element 145 "On Black" "4" "A"
+element 145 "Symbol" "Star" "A"
+element 145 "Measured" "Default" "A"
+element 145 "Simulated" "Solid Line" "A"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "A"
+element 146 "On Black" "117" "A"
+element 146 "Symbol" "Cross" "A"
+element 146 "Measured" "Default" "A"
+element 146 "Simulated" "Solid Line" "A"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "A"
+element 147 "On Black" "40" "A"
+element 147 "Symbol" "Cross" "A"
+element 147 "Measured" "Default" "A"
+element 147 "Simulated" "Solid Line" "A"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "A"
+element 148 "On Black" "28" "A"
+element 148 "Symbol" "Cross" "A"
+element 148 "Measured" "Default" "A"
+element 148 "Simulated" "Solid Line" "A"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "A"
+element 149 "On Black" "114" "A"
+element 149 "Symbol" "Cross" "A"
+element 149 "Measured" "Default" "A"
+element 149 "Simulated" "Solid Line" "A"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "A"
+element 150 "On Black" "94" "A"
+element 150 "Symbol" "Cross" "A"
+element 150 "Measured" "Default" "A"
+element 150 "Simulated" "Solid Line" "A"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Solid Line" "A"
+element 0 "Transform Result" "Solid Line" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "N"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "9.000" "N"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "6.750" "N"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ This ModelFile holds copy-paste examples about handling strings, ICCAP_ARRAYs and COMPLEX statements
+ 
+ 
+ Status: March 2020
+ 
+}
+}
+}
+LINK DUT "Handling_STRINGs" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C10 C10 C10"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "EXAMPLES" "711.501"
+{
+View in_out 0 "0.63278323377544 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P178 C29 C10"
+element 0 "Name" "StringChain"
+element 0 "Value" "hello world	how are"
+element 1 "Name" "String2Array[0]"
+element 1 "Value" "hello"
+element 2 "Name" "String2Array[1]"
+element 2 "Value" "world"
+element 3 "Name" "String2Array[2]"
+element 3 "Value" "how"
+element 4 "Name" "String2Array[3]"
+element 4 "Value" "are"
+element 5 "Name" "String2Array[4]"
+element 5 "Value" "?"
+element 6 "Name" "String2Array"
+element 6 "Value" "ICCAP_ARRAY[5]"
+element 7 "Name" "______________________"
+element 7 "Value" ""
+element 8 "Name" "test"
+element 8 "Value" "1  3"
+element 9 "Name" "badchar"
+element 9 "Value" "2"
+element 10 "Name" "tmpString"
+element 10 "Value" "the price is 10.- $"
+element 11 "Name" "_______________________"
+element 11 "Value" ""
+element 12 "Name" ""
+element 12 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "See_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1145,661"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "What_is_a_STRING" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ ! a String is a chain of characters and/or numbers.
+ 
+ ! In IC-CAP, user-defined 'Variables' can contain
+ !  ->  strings, 
+ !  ->  numbers (REAL),
+ !  ->  integers 
+ !  ->  engineering numbers (1.23p, 3.45k etc.)
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "GLOBAL_OVERVIEW" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ ##############################################################################################
+ CHR$(x)
+ -------
+ where x is an integer.  chr$(x) will make a string out
+ of the ascii representation of x.
+ 
+ -> PEL  Example:
+      x=chr$(40)
+      print x
+  and the PRINT result is:
+      (
+   Note: the ASCII character no.40 is '('
+ 
+ 
+ ##############################################################################################
+ TRIM$(x, chars)
+ --------------
+ where x is a string and chars is a string containing
+ characters to be trimmed.  
+ 
+ The parameter list for 'chars' is optional.  
+ If chars is omitted,
+ the default is to remove spaces from the start and end of the string.
+ 
+ If 'chars' is defined, TRIM$() will trim 
+ * all the mentioned characters !!!,
+ * in any order !!!,
+ from the front and end of the string*.
+ 
+ NOTE: to cut-off well-defined parts, see example 'cut_off_file_Extension'
+ 
+ -> PEL Example:
+      x="   stuff here   "
+      PRINT TRIM$(x)
+  and the PRINT result is:
+      stuff here
+ 
+ -> PEL Example:
+      y="////stuff here__//__//"
+      PRINT TRIM$(y)
+      PRINT TRIM$(y,"/_")
+   and the PRINT result is:
+      ////stuff here__//__//
+      stuff here
+ 
+ 
+ ##############################################################################################
+ SUBSTR$(x, start [,stop])
+ ------------------------
+ where x is a string, and start and stop are indices.  
+ Note: stop is optional.
+ This function takes the substring of a string from start to stop,
+ with 1 referring to the first character in the string.  
+ If stop is omitted, substr$ will return the string from start
+ to the end of the string.
+ 
+ -> PEL Example:
+      x="Halloele"
+      PRINT SUBSTR$(x,1,5)
+      PRINT SUBSTR$(x,2,4)
+      PRINT SUBSTR$(x,2)
+  and the PRINT result is:
+      Hallo
+      all
+      alloele
+ 
+ -> Another PEL Example:
+ my_date$ = SYSTEM$("date")	! get date
+ PRINT "command 'date' returned: ";my_date$
+ 
+ start=5
+ stop=10
+ month_day$=SUBSTR$(my_date$, start, stop)
+ PRINT "characters 5-10 were: ";month_day$
+ 
+ !and here is the old way:
+ !------------------------
+ cmd$="echo "&my_date$&"|cut -c 5-10"
+ month_day$ = system$(cmd$) 	! get substring chars nr.5-10
+ 
+ PRINT "characters 5-10 were: ";month_day$
+ 
+ ##############################################################################################
+ LWC$(x)
+ -------
+ where x is any string.  
+ This function returns the lower case version of the string.
+ 
+ -> PEL Example
+     PRINT LWC$("Hello")
+  and the PRINT result is:
+     hello
+ 
+ 
+ ##############################################################################################
+ UPC$(x)
+ -------
+ where x is any string.  
+ This function will return the string with all upper case.
+ 
+ -> PEL Example:
+      PRINT UPC$("Hello")
+  and the PRINT result is:
+      HELLO
+ 
+ 
+ ##############################################################################################
+ STRLEN(x)
+ ---------
+ where x is any string.  
+ This function returns the number of characters in the string.
+ 
+ -> PEL Example
+      PRINT STRLEN("Hello")
+  and the PRINT result is:
+      5
+ 
+ 
+ ##############################################################################################
+ STRPOS(x, y [,z])
+ ---------------
+ 
+ ! Location=STRPOS(str1, substr1) 
+ ! ===============================		
+ ! Returns the index of the *first* occurrence 
+ ! of substr1 found in str1. 
+ 
+ ! For example:
+ PRINT STRPOS("Hello", "ell")
+ PRINT STRPOS("Hello", "He")
+ PRINT STRPOS("Hello", "dog")
+ ! will print:
+ !2
+ !1
+ !0
+ !
+ 
+ ! OR:
+ ! Location=STRPOS(str1, substr1 [,startpos])
+ ! =========================================
+ ! An *optional third argument* may be specified 
+ ! which is an integer starting position for the search
+ ! (to search for substr1 in str1) 
+ ! that should be greater than or equal to 1.
+ 
+ ! For example:
+ PRINT STRPOS("Hello", "l", 1)
+ PRINT STRPOS("Hello", "l", 4)
+ PRINT STRPOS("Hello", "l", 5)
+ ! will print:
+ !3
+ !4
+ !0
+ 
+ 
+ ##############################################################################################
+ STRRPOS(x,y,[z])
+ ----------------
+ 
+ ! Location=STRRPOS(str1, substr1 [,endpos])	
+ ! =========================================
+ ! Returns the index of the *last*
+ ! occurrence of substr1 found in string str1. 
+ ! An optional third argument may be
+ ! specified which is an integer position-before-end-of-string 
+ ! that should be greater than or equal to 1.
+ 
+ ! For example:
+ PRINT STRRPOS("Hello", "ell")
+ PRINT STRRPOS("Hello", "He")
+ PRINT STRRPOS("Hello", "dog")
+ PRINT STRRPOS("Hello", "l",1)
+ PRINT STRRPOS("Hello", "l",4)
+ PRINT STRRPOS("Hello", "l",5)
+ ! will print:
+ !2
+ !1
+ !0
+ !0
+ !4
+ !4
+ 
+ 
+ 
+ ##############################################################################################
+ CUTSTR(x, y [,delimiter])
+ ----------------------------------
+ 
+ ! RetVal = CUTSTR(x, y [,delimiter])
+ ! ==================================
+ ! Divides a string x into substrings, 
+ ! and saving the substrings in ICCAP_ARRAY y, 
+ ! using either whitespace substrings (tabs, spaces, newlines) 
+ ! or an explicitly passed 3rd argument as a delimiter. 
+ ! The leading space will be ignored when using the whitespace as a delimiter.
+ ! Returns the size of ICCAP_ARRAY y. 
+ 
+ ! See the example in the separate Macro 'cut_a_string_chain'.
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "xxxxxxxxxxxxxxxxxxxxxxxxx" "711.501"
+{
+}
+LINK XFORM "_" "711.501"
+{
+}
+LINK XFORM "cut_string_chain" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! Nov. 2008
+ 
+ ! IC-CAP built-in CUTSTR()
+ ! ===========================
+ 
+ 
+ ! RetVal=CUTSTR(myStringChain, mySubstringArray [, myDelimiter])
+ 
+ ! Divides a string chain 'myStringChain' into substrings, 
+ ! and saving the substrings in ICCAP_ARRAY 'mySubstringArray', 
+ ! (to be specified in the ModelFile's Variable Hierarchy)
+ ! using either (by default) whitespace delimiter (tabs, spaces, newlines) 
+ ! or an explicitly passed 3rd argument 'myDelimiter' as a delimiter. 
+ ! The leading space will be ignored when using the whitespace 
+ ! as a delimiter. 
+ ! Returns the size of ICCAP_ARRAY 'mySubstringArray'. 
+ 
+ ! WARNING:
+ ! If 'myStringChain' is an empty string, 
+ ! CUTSTR will return the 'mySubstringArray', of size 1, with an empty string in index 0
+ ! For example:
+ !   StringChain=""
+ !   RetVal = CUTSTR(VAL$(StringChain), String2Array, ",") 
+  
+ !=========================================================================
+ 
+ ! Example: using the delimiters: space, tab and newline
+ ! --------
+ 
+ GLOBAL_VAR  StringChain
+ GLOBAL_VAR  String2Array
+ 
+ 
+ GET_STRING "In order to see the effect of the examples,
+ 	detach first the SetupVariables tab,
+ 	before executing this Macro !!  [OK]", dummy
+ 
+ !---define here the string chain you want to be cut:
+ StringChain="hello world	how are
+ you ?"
+ 
+ RetVal = CUTSTR(VAL$(StringChain), String2Array)
+ 
+ GET_STRING "See the result in 'String2Array' ;  SIZEOF(String2Array) = "&VAL$(RetVal)&"  [OK]", dummy
+ 
+ 
+ RETURN
+ 
+ ! ------------------------------------
+ ! more examples:
+ x="a b c"
+ RetVal = CUTSTR(x, String2Array)
+ ! String2Array = {"a", "b", "c"}
+ 
+ 
+ x="a,b,c"
+ RetVal = CUTSTR(x, String2Array, ",")
+ ! String2Array = {"a", "b", "c"}
+ 
+ x="a,,b,c"
+ RetVal = CUTSTR(x, String2Array, ",")
+ ! String2Array = {"a", "", "b", "c"}
+ 
+ x="aspambspamc"
+ RetVal = CUTSTR(x, String2Array, "spam")
+ ! String2Array = {"a", "b", "c"}
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "cut_string_chain__PEL" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! This is an older programming example, before CUTSTR() was available
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+ ! This string cutting utility can handle 1 or 2 separation character between the String2Arrays
+ !   example: 'blanc' and 'tab'
+ 
+ !###################################################################
+ ! if the separator is a 'blanc', 'tab' or 'newline', 
+ ! use rather the built-in PEL Function CUTSTRING()
+ !  See the other Macro 'cut_a_string_chain'.
+ !###################################################################
+ 
+ 
+ 
+ ! WHAT THIS MACRO DOES:
+ ! Separate the indivual strings from a string chain.
+ ! Application: - reading information from 
+ !                 measurement instruments, probers etc.
+ !              - entering multiple info into a single, simple GUI window,
+ !                 example: vd values:  0   0.6   1.2   1.8   2.5
+ 
+ GLOBAL_VAR  String2Array
+ GLOBAL_VAR  StringChain
+ 
+ GET_STRING "Enter a string chain                            .", StringChain, StringChain
+ !GET_STRING "Enter 1st separation character",sep1
+ !GET_STRING "Enter 2nd separation character",sep2
+ 
+ sep1 = " "		!
+ sep2 = "	"	! this 2nd separator string is actually a <tab> character
+ 			! if you do not want a 2nd separator, enter "" for an empty string
+ 
+ !-------------------here starts the program------------------------------------
+ !add a separation character to the end of the string to simplify the algorithm below
+ StringChain=VAL$(StringChain)&VAL$(sep1)
+ 
+ !initalize some variables and start the loop
+ found=0				! index of found String2Arrays
+ String2Array="ICCAP_ARRAY[0]"	! String2Array has to be defined as a (Model) Variable
+ i_lo=1
+ i_hi=1
+ found_nonsepchar=0
+ WHILE i_hi<=STRLEN(VAL$(StringChain))
+   IF (SUBSTR$(VAL$(StringChain),i_hi,i_hi)<>sep1) AND (SUBSTR$(VAL$(StringChain),i_hi,i_hi)<>sep2) THEN 
+     found_nonsepchar=1
+   ELSE
+     IF found_nonsepchar==1 THEN 
+       act_sep=SUBSTR$(VAL$(StringChain),i_hi,i_hi)
+       foundString2Array=SUBSTR$(VAL$(StringChain),i_lo,i_hi)
+       found = found + 1
+       String2Array="ICCAP_ARRAY["&VAL$(found)&"]"
+       String2Array[found-1]=TRIM$(foundString2Array,VAL$(sep1)&VAL$(sep2))
+       found_nonsepchar=0
+       i_lo = i_hi
+     END IF
+   END IF
+   i_hi = i_hi + 1
+ END WHILE
+ 
+ !-------------------here ends the program------------------------------------
+ 
+ 
+ GET_STRING "Go to 'Model Variables' and see the result in array 'String2Array'","ok",dummy
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "__" "711.501"
+{
+}
+LINK XFORM "exchange_characters" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! Example: exchange  "." in the string to "_",
+ ! applying CUTSTR()
+ 
+ 
+ 
+ GLOBAL_VAR  String2Array
+ 
+ TestString="hello.world.how.are.you"
+ 
+ 
+ GET_STRING "enter a test string", TestString, TestString
+ GET_STRING "enter the bad character (to be replaced) in string "&VAL$(TestString), ".", BadChar
+ GET_STRING "enter the good character, to replace the bad character(s) of string "&VAL$(TestString), "_", GoodChar
+ 
+ 
+ !---do the char. exchange
+ !   obtain an array of the individual strings
+ RetVal = CUTSTR(VAL$(TestString), String2Array, VAL$(BadChar))
+ 
+ !---compose back the original string chain, now with GoodChar separation
+ tmp = VAL$(String2Array[0])
+ FOR i=1 TO SIZEOF(String2Array)-1
+   tmp = VAL$(tmp) & VAL$(GoodChar) & VAL$(String2Array[i])
+ NEXT i
+ TestString = VAL$(tmp)
+ 
+ GET_STRING "the modified string reads: "&VAL$(TestString),dummy
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "exchange_characters__PEL" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! This is an older programming example, before CUTSTR() was available
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ ! example: exchange  "." in the string to "_"
+ 
+ TestString="hello.world.how.are.you"
+ 
+ 
+ GET_STRING "enter a test string", TestString, TestString
+ GET_STRING "enter the bad character (to be replaced) in string "&VAL$(TestString), ".", BadChar
+ GET_STRING "enter the good character, to replace the bad character(s) of string "&VAL$(TestString), "_", GoodChar
+ 
+ 
+ !--- do the char. exchange
+ !find out how many chars are included in the bad characters string
+ StringLengthBad=STRLEN(VAL$(BadChar))
+ StringPos=1
+ WHILE StringPos>0
+   StringPos=STRPOS(VAL$(TestString), VAL$(BadChar))
+   IF StringPos>0 THEN  
+     StringLength=STRLEN(VAL$(TestString))
+     IF StringLength>1 THEN
+       IF StringPos>1 THEN
+         TestString=SUBSTR$(VAL$(TestString), 1, StringPos-1)&VAL$(GoodChar)&SUBSTR$(VAL$(TestString), StringPos+StringLengthBad, StringLength)
+       ELSE
+         !the bad char is already the first char
+         TestString=VAL$(GoodChar)&SUBSTR$(VAL$(TestString), StringPos+StringLengthBad, StringLength)
+       END IF
+     ELSE	
+       !string consisted only of the BadChar
+       TestString=""
+     END IF
+   END IF
+ END WHILE
+ 
+ GET_STRING "the modified string reads: "&VAL$(TestString),dummy
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "___" "711.501"
+{
+}
+LINK XFORM "exchange_string_chain" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !=== this Program exchanges string chains, 
+ !    and returns the corrected string to Variable 'tmp_String'
+ 
+ 
+ 
+ GET_STRING "Enter a String", "the price is 123.- $", tmpString
+ GET_STRING "BadChar", "123.-", BadChar
+ GET_STRING "GoodChar", "10.-", GoodChar
+ 
+ 
+ !---exchange characters
+ BadCharLength  = STRLEN(VAL$(BadChar))
+ GoodCharLength = STRLEN(VAL$(GoodChar))
+ 
+ FOR i=2 TO STRLEN(VAL$(tmpString))
+ print SUBSTR$(VAL$(tmpString), i, i+BadCharLength-1)
+   IF SUBSTR$(VAL$(tmpString), i, i+BadCharLength-1)==VAL$(BadChar) THEN
+ print i
+     StringLength=STRLEN(VAL$(tmpString))
+ print StringLength
+     tmpString=SUBSTR$(VAL$(tmpString), 1 ,i-1)&VAL$(GoodChar)&SUBSTR$(VAL$(tmpString), i+BadCharLength, StringLength)
+     i = i + GoodCharLength
+   END IF
+ NEXT i
+ 
+ 
+ GET_STRING "The new string is", tmpString, dummy
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "delete_characters_in_string" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ GLOBAL_VAR  test
+ GLOBAL_VAR  badchar
+ 
+ test="1 2 3"
+ 
+ badchar="2"
+ 
+ !find out how many chars are included in the bad characters string
+ stringlenbad=STRLEN(VAL$(badchar))
+ stringpos=1
+ WHILE stringpos>0
+   stringpos=STRPOS(VAL$(test),VAL$(badchar))
+   IF stringpos>0 THEN  
+     stringlen=STRLEN(VAL$(test))
+     IF stringlen>1 THEN
+       IF stringpos>1 THEN
+         test=SUBSTR$(VAL$(test),1,stringpos-1)&SUBSTR$(VAL$(test),stringpos+stringlenbad,stringlen)
+       ELSE
+         !the bad char is already the first char
+         test=SUBSTR$(VAL$(test),stringpos+stringlenbad,stringlen)
+       END IF
+     ELSE	
+       !string consisted only of the badchar
+       test=""
+     END IF
+   END IF
+ END WHILE
+ 
+ GET_STRING "the modified string reads:",VAL$(test),dummy
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "cut_off_file_extension" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !---cut-off the file name extension:
+ 
+ DirFileName = "wdlbrmf.mps"
+ 
+ FileExtensionLocation = STRPOS(VAL$(DirFileName), ".mps")
+ IF FileExtensionLocation>0 THEN
+   DirFileName = SUBSTR$(VAL$(DirFileName), 1, FileExtensionLocation-1)
+ END IF
+ 
+ 
+ PRINT DirFileName
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "________________________" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "Handling_ARRAYs" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "EXAMPLES" "711.501"
+{
+View in_out 0 "0.63278323377544 2000 2000"
+View plot 0 "1.7998343619979 7302 6310"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 C17 P143 C10"
+element 0 "Name" "myArray[0]"
+element 0 "Value" "hello"
+element 1 "Name" "myArray[1]"
+element 1 "Value" ""
+element 2 "Name" "myArray[2]"
+element 2 "Value" ""
+element 3 "Name" "myArray[3]"
+element 3 "Value" ""
+element 4 "Name" "myArray"
+element 4 "Value" "ICCAP_ARRAY[4]"
+element 5 "Name" "myArray1[0]"
+element 5 "Value" "hello world"
+element 6 "Name" "myArray1[1]"
+element 6 "Value" "how are you"
+element 7 "Name" "myArray1[2]"
+element 7 "Value" "tomorrow"
+element 8 "Name" "myArray1"
+element 8 "Value" "ICCAP_ARRAY[3]"
+element 9 "Name" "myArray2[0]"
+element 9 "Value" "hello world"
+element 10 "Name" "myArray2[1]"
+element 10 "Value" "how are you"
+element 11 "Name" "myArray2[2]"
+element 11 "Value" "today"
+element 12 "Name" "myArray2"
+element 12 "Value" "ICCAP_ARRAY[3]"
+element 13 "Name" "_________________1"
+element 13 "Value" ""
+element 14 "Name" "myIndex[0]"
+element 14 "Value" "0"
+element 15 "Name" "myIndex[1]"
+element 15 "Value" "3"
+element 16 "Name" "myIndex[2]"
+element 16 "Value" "2"
+element 17 "Name" "myIndex[3]"
+element 17 "Value" "1"
+element 18 "Name" "myIndex"
+element 18 "Value" "ICCAP_ARRAY[4]"
+element 19 "Name" "_________________2"
+element 19 "Value" ""
+element 20 "Name" "OutputNames"
+element 20 "Value" ""
+element 21 "Name" "_________________3"
+element 21 "Value" ""
+element 22 "Name" "XFORM_LIST_COLS"
+element 22 "Value" "23"
+element 23 "Name" ""
+element 23 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "See_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1145,661"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "What_is_an_ICCAP_ARRAY" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ ! When the value of a user-defined variable, 
+ ! defined in the IC-CAP hierarchy of Variables (Model/Dut/Setup Variables)
+ ! is set to the keyword 'ICCAP_ARRAY',
+ ! this variable becomes multi-dimensional.
+ ! Any multi-dimension is supported, e.g. 2x2, 2x5, 7x2  etc.
+ 
+  
+ ! The elements of such an ICCAP_ARRAY can be 
+ !  ->  strings, 
+ !  ->  numbers (REAL),
+ !  ->  integers 
+ !  ->  engineering numbers (1.23p, 3.45k etc.)
+ ! or combinations of all the above !
+ 
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "OVERVIEW" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! IC-CAP Variables - not to confuse with IC-CAP Parameters !!- 
+ ! can contain either numbers (4711, 1p, 1E-12), strings (set of characters, e.g. "hello") 
+ ! or string chains e.g. "hello world, how are you".
+ 
+ ! When entering the keyword 'ICCAP_ARRAY[x]' into the 'Variable Value' field,
+ ! IC-CAP will open a data field of size x.
+ 
+ ! Its values can be accessed by PEL with the name of the ICCAP_ARRAY and its index.
+ 
+ 
+ 
+ ! Accessing ICCAP_ARRAYs from PEL
+ !-----------------------------------
+ ! local_PEL_variable = myIccapArray[1]
+ ! myIccapArray[i]    = local_PEL_variable
+ 
+ 
+ 
+ ! Filling an ICCAP_ARRAY
+ !------------------------------------------
+ GLOBAL_VAR  myArray
+ 
+ !---define size of the ICCAP_ARRAY
+ DIMENSION_ARRAY(myArray, 4)
+ !---fill the items
+ myArray[0] = "hello"
+ myArray[1] = -1.234
+ myArray[2] = 1.234E-6
+ myArray[3] = "hello how are you"
+ 
+ 
+ 
+ ! EXERCISE:
+ !------------------------
+ ! To test how an ICCAP_ARRAY works, goto any Variable Table,
+ ! enter a variable name, and in the variable value, enter e.g. ICCAP_ARRAY[2]
+ ! See how the new fields of the indexed ICCAP_ARRAY pop up !
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "xxxxxxxxxxxxxxxxxxxxxxxx" "711.501"
+{
+}
+LINK XFORM "xxxxxxxxxxxxxxxxxxxxxxxxx" "711.501"
+{
+}
+LINK XFORM "_" "711.501"
+{
+}
+LINK XFORM "README_about_precision" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ ! NOTES ABOUT HOW TO USE THE (optional) ENTRY 'prec' 
+ ! in some of the new IC-CAP 2009 PEL commands
+ !=====================================================
+ 
+ ! The optional parameter 'prec' specifies the number of digits
+ ! to be used when e.g. searching for a value to be replaced.
+ ! If you don't specify 'prec', the default is equal to the 
+ ! SystemVariable WORKING_PRECISION.
+ ! NOTE: When specifying the SystemVariable WORKING_PRECISION, 
+ ! the range of values is 6 through 17.
+ ! When WORKING_PRECISION is not specified as a SystemVariable by the user,
+ ! the default is 6.
+ 
+ ! Depending on what you are trying to do, 
+ ! you may want to set it to any number of values.  
+ ! If you need high resolution, set it at 12 or 14.  
+ ! The maximum resolution is 17 digits.  
+ 
+ ! If you are searching for a particular value in an array, 
+ ! then it depends on these values. If it's .4 to 1 in steps of .1, 
+ ! you can find a point easily with only 4 digits.  
+ 
+ ! But if the values are 1 to 1.000002 in steps of .0000001 
+ ! for 21 points, then you'd better look for equality at 'prec'=10 
+ ! or so digits of precision.  
+ 
+ ! In General, IC-CAP uses data at 10 digits of precision, 
+ ! (controlable by WORKING_PRECISION).  
+ ! So if you were to use 12 for 'prec', then you'd pretty much 
+ ! always find a proper match without worrying about any roundoff error 
+ ! that may occur down around digit 17.  
+ 
+ ! If you know that you've never stored anything but integers 
+ ! in the array you're searching, then the 'prec' default of 4 will 
+ ! be more than adequate.
+ 
+ ! It just really depends.
+ 
+ !---------------------------------------------------------------------------------
+ !  Checking equality of numbers is touchy as you might well know.  
+ ! Things that ought to be 'equal' may not be equal, for example
+ 
+ X=5.6537 + 5.6538+5.6537+5.6538
+ Y=45.23//2
+ PRINT "best 5.6537 is "; VAL$(5.6537,25)
+ PRINT "best 5.6538 is "; VAL$(5.6538,25)
+ PRINT "best 22.615 is "; VAL$(22.615,25)
+ PRINT "best 45.23 is ";  VAL$(45.23,25)
+ PRINT "best 2.875 is ";  VAL$(2.875,25)
+ 
+ IF X==Y THEN
+   PRINT X;" equal to ";Y
+ ELSE
+   PRINT X;" not equal to ";Y
+ ENDIF
+ 
+ IF VAL$(X)==VAL$(Y) THEN
+   PRINT VAL$(X);" equal to ";VAL$(Y)
+ ELSE
+   PRINT VAL$(X);" not equal to ";VAL$(Y) 
+ ENDIF
+ 
+ IF VAL$(X,25)==VAL$(Y,25) THEN
+   PRINT VAL$(X,25);" equal to ";VAL$(Y,25) 
+ ELSE
+   PRINT VAL$(X,25);" not equal to ";VAL$(Y,25) 
+ ENDIF
+ 
+ !The above will PRINT:
+ !best 5.6537 is 5.6536999999999997
+ !best 5.6538 is 5.6538000000000004
+ !best 22.615 is 22.614999999999998
+ !best 45.23 is 45.229999999999997
+ !best 2.875 is 2.875
+ !22.615 not equal to 22.615
+ !22.615 equal to 22.615
+ !22.615000000000002 not equal to 22.614999999999998
+ 
+ ! Now the cause of the descrepancy is that relatively few numbers 
+ ! can exactly be expressed in an 8 byte double precision number.  
+ ! All irrational number certainly, but also all numbers that 
+ ! can't be expressed as 2^xxxx in 64 bits.  
+ ! Of the 5 'best...' lines, only the 2.875 which is an exact 
+ ! power of 2 can be exactly expressed in 64 bits.  
+ ! Most values have to be rounded to fit into 'only' 64 bits.    
+ ! All floating point numbers are stored in the computer ultimatly 
+ ! as a power of 2 expressed in 1's and 0's.  
+ ! Because relatively few numbers can be *exactly* expressed, 
+ ! math on real numbers increases the error, so a sequence 
+ ! of additions vs a multiplication will introduce differing 
+ ! amounts of error, depending on how the underlying floating 
+ ! point processor handles the two cases.
+ 
+ ! So in a perfect world, the above snippet would claim 
+ ! each of the values equal, but in the digital world, this doesn't work.
+ 
+ ! So it is *never* a wise idea to attempt to test a 
+ ! double precision number for equality -- one should always consider 
+ ! an epsilon or error figure in the comparison.  
+ ! That's what has been tried to provide in the precision optional argument.  
+ ! Essentially, it offers to specify exactly how close the 
+ ! number has to match for it to be considered 'equal'.  
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "_DIMENSION_ARRAY" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! New PEL Feature of IC-CAP 2009: 
+ ! In the Variables hierarchy, DIMENSION_ARRAY() specifies an ICCAP_ARRAY 
+ ! Simplifies the creation of multi-dimensional ICCAP_ARRAYs
+ 
+ 
+ 
+ !  Usage:
+ !==========
+ ! DIMENSION_ARRAY(x, n1, n2, n3, ...)
+ ! Allocates a regular ICCAP_ARRAY of (n1 * n2 * n3 * ...) size to the Variable x.
+ ! The Variable 'x' needs to exist, before applying DIMENSION_ARRAY().
+ !
+ ! NOTE: This command replaces the old PEL style
+ ! x = "ICCAP_ARRAY["&VAL$(n1)&"]"
+ 
+ 
+ 
+ ! Examples:
+ !============
+ ! convert Variable "myArray" to an ICCAP_ARRAY of size 4
+ GLOBAL_VAR  myArray
+ 
+ DIMENSION_ARRAY("myArray", 0)		! Reset  (don't forget it!!)
+ GET_INT "Enter Size of array", 4, myArraySize
+ DIMENSION_ARRAY(myArray, myArraySize)
+ 
+ myArray[0]= "hello"
+   
+ 
+ 
+ ! Multi-Dimensional ICCAP_ARRAYs:
+ ! ===============================
+ ! 3x2 array
+ !myArray=""			! Reset  (don't forget it!!)
+ !DIMENSION_ARRAY(myArray, 3, 2)
+ 
+ ! 4x3x2 array
+ !myArray=""			! Reset  (don't forget it!!)
+ !DIMENSION_ARRAY(myArray, 4, 3, 2)
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________0" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+LINK XFORM "_SIZEOF" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !  Value=SIZEOF(x)
+ ! =================
+ !
+ ! Returns an integer number of elements in a
+ !  - ICCAP_ARRAY Variable, or
+ !  - a COMPLEX array of data, or 
+ !  - a DATASET(x).
+ 
+ ! Can also be applied to identify the size of data 
+ ! returned by a PEL program.
+ 
+ ! Returns 0 if x doesn't represent an array
+ ! of data and/or if array of data is empty.
+ 
+ 
+ !For example:
+ ! ICCAP_ARRAY Variable:
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 5)
+ myArray[0]=1
+ myArray[1]=2
+ myArray[2]=3
+ myArray[3]=3
+ myArray[4]=12
+ 
+ 
+ 
+ 
+ PRINT SIZEOF(myArray)
+ ! will print
+ !5
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "____________________1" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+LINK XFORM "_INDEX_OF" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! IndexValue=INDEX_OF(x, y, pos [,prec])
+ ! =======================================
+ !
+ ! Returns the integer index of the first element found 
+ ! starting at position pos in the ICCAP_ARRAY, DATASET(), 
+ ! or COMPLEX array x,  that has the same value as y. 
+ 
+ ! If no elements are found in the  data array x, 
+ ! then -1 is returned. 
+ ! Argument y can be a string or a number. 
+ 
+ ! The optional 4th argument 'prec' can be used to set what 
+ ! precision the function will use to search for the value y 
+ ! in the array x.
+ ! See Transform 'README_about_precision' for details.
+ 
+ ! Example:
+ ! specify and set the SetupVariable array
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 6)
+ myArray[0]="foo"
+ myArray[1]=1.235
+ myArray[2]=2.33
+ myArray[3]="foo"
+ myArray[4]=3
+ myArray[5]=-10.239
+ 
+ 
+ !test it
+ PRINT INDEX_OF("myArray", "unknown", 0)		!search for string "unknown", starting at index 0
+ PRINT INDEX_OF("myArray", 3, 0)		!search for number 3, starting at index 0
+ PRINT INDEX_OF("myArray", 3, 4)		!search for number 3, starting at index 4
+ PRINT INDEX_OF("myArray", -10.24, 0, 3)		!search for number -10.24, starting at index 0, with precision 3
+ PRINT INDEX_OF("myArray", "foo", 0)		!search for string "foo", starting at index 0
+ PRINT INDEX_OF("myArray", "foo", 1)		!search for string "foo", starting at index 1
+ 
+ ! will print:
+ ! -1
+ ! 4
+ ! 4
+ ! 5
+ ! 0
+ ! 3
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_LAST_INDEX_OF" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! IndexValue=LAST_INDEX_OF(x, y [,prec])
+ ! ======================================
+ !
+ ! Returns the integer index of the last element in the 
+ ! ICCAP_ARRAY, DATASET(), or COMPLEX array x, 
+ ! that has the same value as y. 
+ ! Argument y can be a string or a number.
+ !. 
+ ! If no elements are found in the  data array x, 
+ ! then -1 is returned. 
+ !
+ ! The optional 3rd argument 'prec' can be used to set what 
+ ! precision the function will use to search for the value y 
+ ! in the array x.
+ ! See Transform 'README_about_precision' for details.
+ 
+ 
+ 
+ ! Example:
+ GLOBAL_VAR myArray
+ DIMENSION_ARRAY("myArray", 6)
+ myArray[0]="foo"
+ myArray[1]=1.235
+ myArray[2]=2.33
+ myArray[3]="foo"
+ myArray[4]=3
+ myArray[5]=-10.23919
+ 
+ 
+ PRINT LAST_INDEX_OF("myArray", "unknown")
+ PRINT LAST_INDEX_OF("myArray", 3)
+ PRINT LAST_INDEX_OF("myArray", -10.24, 10)
+ PRINT LAST_INDEX_OF("myArray", -10.24)
+ PRINT LAST_INDEX_OF("myArray", "foo")
+ 
+ !will print
+ ! -1
+ ! 4
+ ! -1
+ ! 5
+ ! 3
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________2" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+LINK XFORM "_ARRAY_INSERT_AT" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_INSERT_AT(myArray, myValue [,pos])	
+ ! ======================================
+ ! ICCAP_ARRAY myArray will be modified to include 
+ ! the data y inserted into the data array 
+ ! at the optional 3rd argument integer index pos.
+ !
+ ! The entry 'y' can be a number (4711), or a string "myString" 
+ ! or a Variable (myVariable, in this case, the VariableValue 
+ ! (String or Number) will be inserted).
+ !
+ ! If the 3rd argument pos is not specified, 
+ ! the data y will be appended to the end of the 
+ ! ICCAP_ARRAY data array myArray. 
+ !
+ ! Returns 0 if successful 
+ 
+ ! For example:
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 5)
+ myArray[0]=1
+ myArray[1]=2
+ myArray[2]=3
+ myArray[3]=4
+ myArray[4]=5
+ 
+ ! starting status
+ ! myArray = {1, 2, 3, 4, 5}
+ 
+ 
+ !###insert 4711 at index 0
+ dummy=ARRAY_INSERT_AT(myArray, 4711, 0)
+ !-------------------------------------------
+ ! myArray = {4711, 1, 2, 3, 4, 5}
+ 
+ 
+ !###insert 123 at the end of myArray
+ dummy=ARRAY_INSERT_AT(myArray, 123)
+ !-----------------------------------------
+ ! myArray = {4711, 1, 2, 3, 4, 5, 123}
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_REMOVE_AT" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_REMOVE_AT(myArray, pos)
+ ! =====================================
+ ! removes an entry to an ICCAP_ARRAY at position pos
+ ! Returns 0 if successful 
+ 
+ 
+ ! Application example:
+ ! -----------------------
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 5)
+ myArray[0]=1
+ myArray[1]=2
+ myArray[2]=3
+ myArray[3]=4
+ myArray[4]=5
+ 
+ ! starting status
+ ! myArray = {1, 2, 3, 4, 5}
+ 
+ dummy=ARRAY_REMOVE_AT(myArray, 2)
+ ! myArray = {1, 2, 4, 5}
+ 
+ !NOTE: after removing the final entry, 
+ !	the value of myArray goes to 
+ !	ICCAP_ARRAY[0].
+ 
+ 
+ 
+ !==================================
+ !   SPECIAL  APPLICATION:
+ !==================================
+ !REMOVE DOUBLE ENTRIES IN AN ICCAP_ARRAY
+ myArray=""
+ myArray="ICCAP_ARRAY[9]"
+ myArray[0]="L=2"
+ myArray[1]="L=1"
+ myArray[2]="L=3"
+ myArray[3]="L=1"
+ myArray[4]="L=1"
+ myArray[5]="L=2"
+ myArray[6]="L=4"
+ myArray[7]="L=3"
+ myArray[8]="L=5"
+ 
+ !---first sort the entries ascendingly
+ RetVal=ARRAY_SORT_STR(myArray)
+ !---now check for double values
+ N=0
+ FOR i=1 TO SIZEOF(myArray)-1
+   IF VAL$(myArray[i])==VAL$(myArray[N]) THEN
+     !---delete double value
+     dummy=ARRAY_REMOVE_AT(myArray, i)
+     i=i-1
+   ELSE
+     N = N + 1
+   END IF
+ NEXT i
+ !---print the cleaned up ICCAP_ARRAY
+ FOR i=0 TO SIZEOF(myArray)-1
+   PRINT myArray[i]
+ NEXT i
+ 
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_REMOVE_ALL" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_REMOVE_ALL(myArray, y [,prec])
+ ! =======================================
+ ! all elements 'y' will be removed from 
+ ! ICCAP_ARRAY myArray.
+ !
+ ! The entry 'y' can be a number (4711), or a string "myString" 
+ ! or a Variable (myVariable, in this case, the VariableValue 
+ ! (String or Number) will be removed).
+ !
+ ! The optional 3rd argument 'prec' can be used 
+ ! to set what precision the function will use to search 
+ ! for the value y in the array myArray for removal.
+ ! See Transform 'README_about_precision' for details.
+ 
+ 
+ ! Returns 0 if the value y was found and removed, 
+ ! or returns -1 if unsuccessful. 
+ 
+ 
+ ! ==============================================================
+ ! NOTE: when applied in a WHILE loop,
+ !	do *NOT* forget to decrement the loop index !!!
+ ! ==============================================================
+ 
+ 
+ ! Application example:
+ ! -----------------------
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 5)
+ myArray[0]=1.11
+ myArray[1]=2.123
+ myArray[2]=3.32
+ myArray[3]=4
+ myArray[4]=3
+ 
+ ! starting status
+ ! myArray = {1.11, 2.123, 3.32, 4, 3}
+ 
+ dummy=ARRAY_REMOVE_ALL(myArray, 3)
+ ! myArray = {1.11, 2.123, 3.32, 4}
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_REMOVE_FIRST" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! index=ARRAY_REMOVE_FIRST(myArray, y [,prec])
+ ! =========================================
+ 
+ ! Returns the integer position of the first occurrence of value y 
+ ! that is found in the array myArray and removed, 
+ ! or returns -1 if unsuccessful. 
+ ! The ICCAP_ARRAY myArray will be updated to no longer contain 
+ ! the first element y found in the array myArray on return. 
+ !
+ ! The entry 'y' can be a number (4711), or a string "myString" 
+ ! or a Variable (myVariable, in this case, the VariableValue 
+ ! (String or Number) will be removed).
+ !
+ ! The optional 3rd argument prec can be used to set what 
+ ! precision the function will use to search for the double value y 
+ ! in the array myArray for removal.
+ ! See Transform 'README_about_precision' for details.
+ 
+ 
+ ! ==============================================================
+ ! NOTE: when applied in a WHILE loop,
+ !	do *NOT* forget to decrement the loop index !!!
+ ! ==============================================================
+ 
+ 
+ ! Application example:
+ ! ----------------------------
+ 
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 5)
+ myArray[0]=4711
+ myArray[1]=2
+ myArray[2]=3
+ myArray[3]=4711
+ myArray[4]=5
+ 
+ !starting status
+ ! myArray = {4711, 2, 3, 4711, 5}
+ 
+ 
+ !###remove 4711 and show the index where 4711 was found
+ index=ARRAY_REMOVE_FIRST(myArray, "4711")
+ !------------------------------------------------
+ PRINT "index=";index
+ ! will print
+ ! index=0 
+ !
+ ! array status:
+ ! myArray = {2, 3, 4711, 5}
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_REMOVE_LAST" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! index=ARRAY_REMOVE_LAST(myArray,y [,prec])
+ ! ======================================
+ 
+ ! Returns the integer position of the last occurrence of value y 
+ ! that is found in the array myArray and removed, 
+ ! or returns -1 if unsuccessful. 
+ ! The ICCAP_ARRAY myArray will be updated to no longer contain 
+ ! the last element y found in the array myArray.
+ !
+ ! The entry 'y' can be a number (4711), or a string "myString" 
+ ! or a Variable (myVariable, in this case, the VariableValue 
+ ! (String or Number) will be removed).
+ !
+ ! The optional 3rd argument prec can be used to set what 
+ ! precision the function will use to search for the double value y 
+ ! in the array myArray for removal.
+ ! See Transform 'README_about_precision' for details.
+ 
+ ! ==============================================================
+ ! NOTE: when applied in a WHILE loop,
+ !	do *NOT* forget to decrement the loop index !!!
+ ! ==============================================================
+ 
+ 
+ ! Application example:
+ ! ----------------------------
+ GLOBAL_VAR  myArray
+ DIMENSION_ARRAY("myArray", 5)
+ myArray[0]=4711
+ myArray[1]=2
+ myArray[2]=3
+ myArray[3]=4711
+ myArray[4]=5
+ 
+ ! starting status
+ ! myArray = {4711, 2, 3, 4711, 5}
+ 
+ 
+ !###remove 4711 and show the index where 4711 was found
+ index=ARRAY_REMOVE_LAST(myArray, "4711")
+ !--------------------------------------------
+ PRINT "index=";index
+ ! will print
+ ! index=4
+ !
+ ! array status:
+ ! myArray = {4711, 2, 3, 5}
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________3" "711.501"
+{
+}
+LINK XFORM "_ARRAY_COPY" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_COPY(myArray, yout)
+ ! =====================================
+ !
+ ! Returns 0 if the ICCAP_ARRAY myArray is copied 
+ ! successfully to the ICCAP_ARRAY yout.
+ 
+ 
+ 
+ !For Example:
+ !---------------
+ GLOBAL_VAR  myArray1
+ DIMENSION_ARRAY("myArray1", 5)
+ myArray1[0]="hello world"
+ myArray1[1]="how are you"
+ myArray1[2]="tomorrow"
+ 
+ GLOBAL_VAR  myArray2
+ DIMENSION_ARRAY("myArray2", 5)
+ myArray2[0]="hello world"
+ myArray2[1]="how are you"
+ myArray2[2]="today"
+ 
+ !                    from         to
+ RetVal=ARRAY_COPY(myArray1, myArray2)
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_DELETE_DOUBLES" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ GLOBAL_VAR  myArray		! myArray is a SetupVariable
+ 
+ 
+ !---------------------------------------------------------
+ !  This utility deletes double entries an array 
+ !---------------------------------------------------------
+ 
+ 
+ !---set doubles
+ DIMENSION_ARRAY(myArray, 10)
+ myArray[0]="myArray0"
+ myArray[1]="myArray0"
+ myArray[2]="myArray9"
+ myArray[3]="myArray3"
+ myArray[4]="myArray0"
+ myArray[5]="myArray0"
+ myArray[6]="myArray6"
+ myArray[7]="myArray6"
+ myArray[8]="myArray9"
+ myArray[9]="myArray9"
+ 
+ 
+ 
+ 
+ !---get rid of double entries in array 'myArray'
+ FOR i1=0 TO SIZEOF(myArray)-1
+   FOR i2=i1 + 1 TO SIZEOF(myArray)-1
+     IF VAL$(myArray[i1])==VAL$(myArray[i2]) THEN
+       dummy=ARRAY_REMOVE_AT("myArray", i1)
+       i2 = MAX(0, i2-1)		!the currently deleted entry could also be a double
+     END IF
+   NEXT i2
+ NEXT i1
+ 
+ dummy=ARRAY_SORT_STR("myArray")
+ 
+ 
+ GET_STRING "check the result in Setup Variable array 'myArray'  [OK]",dummy
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "____________________4" "711.501"
+{
+}
+LINK XFORM "_ARRAY_EQUAL_STR" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_EQUALS_STR(myArray, myOtherArray)
+ ! ===============================================
+ !
+ ! Returns 1 if the ICCAP_ARRAY myArray elements have the same 
+ ! *string* values as the corresponding elements of ICCAP_ARRAY myOtherArray.
+ ! Returns 0 if the ICCAP_ARRAY myArray and ICCAP_ARRAY myOtherArray are not 
+ ! equivalent.
+ 
+ 
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myArray1
+ GLOBAL_VAR  myArray2
+ 
+ DIMENSION_ARRAY("myArray", 3)
+ myArray[0]="hello world"
+ myArray[1]="how are you"
+ myArray[2]="today"
+ 
+ DIMENSION_ARRAY("myArray1", 3)
+ myArray1[0]="hello world"
+ myArray1[1]="how are you"
+ myArray1[2]="tomorrow"
+ 
+ DIMENSION_ARRAY("myArray2", 3)
+ myArray2[0]="hello world"
+ myArray2[1]="how are you"
+ myArray2[2]="today"
+ 
+ 
+ PRINT ARRAY_EQUAL_STR(myArray, myArray1)
+ PRINT ARRAY_EQUAL_STR(myArray, myArray2)
+ PRINT ARRAY_EQUAL_STR(myArray1, myArray2)
+ 
+ !will print
+ ! 0
+ ! 1
+ ! 0
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_EQUAL_NUM" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_EQUAL_NUM(myArray, myOtherArray [,prec])
+ ! ==========================================================
+ !
+ ! Returns 1 if the ICCAP_ARRAY myArray elements have the same 
+ ! numbers as the corresponding elements of ICCAP_ARRAY myOtherArray. 
+ ! Returns 0 if the ICCAP_ARRAY myArray and ICCAP_ARRAY myOtherArray are 
+ ! not equivalent. 
+ !
+ ! The optional 3rd argument 'prec' can be used 
+ ! to set what precision the function will use to search 
+ ! for the values of myOtherArray in the array myArray.
+ ! See Transform 'README_about_precision' for details.
+ 
+ 
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myArray1
+ GLOBAL_VAR  myArray2
+ 
+ DIMENSION_ARRAY("myArray", 3)
+ myArray[0]=1
+ myArray[1]=4711
+ myArray[2]=2
+ 
+ DIMENSION_ARRAY("myArray1", 3)
+ myArray1[0]=1
+ myArray1[1]=4712
+ myArray1[2]=2
+ 
+ DIMENSION_ARRAY("myArray2", 3)
+ myArray2[0]=1
+ myArray2[1]=4711
+ myArray2[2]=2
+ 
+ 
+ PRINT ARRAY_EQUAL_NUM("myArray", "myArray1")
+ PRINT ARRAY_EQUAL_NUM("myArray", "myArray2")
+ PRINT ARRAY_EQUAL_NUM("myArray1", "myArray2")
+ 
+ !will print
+ ! 0
+ ! 1
+ ! 0
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________5" "711.501"
+{
+}
+LINK XFORM "_ARRAY_SORT_STR" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_SORT_STR(myArray [,idxArr])
+ ! ==========================================
+ 
+ ! Given an ICCAP_ARRAY myArray and no 2nd optional 
+ ! argument idxArr, this function will sort the 
+ ! ICCAP_ARRAY myArray in ascending order comparing 
+ ! the array elements' string values. 
+ ! If the optional 2nd argument idxArr is specified, 
+ ! then the ICCAP_ARRAY myArray will not be sorted but 
+ ! instead the function will return idxArr as an 
+ ! ICCAP_ARRAY with an array of sorted indices.
+ ! You can then apply ARRAY_REORDER to order
+ ! multiple arrays following the same scheme!
+ !
+ ! Returns 0 if successful.
+ 
+ ! APPLICATION:
+ ! useful when arranging several arrays after the 
+ ! same index, e.g. in a GUI table
+ 
+ ! Example:
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myIndex
+ 
+ DIMENSION_ARRAY("myArray", 4)
+ myArray[0]="the"
+ myArray[1]="quick"
+ myArray[2]="brown"
+ myArray[3]="fox"
+ 
+ 
+ RetVal=ARRAY_SORT_STR(myArray, myIndex)
+ ! will keep myArray, 
+ ! {the, quick, brown, fox}
+ ! but return myIndex as an ICCAP_ARRAY 
+ ! with the ascending index order of 
+ ! the strings in myArray.
+ ! {2, 3, 1, 0}
+ 
+ 
+ RetVal=ARRAY_SORT_STR(myArray)
+ ! will ascendendly sort myArray
+ ! {brown, fox, quick, the}
+ 
+ !NOTE: watch out that the ordering is done after the ASCII
+ ! character set, i.e. small characters and capital characters
+ ! are not treated the same !!!
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_RSORT_STR" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_RSORT_STR(myArray [,idxArr])
+ ! ===========================================
+ 
+ ! Given an ICCAP_ARRAY myArray and no 2nd optional 
+ ! argument idxArr, this function will sort the 
+ ! ICCAP_ARRAY myArray in descending order comparing 
+ ! the array elements' string values. 
+ ! If the optional 2nd argument idxArr is specified, 
+ ! then the ICCAP_ARRAY myArray will not be sorted but 
+ ! instead the function will return idxArr as an 
+ ! ICCAP_ARRAY with an array of sorted indices.
+ ! You can then apply ARRAY_REORDER to order
+ ! multiple arrays following the same scheme!
+ !
+ ! Returns 0 if successful.
+ 
+ ! APPLICATION:
+ ! useful when arranging several arrays after the 
+ ! same index, e.g. in a GUI table
+ 
+ ! Example:
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myIndex
+ 
+ DIMENSION_ARRAY("myArray", 4)
+ myArray[0]="the"
+ myArray[1]="quick"
+ myArray[2]="brown"
+ myArray[3]="fox"
+ 
+ 
+ RetVal=ARRAY_RSORT_STR(myArray, myIndex)
+ ! will keep myArray, 
+ ! {the, quick, brown, fox}
+ ! but return myIndex as an ICCAP_ARRAY 
+ ! with the ascending index order of 
+ ! the strings in myArray.
+ ! {2, 3, 1, 0}
+ 
+ 
+ RetVal=ARRAY_RSORT_STR(myArray)
+ ! will descendend sort myArray
+ ! {the, quick, fox, brown}
+ 
+ !NOTE: watch out that the ordering is done after the ASCII
+ ! character set, i.e. small characters and capital characters
+ ! are not treated the same !!!
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_REORDER" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_REORDER(myArray, "idxArr")
+ ! ==========================================
+ ! Given an ICCAP_ARRAY myArray of values and an 
+ ! ICCAP_ARRAY idxArr with an array of indices. 
+ ! This function will reorder the
+ ! elements of the ICCAP_ARRAY myArray by the given array 
+ ! of indices. 
+ ! Returns 0 if array was successfully reordered.
+ 
+ ! APPLICATION:
+ ! *VERY* useful when arranging several arrays after the 
+ ! same index, e.g. in a GUI table
+ 
+ 
+ ! Usage example:
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myIndex
+ 
+ DIMENSION_ARRAY("myArray", 3)
+ myArray[0]=1
+ myArray[1]=4711
+ myArray[2]=2
+ 
+ 
+ DIMENSION_ARRAY("myIndex", 3)
+ myIndex[0]=2
+ myIndex[1]=0
+ myIndex[2]=1
+ 
+ RetVal=ARRAY_REORDER(myArray, myIndex)
+ 
+ ! will order myArray to:
+ !
+ ! 2
+ ! 1
+ ! 4711
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_SORT_NUM" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_SORT_NUM(myArray, prec [, idxArr])
+ ! =================================================
+ !
+ ! Given an ICCAP_ARRAY myArray and no 3rd optional 
+ ! argument idxArr, this function will sort the 
+ ! ICCAP_ARRAY myArray in ascending order using 
+ ! the given precision, specified by the 2nd 
+ ! argument 'prec'. 
+ ! If the 3rd optional argument 'idxArr' is 
+ ! specified, then the ICCAP_ARRAY myArray will not be 
+ ! sorted but instead the function will return 
+ ! idxArr as an ICCAP_ARRAY with an array of 
+ ! sorted indices.
+ ! You can then apply ARRAY_REORDER to order
+ ! multiple arrays following the same scheme!
+ !
+ ! Returns 0 if successful.
+ 
+ ! APPLICATION:
+ ! useful when arranging several arrays after the 
+ ! same index, e.g. in a GUI table
+ 
+ ! Example:
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myIndex
+ 
+ DIMENSION_ARRAY("myArray", 4)
+ myArray[0]=1E3  + j1000
+ myArray[1]=2.3p
+ myArray[2]=5m + j5E-3
+ myArray[3]=4  + j4
+ 
+ RetVal=ARRAY_SORT_NUM(myArray, 10, myIndex)
+ ! will keep myArray, but return myIndex 
+ ! as an ICCAP_ARRAY with the ascending index 
+ ! order of the numbers in myArray.
+ ! {1, 2, 3, 0}
+ ! (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ 
+ 
+ RetVal=ARRAY_SORT_NUM(myArray, 10)
+ ! will ascendendly sort myArray
+ ! {2.3p, 5m+j5E-3, 4+j4, 1E3+j1000}
+ ! (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ARRAY_RSORT_NUM" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=ARRAY_RSORT_NUM(myArray, prec [, idxArr])
+ ! ============================================
+ !
+ ! Given an ICCAP_ARRAY myArray and no 3rd optional 
+ ! argument idxArr, this function will sort the 
+ ! ICCAP_ARRAY myArray in descending order using 
+ ! the given precision, specified by the 2nd 
+ ! argument 'prec'. 
+ ! If the 3rd optional argument 'idxArr' is 
+ ! specified, then the ICCAP_ARRAY myArray will not be 
+ ! sorted but instead the function will return 
+ ! idxArr as an ICCAP_ARRAY with an array of 
+ ! sorted indices.
+ ! You can then apply ARRAY_REORDER to order
+ ! multiple arrays following the same scheme!
+ !
+ ! Returns 0 if successful.
+ 
+ ! APPLICATION:
+ ! useful when arranging several arrays after the 
+ ! same index, e.g. in a GUI table
+ 
+ 
+ ! Example:
+ GLOBAL_VAR  myArray
+ GLOBAL_VAR  myIndex
+ 
+ DIMENSION_ARRAY("myArray", 4)
+ myArray[0]=1E3  + j1000
+ myArray[1]=2.3p
+ myArray[2]=5m + j5E-3
+ myArray[3]=4  + j4
+ 
+ 
+ RetVal=ARRAY_RSORT_NUM(myArray, 10, myIndex)
+ ! will keep myArray, but return myIndex 
+ ! as an ICCAP_ARRAY with the descending index 
+ ! order of the numbers in myArray.
+ ! {0, 3, 2, 1}
+ ! (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ 
+ RetVal=ARRAY_RSORT_NUM(myArray, 10)
+ ! will descendend sort myArray
+ ! {1E3+j1000, 4+j4, 5m + j5E-3, 2.3p}
+ ! (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "_________________________" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "Handling_COMPLEX" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "EXAMPLES" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "1.7998343619979 7302 6310"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 C17 P143 C10"
+element 0 "Name" "myArray[0]"
+element 0 "Value" "myArray0"
+element 1 "Name" "myArray[1]"
+element 1 "Value" "myArray3"
+element 2 "Name" "myArray[2]"
+element 2 "Value" "myArray6"
+element 3 "Name" "myArray[3]"
+element 3 "Value" "myArray9"
+element 4 "Name" "myArray"
+element 4 "Value" "ICCAP_ARRAY[4]"
+element 5 "Name" "myArray1[0]"
+element 5 "Value" "1"
+element 6 "Name" "myArray1[1]"
+element 6 "Value" "4712"
+element 7 "Name" "myArray1[2]"
+element 7 "Value" "2"
+element 8 "Name" "myArray1"
+element 8 "Value" "ICCAP_ARRAY[3]"
+element 9 "Name" "myArray2[0]"
+element 9 "Value" "1"
+element 10 "Name" "myArray2[1]"
+element 10 "Value" "4711"
+element 11 "Name" "myArray2[2]"
+element 11 "Value" "2"
+element 12 "Name" "myArray2"
+element 12 "Value" "ICCAP_ARRAY[3]"
+element 13 "Name" "_________________1"
+element 13 "Value" ""
+element 14 "Name" "myIndex[0]"
+element 14 "Value" "2"
+element 15 "Name" "myIndex[1]"
+element 15 "Value" "0"
+element 16 "Name" "myIndex[2]"
+element 16 "Value" "1"
+element 17 "Name" "myIndex[3]"
+element 17 "Value" "3"
+element 18 "Name" "myIndex"
+element 18 "Value" "ICCAP_ARRAY[4]"
+element 19 "Name" "_________________2"
+element 19 "Value" ""
+element 20 "Name" "OutputNames"
+element 20 "Value" ""
+element 21 "Name" "_________________3"
+element 21 "Value" ""
+element 22 "Name" "XFORM_LIST_COLS"
+element 22 "Value" "23"
+element 23 "Name" ""
+element 23 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK SWEEP "See_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1145,661"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "What_is_a_COMPLEX_dataset" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ ! In a PEL Program, the user can define a multi-dimensional
+ ! dataset by using the COMPLEX statement.
+ ! The format of such a dataset is REAL() + jIMAG(),
+ ! it can be one-dimensional or multi-dimensional
+ ! but only applying quadratic dimensions like 2x2, 3x3 etc.
+ !
+ ! The dataset is valid *within* the PEL Program,
+ ! and, different to ICCAP_ARRAY, is never defined in a Tab 'Variables'.
+ ! A dataset can also be returned from the PEL, 
+ ! applying
+ !     RETURN  name_of_dataset
+ 
+ 
+ ! The elements of such a COMPLEX dataset can be 
+ !  ->  numbers (REAL),
+ !  ->  complex numbers REAL() + jIMAG()
+ !  ->  integers 
+ !  ->  engineering numbers (1.23p, 3.45k etc.)
+ ! or combinations of all the above !
+ 
+ 
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "OVERVIEW" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! A COMPLEX statement is used to define an array (data set) of numbers *within* a PEL Program.
+ ! It can only hold (complex) numbers, *no strings*.
+ 
+ ! If you need an array of strings, apply ICCAP_ARRAY 
+ 
+ 
+ ! Example:
+ !----------------
+ 
+ COMPLEX tmp.B[10]	!data set with 10 items of complex numbers, 
+                     !  of type B (Both, Measured and Simulated data)
+ !COMPLEX tmp.M[10]	!data set with 10 items of complex numbers,
+                     !  of type M (Measured data only)
+ !COMPLEX tmp.S[10]	!data set with 10 items of complex numbers,
+                     ! of type S (Simulated data only)
+ !COMPLEX tmp.B.22[10]   !data set with 10 items of 2x2 dimensional
+                         ! complex numbers, of type B
+ 
+ 
+ 
+ ! Usage:
+ !----------------
+ 
+ i=0
+ WHILE i < SIZEOF(tmp)
+   tmp.M[i] = i
+   tmp.S[i] = -i
+   i = i + 1
+ END WHILE
+ 
+ PRINT tmp
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "xxxxxxxxxxxxxxxxxxxxxxxx" "711.501"
+{
+}
+LINK XFORM "xxxxxxxxxxxxxxxxxxxxxxxxx" "711.501"
+{
+}
+LINK XFORM "_" "711.501"
+{
+}
+LINK XFORM "README_about_precision" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ ! NOTES ABOUT HOW TO USE THE (optional) ENTRY 'prec' 
+ ! in some of the new IC-CAP 2009 PEL commands
+ !=====================================================
+ 
+ ! The optional parameter 'prec' specifies the number of digits
+ ! to be used when e.g. searching for a value to be replaced.
+ ! If you don't specify 'prec', the default is equal to the 
+ ! SystemVariable WORKING_PRECISION.
+ ! NOTE: When specifying the SystemVariable WORKING_PRECISION, 
+ ! the range of values is 6 through 17.
+ ! When WORKING_PRECISION is not specified as a SystemVariable by the user,
+ ! the default is 6.
+ 
+ ! Depending on what you are trying to do, 
+ ! you may want to set it to any number of values.  
+ ! If you need high resolution, set it at 12 or 14.  
+ ! The maximum resolution is 17 digits.  
+ 
+ ! If you are searching for a particular value in an array, 
+ ! then it depends on these values. If it's .4 to 1 in steps of .1, 
+ ! you can find a point easily with only 4 digits.  
+ 
+ ! But if the values are 1 to 1.000002 in steps of .0000001 
+ ! for 21 points, then you'd better look for equality at 'prec'=10 
+ ! or so digits of precision.  
+ 
+ ! In General, IC-CAP uses data at 10 digits of precision, 
+ ! (controlable by WORKING_PRECISION).  
+ ! So if you were to use 12 for 'prec', then you'd pretty much 
+ ! always find a proper match without worrying about any roundoff error 
+ ! that may occur down around digit 17.  
+ 
+ ! If you know that you've never stored anything but integers 
+ ! in the array you're searching, then the 'prec' default of 4 will 
+ ! be more than adequate.
+ 
+ ! It just really depends.
+ 
+ !---------------------------------------------------------------------------------
+ !  Checking equality of numbers is touchy as you might well know.  
+ ! Things that ought to be 'equal' may not be equal, for example
+ 
+ X=5.6537 + 5.6538+5.6537+5.6538
+ Y=45.23//2
+ PRINT "best 5.6537 is "; VAL$(5.6537,25)
+ PRINT "best 5.6538 is "; VAL$(5.6538,25)
+ PRINT "best 22.615 is "; VAL$(22.615,25)
+ PRINT "best 45.23 is ";  VAL$(45.23,25)
+ PRINT "best 2.875 is ";  VAL$(2.875,25)
+ 
+ IF X==Y THEN
+   PRINT X;" equal to ";Y
+ ELSE
+   PRINT X;" not equal to ";Y
+ ENDIF
+ 
+ IF VAL$(X)==VAL$(Y) THEN
+   PRINT VAL$(X);" equal to ";VAL$(Y)
+ ELSE
+   PRINT VAL$(X);" not equal to ";VAL$(Y) 
+ ENDIF
+ 
+ IF VAL$(X,25)==VAL$(Y,25) THEN
+   PRINT VAL$(X,25);" equal to ";VAL$(Y,25) 
+ ELSE
+   PRINT VAL$(X,25);" not equal to ";VAL$(Y,25) 
+ ENDIF
+ 
+ !The above will PRINT:
+ !best 5.6537 is 5.6536999999999997
+ !best 5.6538 is 5.6538000000000004
+ !best 22.615 is 22.614999999999998
+ !best 45.23 is 45.229999999999997
+ !best 2.875 is 2.875
+ !22.615 not equal to 22.615
+ !22.615 equal to 22.615
+ !22.615000000000002 not equal to 22.614999999999998
+ 
+ ! Now the cause of the descrepancy is that relatively few numbers 
+ ! can exactly be expressed in an 8 byte double precision number.  
+ ! All irrational number certainly, but also all numbers that 
+ ! can't be expressed as 2^xxxx in 64 bits.  
+ ! Of the 5 'best...' lines, only the 2.875 which is an exact 
+ ! power of 2 can be exactly expressed in 64 bits.  
+ ! Most values have to be rounded to fit into 'only' 64 bits.    
+ ! All floating point numbers are stored in the computer ultimatly 
+ ! as a power of 2 expressed in 1's and 0's.  
+ ! Because relatively few numbers can be *exactly* expressed, 
+ ! math on real numbers increases the error, so a sequence 
+ ! of additions vs a multiplication will introduce differing 
+ ! amounts of error, depending on how the underlying floating 
+ ! point processor handles the two cases.
+ 
+ ! So in a perfect world, the above snippet would claim 
+ ! each of the values equal, but in the digital world, this doesn't work.
+ 
+ ! So it is *never* a wise idea to attempt to test a 
+ ! double precision number for equality -- one should always consider 
+ ! an epsilon or error figure in the comparison.  
+ ! That's what has been tried to provide in the precision optional argument.  
+ ! Essentially, it offers to specify exactly how close the 
+ ! number has to match for it to be considered 'equal'.  
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "____________________0" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+LINK XFORM "_SIZEOF" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !  Value=SIZEOF(x)
+ ! =================
+ !
+ ! Returns an integer number of elements in a
+ !  - ICCAP_ARRAY Variable, or
+ !  - a COMPLEX array of data, or 
+ !  - a DATASET(x).
+ 
+ ! Can also be applied to identify the size of data 
+ ! returned by a PEL program.
+ 
+ ! Returns 0 if x doesn't represent an array
+ ! of data and/or if array of data is empty.
+ 
+ !For example:
+ 
+ ! COMPLEX statement within a PEL:				
+ COMPLEX myComplex[4]
+ myComplex[0]=1.000
+ myComplex[1]=1+j*1
+ myComplex[2]=5
+ myComplex[3]=6
+ 
+ ! COMPLEX statement for 5x5 multi-dimensional array:
+ COMPLEX myComplex1.55[3]
+ 
+ 
+ 
+ PRINT SIZEOF(myComplex)
+ PRINT SIZEOF(myComplex1)
+ ! will print
+ !5
+ !4
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COLSOF" "711.501"
+{
+View block_edit 0 "0,0"
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! Value=COLSOF(x)
+ ! ================
+ !
+ ! Returns an integer number of rows
+ ! in a matrix,  COMPLEX array of matrix data 
+ ! or a DATASET(x).
+ 
+ ! Can also be applied to identify the nr. of columns
+ ! of multi-dimensional Output data or data returned 
+ ! by a PEL program, e.g. 2x2 data, 3x3 data etc.
+ 
+ ! For example:
+ 
+ COMPLEX myComplex[4]	! a dataset of size 4
+ COMPLEX myComplex1.55[4]	! a 5x5 dataset of size 4
+ 
+ PRINT COLSOF(myComplex)
+ PRINT COLSOF(myComplex1)
+ 
+ 
+ !will print:
+ !1
+ !5
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_ROWSOF" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! Value=ROWSOF(x)
+ ! ===============
+ !
+ ! Returns an integer number of rows
+ ! in a matrix, COMPLEX array of matrix data
+ ! or a DATASET(x). 
+ 
+ ! Can also be applied to identify the nr. of rows
+ ! of multi-dimensional Output data or data returned 
+ ! by a PEL program, e.g. 2x2 data, 3x3 data etc.
+ 
+ !For example:
+ 
+ COMPLEX myComplex[4]	! a dataset of size 4
+ COMPLEX myComplex1.55[4]	! a 5x5 dataset of size 4
+ 
+ PRINT ROWSOF(myComplex)
+ PRINT ROWSOF(myComplex1)
+ 
+ 
+ !will print:
+ !1
+ !5
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________1" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+
+}
+dataset
+{
+datasize COMMON 0 1 1
+type COMMON
+}
+}
+}
+LINK XFORM "_COMPLEX_INSERT_AT" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! MyNewComplex=COMPLEX_INSERT_AT(x, y [,pos])
+ ! =============================================
+ ! Returns a modified COMPLEX array or DATASET(x)
+ ! with the data y inserted at the index 
+ ! specified by 'pos'.
+ ! If the 3rd argument 'pos' is not specified,
+ ! the data y will be appended to the end of x.
+ ! Only 1-dimensional COMPLEX array data 
+ ! or DATASET(x) are supported. 
+ ! The original COMPLEX array or DATASET(x) 
+ ! will not be modified.
+ 
+ 
+ ! For example:
+ !----------------
+ 
+ COMPLEX myComplex[2]
+ myComplex[0]=1.0
+ myComplex[1]=2.3 + j 1
+ 
+ PRINT myComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  2.300000E+000  1.000000E+000
+ 
+ 
+ MyNewComplex=COMPLEX_INSERT_AT(myComplex, 3+j*5, 1)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  3.000000E+000  5.000000E+000
+ !    2	(1,1)  2.300000E+000  1.000000E+000
+ 
+ MyNewComplex=COMPLEX_INSERT_AT(myComplex, 443.55)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  3.000000E+000  5.000000E+000
+ !    2	(1,1)  2.300000E+000  1.000000E+000
+ !    3	(1,1)  4.435500E+002  0.000000E+000
+ 
+ MyNewComplex=COMPLEX_INSERT_AT(myComplex, -3.23, 0)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1) -3.230000E+000  0.000000E+000
+ !    1	(1,1)  1.000000E+000  0.000000E+000
+ !    2	(1,1)  3.000000E+000  5.000000E+000
+ !    3	(1,1)  2.300000E+000  1.000000E+000
+ !    4	(1,1)  4.435500E+002  0.000000E+000
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COMPLEX_REMOVE_AT" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! MyNewComplex=COMPLEX_REMOVE_AT(x, pos)
+ ! =======================================
+ !
+ ! Returns a copy of the DATASET(x) or 
+ ! COMPLEX array x with the data removed 
+ ! in the copy at position 'pos'. 
+ ! The original COMPLEX array or DATASET(x) 
+ ! will not be modified.
+ ! Only 1-dimensional arrays are supported. 
+ 
+ ! For example:
+ !------------
+ COMPLEX myComplex[4]
+ myComplex[0]=1
+ myComplex[1]=2.3+ j1
+ myComplex[2]=3  + j3
+ myComplex[3]=4  + j4
+ 
+ 
+ PRINT myComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  2.300000E+000  1.000000E+000
+ !    2	(1,1)  3.000000E+000  3.000000E+000
+ !    3	(1,1)  4.000000E+000  4.000000E+000
+ 
+ MyNewComplex=COMPLEX_REMOVE_AT(myComplex, 0)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  2.300000E+000  1.000000E+000
+ !    1	(1,1)  3.000000E+000  3.000000E+000
+ !    2	(1,1)  4.000000E+000  4.000000E+000
+ 
+ 
+ 
+ !==================================
+ !   SPECIAL  APPLICATION:
+ !==================================
+ !REMOVE DOUBLE VALUES IN A DATASET
+ COMPLEX myComplex[9]
+ myComplex[0]=1
+ myComplex[1]=1
+ myComplex[2]=2
+ myComplex[3]=4
+ myComplex[4]=1
+ myComplex[5]=4
+ myComplex[6]=3
+ myComplex[7]=2
+ myComplex[8]=4
+ 
+ !---first sort the values
+ myComplexSorted=COMPLEX_SORT(myComplex, 10)
+ !---now check for double values
+ N=0
+ FOR i=1 TO SIZEOF(myComplexSorted)-1
+   IF VAL(myComplexSorted[i])==VAL(myComplexSorted[N]) THEN
+     !---delete double value
+     myComplexSorted=COMPLEX_REMOVE_AT(myComplexSorted, i)
+     i=i-1
+   ELSE
+     N = N + 1
+   END IF
+ NEXT i
+ myComplex=myComplexSorted
+ !---print the cleaned up DATASET
+ PRINT myComplex
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COMPLEX_REMOVE_ALL" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! MyNewComplex=COMPLEX_REMOVE_ALL(x,y [,prec])
+ ! ==================================================
+ !
+ ! Returns a copy of the DATASET() or COMPLEX array x with 
+ ! all occurrences of real value y, that are found in x, removed, 
+ ! or returns just a copy of x if value y was not found.
+ !
+ ! The optional 3rd argument 'prec' can be used 
+ ! to set what precision the function will use to search 
+ ! for the value y in the array x for removal.
+ ! See Transform 'README_about_precision' for details.
+ 
+ ! For example:
+ !------------
+ COMPLEX myComplex[4]
+ myComplex[0]=1
+ myComplex[1]=2.3+ j1
+ myComplex[2]=3  + j3
+ myComplex[3]=4  + j4
+ 
+ 
+ PRINT myComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  2.300000E+000  1.000000E+000
+ !    2	(1,1)  3.000000E+000  3.000000E+000
+ !    3	(1,1)  4.000000E+000  4.000000E+000
+ 
+ MyNewComplex=COMPLEX_REMOVE_ALL(myComplex, 1)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  2.300000E+000  1.000000E+000
+ !    1	(1,1)  3.000000E+000  3.000000E+000
+ !    2	(1,1)  4.000000E+000  4.000000E+000
+ 
+ MyNewComplex=COMPLEX_REMOVE_ALL(myComplex, 2.3+j1)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  3.000000E+000  3.000000E+000
+ !    2	(1,1)  4.000000E+000  4.000000E+000
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COMPLEX_REMOVE_FIRST" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! MyNewComplex=COMPLEX_REMOVE_LAST(x,y [,prec])
+ ! =================================================
+ 
+ ! Returns a copy of the DATASET() or COMPLEX array x 
+ ! with the last occurrence of real value y, that is found 
+ ! in x, removed, or returns just a copy of x if y was not found.
+ !
+ ! The optional 3rd argument 'prec' can be used 
+ ! to set what precision the function will use to search 
+ ! for the value y in the array x for removal.
+ ! See Transform 'README_about_precision' for details.
+ 
+ 
+ ! For example:
+ !------------
+ COMPLEX myComplex[4]
+ myComplex[0]=1
+ myComplex[1]=2.3+ j1
+ myComplex[2]=1
+ myComplex[3]=4  + j4
+ 
+ 
+ PRINT myComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  2.300000E+000  1.000000E+000
+ !    2	(1,1)  1.000000E+000  0.000000E+000
+ !    3	(1,1)  4.000000E+000  4.000000E+000
+ 
+ MyNewComplex=COMPLEX_REMOVE_LAST(myComplex, 1)
+ PRINT MyNewComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  2.300000E+000  1.000000E+000
+ !    2	(1,1)  4.000000E+000  4.000000E+000
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COMPLEX_REMOVE_LAST" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! COMPLEX_REMOVE_LAST(x,y [,prec])
+ ! ===========================================
+ 
+ ! Returns a copy of the DATASET() or COMPLEX array x 
+ ! with the last occurrence of real value y, that is found 
+ ! in x, removed, or returns just a copy of x if y was not found.
+ !
+ ! The optional 3rd argument 'prec' can be used 
+ ! to set what precision the function will use to search 
+ ! for the value y in the array x for removal.
+ ! See Transform 'README_about_precision' for details.
+ 
+ 
+ ! For example:
+ !------------
+ COMPLEX myComplex[4]
+ myComplex[0]=1
+ myComplex[1]=2.3+ j1
+ myComplex[2]=1
+ myComplex[3]=4  + j4
+ 
+ 
+ PRINT myComplex
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  2.300000E+000  1.000000E+000
+ !    2	(1,1)  1.000000E+000  0.000000E+000
+ !    3	(1,1)  4.000000E+000  4.000000E+000
+ 
+ MyNewArray=COMPLEX_REMOVE_FIRST(myComplex, 1)
+ PRINT MyNewArray
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  2.300000E+000  1.000000E+000
+ !    1	(1,1)  1.000000E+000  0.000000E+000
+ !    2	(1,1)  4.000000E+000  4.000000E+000
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________2" "711.501"
+{
+}
+LINK XFORM "_COMPLEX_EQUAL" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! RetVal=COMPLEX_EQUAL(x, y)
+ ! ==============================
+ !
+ ! Returns 1 if the COMPLEX array or DATASET() x elements 
+ ! have the same complex values as the corresponding 
+ ! elements of COMPLEX array or DATASET() y. 
+ ! Returns 0 if x and y are not equivalent.
+ 
+ 
+ 
+ ! For example:
+ !------------
+ COMPLEX myComplex[4]
+ myComplex[0]=1
+ myComplex[1]=2.3+ j1
+ myComplex[2]=1
+ myComplex[3]=4  + j4
+ 
+ COMPLEX myComplex1[4]
+ myComplex1[0]=1
+ myComplex1[1]=2.3+ j0
+ myComplex1[2]=1
+ myComplex1[3]=4  + j4
+ 
+ 
+ RetVal=COMPLEX_EQUAL(myComplex, myComplex1)
+ PRINT RetVal
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____________________3" "711.501"
+{
+}
+LINK XFORM "_COMPLEX_SORT" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! myComplexSorted=COMPLEX_SORT(x, prec [,idxArr])
+ ! =================================================
+ !
+ ! Given a complex array or dataset x, this function 
+ ! will create a copy of the DATASET() or 
+ ! COMPLEX array x, and sort the elements of 
+ ! the copied data array in ascending order.
+ ! It will then return that sorted copy.
+ !
+ ! The 2nd argument 'prec' is used to specify the 
+ ! double precision to use when comparing elements 
+ ! during the sorting of the data array elements. 
+ !
+ ! The 3rd optional argument 'idxArr', if specified, 
+ ! will be returned as an ICCAP_ARRAY of the sorted 
+ ! integer indices.
+ ! You can then apply COMPLEX_REORDER to order
+ ! multiple arrays following the same scheme!
+ 
+ 
+ ! Example:
+ GLOBAL_VAR  myIndex
+ 
+ COMPLEX myComplex[4]
+ myComplex[0]=1E3  + j1000
+ myComplex[1]=2.3p
+ myComplex[2]=5m + j5E-3
+ myComplex[3]=4  + j4
+ 
+ 
+ RetVal=COMPLEX_SORT(myComplex, 10, myIndex)
+ ! will keep myComplex, but return myIndex 
+ ! as an ICCAP_PARRAY with the descending index order 
+ ! of the numbers in myComplex.
+ !myIndex: {0, 1, 3, 2}
+ 
+ 
+ myComplexSorted=COMPLEX_SORT(myComplex, 10)
+ ! Will ascendend sort myComplex (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ PRINT myComplexSorted
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  2.300000E-012  0.000000E+000
+ !    1	(1,1)  5.000000E-003  5.000000E-003
+ !    2	(1,1)  4.000000E+000  4.000000E+000
+ !    3	(1,1)  1.000000E+003  1.000000E+003
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COMPLEX_RSORT" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! myComplexSorted=COMPLEX_RSORT(x, prec [,idxArr])
+ ! =================================================
+ !
+ ! Given a complex array or dataset x, this function 
+ ! will create a copy of the DATASET() or 
+ ! COMPLEX array x, and sort the elements of 
+ ! the copied data array in descending order.
+ ! It will then return that sorted copy .
+ !
+ ! The 2nd argument 'prec' is used to specify the 
+ ! double precision to use when comparing elements 
+ ! during the sorting of the data array elements. 
+ ! See Transform 'README_about_precision' for details.
+ !
+ ! The 3rd optional argument 'idxArr', if specified, 
+ ! will be returned as an ICCAP_ARRAY of the sorted 
+ ! integer indices.
+ ! You can then apply COMPLEX_REORDER to order
+ ! multiple arrays following the same scheme!
+ 
+ 
+ ! Example:
+ GLOBAL_VAR  myIndex
+ 
+ COMPLEX myComplex[4]
+ myComplex[0]=1  + j1000
+ myComplex[1]=2.3
+ myComplex[2]=5  + j5
+ myComplex[3]=4  + j4
+ 
+ 
+ RetVal=COMPLEX_RSORT(myComplex, 10, myIndex)
+ ! will keep myComplex, but return myIndex 
+ ! as an ICCAP_PARRAY with the descending index order 
+ ! of the numbers in myComplex.
+ !myIndex: {2, 3, 1, 0}
+ 
+ 
+ myComplexSorted=COMPLEX_RSORT(myComplex, 10)
+ ! Will descendend sort myComplex (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ PRINT myComplexSorted
+ 
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  5.000000E+000  5.000000E+000
+ !    1	(1,1)  4.000000E+000  4.000000E+000
+ !    2	(1,1)  2.300000E+000  0.000000E+000
+ !    3	(1,1)  1.000000E+000  1.000000E+003
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "_COMPLEX_REORDER" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! myReordered=COMPLEX_REORDER(x, idxArr)
+ ! =======================================
+ 
+ ! Given a COMPLEX  array or DATASET() x 
+ ! and an ICCAP_ARRAY idxArr with an array of indices. 
+ ! This function will create a copy of x, 
+ ! and reorder the elements, using the order given in 
+ ! the array of indices 'idxArr'.
+ ! It will then return that reordered copy of x.
+ 
+ 
+ ! For example:
+ !------------
+ GLOBAL_VAR  myIndex
+ 
+ COMPLEX myComplex[4]
+ myComplex[0]=1
+ myComplex[1]=2.3+ j1
+ myComplex[2]=1
+ myComplex[3]=4  + j4
+ 
+ myIndex=""
+ myIndex="ICCAP_ARRAY[4]"
+ myIndex[0]=2
+ myIndex[1]=0
+ myIndex[2]=1
+ myIndex[3]=3
+ 
+ 
+ myReordered=COMPLEX_REORDER(myComplex, myIndex)
+ ! Will return the reordered array (after the REAL part of a complex number, because nothing was specified (MAG, PH, REAL, IMAG))
+ PRINT myReordered
+ 
+ ! will print
+ !Point	Index   R:common       I:common      
+ !    0	(1,1)  1.000000E+000  0.000000E+000
+ !    1	(1,1)  1.000000E+000  0.000000E+000
+ !    2	(1,1)  2.300000E+000  1.000000E+000
+ !    3	(1,1)  4.000000E+000  4.000000E+000
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+}

@@ -8,17 +8,28 @@ This series of application notes demonstrate how to use the example python code 
 such as IdVg and IdVd curves, which could be either measurement or simulation.<br/><br/>
 Note: <u>this function is supported only in MQA 2020 version and above.</u>
 <br/><br/>
-The case study shows that by using Python Post-process, we can largely save simulation/execution time while have a lot more targets coverage.
+The case study shows that by using Python Post-process:<br/>
+<ul>
+    1. We can largely save execution time(simulator license $$$ saved) while having even broader targets coverage.<br/>
+    2. We can generate new targets from multiple MQA rule or project's results, which brings unprecedented
+    flexibility and capability.<br/>
+    3. MQA's builti-in python function decorator(<font
+        color="blue">@mqawrapper_loop</font>) allows us to implement highlevel algorithms without worrying inner
+    loops of W/L/T/Bias.<br/>
+</ul>
 
 <br/><img src="/static/mqa_ppp/1.png" style="border:1px solid lightgray"/><br/><br/>
 
 
 Example files attached/included can be downloaded here, they will be used in the next chapters:
 <ul>
-    1. <a href="/mqa/ppp/IV_Sweep/download" target="_blank">IV_Sweeps</a> , a directory, that contains the IdVg and IdVd results.<br/>
-    2. <a href="/mqa/ppp/Freq_Sweep/download" target="_blank">Freq_Sweeps</a> , a directory that contains S and Y parameter results.<br/>
+    1. <a href="/mqa/ppp/IV_Sweep/download" target="_blank">IV_Sweeps</a> , a directory, that contains the IdVg and IdVd
+    results.<br/>
+    2. <a href="/mqa/ppp/Freq_Sweep/download" target="_blank">Freq_Sweeps</a> , a directory that contains S and Y
+    parameter results.<br/>
     3. <a href="/mqa/ppp/iv/download" target="_blank">IV_Targets_basic.py</a> , a python file, a basic version.<br/>
-    4. <a href="/mqa/ppp/y/download" target="_blank">IV_Targers_more.py</a> , another python file, contains more targets extraction such as
+    4. <a href="/mqa/ppp/y/download" target="_blank">IV_Targers_more.py</a> , another python file, contains more targets
+    extraction such as
     CV and S/Y-Parameters.<br/>
 </ul>
 Note: please unzip the files, and put them to a local directory where you have write permission. The example directory used in this app note is the following:

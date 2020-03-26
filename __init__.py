@@ -2041,6 +2041,52 @@ def iccap_link_lib2():
     return render_template('/iccap/LinkLib/linkLib2.html')
 
 
+route_iccap_prog_example_0 = '/iccap-prog-example/0'
+
+
+@app.route(route_iccap_prog_example_0)
+@login_required
+def iccap_prog_example_0():
+    recordPostHistory(route_iccap_prog_example_0)
+    return render_template('/iccap/Programming/Prog0.html')
+
+
+route_iccap_prog_example_1 = '/iccap-prog-example/1'
+
+
+@app.route(route_iccap_prog_example_1)
+@login_required
+def iccap_prog_example_1():
+    recordPostHistory(route_iccap_prog_example_1)
+    return render_template('/iccap/Programming/Prog1.html')
+
+route_iccap_prog_example_2 = '/iccap-prog-example/2'
+
+
+@app.route(route_iccap_prog_example_2)
+@login_required
+def iccap_prog_example_2():
+    recordPostHistory(route_iccap_prog_example_2)
+    return render_template('/iccap/Programming/Prog2.html')
+
+route_iccap_prog_example_3 = '/iccap-prog-example/3'
+
+
+@app.route(route_iccap_prog_example_3)
+@login_required
+def iccap_prog_example_3():
+    recordPostHistory(route_iccap_prog_example_3)
+    return render_template('/iccap/Programming/Prog3.html')
+
+route_iccap_prog_example_4 = '/iccap-prog-example/4'
+
+
+@app.route(route_iccap_prog_example_4)
+@login_required
+def iccap_prog_example_4():
+    recordPostHistory(route_iccap_prog_example_4)
+    return render_template('/iccap/Programming/Prog4.html')
+
 ### WPE FAQs ###
 
 route_wpefaq_probecard = '/wpefaq/add_probecard'
@@ -4425,6 +4471,72 @@ def download_iccap_link_lib_example_mos_incl():
                      attachment_filename='Linking_external_Library__Example_MOS_incl_DeviceSelectionGUI.mdl',
                      mimetype='text/plain', as_attachment=True)
 
+
+route_download_iccap_prog_example_1= '/iccap/prog_1/download'
+
+
+@login_required
+@app.route(route_download_iccap_prog_example_1)
+def download_iccap_prog_example_1():
+    recordPostHistory(route_download_iccap_prog_example_1)
+    return send_file('static/iccap/Programming/151/Automated_Mouse_Clicks_by_ICCAP_FUNC.mdl',
+                     attachment_filename='Automated_Mouse_Clicks_by_ICCAP_FUNC.mdl',
+                     mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_prog_example_2_1= '/iccap/prog_2_1/download'
+
+
+@login_required
+@app.route(route_download_iccap_prog_example_2_1)
+def download_iccap_prog_example_2_1():
+    recordPostHistory(route_download_iccap_prog_example_2_1)
+    return send_file('static/iccap/Programming/152/Access_UI_Fields_and_Data_Values.mdl',
+                     attachment_filename='Access_UI_Fields_and_Data_Values.mdl',
+                     mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_prog_example_2_2= '/iccap/prog_2_2/download'
+
+
+@login_required
+@app.route(route_download_iccap_prog_example_2_2)
+def download_iccap_prog_example_2_2():
+    recordPostHistory(route_download_iccap_prog_example_2_2)
+    return send_file('static/iccap/Programming/152/Interfacing_Plots_and_PEL.mdl',
+                     attachment_filename='Interfacing_Plots_and_PEL.mdl',
+                     mimetype='text/plain', as_attachment=True)
+
+
+route_download_iccap_prog_example_3= '/iccap/prog_3/download'
+
+
+@login_required
+@app.route(route_download_iccap_prog_example_3)
+def download_iccap_prog_example_3():
+    recordPostHistory(route_download_iccap_prog_example_3)
+    return send_file('static/iccap/Programming/153/Handling_ICCAP_ARRAY__COMPLEX__and__STRINGS.mdl',
+                     attachment_filename='Handling_ICCAP_ARRAY__COMPLEX__and__STRINGS.mdl',
+                     mimetype='text/plain', as_attachment=True)
+
+route_download_iccap_prog_example_4_1= '/iccap/prog_4_1/download'
+
+
+@login_required
+@app.route(route_download_iccap_prog_example_4_1)
+def download_iccap_prog_example_4_1():
+    recordPostHistory(route_download_iccap_prog_example_4_1)
+    return send_file('static/iccap/Programming/154/Find_Things.mdl',
+                     attachment_filename='Find_Things.mdl',
+                     mimetype='text/plain', as_attachment=True)
+route_download_iccap_prog_example_4_2= '/iccap/prog_4_2/download'
+
+
+@login_required
+@app.route(route_download_iccap_prog_example_4_2)
+def download_iccap_prog_example_4_2():
+    recordPostHistory(route_download_iccap_prog_example_4_2)
+    return send_file('static/iccap/Programming/154/Identify_Objects_by_FIND_CHILDREN_WHOAMI_WHOIS.mdl',
+                     attachment_filename='Identify_Objects_by_FIND_CHILDREN_WHOAMI_WHOIS.mdl',
+                     mimetype='text/plain', as_attachment=True)
 
 ### Upload a file
 route_update_a_file = "/upload"

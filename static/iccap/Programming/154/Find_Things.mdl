@@ -1,0 +1,3704 @@
+LINK MODEL "Find_Things" "711.501"
+{
+View model_window 0 "Model"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P157 P286 C38"
+element 0 "Name" "DUT_TREE_COLS"
+element 0 "Value" "38"
+element 1 "Name" "ICCAP_DEFAULT_SETUP_PAGE"
+element 1 "Value" "Extract / Optimize"
+element 1 "Comment" "Specifies default active Setup tab: values are 0,1,2,3,4,5 or 'Measure / Simulate', 'Instrument Options', 'Setup Variables', 'Extract / Optimize', 'Plots','Setup GUI Items'"
+element 2 "Name" "________________________1"
+element 2 "Value" ""
+element 3 "Name" "Debug"
+element 3 "Value" "0"
+element 4 "Name" "Path2Model"
+element 4 "Value" "/Wafertest"
+element 5 "Name" "ErrMsg"
+element 5 "Value" ""
+element 6 "Name" "GUI_xPos"
+element 6 "Value" "37"
+element 6 "Comment" "Model GUI Location"
+element 7 "Name" "GUI_yPos"
+element 7 "Value" "157"
+element 7 "Comment" "Model GUI Location"
+element 8 "Name" "txt_Help"
+element 8 "Value" ""
+element 9 "Name" "________________________2"
+element 9 "Value" ""
+element 10 "Name" ""
+element 10 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "TL_What2Do"
+element 0 "Value" "TL|OR=VE:LX=%#18GUI_xPos:LY=%#18GUI_yPos|<none>|#221PB_Search_Text_in_PEL:#222PB_Search_Var_Location:#224PB_Search_Variable_Usage|1|0"
+element 1 "Name" "TL_What2Do.PB_Search_Text_in_PEL"
+element 1 "Value" "PB|CA=#226Search Text in PEL and GUI|AC=#274SEARCH_KEYWORD_IN_PROGs_GUIs/Keyword_in_Program_Macro_Gui/LOOK_FOR_KEYWORD&#17Execute|<none>|0"
+element 2 "Name" "TL_What2Do.PB_Search_Var_Location"
+element 2 "Value" "PB|CA=#227Search Location of Variable|AC=#254SEARCH_A_VARIABLE/Var_in_Variables_Tables/LOOK_FOR_VAR&#17Execute|<none>|0"
+element 3 "Name" "TL_What2Do.PB_Search_Variable_Usage"
+element 3 "Value" "PB|CA=#251Sel. Hierarchy/Variable and Check where Var is Used|AC=#265SEARCH_VARIABLE_USAGE/Search_Variable_Usage/SEARCH_VARIABLE_USAGE&#17Execute|<none>|0"
+element 4 "Name" "TL_Help"
+element 4 "Value" "LA|CA=%#18txt_Help:FG=C6|<none>|<none>|0|1"
+element 5 "Name" ""
+element 5 "Value" ""
+}
+TABLE "Plot Options" "711.501"
+{
+TABLE "Trace Settings" "711.501"
+{
+element 0 "Name" "Data 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 0 "Symbol" "Square" "A"
+element 0 "Measured" "Default" "A"
+element 0 "Simulated" "Default" "A"
+element 1 "Name" "Data 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 1 "Symbol" "Triangle" "A"
+element 1 "Measured" "Default" "A"
+element 1 "Simulated" "Default" "A"
+element 2 "Name" "Data 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 2 "Symbol" "Diamond" "A"
+element 2 "Measured" "Default" "A"
+element 2 "Simulated" "Default" "A"
+element 3 "Name" "Data 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 3 "Symbol" "Circle" "A"
+element 3 "Measured" "Default" "A"
+element 3 "Simulated" "Default" "A"
+element 4 "Name" "Data 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 4 "Symbol" "Cross" "A"
+element 4 "Measured" "Default" "A"
+element 4 "Simulated" "Default" "A"
+element 5 "Name" "Data 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 5 "Symbol" "X" "A"
+element 5 "Measured" "Default" "A"
+element 5 "Simulated" "Default" "A"
+element 6 "Name" "Data 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 6 "Symbol" "Square" "A"
+element 6 "Measured" "Default" "A"
+element 6 "Simulated" "Default" "A"
+element 7 "Name" "Data 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 7 "Symbol" "Square" "A"
+element 7 "Measured" "Default" "A"
+element 7 "Simulated" "Default" "A"
+element 8 "Name" "Y2 Data"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 8 "Symbol" "Square" "A"
+element 8 "Measured" "Default" "A"
+element 8 "Simulated" "Default" "A"
+element 9 "Name" "Data 8"
+element 9 "On White" "114" "N"
+element 9 "On Black" "114" "N"
+element 9 "Symbol" "" "N"
+element 9 "Measured" "Default" "N"
+element 9 "Simulated" "Default" "N"
+element 10 "Name" "Data 9"
+element 10 "On White" "14" "N"
+element 10 "On Black" "94" "N"
+element 10 "Symbol" "" "N"
+element 10 "Measured" "Default" "N"
+element 10 "Simulated" "Default" "N"
+element 11 "Name" "Data 10"
+element 11 "On White" "23" "N"
+element 11 "On Black" "81" "N"
+element 11 "Symbol" "" "N"
+element 11 "Measured" "Default" "N"
+element 11 "Simulated" "Default" "N"
+element 12 "Name" "Data 11"
+element 12 "On White" "102" "N"
+element 12 "On Black" "50" "N"
+element 12 "Symbol" "" "N"
+element 12 "Measured" "Default" "N"
+element 12 "Simulated" "Default" "N"
+element 13 "Name" "Data 12"
+element 13 "On White" "27" "N"
+element 13 "On Black" "115" "N"
+element 13 "Symbol" "" "N"
+element 13 "Measured" "Default" "N"
+element 13 "Simulated" "Default" "N"
+element 14 "Name" "Data 13"
+element 14 "On White" "54" "N"
+element 14 "On Black" "54" "N"
+element 14 "Symbol" "" "N"
+element 14 "Measured" "Default" "N"
+element 14 "Simulated" "Default" "N"
+element 15 "Name" "Data 14"
+element 15 "On White" "106" "N"
+element 15 "On Black" "106" "N"
+element 15 "Symbol" "" "N"
+element 15 "Measured" "Default" "N"
+element 15 "Simulated" "Default" "N"
+element 16 "Name" "Data 15"
+element 16 "On White" "120" "N"
+element 16 "On Black" "120" "N"
+element 16 "Symbol" "" "N"
+element 16 "Measured" "Default" "N"
+element 16 "Simulated" "Default" "N"
+element 17 "Name" "Data 16"
+element 17 "On White" "87" "N"
+element 17 "On Black" "87" "N"
+element 17 "Symbol" "" "N"
+element 17 "Measured" "Default" "N"
+element 17 "Simulated" "Default" "N"
+element 18 "Name" "Data 17"
+element 18 "On White" "29" "N"
+element 18 "On Black" "79" "N"
+element 18 "Symbol" "" "N"
+element 18 "Measured" "Default" "N"
+element 18 "Simulated" "Default" "N"
+element 19 "Name" "Data 18"
+element 19 "On White" "81" "N"
+element 19 "On Black" "81" "N"
+element 19 "Symbol" "" "N"
+element 19 "Measured" "Default" "N"
+element 19 "Simulated" "Default" "N"
+element 20 "Name" "Data 19"
+element 20 "On White" "1" "N"
+element 20 "On Black" "1" "N"
+element 20 "Symbol" "Circle" "N"
+element 20 "Measured" "Default" "N"
+element 20 "Simulated" "Dot Line" "N"
+element 21 "Name" "Data 20"
+element 21 "On White" "5" "N"
+element 21 "On Black" "0" "N"
+element 21 "Symbol" "Reverse Triangle" "N"
+element 21 "Measured" "Default" "N"
+element 21 "Simulated" "Dot Line" "N"
+element 22 "Name" "Data 21"
+element 22 "On White" "6" "N"
+element 22 "On Black" "6" "N"
+element 22 "Symbol" "Star" "N"
+element 22 "Measured" "Default" "N"
+element 22 "Simulated" "Dot Line" "N"
+element 23 "Name" "Data 22"
+element 23 "On White" "3" "N"
+element 23 "On Black" "3" "N"
+element 23 "Symbol" "Triangle" "N"
+element 23 "Measured" "Default" "N"
+element 23 "Simulated" "Dot Line" "N"
+element 24 "Name" "Data 23"
+element 24 "On White" "88" "N"
+element 24 "On Black" "88" "N"
+element 24 "Symbol" "" "N"
+element 24 "Measured" "Default" "N"
+element 24 "Simulated" "Dot Line" "N"
+element 25 "Name" "Data 24"
+element 25 "On White" "4" "N"
+element 25 "On Black" "4" "N"
+element 25 "Symbol" "Cross" "N"
+element 25 "Measured" "Default" "N"
+element 25 "Simulated" "Dot Line" "N"
+element 26 "Name" "Data 25"
+element 26 "On White" "25" "N"
+element 26 "On Black" "117" "N"
+element 26 "Symbol" "Circle" "N"
+element 26 "Measured" "Default" "N"
+element 26 "Simulated" "Dot Line" "N"
+element 27 "Name" "Data 26"
+element 27 "On White" "40" "N"
+element 27 "On Black" "40" "N"
+element 27 "Symbol" "Circle" "N"
+element 27 "Measured" "Default" "N"
+element 27 "Simulated" "Dot Line" "N"
+element 28 "Name" "Data 27"
+element 28 "On White" "28" "N"
+element 28 "On Black" "28" "N"
+element 28 "Symbol" "Circle" "N"
+element 28 "Measured" "Default" "N"
+element 28 "Simulated" "Dot Line" "N"
+element 29 "Name" "Data 28"
+element 29 "On White" "114" "N"
+element 29 "On Black" "114" "N"
+element 29 "Symbol" "Circle" "N"
+element 29 "Measured" "Default" "N"
+element 29 "Simulated" "Dot Line" "N"
+element 30 "Name" "Data 29"
+element 30 "On White" "14" "N"
+element 30 "On Black" "94" "N"
+element 30 "Symbol" "Circle" "N"
+element 30 "Measured" "Default" "N"
+element 30 "Simulated" "Dot Line" "N"
+element 31 "Name" "Data 30"
+element 31 "On White" "23" "N"
+element 31 "On Black" "81" "N"
+element 31 "Symbol" "Circle" "N"
+element 31 "Measured" "Default" "N"
+element 31 "Simulated" "Dot Line" "N"
+element 32 "Name" "Data 31"
+element 32 "On White" "102" "N"
+element 32 "On Black" "50" "N"
+element 32 "Symbol" "Circle" "N"
+element 32 "Measured" "Default" "N"
+element 32 "Simulated" "Dot Line" "N"
+element 33 "Name" "Data 32"
+element 33 "On White" "27" "N"
+element 33 "On Black" "115" "N"
+element 33 "Symbol" "Circle" "N"
+element 33 "Measured" "Default" "N"
+element 33 "Simulated" "Dot Line" "N"
+element 34 "Name" "Data 33"
+element 34 "On White" "54" "N"
+element 34 "On Black" "54" "N"
+element 34 "Symbol" "Circle" "N"
+element 34 "Measured" "Default" "N"
+element 34 "Simulated" "Dot Line" "N"
+element 35 "Name" "Data 34"
+element 35 "On White" "106" "N"
+element 35 "On Black" "106" "N"
+element 35 "Symbol" "Circle" "N"
+element 35 "Measured" "Default" "N"
+element 35 "Simulated" "Dot Line" "N"
+element 36 "Name" "Data 35"
+element 36 "On White" "120" "N"
+element 36 "On Black" "120" "N"
+element 36 "Symbol" "Circle" "N"
+element 36 "Measured" "Default" "N"
+element 36 "Simulated" "Dot Line" "N"
+element 37 "Name" "Data 36"
+element 37 "On White" "87" "N"
+element 37 "On Black" "87" "N"
+element 37 "Symbol" "Circle" "N"
+element 37 "Measured" "Default" "N"
+element 37 "Simulated" "Dot Line" "N"
+element 38 "Name" "Data 37"
+element 38 "On White" "29" "N"
+element 38 "On Black" "79" "N"
+element 38 "Symbol" "Circle" "N"
+element 38 "Measured" "Default" "N"
+element 38 "Simulated" "Dot Line" "N"
+element 39 "Name" "Data 38"
+element 39 "On White" "81" "N"
+element 39 "On Black" "81" "N"
+element 39 "Symbol" "Circle" "N"
+element 39 "Measured" "Default" "N"
+element 39 "Simulated" "Dot Line" "N"
+element 40 "Name" "Data 39"
+element 40 "On White" "1" "N"
+element 40 "On Black" "1" "N"
+element 40 "Symbol" "Triangle" "N"
+element 40 "Measured" "Default" "N"
+element 40 "Simulated" "Dot Dot Line" "N"
+element 41 "Name" "Data 40"
+element 41 "On White" "5" "N"
+element 41 "On Black" "0" "N"
+element 41 "Symbol" "Diamond" "N"
+element 41 "Measured" "Default" "N"
+element 41 "Simulated" "Dot Dot Line" "N"
+element 42 "Name" "Data 41"
+element 42 "On White" "6" "N"
+element 42 "On Black" "6" "N"
+element 42 "Symbol" "X" "N"
+element 42 "Measured" "Default" "N"
+element 42 "Simulated" "Dot Dot Line" "N"
+element 43 "Name" "Data 42"
+element 43 "On White" "3" "N"
+element 43 "On Black" "3" "N"
+element 43 "Symbol" "Reverse Triangle" "N"
+element 43 "Measured" "Default" "N"
+element 43 "Simulated" "Dot Dot Line" "N"
+element 44 "Name" "Data 43"
+element 44 "On White" "88" "N"
+element 44 "On Black" "88" "N"
+element 44 "Symbol" "Circle" "N"
+element 44 "Measured" "Default" "N"
+element 44 "Simulated" "Dot Dot Line" "N"
+element 45 "Name" "Data 44"
+element 45 "On White" "4" "N"
+element 45 "On Black" "4" "N"
+element 45 "Symbol" "" "N"
+element 45 "Measured" "Default" "N"
+element 45 "Simulated" "Dot Dot Line" "N"
+element 46 "Name" "Data 45"
+element 46 "On White" "25" "N"
+element 46 "On Black" "117" "N"
+element 46 "Symbol" "Triangle" "N"
+element 46 "Measured" "Default" "N"
+element 46 "Simulated" "Dot Dot Line" "N"
+element 47 "Name" "Data 46"
+element 47 "On White" "40" "N"
+element 47 "On Black" "40" "N"
+element 47 "Symbol" "Triangle" "N"
+element 47 "Measured" "Default" "N"
+element 47 "Simulated" "Dot Dot Line" "N"
+element 48 "Name" "Data 47"
+element 48 "On White" "28" "N"
+element 48 "On Black" "28" "N"
+element 48 "Symbol" "Triangle" "N"
+element 48 "Measured" "Default" "N"
+element 48 "Simulated" "Dot Dot Line" "N"
+element 49 "Name" "Data 48"
+element 49 "On White" "114" "N"
+element 49 "On Black" "114" "N"
+element 49 "Symbol" "Triangle" "N"
+element 49 "Measured" "Default" "N"
+element 49 "Simulated" "Dot Dot Line" "N"
+element 50 "Name" "Data 49"
+element 50 "On White" "14" "N"
+element 50 "On Black" "94" "N"
+element 50 "Symbol" "Triangle" "N"
+element 50 "Measured" "Default" "N"
+element 50 "Simulated" "Dot Dot Line" "N"
+element 51 "Name" "Data 50"
+element 51 "On White" "23" "N"
+element 51 "On Black" "81" "N"
+element 51 "Symbol" "Triangle" "N"
+element 51 "Measured" "Default" "N"
+element 51 "Simulated" "Dot Dot Line" "N"
+element 52 "Name" "Data 51"
+element 52 "On White" "102" "N"
+element 52 "On Black" "50" "N"
+element 52 "Symbol" "Triangle" "N"
+element 52 "Measured" "Default" "N"
+element 52 "Simulated" "Dot Dot Line" "N"
+element 53 "Name" "Data 52"
+element 53 "On White" "27" "N"
+element 53 "On Black" "115" "N"
+element 53 "Symbol" "Triangle" "N"
+element 53 "Measured" "Default" "N"
+element 53 "Simulated" "Dot Dot Line" "N"
+element 54 "Name" "Data 53"
+element 54 "On White" "54" "N"
+element 54 "On Black" "54" "N"
+element 54 "Symbol" "Triangle" "N"
+element 54 "Measured" "Default" "N"
+element 54 "Simulated" "Dot Dot Line" "N"
+element 55 "Name" "Data 54"
+element 55 "On White" "106" "N"
+element 55 "On Black" "106" "N"
+element 55 "Symbol" "Triangle" "N"
+element 55 "Measured" "Default" "N"
+element 55 "Simulated" "Dot Dot Line" "N"
+element 56 "Name" "Data 55"
+element 56 "On White" "120" "N"
+element 56 "On Black" "120" "N"
+element 56 "Symbol" "Triangle" "N"
+element 56 "Measured" "Default" "N"
+element 56 "Simulated" "Dot Dot Line" "N"
+element 57 "Name" "Data 56"
+element 57 "On White" "87" "N"
+element 57 "On Black" "87" "N"
+element 57 "Symbol" "Triangle" "N"
+element 57 "Measured" "Default" "N"
+element 57 "Simulated" "Dot Dot Line" "N"
+element 58 "Name" "Data 57"
+element 58 "On White" "29" "N"
+element 58 "On Black" "79" "N"
+element 58 "Symbol" "Triangle" "N"
+element 58 "Measured" "Default" "N"
+element 58 "Simulated" "Dot Dot Line" "N"
+element 59 "Name" "Data 58"
+element 59 "On White" "81" "N"
+element 59 "On Black" "81" "N"
+element 59 "Symbol" "Triangle" "N"
+element 59 "Measured" "Default" "N"
+element 59 "Simulated" "Dot Dot Line" "N"
+element 60 "Name" "Data 59"
+element 60 "On White" "1" "N"
+element 60 "On Black" "1" "N"
+element 60 "Symbol" "Reverse Triangle" "N"
+element 60 "Measured" "Default" "N"
+element 60 "Simulated" "Dashed Line" "N"
+element 61 "Name" "Data 60"
+element 61 "On White" "5" "N"
+element 61 "On Black" "0" "N"
+element 61 "Symbol" "Star" "N"
+element 61 "Measured" "Default" "N"
+element 61 "Simulated" "Dashed Line" "N"
+element 62 "Name" "Data 61"
+element 62 "On White" "6" "N"
+element 62 "On Black" "6" "N"
+element 62 "Symbol" "Cross" "N"
+element 62 "Measured" "Default" "N"
+element 62 "Simulated" "Dashed Line" "N"
+element 63 "Name" "Data 62"
+element 63 "On White" "3" "N"
+element 63 "On Black" "3" "N"
+element 63 "Symbol" "Diamond" "N"
+element 63 "Measured" "Default" "N"
+element 63 "Simulated" "Dashed Line" "N"
+element 64 "Name" "Data 63"
+element 64 "On White" "88" "N"
+element 64 "On Black" "88" "N"
+element 64 "Symbol" "Triangle" "N"
+element 64 "Measured" "Default" "N"
+element 64 "Simulated" "Dashed Line" "N"
+element 65 "Name" "Data 64"
+element 65 "On White" "4" "N"
+element 65 "On Black" "4" "N"
+element 65 "Symbol" "Circle" "N"
+element 65 "Measured" "Default" "N"
+element 65 "Simulated" "Dashed Line" "N"
+element 66 "Name" "Data 65"
+element 66 "On White" "25" "N"
+element 66 "On Black" "117" "N"
+element 66 "Symbol" "Reverse Triangle" "N"
+element 66 "Measured" "Default" "N"
+element 66 "Simulated" "Dashed Line" "N"
+element 67 "Name" "Data 66"
+element 67 "On White" "40" "N"
+element 67 "On Black" "40" "N"
+element 67 "Symbol" "Reverse Triangle" "N"
+element 67 "Measured" "Default" "N"
+element 67 "Simulated" "Dashed Line" "N"
+element 68 "Name" "Data 67"
+element 68 "On White" "28" "N"
+element 68 "On Black" "28" "N"
+element 68 "Symbol" "Reverse Triangle" "N"
+element 68 "Measured" "Default" "N"
+element 68 "Simulated" "Dashed Line" "N"
+element 69 "Name" "Data 68"
+element 69 "On White" "114" "N"
+element 69 "On Black" "114" "N"
+element 69 "Symbol" "Reverse Triangle" "N"
+element 69 "Measured" "Default" "N"
+element 69 "Simulated" "Dashed Line" "N"
+element 70 "Name" "Data 69"
+element 70 "On White" "14" "N"
+element 70 "On Black" "94" "N"
+element 70 "Symbol" "Reverse Triangle" "N"
+element 70 "Measured" "Default" "N"
+element 70 "Simulated" "Dashed Line" "N"
+element 71 "Name" "Data 70"
+element 71 "On White" "23" "N"
+element 71 "On Black" "81" "N"
+element 71 "Symbol" "Reverse Triangle" "N"
+element 71 "Measured" "Default" "N"
+element 71 "Simulated" "Dashed Line" "N"
+element 72 "Name" "Data 71"
+element 72 "On White" "102" "N"
+element 72 "On Black" "50" "N"
+element 72 "Symbol" "Reverse Triangle" "N"
+element 72 "Measured" "Default" "N"
+element 72 "Simulated" "Dashed Line" "N"
+element 73 "Name" "Data 72"
+element 73 "On White" "27" "N"
+element 73 "On Black" "115" "N"
+element 73 "Symbol" "Reverse Triangle" "N"
+element 73 "Measured" "Default" "N"
+element 73 "Simulated" "Dashed Line" "N"
+element 74 "Name" "Data 73"
+element 74 "On White" "54" "N"
+element 74 "On Black" "54" "N"
+element 74 "Symbol" "Reverse Triangle" "N"
+element 74 "Measured" "Default" "N"
+element 74 "Simulated" "Dashed Line" "N"
+element 75 "Name" "Data 74"
+element 75 "On White" "106" "N"
+element 75 "On Black" "106" "N"
+element 75 "Symbol" "Reverse Triangle" "N"
+element 75 "Measured" "Default" "N"
+element 75 "Simulated" "Dashed Line" "N"
+element 76 "Name" "Data 75"
+element 76 "On White" "120" "N"
+element 76 "On Black" "120" "N"
+element 76 "Symbol" "Reverse Triangle" "N"
+element 76 "Measured" "Default" "N"
+element 76 "Simulated" "Dashed Line" "N"
+element 77 "Name" "Data 76"
+element 77 "On White" "87" "N"
+element 77 "On Black" "87" "N"
+element 77 "Symbol" "Reverse Triangle" "N"
+element 77 "Measured" "Default" "N"
+element 77 "Simulated" "Dashed Line" "N"
+element 78 "Name" "Data 77"
+element 78 "On White" "29" "N"
+element 78 "On Black" "79" "N"
+element 78 "Symbol" "Reverse Triangle" "N"
+element 78 "Measured" "Default" "N"
+element 78 "Simulated" "Dashed Line" "N"
+element 79 "Name" "Data 78"
+element 79 "On White" "81" "N"
+element 79 "On Black" "81" "N"
+element 79 "Symbol" "Reverse Triangle" "N"
+element 79 "Measured" "Default" "N"
+element 79 "Simulated" "Dashed Line" "N"
+element 80 "Name" "Data 79"
+element 80 "On White" "1" "N"
+element 80 "On Black" "1" "N"
+element 80 "Symbol" "Diamond" "N"
+element 80 "Measured" "Default" "N"
+element 80 "Simulated" "Dot Dashed Line" "N"
+element 81 "Name" "Data 80"
+element 81 "On White" "5" "N"
+element 81 "On Black" "0" "N"
+element 81 "Symbol" "X" "N"
+element 81 "Measured" "Default" "N"
+element 81 "Simulated" "Dot Dashed Line" "N"
+element 82 "Name" "Data 81"
+element 82 "On White" "6" "N"
+element 82 "On Black" "6" "N"
+element 82 "Symbol" "" "N"
+element 82 "Measured" "Default" "N"
+element 82 "Simulated" "Dot Dashed Line" "N"
+element 83 "Name" "Data 82"
+element 83 "On White" "3" "N"
+element 83 "On Black" "3" "N"
+element 83 "Symbol" "Star" "N"
+element 83 "Measured" "Default" "N"
+element 83 "Simulated" "Dot Dashed Line" "N"
+element 84 "Name" "Data 83"
+element 84 "On White" "88" "N"
+element 84 "On Black" "88" "N"
+element 84 "Symbol" "Reverse Triangle" "N"
+element 84 "Measured" "Default" "N"
+element 84 "Simulated" "Dot Dashed Line" "N"
+element 85 "Name" "Data 84"
+element 85 "On White" "4" "N"
+element 85 "On Black" "4" "N"
+element 85 "Symbol" "Triangle" "N"
+element 85 "Measured" "Default" "N"
+element 85 "Simulated" "Dot Dashed Line" "N"
+element 86 "Name" "Data 85"
+element 86 "On White" "25" "N"
+element 86 "On Black" "117" "N"
+element 86 "Symbol" "Diamond" "N"
+element 86 "Measured" "Default" "N"
+element 86 "Simulated" "Dot Dashed Line" "N"
+element 87 "Name" "Data 86"
+element 87 "On White" "40" "N"
+element 87 "On Black" "40" "N"
+element 87 "Symbol" "Diamond" "N"
+element 87 "Measured" "Default" "N"
+element 87 "Simulated" "Dot Dashed Line" "N"
+element 88 "Name" "Data 87"
+element 88 "On White" "28" "N"
+element 88 "On Black" "28" "N"
+element 88 "Symbol" "Diamond" "N"
+element 88 "Measured" "Default" "N"
+element 88 "Simulated" "Dot Dashed Line" "N"
+element 89 "Name" "Data 88"
+element 89 "On White" "114" "N"
+element 89 "On Black" "114" "N"
+element 89 "Symbol" "Diamond" "N"
+element 89 "Measured" "Default" "N"
+element 89 "Simulated" "Dot Dashed Line" "N"
+element 90 "Name" "Data 89"
+element 90 "On White" "14" "N"
+element 90 "On Black" "94" "N"
+element 90 "Symbol" "Diamond" "N"
+element 90 "Measured" "Default" "N"
+element 90 "Simulated" "Dot Dashed Line" "N"
+element 91 "Name" "Data 90"
+element 91 "On White" "23" "N"
+element 91 "On Black" "81" "N"
+element 91 "Symbol" "Diamond" "N"
+element 91 "Measured" "Default" "N"
+element 91 "Simulated" "Dot Dashed Line" "N"
+element 92 "Name" "Data 91"
+element 92 "On White" "102" "N"
+element 92 "On Black" "50" "N"
+element 92 "Symbol" "Diamond" "N"
+element 92 "Measured" "Default" "N"
+element 92 "Simulated" "Dot Dashed Line" "N"
+element 93 "Name" "Data 92"
+element 93 "On White" "27" "N"
+element 93 "On Black" "115" "N"
+element 93 "Symbol" "Diamond" "N"
+element 93 "Measured" "Default" "N"
+element 93 "Simulated" "Dot Dashed Line" "N"
+element 94 "Name" "Data 93"
+element 94 "On White" "54" "N"
+element 94 "On Black" "54" "N"
+element 94 "Symbol" "Diamond" "N"
+element 94 "Measured" "Default" "N"
+element 94 "Simulated" "Dot Dashed Line" "N"
+element 95 "Name" "Data 94"
+element 95 "On White" "106" "N"
+element 95 "On Black" "106" "N"
+element 95 "Symbol" "Diamond" "N"
+element 95 "Measured" "Default" "N"
+element 95 "Simulated" "Dot Dashed Line" "N"
+element 96 "Name" "Data 95"
+element 96 "On White" "120" "N"
+element 96 "On Black" "120" "N"
+element 96 "Symbol" "Diamond" "N"
+element 96 "Measured" "Default" "N"
+element 96 "Simulated" "Dot Dashed Line" "N"
+element 97 "Name" "Data 96"
+element 97 "On White" "87" "N"
+element 97 "On Black" "87" "N"
+element 97 "Symbol" "Diamond" "N"
+element 97 "Measured" "Default" "N"
+element 97 "Simulated" "Dot Dashed Line" "N"
+element 98 "Name" "Data 97"
+element 98 "On White" "29" "N"
+element 98 "On Black" "79" "N"
+element 98 "Symbol" "Diamond" "N"
+element 98 "Measured" "Default" "N"
+element 98 "Simulated" "Dot Dashed Line" "N"
+element 99 "Name" "Data 98"
+element 99 "On White" "81" "N"
+element 99 "On Black" "81" "N"
+element 99 "Symbol" "Diamond" "N"
+element 99 "Measured" "Default" "N"
+element 99 "Simulated" "Dot Dashed Line" "N"
+element 100 "Name" "Data 99"
+element 100 "On White" "1" "N"
+element 100 "On Black" "1" "N"
+element 100 "Symbol" "Star" "N"
+element 100 "Measured" "Default" "N"
+element 100 "Simulated" "Long Dashed Line" "N"
+element 101 "Name" "Data 100"
+element 101 "On White" "5" "N"
+element 101 "On Black" "0" "N"
+element 101 "Symbol" "Cross" "N"
+element 101 "Measured" "Default" "N"
+element 101 "Simulated" "Long Dashed Line" "N"
+element 102 "Name" "Data 101"
+element 102 "On White" "6" "N"
+element 102 "On Black" "6" "N"
+element 102 "Symbol" "Circle" "N"
+element 102 "Measured" "Default" "N"
+element 102 "Simulated" "Long Dashed Line" "N"
+element 103 "Name" "Data 102"
+element 103 "On White" "3" "N"
+element 103 "On Black" "3" "N"
+element 103 "Symbol" "X" "N"
+element 103 "Measured" "Default" "N"
+element 103 "Simulated" "Long Dashed Line" "N"
+element 104 "Name" "Data 103"
+element 104 "On White" "88" "N"
+element 104 "On Black" "88" "N"
+element 104 "Symbol" "Diamond" "N"
+element 104 "Measured" "Default" "N"
+element 104 "Simulated" "Long Dashed Line" "N"
+element 105 "Name" "Data 104"
+element 105 "On White" "4" "N"
+element 105 "On Black" "4" "N"
+element 105 "Symbol" "Reverse Triangle" "N"
+element 105 "Measured" "Default" "N"
+element 105 "Simulated" "Long Dashed Line" "N"
+element 106 "Name" "Data 105"
+element 106 "On White" "25" "N"
+element 106 "On Black" "117" "N"
+element 106 "Symbol" "Star" "N"
+element 106 "Measured" "Default" "N"
+element 106 "Simulated" "Long Dashed Line" "N"
+element 107 "Name" "Data 106"
+element 107 "On White" "40" "N"
+element 107 "On Black" "40" "N"
+element 107 "Symbol" "Star" "N"
+element 107 "Measured" "Default" "N"
+element 107 "Simulated" "Long Dashed Line" "N"
+element 108 "Name" "Data 107"
+element 108 "On White" "28" "N"
+element 108 "On Black" "28" "N"
+element 108 "Symbol" "Star" "N"
+element 108 "Measured" "Default" "N"
+element 108 "Simulated" "Long Dashed Line" "N"
+element 109 "Name" "Data 108"
+element 109 "On White" "114" "N"
+element 109 "On Black" "114" "N"
+element 109 "Symbol" "Star" "N"
+element 109 "Measured" "Default" "N"
+element 109 "Simulated" "Long Dashed Line" "N"
+element 110 "Name" "Data 109"
+element 110 "On White" "14" "N"
+element 110 "On Black" "94" "N"
+element 110 "Symbol" "Star" "N"
+element 110 "Measured" "Default" "N"
+element 110 "Simulated" "Long Dashed Line" "N"
+element 111 "Name" "Data 110"
+element 111 "On White" "23" "N"
+element 111 "On Black" "81" "N"
+element 111 "Symbol" "Star" "N"
+element 111 "Measured" "Default" "N"
+element 111 "Simulated" "Long Dashed Line" "N"
+element 112 "Name" "Data 111"
+element 112 "On White" "102" "N"
+element 112 "On Black" "50" "N"
+element 112 "Symbol" "Star" "N"
+element 112 "Measured" "Default" "N"
+element 112 "Simulated" "Long Dashed Line" "N"
+element 113 "Name" "Data 112"
+element 113 "On White" "27" "N"
+element 113 "On Black" "115" "N"
+element 113 "Symbol" "Star" "N"
+element 113 "Measured" "Default" "N"
+element 113 "Simulated" "Long Dashed Line" "N"
+element 114 "Name" "Data 113"
+element 114 "On White" "54" "N"
+element 114 "On Black" "54" "N"
+element 114 "Symbol" "Star" "N"
+element 114 "Measured" "Default" "N"
+element 114 "Simulated" "Long Dashed Line" "N"
+element 115 "Name" "Data 114"
+element 115 "On White" "106" "N"
+element 115 "On Black" "106" "N"
+element 115 "Symbol" "Star" "N"
+element 115 "Measured" "Default" "N"
+element 115 "Simulated" "Long Dashed Line" "N"
+element 116 "Name" "Data 115"
+element 116 "On White" "120" "N"
+element 116 "On Black" "120" "N"
+element 116 "Symbol" "Star" "N"
+element 116 "Measured" "Default" "N"
+element 116 "Simulated" "Long Dashed Line" "N"
+element 117 "Name" "Data 116"
+element 117 "On White" "87" "N"
+element 117 "On Black" "87" "N"
+element 117 "Symbol" "Star" "N"
+element 117 "Measured" "Default" "N"
+element 117 "Simulated" "Long Dashed Line" "N"
+element 118 "Name" "Data 117"
+element 118 "On White" "29" "N"
+element 118 "On Black" "79" "N"
+element 118 "Symbol" "Star" "N"
+element 118 "Measured" "Default" "N"
+element 118 "Simulated" "Long Dashed Line" "N"
+element 119 "Name" "Data 118"
+element 119 "On White" "81" "N"
+element 119 "On Black" "81" "N"
+element 119 "Symbol" "Star" "N"
+element 119 "Measured" "Default" "N"
+element 119 "Simulated" "Long Dashed Line" "N"
+element 120 "Name" "Data 119"
+element 120 "On White" "1" "N"
+element 120 "On Black" "1" "N"
+element 120 "Symbol" "X" "N"
+element 120 "Measured" "Default" "N"
+element 120 "Simulated" "Long Dot Dashed Line" "N"
+element 121 "Name" "Data 120"
+element 121 "On White" "5" "N"
+element 121 "On Black" "0" "N"
+element 121 "Symbol" "" "N"
+element 121 "Measured" "Default" "N"
+element 121 "Simulated" "Long Dot Dashed Line" "N"
+element 122 "Name" "Data 121"
+element 122 "On White" "6" "N"
+element 122 "On Black" "6" "N"
+element 122 "Symbol" "Triangle" "N"
+element 122 "Measured" "Default" "N"
+element 122 "Simulated" "Long Dot Dashed Line" "N"
+element 123 "Name" "Data 122"
+element 123 "On White" "3" "N"
+element 123 "On Black" "3" "N"
+element 123 "Symbol" "Cross" "N"
+element 123 "Measured" "Default" "N"
+element 123 "Simulated" "Long Dot Dashed Line" "N"
+element 124 "Name" "Data 123"
+element 124 "On White" "88" "N"
+element 124 "On Black" "88" "N"
+element 124 "Symbol" "Star" "N"
+element 124 "Measured" "Default" "N"
+element 124 "Simulated" "Long Dot Dashed Line" "N"
+element 125 "Name" "Data 124"
+element 125 "On White" "4" "N"
+element 125 "On Black" "4" "N"
+element 125 "Symbol" "Diamond" "N"
+element 125 "Measured" "Default" "N"
+element 125 "Simulated" "Long Dot Dashed Line" "N"
+element 126 "Name" "Data 125"
+element 126 "On White" "25" "N"
+element 126 "On Black" "117" "N"
+element 126 "Symbol" "X" "N"
+element 126 "Measured" "Default" "N"
+element 126 "Simulated" "Long Dot Dashed Line" "N"
+element 127 "Name" "Data 126"
+element 127 "On White" "40" "N"
+element 127 "On Black" "40" "N"
+element 127 "Symbol" "X" "N"
+element 127 "Measured" "Default" "N"
+element 127 "Simulated" "Long Dot Dashed Line" "N"
+element 128 "Name" "Data 127"
+element 128 "On White" "28" "N"
+element 128 "On Black" "28" "N"
+element 128 "Symbol" "X" "N"
+element 128 "Measured" "Default" "N"
+element 128 "Simulated" "Long Dot Dashed Line" "N"
+element 129 "Name" "Data 128"
+element 129 "On White" "114" "N"
+element 129 "On Black" "114" "N"
+element 129 "Symbol" "X" "N"
+element 129 "Measured" "Default" "N"
+element 129 "Simulated" "Long Dot Dashed Line" "N"
+element 130 "Name" "Data 129"
+element 130 "On White" "14" "N"
+element 130 "On Black" "94" "N"
+element 130 "Symbol" "X" "N"
+element 130 "Measured" "Default" "N"
+element 130 "Simulated" "Long Dot Dashed Line" "N"
+element 131 "Name" "Data 130"
+element 131 "On White" "23" "N"
+element 131 "On Black" "81" "N"
+element 131 "Symbol" "X" "N"
+element 131 "Measured" "Default" "N"
+element 131 "Simulated" "Long Dot Dashed Line" "N"
+element 132 "Name" "Data 131"
+element 132 "On White" "102" "N"
+element 132 "On Black" "50" "N"
+element 132 "Symbol" "X" "N"
+element 132 "Measured" "Default" "N"
+element 132 "Simulated" "Long Dot Dashed Line" "N"
+element 133 "Name" "Data 132"
+element 133 "On White" "27" "N"
+element 133 "On Black" "115" "N"
+element 133 "Symbol" "X" "N"
+element 133 "Measured" "Default" "N"
+element 133 "Simulated" "Long Dot Dashed Line" "N"
+element 134 "Name" "Data 133"
+element 134 "On White" "54" "N"
+element 134 "On Black" "54" "N"
+element 134 "Symbol" "X" "N"
+element 134 "Measured" "Default" "N"
+element 134 "Simulated" "Long Dot Dashed Line" "N"
+element 135 "Name" "Data 134"
+element 135 "On White" "106" "N"
+element 135 "On Black" "106" "N"
+element 135 "Symbol" "X" "N"
+element 135 "Measured" "Default" "N"
+element 135 "Simulated" "Long Dot Dashed Line" "N"
+element 136 "Name" "Data 135"
+element 136 "On White" "120" "N"
+element 136 "On Black" "120" "N"
+element 136 "Symbol" "X" "N"
+element 136 "Measured" "Default" "N"
+element 136 "Simulated" "Long Dot Dashed Line" "N"
+element 137 "Name" "Data 136"
+element 137 "On White" "87" "N"
+element 137 "On Black" "87" "N"
+element 137 "Symbol" "X" "N"
+element 137 "Measured" "Default" "N"
+element 137 "Simulated" "Long Dot Dashed Line" "N"
+element 138 "Name" "Data 137"
+element 138 "On White" "29" "N"
+element 138 "On Black" "79" "N"
+element 138 "Symbol" "X" "N"
+element 138 "Measured" "Default" "N"
+element 138 "Simulated" "Long Dot Dashed Line" "N"
+element 139 "Name" "Data 138"
+element 139 "On White" "81" "N"
+element 139 "On Black" "81" "N"
+element 139 "Symbol" "X" "N"
+element 139 "Measured" "Default" "N"
+element 139 "Simulated" "Long Dot Dashed Line" "N"
+element 140 "Name" "Data 139"
+element 140 "On White" "1" "N"
+element 140 "On Black" "1" "N"
+element 140 "Symbol" "Cross" "N"
+element 140 "Measured" "Default" "N"
+element 140 "Simulated" "Solid Line" "N"
+element 141 "Name" "Data 140"
+element 141 "On White" "5" "N"
+element 141 "On Black" "0" "N"
+element 141 "Symbol" "Circle" "N"
+element 141 "Measured" "Default" "N"
+element 141 "Simulated" "Solid Line" "N"
+element 142 "Name" "Data 141"
+element 142 "On White" "6" "N"
+element 142 "On Black" "6" "N"
+element 142 "Symbol" "Reverse Triangle" "N"
+element 142 "Measured" "Default" "N"
+element 142 "Simulated" "Solid Line" "N"
+element 143 "Name" "Data 142"
+element 143 "On White" "3" "N"
+element 143 "On Black" "3" "N"
+element 143 "Symbol" "" "N"
+element 143 "Measured" "Default" "N"
+element 143 "Simulated" "Solid Line" "N"
+element 144 "Name" "Data 143"
+element 144 "On White" "88" "N"
+element 144 "On Black" "88" "N"
+element 144 "Symbol" "X" "N"
+element 144 "Measured" "Default" "N"
+element 144 "Simulated" "Solid Line" "N"
+element 145 "Name" "Data 144"
+element 145 "On White" "4" "N"
+element 145 "On Black" "4" "N"
+element 145 "Symbol" "Star" "N"
+element 145 "Measured" "Default" "N"
+element 145 "Simulated" "Solid Line" "N"
+element 146 "Name" "Data 145"
+element 146 "On White" "25" "N"
+element 146 "On Black" "117" "N"
+element 146 "Symbol" "Cross" "N"
+element 146 "Measured" "Default" "N"
+element 146 "Simulated" "Solid Line" "N"
+element 147 "Name" "Data 146"
+element 147 "On White" "40" "N"
+element 147 "On Black" "40" "N"
+element 147 "Symbol" "Cross" "N"
+element 147 "Measured" "Default" "N"
+element 147 "Simulated" "Solid Line" "N"
+element 148 "Name" "Data 147"
+element 148 "On White" "28" "N"
+element 148 "On Black" "28" "N"
+element 148 "Symbol" "Cross" "N"
+element 148 "Measured" "Default" "N"
+element 148 "Simulated" "Solid Line" "N"
+element 149 "Name" "Data 148"
+element 149 "On White" "114" "N"
+element 149 "On Black" "114" "N"
+element 149 "Symbol" "Cross" "N"
+element 149 "Measured" "Default" "N"
+element 149 "Simulated" "Solid Line" "N"
+element 150 "Name" "Data 149"
+element 150 "On White" "14" "N"
+element 150 "On Black" "94" "N"
+element 150 "Symbol" "Cross" "N"
+element 150 "Measured" "Default" "N"
+element 150 "Simulated" "Solid Line" "N"
+}
+TABLE "Curve Settings" "711.501"
+{
+element 0 "Curve" "Curve 0"
+element 0 "On White" "1" "A"
+element 0 "On Black" "1" "A"
+element 1 "Curve" "Curve 1"
+element 1 "On White" "5" "A"
+element 1 "On Black" "2" "A"
+element 2 "Curve" "Curve 2"
+element 2 "On White" "6" "A"
+element 2 "On Black" "6" "A"
+element 3 "Curve" "Curve 3"
+element 3 "On White" "3" "A"
+element 3 "On Black" "3" "A"
+element 4 "Curve" "Curve 4"
+element 4 "On White" "88" "A"
+element 4 "On Black" "88" "A"
+element 5 "Curve" "Curve 5"
+element 5 "On White" "4" "A"
+element 5 "On Black" "4" "A"
+element 6 "Curve" "Curve 6"
+element 6 "On White" "25" "A"
+element 6 "On Black" "117" "A"
+element 7 "Curve" "Curve 7"
+element 7 "On White" "40" "A"
+element 7 "On Black" "40" "A"
+element 8 "Curve" "Curve 8"
+element 8 "On White" "28" "A"
+element 8 "On Black" "28" "A"
+element 9 "Curve" "Curve 9"
+element 9 "On White" "114" "A"
+element 9 "On Black" "114" "A"
+}
+TABLE "Plot Settings" "711.501"
+{
+element 0 "Multicolor" "Display all curves with the configured trace color" "A"
+element 0 "Measured Trace" "Solid Line with Symbols" "N"
+element 0 "Simulated Trace" "Dashed Line" "N"
+element 0 "Transform Result" "Solid Line" "N"
+element 0 "Error Trace" "Solid Line" "A"
+element 0 "Show Title" "Yes" "A"
+element 0 "Show Multiplot Header" "Yes" "A"
+element 0 "Show Multiplot Footer" "Yes" "A"
+element 0 "Show Header" "Yes" "A"
+element 0 "Show Footer" "Yes" "A"
+element 0 "Show Legend" "No" "A"
+element 0 "White Background" "Yes" "N"
+element 0 "Show Area Tools" "Yes" "A"
+element 0 "Enable Annotation" "No" "A"
+element 0 "Annotation Location" "Upper Left" "A"
+element 0 "PEL Control" "No" "A"
+element 0 "Annotation Text" ""
+element 0 "PEL Transform" ""
+element 0 "PEL Call Type" "1"
+element 0 "Font Type" "Arial For CAE" "A"
+element 0 "Font Size" "12.00" "A"
+element 0 "Annotation Font Name" "Arial For CAE" "A"
+element 0 "Annotation Font Sz" "9.000" "A"
+element 0 "Symbol Size" "4.000" "A"
+element 0 "Plot Selection Callback" "" "A"
+}
+}
+LINK CIRC "Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK PS "Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK MACRO "README" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ 
+ 
+ ! This ModelFile assists programmers to 
+ 
+ ! -> Search Text in PEL and GUI
+ ! -> identify locations of Variables 
+ ! -> identify locations of Transforms
+ ! -> find out where a Variable is used
+ 
+ 
+ ! Due to the Macro with the IC-CAP-reserved Name 'AutoExecute', 
+ ! the opening of this ModelFile follows the program lines in that Macro.
+ 
+ 
+ 
+ 
+ Status:
+ March 2020
+}
+}
+}
+LINK MACRO "AutoExecute" "711.501"
+{
+TABLE "Edit Macro Info" "711.501"
+{
+element 0 "MacroType" "PEL"
+}
+data
+{
+BLKEDIT "Macro Editor"
+{
+ ErrMsg=""
+ ICCAP_FUNC("aux/aux/Select_Model", "Execute")
+ IF VAL$(ErrMsg)<>"" THEN RETURN
+ 
+ 
+ ICCAP_FUNC("./TL_What2Do", "Display Modeless GUI", "Find Things What to Do")
+}
+}
+}
+LINK DUT "SEARCH_KEYWORD_IN_PROGs_GUIs" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Keyword_in_Program_Macro_Gui" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 C22 P365 C10"
+element 0 "Name" "!Path2Model"
+element 0 "Value" "it's a ModelVariable"
+element 1 "Name" "SearchString"
+element 1 "Value" "ICCAP_ARRAY["
+element 2 "Name" "________________________1"
+element 2 "Value" ""
+element 3 "Name" "GuiNames[0]"
+element 3 "Value" "TL_Model"
+element 4 "Name" "GuiNames"
+element 4 "Value" "ICCAP_ARRAY[1]"
+element 5 "Name" "FoundGuiLocations"
+element 5 "Value" ""
+element 6 "Name" "FoundGuiLocations_sel"
+element 6 "Value" ""
+element 7 "Name" "MacroNames"
+element 7 "Value" ""
+element 8 "Name" "FoundMacroLocations"
+element 8 "Value" ""
+element 9 "Name" "FoundMacroLocations_sel"
+element 9 "Value" ""
+element 10 "Name" "DutNames"
+element 10 "Value" ""
+element 11 "Name" "SetupNames"
+element 11 "Value" ""
+element 12 "Name" "XfmNames"
+element 12 "Value" ""
+element 13 "Name" "FoundXfmLocations"
+element 13 "Value" ""
+element 14 "Name" "FoundXfmLocations_sel"
+element 14 "Value" ""
+element 15 "Name" "MacroXfmContents"
+element 15 "Value" ""
+element 16 "Name" "tmpLine"
+element 16 "Value" ""
+element 17 "Name" "txt_Notes"
+element 17 "Value" ""
+element 18 "Name" "GUI_xPos"
+element 18 "Value" "393"
+element 19 "Name" "GUI_yPos"
+element 19 "Value" "190"
+element 20 "Name" "______________________________1"
+element 20 "Value" ""
+element 21 "Name" ""
+element 21 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "GUI_Results"
+element 0 "Value" "TL|OR=VE:WD=450:LX=%#18GUI_xPos:LY=%#18GUI_yPos|<none>|#214TL_ActiveModel:#216TL_SearchKeyword:#221ED_Requested_Variable:#217LI_Results_Macros:#221LI_Results_Transforms:#215LI_Results_Guis:#17LA_Hint|1|0"
+element 1 "Name" "GUI_Results.LI_Results_Macros"
+element 1 "Value" "LI|CA=#231Was Found In These Macro(s)\072:IT=%#219FoundMacroLocations:SX=%#223FoundMacroLocations_sel:SY=SS:TO=FH&dummy|LS=#225gui_Edit_Macro_or_Program&#17Execute|<none>|0"
+element 2 "Name" "GUI_Results.LI_Results_Transforms"
+element 2 "Value" "LI|CA=#235Was Found In These Transform(s)\072:IT=%#217FoundXfmLocations:SX=%#221FoundXfmLocations_sel:SY=SS|LS=#225gui_Edit_Macro_or_Program&#17Execute|<none>|0"
+element 3 "Name" "GUI_Results.ED_Requested_Variable"
+element 3 "Value" "ED|CA=#236Search String (Case Sensitive !)\072:VA=%#212SearchString:TO=FH&dummy|<none>|<none>|0"
+element 4 "Name" "GUI_Results.LA_Hint"
+element 4 "Value" "LA|CA=#263Click the Macro, Transform or Gui name to get an Editor Window.:FG=C6:TO=FH&dummy|<none>|<none>|0"
+element 5 "Name" "GUI_Results.TL_SearchKeyword"
+element 5 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#18LA_Notes:#15Space:#19PB_Search:#15PB_OK|1"
+element 6 "Name" "GUI_Results.TL_SearchKeyword.Space"
+element 6 "Value" "TL|<none>|<none>|<none>|0"
+element 7 "Name" "GUI_Results.TL_SearchKeyword.PB_Search"
+element 7 "Value" "PB|CA=#16Search:TO=FW&FH|AC=#210gui_Search&#17Execute|<none>|0"
+element 8 "Name" "GUI_Results.TL_SearchKeyword.PB_OK"
+element 8 "Value" "PB|CA=#210OK, Done !:TO=FW&FH|AC=#213./GUI_Results&#235Destroy GUI,Found Locations of Text|<none>|0"
+element 9 "Name" "GUI_EditXfmMacro"
+element 9 "Value" "TS|HT=400:WD=600:LX=%#18GUI_xPos:LY=%#18GUI_yPos|CA=#217gui_CloseXfmMacro&#17Execute|#219ED_XfmMacroContents:#212TL_OK_Cancel|1|1"
+element 10 "Name" "GUI_EditXfmMacro.ED_XfmMacroContents"
+element 10 "Value" "ED|CA=#3221NOTES\072 For Edit/Search and for Edit/Replace features, copy from the editor field below into an external editor, \012perform there your manipulations, and paste the result back into the IC-CAP window. Finally, hit [OK].:EM=ML:ED=T:VA=%#216MacroXfmContents|<none>|<none>|0"
+element 11 "Name" "GUI_EditXfmMacro.TL_OK_Cancel"
+element 11 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#19PB_Cancel:#15PB_OK|1"
+element 12 "Name" "GUI_EditXfmMacro.TL_OK_Cancel.PB_Cancel"
+element 12 "Value" "PB|CA=#16Cancel:TO=FW&FH|AC=#217gui_CloseXfmMacro&#214Execute,Cancel|<none>|0"
+element 13 "Name" "GUI_EditXfmMacro.TL_OK_Cancel.PB_OK"
+element 13 "Value" "PB|CA=#12OK:TO=FW&FH|AC=#217gui_CloseXfmMacro&#210Execute,OK|<none>|0"
+element 14 "Name" "GUI_Results.TL_ActiveModel.LA_ActiveModel"
+element 14 "Value" "LA|CA=#221Active Model Name\072:TO=FW&FH&TL|<none>|<none>|0"
+element 15 "Name" "GUI_Results.TL_ActiveModel"
+element 15 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#214LA_ActiveModel:#218LA_ActiveModelName:#15Space|1"
+element 16 "Name" "GUI_Results.TL_ActiveModel.LA_ActiveModelName"
+element 16 "Value" "LA|CA=%#210Path2Model:FG=C6:TO=FW&FH|<none>|<none>|0"
+element 17 "Name" "GUI_Results.TL_ActiveModel.Space"
+element 17 "Value" "TL|<none>|<none>|<none>|0"
+element 18 "Name" "GUI_Results.LI_Results_Guis"
+element 18 "Value" "LI|CA=#247Was Found In The GUI(s) of /Model/Dut/Setup\072:IT=%#217FoundGuiLocations:SX=%#221FoundGuiLocations_sel:SY=SS|LS=#212gui_Edit_Gui&#17Execute|<none>|0"
+element 19 "Name" "GUI_Results.TL_SearchKeyword.LA_Notes"
+element 19 "Value" "LA|CA=%#19txt_Notes:FG=C6:TO=FH&dummy|<none>|<none>|0"
+element 20 "Name" ""
+element 20 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1803,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! LOOK_FOR_KEYWORD and its sub-programs identify
+ ! locations of a user-entered keyword, 
+ ! in Transforms, Macros and GUIs.
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "__________________1" "711.501"
+{
+}
+LINK XFORM "LOOK_FOR_KEYWORD" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ 
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ! NOTE:
+ ! for model selection, execute first Macro 'AutoExecute'
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+ 
+ ICCAP_FUNC("Clean_Up", "Execute")
+ 
+ !---open the GUI
+ ICCAP_FUNC("./GUI_Results", "Display Modeless GUI", "Found Locations of Text")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____aux______________2" "711.501"
+{
+}
+LINK XFORM "gui_Search" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  ErrMsg			!ModelVariable
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  SearchString
+ GLOBAL_VAR  MacroNames
+ GLOBAL_VAR  FoundMacroLocations
+ GLOBAL_VAR  FoundMacroLocations_sel
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  SetupNames
+ GLOBAL_VAR  XfmNames
+ GLOBAL_VAR  FoundXfmLocations
+ GLOBAL_VAR  FoundXfmLocations_sel
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  FoundGuiLocations_sel
+ GLOBAL_VAR  txt_Notes
+ 
+ 
+ ErrMsg=""
+ txt_Notes = "Searching ..."
+ 
+ 
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ !---reset Variables
+ FoundMacroLocations = ""	
+ FoundXfmLocations   = ""	
+ FoundGuiLocations   = ""	
+ FoundMacroLocations_sel = -1
+ FoundXfmLocations_sel   = -1
+ FoundGuiLocations_sel   = -1
+ 
+ 
+ !===check all Macros==============================================================
+ !---identify Macros
+ ICCAP_FIND_CHILDREN VAL$(Path2Model), "Macro", MacroNames
+ 
+ !---look for SearchString in found Macros
+ FOR iMacro=0 TO SIZEOF(MacroNames)-1
+   Path2Macro="Macro "&VAL$(Path2Model)&"/"&VAL$(MacroNames[iMacro])
+   !---import the contents of the Macro
+   MacroContents = LOOKUP_TABLE_VAL(VAL$(Path2Macro), "Text")	   !"Text" is the keyword to get all the Macro PEL code into the Variable 'x'
+     
+   IF STRPOS(VAL$(MacroContents), VAL$(SearchString)) > 0 THEN
+     DIMENSION_ARRAY(FoundMacroLocations, SIZEOF(FoundMacroLocations)+1)
+     FoundMacroLocations[SIZEOF(FoundMacroLocations)-1]=VAL$(Path2Macro)
+   END IF
+ NEXT iMacro
+ 
+ 
+ 
+ !===check all Transforms==============================================================
+ !---identify Transforms with functionality 'Program' or 'Program2'
+ ICCAP_FIND_CHILDREN VAL$(Path2Model), "DUT", DutNames
+ FOR iDut=0 TO SIZEOF(DutNames)-1
+   Path2Dut=VAL$(Path2Model)&"/"&VAL$(DutNames[iDut])
+ 
+   ICCAP_FIND_CHILDREN VAL$(Path2Dut), "Setup", SetupNames
+   FOR iSetup=0 TO SIZEOF(SetupNames)-1
+     Path2Setup=VAL$(Path2Dut)&"/"&VAL$(SetupNames[iSetup])
+ 
+     ICCAP_FIND_CHILDREN VAL$(Path2Setup), "Transform", XfmNames
+     FOR iXfm=0 TO SIZEOF(XfmNames)-1
+       Path2Xfm="Transform "&VAL$(Path2Setup)&"/"&VAL$(XfmNames[iXfm])
+ 
+       !---verify if it's a Program or Program2
+       x = LOOKUP_TABLE_VAL(VAL$(Path2Xfm), "Function")
+       IF (VAL$(x)=="Program") OR (VAL$(x)=="Program2") THEN
+      
+         !---import the contents of the Program			! always apply the keyword 'Program' to access the PEL *editor* code, 
+         ProgramContents=LOOKUP_TABLE_VAL(VAL$(Path2Xfm), "Program")	!   independently of wether you are using the *function* 'Program' or 'Program2'.
+ 
+         !---find out if search string is part of currently loaded program
+         IF STRPOS(VAL$(ProgramContents), VAL$(SearchString)) > 0 THEN
+           DIMENSION_ARRAY(FoundXfmLocations, SIZEOF(FoundXfmLocations)+1)
+           FoundXfmLocations[SIZEOF(FoundXfmLocations)-1] = VAL$(Path2Xfm)
+         END IF
+       END IF
+     NEXT iXfm
+   NEXT iSetup
+ NEXT iDut
+ 
+ 
+ !===check all GUIs==============================================================
+ !---Model Guis
+ ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Model))
+ !---Dut & Setup Guis
+ ICCAP_FIND_CHILDREN VAL$(Path2Model), "DUT", DutNames
+ FOR iDut=0 TO SIZEOF(DutNames)-1
+   Path2Dut=VAL$(Path2Model)&"/"&VAL$(DutNames[iDut])
+   ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Dut))
+   ICCAP_FIND_CHILDREN VAL$(Path2Dut), "Setup", SetupNames
+   FOR iSetup=0 TO SIZEOF(SetupNames)-1
+     Path2Setup=VAL$(Path2Dut)&"/"&VAL$(SetupNames[iSetup])
+     ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Setup))
+   NEXT iSetup
+ NEXT iDut
+ 
+ 
+ !---reset note
+ txt_Notes = ""
+ 
+ 
+ !---display result
+ IF (SIZEOF(FoundMacroLocations)>0) ORELSE (SIZEOF(FoundXfmLocations)>0) ORELSE (SIZEOF(FoundGuiLocations)>0) THEN 
+   ICCAP_FUNC("./GUI_Results", "Display Modeless GUI", "Found Locations of Text")
+ ELSE
+   GET_STRING "Requested String '"&VAL$(SearchString)&"' was not found   [OK]", dummy
+ END IF
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Check_Gui" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ !---this Program populates array FoundGuiLocations
+ 
+ 
+ 
+ GLOBAL_VAR  SearchString
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  tmpLine
+ 
+ 
+ GET_STRING "Path2Gui", Path2Gui
+ 
+ !---save all GUIs of current path, altogether to a file
+ ICCAP_FUNC(VAL$(Path2Gui)&"/GUIItems", "Save As", "tmp.gui")
+ 
+ !---open file
+ FileID = USERC_open("tmp.gui", "r")
+ 
+ !---start loop off
+ RetVal=1 
+ WHILE RetVal>=0
+   tmpLine=""
+   RetVal = USERC_readstr(FileID, 0, "%[^\r\n]", tmpLine)
+ 
+   !---verify if VarName in search is part of currently read line
+   IF STRPOS(VAL$(tmpLine), VAL$(SearchString))>0 THEN 
+     RetVal=ARRAY_INSERT_AT(FoundGuiLocations, Path2Gui)
+     BREAK
+   END IF
+ 
+   RetVal=1 ! even if last RetVal was negative, there may just be a blank line
+   WHILE RetVal>=0 AND VAL$(tmpLine)<>CHR$(10)
+      RetVal=USERC_readstr(FileID, 0, "%1[\n\r]", tmpLine)
+   END WHILE
+      
+ END WHILE
+ 
+ !---close file
+ dummy = USERC_close(FileID)
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Edit_Macro_or_Program" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ 
+ ! This Program opens an editor for the requested Macro or Transform
+ ! It is called by the GUI. Don't execute it manually!
+ 
+ 
+ GLOBAL_VAR  FoundXfmLocations
+ GLOBAL_VAR  FoundXfmLocations_sel
+ GLOBAL_VAR  FoundMacroLocations
+ GLOBAL_VAR  FoundMacroLocations_sel
+ GLOBAL_VAR  MacroXfmContents
+ 
+ 
+ 
+ !---get Transform contents
+ IF FoundXfmLocations_sel>=0 THEN 
+   Path2Xfm=VAL$(FoundXfmLocations[FoundXfmLocations_sel])
+ 
+   !---import the contents of the Program into a temp. variable
+   MacroXfmContents=LOOKUP_TABLE_VAL(VAL$(Path2Xfm), "Program")   !"Program" is the keyword to get all the Program/Program2 PEL code into the Variable 'MacroXfmContents'
+ END IF
+ 
+ 
+ !---get Macro contents
+ IF FoundMacroLocations_sel>=0 THEN 
+   Path2Macro=VAL$(FoundMacroLocations[FoundMacroLocations_sel])
+ 
+   !---import the contents of the Macro into a temp. variable
+   MacroXfmContents=LOOKUP_TABLE_VAL(VAL$(Path2Macro), "Text")   !"Text" is the keyword to get all the Macro PEL code into the Variable 'MacroXfmContents'
+ END IF
+ 
+ 
+ !---open an Editor GUI
+ ICCAP_FUNC("./GUI_EditXfmMacro", "Display Modeless GUI", "Edit Text")
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "gui_Edit_Gui" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  FoundGuiLocations_sel
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  FoundGuiLocations_sel
+ 
+ 
+ 
+ !---this Programs opens Notepad.exe, showing the GUI code
+ 
+ 
+ IF FoundGuiLocations_sel<0 THEN RETURN_VALUE -1
+ !---save selected Gui parent a file
+ ICCAP_FUNC(VAL$(FoundGuiLocations[FoundGuiLocations_sel])&"/GUIItems", "Save As", "tmp.gui")
+ !---open Windows Notepad
+ dummy = SYSTEM("notepad.exe ./tmp.gui")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "gui_CloseXfmMacro" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  FoundXfmLocations
+ GLOBAL_VAR  FoundXfmLocations_sel
+ GLOBAL_VAR  FoundMacroLocations
+ GLOBAL_VAR  FoundMacroLocations_sel
+ GLOBAL_VAR  MacroXfmContents
+ 
+ 
+ !---this is answered by the calling GUI
+ GET_STRING "Seems you have hit the [x] button on the upper right window corner !!!
+ What to do ?
+   => To save your editing, *manually enter now*  'OK', 
+   => To cancel, *manually enter now*  'Cancel'
+ Finally, hit [OK]
+ 
+ NEXT TIME, HIT RATHER THE ACTION BUTTONS [OK] or [Cancel] *inside* the GUI !!!", Answer
+ 
+ 
+ !---destroy GUI
+ ICCAP_FUNC("./GUI_EditXfmMacro", "Destroy GUI", "Edit Text")
+ 
+ 
+ IF VAL$(Answer)=="OK" THEN
+   IF FoundMacroLocations_sel>=0 THEN 
+     Path2Macro=VAL$(FoundMacroLocations[FoundMacroLocations_sel])
+     ICCAP_FUNC(Path2Macro, "STFV", "Text", ASCII$(VAL$(MacroXfmContents)))   !"Text" is the keyword to access the Macro Editor Field
+   END IF
+ 
+   IF FoundXfmLocations_sel>=0 THEN 
+     Path2Xfm=VAL$(FoundXfmLocations[FoundXfmLocations_sel])
+     ICCAP_FUNC(Path2Xfm, "STFV", "Program", ASCII$(VAL$(MacroXfmContents)))   !"Text" is the keyword to access the Macro Editor Field
+   END IF
+ 
+ END IF
+ 
+ 
+ FoundXfmLocations_sel=-1
+ FoundMacroLocations_sel=-1
+ 
+ MacroXfmContents=""
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "___" "711.501"
+{
+}
+LINK XFORM "Clean_Up" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ MacroNames = ""
+ FoundMacroLocations = ""
+ FoundMacroLocations_sel = ""
+ DutNames = ""
+ SetupNames = ""
+ XfmNames = ""
+ FoundXfmLocations = ""
+ FoundXfmLocations_sel = ""
+ FoundGuiLocations = ""
+ FoundGuiLocations_sel = ""
+ MacroXfmContents = ""
+ tmpLine = ""
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "________________________________1" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "SEARCH_A_VARIABLE" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Var_in_Variables_Tables" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 C15 P365 C10"
+element 0 "Name" "!Path2Model"
+element 0 "Value" "it's a ModelVariable"
+element 1 "Name" "_______________________1"
+element 1 "Value" ""
+element 2 "Name" "DutNames[0]"
+element 2 "Value" "thermochuck_driver"
+element 3 "Name" "DutNames[1]"
+element 3 "Value" "prober_driver"
+element 4 "Name" "DutNames[2]"
+element 4 "Value" "matrix_driver"
+element 5 "Name" "DutNames[3]"
+element 5 "Value" "aux"
+element 6 "Name" "DutNames[4]"
+element 6 "Value" "__________________________"
+element 7 "Name" "DutNames[5]"
+element 7 "Value" "measurements"
+element 8 "Name" "DutNames"
+element 8 "Value" "ICCAP_ARRAY[6]"
+element 9 "Name" "SetupNames[0]"
+element 9 "Value" "meas_def"
+element 10 "Name" "SetupNames[1]"
+element 10 "Value" "____________MOS_DC"
+element 11 "Name" "SetupNames[2]"
+element 11 "Value" "idvg"
+element 12 "Name" "SetupNames[3]"
+element 12 "Value" "idvd"
+element 13 "Name" "SetupNames[4]"
+element 13 "Value" "param_DC_ion"
+element 14 "Name" "SetupNames[5]"
+element 14 "Value" "___________MOS_CAP"
+element 15 "Name" "SetupNames[6]"
+element 15 "Value" "c_g_dsb"
+element 16 "Name" "SetupNames[7]"
+element 16 "Value" "c_b_g"
+element 17 "Name" "SetupNames[8]"
+element 17 "Value" "_________MOS_DIODE"
+element 18 "Name" "SetupNames[9]"
+element 18 "Value" "idiode_d_b"
+element 19 "Name" "SetupNames[10]"
+element 19 "Value" "_____________RINGO"
+element 20 "Name" "SetupNames[11]"
+element 20 "Value" "ringo"
+element 21 "Name" "SetupNames"
+element 21 "Value" "ICCAP_ARRAY[12]"
+element 22 "Name" "VarFound"
+element 22 "Value" "0"
+element 23 "Name" "VarPath"
+element 23 "Value" ""
+element 24 "Name" "VarName"
+element 24 "Value" "vt"
+element 25 "Name" "VarVal"
+element 25 "Value" ""
+element 26 "Name" "iFound"
+element 26 "Value" "0"
+element 27 "Name" "_______________________2"
+element 27 "Value" ""
+element 28 "Name" "ParFound"
+element 28 "Value" ""
+element 29 "Name" "ParName"
+element 29 "Value" "DMAIN.IS"
+element 30 "Name" "_______________________3"
+element 30 "Value" ""
+element 31 "Name" "GUI_xPos"
+element 31 "Value" "420"
+element 32 "Name" "GUI_yPos"
+element 32 "Value" "183"
+element 33 "Name" ""
+element 33 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "GUI_Results"
+element 0 "Value" "TL|HT=600:OR=VE:WD=400:LX=%#18GUI_xPos:LY=%#18GUI_yPos|<none>|#214TL_ActiveModel:#215TL_EnterVarName:#217TL_VarPath_VarVal|1|0"
+element 1 "Name" "GUI_Results.TL_EnterVarName"
+element 1 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#210ED_VarName:#216PB_FindLocations:#15Space|1"
+element 2 "Name" "GUI_Results.TL_EnterVarName.ED_VarName"
+element 2 "Value" "ED|CA=#291Enter Full Variable Name  (no wildcards)\072                                               :VA=%#17VarName:TO=FW&FH&TL|<none>|<none>|0"
+element 3 "Name" "GUI_Results.TL_EnterVarName.PB_FindLocations"
+element 3 "Value" "PB|CA=#16Search:TO=FW&FH|AC=#216gui_Look_for_Var&#17Execute|<none>|0"
+element 4 "Name" "GUI_Results.TL_EnterVarName.Space"
+element 4 "Value" "TL|<none>|<none>|<none>|0"
+element 5 "Name" "GUI_Results.TL_ActiveModel.LA_ActiveModel"
+element 5 "Value" "LA|CA=#221Active Model Name\072:TO=FW&FH&TL|<none>|<none>|0"
+element 6 "Name" "GUI_Results.TL_ActiveModel"
+element 6 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#214LA_ActiveModel:#218LA_ActiveModelName:#15Space:#15PB_OK|1"
+element 7 "Name" "GUI_Results.TL_ActiveModel.LA_ActiveModelName"
+element 7 "Value" "LA|CA=%#210Path2Model:FG=C6:TO=FW&FH|<none>|<none>|0"
+element 8 "Name" "GUI_Results.TL_ActiveModel.Space"
+element 8 "Value" "TL|<none>|<none>|<none>|0"
+element 9 "Name" "GUI_Results.TL_ActiveModel.PB_OK"
+element 9 "Value" "PB|CA=#210OK, Done !:TO=FW&FH|AC=#213./GUI_Results&#253Destroy GUI,Found Variable Locations and their Values|<none>|0"
+element 10 "Name" "GUI_Results.TL_VarPath_VarVal"
+element 10 "Value" "TL|<none>|<none>|<none>|0"
+element 11 "Name" ""
+element 11 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1803,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ ! LOOK_FOR_VAR and its sub-programs identify
+ ! location(s) of a user-entered Name of a Variable, 
+ ! in the Variable hierarchy of an IC-CAP ModelFile.
+ 
+ ! NOTICE:
+ ! The top-most hierarchy level, /IC-CAP/Tools/SystemVariables
+ ! is not included !
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "__________________1" "711.501"
+{
+}
+LINK XFORM "LOOK_FOR_VAR" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ! NOTE:
+ ! for model selection, execute first Macro 'AutoExecute'
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+ ParentName="./GUI_Results"
+ ChildName="TL_VarPath_VarVal"
+ Path2Child=VAL$(ParentName)&"."&VAL$(ChildName)
+ 
+ 
+ !---Remove existing child GUI
+ ICCAP_FUNC("./"&VAL$(Path2Child),"Delete")
+ 
+ !---Create a new child GUI (a table)
+ ChildObject="TL"	!###>Table
+ ICCAP_FUNC(ParentName,"Add GUI",ChildName,ChildObject)
+ 
+ 
+ !---display the GUI
+ ICCAP_FUNC("./GUI_Results", "Display Modeless GUI", "Found Variable Locations and their Values")
+ 
+ VarFound = 0
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "___aux_______________2" "711.501"
+{
+}
+LINK XFORM "Create_GUI" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  VarPath
+ GLOBAL_VAR  VarName
+ 
+ 
+ !First specify some useful local variables
+ ParentName="./GUI_Results"
+ ChildName="TL_VarPath_VarVal"
+ Path2Child=VAL$(ParentName)&"."&VAL$(ChildName)
+ 
+ 
+ !=====Remove existing child GUI======================
+ ICCAP_FUNC("./"&VAL$(Path2Child),"Delete")
+ 
+ !=====Create a new child GUI (a table)===============
+ ChildObject="TS"	!###>ScrollTable
+ ICCAP_FUNC(ParentName,"Add GUI",ChildName,ChildObject)
+ 
+ ParentName=VAL$(ParentName)&"."&VAL$(ChildName)
+ 
+ 
+ 
+ 
+ 
+ i=0
+ WHILE i < SIZEOF(VarPath)
+   !---Add Horizontal Table
+   ChildName   ="TL_"&VAL$(i)
+   ChildObject ="TL"	!###>Table
+   ICCAP_FUNC(ParentName, "Add GUI", ChildName, ChildObject)
+ 
+   !---Specify Table Orientation, Frame Visible, Fixwed Height
+   Path2Table=VAL$(ParentName)&"."&VAL$(ChildName)
+   ICCAP_FUNC(Path2Table, "Set GUI Options", "OR=HO", "FV=T", "TO=FH", "")
+ 
+   !---Create Label VarPathName
+   ChildName   ="LA_VarPathName"
+   ChildObject ="LA"	!###>Lable
+   ICCAP_FUNC(Path2Table, "Add GUI", ChildName, ChildObject)
+ 
+   !---Specify Lable Caption
+   Path2Child=VAL$(Path2Table)&"."&VAL$(ChildName)
+   ICCAP_FUNC(Path2Child, "Set GUI Options", "CA="&VAL$(VarPath[i])&"/"&VAL$(VarName), "")
+ 
+   !---Create EditField VarVal
+   ChildName   ="ED_VarVal"
+   ChildObject ="ED"	!###>EditField
+   ICCAP_FUNC(Path2Table, "Add GUI", ChildName, ChildObject)
+ 
+   !---Specify Edit Field Value
+   Path2Child=VAL$(Path2Table)&"."&VAL$(ChildName)
+   ICCAP_FUNC(Path2Child, "Set GUI Options", "VA=%VarVal["&VAL$(i)&"]", "")
+   !---Specify Callback
+   ICCAP_FUNC(Path2Child, "Set GUI Callback", "EP", "gui_Apply", "Execute,"&VAL$(i))
+ 
+   !---Create Apply-Button
+   ChildName   ="PB_Apply"
+   ChildObject ="PB"	!###>PushButton
+   ICCAP_FUNC(Path2Table, "Add GUI", ChildName, ChildObject)
+ 
+   !---Specify Caption
+   Path2Child=VAL$(Path2Table)&"."&VAL$(ChildName)
+   ICCAP_FUNC(Path2Child, "Set GUI Options", "CA=Apply Value Change", "TO=FW", "")
+ 
+   !---Specify Callback
+   ICCAP_FUNC(Path2Child, "Set GUI Callback", "AC", "gui_Apply", "Execute,"&VAL$(i))
+ 
+ 
+ i = i + 1
+ END WHILE
+ 
+ !---add space GUI
+   ChildName   ="Space"
+   ChildObject ="TL"	!###>Table
+   ICCAP_FUNC(ParentName, "Add GUI", ChildName, ChildObject)
+ 
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Look_for_Var" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ GLOBAL_VAR  Path2Model      !ModelVariable
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  SetupNames
+ GLOBAL_VAR  VarName
+ GLOBAL_VAR  VarFound
+ GLOBAL_VAR  VarPath
+ GLOBAL_VAR  VarVal
+ GLOBAL_VAR  iFound
+ 
+ 
+ !---reset variables
+ VarPath=""
+ VarVal=""
+ iFound=0
+ VarFound = 0
+ 
+ IF VAL$(VarName)=="" THEN 
+   GET_STRING "ERROR: no Variable Name was entered !  [OK]", dummy
+   RETURN_VALUE -1
+ END IF
+ 
+ ICCAP_FIND_CHILDREN VAL$(Path2Model), "DUT", DutNames
+ ICCAP_FUNC("EchoPathVariable", "Execute", VAL$(Path2Model), VarName)
+ 
+ k=0
+ WHILE k < DutNames
+   dutpath = VAL$(Path2Model)&"/"&VAL$(DutNames[k])
+   ICCAP_FIND_CHILDREN dutpath, "Setup", SetupNames
+     
+   ICCAP_FUNC("EchoPathVariable", "Execute", dutpath, VarName)
+     
+   l=0
+   WHILE l<SetupNames
+     setpath = dutpath&"/"&VAL$(SetupNames[l])
+     ICCAP_FUNC("EchoPathVariable", "Execute", setpath, VarName)
+   l=l+1
+   END WHILE
+     
+   k=k+1
+ END WHILE
+   
+ IF VarFound==0 THEN 
+   GET_STRING "Variable "&VAL$(VarName)&" not found", dummy
+ ELSE
+   ICCAP_FUNC("Create_GUI", "Execute")
+   ICCAP_FUNC("./GUI_Results", "Display Modeless GUI", "Found Variable Locations and their Values")
+ END IF
+ 
+ VarFound = 0
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "EchoPathVariable" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  iFound
+ GLOBAL_VAR  VarPath
+ GLOBAL_VAR  VarVal
+ GLOBAL_VAR  VarFound
+ 
+ 
+ locpathname = "." !./DUT0/Setup01
+ locvarname = "testarray[1]"  !testname
+ 
+ GET_STRING "Path? '.'or'/Path'",locpathname,locpathname
+ GET_STRING "Variable?",locvarname,locvarname
+ 
+ interactive = 1
+ locvarfound = 0
+ searchname = "toto"
+ 
+ i=0
+ WHILE searchname<>""
+   searchname = lookup_table_val(locpathname,"Name["&val$(i)&"]",errstr1)
+   IF val$(searchname)==val$(locvarname) THEN 
+     variableval = LOOKUP_VAR(locpathname&"/"&locvarname,errstr2)
+     locvarfound = 1
+     VarFound = 1
+     searchname=""
+   END IF
+   i=i+1
+ END WHILE
+ 
+ 
+ IF locvarfound==1 THEN
+   iFound=iFound+1
+   VarPath="ICCAP_ARRAY["&VAL$(iFound)&"]"
+   VarVal ="ICCAP_ARRAY["&VAL$(iFound)&"]"
+   VarPath[iFound-1]=locpathname
+   VarVal[iFound-1] =variableval
+ END IF
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Apply" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ GET_INT "Enter index of VarPath", index
+ 
+ ICCAP_FUNC(VAL$(VarPath[index]), "SetVariableTableValue", VAL$(VarName), VAL$(VarVal[index]))
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "________________________________2" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "SEARCH_VARIABLE_USAGE" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C10 C10 C10"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+View par_var_table 0 "V530 P15 P100 P100 P100 P100 P100 P100 P100"
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "Search_Variable_Usage" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+View plot 0 "1.8 10708 8713"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P22 P261 P265 C10"
+element 0 "Name" "VarName_inSearch"
+element 0 "Value" "i_die"
+element 1 "Name" "________________________1"
+element 1 "Value" ""
+element 2 "Name" "!Path2Model"
+element 2 "Value" "it's a ModelVariable"
+element 3 "Name" "MacroNames"
+element 3 "Value" ""
+element 4 "Name" "FoundMacroLocations"
+element 4 "Value" ""
+element 5 "Name" "FoundMacroLocations_sel"
+element 5 "Value" "-1"
+element 6 "Name" "DutNames"
+element 6 "Value" ""
+element 7 "Name" "DutNames_sel"
+element 7 "Value" "-1"
+element 8 "Name" "SetupNames"
+element 8 "Value" ""
+element 9 "Name" "SetupNames_sel"
+element 9 "Value" "-1"
+element 10 "Name" "XfmNames[0]"
+element 10 "Value" "DEFINE_MEAS_RANGE"
+element 11 "Name" "XfmNames[1]"
+element 11 "Value" "MEASURE_SETUP"
+element 12 "Name" "XfmNames[2]"
+element 12 "Value" "reset2defaults"
+element 13 "Name" "XfmNames[3]"
+element 13 "Value" "___________________1"
+element 14 "Name" "XfmNames[4]"
+element 14 "Value" "RINGO_do_meas"
+element 15 "Name" "XfmNames[5]"
+element 15 "Value" "cut_string"
+element 16 "Name" "XfmNames"
+element 16 "Value" "ICCAP_ARRAY[6]"
+element 17 "Name" "FoundXfmLocations"
+element 17 "Value" ""
+element 18 "Name" "FoundXfmLocations_sel"
+element 18 "Value" "-1"
+element 19 "Name" "FoundGuiLocations"
+element 19 "Value" ""
+element 20 "Name" "FoundGuiLocations_sel"
+element 20 "Value" "-1"
+element 21 "Name" "FoundVariables"
+element 21 "Value" ""
+element 22 "Name" "FoundVariables_sel"
+element 22 "Value" "14"
+element 23 "Name" "VarTypes[0]"
+element 23 "Value" "Model Variable"
+element 24 "Name" "VarTypes[1]"
+element 24 "Value" "Dut Variable"
+element 25 "Name" "VarTypes[2]"
+element 25 "Value" "Dut/Setup Variable"
+element 26 "Name" "VarTypes"
+element 26 "Value" "ICCAP_ARRAY[3]"
+element 27 "Name" "VarTypes_sel"
+element 27 "Value" "-1"
+element 28 "Name" "Path2Variables"
+element 28 "Value" "/Wafertest"
+element 29 "Name" "Manage_GUI_DutNames"
+element 29 "Value" "0"
+element 30 "Name" "Manage_GUI_SetupNames"
+element 30 "Value" "0"
+element 31 "Name" "Manage_GUI_FoundMacrosList"
+element 31 "Value" "0"
+element 32 "Name" "Manage_GUI_FoundXfmList"
+element 32 "Value" "0"
+element 33 "Name" "Manage_GUI_FoundGuiList"
+element 33 "Value" "0"
+element 34 "Name" "Manage_GUI_DeleteVariable"
+element 34 "Value" "0"
+element 35 "Name" "tmpLine"
+element 35 "Value" ""
+element 36 "Name" "__________________________2"
+element 36 "Value" ""
+element 37 "Name" "GUI_xPos"
+element 37 "Value" "419"
+element 38 "Name" "GUI_yPos"
+element 38 "Value" "140"
+element 39 "Name" "XFORM_LIST_COLS"
+element 39 "Value" "20"
+element 40 "Name" "__________________________3"
+element 40 "Value" ""
+element 41 "Name" ""
+element 41 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "TL_Select_Variable_Name"
+element 0 "Value" "TL|CA=#222Find Usage of Variable:OR=VE:TO=FH&dummy:LX=%#18GUI_xPos:LY=%#18GUI_yPos|<none>|#214TL_ActiveModel:#210TL_VarType:#229TL_SelVarType_ShowMaxroXfmGui|1|0"
+element 1 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui"
+element 1 "Value" "TL|OR=HO|<none>|#214TL_Duts_Setups:#212TL_Variables:#13Sep:#214LI_FoundMacros:#218LI_FoundTransforms:#212LI_FoundGuis:#15Space|1"
+element 2 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.Space"
+element 2 "Value" "TL|<none>|<none>|<none>|0"
+element 3 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.TL_Duts_Setups.LI_DutNames"
+element 3 "Value" "LI|CA=#228STEP 2\072 Select  Dut  Name:IT=%#18DutNames:SX=%#212DutNames_sel:SY=SS:TO=FW&dummy:VI=20|LS=#222gui_Find_Variables_Mgr&#17Execute|<none>|0"
+element 4 "Name" "TL_Select_Variable_Name.TL_VarType.RX_VarType"
+element 4 "Value" "RX|CA=#243STEP 1\072   Select  Hierarchy of  Variable:IT=%#18VarTypes:OR=HO:SZ=%#212VarTypes_sel:TO=FW&FH&TL|LS=#216gui_Sel_Var_Type&#17Execute:RC=#216gui_Sel_Var_Type&#17Execute|<none>|0"
+element 5 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.TL_Variables.LI_SelVariable"
+element 5 "Value" "LI|CA=#246\075\075> Select Name of Variable            .:IT=%#214FoundVariables:SX=%#218FoundVariables_sel:SY=SS:VI=40|LS=#223gui_Check_Macro_Xfm_Gui&#17Execute|<none>|0"
+element 6 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.TL_Duts_Setups"
+element 6 "Value" "TL|CA=#248                                               .:MF=%Manage_GUI_DutNames:OR=HO:TO=FW&dummy|<none>|#211LI_DutNames:#213LI_SetupNames|1"
+element 7 "Name" "TL_Select_Variable_Name.TL_VarType"
+element 7 "Value" "TL|OR=HO|<none>|#210RX_VarType|1"
+element 8 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.TL_Duts_Setups.LI_SetupNames"
+element 8 "Value" "LI|CA=#228STEP 3\072 Select Setup Name:IT=%#210SetupNames:MF=%Manage_GUI_SetupNames:SX=%#214SetupNames_sel:SY=SS:TO=FW&dummy:VI=20|LS=#222gui_Find_Variables_Mgr&#17Execute|<none>|0"
+element 9 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.LI_FoundMacros"
+element 9 "Value" "LI|CA=#260Macros in IC-CAP's Hierarchy     .\012Using the Variable\072:IT=%#219FoundMacroLocations:MF=%Manage_GUI_FoundMacrosList:SX=%#223FoundMacroLocations_sel:SY=SS:TO=FW&dummy:VI=40|LS=#222gui_View_Macro_Xfm_Gui&#213Execute,Macro|<none>|0"
+element 10 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.LI_FoundTransforms"
+element 10 "Value" "LI|CA=#265Transforms  in IC-CAP's Hierarchy     .\012Using The Variable\072:IT=%#217FoundXfmLocations:MF=%Manage_GUI_FoundXfmList:SX=%#221FoundXfmLocations_sel:SY=SS:TO=FW&dummy:VI=40|LS=#222gui_View_Macro_Xfm_Gui&#211Execute,Xfm|<none>|0"
+element 11 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.TL_Variables"
+element 11 "Value" "TL|OR=VE:TO=FW&dummy|<none>|#214LI_SelVariable:#218PB_Delete_Variable|1"
+element 12 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.TL_Variables.PB_Delete_Variable"
+element 12 "Value" "PB|CA=#226Delete The Unused Variable:MF=%Manage_GUI_DeleteVariable:TO=FW&FH|AC=#219gui_Delete_Variable&#17Execute|<none>|0"
+element 13 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.LI_FoundGuis"
+element 13 "Value" "LI|CA=#259Guis  in IC-CAP's Hierarchy     .\012Using The Variable\072:IT=%#217FoundGuiLocations:MF=%Manage_GUI_FoundGuiList:SX=%#221FoundGuiLocations_sel:SY=SS:TO=FW&dummy:VI=40|LS=#222gui_View_Macro_Xfm_Gui&#211Execute,Gui|<none>|0"
+element 14 "Name" "TL_Select_Variable_Name.TL_SelVarType_ShowMaxroXfmGui.Sep"
+element 14 "Value" "SE|OR=VE:TO=FW&dummy|<none>|<none>|0"
+element 15 "Name" "TL_Select_Variable_Name.TL_ActiveModel.LA_ActiveModel"
+element 15 "Value" "LA|CA=#221Active Model Name\072:TO=FW&FH&TL|<none>|<none>|0"
+element 16 "Name" "TL_Select_Variable_Name.TL_ActiveModel"
+element 16 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#214LA_ActiveModel:#218LA_ActiveModelName:#15Space:#15PB_OK|1"
+element 17 "Name" "TL_Select_Variable_Name.TL_ActiveModel.LA_ActiveModelName"
+element 17 "Value" "LA|CA=%#210Path2Model:FG=C6:TO=FW&FH|<none>|<none>|0"
+element 18 "Name" "TL_Select_Variable_Name.TL_ActiveModel.Space"
+element 18 "Value" "TL|<none>|<none>|<none>|0"
+element 19 "Name" "TL_Select_Variable_Name.TL_ActiveModel.PB_OK"
+element 19 "Value" "PB|CA=#210OK, Done !:TO=FW&FH|AC=#225./TL_Select_Variable_Name&#227Destroy GUI,Select Variable|<none>|0"
+element 20 "Name" ""
+element 20 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1803,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ ! SEARCH_VARIABLE_USAGE and its sub-programs
+ ! assist with cleaning up existing PEL programs
+ ! and their Variables usage.
+ !
+ !  The user selects a Variable on the 
+ !  Model/Dut/Setup hierarchy level,
+ !  and SEARCH_VARIABLE_USAGE identifies its usage
+ !  in Macros/Transforms/GUIs, 
+ !  dependent on the hierarchy of the user-selected
+ !  Variable. 
+ !
+ !  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ !   Unused Variables are identified and offered to the user
+ !   for being deleted.
+ !  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ !
+ !  If the push button "Delete The Unused Variable" is
+ !  selected, a final search for usage of relative paths is
+ !  performed, and potential usage locations others than the
+ !  standard hierarchy (Setup -> Dut -> Model) are displayed.
+ !
+ ! If no relative path usage can be found, 
+ ! the user is asked a last time, 
+ ! and if OK, the variable is deleted.
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "__________________1" "711.501"
+{
+}
+LINK XFORM "SEARCH_VARIABLE_USAGE" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ 
+ 
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ! NOTE:
+ ! for model selection, execute first Macro 'AutoExecute'
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+ ICCAP_FUNC("Clean_Up", "Execute")
+ 
+ 
+ !---open Variable Selection GUI
+ ICCAP_FUNC("./TL_Select_Variable_Name", "Display Modeless GUI", "Select Variable")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "____aux______________2" "711.501"
+{
+}
+LINK XFORM "Select_Model" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ GLOBAL_VAR  ErrMsg			!ModelVariable
+ GLOBAL_VAR  Path2Model
+ 
+ 
+ !---open Model Selection GUI
+ SearchFieldLabel="n/a"
+ Path2Setup = WHOIS(".", "Parent Setup")
+ VarName="VarName_inSearch"
+ ICCAP_FUNC("../../aux/aux/Select_Model", "Execute", VAL$(SearchFieldLabel), VAL$(Path2Setup), VAL$(VarName))
+ !---exit if no Model had been selected
+ IF VAL$(ErrMsg)<>"" THEN 
+   GET_STRING "ERROR: No Model had been selected   [OK]", dummy
+   RETURN_VALUE 0
+ END IF
+ !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "gui_Sel_Var_Type" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  DutNames_sel
+ GLOBAL_VAR  SetupNames_sel
+ GLOBAL_VAR  FoundGuiLocations
+ 
+ 
+ 
+ DutNames_sel = -1
+ SetupNames_sel = -1
+ 
+ 
+ ICCAP_FUNC("gui_Find_Variables_Mgr", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Find_Variables_Mgr" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  Path2Variables
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  VarTypes_sel
+ GLOBAL_VAR  FoundVariables
+ GLOBAL_VAR  Manage_GUI_DutNames
+ GLOBAL_VAR  Manage_GUI_SetupNames
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  DutNames_sel
+ GLOBAL_VAR  SetupNames
+ GLOBAL_VAR  SetupNames_sel
+ GLOBAL_VAR  Manage_GUI_FoundMacrosList
+ GLOBAL_VAR  Manage_GUI_FoundXfmList
+ GLOBAL_VAR  Manage_GUI_FoundGuiList
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  Manage_GUI_DeleteVariable
+ 
+ 
+ 
+ FoundVariables = ""
+ FoundGuiLocations = ""
+ Manage_GUI_FoundMacrosList = 0
+ Manage_GUI_FoundXfmList = 0
+ Manage_GUI_FoundGuiList = 0
+ Manage_GUI_DeleteVariable=0
+ 
+ !---Model Variables
+ IF VarTypes_sel == 0 THEN 
+   Manage_GUI_DutNames = 0
+   Manage_GUI_SetupNames = 0
+   Path2Variables = VAL$(Path2Model)
+   ICCAP_FUNC("Find_Variables", "Execute")
+ END IF
+ 
+ 
+ !---Dut Names
+ IF VarTypes_sel == 1 THEN
+   Manage_GUI_SetupNames = 0
+   ICCAP_FUNC("Find_Duts", "Execute")
+ 
+   IF VAL(DutNames_sel)>=0 THEN
+     Path2Variables = VAL$(Path2Model)&"/"&VAL$(DutNames[DutNames_sel])
+     ICCAP_FUNC("Find_Variables", "Execute")
+   END IF
+ END IF
+ 
+ 
+ !---Setup Names
+ IF VarTypes_sel == 2 THEN
+   Manage_GUI_DutNames = 1
+   Manage_GUI_SetupNames = 0
+   ICCAP_FUNC("Find_Duts", "Execute")
+ 
+   IF (VAL(DutNames_sel)>=0) ANDALSO (VAL(SetupNames_sel)>=0) THEN
+     Path2Variables = VAL$(Path2Model)&"/"&VAL$(DutNames[DutNames_sel])&"/"&VAL$(SetupNames[SetupNames_sel])
+     ICCAP_FUNC("Find_Variables", "Execute")
+   END IF
+ END IF
+ 
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Check_Macros" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  ErrMsg			!ModelVariable
+ GLOBAL_VAR  VarName_inSearch
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  MacroNames
+ GLOBAL_VAR  FoundMacroLocations
+ 
+ 
+ ErrMsg = ""
+ 
+ !===check all Macros for Usage of Variable==============================================================
+ FoundMacroLocations = ""
+ 
+ !---identify Macros
+ ICCAP_FIND_CHILDREN VAL$(Path2Model), "Macro", MacroNames
+ 
+ !---look for VarName in found Macros
+ FOR iMacro=0 TO SIZEOF(MacroNames)-1
+   Path2Macro=VAL$(Path2Model)&"/"&VAL$(MacroNames[iMacro])
+   !---import the contents of the Macro
+   MacroContents = LOOKUP_TABLE_VAL(VAL$(Path2Macro), "Text", ErrMsg)	   !"Text" is the keyword to get all the Macro PEL code into the Variable 'x'
+   IF VAL$(ErrMsg)=="" THEN   !it's PEL and *NOT* Python
+     IF STRPOS(VAL$(MacroContents), VAL$(VarName_inSearch)) > 0 THEN
+       DIMENSION_ARRAY(FoundMacroLocations, SIZEOF(FoundMacroLocations)+1)
+       FoundMacroLocations[SIZEOF(FoundMacroLocations)-1]=VAL$(Path2Macro)
+     END IF
+   ELSE
+     ErrMsg=""
+   END IF
+ NEXT iMacro
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Check_Transforms" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  ErrMsg			!ModelVariable
+ GLOBAL_VAR  VarName_inSearch
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  SetupNames
+ GLOBAL_VAR  XfmNames
+ GLOBAL_VAR  FoundXfmLocations
+ 
+ 
+ GET_STRING "Path2Setup", Path2Setup
+ 
+ ErrMsg=""
+ 
+ !===check all Transforms for Usage of Variable==============================================================
+ ICCAP_FIND_CHILDREN VAL$(Path2Setup), "Transform", XfmNames
+ 
+ FOR iXfm=0 TO SIZEOF(XfmNames)-1
+   Path2Xfm=VAL$(Path2Setup)&"/"&VAL$(XfmNames[iXfm])
+ 
+   !---verify if it's a Program or Program2
+   x = LOOKUP_TABLE_VAL(VAL$(Path2Xfm), "Function")
+   IF (VAL$(x)=="Program") OR (VAL$(x)=="Program2") THEN
+      
+     !---import the contents of the Program			! always apply the keyword 'Program' to access the PEL *editor* code, 
+     ProgramContents=LOOKUP_TABLE_VAL(VAL$(Path2Xfm), "Program")	!   independently of wether you are using the *function* 'Program' or 'Program2'.
+ 
+     !---find out if search string is part of currently loaded program
+     IF STRPOS(VAL$(ProgramContents), VAL$(VarName_inSearch)) > 0 THEN
+       DIMENSION_ARRAY(FoundXfmLocations, SIZEOF(FoundXfmLocations)+1)
+       FoundXfmLocations[SIZEOF(FoundXfmLocations)-1] = VAL$(Path2Xfm)
+     END IF
+   END IF
+ NEXT iXfm
+ 
+ 
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Check_Gui" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  VarName_inSearch
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  tmpLine
+ GLOBAL_VAR  Manage_GUI_FoundGuiList
+ 
+ 
+ GET_STRING "Path2Gui", Path2Gui
+ 
+ 
+ !---save all Guis of current path together to a file
+ ICCAP_FUNC(VAL$(Path2Gui)&"/GUIItems", "Save As", "tmp.gui")
+ 
+ !---open file
+ FileID = USERC_open("tmp.gui", "r")
+ 
+ !---start loop off
+ RetVal=1 
+ WHILE RetVal>=0
+   tmpLine=""
+   RetVal = USERC_readstr(FileID, 0, "%[^\r\n]", tmpLine)
+ 
+   !---verify if VarName_inSearch is part of currently read line
+   IF STRPOS(VAL$(tmpLine), VAL$(VarName_inSearch))>0 THEN 
+     RetVal=ARRAY_INSERT_AT(FoundGuiLocations, Path2Gui)
+     BREAK
+   END IF
+ 
+   RetVal=1 ! even if last RetVal was negative, there may just be a blank line
+   WHILE RetVal>=0 AND VAL$(tmpLine)<>CHR$(10)
+      RetVal=USERC_readstr(FileID, 0, "%1[\n\r]", tmpLine)
+   END WHILE
+      
+ END WHILE
+ 
+ !---close file
+ dummy = USERC_close(FileID)
+ 
+ 
+ !---activate GUI
+ IF SIZEOF(FoundGuiLocations)>0 THEN Manage_GUI_FoundGuiList=1
+ 
+ 
+ RETURN_VALUE 1
+ 
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Find_Duts" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  DutNames_sel
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  Manage_GUI_DutNames
+ GLOBAL_VAR  VarTypes_sel
+ 
+ 
+ ICCAP_FIND_CHILDREN VAL$(Path2Model), "DUT", DutNames
+ DutNames_sel = MIN(SIZEOF(DutNames)-1, DutNames_sel)
+ 
+ Manage_GUI_DutNames = 1
+ 
+ IF VAL(VarTypes_sel)==2 THEN
+   ICCAP_FUNC("Find_Setups", "Execute")
+ END IF
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Find_Setups" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  DutNames_sel
+ GLOBAL_VAR  SetupNames
+ GLOBAL_VAR  SetupNames_sel
+ GLOBAL_VAR  Manage_GUI_SetupNames
+ 
+ IF VAL(DutNames_sel) < 0 THEN RETURN_VALUE 0
+ 
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ 
+ Path2Dut=VAL$(Path2Model)&"/"&VAL$(DutNames[DutNames_sel])
+ ICCAP_FIND_CHILDREN VAL$(Path2Dut), "Setup", SetupNames
+ SetupNames_sel = MIN(SIZEOF(SetupNames)-1, SetupNames_sel)
+ 
+ Manage_GUI_SetupNames = 1
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Find_Variables" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  Path2Variables
+ GLOBAL_VAR  FoundVariables
+ GLOBAL_VAR  FoundVariables_sel
+ 
+ 
+ 
+ FoundVariables=""
+ N=0
+ i=0
+ ErrMsg=""
+ WHILE VAL$(ErrMsg)==""
+   VarName  = LOOKUP_TABLE_VAL(VAL$(Path2Variables), "Name["&VAL$(i)&"]", ErrMsg)
+   VarValue = LOOKUP_TABLE_VAL(VAL$(Path2Variables), "Value["&VAL$(i)&"]", ErrMsg)
+   IF (VAL$(ErrMsg)=="") ANDALSO (VAL$(VarName)<>"") ANDALSO (STRPOS(VAL$(VarName), "[")==0) THEN
+     DIMENSION_ARRAY("FoundVariables", N+1)
+     !---add marker [] if it's an ICCAP_ARRAY
+     IF STRPOS(VAL$(VarValue), "[")>0 THEN VarName = VAL$(VarName)&"[ ]"
+     FoundVariables[N] =VarName
+     N = N + 1
+   END IF
+   i = i + 1
+ END WHILE
+ 
+ 
+ IF SIZEOF(FoundVariables)==0 THEN
+   DIMENSION_ARRAY(FoundVariables, 1)
+   FoundVariables[0] = "=> No Variables !!! <="
+ END IF
+ 
+ FoundVariables_sel = -1
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Check_Macro_Xfm_Gui" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ 
+ !---this Program checks for 'VarName_inSearch' in Macros, Programs and GUIs
+ GLOBAL_VAR  FoundVariables
+ GLOBAL_VAR  FoundVariables_sel
+ GLOBAL_VAR  VarName_inSearch
+ GLOBAL_VAR  VarTypes_sel
+ GLOBAL_VAR  Manage_GUI_FoundMacrosList
+ GLOBAL_VAR  Manage_GUI_FoundXfmList
+ GLOBAL_VAR  Manage_GUI_FoundGuiList
+ GLOBAL_VAR  Manage_GUI_DeleteVariable
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  DutNames
+ GLOBAL_VAR  DutNames_sel
+ GLOBAL_VAR  SetupNames
+ GLOBAL_VAR  SetupNames_sel
+ GLOBAL_VAR  FoundXfmLocations
+ GLOBAL_VAR  FoundXfmLocations_sel
+ GLOBAL_VAR  FoundMacroLocations
+ GLOBAL_VAR  FoundMacroLocations_sel
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  FoundGuiLocations_sel
+ 
+ 
+ 
+ FoundXfmLocations_sel   = -1
+ FoundMacroLocations_sel = -1
+ FoundGuiLocations_sel   = -1
+ FoundXfmLocations   = ""
+ FoundMacroLocations = ""
+ FoundGuiLocations   = ""
+ Manage_GUI_DeleteVariable = 0
+ 
+ IF VAL(FoundVariables_sel)<0 THEN RETURN_VALUE 0
+ 
+ 
+ VarName_inSearch = VAL$(FoundVariables[FoundVariables_sel])
+ !---get rid of ICCAP_ARRAY indicator []
+ VarName_inSearch = TRIM$(VAL$(VarName_inSearch), "[ ]")
+ 
+ !---ModelVariable
+ IF VarTypes_sel == 0 THEN
+   !---search in Macros
+   ICCAP_FUNC("Check_Macros", "Execute")
+   !---search in Model Guis
+   ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Model))
+ 
+   !---search in Dut/Setup Guis and in all Transforms of the Model
+   ICCAP_FIND_CHILDREN VAL$(Path2Model), "DUT", DutNames
+   FOR iDut=0 TO SIZEOF(DutNames)-1
+     Path2Dut=VAL$(Path2Model)&"/"&VAL$(DutNames[iDut])
+     !---search in Dut Guis
+     ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Dut))
+ 
+     ICCAP_FIND_CHILDREN VAL$(Path2Dut), "Setup", SetupNames
+     FOR iSetup=0 TO SIZEOF(SetupNames)-1
+       Path2Setup=VAL$(Path2Dut)&"/"&VAL$(SetupNames[iSetup])
+       !---search in Transforms
+       ICCAP_FUNC("Check_Transforms", "Execute", VAL$(Path2Setup))
+       !---search in Setup Guis
+       ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Setup))
+     NEXT iSetup
+   NEXT iDut
+   Manage_GUI_FoundMacrosList = 1
+   Manage_GUI_FoundXfmList = 1
+ END IF
+ 
+ 
+ !---DutVariable: search in Dut/Setup Guis and in all Transforms of all Setups of the Dut
+ IF VarTypes_sel == 1 THEN
+   Path2Dut=VAL$(Path2Model)&"/"&VAL$(DutNames[DutNames_sel])
+   !---search in Dut Guis
+   ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Dut))
+   Manage_GUI_FoundGuiList = 1
+ 
+   ICCAP_FIND_CHILDREN VAL$(Path2Dut), "Setup", SetupNames
+   FOR iSetup=0 TO SIZEOF(SetupNames)-1
+     Path2Setup=VAL$(Path2Dut)&"/"&VAL$(SetupNames[iSetup])
+     !---search in Transforms
+     ICCAP_FUNC("Check_Transforms", "Execute", VAL$(Path2Setup))
+     !---search in Setup Guis
+     ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Setup))
+     Manage_GUI_FoundGuiList = 1
+   NEXT iSetup
+   Manage_GUI_FoundMacrosList = 0
+   Manage_GUI_FoundXfmList = 1
+ END IF
+ 
+ 
+ !---SetupVariable: search Transforms of the Setup
+ IF VarTypes_sel == 2 THEN
+   Path2Setup=VAL$(Path2Model)&"/"&VAL$(DutNames[DutNames_sel])&"/"&VAL$(SetupNames[SetupNames_sel])
+   !---search in Transforms
+   ICCAP_FUNC("Check_Transforms", "Execute", VAL$(Path2Setup))
+   !---search in Setup Guis
+   ICCAP_FUNC("Check_Gui", "Execute", VAL$(Path2Setup))
+   Manage_GUI_FoundMacrosList = 0
+   Manage_GUI_FoundXfmList = 1
+   Manage_GUI_FoundGuiList = 1
+ END IF
+ 
+ 
+ !---if no Macros/Xfms/Guis with selected Variable have been found, 
+ !     enable the user to delete this Variable
+ IF (SIZEOF(FoundMacroLocations)==0) ANDALSO (SIZEOF(FoundXfmLocations)==0) ANDALSO(SIZEOF(FoundGuiLocations)==0) THEN
+   IF VAL$(FoundVariables[0]) <> "=> No Variables !!! <=" THEN
+     Manage_GUI_DeleteVariable=1
+   END IF
+ END IF
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Delete_Variable" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ GLOBAL_VAR  VarName_inSearch
+ GLOBAL_VAR  Path2Variables
+ GLOBAL_VAR  Manage_GUI_DeleteVariable
+ GLOBAL_VAR  ErrMsg
+ GLOBAL_VAR  VarTypes_sel
+ GLOBAL_VAR  FoundMacroLocations
+ GLOBAL_VAR  FoundXfmLocations
+ GLOBAL_VAR  FoundGuiLocations
+ 
+ 
+ !---check, if this Variable really exists !!!
+ ErrMsg=""
+ dummy=LOOKUP_VAR(VAL$(Path2Variables)&"/"&VAL$(VarName_inSearch), ErrMsg)
+ 
+ IF VAL$(ErrMsg)=="" THEN
+   GET_STRING "Next: checking if the variable is used in other locations, applying paths  [OK]", dummy
+   VarTypes_sel_orig = VAL(VarTypes_sel)
+   VarTypes_sel = 0
+   ICCAP_FUNC("gui_Check_Macro_Xfm_Gui", "Execute")
+   VarTypes_sel = VarTypes_sel_orig
+ 
+   IF (SIZEOF(FoundMacroLocations)==0) ANDALSO (SIZEOF(FoundXfmLocations)==0) ANDALSO (SIZEOF(FoundGuiLocations)==0) THEN
+ 
+     GET_STRING "WARNING: Variables named by CAPITAL characters may be SystemVariables !!!
+       Enter Delete, or Keep", "Keep", Answer
+     IF LWC$(VAL$(Answer))=="delete" THEN
+       !---delete the variable in the Model
+       ICCAP_FUNC(VAL$(Path2Variables), "SetTableFieldValue", "Name["&VAL$(VarName_inSearch)&"]", "") 
+       !---update the GUI
+       ICCAP_FUNC("Find_Variables", "Execute")
+     END IF
+   ELSE
+     GET_STRING "Variable is applied in other locations, using rel. paths !!
+      ==>  See the currently displayed locations !!
+      ==>  It cannot be deleted !!!   [OK]", dummy
+   END IF
+ ELSE
+   GET_STRING "ERROR: the requested Variable '"&VAL$(VarName_inSearch)&"' does not exist and therefore, cannot be deleted  [OK]", dummy
+ END IF
+ 
+ Manage_GUI_DeleteVariable = 0
+ ICCAP_FUNC("gui_Find_Variables_Mgr", "Execute")
+ ICCAP_FUNC("gui_Check_Macro_Xfm_Gui", "Execute")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "gui_View_Macro_Xfm_Gui" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ GLOBAL_VAR  FoundMacroLocations
+ GLOBAL_VAR  FoundMacroLocations_sel
+ GLOBAL_VAR  FoundXfmLocations
+ GLOBAL_VAR  FoundXfmLocations_sel
+ GLOBAL_VAR  FoundGuiLocations
+ GLOBAL_VAR  FoundGuiLocations_sel
+ 
+ 
+ GET_STRING "Location    [Xfm], [Macro], [Gui]", Location
+ 
+ 
+ IF VAL$(Location)== "Macro" THEN
+   IF FoundMacroLocations_sel<0 THEN RETURN_VALUE -1
+   ICCAP_FUNC(VAL$(FoundMacroLocations[FoundMacroLocations_sel]), "Edit")
+ END IF
+ 
+ 
+ IF VAL$(Location)== "Xfm" THEN
+   IF FoundXfmLocations_sel<0 THEN RETURN_VALUE -1
+   ICCAP_FUNC(VAL$(FoundXfmLocations[FoundXfmLocations_sel]), "Edit")
+ END IF
+ 
+ 
+ IF VAL$(Location)== "Gui" THEN
+   IF FoundGuiLocations_sel<0 THEN RETURN_VALUE -1
+   !---save selected Gui parent a file
+   ICCAP_FUNC(VAL$(FoundGuiLocations[FoundGuiLocations_sel])&"/GUIItems", "Save As", "tmp.gui")
+   !---open Windows Notepad
+   dummy = SYSTEM("notepad.exe ./tmp.gui")
+ END IF
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "Clean_Up" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program"
+}
+BLKEDIT "Program Body"
+{
+ UPDATE_EXPLICIT
+ GLOBAL_VAR  Debug
+ IF VAL(Debug)==1 THEN PRINT "exec.Xfm "&WHOAMI("PartName")&"..."
+ 
+ ErrMsg = ""
+ 
+ 
+ MacroNames = ""
+ DutNames   = ""
+ SetupNames = ""
+ FoundVariables = ""
+ 
+ Manage_GUI_DutNames = 0
+ Manage_GUI_SetupNames = 0
+ Manage_GUI_FoundMacrosList = 0
+ Manage_GUI_FoundXfmList = 0
+ Manage_GUI_FoundGuiList = 0
+ Manage_GUI_DeleteVariable = 0
+ 
+ VarTypes_sel = -1
+ 
+ 
+ FoundXfmLocations = ""
+ FoundMacroLocations = ""
+ FoundGuiLocations = ""
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+LINK DUT "________________________________5" "711.501"
+{
+View tree_dut 0 "1"
+TABLE "Variable Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+}
+LINK DUT "aux" "711.501"
+{
+View tree_dut 0 "0"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P15 C10 C10 C10"
+element 0 "Name" ""
+element 0 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" ""
+element 0 "Value" ""
+}
+LINK TCIRC "Test Circuit" "711.501"
+{
+data
+{
+circuitdeck
+{
+ 
+}
+}
+}
+LINK DPS "Device Parameter Set" "711.501"
+{
+data
+{
+PSTABLE "Parameter Table"
+{
+}
+}
+}
+LINK CONN "Connection" "711.501"
+{
+data
+{
+CNTABLE "Connection Table"
+{
+}
+}
+}
+LINK DAT "aux" "711.501"
+{
+View in_out 0 "1.8 2000 2000"
+TABLE "Variable Table" "711.501"
+{
+View par_var_table 0 "V530 P11 P173 P238 C20"
+element 0 "Name" "ModelNames[0]"
+element 0 "Value" "wafer_scanning"
+element 1 "Name" "ModelNames[1]"
+element 1 "Value" "Wafertest"
+element 2 "Name" "ModelNames[2]"
+element 2 "Value" "Find_Things__Si"
+element 3 "Name" "ModelNames"
+element 3 "Value" "ICCAP_ARRAY[3]"
+element 4 "Name" "ModelNames_sel"
+element 4 "Value" "1"
+element 5 "Name" "GUI_xPos"
+element 5 "Value" "79"
+element 6 "Name" "GUI_yPos"
+element 6 "Value" "35"
+element 7 "Name" "__________________________1"
+element 7 "Value" ""
+element 8 "Name" ""
+element 8 "Value" ""
+}
+TABLE "GUI Table" "711.501"
+{
+element 0 "Name" "GUI_SelectModel"
+element 0 "Value" "TL|OR=VE:WD=300:LX=%#18GUI_xPos:LY=%#18GUI_yPos|<none>|#214LI_AvailModels:#212TL_Cancel_OK|1|0"
+element 1 "Name" "GUI_SelectModel.LI_AvailModels"
+element 1 "Value" "LI|CA=#212Select Model:IT=%#210ModelNames:SX=%#214ModelNames_sel:SY=SS|<none>|<none>|0"
+element 2 "Name" "GUI_SelectModel.TL_Cancel_OK.PB_OK"
+element 2 "Value" "PB|CA=#12OK:TO=FW&FH&TR|AC=#213gui_Cancel_OK&#210Execute,OK|<none>|0"
+element 3 "Name" "GUI_SelectModel.TL_Cancel_OK"
+element 3 "Value" "TL|OR=HO:TO=FH&dummy|<none>|#15Space:#19PB_Cancel:#15PB_OK|1"
+element 4 "Name" "GUI_SelectModel.TL_Cancel_OK.PB_Cancel"
+element 4 "Value" "PB|CA=#16Cancel:TO=FW&FH&TR|AC=#213gui_Cancel_OK&#214Execute,Cancel|<none>|0"
+element 5 "Name" "GUI_SelectModel.TL_Cancel_OK.Space"
+element 5 "Value" "TL|<none>|<none>|<none>|0"
+element 6 "Name" ""
+element 6 "Value" ""
+}
+LINK SWEEP "see_under_ExtractOptimize" "711.501"
+{
+View draw_ds 0 "B,1803,166"
+data
+{
+HYPTABLE "Edit Sweep Info"
+{
+element "Mode" "V"
+element "Sweep Type" "CON"
+}
+HYPTABLE "Edit Sweep Mode Def"
+{
+element "+ Node" ""
+element "- Node" "GROUND"
+element "Unit" ""
+element "Compliance" " 0.000 "
+}
+HYPTABLE "Edit Sweep Def"
+{
+element "Value" " 0.000 "
+}
+}
+}
+LINK XFORM "README" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 0 0
+}
+}
+}
+LINK XFORM "Select_Model" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ GLOBAL_VAR  ModelNames
+ GLOBAL_VAR  ModelNames_sel
+ 
+ 
+ ! This Program identifies all loaded Models except itself
+ 
+ 
+ ModelNames_sel=-1
+ 
+ !---find loaded Models
+ ICCAP_FIND_CHILDREN "/", "Model", ModelNames
+ 
+ 
+ !---exclude myself
+ myName = WHOIS(".", "Parent Model PartName")
+ FOR i=0 TO SIZEOF(ModelNames)-1
+   IF VAL$(ModelNames[i])==VAL$(myName) THEN RetVal=ARRAY_REMOVE_AT(ModelNames, i)
+ NEXT i
+ 
+ 
+ !---open GUI for user selection of Model
+ ICCAP_FUNC("./GUI_SelectModel", "Display Modal GUI", "Select Model")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+LINK XFORM "gui_Cancel_OK" "711.501"
+{
+data
+{
+HYPTABLE "Link Transform"
+{
+element "Function" "Program2"
+}
+BLKEDIT "Program Body"
+{
+ GLOBAL_VAR  ModelNames
+ GLOBAL_VAR  ModelNames_sel
+ GLOBAL_VAR  Path2Model
+ GLOBAL_VAR  ErrMsg
+ 
+ GET_STRING "Action:  [Cancel], [OK]", Action
+ 
+ 
+ ErrMsg=""
+ 
+ !---export Model Selection
+ IF VAL$(Action)=="OK" THEN
+   IF VAL(ModelNames_sel<0) THEN 
+     GET_STRING "ERROR: Pls. Select a Model  [OK]", dummy
+     RETURN_VALUE 0
+   END IF
+   !---set user's selection
+   Path2Model = "/"&VAL$(ModelNames[ModelNames_sel])
+ ELSE
+   ErrMsg="User has hit Cancel"
+ END IF
+ 
+ 
+ !---close GUI
+ ICCAP_FUNC("./GUI_SelectModel", "Destroy GUI", "Select Model")
+ 
+ 
+ RETURN_VALUE 1
+}
+dataset
+{
+datasize COMMON 1 1 1
+type COMMON
+point 0 1 1 1 0
+}
+}
+}
+data "711.501"
+{
+}
+}
+}
+}

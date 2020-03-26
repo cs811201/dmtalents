@@ -1,0 +1,106 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>COPY-PASTE PROGRAMMING EXAMPLES</h3>
+<h4>Finding And Identifying Objects</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+When programing IC-CAP activities, the dynamic identification of current child and parent objects is important. This is provided by the Program Keywords  'ICCAP_FIND_CHILDREN', 'WHOIS' and 'WHOAMI'.
+
+<br/><br/>
+Note: see a <a href="#vdemo">Video demo</a> at the end of this page.<br/><br/>
+
+<font size="3">Identifying Child Objects</font>
+<br/><br/>
+<font color="blue" size="3">ICCAP_FIND_CHILDREN ".", "Plots",</font>  <font color="green" size="3">PlotNames</font>
+<br/><br/>
+
+automatically turns the variable (e.g. '<font
+        color="green">PlotNames</font>') into an ICCAP_ARRAY holding the names of the searched items  "<font
+        color="blue">Plots</font>", located in the Setup  "."  of the current Transform).
+<br/><br/>
+Search Item Keywords are:
+<ul>
+    Model<br/>
+    Macro<br/>
+    DUT<br/>
+    Setup<br/>
+    Input<br/>
+    Output<br/>
+    Transform<br/>
+    Plot<br/>
+    GUI Item
+</ul>
+<br/>
+<font size="3">
+    Examples:</font><br/>
+
+Set Variable 'myModelNames' to a list of all currently loaded Model Projects:<br/>
+<ul>
+    ICCAP_FIND_CHILDREN "/", "Model", myModelNames
+</ul>
+<br/>
+Set Variable 'myPlotNames' to a list of all Plots present in the Setup of the current Program Transform:<br/>
+<ul>
+    ICCAP_FIND_CHILDREN ".", "Plot", myPlotNames
+</ul>
+
+<br/>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<br/><br/>
+<font size="3">Identifying Parent Objects</font><br/><br/>
+
+<font size="3" color="green">ParentSetupName</font>  = <font size="3" color="blue">WHOIS(".", "Parent Setup")</font>
+<br/>
+returns the name of the <font
+        color="blue">Setup</font>  in which the command was executed, into Variable <font
+        color="green">ParentSetupName</font>.
+<br/><br/>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<br/><br/>
+<font size="3">Identifying The Current Transform Name</font><br/><br/>
+
+<font size="3" color="green">TransformName</font>  = <font size="3" color="blue">WHOAMI(".", "PartName")</font> <br/>
+
+returns the name of the Transform in which the command was executed, into Variable <font
+        color="green">TransformName</font>.
+<br/><br/>
+
+Copy-Paste Examples for these programming keywords can be found in the<br/>
+
+IC-CAP Example File: <a href="/iccap/prog_4_2/download" target="_blank">Identify_Objects_by_FIND_CHILDREN_WHOAMI_WHOIS.mdl</a>
+
+<br/><br/>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<br/><br/>
+
+When modifying or enhancing Programs in existing ModelFiles, which are quite often not very well documented, it may become a challenge to understand the concept of these ModelFiles.
+<br/><br/>
+To assist with such tedious tasks, a ModelFile has been developed with Macros and a GUI for the most often required topics like
+<br/>
+<ul>
+    <li>Search a Keyword in Programs, Macros and GUIs</li>
+    <li>In which hierarchy level is the Variable defined ?</li>
+    <li>Which Program(s) use a given Variable?</li>
+</ul>
+<br/>
+You can download the<br/>
+'Reverse Engineering Assistant' IC-CAP File: <a href="/iccap/prog_4_1/download" target="_blank">Find_Things.mdl</a>
+<br/><br/>
+The flow chart below explains how to use this ModelFile:
+
+
+<br><img src="/static/iccap/Programming/154/1.png"><br/><br/>
+
+How-To-Use Video:    <br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rzNnbfI72JA?rel=0" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/><br/>
+<a name="vdemo"></a>
+Thanks!
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}

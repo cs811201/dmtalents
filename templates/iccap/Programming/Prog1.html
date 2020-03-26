@@ -1,0 +1,100 @@
+{% extends "iccap/iccap_index.html" %}
+{% block iccapmain %}
+
+
+<h3>COPY-PASTE PROGRAMMING EXAMPLES</h3>
+<h4>Executing IC-CAP Automatically</h4>
+
+<mark>by Franz Sischka, <a href="http://www.franz-sischka.de/" target="_blank">www.SisConsult.de</a></mark>
+<hr>
+Every push button in an IC-CAP modeling project (Model File) can be automatically executed by a program and the command ICCAP_FUNC().
+<br/><br/>
+Its basic syntax is:<br/>
+
+<br><img src="/static/iccap/Programming/151/1.png"><br/><br/>
+
+The full, complete syntax for ICCAP_FUNC is *including* the Object Name:
+<ul>
+    ICCAP_FUNC("Macro /diode/myMacroName", "Execute")<br/>
+    ICCAP_FUNC("Plot idvd", "Close")
+</ul>
+with the object names: Macro, Input, Output, Transform, Plot
+<br/><br/>
+
+However, provided there is no naming conflict on the pointer hierarchy, i.e. no Plot named the same as a Transform or an Input or Output, these Object Names can be omitted (in praxis, this is the default !!!)
+<br/><br/>
+Important Best-Practice Hint:<br/>
+when you have written a Transform to calculate 'gm' of a MOS transistor, and when you want to display the result in a Plot,
+<ul>
+    <li>name the Plot differently (!!!) , e.g. _gm or _gm_</li>
+</ul>
+<br/>
+<h4>The Hierarchy of an IC-CAP ModelFile</h4>
+<br><img src="/static/iccap/Programming/151/2.png"><br/><br/>
+The IC-CAP ModelFile is organized like a directory structure, and like in a directory structure, you can move up and down with ICCAP_FUNC() pointers.
+<br/><br/>
+Example: assume your current Program is located as a Transform in Model_A/Dut_1/Setup_a
+<ul>
+    <li>You can program to open all Plots in the current Setup:<br/>
+        ICCAP_FUNC(".", "Display Plots")
+    </li>
+    <li>but you can open all the Plots in another Setup:<br/>
+        ICCAP_FUNC("../../Dut_2/Setup_x", "Display Plots")
+    </li>
+</ul>
+You can  execute another program in any other Setup, DUT or even Model etc.
+<br/><br/>
+
+It is like using a DOS or Unix window, and applying the 'cd' (change directory) command,<br/>
+or executing another program in another directory like   e.g.    ../../directory1/directory2/myProgram.exe
+<br><img src="/static/iccap/Programming/151/3.png">
+<br><img src="/static/iccap/Programming/151/4.png"><br/><br/>
+
+Unfortunately, the syntax for ICCAP_FUNC it is not easy to remember at all.<br/>
+Here an example of the dilemma with the ICCAP_FUNC syntax:<br/>
+<pre>
+!---export measured data:
+ICCAP_FUNC("/modelname/dutname/setupname", "Export  Data Measured", filename)
+!---import measured data:
+ICCAP_FUNC("/modelname/dutname/setupname", "Import  Measured Data", filename)
+
+</pre>
+Therefore, you can download the following IC-CAP ModelFile with plenty of best-practice copy-paste examples:
+<ul>
+    IC-CAP Example File:<a href="/iccap/prog_1/download" target="_blank">Automated_Mouse_Clicks_by_ICCAP_FUNC.mdl</a>
+</ul>
+<br/>
+Another location for copy-pasting ICCAP_FUNC  is in the IC-CAP  Help:
+<ul>
+    <li>click Help</li>
+    <li>select 'Topics and Index ...'</li>
+    <li>search for ICCAP_FUNC</li>
+</ul>
+This should bring you to hyperlink 'ICCAP_FUNC Statement'.
+<hr/>
+
+When executing another Program by the current program and ICCAP_FUNC(), do not forget to apply<br/>
+<ul>
+    <em>Smart Data Exchange between Programs</em><br/>
+    <li>without using auxiliary variables !</li>
+    <li>by direct Variable Transfer with a Subprogram Call</li>
+</ul>
+
+<br><img src="/static/iccap/Programming/151/5.png"><br/><br/>
+This is an extremely smart way to transfer data between both programs without the use of auxiliary variables. In other words, applying this feature makes your Variables list lean.
+<br/><br/>
+IMPORTANT NOTICE:<br/>
+In the called Program, the GET_xxx command(s) must be placed before any ICCAP_FUNC() statement.<br/>
+Reason: a new ICCAP_FUNC() statement automatically clears the list of transferred parameters.<br/>
+<br/>
+For the special case of calling a sub-program, for example to perform some central calculations, and to return the result back into the calling program, apply:
+
+<br><img src="/static/iccap/Programming/151/6.png"><br/><br/>
+Application Example:<br/>
+central de-embedding routines
+<br/><br/>
+
+Thanks!
+<br/><br/><br/><br/>
+<br/><br/>
+{% endblock %}
