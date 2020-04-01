@@ -3728,6 +3728,14 @@ def mqa_ppp_chap5():
     recordPostHistory(route_mqa_ppp_chap5)
     return render_template('mqa/python_pp/chap5_finfet.html')
 
+route_mqa_ppp_chap6 = '/mqa/ppp/6'
+
+
+@app.route(route_mqa_ppp_chap6)
+@login_required
+def mqa_ppp_chap6():
+    recordPostHistory(route_mqa_ppp_chap6)
+    return render_template('mqa/python_pp/chap6_MT.html')
 
 route_mqa_ppp_download_1 = '/mqa/ppp/iv/download'
 
@@ -3770,6 +3778,18 @@ def mqa_ppp_download_4():
     recordPostHistory(route_mqa_ppp_download_4)
     return send_file('static/mqa_ppp/Freq_Sweeps.zip',
                      attachment_filename='Freq_Sweeps.zip', mimetype='application/zip', as_attachment=True)
+
+route_mqa_ppp_download_5 = '/mqa/ppp/y_mp/download'
+
+
+@app.route(route_mqa_ppp_download_5)
+@login_required
+def mqa_ppp_download_5():
+    recordPostHistory(route_mqa_ppp_download_5)
+    return send_file('static/mqa_ppp/IV_Targets_more_mp.py',
+                     attachment_filename='IV_Targets_more_mp.py', mimetype='text/plain', as_attachment=True)
+
+
 
 #### Script Zip files downloads
 

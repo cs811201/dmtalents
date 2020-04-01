@@ -1,0 +1,55 @@
+{% extends "mqa/python_pp/python_pp_index.html" %}
+{% block python_pp%}
+
+<h2>MQA Python Post Process</h2>
+<h3>Multi-Processing/Threading</h3>
+<hr/>
+Python comes with both multi-processor, and multi-threading capabilities, and both help improve the performance and reduce execution time; however, because our case mainly comes down to using computational powers, it’s better to run multi-processor than multi-threading.
+<br/><br/>
+In order to best utilize our multi-processors, we could divide large pieces of functions into multiple smaller chunks/functions, then submit them to the multi-processor pool.
+<br/><br/>
+The update <a href="/mqa/ppp/y_mp/download" target="_blank">IV_Targers_more_mp.py</a> file can be downloaded here.
+<br/>
+With my 6 core Intel CPU, the multi-processor finished all in 11 seconds, which is 3X speed-up compared to running everything in series.
+<br/><br/>
+For example:<br/>
+<pre>
+import concurrent.futures
+
+with concurrent.futures.<font color="red">ProcessPoolExecutor()</font>  as ex:
+    ex.submit(getTargetsFromIdVg)
+    ex.submit(getTargetsFromIdVd)
+    ex.submit(getSelfGain)
+    ex.submit(getTargetsFromY)
+    ex.submit(getGdsFromIdVd)
+    ex.submit(getGds2FromIdVd)
+    ex.submit(getGm2FromIdVg)
+    ex.submit(getGmFromIdVg)
+
+</pre>
+
+<br/>
+Note: if we were to use multi-threading, it finished at 28 seconds, which is not optimal in this case.
+<br/><br/>
+As shown below:<br/>
+<pre>
+import concurrent.futures
+
+with concurrent.futures.<font color="blue">ThreadPoolExecutor()</font>  as ex:
+    ex.submit(getTargetsFromIdVg)
+    ex.submit(getTargetsFromIdVd)
+    ex.submit(getSelfGain)
+    ex.submit(getTargetsFromY)
+    ex.submit(getGdsFromIdVd)
+    ex.submit(getGds2FromIdVd)
+    ex.submit(getGm2FromIdVg)
+    ex.submit(getGmFromIdVg)
+
+</pre>
+<br/><br/>
+
+Thank you!
+<br/><br/>
+<br/><br/>
+
+{% endblock %}
